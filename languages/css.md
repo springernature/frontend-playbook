@@ -29,7 +29,10 @@ Projects should use [StyleLint] to enforce these rules. You can find the config 
 
 ## General Principles
 
-We currently write our CSS using two (unfortunately conflicting) design patterns; [BEM] for some teams, and [a hybrid of OOCSS and Atomic CSS] for others.
+We write our CSS using design patterns that aim to maximise maintainability and reuse; 
+
+- [BEM] is used in some teams
+- [a hybrid of OOCSS and Atomic CSS] in others
 
 ## The Rules
 
