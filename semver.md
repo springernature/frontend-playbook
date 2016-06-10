@@ -18,7 +18,7 @@ SemVer allows us to keep a consistent numbering scheme to ensure that going forw
 
 SemVer enables us to ensure that once something is committed we can be confident that any version remains unique.
 
-## Known issues
+## Common concerns
 
 ### How can I trust that things aren’t going to break with a minor or patch release update?
 
