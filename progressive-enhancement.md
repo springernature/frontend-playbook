@@ -1,9 +1,9 @@
 # Progressive Enhancement
 
-## What is Progressive Enhancement
+## What is progressive enhancement
 
 
-## Why we use Progressive Enhancement
+## Why we use progressive enhancement
 
 
 ## Common concerns
