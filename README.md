@@ -2,7 +2,7 @@ This repo contains the Springer Nature front-end playbook. It details how we run
 
 It is a living document that we can edit in a _public_ GitHub repo.
 
-#contributing
+#Contributing
 
 To contribute please create a new branch for each section, then create a pull request to merge your changes in.
 
