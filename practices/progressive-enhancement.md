@@ -24,5 +24,5 @@ First of all; a web app is a web page, put your sparkles away.  Secondly, why do
 
 ## Find out more:
 
-[A List Apart: Understanding Progressive Enhancement](http://alistapart.com/article/understandingprogressiveenhancement) October 07, 2008
-[Progressive enhancement is still important](https://jakearchibald.com/2013/progressive-enhancement-still-important/) July 03, 2013
+* [A List Apart: Understanding Progressive Enhancement](http://alistapart.com/article/understandingprogressiveenhancement) October 07, 2008
+* [Progressive enhancement is still important](https://jakearchibald.com/2013/progressive-enhancement-still-important/) July 03, 2013
