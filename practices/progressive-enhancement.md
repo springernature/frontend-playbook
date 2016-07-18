@@ -10,7 +10,7 @@ There is a subtle but important difference in this approach vs the approach of "
 
 There are several key benefits to using progressive enhancement;
 
-It allows you to create software that's fault tolerant by design - a key consideration for writing software for the web which will be downloaded and interpreted/executed in an incomprehensibly diverse plethora of devices and environments.  Unlike graceful degradation, this fault tolerance is built in *from the start* and so is much less likely to be skipped out because it's less sexy than the next feature X or in the interests of hitting a deadline.
+It allows you to create software that's fault tolerant by design - a key consideration for writing software for the web which will be downloaded and interpreted/executed in an incomprehensibly diverse plethora of devices and environments.  Unlike graceful degradation, this fault tolerance is built in *from the start* and so is much less likely to be skipped out in the interests of hitting a deadline (or because it's less spangly than the next feature X).
 
 Developing software using progressive enhancement also encourages Lean thinking, by aligning development priorities with end-user priorities (people are likely here for your content, not for how pretty your buttons look).  This is both very useful for prioritisation of features (and refinement of the fabled MVP) but also biases you towards delivery of software that can be tested early; so you can see if your core content and functionality is working before spending too much time on making it "cutting-edge".
 
