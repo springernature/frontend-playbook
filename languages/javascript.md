@@ -49,7 +49,16 @@ Code is written once and read many times, using abbreviations or single-characte
 Reading code is difficult enough at the best of times. Don't make it harder; it's better to have RSI in your over-worked fingers than for all your colleagues to hate you.
 
 
+### Modules Over Monoliths
 
+Wherever possible, you should try to think in smaller single-purpose modules and functions. This encourages reuse and helps to [keep complexity down](#complexity).
+
+If code is generic and reusable you should aim to break it into a separate module which can be managed through npm or included in a project's `vendor` directory. We advocate open sourcing of these kinds of modules, and it's a good idea to have open sourcing in mind no matter what you're writing.
+
+Often you'll find that the code you're writing is catered for by a third-party module. Whenever possible, install a dependency rather than reinventing the wheel.
+
+
+[complexity]: https://en.wikipedia.org/wiki/Cyclomatic_complexity
 [eslint]: http://eslint.org/
 [jshint]: http://jshint.com/
 
