@@ -58,6 +58,22 @@ If code is generic and reusable you should aim to break it into a separate modul
 Often you'll find that the code you're writing is catered for by a third-party module. Whenever possible, install a dependency rather than reinventing the wheel.
 
 
+### Directory Structure
+
+Client-Side JavaScript normally lives in `resources/js` in our projects, unless the back-end you're using dictates a different directory.  We should try to stick as closely to this as possible though.
+
+Within this directory, you should always use the following structure. We'll go into more detail as to what these directories are for shortly:
+
+```
+<root>
+  ├── components
+  ├── polyfills
+  ├── utils
+  └── vendor
+```
+
+File names in these directories should be lower-case, with words separated by dashes.
+
 [complexity]: https://en.wikipedia.org/wiki/Cyclomatic_complexity
 [eslint]: http://eslint.org/
 [jshint]: http://jshint.com/
