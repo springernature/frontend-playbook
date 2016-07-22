@@ -17,7 +17,7 @@ Accessibility supports social inclusion for people with disabilities as well as 
 
 ## Web Content Accessibility Guidelines
 
-The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG20) aim to provide a 'single shared standard for web content accessibility'. At Springer Nature, we require all of our content to meet at least WCAG 2.0 [Level AA](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize&levels=aaa).
+The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG20) provides a 'single shared standard for web content accessibility'. At Springer Nature, we require our content to meet at least WCAG 2.0 [Level AA](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize&levels=aaa).
 
 ## Why we care about accessibility
 
