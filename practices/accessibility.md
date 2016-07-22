@@ -15,7 +15,7 @@ It is essential that the Web be accessible in order to provide equal access and 
 
 Accessibility supports social inclusion for people with disabilities as well as others, such as older people, people in rural areas, and people in developing countries.
 
-##  Web Content Accessibility Guidelines
+## Web Content Accessibility Guidelines
 
 The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG20) aim to provide a 'single shared standard for web content accessibility'. At Springer Nature, we require all of our content to meet at least WCAG 2.0 [Level AA](https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_customize&levels=aaa).
 
