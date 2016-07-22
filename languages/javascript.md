@@ -57,6 +57,40 @@ If code is generic and reusable you should aim to break it into a separate modul
 
 Often you'll find that the code you're writing is catered for by a third-party module. Whenever possible, install a dependency rather than reinventing the wheel.
 
+### KISS
+
+We adhere to the [KISS] principle. Unnecessarily complex/obtuse code completely goes against our rule of coding for humans. It's difficult to understand, slows us down, and reduces maintainability. Don't do it.
+
+```js
+// We don't do this
+~~number;
+
+// We do this
+Math.floor(number);
+```
+
+```js
+// We don't do this
+function isOdd(number) {
+    return !!(number & 1);
+}
+
+// We do this
+function isOdd(number) {
+    var mod = number % 2;
+    return (mod !== 0);
+}
+```
+
+```js
+// We don't do this
+foo ^= bar; bar ^= foo; foo ^= bar;
+
+// We do this
+var tempVar = foo;
+foo = bar;
+bar = tempVar;
+```
 
 ### Directory Structure
 
@@ -121,6 +155,8 @@ The `utils` directory is used to house JavaScript written for the project that d
 
 An example utility might be a function to make a string title-case.
 
+
+[KISS]: https://en.wikipedia.org/wiki/KISS_principle
 [complexity]: https://en.wikipedia.org/wiki/Cyclomatic_complexity
 [eslint]: http://eslint.org/
 [jshint]: http://jshint.com/
