@@ -5,6 +5,18 @@ This document outlines the way we write JavaScript. It's a living styleguide –
 
 Projects should use both [JSHint] and [ESLint] to enforce these rules. 
 
+- [General Principles](#general-principles)
+  - [Write code for humans](#code-for-humans)
+  - [Optimise for reading](#optimise-for-reading)
+  - [Write modules over monoliths](#modules-over-monoliths)
+  - [KISS](#keep-it-simple)
+- [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
+  - [Directory Structure](#directory-structure)
+    - [Components Directory](#components-directory)
+    - [Polyfills Directory](#polyfills-directory)
+    - [Vendor Directory](#vendor-directory)
+    - [Utils Directory](#utils-directory)
+
 
 General Principles
 ------------------
@@ -57,7 +69,7 @@ If code is generic and reusable you should aim to break it into a separate modul
 
 Often you'll find that the code you're writing is catered for by a third-party module. Whenever possible, install a dependency rather than reinventing the wheel.
 
-### KISS
+### Keep it simple
 
 We adhere to the [KISS] principle. Unnecessarily complex/obtuse code completely goes against our rule of coding for humans. It's difficult to understand, slows us down, and reduces maintainability. Don't do it.
 
@@ -91,6 +103,10 @@ var tempVar = foo;
 foo = bar;
 bar = tempVar;
 ```
+
+Client-Side JavaScript Architecture
+-----------------------------------
+
 
 ### Directory Structure
 
