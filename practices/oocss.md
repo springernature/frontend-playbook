@@ -26,11 +26,11 @@ The focus on avoiding repetition makes an OOCSS particularly well suited for man
 
 ## Common concerns
 
-As OOCSS is more of a philosophy than a prescriptive system the implementation will naturally diverge amongst those who have decided to make use of it. There are a number of different approaches that have build upon the principles of OOCSS in a more prescriptive way. There is some difficulty in reconciling the more 'atomic' approaches to OOCSS with design patterns such as BEMM which are based more strongly around a container/component approach.
+As OOCSS is more of a philosophy than a prescriptive system the implementation will naturally diverge amongst those who have decided to make use of it. There are a number of different approaches that have build upon the principles of OOCSS in a more prescriptive way. There is some difficulty in reconciling the more 'atomic' approaches to OOCSS with design patterns such as BEM which are based more strongly around a container/component approach.
 
 
 ## Find out more:
 - [OOCSS Wiki](https://github.com/stubbornella/oocss/wiki)
 - [Introduction to OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
 - [Atomic CSS](https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach/)
-- [BEMM](http://getbem.com/introduction/)
+- [BEM](http://getbem.com/introduction/)
