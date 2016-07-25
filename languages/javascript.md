@@ -13,6 +13,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Performant Code](#performant-code)
 - [Code Style](#code-style)
   - [Indentation](#indentation)
+  - [White Space](#white-space)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
@@ -151,6 +152,13 @@ if (foo) {
         console.log(bar);
 }
 ```
+
+### White Space
+
+We use white space liberally to help keep code readable. You're encouraged to use newlines to break up long functions into logical chunks.
+
+You should also remove trailing white space from lines of code. Your editor should be able to either remove this or highlight it when present.
+
 
 Client-Side JavaScript Architecture
 -----------------------------------
