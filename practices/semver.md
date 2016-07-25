@@ -28,7 +28,7 @@ Like any practice, SemVer can be let down by people not using it correctly (like
 
 When a piece of software under heavy development many major/minor releases may happen in quick succession, so your version might start to look like 23.2.0 or 3.34.1.  THAT’S OKAY!  If that’s a true representation of what has happened in the code, then it’s appropriate that the version number reflects that.  
 
-What would be more of a worry is if your version looked like 2.1.45 - did you really release 45 patches/bug fixes in a row without adding any new features?
+What _might_ be a worry is if your version looked like 2.1.45 - did you really release 45 patches/bug fixes in a row without adding any new features?
 
 ## Find out more:
 Canonical source of info: http://semver.org/
