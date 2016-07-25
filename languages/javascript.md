@@ -10,6 +10,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Optimise for reading](#optimise-for-reading)
   - [Write modules over monoliths](#modules-over-monoliths)
   - [KISS](#keep-it-simple)
+  - [Performant Code](#performant-code)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
@@ -103,6 +104,12 @@ var tempVar = foo;
 foo = bar;
 bar = tempVar;
 ```
+
+### Performant Code
+
+We should always try to write fast code, but not if it makes the code difficult to understand. It's inefficient to optimise in favour of performance unless evidence shows that you really _need_ to do that.
+
+If you're writing a small library with a single simple purpose, and you really _really_ need to do it, then it makes sense; in a project with more than one contributor, there's frequently more "cost" than "benefit".
 
 Client-Side JavaScript Architecture
 -----------------------------------
