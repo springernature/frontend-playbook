@@ -11,6 +11,8 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Write modules over monoliths](#modules-over-monoliths)
   - [KISS](#keep-it-simple)
   - [Performant Code](#performant-code)
+- [Code Style](#code-style)
+  - [Indentation](#indentation)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
@@ -110,6 +112,45 @@ bar = tempVar;
 We should always try to write fast code, but not if it makes the code difficult to understand. It's inefficient to optimise in favour of performance unless evidence shows that you really _need_ to do that.
 
 If you're writing a small library with a single simple purpose, and you really _really_ need to do it, then it makes sense; in a project with more than one contributor, there's frequently more "cost" than "benefit".
+
+Code Style
+---------
+
+
+### Indentation
+
+We indent our JavaScript using single tabs, not spaces. You can convert characters automatically in most editors, and you're advised to do this.
+
+Follow the [BSD-KNF] indentation style.
+
+We do this:
+
+```js
+if (foo) {
+    console.log(foo);
+} else {
+    console.log(bar);
+}
+```
+
+We _don't_ do this:
+
+```js
+if (foo)
+{
+    console.log(foo);
+}
+else
+{
+    console.log(bar);
+}
+
+if (foo) {
+        console.log(foo);
+} else {
+        console.log(bar);
+}
+```
 
 Client-Side JavaScript Architecture
 -----------------------------------
