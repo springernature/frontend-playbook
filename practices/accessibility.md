@@ -26,3 +26,5 @@ The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG20) 
 
 
 ## Find out more:
+
+Some information in this page is taken from the Web Accessibility Initiative ([WAI](http://www.w3.org/WAI/)) document: _[Developing a Web Accessibility Business Case for Your Organization: Overview](https://www.w3.org/WAI/bcase/Overview)_. Copyright © [W3C](http://www.w3.org/)® ([MIT](http://www.csail.mit.edu/), [ERCIM](http://www.ercim.org/), [Keio](http://www.keio.ac.jp/)).
