@@ -21,8 +21,17 @@ The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG20) 
 
 ## Why we care about accessibility
 
+From a technical standpoint, catering for all users complements our browser support policy (we aim to support all browsers), and our use of progressive enhancement.
+
+From a moral standpoint, we have a duty to cater for all users regardless of disability.
+
+From a legal standpoint, we are required to comply with various pieces of equality legislation (e.g. the [2010 Equality Act] and [Section 508] of the US Rehabilitation Act 1973).
+
 
 ## Common concerns
 
 
 ## Find out more:
+
+ [2010 Equality Act]: http://www.legislation.gov.uk/ukpga/2010/15/contents
+ [Section 508]: https://www.section508.gov/content/learn/laws-and-policies
