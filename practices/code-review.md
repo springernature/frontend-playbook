@@ -23,9 +23,9 @@ Here's the general protocol that we use:
 
 1. Create a local feature branch based off master.
 * When feature is complete and tests pass, stage the changes and commit them.
-* Write a [good commit message](#commit-messages).
+* Write a [good commit message](practices/commit-messages.md).
 * Submit a [pull request](https://help.github.com/articles/using-pull-requests/).
-* Ask for a code review in [Slack](#slack).
+* Ask for a code review in Slack.
 * A team member other than the author reviews the pull request, and they make comments and ask questions directly on lines of code in the GitHub web interface.
 * When satisfied, the reviewer will comment on the pull request with a +1 or some other simple message indicating that the code is ready to merge.
 * Rebase interactively. Squash commits like "Fix whitespace", or micro-commits that serve no purpose without the following commits into one or a small number of valuable commit(s). Edit commit messages to reveal intent.
