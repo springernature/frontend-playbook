@@ -16,10 +16,9 @@ BEM naming follows this pattern:
 .block--modifier {}
 ```
 
-Class names should be **lowercase** with words separated by hyphens.
+## Naming Style
 
-- Good `alert-box` or
-- Bad `alertBox` or `AlertBox`
+All class names should be train-case - all lowercase, words separated by a hyphen. So ```.alert-box``` and not ```.alertBox``` or ```.AlertBox``` or ```.Alert-Box```.
 
 ## Examples
 
