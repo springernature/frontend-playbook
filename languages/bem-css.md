@@ -42,7 +42,7 @@ We _don't_ do this:
 .btn
 ```
 
-We do do this:
+We do this:
 ```css
 .alert-box
 .button
