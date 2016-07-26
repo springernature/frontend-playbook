@@ -18,13 +18,35 @@ BEM naming follows this pattern:
 
 ## Naming Style
 
-All class names should be train-case - all lowercase, words separated by a hyphen. So ```.alert-box``` and not ```.alertBox``` or ```.AlertBox``` or ```.Alert-Box```.
+All class names should be train-case - all lowercase, words separated by a hyphen. 
+
+We _don't_ do this:
+```css
+.alertBox
+.AlertBox
+.Alert-Box
+```
+We do this:
+```css
+.alert-box
+```
 
 ## Examples
 
 **Block**: Unique, meaningful names for a logical unit of style. Avoid excessive shorthand.
-- Good: `.alert-box` or `.button`
-- Bad: `.feature` or `.content` or `.btn`
+
+We _don't_ do this:
+```css
+.feature
+.content
+.btn
+```
+
+We do this:
+```css
+.alert-box
+.button
+```
 
 **Element**: styles that only apply to children of a block. Elements can also be blocks themselves. Class name is a concatenation of the block name, two underscores and the element name. Examples:
 - `.alert-box__close`
@@ -37,11 +59,23 @@ All class names should be train-case - all lowercase, words separated by a hyphe
 ## BEM Best practices
 
 Don't `@extend` block modifiers with the block base, always require that the base/unmodified class is present
-- Good: `<div class="my-block my-block--modifier">`
-- Bad: `<div class="my-block--modifier">`
+
+We _don't_ do this:
+```html
+<div class="my-block--modifier">
+```
+
+We do this:
+```html
+<div class="my-block my-block--modifier">
+```
 
 Don't create elements inside elements. If you find yourself needing this, consider converting your element into a block.
-- Bad: `.alert-box__close__button`
+
+We _don't_ do this:
+```css
+.alert-box__close__button
+```
 
 Choose your modifiers wisely. These two rules have very different meaning:
 ```scss
