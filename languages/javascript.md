@@ -14,6 +14,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
 - [Code Style](#code-style)
   - [Indentation](#indentation)
   - [White Space](#white-space)
+  - [Semi-Colons](#semi-colons)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
@@ -159,6 +160,45 @@ We use white space liberally to help keep code readable. You're encouraged to us
 
 You should also remove trailing white space from lines of code. Your editor should be able to either remove this or highlight it when present.
 
+### Semi-Colons
+
+We require the use of semi-colons. The only statements that don't need to end with semi-colons are function declarations and blocks.
+
+We do this:
+
+```js
+var foo = 1;
+
+if (foo) {
+    foo += 1;
+}
+
+function bar() {
+    // ...
+}
+
+var baz = function() {
+    // ...
+};
+```
+
+We _don't_ do this:
+
+```js
+var foo = 1
+
+if (foo) {
+    foo += 1
+};
+
+function bar() {
+    // ...
+};
+
+var baz = function() {
+    // ...
+}
+```
 
 Client-Side JavaScript Architecture
 -----------------------------------
