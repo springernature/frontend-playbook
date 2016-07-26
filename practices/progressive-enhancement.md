@@ -4,7 +4,7 @@
 
 Progressive enhancement is a design and development practice that focuses on delivering the basic essentials of a website as a primary concern, then building the various layers of refinement and niceties on top of that for those clients than can receive them.  In practice this means that we start with developing a logical and semantic HTML application with all the key functionality, then we can enhance this with an aesthetic layer (CSS) and behavioural layer (JavaScript) as desired.
 
-There is a subtle but important difference in this approach vs the approach of "graceful degradation" (or fault-tolerance) which it can often be confused with.  Graceful degradation suggests a feature-complete "full-fat" application is designed and built, and is expected to be delivered wholesale to each client.  Developers then attempt to build into the system fail safes so that when a client is unable to use the whole application, it can still get some value out of it.
+There is a subtle but important difference in this approach vs the outdated approach of "graceful degradation" (or fault-tolerance) which it can often be confused with.  Graceful degradation suggests a feature-complete "full-fat" application is designed and built, and is expected to be delivered wholesale to each client.  Developers then attempt to build into the system fail safes so that when a client is unable to use the whole application, it can still get some value out of it.
 
 ## Why we use progressive enhancement
 
