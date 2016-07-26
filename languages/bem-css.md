@@ -68,7 +68,7 @@ If you are using a CSS pre-processor, excessive nesting can be avoided by using 
 }
 ```
 
-Targeting a BEM element/modifier from within a nested block rule (see above) should be done with caution. If your selectors contain a large number of declarations then you should consider moving the element out of the nested rule to make them more readable, and easier to follow. Always adhere to the [KISS](https://github.com/springernature/frontend/blob/master/languages/javascript.md#keep-it-simple) principle. You can target a modifier as follows, whilst keeping the element separate for better readability:
+Targeting a BEM element/modifier from within a nested block rule (see above) should be done with caution. If your selectors contain a large number of declarations then you should consider moving the element out of the nested rule to make them more readable, and easier to follow. Always adhere to the [KISS](https://en.wikipedia.org/wiki/KISS_principle) principle. You can target a modifier as follows, whilst keeping the element separate for better readability:
 
 ```scss
 .block {
