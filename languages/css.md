@@ -7,10 +7,8 @@ This document aspires to outline the way we write CSS/SASS, and is based at the 
 Projects should use [StyleLint] to enforce these rules. You can find the config file in the [config directory](config).
 
 - [General Principles](#general-principles)
-  - [Class Names](#class-names)
-  - [The Classitis Tradeoff](#the-classitis-tradeoff)
-  - [Font Sizing](#font-sizing)
-  - [Javascript Hooks](#javascript-hooks)
+- [Preprocessors](#preprocessors)
+  - [Nesting](#nesting)
 - [The Rules](#the-rules)
   - [Indentation](#indentation)
   - [At Rules](#at-rules)
@@ -29,10 +27,42 @@ Projects should use [StyleLint] to enforce these rules. You can find the config 
 
 ## General Principles
 
-We write our CSS using design patterns that aim to maximise maintainability and reuse; 
+We write our CSS using design patterns that aim to maximise maintainability and reuse;
 
 - [BEM] is used in some teams
 - [a hybrid of OOCSS and Atomic CSS] in others
+
+## Preprocessors
+
+Our preferred CSS preprocessor is [SASS](http://sass-lang.com/) using the [SCSS syntax](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html).
+
+### Nesting
+
+There has been a lot written about why excessive nesting is [a bad idea](http://www.sitepoint.com/beware-selector-nesting-sass/). It can easily be avoided by using smart class naming. Avoid nesting selectors more than **3 levels** deep, and prefer using nesting as a convenience to extend the parent selector over targeting nested elements.
+
+If possible, try and avoid using nesting for anything other than:
+
+- Pseudo selectors and state selectors.
+  - E.g. `:hover`, `:focus`, `:before`, etc.
+
+
+- Breakpoints
+  - These should be nested within the relevant parent using `@include`.
+
+
+- Items that semantically MUST sit within other items
+  - `<li>`, `<tr>`, `<td>`, `<dt>`, `<dd>` etc.
+
+
+- Non-js fallbacks/JS only styles
+  - where you are adding `.no-js` or `.js` styles to an element
+
+
+- Inline html tags within other elements
+  - E.g. ```.class { span {} }```
+  - `strong`, `em`, `span`, `abbr`, `small`, `sub`, `sup`, etc.
+
+One exception to these rules is targeting a BEM element from within a nested block rule. See the [BEM documentation](https://github.com/springernature/frontend/blob/master/languages/bem-css.md) for more information on BEM and nesting.
 
 ## The Rules
 
