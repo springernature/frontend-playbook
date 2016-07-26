@@ -15,6 +15,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Indentation](#indentation)
   - [White Space](#white-space)
   - [Semi-Colons](#semi-colons)
+  - [Variables](#variables)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
@@ -200,6 +201,34 @@ var baz = function() {
 }
 ```
 
+### Variables
+
+We define variables with multiple `var` statements and trust our developers to understand [hoisting]. We generally discourage defining variables inside loops or blocks.
+
+We do this:
+
+```js
+var foo = 1;
+var bar = 2;
+
+var baz;
+if (foo === bar) {
+    baz = 3;
+}
+```
+
+We _don't_ do this:
+
+```js
+var foo = 1,
+    bar = 2;
+
+if (foo === bar) {
+    var baz = 3;
+}
+```
+
+
 Client-Side JavaScript Architecture
 -----------------------------------
 
@@ -272,4 +301,5 @@ An example utility might be a function to make a string title-case.
 [complexity]: https://en.wikipedia.org/wiki/Cyclomatic_complexity
 [eslint]: http://eslint.org/
 [jshint]: http://jshint.com/
+[hoisting]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
 
