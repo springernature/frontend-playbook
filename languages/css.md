@@ -42,25 +42,75 @@ There has been a lot written about why excessive nesting is [a bad idea](http://
 
 If possible, try and avoid using nesting for anything other than:
 
-- Pseudo selectors and state selectors.
-  - E.g. `:hover`, `:focus`, `:before`, etc.
+**Pseudo selectors and state selectors**. We do this:  
+```scss
+a {
+    &:hover {
+        text-decoration: underline;
+    }
+    &:focus {
+        outline: 1px dashed #000;
+    }
+}
 
+span {
+    &:before {
+        content: '\2022';
+    }
+}
+```
 
-- Breakpoints
-  - These should be nested within the relevant parent using `@include`.
+**Items that semantically MUST sit within other items**. We do this:
+```scss
+ul {
+    > li {
+        display: inline;
+    }
+}
 
+dl {
+    > dt,
+    > dd {
+        display: inline-block;
+    }
+}
 
-- Items that semantically MUST sit within other items
-  - `<li>`, `<tr>`, `<td>`, `<dt>`, `<dd>` etc.
+table {
+    > tr {
+        > th {
+            background: #ccc;
+        }
+        > td {
+            background: #eee;
+        }
+    }
+}
+```
 
+**Non-js fallbacks/JS only styles**. We do this:
+```scss
+.class {
+    .js & {
+        display: none;
+    }
+    .no-js & {
+        display: block;
+    }
+}
+```
 
-- Non-js fallbacks/JS only styles
-  - where you are adding `.no-js` or `.js` styles to an element
+**Inline html tags within other elements**. We do this:
+```scss
+.class {
+    span {}
+    em {}
+    small {}
+    /* etc */
+}
+```
 
-
-- Inline html tags within other elements
-  - E.g. ```.class { span {} }```
-  - `strong`, `em`, `span`, `abbr`, `small`, `sub`, `sup`, etc.
+**Breakpoints**  
+These should be nested within the relevant parent using `@include`.
 
 One exception to these rules is targeting a BEM element from within a nested block rule. See the [BEM documentation](https://github.com/springernature/frontend/blob/master/languages/bem-css.md) for more information on BEM and nesting.
 
