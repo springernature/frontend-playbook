@@ -82,21 +82,24 @@ We do this:
 }
 ```
 
-Avoid shorthand properties (unless you really need them). This applies to all properties with a shorthand: border, margin, padding, font, etc.
+Avoid shorthand properties, if you aren't setting all the values in the property. This applies to all properties with a shorthand: border, margin, padding, font, etc.  
+Use your judgement on this, as there are exceptions.
 
 We _don't_ do this:
 ```scss
 .modal {
     // overrides other values encapsulated by the shorthand property.
     // In this case, background-image and its associative properties are set to “none”
-    background: $white
+    background: $white;
+    border: 1px;
 }
 ```
 
 We do this:
 ```scss
 .modal {
-    background-color: $white
+    background-color: $white;
+    border-width: 1px;
 }
 ```
 
