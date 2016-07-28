@@ -1,6 +1,6 @@
 # Code Reviews
 
-Code Review, or Peer Code Review, is the act of consciously and systematically checking the code or your colleagues for mistakes and errors. It has been repeatedly shown to accelerate and streamline the process of software development.
+Code Review, or Peer Code Review, is the act of having your code checked by other front-end developers for mistakes, errors, and omissions (e.g. missing tests). It has been repeatedly shown to accelerate and streamline the process of software development.
 
 We manage code review via **pull requests**, which we communicate in the `#front-end-pr` Slack channel, and manage in GitHub. All discussion happens in GitHub comments. We leave it to the requester to merge their own changes -- we never merge someone else's work!
 
