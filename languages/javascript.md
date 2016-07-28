@@ -228,6 +228,28 @@ if (foo === bar) {
 }
 ```
 
+If the environment you're running in supports ES2015 (Node.js 4.x/[Babel](https://babeljs.io/)) then you should not use `var` statements at all – you should be using `let` and `const`:
+
+In ES2015 we do this:
+
+```js
+let foo = 'bar';
+const BAR = 'baz';
+```
+
+In ES2015 we _don't_ do this:
+
+```js
+var foo = 'bar';
+var BAR_CONSTANT = 'baz';
+```
+
+You can also use destructuring assignment with objects and arrays. These don't have to be multi-line, but there must be spaces after the commas:
+
+```js
+let {foo, bar} = getFooAndBar();
+let [baz, qux] = getBazAndQux();
+```
 
 Client-Side JavaScript Architecture
 -----------------------------------
