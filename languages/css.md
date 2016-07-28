@@ -4,7 +4,7 @@
 
 This document aspires to outline the way we write CSS/SASS, and is based at the moment on the existing [Nature runbook]. This is just a first pass, and is likely to be incomplete (and wrong) in places.  It's a living styleguide – it will grow and adapt as our practices do.
 
-Projects should use [StyleLint] to enforce these rules. You can find the config file in the [config directory](config).
+Projects should use [StyleLint] to enforce these rules. You can find _an example_ config file in the [config directory](config).
 
 - [General Principles](#general-principles)
 - [Code Style](#code-style)
