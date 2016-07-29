@@ -233,15 +233,19 @@ If the environment you're running in supports ES2015 (Node.js 4.x/[Babel](https:
 In ES2015 we do this:
 
 ```js
+const foo = 'bar';
+```
+
+We use `let` only when a variable _explictly_ [needs to be mutable]:
+
+```js
 let foo = 'bar';
-const bar = 'baz';
 ```
 
 In ES2015 we _don't_ do this:
 
 ```js
 var foo = 'bar';
-var bar_constant = 'baz';
 ```
 
 You can also use destructuring assignment with objects and arrays. These don't have to be multi-line, but there must be spaces after the commas:
@@ -324,4 +328,4 @@ An example utility might be a function to make a string title-case.
 [eslint]: http://eslint.org/
 [jshint]: http://jshint.com/
 [hoisting]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
-
+[needs to be mutable]: https://ada.is/blog/2015/07/13/immutable/
