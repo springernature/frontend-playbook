@@ -236,7 +236,7 @@ In ES2015 we do this:
 const foo = 'bar';
 ```
 
-We use `let` only when a variable _explictly_ [needs to be mutable]:
+We use `let` only when a variable _explicitly_ [needs to be mutable]:
 
 ```js
 let foo = 'bar';
