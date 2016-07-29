@@ -234,14 +234,14 @@ In ES2015 we do this:
 
 ```js
 let foo = 'bar';
-const BAR = 'baz';
+const bar = 'baz';
 ```
 
 In ES2015 we _don't_ do this:
 
 ```js
 var foo = 'bar';
-var BAR_CONSTANT = 'baz';
+var bar_constant = 'baz';
 ```
 
 You can also use destructuring assignment with objects and arrays. These don't have to be multi-line, but there must be spaces after the commas:
