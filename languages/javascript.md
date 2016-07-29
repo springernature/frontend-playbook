@@ -228,6 +228,32 @@ if (foo === bar) {
 }
 ```
 
+If the environment you're running in supports ES2015 (Node.js 4.x/[Babel](https://babeljs.io/)) then you should not use `var` statements at all – you should be using `let` and `const`:
+
+In ES2015 we do this:
+
+```js
+const foo = 'bar';
+```
+
+We use `let` only when a variable _explicitly_ [needs to be mutable]:
+
+```js
+let foo = 'bar';
+```
+
+In ES2015 we _don't_ do this:
+
+```js
+var foo = 'bar';
+```
+
+You can also use destructuring assignment with objects and arrays. These don't have to be multi-line, but there must be spaces after the commas:
+
+```js
+let {foo, bar} = getFooAndBar();
+let [baz, qux] = getBazAndQux();
+```
 
 Client-Side JavaScript Architecture
 -----------------------------------
@@ -302,4 +328,4 @@ An example utility might be a function to make a string title-case.
 [eslint]: http://eslint.org/
 [jshint]: http://jshint.com/
 [hoisting]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
-
+[needs to be mutable]: https://ada.is/blog/2015/07/13/immutable/
