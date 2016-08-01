@@ -17,6 +17,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Semi-Colons](#semi-colons)
   - [Variables](#variables)
   - [Functions](#functions)
+  - [Arguments](#arguments)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
@@ -284,6 +285,26 @@ var loadConfig = function (filePaths, callback) {
 }
 
 function loadConfig(filePaths, callback){ /* ... */ }
+```
+
+#### Arguments
+
+Arguments must be separated from the preceding comma by a space, and there should be no padding whitespace at the start and end of the arguments.
+
+We do this:
+
+```js
+var loadConfig = function(filePaths, callback) {
+    // ...
+}
+```
+
+We _don't_ do this:
+
+```js
+var loadConfig = function(filePaths,callback) {
+    // ...
+}
 ```
 
 Client-Side JavaScript Architecture
