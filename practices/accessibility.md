@@ -37,6 +37,8 @@ Accessible sites can be used by more people - including people with disabilities
 
 ## Find out more:
 
+* [Accessibility in Media: Tip Sheet & Resources](https://ft-interactive.github.io/accessibility/index.html)
+
 Some information in this page is taken from the Web Accessibility Initiative ([WAI](http://www.w3.org/WAI/)) document: _[Developing a Web Accessibility Business Case for Your Organization: Overview](https://www.w3.org/WAI/bcase/Overview)_. Copyright © [W3C](http://www.w3.org/)® ([MIT](http://www.csail.mit.edu/), [ERCIM](http://www.ercim.org/), [Keio](http://www.keio.ac.jp/)).
 
 [2010 Equality Act]: http://www.legislation.gov.uk/ukpga/2010/15/contents
