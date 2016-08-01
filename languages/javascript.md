@@ -16,6 +16,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [White Space](#white-space)
   - [Semi-Colons](#semi-colons)
   - [Variables](#variables)
+  - [Functions](#functions)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
@@ -253,6 +254,36 @@ You can also use destructuring assignment with objects and arrays. These don't h
 ```js
 let {foo, bar} = getFooAndBar();
 let [baz, qux] = getBazAndQux();
+```
+
+### Functions
+
+We use lowerCamelCase naming for functions, and functions should be named descriptively.
+
+Functions are not allowed to be written on a single line – you must always follow our [indentation](#indentation) rules.
+
+Whitespace in functions is different to in blocks: there must be no space between the function declaration and the opening arguments bracket.
+
+We do this:
+
+```js
+var loadConfig = function(filePaths, callback) {
+    // ...
+}
+
+function loadConfig(filePaths, callback) {
+    // ...
+}
+```
+
+We _don't_ do this:
+
+```js
+var loadConfig = function (filePaths, callback) {
+    // ...
+}
+
+function loadConfig(filePaths, callback){ /* ... */ }
 ```
 
 Client-Side JavaScript Architecture
