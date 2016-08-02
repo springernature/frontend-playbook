@@ -17,6 +17,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Semi-Colons](#semi-colons)
   - [Variables](#variables)
   - [Functions](#functions)
+  - [Classes](#classes)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
@@ -325,6 +326,38 @@ var sayHello = function(person="world",...others) {
     // ...
 }
 ```
+
+### Classes
+
+If the environment you're running in supports ES2015 (Node.js 4.x/[Babel](https://babeljs.io/)) then you can use classes. Classes and their methods must be indented in the same way as functions. Also methods should be spaced apart.
+
+We do this:
+
+```js
+class Apple extends Fruit {
+
+    constructor() {
+        this.color = 'red';
+    }
+
+    peel() {
+        // ...
+    }
+
+}
+```
+
+We _don't_ do this:
+
+```js
+class Apple extends Fruit{
+    constructor(){ this.color = 'red'; }
+    peel () {
+        // ...
+    }
+}
+```
+
 
 Client-Side JavaScript Architecture
 -----------------------------------
