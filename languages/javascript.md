@@ -17,7 +17,6 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Semi-Colons](#semi-colons)
   - [Variables](#variables)
   - [Functions](#functions)
-  - [Arguments](#arguments)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
