@@ -307,6 +307,26 @@ var loadConfig = function(filePaths,callback) {
 }
 ```
 
+If the environment you're running in supports ES2015 (Node.js 4.x/[Babel](https://babeljs.io/)) then you can use rest and default arguments.
+
+Default and rest arguments must follow the same spacing rules as other arguments and regular variable assignment.
+
+We do this:
+
+```js
+var sayHello = function(person = 'World', ...others) {
+    // ...
+}
+```
+
+We _don't_ do this:
+
+```js
+var sayHello = function(person="world",...others) {
+    // ...
+}
+```
+
 Client-Side JavaScript Architecture
 -----------------------------------
 
