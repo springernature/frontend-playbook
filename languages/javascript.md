@@ -78,7 +78,9 @@ Often you'll find that the code you're writing is catered for by a third-party m
 
 ### Keep it simple
 
-We adhere to the [KISS] principle. Unnecessarily complex/obtuse code completely goes against our rule of coding for humans. It's difficult to understand, slows us down, and reduces maintainability. Don't do it. Remember that [duplication is far cheaper than the wrong abstraction].
+We adhere to the [KISS] principle. Unnecessarily complex/obtuse code completely goes against our rule of coding for humans. It's difficult to understand, slows us down, and reduces maintainability. Don't do it.
+
+It is also Important to remember that [duplication is far cheaper than the wrong abstraction].
 
 ```js
 // We don't do this
