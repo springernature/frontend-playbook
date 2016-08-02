@@ -3,7 +3,7 @@ JavaScript Style Guide
 
 This document outlines the way we write JavaScript. It's a living styleguide – it will grow as our practices do.
 
-Projects should use both [JSHint] and [ESLint] to enforce these rules. 
+Projects should use both [JSHint] and [ESLint] to enforce these rules.
 
 - [General Principles](#general-principles)
   - [Write code for humans](#code-for-humans)
@@ -78,7 +78,7 @@ Often you'll find that the code you're writing is catered for by a third-party m
 
 ### Keep it simple
 
-We adhere to the [KISS] principle. Unnecessarily complex/obtuse code completely goes against our rule of coding for humans. It's difficult to understand, slows us down, and reduces maintainability. Don't do it.
+We adhere to the [KISS] principle. Unnecessarily complex/obtuse code completely goes against our rule of coding for humans. It's difficult to understand, slows us down, and reduces maintainability. Don't do it. Remember that [duplication is far cheaper than the wrong abstraction].
 
 ```js
 // We don't do this
@@ -395,6 +395,7 @@ An example utility might be a function to make a string title-case.
 
 
 [KISS]: https://en.wikipedia.org/wiki/KISS_principle
+[duplication is far cheaper than the wrong abstraction]: http://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction
 [complexity]: https://en.wikipedia.org/wiki/Cyclomatic_complexity
 [eslint]: http://eslint.org/
 [jshint]: http://jshint.com/
