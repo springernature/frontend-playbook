@@ -32,6 +32,10 @@ From a financial standpoint, a major benefit of Web accessibility is the potenti
 Accessible sites can be used by more people - including people with disabilities, people using mobile devices, older people, people with low literacy, people who are not fluent in the language of the site, people with low bandwidth connections to the Internet, people with older technologies, and new and infrequent web users.
 
 
+## What standards we conform to
+
+In order to aid us in developing and maintaining an accessible website, we strive to comply with the [Web Content Accessibility Guidelines] 1 AA + the [WCAG Samurai Errata]. In doing so, we also achieve a high pass rate with [Web Content Accessibility Guidelines 2] AA.
+
 ## Common concerns
 
 
@@ -43,3 +47,6 @@ Some information in this page is taken from the Web Accessibility Initiative ([W
 
 [2010 Equality Act]: http://www.legislation.gov.uk/ukpga/2010/15/contents
 [Section 508]: https://www.section508.gov/
+[Web Content Accessibility Guidelines 1]: https://www.w3.org/TR/WCAG10/
+[Web Content Accessibility Guidelines 2]: https://www.w3.org/TR/WCAG20/
+[WCAG Samurai Errata]: http://www.wcagsamurai.org/erratas/introduction/
