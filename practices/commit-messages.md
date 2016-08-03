@@ -1,13 +1,15 @@
 # Commit Messages
 
-Your commit messages are your personal legacy - they are the record of what you have done to a codebase and more importantly, *why*. We find commit messages are most useful when we follow a small set of rules:
+Your commit messages are your personal legacy.
 
-* The first line should always be [50 characters or less](http://stopwritingramblingcommitmessages.com/) and that it should be followed by a blank line.
-* Following the short 50 character summary, add more detailed explanatory text if necessary, and make it as long/detailed as you need, there's no limits here, but please make the lines wrap at 72 characters.
-* If this work was done in relation to a Jira/Trello/whatever ticket, reference the ticket number in the commit message, but **DO NOT** use the ticket number as the entire commit message - this just makes it annoying for your colleagues to see what this change was for. The git log should be all they need to read to understand this change.
-* Super short commit messages like "Update", or "Bugfix" are unacceptable - please explain a little more about the change.
+They are the record of what you've done to a codebase and more importantly, *why*.
 
-If you need a bit more inspiration for writing better commit messages, please check out these great blog posts on the subject:
+* Make the first line [50 characters or less](http://stopwritingramblingcommitmessages.com/), followed by a blank line.
+* Add more explanatory text if necessary, as detailed as you need. But please make lines wrap at 72 characters.
+* If the work was done in relation to a ticket, include the ticket number in the commit message. **DON'T** only use the ticket number — this just makes life hard for your colleagues to understand what the change was for. The git log should be all they need to read.
+* Unhelpful messages like "Update" or "Bugfix" are... _unhelpful_. Please explain a little more.
+
+A few great blogs on writing better commit messages:
 
 * [5 Useful Tips for a Better Commit Message](https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message)
 * [A Note About Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
