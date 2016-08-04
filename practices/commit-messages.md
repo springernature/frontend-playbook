@@ -9,7 +9,11 @@ They are the record of what you've done to a codebase and more importantly, *why
 * If the work was done in relation to a ticket, include the ticket number in the commit message. **DON'T** only use the ticket number — this just makes life hard for your colleagues to understand what the change was for. The git log should be all they need to read.
 * Unhelpful messages like "Update" or "Bugfix" are... _unhelpful_. Please explain a little more.
 
-A few great blogs on writing better commit messages:
+
+One useful tip for writing great commit messages: imagine your commit message has to make sense prefaced with "If applied, this commit will...".
+
+
+A few blog posts on writing better commit messages:
 
 * [5 Useful Tips for a Better Commit Message](https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message)
 * [A Note About Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
