@@ -335,7 +335,6 @@ We do this:
 
 ```js
 class Apple extends Fruit {
-
     constructor() {
         this.color = 'red';
     }
@@ -343,7 +342,6 @@ class Apple extends Fruit {
     peel() {
         // ...
     }
-
 }
 ```
 
