@@ -18,7 +18,7 @@ Be sure to create an issue or submit a pull request if you have any questions, o
 1. **For actual content (in most cases, that means text), have confusable colours been avoided?**  
    For example, do not set light green text on a pink background.  
    There is no limitation on using confusable colours as design elements, nor is there a limitation on displaying areas of confusable colours next to each other (e.g., green type on a white background can sit alongside a solid red rectangle).  
-   See this page about [effective colour contrast](http://powerplant.nature.com/wiki/display/JPCIS/Effective+colour+contrast).
+   <!-- See this page about [effective colour contrast].-->
 
 1. **Has colour been avoided as a sole method of indicating an item on a page, either in its markup or style or via reference?**  
    For example, do not return a form with errors indicated solely in red; use additional markup, like strong, and/or use additional text like an asterisk or a visual icon with text equivalent, and/or explain in words what the errors are and where they are located.
