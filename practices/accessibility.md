@@ -30,7 +30,7 @@ Accessible sites can be used by more people - including people with disabilities
 
 ## What standards we conform to
 
-In order to aid us in developing and maintaining an accessible website, we strive to comply with the [Web Content Accessibility Guidelines] 1 AA + the [WCAG Samurai Errata]. In doing so, we also achieve a high pass rate with [Web Content Accessibility Guidelines 2] AA.
+In order to aid us in developing and maintaining an accessible website, we strive to comply with the [Web Content Accessibility Guidelines 1] AA + the [WCAG Samurai Errata]. In doing so, we also achieve a high pass rate with [Web Content Accessibility Guidelines 2] AA.
 
 ## Common concerns
 
