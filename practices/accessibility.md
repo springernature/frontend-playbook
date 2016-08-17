@@ -35,7 +35,7 @@ In order to aid us in developing and maintaining an accessible website, we striv
 
 ## How we conform
 
-It's not enough to ensure that we build accessible sites - we need to ensure we maintain them as well - it's quite common for sites to degrade over time, as new features are added. To this end we use [pa11y] - a tool that we developed in-house, to allow us to monitor the accessibility of our site over time.
+It's not enough to ensure that we build accessible sites - we need to ensure we maintain them as well - it's quite common for sites to degrade over time, as new features are added. To this end we use [pa11y] - a tool that we developed in-house, to allow us to monitor the accessibility of our sites over time.
 
 We have also created [a simple accessibility checklist], to help people become familiar with the guidelines/standards, and to aid us when manually assessing pages.
 
