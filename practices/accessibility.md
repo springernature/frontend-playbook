@@ -32,6 +32,16 @@ Accessible sites can be used by more people - including people with disabilities
 
 In order to aid us in developing and maintaining an accessible website, we strive to comply with the [Web Content Accessibility Guidelines 1] AA + the [WCAG Samurai Errata]. In doing so, we also achieve a high pass rate with [Web Content Accessibility Guidelines 2] AA.
 
+
+## How we conform
+
+It's not enough to ensure that we build accessible sites - we need to ensure we maintain them as well - it's quite common for sites to degrade over time, as new features are added. To this end we use [pa11y] - a tool that we developed in-house, to allow us to monitor the accessibility of our site over time.
+
+We have also created [a simple accessibility checklist], to help people become familiar with the guidelines/standards, and to aid us when manually assessing pages.
+
+Following guidelines is necessary, but including accessibility in the design process as soon as possible, is even more important. Only by working with disabled users and colleagues can we provide the sort of excellent results that - for instance - [gov.uk] achieves.
+
+
 ## Common concerns
 
 
@@ -41,6 +51,10 @@ In order to aid us in developing and maintaining an accessible website, we striv
 
 Some information in this page is taken from the Web Accessibility Initiative ([WAI](http://www.w3.org/WAI/)) document: _[Developing a Web Accessibility Business Case for Your Organization: Overview](https://www.w3.org/WAI/bcase/Overview)_. Copyright © [W3C](http://www.w3.org/)® ([MIT](http://www.csail.mit.edu/), [ERCIM](http://www.ercim.org/), [Keio](http://www.keio.ac.jp/)).
 
+
+[pa11y]: https://github.com/pa11y
+[a simple accessibility checklist]: practices/accessibility-checklist.md
+[gov.uk]: https://www.gov.uk/
 [2010 Equality Act]: http://www.legislation.gov.uk/ukpga/2010/15/contents
 [Section 508]: https://www.section508.gov/
 [Web Content Accessibility Guidelines 1]: https://www.w3.org/TR/WCAG10/
