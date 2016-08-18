@@ -723,7 +723,7 @@ But in the following example we would not use it:
 }
 ```
 
-[Nature playbook]: https://github.com/nature/playbook
+[Nature playbook(private)]: https://github.com/nature/playbook
 [bem]: https://github.com/springernature/frontend/languages/bem-css.md
 [a hybrid of OOCSS and Atomic CSS]: https://github.com/springernature/frontend/languages/mosaic-css.md
 [stylelint]: https://github.com/stylelint/stylelint
