@@ -19,6 +19,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Functions](#functions)
   - [Classes](#classes)
   - [Operators](#operators)
+  - [Blocks](#blocks)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
@@ -384,6 +385,14 @@ foo+=bar;
 baz = 'hello '+qux;
 foo ++;
 ```
+
+### Blocks
+
+All blocks must use curly braces and are not allowed to be written on a single line – see the [indentation](#indentation) rules.
+
+Blocks must also have padding whitespace on both sides (unless it's at the start of a line).
+
+If a block requires brackets, there must be padding whitespace between the brackets and the keyword as well as the opening curly brace.
 
 Client-Side JavaScript Architecture
 -----------------------------------
