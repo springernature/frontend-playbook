@@ -15,5 +15,12 @@ To contribute please create a new branch for each section, then create a pull re
 
 Please keep discussion inside the issues and pull requests, avoiding Slack, hallway conversations etc. Remember that this repo is public, and the discussions we have can be of benefit to people apart from us.
 
+#License
+
+The Frontend Playbook is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+You should have received a copy of the license along with this work. If not, see [Creative Commons BY-NC-SA 4.0 license].
+
 [this contribution]: https://github.com/springernature/frontend/pull/48#issuecomment-236139605
 [Changing the laws of engineering with pull requests]: https://www.youtube.com/watch?v=YIpNpptGX6Q
+[Creative Commons BY-NC-SA 4.0 license]: http://creativecommons.org/licenses/by-nc-sa/4.0/
