@@ -18,6 +18,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Variables](#variables)
   - [Functions](#functions)
   - [Classes](#classes)
+  - [Operators](#operators)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
