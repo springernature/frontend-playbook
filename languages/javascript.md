@@ -358,6 +358,31 @@ class Apple extends Fruit{
 }
 ```
 
+### Operators
+
+All operators must have padding whitespace on either side of them. The only exceptions are increment (`++`), decrement (`--`), unary negation (`-foo`), and unary plus (`+foo`).
+
+We disallow the use of normal equal and not equal, requiring you to use the strict equivalents.
+
+We do this:
+
+```js
+foo === bar;
+foo !== bar;
+foo += bar;
+baz = 'hello ' + qux;
+foo++;
+```
+
+We _don't_ do this:
+
+```js
+foo == bar;
+foo != bar;
+foo+=bar;
+baz = 'hello '+qux;
+foo ++;
+```
 
 Client-Side JavaScript Architecture
 -----------------------------------
