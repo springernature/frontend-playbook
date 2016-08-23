@@ -20,6 +20,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Classes](#classes)
   - [Operators](#operators)
   - [Blocks](#blocks)
+    - [Conditionals](#conditionals)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
@@ -393,6 +394,43 @@ All blocks must use curly braces and are not allowed to be written on a single l
 Blocks must also have padding whitespace on both sides (unless it's at the start of a line).
 
 If a block requires brackets, there must be padding whitespace between the brackets and the keyword as well as the opening curly brace.
+
+#### Conditionals
+
+In conditionals, `else` blocks must start on the same line as the end curly brace of the `if`.
+
+We do this:
+
+```js
+if (foo) {
+    foo += 1;
+}
+
+if (foo) {
+    foo += 1;
+} else {
+    bar += 1;
+}
+```
+
+We _don't_ do this:
+
+```js
+if(foo){
+    foo += 1;
+}
+
+if (foo) { foo += 1; }
+
+if (foo) return;
+
+if (foo) {
+    foo += 1;
+}
+else {
+    bar += 1;
+}
+```
 
 Client-Side JavaScript Architecture
 -----------------------------------
