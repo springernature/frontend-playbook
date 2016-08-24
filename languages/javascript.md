@@ -21,6 +21,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Operators](#operators)
   - [Blocks](#blocks)
     - [Conditionals](#conditionals)
+    - [Loops](#loops)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
@@ -429,6 +430,36 @@ if (foo) {
 }
 else {
     bar += 1;
+}
+```
+
+#### Loops
+
+In `for` loops, there must be space after the semi-colons.
+
+`for..in` loops must include a check with `hasOwnProperty`.
+
+We do this:
+
+```js
+for (var i = 0; i < 10; i += 1) {
+    // ...
+}
+
+for (var prop in obj) {
+    if (obj.hasOwnProperty(prop)) {
+        // ...
+    }
+}
+```
+
+We _don't_ do this:
+
+```js
+for (var i = 0;i < 10;i += 1) // ...
+
+for (var prop in obj) {
+    // ...
 }
 ```
 
