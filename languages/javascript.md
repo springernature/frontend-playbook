@@ -21,6 +21,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Operators](#operators)
   - [Blocks](#blocks)
     - [Conditionals](#conditionals)
+    - [Loops](#loops)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
