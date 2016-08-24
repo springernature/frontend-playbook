@@ -11,6 +11,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [Write modules over monoliths](#modules-over-monoliths)
   - [KISS](#keep-it-simple)
   - [Performant Code](#performant-code)
+  - [Error handling](#error-handling)
 - [Code Style](#code-style)
   - [Indentation](#indentation)
   - [White Space](#white-space)
@@ -123,6 +124,17 @@ bar = tempVar;
 We should always try to write fast code, but not if it makes the code difficult to understand. It's inefficient to optimise in favour of performance unless evidence shows that you really _need_ to do that.
 
 If you're writing a small library with a single simple purpose, and you really _really_ need to do it, then it makes sense; in a project with more than one contributor, there's frequently more "cost" than "benefit".
+
+### Error handling
+
+You should assume that your code will fail, and take steps to handle those failures. 
+
+Where [ES5 and above is available and strict mode is implemented](http://kangax.github.io/compat-table/es5/), use strict mode: `'use strict';` This causes JavaScript to error early rather than allow malformed or incorrect code to run.
+
+In Node.js, you can add `'use strict';` to the top of each of your source files.
+
+In-browser you should not add your `'use strict';` to the top of the file; instead you should add it to either the file's [IIFE](http://benalman.com/news/2010/11/immediately-invoked-function-expression/) or each defined function if an IIFE isn't present. This is because global strict mode in browsers can cause issues with third-party code.
+
 
 Code Style
 ---------
