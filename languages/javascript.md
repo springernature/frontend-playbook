@@ -435,14 +435,14 @@ else {
 
 #### Loops
 
-In `for` loops, there must be space between the semi-colons.
+In `for` loops, there must be space after the semi-colons.
 
 `for..in` loops must include a check with `hasOwnProperty`.
 
 We do this:
 
 ```js
-for (var i; i < 10; i += 1) {
+for (var i = 0; i < 10; i += 1) {
     // ...
 }
 
@@ -456,7 +456,7 @@ for (var prop in obj) {
 We _don't_ do this:
 
 ```js
-for (var i;i < 10;i += 1) // ...
+for (var i = 0;i < 10;i += 1) // ...
 
 for (var prop in obj) {
     // ...
