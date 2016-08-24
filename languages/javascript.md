@@ -128,7 +128,12 @@ If you're writing a small library with a single simple purpose, and you really _
 
 You should assume that your code will fail, and take steps to handle those failures. 
 
-Where [ES5 and above is available and strict mode is implemented](http://kangax.github.io/compat-table/es5/), use strict mode: `'use strict';`
+Where [ES5 and above is available and strict mode is implemented](http://kangax.github.io/compat-table/es5/), use strict mode: `'use strict';` This causes JavaScript to error early rather than allow malformed or incorrect code to run.
+
+In Node.js, you can add `'use strict';` to the top of each of your source files.
+
+In-browser you should not add your `'use strict';` to the top of the file; instead you should add it to either the file's IIFE or each defined function if an IIFE isn't present. This is because global strict mode in browsers can cause issues with third-party code.
+
 
 Code Style
 ---------
