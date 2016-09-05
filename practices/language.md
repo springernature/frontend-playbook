@@ -22,8 +22,6 @@ Stereotyping means presuming a range of things about people based on one or two 
 
 ### Genderless language
 
-* When writing documentation or examples that don't refer to specific people, we prefer the gender neutral honorific [`Mx`](http://www.oxforddictionaries.com/definition/english/mx#nav2).
-
 * We prefer to recast sentences as plural to avoid both the sexist and antiquated universal default to male pronouns and the awkward use of _he_ or _she_, _him_ or _her_ and the like:
 
 Bad:
@@ -41,15 +39,22 @@ This mirrors the guidelines introduced by the Washington Post and the New York T
 
 * We avoid examples that use _bro_ and _manly_ language, even when using verbal communication.
 
+Bad:
+> Server: Hello.
+>
+> Client: Hey _bro_, I have a message for you.
+
 Good:
 > Server: Hello.
 >
 > Client: Hey server, I have a message for you.
 
 Bad:
-> Server: Hello.
->
-> Client: Hey _bro_, I have a message for you.
+> Hey guys!
+
+Good:
+> Hey people!
+> Hey team!
 
 
 ### Disability
