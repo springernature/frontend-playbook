@@ -30,9 +30,9 @@ Bad:
 Good:
 > All students must complete their homework
 
-When such a rewrite is impossible, we prefer to use the singular `they`. We also use `they` as the genderless pronoun, in references to people who identify as neither male nor female.
+When such a rewrite is impossible, we prefer to use the singular _they_. We also use _they_ as the genderless pronoun, in references to people who identify as neither male nor female.
 
-This mirrors the guidelines introduced by the Washington Post and the New York Times<sup>[\[3\]][post]</sup>.
+This mirrors the guidelines introduced by the Washington Post<sup>[\[3\]][post]</sup>.
 
 
 ### _Bro_ language
