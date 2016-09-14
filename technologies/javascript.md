@@ -77,7 +77,7 @@ Reading code is difficult enough at the best of times. Don't make it harder; it'
 
 ### Modules Over Monoliths
 
-Wherever possible, you should try to think in smaller single-purpose modules and functions. This encourages reuse and helps to [keep complexity down](#complexity).
+Wherever possible, you should try to think in smaller single-purpose modules and functions. This encourages reuse and helps to [keep complexity down].
 
 If code is generic and reusable you should aim to break it into a separate module which can be managed through npm or included in a project's `vendor` directory. We advocate open sourcing of these kinds of modules, and it's a good idea to have open sourcing in mind no matter what you're writing.
 
@@ -496,7 +496,7 @@ catch (error) { console.log(error); }
 
 ### Strict Mode
 
-You should assume that your code will fail, and take steps to handle those failures. 
+You should assume that your code will fail, and take steps to handle those failures.
 
 Where [ES5 and above is available and strict mode is implemented](http://kangax.github.io/compat-table/es5/), use strict mode: `'use strict';` This causes JavaScript to error early rather than allow malformed or incorrect code to run.
 
@@ -574,7 +574,7 @@ An example utility might be a function to make a string title-case.
 
 [KISS]: https://en.wikipedia.org/wiki/KISS_principle
 [duplication is far cheaper than the wrong abstraction]: http://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction
-[complexity]: https://en.wikipedia.org/wiki/Cyclomatic_complexity
+[keep complexity down]: https://en.wikipedia.org/wiki/Cyclomatic_complexity
 [eslint]: http://eslint.org/
 [jshint]: http://jshint.com/
 [hoisting]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
