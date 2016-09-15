@@ -21,7 +21,7 @@ It is not impossible to imagine a back-end markup-generation system that only ou
 
 All things considered, it makes no sense to author XHTML.
 
-***contentious -- exceptions?** as if that is the only contentious thing in this doc.
+**contentious -- exceptions?** as if that is the only contentious thing in this doc.
 
 
 ## Validation
