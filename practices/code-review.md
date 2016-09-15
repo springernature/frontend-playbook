@@ -23,7 +23,7 @@ Here's the general protocol that we use:
 
 1. Create a local feature branch based off master.
 * When feature is complete and tests pass, stage the changes and commit them.
-* Write a [good commit message](practices/commit-messages.md).
+* Write a [good commit message](commit-messages.md).
 * Submit a [pull request](https://help.github.com/articles/using-pull-requests/).
 * Ask for a code review in Slack.
 * A team member other than the author reviews the pull request, and they make comments and ask questions directly on lines of code in the GitHub web interface.
