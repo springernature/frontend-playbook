@@ -199,9 +199,9 @@ gulp.task('lint', () =>
 );
 ```
 
-Q: `XO` is complaining about undefined variables in my JavaScript unit test code.
+Q: XO is complaining about undefined variables in my JavaScript unit test code.
 
-A: `XO` supports many [popular environment global variables](http://eslint.org/docs/user-guide/configuring#specifying-environments). Specify an environment of your choice to add the necessary global variables. Combine this with [Config Overrides](https://github.com/sindresorhus/xo#config-overrides) to ensure you don't apply one or many environments to your entire codebase accidentally.
+A: XO supports many [popular environment global variables](http://eslint.org/docs/user-guide/configuring#specifying-environments). Specify an environment of your choice to add the necessary global variables. Combine this with [Config Overrides](https://github.com/sindresorhus/xo#config-overrides) to ensure you don't apply one or many environments to your entire codebase accidentally.
 
 ### Indentation
 
