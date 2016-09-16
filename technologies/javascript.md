@@ -3,8 +3,6 @@ JavaScript Style Guide
 
 This document outlines the way we write JavaScript. It's a living styleguide – it will grow as our practices do.
 
-Projects should use a JavaScript linter such as [xo] to enforce these rules.
-
 - [General Principles](#general-principles)
   - [Write code for humans](#code-for-humans)
   - [Optimise for reading](#optimise-for-reading)
@@ -133,7 +131,9 @@ Code Style
 
 ### Linting
 
-JavaScript code should be linted with [xo]. Assume the `semicolon` rule is `on`, if you omit a semicolon from your code, it is suggested the following actions occur:
+JavaScript code should be linted with [xo]. `xo` uses ESLint under the hood.
+
+Consider the following scenario: Assume the `semicolon` rule is `on`, if you omit a semicolon from your JavaScript code, it is suggested the following actions occur:
 
 1. Your code editor should inform you of this linting failure. There are `xo` plugins for popular editors such as Sublime Text and Atom.
 2. Your local `watch` tasks, e.g. those run through Grunt, Gulp, Make etc. inform you of this error in your terminal. There are `xo` plugins for Grunt, Gulp and the CLI.
@@ -149,7 +149,7 @@ adsProvider.load();
 
 It says `adsProvider` is not defined, but it's a global variable already present in the page. What should I do?
 
-A: This breaks the [no-undef](http://eslint.org/docs/rules/no-undef) rule of ESLint. You must specify to ESLint that this is an expected global variable. Do not define this project wide, but rather, be explicit about which file or files need it.
+A: This breaks the [no-undef](http://eslint.org/docs/rules/no-undef) rule of ESLint. You must specify to ESLint that this is an expected global variable. Do not define this project-wide, but rather, be explicit about which file or files need it.
 
 ```js
 /* global adsProvider */
@@ -173,6 +173,10 @@ gulp.task('lint', () =>
     .pipe(xo())
 );
 ```
+
+Q: `xo` is complaining about undefined variables in my JavaScript unit test code.
+
+A: `xo` supports many [popular environment global variables](http://eslint.org/docs/user-guide/configuring#specifying-environments). Specify a environment of your choice to add the necessary global variables. Combine this with [Config Overrides](https://github.com/sindresorhus/xo#config-overrides) to ensure you don't apply one or many environments to your entire codebase.
 
 ### Indentation
 
