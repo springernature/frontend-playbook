@@ -3,8 +3,6 @@ JavaScript Style Guide
 
 This document outlines the way we write JavaScript. It's a living styleguide – it will grow as our practices do.
 
-Projects should use both [JSHint] and [ESLint] to enforce these rules.
-
 - [General Principles](#general-principles)
   - [Write code for humans](#code-for-humans)
   - [Optimise for reading](#optimise-for-reading)
@@ -12,6 +10,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [KISS](#keep-it-simple)
   - [Performant Code](#performant-code)
 - [Code Style](#code-style)
+  - [Linting](#linting)
   - [Indentation](#indentation)
   - [White Space](#white-space)
   - [Semi-Colons](#semi-colons)
@@ -130,6 +129,54 @@ If you're writing a small library with a single simple purpose, and you really _
 Code Style
 ---------
 
+### Linting
+
+JavaScript code should be linted with [xo]. `xo` uses ESLint under the hood.
+
+Consider the following scenario: Assume the `semicolon` rule is `on`, if you omit a semicolon from your JavaScript code, it is suggested the following actions occur:
+
+1. Your code editor should inform you of this linting failure. There are `xo` plugins for popular editors such as Sublime Text and Atom.
+2. Your local `watch` tasks, e.g. those run through Grunt, Gulp, Make etc. inform you of this error in your terminal. There are `xo` plugins for Grunt, Gulp and the CLI.
+3. When you push code which fails to lint, your build pipeline should invoke `xo` as part of a build task. The job should then fail.
+
+#### Questions and Answers
+
+Q: `xo` is complaining about the following code:
+
+```js
+adsProvider.load();
+```
+
+It says `adsProvider` is not defined, but it's a global variable already present in the page. What should I do?
+
+A: This breaks the [no-undef](http://eslint.org/docs/rules/no-undef) rule of ESLint. You must specify to ESLint that this is an expected global variable. Do not define this project-wide, but rather, be explicit about which file or files need it.
+
+```js
+/* global adsProvider */
+```
+
+
+Q: The [default set of rules](https://github.com/sindresorhus/eslint-config-xo/blob/7511eed20ff7e21b9e32b5d240f3bcaca09c0f70/index.js#L16) `xo` is using is too strict.
+
+A: Configure rules according to your use case, however be wary of turning rules off. Strive for consistency.
+
+Q: I just added `xo` into the build, but everything is failing the linting process.
+
+A: If your codebase has never been linted before, you might find rules being broken in each file. Fixing large amounts of code to pass linting may not be possible to do in one go. As a team, consider adopting an approach to successfully lint each file you touch as part of regular feature development. During this period, alter your build task accordingly to only lint files which you know you have linted. E.g.
+
+```js
+gulp.task('lint', () =>
+    gulp.src([
+      'js/file1.js',
+      'js/file2.js'
+    ])
+    .pipe(xo())
+);
+```
+
+Q: `xo` is complaining about undefined variables in my JavaScript unit test code.
+
+A: `xo` supports many [popular environment global variables](http://eslint.org/docs/user-guide/configuring#specifying-environments). Specify a environment of your choice to add the necessary global variables. Combine this with [Config Overrides](https://github.com/sindresorhus/xo#config-overrides) to ensure you don't apply one or many environments to your entire codebase.
 
 ### Indentation
 
@@ -579,3 +626,4 @@ An example utility might be a function to make a string title-case.
 [jshint]: http://jshint.com/
 [hoisting]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
 [needs to be mutable]: https://ada.is/blog/2015/07/13/immutable/
+[xo]: https://github.com/sindresorhus/xo
