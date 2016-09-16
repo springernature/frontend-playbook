@@ -15,6 +15,10 @@ To contribute please create a new branch for each section, then create a pull re
 
 Please keep discussion inside the issues and pull requests, avoiding Slack, hallway conversations etc. Remember that this repo is public, and the discussions we have can be of benefit to people apart from us.
 
+## Links
+
+If you need to reuse a hyperlink, turn it into a [reference link](https://daringfireball.net/projects/markdown/syntax#link). Otherwise, use an inline link.
+
 #License
 
 The Frontend Playbook is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.

@@ -137,7 +137,7 @@ Consider the following scenario: Assume the `semicolon` rule is `on`, if you omi
 
 1. Your code editor should inform you of this linting failure. There are `xo` plugins for popular editors such as Sublime Text and Atom.
 2. Your local `watch` tasks, e.g. those run through Grunt, Gulp, Make etc. inform you of this error in your terminal. There are `xo` plugins for Grunt, Gulp and the CLI.
-3. When you push code which fails to lint, your build pipeline should invoke `xo` as part of a build task. The job should then then fail.
+3. When you push code which fails to lint, your build pipeline should invoke `xo` as part of a build task. The job should then fail.
 
 #### Questions and Answers
 
