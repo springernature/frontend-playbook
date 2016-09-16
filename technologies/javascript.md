@@ -131,17 +131,43 @@ Code Style
 
 ### Linting
 
-JavaScript code should be linted with [xo]. `xo` uses ESLint under the hood.
+JavaScript code should be linted with [XO]. XO uses [eslint] under the hood.
+
+If you are using ES2015+ syntax, XO provides [configuration](https://github.com/sindresorhus/xo#esnext) to enforce relevant rules. Add this in your `package.json` to enable it:
+
+```js
+"xo": {
+  "esnext": true
+}
+```
 
 Consider the following scenario: Assume the `semicolon` rule is `on`, if you omit a semicolon from your JavaScript code, it is suggested the following actions occur:
 
-1. Your code editor should inform you of this linting failure. There are `xo` plugins for popular editors such as Sublime Text and Atom.
-2. Your local `watch` tasks, e.g. those run through Grunt, Gulp, Make etc. inform you of this error in your terminal. There are `xo` plugins for Grunt, Gulp and the CLI.
-3. When you push code which fails to lint, your build pipeline should invoke `xo` as part of a build task. The job should then fail.
+1. Your code editor should inform you of this linting failure. There are [XO plugins](https://github.com/sindresorhus/xo#editor-plugins) for popular editors such as [Sublime Text](https://github.com/sindresorhus/SublimeLinter-contrib-xo) and [Atom](https://github.com/sindresorhus/atom-linter-xo).
+2. Your local `watch` tasks, e.g. those run through Grunt, Gulp, Make etc. inform you of this error in your terminal. There are [XO plugins](https://github.com/sindresorhus/xo#build-system-plugins) for [Grunt](https://github.com/sindresorhus/grunt-xo), [Gulp](https://github.com/sindresorhus/gulp-xo) and the [CLI](https://github.com/sindresorhus/xo#install).
+3. When you push code which fails to lint, your build pipeline should invoke XO as part of a build task. The job should then fail.
+
+#### Automatically fixing code
+
+You can use XO as a command line tool. Once you install it, XO can automatically fix _some_ linting failures. Given a file `file.js` which contains the following:
+
+```js
+const object = {
+    foo:function(){}
+}
+```
+
+You can run XO with the `fix` option: `xo --fix file.js`. The same file now contains this:
+
+```js
+const object = {
+    foo: function () {}
+};
+```
 
 #### Questions and Answers
 
-Q: `xo` is complaining about the following code:
+Q: XO is complaining about the following code:
 
 ```js
 adsProvider.load();
@@ -155,12 +181,11 @@ A: This breaks the [no-undef](http://eslint.org/docs/rules/no-undef) rule of ESL
 /* global adsProvider */
 ```
 
+Q: The [default set of rules](https://github.com/sindresorhus/eslint-config-xo/blob/7511eed20ff7e21b9e32b5d240f3bcaca09c0f70/index.js#L16) XO is using is too strict, how should I handle this?
 
-Q: The [default set of rules](https://github.com/sindresorhus/eslint-config-xo/blob/7511eed20ff7e21b9e32b5d240f3bcaca09c0f70/index.js#L16) `xo` is using is too strict.
+A: [Configure rules](https://github.com/sindresorhus/xo#rules) according to your use case, however, be wary of turning rules off. Strive for consistency.
 
-A: Configure rules according to your use case, however be wary of turning rules off. Strive for consistency.
-
-Q: I just added `xo` into the build, but everything is failing the linting process.
+Q: I just added XO into the build, now everything is failing the linting process.
 
 A: If your codebase has never been linted before, you might find rules being broken in each file. Fixing large amounts of code to pass linting may not be possible to do in one go. As a team, consider adopting an approach to successfully lint each file you touch as part of regular feature development. During this period, alter your build task accordingly to only lint files which you know you have linted. E.g.
 
@@ -174,9 +199,9 @@ gulp.task('lint', () =>
 );
 ```
 
-Q: `xo` is complaining about undefined variables in my JavaScript unit test code.
+Q: `XO` is complaining about undefined variables in my JavaScript unit test code.
 
-A: `xo` supports many [popular environment global variables](http://eslint.org/docs/user-guide/configuring#specifying-environments). Specify a environment of your choice to add the necessary global variables. Combine this with [Config Overrides](https://github.com/sindresorhus/xo#config-overrides) to ensure you don't apply one or many environments to your entire codebase.
+A: `XO` supports many [popular environment global variables](http://eslint.org/docs/user-guide/configuring#specifying-environments). Specify an environment of your choice to add the necessary global variables. Combine this with [Config Overrides](https://github.com/sindresorhus/xo#config-overrides) to ensure you don't apply one or many environments to your entire codebase accidentally.
 
 ### Indentation
 
