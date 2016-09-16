@@ -32,3 +32,7 @@ Here's the general protocol that we use:
 * View a list of new commits. View changed files. Merge branch into master.
 * Delete your remote feature branch.
 * Delete your local feature branch.
+
+## What to look out for
+
+* Are there syntactic inconsistencies within the code? Suggest using a linter to scan for such problems automatically.
