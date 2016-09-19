@@ -36,3 +36,9 @@ Here's the general protocol that we use:
 ## What to look out for
 
 * Are there syntactic inconsistencies within the code? Suggest using a linter to scan for such problems automatically.
+* Overly complex code.
+* Code which could be split up into reusable modules.
+* Non-performant code. Suggest testing with [WebPageTest](https://www.webpagetest.org/) and/or other tools.
+* Inaccessible code. Suggest testing with [pa11y](https://github.com/pa11y) and/or other tools.
+    * [private Springer Nature instance of pa11y](http://pa11y-dashboard.dev.cf.springer-sbm.com/)
+* Do you see something which may have wider ramifications than the author anticipated? Double check they are aware which can of worms they have just opened :)
