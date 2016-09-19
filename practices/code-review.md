@@ -21,7 +21,7 @@ We manage code review via **pull requests**, which we communicate in the `#front
 
 Here's the general protocol that we use:
 
-1. Create a local feature branch based off master.
+1. Create a local short-lived feature branch based off master.
 * When feature is complete and tests pass, stage the changes and commit them.
 * Write a [good commit message](commit-messages.md).
 * Submit a [pull request](https://help.github.com/articles/using-pull-requests/).
