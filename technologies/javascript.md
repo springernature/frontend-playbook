@@ -368,6 +368,34 @@ var loadConfig = function (filePaths, callback) {
 function loadConfig(filePaths, callback){ /* ... */ }
 ```
 
+#### Pure Functions
+
+Where possible, keep your [JavaScript functions pure](http://alistapart.com/article/making-your-javascript-pure).
+
+We do this:
+
+```js
+function greet(greeting, subject) {
+  return `${greeting}, ${subject}`;
+}
+
+greet('Hello', 'friend')
+```
+
+We _don't_ do this:
+
+```js
+
+const greeting = 'Hello';
+
+function greet(subject) {
+  return `${greeting}, ${subject}`;
+}
+
+greet('friend')
+
+```
+
 #### Arguments
 
 Arguments must be separated from the preceding comma by a space, and there should be no padding whitespace at the start and end of the arguments.
