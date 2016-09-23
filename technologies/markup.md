@@ -2,11 +2,42 @@
 
 This document outlines the way we write markup and why.
 
+- [Summary Of Action Points](#summary-of-action-points)
 - [Background](#background)
 - [HTML vs XHTML](#html-vs-xhtml)
 - [Validation](#validation)
 - [To omit optional end tags?](#to-omit-optional-end-tags)
 - [Void Elements -- to explicitly or implicitly close?](#void-elements----to-explicitly-or-implicitly-close)
+
+## Summary Of Action Points
+
+- We do not omit optional end tags [discussion](#to-omit-optional-end-tags).
+
+We do;
+
+`<ol>
+    <li>foo</li>
+    <li>bar</li>
+</ol>`
+
+We do not do;
+
+`<ol>
+    <li>foo
+    <li>bar
+</ol>`
+
+
+- We implicitly close void elements [discussion](#void-elements----to-explicitly-or-implicitly-close).
+
+We do;
+
+`<meta charset="UTF-8">`
+
+We do not do;
+
+`<meta charset="UTF-8" />`
+
 
 ## Background
 
