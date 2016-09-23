@@ -15,28 +15,28 @@ This document outlines the way we write markup and why.
 
 We do;
 
-`<ol>
-    <li>foo</li>
-    <li>bar</li>
-</ol>`
+	<ol>
+	    <li>foo</li>
+	    <li>bar</li>
+	</ol>
 
 We do not do;
 
-`<ol>
-    <li>foo
-    <li>bar
-</ol>`
+	<ol>
+	    <li>foo
+	    <li>bar
+	</ol>
 
 
 - We implicitly close void elements [discussion](#void-elements----to-explicitly-or-implicitly-close).
 
 We do;
 
-`<meta charset="UTF-8">`
+	<meta charset="UTF-8">
 
 We do not do;
 
-`<meta charset="UTF-8" />`
+	<meta charset="UTF-8" />
 
 
 ## Background
