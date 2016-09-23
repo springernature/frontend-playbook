@@ -6,7 +6,7 @@ This document outlines the way we write markup and why.
 - [HTML vs XHTML](#html-vs-xhtml)
 - [Validation](#validation)
 - [To omit optional end tags?](#to-omit-optional-end-tags)
-- [Void Elements -- to explicitly or implicitly close?](#void-elements----to-explicitly-or-implicitly-close?)
+- [Void Elements -- to explicitly or implicitly close?](#void-elements----to-explicitly-or-implicitly-close)
 
 ## Background
 
