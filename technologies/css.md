@@ -127,7 +127,7 @@ a {
 }
 
 span {
-    &:before {
+    &::before {
         content: '\2022';
     }
 }
