@@ -11,16 +11,16 @@ This document outlines the way we write markup and why.
 
 ## Summary Of Action Points
 
-- We do not omit optional end tags [discussion](#to-omit-optional-end-tags).
+- [We do not omit optional end tags](#to-omit-optional-end-tags)
 
-We do;
+We do this;
 
 	<ol>
 	    <li>foo</li>
 	    <li>bar</li>
 	</ol>
 
-We do not do;
+We *don't* do this;
 
 	<ol>
 	    <li>foo
@@ -28,13 +28,13 @@ We do not do;
 	</ol>
 
 
-- We implicitly close void elements [discussion](#void-elements----to-explicitly-or-implicitly-close).
+- [We implicitly close void elements](#void-elements----to-explicitly-or-implicitly-close)
 
-We do;
+We do this;
 
 	<meta charset="UTF-8">
 
-We do not do;
+We *don't* do this;
 
 	<meta charset="UTF-8" />
 
