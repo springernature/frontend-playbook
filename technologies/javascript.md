@@ -3,8 +3,6 @@ JavaScript Style Guide
 
 This document outlines the way we write JavaScript. It's a living styleguide – it will grow as our practices do.
 
-Projects should use both [JSHint] and [ESLint] to enforce these rules.
-
 - [General Principles](#general-principles)
   - [Write code for humans](#code-for-humans)
   - [Optimise for reading](#optimise-for-reading)
@@ -12,6 +10,7 @@ Projects should use both [JSHint] and [ESLint] to enforce these rules.
   - [KISS](#keep-it-simple)
   - [Performant Code](#performant-code)
 - [Code Style](#code-style)
+  - [Linting](#linting)
   - [Indentation](#indentation)
   - [White Space](#white-space)
   - [Semi-Colons](#semi-colons)
@@ -77,7 +76,7 @@ Reading code is difficult enough at the best of times. Don't make it harder; it'
 
 ### Modules Over Monoliths
 
-Wherever possible, you should try to think in smaller single-purpose modules and functions. This encourages reuse and helps to [keep complexity down](#complexity).
+Wherever possible, you should try to think in smaller single-purpose modules and functions. This encourages reuse and helps to [keep complexity down].
 
 If code is generic and reusable you should aim to break it into a separate module which can be managed through npm or included in a project's `vendor` directory. We advocate open sourcing of these kinds of modules, and it's a good idea to have open sourcing in mind no matter what you're writing.
 
@@ -130,6 +129,79 @@ If you're writing a small library with a single simple purpose, and you really _
 Code Style
 ---------
 
+### Linting
+
+JavaScript code should be linted with [XO]. XO uses [eslint] under the hood.
+
+If you are using ES2015+ syntax, XO provides [configuration](https://github.com/sindresorhus/xo#esnext) to enforce relevant rules. Add this in your `package.json` to enable it:
+
+```js
+"xo": {
+  "esnext": true
+}
+```
+
+Consider the following scenario: Assume the `semicolon` rule is `on`, if you omit a semicolon from your JavaScript code, it is suggested the following actions occur:
+
+1. Your code editor should inform you of this linting failure. There are [XO plugins](https://github.com/sindresorhus/xo#editor-plugins) for popular editors such as [Sublime Text](https://github.com/sindresorhus/SublimeLinter-contrib-xo) and [Atom](https://github.com/sindresorhus/atom-linter-xo).
+2. Your local `watch` tasks, e.g. those run through Grunt, Gulp, Make etc. inform you of this error in your terminal. There are [XO plugins](https://github.com/sindresorhus/xo#build-system-plugins) for [Grunt](https://github.com/sindresorhus/grunt-xo), [Gulp](https://github.com/sindresorhus/gulp-xo) and the [CLI](https://github.com/sindresorhus/xo#install).
+3. When you push code which fails to lint, your build pipeline should invoke XO as part of a build task. The job should then fail.
+
+#### Automatically fixing code
+
+You can use XO as a command line tool. Once you install it, XO can automatically fix _some_ linting failures. Given a file `file.js` which contains the following:
+
+```js
+const object = {
+    foo:function(){}
+}
+```
+
+You can run XO with the `fix` option: `xo --fix file.js`. The same file now contains this:
+
+```js
+const object = {
+    foo: function () {}
+};
+```
+
+#### Questions and Answers
+
+Q: XO is complaining about the following code:
+
+```js
+adsProvider.load();
+```
+
+It says `adsProvider` is not defined, but it's a global variable already present in the page. What should I do?
+
+A: This breaks the [no-undef](http://eslint.org/docs/rules/no-undef) rule of ESLint. You must specify to ESLint that this is an expected global variable. Do not define this project-wide, but rather, be explicit about which file or files need it.
+
+```js
+/* global adsProvider */
+```
+
+Q: The [default set of rules](https://github.com/sindresorhus/eslint-config-xo/blob/7511eed20ff7e21b9e32b5d240f3bcaca09c0f70/index.js#L16) XO is using is too strict, how should I handle this?
+
+A: [Configure rules](https://github.com/sindresorhus/xo#rules) according to your use case, however, be wary of turning rules off. Strive for consistency.
+
+Q: I just added XO into the build, now everything is failing the linting process.
+
+A: If your codebase has never been linted before, you might find rules being broken in each file. Fixing large amounts of code to pass linting may not be possible to do in one go. As a team, consider adopting an approach to successfully lint each file you touch as part of regular feature development. During this period, alter your build task accordingly to only lint files which you know you have linted. E.g.
+
+```js
+gulp.task('lint', () =>
+    gulp.src([
+      'js/file1.js',
+      'js/file2.js'
+    ])
+    .pipe(xo())
+);
+```
+
+Q: XO is complaining about undefined variables in my JavaScript unit test code.
+
+A: XO supports many [popular environment global variables](http://eslint.org/docs/user-guide/configuring#specifying-environments). Specify an environment of your choice to add the necessary global variables. Combine this with [Config Overrides](https://github.com/sindresorhus/xo#config-overrides) to ensure you don't apply one or many environments to your entire codebase accidentally.
 
 ### Indentation
 
@@ -294,6 +366,34 @@ var loadConfig = function (filePaths, callback) {
 }
 
 function loadConfig(filePaths, callback){ /* ... */ }
+```
+
+#### Pure Functions
+
+Where possible, keep your [JavaScript functions pure](http://alistapart.com/article/making-your-javascript-pure).
+
+We do this:
+
+```js
+function greet(greeting, subject) {
+  return `${greeting}, ${subject}`;
+}
+
+greet('Hello', 'friend')
+```
+
+We _don't_ do this:
+
+```js
+
+const greeting = 'Hello';
+
+function greet(subject) {
+  return `${greeting}, ${subject}`;
+}
+
+greet('friend')
+
 ```
 
 #### Arguments
@@ -496,7 +596,7 @@ catch (error) { console.log(error); }
 
 ### Strict Mode
 
-You should assume that your code will fail, and take steps to handle those failures. 
+You should assume that your code will fail, and take steps to handle those failures.
 
 Where [ES5 and above is available and strict mode is implemented](http://kangax.github.io/compat-table/es5/), use strict mode: `'use strict';` This causes JavaScript to error early rather than allow malformed or incorrect code to run.
 
@@ -574,8 +674,9 @@ An example utility might be a function to make a string title-case.
 
 [KISS]: https://en.wikipedia.org/wiki/KISS_principle
 [duplication is far cheaper than the wrong abstraction]: http://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction
-[complexity]: https://en.wikipedia.org/wiki/Cyclomatic_complexity
+[keep complexity down]: https://en.wikipedia.org/wiki/Cyclomatic_complexity
 [eslint]: http://eslint.org/
 [jshint]: http://jshint.com/
 [hoisting]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
 [needs to be mutable]: https://ada.is/blog/2015/07/13/immutable/
+[xo]: https://github.com/sindresorhus/xo
