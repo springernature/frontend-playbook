@@ -11,7 +11,7 @@ This document outlines the way we write markup and why.
 
 ## Summary Of Action Points
 
-- [We do not omit optional end tags](#to-omit-optional-end-tags)
+- We do not omit optional end tags [(discussion)](#to-omit-optional-end-tags).
 
 We do this;
 
@@ -28,7 +28,7 @@ We *don't* do this;
 	</ol>
 
 
-- [We implicitly close void elements](#void-elements----to-explicitly-or-implicitly-close)
+- We implicitly close void elements [(discussion)](#void-elements----to-explicitly-or-implicitly-close).
 
 We do this;
 
