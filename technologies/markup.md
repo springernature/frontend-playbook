@@ -1,5 +1,13 @@
 # Markup
 
+This document outlines the way we write markup and why.
+
+- [Background](#background)
+- [HTML vs XHTML](#html-vs-xhtml)
+- [Validation](#validation)
+- [To omit optional end tags?](#to-omit-optional-end-tags)
+- [Void Elements -- to explicitly or implicitly close?](#void-elements----to-explicitly-or-implicitly-close?)
+
 ## Background
 
 HTML up to 3.2 was written with SGML syntax rules.  HTML 4 could be written with either SGML syntax (HTML 4.01) or XML (XHTML 1.0).  [HTML 5 breaks with SGML and has two serializations](https://www.w3.org/blog/2008/01/html5-is-html-and-xml/), a new one called "html" (which looks like SGML but is not an application of SGML) and again XML (XHTML).
@@ -17,11 +25,9 @@ In professional web development, one typically has to rely on 3rd-party code whi
 
 So for business purposes it is impractical to serve XHTML with anything other than a `text/html` MIME type.  This means the client cannot leverage an XML parser and instead uses a regular HTML parser, so any XML benefits are lost to the client. Additionally it introduces cognitive dissonance (a document which is an application of XML not being treated as such), we are serving a heavier page over an HTML 5 equivalent for no client-side benefit, and we lose some HTML features with XHTML such as [NOSCRIPT](https://www.w3.org/TR/html5/scripting-1.html#the-noscript-element) (which still appears in 3rd-party code).
 
-It is not impossible to imagine a back-end markup-generation system that only outputs XHTML, but as any valid XHTML document is essentially expressible in HTML (the reverse is not true)* this should be seen as a shortcoming in the markup generator, at least as far as the client is concerned.
+It is not impossible to imagine a back-end markup-generation system that only outputs XHTML, but as any valid XHTML document is essentially expressible in HTML (the reverse is not true) this should be seen as a shortcoming in the markup generator, at least as far as the client is concerned.
 
-All things considered, it makes no sense to author XHTML.
-
-**contentious -- exceptions?** as if that is the only contentious thing in this doc.
+As such it seems beneficial to choose HTML 5 over XHTML.
 
 
 ## Validation
@@ -41,7 +47,7 @@ While the HTML 4 & 5 specs allow some end tags to be omitted for _some_ non-[voi
 
 **We implicitly close void elements.**
 
-Explicitly closing void elements (e.g. `<br />`) is not invalid per se in HTML 5.  However, explicitly closing void elements is an artifact of XML serialization, not html, so may introduce cognitive dissonance in many authors given that we are authoring html.  Another source of dissonance is that explicitly closing void elements was invalid in older versions of HTML.
+Explicitly closing void elements (e.g. `<br />`) is not invalid per se in HTML 5.  However, explicitly closing void elements is an artifact of XML serialization, not HTML 5's "html" serialization, so may introduce cognitive dissonance in many authors given that we are authoring html.  Additionally, explicitly closing void elements was invalid in older versions of HTML.
 
 Conversely, it may be the case that their omission impacts authors more used to writing XML, or HTML with an XML serialization. However as far as machines are concerned, they increase page weight with zero benefit.
 
