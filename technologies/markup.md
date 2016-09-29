@@ -11,7 +11,35 @@ This document outlines the way we write markup and why.
 
 ## Summary Of Action Points
 
-- We do not omit optional end tags [(discussion)](#to-omit-optional-end-tags).
+### We follow the HTML 4 outline model for heading levels [(discussion)](#which-document-outline-model-to-use).
+
+We do this;
+
+	<h1>Page title</h1>
+
+	<article>
+		<h2>Article title</h2>
+		<h3>Article subtitle</h3>
+	</article>
+
+	<footer>
+		<h2>Footer title</h2>
+	</footer>
+
+We *don't* do this;
+
+	<h1>Page title</h1>
+
+	<article>
+		<h1>Article title</h1>
+		<h2>Article subtitle</h2>
+	</article>
+
+	<footer>
+		<h1>Footer title</h1>
+	</footer>
+
+### We do not omit optional end tags [(discussion)](#to-omit-optional-end-tags).
 
 We do this;
 
@@ -28,7 +56,7 @@ We *don't* do this;
 	</ol>
 
 
-- We implicitly close void elements [(discussion)](#void-elements----to-explicitly-or-implicitly-close).
+### We implicitly close void elements [(discussion)](#void-elements----to-explicitly-or-implicitly-close).
 
 We do this;
 
@@ -39,12 +67,20 @@ We *don't* do this;
 	<meta charset="UTF-8" />
 
 
-## Background
+## Which document outline model to use?
 
-HTML up to 3.2 was written with SGML syntax rules.  HTML 4 could be written with either SGML syntax (HTML 4.01) or XML (XHTML 1.0).  [HTML 5 breaks with SGML and has two serializations](https://www.w3.org/blog/2008/01/html5-is-html-and-xml/), a new one called "html" (which looks like SGML but is not an application of SGML) and again XML (XHTML).
+When HTML 5 was first announced, it brought with it a plethora of new semantic elements and an entirely new document outline model which leveraged them to provide meaning.  This was intended to supplant the HTML 4 model in which the heading level (h1 - h6) was used to imply the structure of the HTML document.  See [Using HTML sections and outlines](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines) for more information.
+
+Unfortunately, this new document outline model was never well supported by browsers or assistive technologies.  We considered sticking with the HTML 5 document outline model used in conjunction with setting ARIA attributes (`role="heading" aria-level="3"`) but this rather defeated any benefit from using the more localised heading levels, and was also poorly supported in some key assistive technologies.
+
+Instead, we have decided to continue to use the older HTML 4 style heading levels in conjunction with the new HTML 5 semantic elements.  This has since become [the recommendation for use in all HTML 5 documents](https://www.w3.org/TR/html5/sections.html#outlines).
 
 
 ## HTML vs XHTML
+
+### Background
+
+HTML up to 3.2 was written with SGML syntax rules.  HTML 4 could be written with either SGML syntax (HTML 4.01) or XML (XHTML 1.0).  [HTML 5 breaks with SGML and has two serializations](https://www.w3.org/blog/2008/01/html5-is-html-and-xml/), a new one called "html" (which looks like SGML but is not an application of SGML) and again XML (XHTML).
 
 **We author HTML 5.**
 
