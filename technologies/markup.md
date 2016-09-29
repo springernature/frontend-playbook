@@ -39,14 +39,14 @@ Invalid markup results in authors relying on all clients to do what they intende
 
 While the HTML 4 & 5 specs allow some end tags to be omitted for _some_ non-[void elements](https://www.w3.org/TR/html5/syntax.html#void-elements), it's unreasonable to expect authors to remember which elements this applies to.  Additionally this kind of inconsistency can play havok with text editors, any indentation policy, and impairs our ability to spot bugs that would otherwise offend our pattern-recognition powers.
 
-We do this;
+We do this:
 
 	<ol>
 	    <li>foo</li>
 	    <li>bar</li>
 	</ol>
 
-We *don't* do this;
+We *don't* do this:
 
 	<ol>
 	    <li>foo
@@ -60,11 +60,11 @@ Explicitly closing void elements (e.g. `<br />`) is not invalid per se in HTML 5
 
 Conversely, it may be the case that their omission impacts authors more used to writing XML, or HTML with an XML serialization. However as far as machines are concerned, they increase page weight with zero benefit.
 
-We do this;
+We do this:
 
 	<meta charset="UTF-8">
 
-We *don't* do this;
+We *don't* do this:
 
 	<meta charset="UTF-8" />
 
@@ -79,7 +79,7 @@ Unfortunately, this new document outline model was never well supported by brows
 
 Instead, we have decided to continue to use the older HTML 4 style heading levels in conjunction with the new HTML 5 semantic elements.  This has since become [the recommendation for use in all HTML 5 documents](https://www.w3.org/TR/html5/sections.html#outlines).
 
-We do this;
+We do this:
 
 	<h1>Page title</h1>
 
@@ -92,7 +92,7 @@ We do this;
 		<h2>Footer title</h2>
 	</footer>
 
-We *don't* do this;
+We *don't* do this:
 
 	<h1>Page title</h1>
 
