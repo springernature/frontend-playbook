@@ -1,4 +1,4 @@
-This repo contains the Springer Nature frontend playbook. It details how we run software development and how we make web and mobile products together. It's filled with things we've learned based on our own experience and study of others' experiences.
+This repo contains the Springer Nature front-end playbook. It details how we run software development and how we make web and mobile products together. It's filled with things we've learned based on our own experience and study of others' experiences.
 
 See "[Changing the laws of engineering with pull requests]" for an in depth explanation of how developing a playbook like this is of benefit.
 
