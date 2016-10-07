@@ -1,3 +1,22 @@
+# Repositories
+
+We use a standard naming format for our Git repositories. Repository names are train-case (all lowercase, words separated by a hyphen), and begin with "frontend" followed by your project name. 
+
+We _don't_ do this:
+
+```
+front-end-project-name
+front-end-projectname
+project-name-front-end
+project-name-frontend
+```
+
+We do this:
+
+```
+frontend-project-name
+```
+
 # Commit Messages
 
 Your commit messages are your personal legacy.
