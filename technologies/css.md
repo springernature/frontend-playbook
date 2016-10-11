@@ -185,7 +185,7 @@ table {
 **Breakpoints**  
 These should be nested within the relevant parent using `@include`.
 
-One exception to these rules is targeting a BEM element from within a nested block rule. See the [BEM documentation](https://github.com/springernature/frontend/blob/master/languages/bem-css.md) for more information on BEM and nesting.
+One exception to these rules is targeting a BEM element from within a nested block rule. See the [BEM documentation][bem] for more information on BEM and nesting.
 
 ## The Rules
 
@@ -724,8 +724,8 @@ But in the following example we would not use it:
 ```
 
 [Nature playbook(private)]: https://github.com/nature/playbook
-[bem]: https://github.com/springernature/frontend/languages/bem-css.md
-[a hybrid of OOCSS and Atomic CSS]: https://github.com/springernature/frontend/languages/mosaic-css.md
+[bem]: https://github.com/springernature/frontend/technologies/bem-css.md
+[a hybrid of OOCSS and Atomic CSS]: https://github.com/springernature/frontend/technologies/mosaic-css.md
 [stylelint]: https://github.com/stylelint/stylelint
 [debunked as a fallacy]: http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
 [rems bug in chrome]: http://stackoverflow.com/questions/20099844/chrome-not-respecting-rem-font-size-on-body-tag
