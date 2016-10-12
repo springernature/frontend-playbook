@@ -80,7 +80,7 @@ Disabled people.
 Dyslexic people.
 Susan is blind.
 Deaf people. 
-Screenreader users / blind users.
+Screenreader users / blind users. [where relevant]
 ```
 
 The Special Interest Group on Accessible Computing (SIGACCESS) has published a [comprehensive guide to writing about disability](http://www.sigaccess.org/welcome-to-sigaccess/resources/accessible-writing-guide/) within the context of science and technology. 
