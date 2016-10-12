@@ -83,9 +83,9 @@ Deaf people.
 Screenreader users / blind users.
 ```
 
-The Special Interest Group on Accessible Computing (SIGACCESS) has published a [comprehensive guide to writing about disability][http://www.sigaccess.org/welcome-to-sigaccess/resources/accessible-writing-guide/] within the context of science and technology. 
+The Special Interest Group on Accessible Computing (SIGACCESS) has published a [comprehensive guide to writing about disability](http://www.sigaccess.org/welcome-to-sigaccess/resources/accessible-writing-guide/) within the context of science and technology. 
 
-You may also find the more general [gov.uk inclusive language guidance][https://www.gov.uk/government/publications/inclusive-communication/inclusive-language-words-to-use-and-avoid-when-writing-about-disability] helpful. 
+You may also find the more general [gov.uk inclusive language guidance](https://www.gov.uk/government/publications/inclusive-communication/inclusive-language-words-to-use-and-avoid-when-writing-about-disability) helpful. 
 
 
 [wiley]: http://onlinelibrary.wiley.com/doi/10.1111/j.1467-1770.1982.tb00973.x/abstract "Language environment and gender identity attainment"
