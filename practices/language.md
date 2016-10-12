@@ -59,7 +59,33 @@ Good:
 
 ### Disability
 
-Using inclusive language is critical when writing about accessibility. When possible, we suggest to use gov.uk guidance: [Inclusive language: words to use and avoid when writing about disability](https://www.gov.uk/government/publications/inclusive-communication/inclusive-language-words-to-use-and-avoid-when-writing-about-disability)
+Using inclusive language is critical when writing about accessibility. Avoid references that dehumanise or 'other' people, or that cast them as helpless victims. Never use collective nouns like "the disabled" or "the blind" - these words are descriptors, not group labels. 
+
+Use positive language that emphasises abilities rather than limitations. Consider whether you need to refer to a disability at all - for example, instead of writing about "users who are unable to use a mouse", perhaps you can be more precise with "keyboard users", or "users of alternative input devices". 
+
+We _don't_ say this:
+
+```
+The disabled.
+Dyslexics. 
+Susan is a victim of blindness.
+People suffering from deafness.
+Users who cannot see a screen.
+```
+
+We say this:
+
+```
+Disabled people. 
+Dyslexic people.
+Susan is blind.
+Deaf people. 
+Screenreader users / blind users.
+```
+
+The Special Interest Group on Accessible Computing (SIGACCESS) has published a [comprehensive guide to writing about disability][http://www.sigaccess.org/welcome-to-sigaccess/resources/accessible-writing-guide/] within the context of science and technology. 
+
+You may also find the more general [gov.uk inclusive language guidance][https://www.gov.uk/government/publications/inclusive-communication/inclusive-language-words-to-use-and-avoid-when-writing-about-disability] helpful. 
 
 
 [wiley]: http://onlinelibrary.wiley.com/doi/10.1111/j.1467-1770.1982.tb00973.x/abstract "Language environment and gender identity attainment"
