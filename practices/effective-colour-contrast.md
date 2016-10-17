@@ -10,11 +10,11 @@ Partial sight, aging and congenital color deficits all produce changes in percep
 
 ### Exaggerate lightness differences between foreground and background colors, and avoid using colors of similar lightness adjacent to one another, even if they differ in saturation or hue.
 
-![Foreground and background contrast](color_contrast_01.jpg)
+![Foreground and background contrast](../resources/images/color_contrast_01.jpg)
 
 Dont assume that the lightness you perceive will be the same as the lightness perceived by people with color deficits. You can generally assume that they will see less contrast between colors than you will. If you lighten the light colors and darken the dark colors in your design, you will increase its visual accessibility.
 
-![Light and dark colour wheel](color_contrast_02.gif)
+![Light and dark colour wheel](../resources/images/color_contrast_02.gif)
 
 ### Choose dark colors with hues from the bottom half of this hue circle against light colors from the top half of the circle.
 
@@ -22,15 +22,15 @@ Avoid contrasting light colors from the bottom half against dark colors from the
 
 For most people with partial sight and/or congenital color deficiencies, the lightness values of colors in the bottom half of the hue circle tend to be reduced.
 
-![Hue contrast colour wheel](color_contrast_03.gif)
+![Hue contrast colour wheel](../resources/images/color_contrast_03.gif)
 
-![Effective and ineffective hue contrast](color_contrast_04.gif)
+![Effective and ineffective hue contrast](../resources/images/color_contrast_04.gif)
 
 ### Avoid contrasting hues from adjacent parts of the hue circle, especially if the colors do not contrast sharply in lightness.
 
 Color deficiencies associated with partial sight and congenital deficiencies make it difficult to discriminate between colors of similar hue.
 
-![Ineffective adjacent hues](color_contrast_05.gif)
+![Ineffective adjacent hues](../resources/images/color_contrast_05.gif)
 
 
 
