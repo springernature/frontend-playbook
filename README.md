@@ -15,6 +15,8 @@ To contribute please create a new branch for each section, then create a pull re
 
 Please keep discussion inside the issues and pull requests, avoiding Slack, hallway conversations etc. Remember that this repo is public, and the discussions we have can be of benefit to people apart from us.
 
+[Read the full contributor guide](CONTRIBUTING.md).
+
 ## Links
 
 If you need to reuse a hyperlink, turn it into a [reference link](https://daringfireball.net/projects/markdown/syntax#link). Otherwise, use an inline link.
