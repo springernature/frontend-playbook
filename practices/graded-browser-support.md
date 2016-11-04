@@ -42,7 +42,7 @@ We use the following link attribute to conditionally load our main css:
 
 ```
 
-We initialises JavaScript only if the browser supports a number of modern:
+We initialise JavaScript only if the browser supports a number of modern features:
 
 
 ```javascript
