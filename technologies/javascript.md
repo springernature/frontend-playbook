@@ -211,7 +211,7 @@ Many operations in JavaScript (both in the browser and Node.js) are asynchronous
 
 Here is an example:
 
-```
+```js
 ajax('https://example.com', response => {
   console.log(response)
 });
@@ -219,7 +219,7 @@ ajax('https://example.com', response => {
 
 If you need to execute another `ajax` request based on the result of the original, you might write code like this:
 
-```
+```js
 ajax('https://example.com', response => {
   console.log(response); // { status: 200, url: 'https://...' }
 
@@ -231,7 +231,7 @@ ajax('https://example.com', response => {
 
 To avoid the journey to '[callback hell](http://callbackhell.com/)', you should aim to use [promise-based APIs](https://developers.google.com/web/fundamentals/getting-started/primers/promises). You can now convert the callback-based code to this:
 
-```
+```js
 ajax('https://example.com').then(response => response.url).then(url => {
   ajax(url, () => {
     console.log('Two ajax requests have completed')
@@ -241,7 +241,7 @@ ajax('https://example.com').then(response => response.url).then(url => {
 
 Promises still use callbacks. To write synchronous-style code which performs asynchronous operations, you can use [async/await](https://twitter.com/addyosmani/status/756204943527129090). The above example can be rewritten to use `async/await`.
 
-```
+```js
 const {url} = await ajax('https://example.com');
 await ajax(url);
 console.log('Two ajax requests have completed')
@@ -258,13 +258,13 @@ console.log('Two ajax requests have completed')
 
 You can `await` multiple promises:
 
-```
+```js
 const [response1, response2] = await Promise.all([promise1, promise2]);
 ```
 
 You can wrap the `await` + function call in parentheses to enable calls like this:
 
-```
+```js
 await (await fetch('http://numbersapi.com/random/year?json')).json()
 ```
 
