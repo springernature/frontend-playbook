@@ -552,7 +552,7 @@ for (let i = 0; i < 10; i += 1) {
     // ...
 }
 
-for (let prop in obj) {
+for (const prop in obj) {
     if (obj.hasOwnProperty(prop)) {
         // ...
     }
@@ -564,7 +564,7 @@ We _don't_ do this:
 ```js
 for (let i = 0;i < 10;i += 1) // ...
 
-for (let prop in obj) {
+for (const prop in obj) {
     // ...
 }
 ```
