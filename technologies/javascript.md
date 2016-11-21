@@ -11,6 +11,7 @@ This document outlines the way we write JavaScript. It's a living styleguide –
   - [Performant Code](#performant-code)
 - [Code Style](#code-style)
   - [Linting](#linting)
+  - [Asynchronicity](#asynchronicity)
   - [Indentation](#indentation)
   - [White Space](#white-space)
   - [Semi-Colons](#semi-colons)
@@ -203,6 +204,73 @@ gulp.task('lint', () =>
 Q: XO is complaining about undefined variables in my JavaScript unit test code.
 
 A: XO supports many [popular environment global variables](http://eslint.org/docs/user-guide/configuring#specifying-environments). Specify an environment of your choice to add the necessary global variables. Combine this with [Config Overrides](https://github.com/sindresorhus/xo#config-overrides) to ensure you don't apply one or many environments to your entire codebase accidentally.
+
+### Asynchronicity
+
+Many operations in JavaScript (both in the browser and Node.js) are asynchronous. If you need to access the result of an async operation, the API which you are using may offer the result to you through a callback that you provide.
+
+Here is an example:
+
+```
+ajax('https://example.com', response => {
+  console.log(response)
+});
+```
+
+If you need to execute another `ajax` request based on the result of the original, you might write code like this:
+
+```
+ajax('https://example.com', response => {
+  console.log(response); // { status: 200, url: 'https://...' }
+
+  ajax(response.url, () => {
+    console.log('Two ajax requests have completed')
+  });
+});
+```
+
+To avoid the journey to '[callback hell](http://callbackhell.com/)', you should aim to use [promise-based APIs](https://developers.google.com/web/fundamentals/getting-started/primers/promises). You can now convert the callback-based code to this:
+
+```
+ajax('https://example.com').then(response => response.url).then(url => {
+  ajax(url, () => {
+    console.log('Two ajax requests have completed')
+  });
+})
+```
+
+Promises still use callbacks. To write synchronous-style code which performs asynchronous operations, you can use [async/await](https://twitter.com/addyosmani/status/756204943527129090). The above example can be rewritten to use `async/await`.
+
+```
+const {url} = await ajax('https://example.com');
+await ajax(url);
+console.log('Two ajax requests have completed')
+```
+
+#### Things to consider:
+
+* `async/await` has limited [browser support](http://caniuse.com/#feat=async-functions), you might need to use a [transpiler](https://babeljs.io/docs/plugins/transform-async-to-generator/) to gain cross-browser support.
+* You might ship a larger JavaScript payload to your users by converting an `async` function. Profile your website to evaluate if this is worth it.
+* The `async` in `async/await` refers to the fact that the `await` keyword can only appear in a function prefixed with the `async` keyword.
+* If the API you would like to `await` for does not offer a promise-based API, you can't `await` the API call. Consider [converting the API to use promises](https://www.npmjs.com/package/es6-promisify).
+
+#### Tricks
+
+You can `await` multiple promises:
+
+```
+const [response1, response2] = await Promise.all([promise1, promise2]);
+```
+
+You can wrap the `await` + function call in parentheses to enable calls like this:
+
+```
+await (await fetch('http://numbersapi.com/random/year?json')).json()
+```
+
+#### Further reading
+
+Practical code examples, including error handling examples, can be read here: [Async functions - making promises friendly](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions)
 
 ### Indentation
 
