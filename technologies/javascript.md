@@ -254,7 +254,7 @@ console.log('Two ajax requests have completed')
 * The `async` in `async/await` refers to the fact that the `await` keyword can only appear in a function prefixed with the `async` keyword.
 * If the API you would like to `await` for does not offer a promise-based API, you can't `await` the API call. Consider [converting the API to use promises](https://www.npmjs.com/package/es6-promisify).
 
-#### Tricks
+#### Tips
 
 You can `await` multiple promises:
 
