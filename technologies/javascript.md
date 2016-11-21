@@ -86,7 +86,7 @@ Often you'll find that the code you're writing is catered for by a third-party m
 
 We adhere to the [KISS] principle. Unnecessarily complex/obtuse code completely goes against our rule of coding for humans. It's difficult to understand, slows us down, and reduces maintainability. Don't do it.
 
-It is also Important to remember that [duplication is far cheaper than the wrong abstraction].
+It is also important to remember that [duplication is far cheaper than the wrong abstraction].
 
 ```js
 // We don't do this
@@ -104,7 +104,7 @@ function isOdd(number) {
 
 // We do this
 function isOdd(number) {
-    var mod = number % 2;
+    const mod = number % 2;
     return (mod !== 0);
 }
 ```
@@ -114,7 +114,7 @@ function isOdd(number) {
 foo ^= bar; bar ^= foo; foo ^= bar;
 
 // We do this
-var tempVar = foo;
+const tempVar = foo;
 foo = bar;
 bar = tempVar;
 ```
@@ -125,6 +125,7 @@ We should always try to write fast code, but not if it makes the code difficult 
 
 If you're writing a small library with a single simple purpose, and you really _really_ need to do it, then it makes sense; in a project with more than one contributor, there's frequently more "cost" than "benefit".
 
+Understanding [when to optimise](https://en.wikipedia.org/wiki/Program_optimization#When_to_optimize) is a valuable skill in software development.
 
 Code Style
 ---------
@@ -205,6 +206,8 @@ A: XO supports many [popular environment global variables](http://eslint.org/doc
 
 ### Indentation
 
+Ensure indentation consistency is maintained with a tool such as [EditorConfig](http://editorconfig.org/). Using this tool, you can specify indentation settings for your codebase. Team members should then install the corresponding plugin for their editor. E.g. [atom-editorconfig](https://github.com/sindresorhus/atom-editorconfig#readme)
+
 We indent our JavaScript using single tabs, not spaces. You can convert characters automatically in most editors, and you're advised to do this.
 
 Follow the [BSD-KNF] indentation style.
@@ -242,7 +245,7 @@ if (foo) {
 
 We use white space liberally to help keep code readable. You're encouraged to use newlines to break up long functions into logical chunks.
 
-You should also remove trailing white space from lines of code. Your editor should be able to either remove this or highlight it when present.
+You should also remove trailing white space from lines of code. Your editor should be able to either remove this or highlight it when present, for example, [atom-whitespace](https://github.com/atom/whitespace).
 
 ### Semi-Colons
 
@@ -545,11 +548,11 @@ In `for` loops, there must be space after the semi-colons.
 We do this:
 
 ```js
-for (var i = 0; i < 10; i += 1) {
+for (let i = 0; i < 10; i += 1) {
     // ...
 }
 
-for (var prop in obj) {
+for (let prop in obj) {
     if (obj.hasOwnProperty(prop)) {
         // ...
     }
@@ -559,9 +562,9 @@ for (var prop in obj) {
 We _don't_ do this:
 
 ```js
-for (var i = 0;i < 10;i += 1) // ...
+for (let i = 0;i < 10;i += 1) // ...
 
-for (var prop in obj) {
+for (let prop in obj) {
     // ...
 }
 ```
