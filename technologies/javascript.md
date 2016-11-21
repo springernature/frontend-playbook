@@ -300,7 +300,7 @@ async function six() {
 }
 
 six().then(result => {
-  console.log(result) // 6
+  console.log(result); // 6
 });
 ```
 
