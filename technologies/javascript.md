@@ -268,6 +268,14 @@ You can wrap the `await` + function call in parentheses to enable calls like thi
 await (await fetch('http://numbersapi.com/random/year?json')).json()
 ```
 
+You can use `async` functions with the arrow function syntax:
+
+```js
+[1, 2, 3].map(async num => {
+
+})
+```
+
 #### Further reading
 
 Practical code examples, including error handling examples, can be read here: [Async functions - making promises friendly](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions)
