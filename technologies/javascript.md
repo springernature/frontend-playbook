@@ -276,6 +276,25 @@ You can use `async` functions with the arrow function syntax:
 })
 ```
 
+This code snippet highlights two things:
+
+* Since `async/await` uses promises, you can continue to use `then()` callbacks where it makes sense, for example outside of an `async` function.
+* All `async` functions return promises. No matter what value you explicitly return, it will still be wrapped in a promise.
+
+```
+async function five() {
+  return Promise.resolve(5);
+}
+
+async function six() {
+  return 1 + await five();
+}
+
+six().then(result => {
+  console.log(result) // 6
+});
+```
+
 #### Further reading
 
 Practical code examples, including error handling examples, can be read here: [Async functions - making promises friendly](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions)
