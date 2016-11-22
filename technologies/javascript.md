@@ -256,11 +256,16 @@ console.log('Two ajax requests have completed')
 
 #### Tips
 
+##### Awaiting multiple promises
+
 You can `await` multiple promises:
 
 ```js
 const [response1, response2] = await Promise.all([promise1, promise2]);
 ```
+
+
+##### Multiple awaits in a one-liner
 
 You can wrap the `await` + function call in parentheses to enable calls like this:
 
@@ -268,12 +273,35 @@ You can wrap the `await` + function call in parentheses to enable calls like thi
 await (await fetch('http://numbersapi.com/random/year?json')).json()
 ```
 
+##### Arrow function sytax with await
+
 You can use `async` functions with the arrow function syntax:
 
 ```js
 [1, 2, 3].map(async num => {
 
 })
+```
+
+##### Fallback to promises
+
+This code snippet highlights two things:
+
+* Since `async/await` uses promises, you can continue to use `then()` callbacks where it makes sense, for example outside of an `async` function.
+* All `async` functions return promises. No matter what value you explicitly return, it will still be wrapped in a promise.
+
+```js
+async function five() {
+  return Promise.resolve(5);
+}
+
+async function six() {
+  return 1 + await five();
+}
+
+six().then(result => {
+  console.log(result); // 6
+});
 ```
 
 #### Further reading
