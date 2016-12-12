@@ -23,17 +23,17 @@ We load a basic stylesheet to all users. This contains only [normalisation](http
 To load the full experience only in modern browsers we implement logic in the media attribute of the `<link>` element that identifies the main stylesheet, loading the stylesheet only in browsers that recognise the properties of that media query.
 This technique is documented here: [Cutting the Mustard with Media queries](https://www.sitepoint.com/cutting-the-mustard-with-css-media-queries/).
 
-We use the following link attribute to conditionally load our enhanced css:
+We use the following link attribute to conditionally load our enhanced CSS:
 
 ```html
 <link href="style.css" rel="stylesheet" media="only screen and (min-resolution: 0.1dpcm), only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0)">
 ```
 
-We couple the loading of JavaScript to the loading of the enhanced css.
+We couple the loading of JavaScript to the loading of the enhanced CSS.
 If the browser loads the CSS within the media query, then load the JavaScript.
 
-To do this, we set a style in the enhanced css that won't affect the visual representation of the site, and then use JavaScript to check whether it has been applied.
-If it has been applied, we know that the enhanced css has loaded and we can then load the JavaScript.
+To do this, we set a style in the enhanced CSS that won't affect the visual representation of the site, and then use JavaScript to check whether it has been applied.
+If it has been applied, we know that the enhanced CSS has loaded and we can then load the JavaScript.
 
 ```css
 body {
