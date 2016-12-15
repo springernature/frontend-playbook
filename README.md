@@ -23,7 +23,7 @@ If you need to reuse a hyperlink, turn it into a [reference link](https://daring
 
 #License
 
-The Frontend Playbook is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+The Front-End Playbook is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
 You should have received a copy of the license along with this work. If not, see [Creative Commons BY-NC-SA 4.0 license].
 
