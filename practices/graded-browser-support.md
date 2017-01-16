@@ -10,10 +10,10 @@ We follow the guidelines for graded browser support outlined by Nate Koechley at
 | Chrome        | latest stable   |                  |
 | Edge          | latest stable   |                  |
 | Firefox       | latest stable   |               <2 |
-| IE            | 9, 10, 11       |               <9 |
+| IE            | 11              |              <11 |
 | Opera         | latest stable   |              <10 |
-| Safari        | latest stable, latest stable -1   |  <4.1 (desktop) |
-| Webkit        | Android 4.&#8224; |  <3           |
+| Safari        | latest stable, latest stable -1    |  <4.1 (desktop) |
+| Webkit        | Android 4.&#8224; |  <3            |
 
 ## How we implement graded browser support
 
@@ -23,26 +23,25 @@ We load a basic stylesheet to all users. This contains only [normalisation](http
 To load the full experience only in modern browsers we implement logic in the media attribute of the `<link>` element that identifies the main stylesheet, loading the stylesheet only in browsers that recognise the properties of that media query.
 This technique is documented here: [Cutting the Mustard with Media queries](https://www.sitepoint.com/cutting-the-mustard-with-css-media-queries/).
 
-We use the following link attribute to conditionally load our enhanced CSS:
+The media queries we use are based upon [CSS Only Mustard Cut](https://github.com/Fall-Back/CSS-Mustard-Cut), with a preference towards combining them into one rather than separating them out into multiple `<link>` elements.  Note that you **cannot** add line breaks to the media query if they are combined.
 
 ```html
-<link href="style.css" rel="stylesheet" media="only screen and (min-resolution: 0.1dpcm), only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0)">
+<link rel="stylesheet" href="your-css.css" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
 ```
 
 We couple the loading of JavaScript to the loading of the enhanced CSS.
 If the browser loads the CSS within the media query, then load the JavaScript.
 
-To do this, we set a style in the enhanced CSS that won't affect the visual representation of the site, and then use JavaScript to check whether it has been applied.
-If it has been applied, we know that the enhanced CSS has loaded and we can then load the JavaScript.
-
-```css
-body {
-    clear: both;
-}
-```
+In order to check this, we use [window.matchMedia](https://developer.mozilla.org/en/docs/Web/API/Window/matchMedia).
 
 ```javascript
-if (window.getComputedStyle && window.getComputedStyle(document.body).getPropertyValue('clear') === 'both') {
-    // bootstrap the javascript application
-}
+(function() {
+    var linkEl = document.querySelector('link');
+    if (window.matchMedia && window.matchMedia(linkEl.media)) {
+        var script = document.createElement('script');
+        script.src = 'your-script.js';
+        script.async = true;
+        document.body.appendChild(script);
+    }
+})();
 ```
