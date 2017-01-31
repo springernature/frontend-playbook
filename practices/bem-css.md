@@ -18,7 +18,7 @@ BEM naming follows this pattern:
 
 ## Naming Style
 
-All class names should be train-case - all lowercase, words separated by a hyphen. 
+All class names should be `lowercase-hyphenated` - all lowercase, words separated by a hyphen. 
 
 We _don't_ do this:
 ```css
