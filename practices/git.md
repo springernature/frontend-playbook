@@ -1,6 +1,6 @@
 # Repositories
 
-We use a standard naming format for our Git repositories. Repository names are `lowercase-hyphenated` (all lowercase, words separated by a hyphen), and begin with "frontend" followed by your project name. 
+We use a standard naming format for our Git repositories. Repository names are _lowercase-hyphenated_ (all lowercase, words separated by a hyphen), and begin with "frontend" followed by your project name.
 
 We _don't_ do this:
 
