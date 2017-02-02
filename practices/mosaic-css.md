@@ -158,7 +158,7 @@ Presentational class names describe the way an element looks. The name itself is
 
 #### Naming Convention
 
-All class names should be train-case - all lowercase, words separated by a hyphen. So ```.object-name``` and not ```.objectName``` or ```.ObjectName``` or ```.Object-Name```.
+All class names should be _lowercase-hyphenated_ - all lowercase, words separated by a hyphen. So ```.object-name``` and not ```.objectName``` or ```.ObjectName``` or ```.Object-Name```.
 
 ### The Classitis Tradeoff
 
