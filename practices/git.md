@@ -17,6 +17,7 @@ We do this:
 frontend-project-name
 ```
 
+
 # Commit Messages
 
 Your commit messages are your personal legacy.
@@ -28,9 +29,7 @@ They are the record of what you've done to a codebase and more importantly, *why
 * If the work was done in relation to a ticket, include the ticket number in the commit message. **DON'T** only use the ticket number — this just makes life hard for your colleagues to understand what the change was for. The git log should be all they need to read.
 * Unhelpful messages like "Update" or "Bugfix" are... _unhelpful_. Please explain a little more.
 
-
-One useful tip for writing great commit messages: imagine your commit message has to make sense prefaced with "If applied, this commit will...".
-
+One useful tip for writing great commit messages: imagine your commit message has to make sense prefaced with _"If applied, this commit will..."_.
 
 A few blog posts on writing better commit messages:
 
