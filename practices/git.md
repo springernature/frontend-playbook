@@ -1,4 +1,6 @@
-# Repositories
+# Git
+
+## Repositories
 
 We use a standard naming format for our Git repositories. Repository names are _lowercase-hyphenated_ (all lowercase, words separated by a hyphen), and begin with "frontend" followed by your project name.
 
@@ -18,7 +20,7 @@ frontend-project-name
 ```
 
 
-# Commit Messages
+## Commit Messages
 
 Your commit messages are your personal legacy.
 
@@ -38,3 +40,8 @@ A few blog posts on writing better commit messages:
 * [Git Commit](http://chris.beams.io/posts/git-commit/)
 * [Writing Good Commit Messages](https://github.com/erlang/otp/wiki/Writing-good-commit-messages)
 * [Better Commit Messages with a `.gitmessage` Template](https://robots.thoughtbot.com/better-commit-messages-with-a-gitmessage-template)
+
+
+## Versioning
+
+Our open source projects are versioned with [semver](semver.md). Check our [Open Source support](open-source-support.md) guide for details on how to version and release an update to an open source project.
