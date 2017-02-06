@@ -1,4 +1,4 @@
-# Contributing to the Front End Playbook
+# Contributing to the Front-End Playbook
 
 If you're on this page because you'd like to contribute to the Playbook, that's fantastic! Thank you for getting involved ❤️
 
@@ -26,7 +26,8 @@ Include a summary of your pull request when you open it. We prefer to use commit
 
 If you work at Springer Nature, please remember to keep discussion inside the issues and pull requests, avoiding Slack, hallway conversations etc. Remember that this repo is public, and the discussions we have can be of benefit to people apart from us.
 
-### Tell people about your changes
+### Publicising your changes
 
-We hope work committed here will be of interest to the wider development community. It's _definitely_ relevant to all Front-End developers at Springer Nature. If you work at Springer Nature, once you've had work merged, _message the #frontend Slack room_, providing a link to the pull request (e.g. [add ToV and plain english guidelines](https://github.com/springernature/frontend-playbook/pull/129)).
+Changes to the playbook are relevant to all Front-End developers at Springer Nature, which is why once you've had work merged, the #frontend Slack room is notified, providing a link to the pull request.
 
+We hope work committed here will be of interest to the wider development community. We welcome feedback and involvement from all - so feel free to link to your latest contribution on Twitter^H^H^H^H^H^H^H^H your social media platform of choice.
