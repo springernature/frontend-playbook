@@ -25,3 +25,8 @@ Please create a new short-lived feature branch for your changes, then create a p
 Include a summary of your pull request when you open it. We prefer to use commit messages to explain _what_ a change will do, and pull request summaries to explain _why_ the change was made. [Read further guidelines on commit messages](practices/git.md) - many of these guidelines can also apply to pull request summaries!
 
 If you work at Springer Nature, please remember to keep discussion inside the issues and pull requests, avoiding Slack, hallway conversations etc. Remember that this repo is public, and the discussions we have can be of benefit to people apart from us.
+
+### Tell people about your changes
+
+We hope work committed here will be of interest to the wider development community. It's _definitely_ relevant to all Front-End developers at Springer Nature. If you work at Springer Nature, once you've had work merged, _message the #frontend Slack room_, providing a link to the pull request (e.g. [add ToV and plain english guidelines](https://github.com/springernature/frontend-playbook/pull/129)).
+
