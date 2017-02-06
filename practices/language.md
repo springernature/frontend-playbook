@@ -101,7 +101,7 @@ Maintain the same friendly and professional standards across the entire reposito
 
 ### Plain English
 
-Follow Plain English guidelines to help safeguard the accessibility of your written content. It'd be ironic for an a11y project to produce documents that are hard to understand! All relevant guidelines for [writing well][writing-well] apply. You might find tools like [Hemingway App][hemingway] helpful when editing. In particular:
+Follow Plain English guidelines to help safeguard the accessibility of your written content. All relevant guidelines for [writing well][writing-well] apply. You might find tools like [Hemingway App][hemingway] helpful when editing. In particular:
 
 - Be concise  
   - Check any sentences with more than 25 words to see if you can split them to make them clearer.
