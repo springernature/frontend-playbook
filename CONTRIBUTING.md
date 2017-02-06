@@ -28,6 +28,6 @@ If you work at Springer Nature, please remember to keep discussion inside the is
 
 ### Publicising your changes
 
-Changes to the playbook are relevant to all Front-End developers at Springer Nature, which is why once you've had work merged, the #frontend Slack room is notified, providing a link to the pull request.
+The #frontend Slack room is notified when work is merged, because changes to the playbook are relevant to all Front-End developers at Springer Nature.
 
-We hope work committed here will be of interest to the wider development community. We welcome feedback and involvement from all - so feel free to link to your latest contribution on Twitter^H^H^H^H^H^H^H^H your social media platform of choice.
+We hope the wider development community will be interested in the work committed here. We welcome feedback and involvement from all - so feel free to link to your latest contribution on Twitter^H^H^H^H^H^H^H^H your social media platform of choice.
