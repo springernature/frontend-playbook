@@ -57,7 +57,7 @@ Good:
 > Hey team!
 
 
-### Disability
+## Disability and accessibility
 
 Using inclusive language is critical when writing about accessibility. Avoid references that dehumanise or 'other' people, or that cast them as helpless victims. Never use collective nouns like "the disabled" or "the blind" - these words are descriptors, not group labels. 
 
@@ -87,8 +87,38 @@ The Special Interest Group on Accessible Computing (SIGACCESS) has published a [
 
 You may also find the more general [gov.uk inclusive language guidance](https://www.gov.uk/government/publications/inclusive-communication/inclusive-language-words-to-use-and-avoid-when-writing-about-disability) helpful. 
 
+## Writing style
 
-[wiley]: http://onlinelibrary.wiley.com/doi/10.1111/j.1467-1770.1982.tb00973.x/abstract "Language environment and gender identity attainment"
+We don't enforce strict standards on writing style as we want you to use your own words to express your own personality. That said, we have two general sets of guidelines - Tone of Voice and Plain English.
+
+### Tone of Voice
+
+Write like a human. Be professional, but conversational - we want our contributors and readers to feel comfortable joining in at any time. 
+
+Be thankful to contributors and those who log issues. They're giving up their time to make our playbook better. Make sure they know we're grateful to them. 
+
+Maintain the same friendly and professional standards across the entire repository - in documentation, issues, pull requests, and comments. 
+
+### Plain English
+
+Follow Plain English guidelines to help safeguard the accessibility of your written content. All relevant guidelines for [writing well][writing-well] apply. You might find tools like [Hemingway App][hemingway] helpful when editing. In particular:
+
+- Be concise  
+  - Check any sentences with more than 25 words to see if you can split them to make them clearer.
+  - Use contractions (e.g. "can't", "it's").
+  - Go straight to the point.
+- Be specific
+  - Use the active voice instead of the passive voice (e.g. "NPM will install the dependencies" instead of "the dependencies will be installed").
+  - Address the user as "you" where possible.
+  - Avoid referring to "things" or "stuff".
+  - Be direct. Avoid metaphor, simile, and slang.
+- Be informative
+  - Consider your audience. General information may not look the same as information aimed at a technical audience.
+  - Be as precise as you can usefully be - consider linking to high quality external resources where relevant.
+
+
 [govau]: https://www.education.tas.gov.au/.../Documents/Guidelines-for-Inclusive-Language.pdf "Guidelines for Inclusive Language"
+[hemingway]: http://www.hemingwayapp.com/
 [post]: http://www.poynter.org/2015/the-washington-post-will-allow-singular-they/387542/ "The Washington Post will allow singular ‘they’"
-
+[wiley]: http://onlinelibrary.wiley.com/doi/10.1111/j.1467-1770.1982.tb00973.x/abstract "Language environment and gender identity attainment"
+[writing-well]: http://writersdiet.com/?page_id=16 
