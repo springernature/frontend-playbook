@@ -123,7 +123,7 @@ Follow Plain English guidelines to help safeguard the accessibility of your writ
 ## Frontend or front-end
 
 * Use `front-end` when you need an adjective (e.g. "the front-end team", "front-end principles").
-* Use `frontend` when you need a noun (e.g. "the Shunter frontend"), when you refer to a repository, or in your code.
+* Use `frontend` when you need a noun (e.g. "the application's frontend"), when you refer to a repository, or in your code.
 
 
 [govau]: https://www.education.tas.gov.au/.../Documents/Guidelines-for-Inclusive-Language.pdf "Guidelines for Inclusive Language"
