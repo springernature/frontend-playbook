@@ -59,15 +59,15 @@ Good:
 
 ## Disability and accessibility
 
-Using inclusive language is critical when writing about accessibility. Avoid references that dehumanise or 'other' people, or that cast them as helpless victims. Never use collective nouns like "the disabled" or "the blind" - these words are descriptors, not group labels. 
+Using inclusive language is critical when writing about accessibility. Avoid references that dehumanise or 'other' people, or that cast them as helpless victims. Never use collective nouns like "the disabled" or "the blind" - these words are descriptors, not group labels.
 
-Use positive language that emphasises abilities rather than limitations. Consider whether you need to refer to a disability at all - for example, instead of writing about "users who are unable to use a mouse", perhaps you can be more precise with "keyboard users", or "users of alternative input devices". 
+Use positive language that emphasises abilities rather than limitations. Consider whether you need to refer to a disability at all - for example, instead of writing about "users who are unable to use a mouse", perhaps you can be more precise with "keyboard users", or "users of alternative input devices".
 
 We _don't_ say this:
 
 ```
 The disabled.
-Dyslexics. 
+Dyslexics.
 Susan is a victim of blindness.
 People suffering from deafness.
 Users who cannot see a screen.
@@ -76,28 +76,31 @@ Users who cannot see a screen.
 We say this:
 
 ```
-Disabled people. 
+Disabled people.
 Dyslexic people.
 Susan is blind.
-Deaf people. 
+Deaf people.
 Screenreader users / blind users. [where relevant]
 ```
 
-The Special Interest Group on Accessible Computing (SIGACCESS) has published a [comprehensive guide to writing about disability](http://www.sigaccess.org/welcome-to-sigaccess/resources/accessible-writing-guide/) within the context of science and technology. 
+The Special Interest Group on Accessible Computing (SIGACCESS) has published a [comprehensive guide to writing about disability](http://www.sigaccess.org/welcome-to-sigaccess/resources/accessible-writing-guide/) within the context of science and technology.
 
-You may also find the more general [gov.uk inclusive language guidance](https://www.gov.uk/government/publications/inclusive-communication/inclusive-language-words-to-use-and-avoid-when-writing-about-disability) helpful. 
+You may also find the more general [gov.uk inclusive language guidance](https://www.gov.uk/government/publications/inclusive-communication/inclusive-language-words-to-use-and-avoid-when-writing-about-disability) helpful.
+
 
 ## Writing style
 
 We don't enforce strict standards on writing style as we want you to use your own words to express your own personality. That said, we have two general sets of guidelines - Tone of Voice and Plain English.
 
+
 ### Tone of Voice
 
-Write like a human. Be professional, but conversational - we want our contributors and readers to feel comfortable joining in at any time. 
+Write like a human. Be professional, but conversational - we want our contributors and readers to feel comfortable joining in at any time.
 
-Be thankful to contributors and those who log issues. They're giving up their time to make our playbook better. Make sure they know we're grateful to them. 
+Be thankful to contributors and those who log issues. They're giving up their time to make our playbook better. Make sure they know we're grateful to them.
 
-Maintain the same friendly and professional standards across the entire repository - in documentation, issues, pull requests, and comments. 
+Maintain the same friendly and professional standards across the entire repository - in documentation, issues, pull requests, and comments.
+
 
 ### Plain English
 
@@ -117,8 +120,14 @@ Follow Plain English guidelines to help safeguard the accessibility of your writ
   - Be as precise as you can usefully be - consider linking to high quality external resources where relevant.
 
 
+## Frontend or front-end
+
+* Use `front-end` when you need an adjective (e.g. "the front-end team", "front-end principles").
+* Use `frontend` when you need a noun (e.g. "the application's frontend"), when you refer to a repository, or in your code.
+
+
 [govau]: https://www.education.tas.gov.au/.../Documents/Guidelines-for-Inclusive-Language.pdf "Guidelines for Inclusive Language"
 [hemingway]: http://www.hemingwayapp.com/
 [post]: http://www.poynter.org/2015/the-washington-post-will-allow-singular-they/387542/ "The Washington Post will allow singular ‘they’"
 [wiley]: http://onlinelibrary.wiley.com/doi/10.1111/j.1467-1770.1982.tb00973.x/abstract "Language environment and gender identity attainment"
-[writing-well]: http://writersdiet.com/?page_id=16 
+[writing-well]: http://writersdiet.com/?page_id=16
