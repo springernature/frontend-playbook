@@ -1,6 +1,6 @@
 # Advertising
 
-These guidelines are based on ethical, [accessibility](accessibility.md) or performance concerns.
+These guidelines are based on ethical, [accessibility](accessibility.md) and performance recommendations and best practices.
 
 
 ## Ethical
@@ -18,7 +18,7 @@ These guidelines are based on ethical, [accessibility](accessibility.md) or perf
 
 ## Accessibility
 
-* Don't use ads that make heavy use of fast animations or flashing content.
+* Don't use ads that make use of fast animations or flashing content.
 * The ad content must have clearly defined borders and not be confused with normal page content.
 * Audio or video in ads must be user initiated. A control must be included in order to allow for audio/video initiation and stop.
 
