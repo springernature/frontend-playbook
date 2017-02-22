@@ -1,4 +1,4 @@
-# Contributing to the Front End Playbook
+# Contributing to the Front-End Playbook
 
 If you're on this page because you'd like to contribute to the Playbook, that's fantastic! Thank you for getting involved ❤️
 
@@ -25,3 +25,9 @@ Please create a new short-lived feature branch for your changes, then create a p
 Include a summary of your pull request when you open it. We prefer to use commit messages to explain _what_ a change will do, and pull request summaries to explain _why_ the change was made. [Read further guidelines on commit messages](practices/git.md) - many of these guidelines can also apply to pull request summaries!
 
 If you work at Springer Nature, please remember to keep discussion inside the issues and pull requests, avoiding Slack, hallway conversations etc. Remember that this repo is public, and the discussions we have can be of benefit to people apart from us.
+
+### Publicising your changes
+
+A bot notifies the #frontend Slack room when work is merged, because changes to the playbook are relevant to all Front-End developers at Springer Nature.
+
+We hope the wider development community will be interested in the work we have committed here. We welcome feedback and involvement from all - so feel free to link to your latest contribution on Twitter^H^H^H^H^H^H^H^H your social media platform of choice.
