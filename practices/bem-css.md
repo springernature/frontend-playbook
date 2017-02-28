@@ -18,7 +18,7 @@ BEM naming follows this pattern:
 
 ## Naming Style
 
-All class names should be _lowercase-hyphenated_ - all lowercase, words separated by a hyphen. 
+All class names should be _lowercase-hyphenated_ - all lowercase, words separated by a hyphen.
 
 We _don't_ do this:
 ```css
@@ -26,6 +26,7 @@ We _don't_ do this:
 .AlertBox
 .Alert-Box
 ```
+
 We do this:
 ```css
 .alert-box

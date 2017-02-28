@@ -9,7 +9,7 @@ This is a living document that we contribute to in a _public_ GitHub repo. Reaso
 1. Providing a showcase for our work/ethics. This is _really_ useful when hiring people (for both parties). We've had very positive feedback from interviewees - it's a great recruiting tool. It also means that people are quickly up and running when they join.
 
 
-#Contributing
+# Contributing
 
 To contribute please create a new branch for each section, then create a pull request to merge your changes in.
 
@@ -21,7 +21,7 @@ Please keep discussion inside the issues and pull requests, avoiding Slack, hall
 
 If you need to reuse a hyperlink, turn it into a [reference link](https://daringfireball.net/projects/markdown/syntax#link). Otherwise, use an inline link.
 
-#License
+# License
 
 The Front-End Playbook is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 

@@ -21,7 +21,7 @@ To publish a new version of one of our open source projects:
 
 ## CI tests
 
-We aim for every project to run its unit tests automatically every time a change is commited to its repo.
+We aim for every project to run its unit tests automatically every time a change is committed to its repo.
 
 At the moment we use [Travis CI](https://travis-ci.org/springernature/) for our projects but other options are available.
 
@@ -42,7 +42,7 @@ Dropping support for a node version from the test matrix must be only done as pa
 Whenever possible, we'll use automated tools and alerts in order to check for vulnerabilities in our projects or their dependencies.
 
 
-## Suport for old versions
+## Support for old versions
 
 We aim to support old versions for 6 months after the next major version has been released. Support for old versions will be usually limited to security issues or important bugfixes.
 
