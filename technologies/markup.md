@@ -14,6 +14,7 @@ This document outlines the way we write markup and why.
 
 HTML up to 3.2 was written with SGML syntax rules.  HTML 4 could be written with either SGML syntax (HTML 4.01) or XML (XHTML 1.0).  [HTML 5 breaks with SGML and has two serializations](https://www.w3.org/blog/2008/01/html5-is-html-and-xml/), a new one called "html" (which looks like SGML but is not an application of SGML) and again XML (XHTML).
 
+
 ### We author HTML 5
 
 When a document is transmitted with an XML MIME type, such as `application/xhtml+xml`, this is intended to instruct the client to render using an XML parser, and popular contemporary clients honour this. [See HTML vs XHTML on w3.org](https://www.w3.org/TR/html5/introduction.html#html-vs-xhtml).
@@ -35,23 +36,28 @@ We do what is reasonable to ensure our documents [validate](https://validator.w3
 
 Invalid markup results in authors relying on all clients to do what they intended, not what they instructed.  Clients regularly disagree on how to interpret out instructions, yet alone our intentions, so to promote consistency of execution we must do what we can to ensure our HTML is valid.
 
+
 ### Do not omit optional end tags
 
 While the HTML 4 & 5 specs allow some end tags to be omitted for _some_ non-[void elements](https://www.w3.org/TR/html5/syntax.html#void-elements), it's unreasonable to expect authors to remember which elements this applies to.  Additionally this kind of inconsistency can play havok with text editors, any indentation policy, and impairs our ability to spot bugs that would otherwise offend our pattern-recognition powers.
 
 We do this:
 
-	<ol>
-	    <li>foo</li>
-	    <li>bar</li>
-	</ol>
+```html
+<ol>
+    <li>foo</li>
+    <li>bar</li>
+</ol>
+```
 
 We *don't* do this:
 
-	<ol>
-	    <li>foo
-	    <li>bar
-	</ol>
+```html
+<ol>
+    <li>foo
+    <li>bar
+</ol>
+```
 
 
 ### Implicitly close void elements
@@ -62,11 +68,15 @@ Conversely, it may be the case that their omission impacts authors more used to 
 
 We do this:
 
-	<meta charset="UTF-8">
+```html
+<meta charset="UTF-8">
+```
 
 We *don't* do this:
 
-	<meta charset="UTF-8" />
+```html
+<meta charset="UTF-8" />
+```
 
 
 ## Semantics
@@ -81,27 +91,30 @@ Instead, we have decided to continue to use the older HTML 4 style heading level
 
 We do this:
 
-	<h1>Page title</h1>
+```html
+<h1>Page title</h1>
 
-	<article>
-		<h2>Article title</h2>
-		<h3>Article subtitle</h3>
-	</article>
+<article>
+	<h2>Article title</h2>
+	<h3>Article subtitle</h3>
+</article>
 
-	<footer>
-		<h2>Footer title</h2>
-	</footer>
+<footer>
+	<h2>Footer title</h2>
+</footer>
+```
 
 We *don't* do this:
 
-	<h1>Page title</h1>
+```html
+<h1>Page title</h1>
 
-	<article>
-		<h1>Article title</h1>
-		<h2>Article subtitle</h2>
-	</article>
+<article>
+	<h1>Article title</h1>
+	<h2>Article subtitle</h2>
+</article>
 
-	<footer>
-		<h1>Footer title</h1>
-	</footer>
-
+<footer>
+	<h1>Footer title</h1>
+</footer>
+```

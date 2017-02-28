@@ -5,8 +5,7 @@ This checklist is a synthesis of the [Web Content Accessibility Guidelines 1], t
 
 It has proven helpful when building sites that comply with [US Section 508] and the [UK Equality Act 2010] \(all of our sites must comply with these pieces of legislation).
 
-Be sure to create an issue or submit a pull request if you have any questions, or have spotted any improvements that can be made. 
-
+Be sure to create an issue or submit a pull request if you have any questions, or have spotted any improvements that can be made.
 
 1. **Where meaning would be lost if a non-text item were removed, has a text alternative been provided?**  
    [Samurai errata (guideline 1)](http://www.wcagsamurai.org/erratas/errata-listing/#GL1)
@@ -38,7 +37,7 @@ Be sure to create an issue or submit a pull request if you have any questions, o
    [Samurai errata (guideline 4)](http://www.wcagsamurai.org/erratas/errata-listing/#GL4)
 
 1. **Have documents been organized so they may be read without style sheets?**  
-   For example, when an HTML document is rendered without associated style sheets, it must still be possible to read the document. 
+   For example, when an HTML document is rendered without associated style sheets, it must still be possible to read the document.
    [WCAG 1, guideline 6.1](http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-order-style-sheets)
 
 1. **Does the page transform gracefully?**  

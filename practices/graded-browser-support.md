@@ -5,15 +5,15 @@
 We follow the guidelines for graded browser support outlined by Nate Koechley at Yahoo:
 [Yahoo Grade Browser Support guide](https://github.com/yui/yui3/wiki/Graded-Browser-Support)
 
-| Tables        | Grade-A support | Grade-C support  |
-| ------------- |:---------------:| ----------------:|
-| Chrome        | latest stable   |                  |
-| Edge          | latest stable   |                  |
-| Firefox       | latest stable   |               <2 |
-| IE            | 11              |              <11 |
-| Opera         | latest stable   |              <10 |
-| Safari        | latest stable, latest stable -1    |  <4.1 (desktop) |
-| Webkit        | Android 4.&#8224; |  <3            |
+| Tables        | Grade-A support                 | Grade-C support |
+| ------------- |:-------------------------------:| ---------------:|
+| Chrome        | latest stable                   |                 |
+| Edge          | latest stable                   |                 |
+| Firefox       | latest stable                   |              <2 |
+| IE            | 11                              |             <11 |
+| Opera         | latest stable                   |             <10 |
+| Safari        | latest stable, latest stable -1 |  <4.1 (desktop) |
+| Webkit        | Android 4.&#8224;               |              <3 |
 
 ## How we implement graded browser support
 
