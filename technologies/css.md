@@ -30,8 +30,9 @@ Projects should use [StyleLint] to enforce these rules. You can find _an example
 
 We write our CSS using design patterns that aim to maximise maintainability and reuse;
 
-- [BEM] is used in some teams
-- [a hybrid of OOCSS and Atomic CSS] in others
+- We make use of [OOCSS] to author CSS. some teams make heavy use of utility classes, others less so.
+- [BEM] naming conventions are used in some teams
+
 
 ## Code Style
 
