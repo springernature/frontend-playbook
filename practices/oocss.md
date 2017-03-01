@@ -30,8 +30,9 @@ As OOCSS is more of a philosophy than a prescriptive system the implementation w
 
 
 ## Find out more:
-- [OOCSS Wiki](https://github.com/stubbornella/oocss/wiki)
-- [Introduction to OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
-- [Atomic CSS](https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach/)
-- [BEM](http://getbem.com/introduction/)
-- [OOCSS at BBC Sport](https://medium.com/@shaunbent/css-at-bbc-sport-part-1-bab546184e66)
+
+* [OOCSS Wiki](https://github.com/stubbornella/oocss/wiki)
+* [Introduction to OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
+* [Atomic CSS](https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach/)
+* [BEM](http://getbem.com/introduction/)
+* [OOCSS at BBC Sport](https://medium.com/@shaunbent/css-at-bbc-sport-part-1-bab546184e66)
