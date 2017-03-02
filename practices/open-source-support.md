@@ -1,5 +1,12 @@
 # Open source support
 
+* [Versioning](#versioning)
+* [Release process](#release-process)
+* [CI tests](#ci-tests)
+* [Node versions](#node-versions)
+* [Security](#security)
+* [Support for old versions](#support-for-old-versions)
+
 
 ## Versioning
 

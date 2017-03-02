@@ -1,5 +1,12 @@
 # Dependency management
 
+* [Specifying versions of dependencies](#specifying-versions-of-dependencies)
+    * [Run-time dependencies](#run-time-dependencies)
+        * [Examples](#examples)
+    * [Development dependencies](#development-dependencies)
+        * [Examples](#examples-1)
+* [Dependency management tools](#dependency-management-tools)
+
 The following guide describes how we manage package dependencies in [Springer Nature Node.js-based projects](https://github.com/springernature?utf8=%E2%9C%93&q=&type=public&language=javascript).
 
 

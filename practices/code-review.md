@@ -1,10 +1,15 @@
 # Code Reviews
 
+* [Why](#why)
+* [How](#how)
+* [What to look out for](#what-to-look-out-for)
+
+
 Code Review, or Peer Code Review, is the act of having your code checked by others for mistakes, errors, and omissions (e.g. missing tests). Like pair-programming (which we also support), it accelerates and streamlines software development.
 
 We manage code review via **pull requests**, which we communicate in the `#frontend-pr` Slack channel, and manage in GitHub. All discussion happens in GitHub comments. We leave it to the requester to merge their own changes when they are ready, because sometimes the requester might not want their work merged immediately.
 
-## Why?
+## Why
 
 * PR reviews are cross-team.
     * allows greater visibility of other teams work.

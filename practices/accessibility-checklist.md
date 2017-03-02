@@ -1,5 +1,4 @@
-A simple accessibility checklist
-========================================
+# A simple accessibility checklist
 
 This checklist is a synthesis of the [Web Content Accessibility Guidelines 1], the [WCAG Samurai Errata], and one guideline from [Web Content Accessibility Guidelines 2].
 

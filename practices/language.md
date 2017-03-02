@@ -1,5 +1,16 @@
 # Language
 
+* [Unacceptable language](#unacceptable-language)
+* [Examples](#examples)
+    * [Genderless language](#genderless-language)
+    * [_Bro_ language](#_bro_-language)
+* [Disability and accessibility](#disability-and-accessibility)
+* [Writing style](#writing-style)
+    * [Tone of Voice](#tone-of-voice)
+    * [Plain English](#plain-english)
+* [Frontend or front-end](#frontend-or-front-end)
+
+
 [Discrimination](https://en.wikipedia.org/wiki/Discrimination) is prohibited under law in the UK and many other countries.
 
 Language is our main form of communication and it plays a powerful role both in contributing to and in eliminating discrimination.
