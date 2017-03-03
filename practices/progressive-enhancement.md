@@ -1,5 +1,12 @@
 # Progressive Enhancement
 
+* [What is progressive enhancement](#what-is-progressive-enhancement)
+* [Why we use progressive enhancement](#why-we-use-progressive-enhancement)
+* [Common concerns](#common-concerns)
+    * [Why do we care about those crusty old browsers? I'm building a ✨Web App✨, not a web page!](#why-do-we-care-about-those-crusty-old-browsers-im-building-a-✨web-app✨-not-a-web-page)
+* [Find out more:](#find-out-more)
+
+
 ## What is progressive enhancement
 
 Progressive enhancement is a design and development practice that focuses on delivering the basic essentials of a website as a primary concern, then building the various layers of refinement and niceties on top of that for those clients than can receive them. In practice this means that we start with developing a logical and semantic HTML application with all the key functionality, then we can enhance this with an aesthetic layer (CSS) and behavioural layer (JavaScript) as desired.

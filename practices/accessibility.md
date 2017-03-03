@@ -1,5 +1,12 @@
 # Accessibility
 
+* [What is accessibility](#what-is-accessibility)
+* [Why we care about accessibility](#why-we-care-about-accessibility)
+* [What standards we conform to](#what-standards-we-conform-to)
+* [How we conform](#how-we-conform)
+* [Find out more:](#find-out-more)
+
+
 ## What is accessibility
 
 > The power of the Web is in its universality.
@@ -41,9 +48,6 @@ It's not enough to ensure that we build accessible sites - we need to ensure we 
 We have also created [a simple accessibility checklist], to help people become familiar with the guidelines/standards, and to aid us when manually assessing pages.
 
 Following guidelines is necessary, but including accessibility in the design process as soon as possible, is even more important. Only by working with disabled users and colleagues can we provide the sort of excellent results that - for instance - [gov.uk] achieves.
-
-
-## Common concerns
 
 
 ## Find out more:

@@ -1,5 +1,13 @@
 # SemVer
 
+* [What is SemVer](#what-is-semver)
+* [Why we use SemVer](#why-we-use-semver)
+* [Common concerns](#common-concerns)
+    * [How can I trust that things aren’t going to break with a minor or patch release update?](#how-can-i-trust-that-things-arent-going-to-break-with-a-minor-or-patch-release-update)
+    * [The version number is getting really big really quickly!](#the-version-number-is-getting-really-big-really-quickly)
+* [Find out more:](#find-out-more)
+
+
 ## What is SemVer
 
 SemVer is a way of versioning software in the format of MAJOR.MINOR.PATCH:

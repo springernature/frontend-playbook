@@ -1,5 +1,9 @@
 # Graded Browser Support
 
+* [Our criteria for browser support](#our-criteria-for-browser-support)
+* [How we implement graded browser support](#how-we-implement-graded-browser-support)
+
+
 ## Our criteria for browser support
 
 We follow the guidelines for graded browser support outlined by Nate Koechley at Yahoo:
