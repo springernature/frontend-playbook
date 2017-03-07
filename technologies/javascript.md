@@ -133,7 +133,7 @@ Code Style
 
 ### Linting
 
-JavaScript code should be linted with [XO]. XO uses [eslint] under the hood.
+JavaScript code should be linted with the most recent version of [XO], using the default lint settings. XO uses [eslint] under the hood. 
 
 If you are using ES2015+ syntax, XO provides [configuration](https://github.com/sindresorhus/xo#esnext) to enforce relevant rules. Add this in your `package.json` to enable it:
 
@@ -312,7 +312,7 @@ Practical code examples, including error handling examples, can be read here: [A
 
 Ensure indentation consistency is maintained with a tool such as [EditorConfig](http://editorconfig.org/). Using this tool, you can specify indentation settings for your codebase. Team members should then install the corresponding plugin for their editor. E.g. [atom-editorconfig](https://github.com/sindresorhus/atom-editorconfig#readme)
 
-We indent our JavaScript using single tabs, not spaces. You can convert characters automatically in most editors, and you're advised to do this.
+Except in package.json files, we indent our JavaScript using single tabs, not spaces. You can convert characters automatically in most editors, and you're advised to do this.
 
 Follow the [BSD-KNF] indentation style.
 
@@ -344,6 +344,8 @@ if (foo) {
         console.log(bar);
 }
 ```
+
+We use automated tools (like Synk) to monitor the status of dependencies in our package.json files. The majority of these tools expect two spaces for indentation, not tabs. Follow this convention in your package.json files to avoid irritating merges when one of the tools raises an automatic Pull Request. 
 
 ### White Space
 
