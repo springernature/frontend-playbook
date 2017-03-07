@@ -1,26 +1,6 @@
 # Mosaic-style CSS
 
-We write our CSS using a hybrid of [Object Oriented CSS] and [Atomic CSS].
-
-Atomic CSS is a collection of single purpose styling classes (single responsibility for maximum reuse) that fits well with componentized templates. Atomic classes and their associated styling are immutable, meaning you'd use the same classes whatever the project you're working on or the team you're working with. In other words, Atomic CSS is a common "vocabulary" meant to style documents regardless of context or content.
-
-An example of how to use atomic classes would be with font sizes. We could write the following CSS classes that can then be used across any project to set your font-sizes:
-
-```css
-.text11 {
-    font-size: 1.1rem;
-}
-
-.text13 {
-    font-size: 1.3rem;
-}
-
-.text14 {
-    font-size: 1.4rem;
-}
-```
-
-Object Oriented CSS (OOCSS) is another methodology for writing modularized, scalable, maintainable CSS. the aim with OOCSS is to separate structure from skin and container from content by identifying patterns and creating object classes.
+For Nature 'Mosaic' style layouts we write [Object Oriented CSS] with heavy use of 'atomic' utility classes. Object Oriented CSS (OOCSS) is a methodology for writing modularized, scalable, maintainable CSS. The aim with OOCSS is to separate structure from skin and container from content by identifying patterns and creating object classes.
 
 By separating structure from skin we mean positioning (position, float, margin, etc.) from styling (background, color, border, etc.). In practice, this means to not mix structure/positioning properties with skin/styling properties on the same class. This way our “skinning” properties can be reused on a variety of elements, preventing property duplication in our CSS.
 
@@ -57,7 +37,25 @@ h3 {
 }
 ```
 
-There is a lot of crossover between OOCSS and Atomic CSS. We create atomic classes to handle positioning (default position/float, standardizing margins) and common style elements such as colors, backgrounds and borders, such as in the example below:
+We make use of a collection of single purpose styling classes (single responsibility for maximum reuse) that fits well with componentized templates. These classes and their associated styling are immutable, meaning you'd use the same classes across projects. In other words, The aim is to create a common "vocabulary" meant to style documents regardless of context or content.
+
+An example of how to use utility classes would be with font sizes. We could write the following CSS classes that can then be used across any project to set your font-sizes:
+
+```css
+.text11 {
+    font-size: 1.1rem;
+}
+
+.text13 {
+    font-size: 1.3rem;
+}
+
+.text14 {
+    font-size: 1.4rem;
+}
+```
+
+We create utility classes to handle positioning (default position/float, standardizing margins) and common style elements such as colors, backgrounds and borders, such as in the example below:
 
 ```css
 .position-absolute {
@@ -129,20 +127,20 @@ Common styles and patterns can then be reused across projects, and for Nature co
 Traditionally we have always been told to use semantic class names, that they should reflect the intended structure or meaning of the element it is applied to, as oppose to the presentation. However, this idea has been [debunked as a fallacy], as classes aren’t understood by machines (with microformats beign a notable exception). Rather than worrying about creating semantic class names, we should be thinking about creating _sensible_ class names that offer flexibility and reusability. They should give meaning to an element to make it easier to understand and maintain for _developers_. We can do this by naming them based on their function (role) or based on their form (visual).
 
 #### Functional Class Names
-Use functional class names when the styling is based on their function or meaning. There is a strong connection between the class name, the styles it applies, and the reason the styles are being applied. Functional class names will always be used to describe OOCSS objects, as these are styles grouped together to carry out a particular function, and also for atomic positioning classes. Some examples include:
+Use functional class names when the styling is based on their function or meaning. There is a strong connection between the class name, the styles it applies, and the reason the styles are being applied. Functional class names will always be used to describe OOCSS objects, as these are styles grouped together to carry out a particular function, and also for positioning utility classes. Some examples include:
 
 ```css
 .pill-button {} /* OOCSS Object */
 
 .tab-group {}  /* OOCSS Object */
 
-.pin-left {} /* Atomic positioning class */
+.pin-left {} /*  positioning utility class */
 
-.position-absolute {} /* Atomic positioning class */
+.position-absolute {} /*  positioning utility class */
 ```
 
 #### Presentational Class Names
-Presentational class names describe the way an element looks. The name itself is describing the styles that are being applied. These classes are conducive to code reuse as they don't care what they are being used to style. This also comes with the benefit of scaling gracefully. As you're developing new components, you just need to add existing styles to your markup. Soon you will find that creating a new component requires no new css to be written, you are just applying existing styles to your HTML. Presentation class names are used for atomic styling classes. Some examples include:
+Presentational class names describe the way an element looks. The name itself is describing the styles that are being applied. These classes are conducive to code reuse as they don't care what they are being used to style. This also comes with the benefit of scaling gracefully. As you're developing new components, you just need to add existing styles to your markup. Soon you will find that creating a new component requires no new css to be written, you are just applying existing styles to your HTML. Presentation class names are used for utility styling classes. Some examples include:
 
 ```css
 .text-blue {}
@@ -162,7 +160,7 @@ All class names should be _lowercase-hyphenated_ - all lowercase, words separate
 
 ### The Classitis Tradeoff
 
-One of the downsides of this approach is the bloating of the HTML with classes. Separating structure from skin and container from content results in more classes on elements than traditional methods. In the end it comes down to whether you would rather have DRY CSS or DRY HTML, and we came to the conclusion that DRY CSS using the object oriented methodology is preferable due to its maintainability - it is much easier to add/remove classes in your html when updating a component than it is to rewrite your CSS when something changes. On large sites the OOCSS approach produces significantly less CSS making it easier to maintain and adapt to change.
+One of the downsides of this approach is the bloating of the HTML with classes. Separating structure from skin and container from content results in more classes on elements than traditional methods. In the end it comes down to whether you would rather have DRY CSS or DRY HTML, and we came to the conclusion that DRY CSS using the object oriented methodology is preferable due to its maintainability - it may be easier to add/remove classes in your html when updating a component than it is to rewrite your CSS when something changes. On large sites the OOCSS approach produces significantly less CSS making it easier to maintain and adapt to change.
 
 ### Font Sizing
 
@@ -187,6 +185,5 @@ Using some form of JavaScript-specific classes can help to reduce the risk that 
 Use ```data-component="name-of-component"``` as the javascript hook, as it will match up with code in the ```js/components``` folders. For sub-elements then use ```data-role="name-of-role"```, so you end up with component elements and roles within that component.
 
 [object oriented css]: https://github.com/stubbornella/oocss/wiki/FAQ
-[atomic css]: http://acss.io/frequently-asked-questions.html#what-is-atomic-css-
 [shunter]: https://github.com/nature/shunter
 [shunter-mosaic]: https://github.com/nature/shunter-mosaic
