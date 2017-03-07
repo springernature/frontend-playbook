@@ -37,7 +37,7 @@ h3 {
 }
 ```
 
-We make use of a collection of single purpose styling classes (single responsibility for maximum reuse) that fits well with componentized templates. These classes and their associated styling are immutable, meaning you'd use the same classes across projects. In other words, The aim is to create a common "vocabulary" meant to style documents regardless of context or content.
+We make use of a collection of single purpose styling classes (single responsibility for maximum reuse) that fits well with componentized templates. These classes and their associated styling are immutable, meaning you'd use the same classes across projects. In other words, the aim is to create a common "vocabulary" meant to style documents regardless of context or content.
 
 An example of how to use utility classes would be with font sizes. We could write the following CSS classes that can then be used across any project to set your font-sizes:
 
@@ -140,7 +140,7 @@ Use functional class names when the styling is based on their function or meanin
 ```
 
 #### Presentational Class Names
-Presentational class names describe the way an element looks. The name itself is describing the styles that are being applied. These classes are conducive to code reuse as they don't care what they are being used to style. This also comes with the benefit of scaling gracefully. As you're developing new components, you just need to add existing styles to your markup. Soon you will find that creating a new component requires no new css to be written, you are just applying existing styles to your HTML. Presentation class names are used for utility styling classes. Some examples include:
+Presentational class names describe the way an element looks. The name itself is describing the styles that are being applied. These classes are conducive to code reuse as they don't care what they are being used to style. This also comes with the benefit of scaling gracefully. As you're developing new components, you just need to add existing styles to your markup. Soon you will find that creating a new component requires no new CSS to be written, you are just applying existing styles to your HTML. Presentation class names are used for utility styling classes. Some examples include:
 
 ```css
 .text-blue {}
