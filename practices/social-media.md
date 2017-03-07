@@ -28,4 +28,4 @@ We do:
 We _don't_ do:
 > Released Shunter 1.2.3. Fixes a vulnerability which was caused by a bug in `nac`, breaking our project. https://github.com/springernature/shunter/blob/master/HISTORY.md#123-2017-03-08
 
-* Always provide links where people can find further information if interested. E.g. A changelog for a software release, a blog article, a link to the Front-end Playbook, etc.
+* Always provide links where people can find further information if interested. E.g. a changelog for a software release, a blog article, a link to the front-end playbook, etc.
