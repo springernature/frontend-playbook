@@ -35,6 +35,12 @@ Specifying the versions in this way ensures that:
 
 Don't use wildcards (i.e. `*`, `x`) in the package numbers, or keywords like `latest`. Not only they make the version numbers harder to read but they also make it harder to predict what exact versions will be installed.
 
+If you use `npm install --save` a lot, you may want to change npm's config so it uses tilde by default when saving dependencies:
+
+```sh
+npm config set save-prefix '~'
+```
+
 
 #### Examples
 
@@ -66,7 +72,7 @@ We _don't_ do this:
 }
 ```
 
-[Optional dependencies](https://docs.npmjs.com/files/package.json#optionaldependencies), if present, should also use the same format.
+[Optional dependencies](https://docs.npmjs.com/files/package.json#optionaldependencies), if present, should also use the same format as run-time dependencies.
 
 
 ### Development dependencies
