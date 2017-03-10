@@ -10,6 +10,7 @@ This document outlines the way we write JavaScript. It's a living styleguide –
   - [KISS](#keep-it-simple)
   - [Performant Code](#performant-code)
 - [Code Style](#code-style)
+  - [Rationale](#rationale)
   - [Linting](#linting)
   - [Asynchronicity](#asynchronicity)
   - [Indentation](#indentation)
