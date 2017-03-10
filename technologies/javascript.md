@@ -131,6 +131,17 @@ Understanding [when to optimise](https://en.wikipedia.org/wiki/Program_optimizat
 Code Style
 ---------
 
+### Rationale
+
+The benefits of choosing one house style outweigh the benefits of allowing people free rein with code style. Personal preference is outweighed by the greater good. This isn't to say that we shouldn't constantly be looking to improve our ways of working. This section outlines our _current_ agreed house style. If somebody would like to propose a change to code style, follow this process:
+ 
+1. Point them to the relevant page in the playbook (assuming it exists).
+2. Point out that they SHOULD NOT deviate from this style unless there are valid reasons in particular circumstances when the particular behavior is acceptable or even useful.
+3. If that exception applies: ask them to detail the benefits of making an exception or a change.
+4. If agreed, ask them to submit a PR to the playbook, detailing the exception (or change) to the world.
+
+It's easy to [waste time and effort](https://en.wikipedia.org/wiki/Law_of_triviality) discussing code style. Follow this process to make these discussions structured and productive.
+
 ### Linting
 
 JavaScript code should be linted with the most recent version of [XO], using the default lint settings. XO uses [eslint] under the hood. 
