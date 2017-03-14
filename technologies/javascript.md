@@ -71,9 +71,7 @@ function loadConfigFile(filePath, callback) {
 
 ### Optimise For Reading
 
-Code is written once and read many times, using abbreviations or single-character variables saves time in the short term but there's an overhead every time somebody has to read that code.
-
-Reading code is difficult enough at the best of times. Don't make it harder; it's better to have RSI in your over-worked fingers than for all your colleagues to hate you.
+Code tends to be written once and is likely to be mantained by other colleagues over time; so try to make any code produced self descriptive, rather than using code or variable names that are cryptic.
 
 
 ### Modules Over Monoliths
