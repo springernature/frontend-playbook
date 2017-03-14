@@ -71,8 +71,7 @@ function loadConfigFile(filePath, callback) {
 
 ### Optimise For Reading
 
-Code tends to be written once and is likely to be maintained by other colleagues over time; so try to make any code produced self descriptive, rather than using code, argument or variable names that are cryptic.
-
+Although normally code is written once, it's likely other colleagues maintain your contributions over time; so aim to make any code you produce self descriptive, rather than using cryptic expressions, argument or variable names.
 
 ### Modules Over Monoliths
 
