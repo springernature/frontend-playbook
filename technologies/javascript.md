@@ -5,7 +5,6 @@ This document outlines the way we write JavaScript. It's a living styleguide –
 
 - [General Principles](#general-principles)
   - [Write code for humans](#code-for-humans)
-  - [Optimise for reading](#optimise-for-reading)
   - [Write modules over monoliths](#modules-over-monoliths)
   - [KISS](#keep-it-simple)
   - [Performant Code](#performant-code)
