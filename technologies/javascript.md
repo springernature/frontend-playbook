@@ -9,7 +9,6 @@ This document outlines the way we write JavaScript. It's a living styleguide –
   - [KISS](#keep-it-simple)
   - [Performant Code](#performant-code)
 - [Code Style](#code-style)
-  - [Rationale](#rationale)
   - [Linting](#linting)
   - [Asynchronicity](#asynchronicity)
   - [Indentation](#indentation)
@@ -38,7 +37,7 @@ General Principles
 
 ### Code For Humans
 
-Your JavaScript should always be optimised for readability first, someone is going to have to maintain your code. Most of the rules in this style guide are here to help enforce this.
+Your JavaScript should always be optimised for readability first, someone is going to have to maintain your code. Most of the rules in this style guide are here to help enforce this. See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style. 
 
 Code should be self-documenting wherever possible. This means writing sensible method names and using variables which adequately describe the object in question. Assume no prior knowledge when somebody new starts to contribute to the codebase.
 
@@ -122,17 +121,6 @@ Understanding [when to optimise](https://en.wikipedia.org/wiki/Program_optimizat
 
 Code Style
 ---------
-
-### Rationale
-
-The benefits of choosing one house style outweigh the benefits of allowing people free rein with code style. Personal preference is outweighed by the greater good. This isn't to say that we shouldn't constantly be looking to improve our ways of working. This section outlines our _current_ agreed house style. If somebody would like to propose a change to code style, follow this process:
- 
-1. Point them to the relevant page in the playbook (assuming it exists).
-2. Point out that they SHOULD NOT deviate from this style unless there are valid reasons in particular circumstances when the particular behavior is acceptable or even useful.
-3. If that exception applies: ask them to detail the benefits of making an exception or a change.
-4. If agreed, ask them to submit a PR to the playbook, detailing the exception (or change) to the world.
-
-It's easy to [waste time and effort](https://en.wikipedia.org/wiki/Law_of_triviality) discussing code style. Follow this process to make these discussions structured and productive.
 
 ### Linting
 

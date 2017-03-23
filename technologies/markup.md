@@ -1,6 +1,6 @@
 # Markup
 
-This document outlines the way we write markup and why.
+This document outlines the way we write markup and why. See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style. 
 
 - [HTML vs XHTML](#html-vs-xhtml)
 	- [Validation](#validation)
