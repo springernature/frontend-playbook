@@ -8,6 +8,7 @@ This document outlines the way we write markup and why.
 	- [Implicitly close void elements](#implicitly-close-void-elements)
 - [Semantics](#semantics)
 	- [Follow the HTML 4 outline model for heading levels](#follow-the-html-4-outline-model-for-heading-levels)
+- [Templates](#templates)
 
 
 ## HTML vs XHTML
@@ -118,3 +119,7 @@ We *don't* do this:
 	<h1>Footer title</h1>
 </footer>
 ```
+
+## Templates
+
+Templates should, where possible, be written using [DustJS](http://www.dustjs.com/) or [Handlebars](http://handlebarsjs.com/). Use of linting is encouraged to prevent common errors. For projects using DustJS  [Dustmite](https://www.npmjs.com/package/dustmite) should be used. Dustmite will prevent any syntax errors. It also enforces consistent style in your template code and can catch more subtle errors like usage of the potentially unsafe `{@if}` dust helper.
