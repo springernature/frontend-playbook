@@ -61,8 +61,18 @@ Be sure to create an issue or submit a pull request if you have any questions, o
    [Samurai Errata (guideline 9)](http://www.wcagsamurai.org/erratas/errata-listing/#GL5)
 
 1. **Have interim solutions been used?**  
-   For example: have pop-ups been avoided? If opening new windows, is the user informed this will happen? If form placeholder text is used, is it done in an accessible way (e.g. using HTML5 placeholder attribute).  
-   [Samurai Errata (guideline 10)](http://www.wcagsamurai.org/erratas/errata-listing/#GL10)
+   For example: 
+   * have pop-ups been avoided? 
+   * If form placeholder text is used, is it done in an accessible way (e.g. using HTML5 placeholder attribute)? 
+   * If opening a hyperlink in a new window cannot be avoided, has an advanced warning been provided? Does the link have a visible marker indicating its behaviour? 
+      * Is that marker also accessible to screenreaders?  
+      
+   [WCAG 1, Guideline 10.1](https://www.w3.org/TR/WCAG10/wai-pageauth.html#until-user-agents)  
+   [WCAG 2.0, Guideline 3.2.5](https://www.w3.org/TR/WCAG20/#consistent-behavior)  
+   [Samurai Errata (guideline 10)](http://www.wcagsamurai.org/erratas/errata-listing/#GL10)  
+   Also see:  
+   [Techniques for WCAG 2.0 G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)  
+   [Techniques for WCAG 2.0 G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)    
 
 1. **Does the page Use W3C technologies and guidelines?**  
    For example: HTML for content, CSS for presentation.  
