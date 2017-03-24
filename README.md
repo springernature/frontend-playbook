@@ -1,3 +1,5 @@
+# What's this?
+
 This repo contains the Springer Nature front-end playbook. It details how we run software development and how we make web and mobile products together. It's filled with things we've learned based on our own experience and study of others' experiences.
 
 See "[Changing the laws of engineering with pull requests]" for an in depth explanation of how developing a playbook like this is of benefit.
@@ -8,6 +10,9 @@ This is a living document that we contribute to in a _public_ GitHub repo. Reaso
 
 1. Providing a showcase for our work/ethics. This is _really_ useful when hiring people (for both parties). We've had very positive feedback from interviewees - it's a great recruiting tool. It also means that people are quickly up and running when they join.
 
+## Where do I start?
+
+Begin with the [house style guide](practices/house-style.md). 
 
 # Contributing
 
