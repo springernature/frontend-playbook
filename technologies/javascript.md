@@ -37,7 +37,7 @@ General Principles
 
 ### Code For Humans
 
-Your JavaScript should always be optimised for readability first, someone is going to have to maintain your code. Most of the rules in this style guide are here to help enforce this. See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style. 
+Your JavaScript should always be optimised for readability first, as someone is going to have to maintain your code. Most of the rules in this style guide are here to help enforce this. See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style. 
 
 Code should be self-documenting wherever possible. This means writing sensible method names and using variables which adequately describe the object in question. Assume no prior knowledge when somebody new starts to contribute to the codebase.
 

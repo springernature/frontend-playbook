@@ -24,7 +24,7 @@ Read the [markup guide](../technologies/markup.md), the [JavaScript guide](../te
 
 ### Linting
 
-We lint our CSS, JavaScript, and templates written with DustJS. This helps us to keep our codebases consistent, avoid common logic and implementaton errors, and lets us concentrate on solving problems instead of formatting. 
+We lint our CSS, JavaScript, and templates written with DustJS. This helps us to keep our codebases consistent, avoid common logic and implementation errors, and lets us concentrate on solving problems instead of formatting. 
 
 * For CSS, use [StyleLint](https://github.com/stylelint/stylelint)
 * For JavaScript, use [XO](https://github.com/sindresorhus/xo)

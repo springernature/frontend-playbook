@@ -727,7 +727,6 @@ But in the following example we would not use it:
 
 [Nature playbook(private)]: https://github.com/nature/playbook
 [bem]: https://github.com/springernature/frontend/practices/bem-css.md
-[a hybrid of OOCSS and Atomic CSS]: https://github.com/springernature/frontend/practices/mosaic-css.md
 [OOCSS]: https://github.com/springernature/frontend/practices/oocss.md
 [stylelint]: https://github.com/stylelint/stylelint
 [debunked as a fallacy]: http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
