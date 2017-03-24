@@ -66,6 +66,7 @@ Be sure to create an issue or submit a pull request if you have any questions, o
    * If form placeholder text is used, is it done in an accessible way (e.g. using HTML5 placeholder attribute)? 
    * If opening a hyperlink in a new window cannot be avoided, has an advanced warning been provided? Does the link have a visible marker indicating its behaviour? 
       * Is that marker also accessible to screenreaders?  
+      
    [WCAG 1, Guideline 10.1](https://www.w3.org/TR/WCAG10/wai-pageauth.html#until-user-agents)  
    [WCAG 2.0, Guideline 3.2.5](https://www.w3.org/TR/WCAG20/#consistent-behavior)  
    [Samurai Errata (guideline 10)](http://www.wcagsamurai.org/erratas/errata-listing/#GL10)  
