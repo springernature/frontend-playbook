@@ -83,6 +83,11 @@ Be sure to create an issue or submit a pull request if you have any questions, o
    [WCAG 1, guideline 14](http://www.w3.org/TR/WCAG10/wai-pageauth.html#gl-facilitate-comprehension)  
    (Also see [WCAG 1 core technique 5: "Comprehension"](http://www.w3.org/TR/WCAG10-CORE-TECHS/#comprehension))
 
+1. **Where opening a hyperlink in a new window cannot be avoided, has an advanced warning been provided?**
+   Unrequested new windows may cause confusion or disorientation for users with cognitive or visual disabilites. Does the link have a visible marker indicating its behaviour? Is the marker also accessible to screenreaders? 
+   [Techniques for WCAG 2.0 G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
+   [Techniques for WCAG 2.0 G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
+
 [US Section 508]: https://www.section508.gov/
 [UK Equality Act 2010]: http://www.legislation.gov.uk/ukpga/2010/15/contents
 [Web Content Accessibility Guidelines 1]: https://www.w3.org/TR/WCAG10/
