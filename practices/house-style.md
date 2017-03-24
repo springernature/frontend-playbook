@@ -7,6 +7,8 @@ This document outlines the reasons for our having a house style, and generally-a
 - [General Principles](#general-principles)
   - [Linting](#linting)
   - [Accessibility](#accessibility)
+  - [Progressive enhancement and browser support](#progressive-enhancement-and-browser-support)
+  - [Code review](#code-review)
   - [Written communications](#written-communications)
 - [Making changes to the house style](#making-changes-to-the-house-style)
 
@@ -37,6 +39,20 @@ See the CSS, JavaScript, and markup guides for further details.
 We care a great deal about accessibility. We aim to comply with the [Web Content Accessibility Guidelines 1](https://www.w3.org/TR/WCAG10/) AA + the [WCAG Samurai Errata](http://www.wcagsamurai.org/erratas/introduction/). In doing so, we also achieve a high pass rate with [Web Content Accessibility Guidelines 2](https://www.w3.org/TR/WCAG20/) AA. All of our websites MUST comply with [US Section 508](https://www.section508.gov/) and [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). 
 
 Read our [Accessibility guide](../practices/accessibility.md) and [accessibility checklist](../practices/accessibility-checklist.md) to understand how we meet these aims. 
+
+### Progressive enhancement and browser support
+
+We support *all* browsers to different degrees of functionality. "Support" does *not* mean that everybody gets the same thing. Read our [Graded Browser Support page](../practices/graded-browser-support.md) to understand our approach and where to aim your efforts. 
+
+Using graded browser support means that you MUST practice progressive enhancement when building sites for Springer Nature, not graceful degradation. See the [progressive enhancement guide](../practices/progressive-enhancement.md) to understand what this means. 
+
+### Code review
+
+We practice code review to safeguard the quality of what we produce. Code review aims to catch inadvertent mistakes, errors, and omissions (e.g. missing tests), and to act as a learning exercise for reviewers and reviewees. 
+
+Everyone is expected to review code submissions; your level of experience as a developer or with the codebase in question doesn't matter. When submitting code for review, be prepared to explain your thinking. When reviewing code, don't be afraid to ask the submitter to explain! 
+
+Read the [code review guide](../practices/code-review.md) for details on how we manage code reviews, and what to look for when reviewing. 
 
 ### Written communications
 
