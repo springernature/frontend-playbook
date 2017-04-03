@@ -33,7 +33,7 @@ We write our CSS using design patterns that aim to maximise maintainability and 
 - We make use of [OOCSS] to author CSS. Some teams make heavy use of utility classes, others less so.
 - [BEM] naming conventions are used in some teams
 
-See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style. 
+See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style.
 
 ## Code Style
 
@@ -726,8 +726,8 @@ But in the following example we would not use it:
 ```
 
 [Nature playbook(private)]: https://github.com/nature/playbook
-[bem]: https://github.com/springernature/frontend/practices/bem-css.md
-[OOCSS]: https://github.com/springernature/frontend/practices/oocss.md
+[bem]: ../practices/bem-css.md
+[OOCSS]: ../practices/oocss.md
 [stylelint]: https://github.com/stylelint/stylelint
 [debunked as a fallacy]: http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
 [rems bug in chrome]: http://stackoverflow.com/questions/20099844/chrome-not-respecting-rem-font-size-on-body-tag
