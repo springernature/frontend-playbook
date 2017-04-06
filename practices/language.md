@@ -137,7 +137,7 @@ Follow Plain English guidelines to help safeguard the accessibility of your writ
 * Use `frontend` when you need a noun (e.g. "the application's frontend"), when you refer to a repository, or in your code.
 
 
-[govau]: https://www.education.tas.gov.au/.../Documents/Guidelines-for-Inclusive-Language.pdf "Guidelines for Inclusive Language"
+[govau]: https://www.education.tas.gov.au/documentcentre/Documents/Guidelines-for-Inclusive-Language.pdf "Guidelines for Inclusive Language"
 [hemingway]: http://www.hemingwayapp.com/
 [post]: http://www.poynter.org/2015/the-washington-post-will-allow-singular-they/387542/ "The Washington Post will allow singular ‘they’"
 [wiley]: http://onlinelibrary.wiley.com/doi/10.1111/j.1467-1770.1982.tb00973.x/abstract "Language environment and gender identity attainment"

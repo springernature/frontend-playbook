@@ -120,7 +120,7 @@ Notice that following the rules of separating structure and skin, we are only in
 <a href="/" class="pill-button pin-right">right aligned button</a>
 ```
 
-Common styles and patterns can then be reused across projects, and for Nature content displayed in the mosaic style, our common shared CSS can be found in [shunter-mosaic]. We can then build on top of this within each project to add styles and patterns that are specific to that project.
+Common styles and patterns can then be reused across projects, and for Nature content displayed in the mosaic style, our common shared CSS can be found in [shunter-mosaic] (private repo). We can then build on top of this within each project to add styles and patterns that are specific to that project.
 
 ### Class Names
 
@@ -186,4 +186,4 @@ Use ```data-component="name-of-component"``` as the javascript hook, as it will 
 
 [object oriented css]: https://github.com/stubbornella/oocss/wiki/FAQ
 [shunter]: https://github.com/nature/shunter
-[shunter-mosaic]: https://github.com/nature/shunter-mosaic
+[shunter-mosaic]: https://github.com/springernature/shunter-mosaic 

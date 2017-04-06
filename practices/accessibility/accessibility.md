@@ -58,7 +58,7 @@ Some information in this page is taken from the Web Accessibility Initiative ([W
 
 
 [pa11y]: https://github.com/pa11y
-[a simple accessibility checklist]: practices/accessibility-checklist.md
+[a simple accessibility checklist]: accessibility-checklist.md
 [gov.uk]: https://www.gov.uk/
 [2010 Equality Act]: http://www.legislation.gov.uk/ukpga/2010/15/contents
 [Section 508]: https://www.section508.gov/
