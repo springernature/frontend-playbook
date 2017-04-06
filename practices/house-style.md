@@ -22,7 +22,7 @@ Read this excellent [article by Nicholas C. Zakas](https://www.smashingmagazine.
 
 ## General principles
 
-Read the [markup guide](../technologies/markup.md), the [JavaScript guide](../technologies/javascript.md) and the [CSS guide](../technologies/css.md) to understand our house style in these technologies. You should also familiarise yourself with our [Git](../practices/git.md) strategies. The team you're deployed to may also have its own strategies in addition to these. 
+Read the [markup guide](../technologies/markup.md), the [JavaScript guide](../technologies/javascript.md) and the [CSS guide](../technologies/css.md) to understand our house style in these technologies. You should also familiarise yourself with our [Git](git/git.md) strategies. The team you're deployed to may also have its own strategies in addition to these. 
 
 ### Linting
 
@@ -38,7 +38,7 @@ See the CSS, JavaScript, and markup guides for further details.
 
 We care a great deal about accessibility. We aim to comply with the [Web Content Accessibility Guidelines 1](https://www.w3.org/TR/WCAG10/) AA + the [WCAG Samurai Errata](http://www.wcagsamurai.org/erratas/introduction/). In doing so, we also achieve a high pass rate with [Web Content Accessibility Guidelines 2](https://www.w3.org/TR/WCAG20/) AA. All of our websites MUST comply with [US Section 508](https://www.section508.gov/) and [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). 
 
-Read our [Accessibility guide](../practices/accessibility.md) and [accessibility checklist](../practices/accessibility-checklist.md) to understand how we meet these aims. 
+Read our [Accessibility guide](accessibility/accessibility.md) and [accessibility checklist](accessibility/accessibility-checklist.md) to understand how we meet these aims. 
 
 ### Progressive enhancement and browser support
 

@@ -10,7 +10,7 @@
 
 ## Versioning
 
-Our open source projects are versioned with [semver](semver.md). You should read through the [semver documentation](http://semver.org) if you're going to release new versions.
+Our open source projects are versioned with [semver](git/semver.md). You should read through the [semver documentation](http://semver.org) if you're going to release new versions.
 
 
 ## Release process

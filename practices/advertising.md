@@ -5,7 +5,7 @@
 * [Performance](#performance)
 * [References](#references)
 
-These guidelines are based on ethical, [accessibility](accessibility.md) and performance recommendations and best practices.
+These guidelines are based on ethical, [accessibility](accessibility/accessibility.md) and performance recommendations and best practices.
 
 
 ## Ethical
@@ -27,7 +27,7 @@ These guidelines are based on ethical, [accessibility](accessibility.md) and per
 * The ad content must have clearly defined borders and not be confused with normal page content.
 * Audio or video in ads must be user initiated. A control must be included in order to allow for audio/video initiation and stop.
 
-All advertising must also comply with the rest of our [accessibility guidelines](accessibility-checklist.md).
+All advertising must also comply with the rest of our [accessibility guidelines](accessibility/accessibility-checklist.md).
 
 
 ## Performance
@@ -44,7 +44,7 @@ All advertising must also comply with the rest of our [accessibility guidelines]
 [https://www.iab.com/guidelines/iab-display-advertising-guidelines/](https://www.iab.com/guidelines/iab-display-advertising-guidelines/)
 
 * UK Code of Non-broadcast Advertising and Direct & Promotional Marketing (CAP Code)  
-[https://www.cap.org.uk/Advertising-Codes/Non-Broadcast.aspx](https://www.cap.org.uk/Advertising-Codes/Non-Broadcast.aspx)
+[https://www.asa.org.uk/codes-and-rulings/advertising-codes/non-broadcast-code.html](https://www.asa.org.uk/codes-and-rulings/advertising-codes/non-broadcast-code.html)
 
 * Advertising Standards Authority (ASA)  
 [https://www.asa.org.uk/](https://www.asa.org.uk/)
