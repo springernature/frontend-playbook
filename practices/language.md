@@ -21,7 +21,8 @@ Inclusive language is language that is free from words, phrases or tones that re
 
 We are commited to use inclusive, non-discriminatory language in every written or verbal communication.
 
-## Unacceptable language
+
+## Unacceptable language
 
 Inappropriate or unacceptable language highlights perceived or actual differences between people. The use of insensitive and inappropriate language can create a hostile environment for people who have protected characteristics, as outlined in the [Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents).
 
@@ -29,7 +30,6 @@ Stereotyping means presuming a range of things about people based on one or two 
 
 
 ## Examples
-
 
 ### Genderless language
 

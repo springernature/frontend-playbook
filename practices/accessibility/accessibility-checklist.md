@@ -1,8 +1,8 @@
 # A simple accessibility checklist
 
-This checklist is a synthesis of the [Web Content Accessibility Guidelines 1], the [WCAG Samurai Errata], and one guideline from [Web Content Accessibility Guidelines 2].
+This checklist is a synthesis of the [Web Content Accessibility Guidelines 1](https://www.w3.org/TR/WCAG10/), the [WCAG Samurai Errata](http://www.wcagsamurai.org/erratas/introduction/), and one guideline from [Web Content Accessibility Guidelines 2](https://www.w3.org/TR/WCAG20/).
 
-It has proven helpful when building sites that comply with [US Section 508] and the [UK Equality Act 2010] \(all of our sites must comply with these pieces of legislation).
+It has proven helpful when building sites that comply with [US Section 508](https://www.section508.gov/) and the [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents) \(all of our sites must comply with these pieces of legislation).
 
 Be sure to create an issue or submit a pull request if you have any questions, or have spotted any improvements that can be made.
 
@@ -92,9 +92,3 @@ Be sure to create an issue or submit a pull request if you have any questions, o
    For example: Has the clearest and simplest language been used for the page's content? Have graphic or auditory presentations been used (where they will facilitate comprehension)? Is there a style of presentation that is consistent across pages?  
    [WCAG 1, guideline 14](http://www.w3.org/TR/WCAG10/wai-pageauth.html#gl-facilitate-comprehension)  
    (Also see [WCAG 1 core technique 5: "Comprehension"](http://www.w3.org/TR/WCAG10-CORE-TECHS/#comprehension))
-
-[US Section 508]: https://www.section508.gov/
-[UK Equality Act 2010]: http://www.legislation.gov.uk/ukpga/2010/15/contents
-[Web Content Accessibility Guidelines 1]: https://www.w3.org/TR/WCAG10/
-[Web Content Accessibility Guidelines 2]: https://www.w3.org/TR/WCAG20/
-[WCAG Samurai Errata]: http://www.wcagsamurai.org/erratas/introduction/

@@ -1,6 +1,6 @@
 # Mosaic-style CSS
 
-For Nature 'Mosaic' style layouts we write [Object Oriented CSS] with heavy use of 'atomic' utility classes. Object Oriented CSS (OOCSS) is a methodology for writing modularized, scalable, maintainable CSS. The aim with OOCSS is to separate structure from skin and container from content by identifying patterns and creating object classes.
+For Nature 'Mosaic' style layouts we write [Object Oriented CSS](https://github.com/stubbornella/oocss/wiki/FAQ) with heavy use of 'atomic' utility classes. Object Oriented CSS (OOCSS) is a methodology for writing modularized, scalable, maintainable CSS. The aim with OOCSS is to separate structure from skin and container from content by identifying patterns and creating object classes.
 
 By separating structure from skin we mean positioning (position, float, margin, etc.) from styling (background, color, border, etc.). In practice, this means to not mix structure/positioning properties with skin/styling properties on the same class. This way our “skinning” properties can be reused on a variety of elements, preventing property duplication in our CSS.
 
@@ -120,11 +120,11 @@ Notice that following the rules of separating structure and skin, we are only in
 <a href="/" class="pill-button pin-right">right aligned button</a>
 ```
 
-Common styles and patterns can then be reused across projects, and for Nature content displayed in the mosaic style, our common shared CSS can be found in [shunter-mosaic] (private repo). We can then build on top of this within each project to add styles and patterns that are specific to that project.
+Common styles and patterns can then be reused across projects, and for Nature content displayed in the mosaic style, our common shared CSS can be found in [shunter-mosaic (private repo)](https://github.com/stubbornella/oocss/wiki/FAQ). We can then build on top of this within each project to add styles and patterns that are specific to that project.
 
 ### Class Names
 
-Traditionally we have always been told to use semantic class names, that they should reflect the intended structure or meaning of the element it is applied to, as oppose to the presentation. However, this idea has been [debunked as a fallacy], as classes aren’t understood by machines (with microformats being a notable exception). Rather than worrying about creating semantic class names, we should be thinking about creating _sensible_ class names that offer flexibility and reusability. They should give meaning to an element to make it easier to understand and maintain for _developers_. We can do this by naming them based on their function (role) or based on their form (visual).
+Traditionally we have always been told to use semantic class names, that they should reflect the intended structure or meaning of the element it is applied to, as oppose to the presentation. However, this idea has been [debunked as a fallacy](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/), as classes aren’t understood by machines (with microformats being a notable exception). Rather than worrying about creating semantic class names, we should be thinking about creating _sensible_ class names that offer flexibility and reusability. They should give meaning to an element to make it easier to understand and maintain for _developers_. We can do this by naming them based on their function (role) or based on their form (visual).
 
 #### Functional Class Names
 Use functional class names when the styling is based on their function or meaning. There is a strong connection between the class name, the styles it applies, and the reason the styles are being applied. Functional class names will always be used to describe OOCSS objects, as these are styles grouped together to carry out a particular function, and also for positioning utility classes. Some examples include:
@@ -183,7 +183,3 @@ The font size on the html element resets the base font size to ```10px```, allow
 Using some form of JavaScript-specific classes can help to reduce the risk that changes to components will break any JavaScript that is also applied. We used to take the approach of using certain classes only for JavaScript hooks – ```js-*``` – and not to hang any presentation off them. This has been dropped in favour of using Data Attributes.
 
 Use ```data-component="name-of-component"``` as the javascript hook, as it will match up with code in the ```js/components``` folders. For sub-elements then use ```data-role="name-of-role"```, so you end up with component elements and roles within that component.
-
-[object oriented css]: https://github.com/stubbornella/oocss/wiki/FAQ
-[shunter]: https://github.com/nature/shunter
-[shunter-mosaic]: https://github.com/springernature/shunter-mosaic 

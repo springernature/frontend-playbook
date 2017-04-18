@@ -68,7 +68,7 @@ function loadConfigFile(filePath, callback) {
 
 ### Modules Over Monoliths
 
-Wherever possible, you should try to think in smaller single-purpose modules and functions. This encourages reuse and helps to [keep complexity down].
+Wherever possible, you should try to think in smaller single-purpose modules and functions. This encourages reuse and helps to [keep complexity down](https://en.wikipedia.org/wiki/Cyclomatic_complexity).
 
 If code is generic and reusable you should aim to break it into a separate module which can be managed through npm or included in a project's `vendor` directory. We advocate open sourcing of these kinds of modules, and it's a good idea to have open sourcing in mind no matter what you're writing.
 
@@ -76,9 +76,9 @@ Often you'll find that the code you're writing is catered for by a third-party m
 
 ### Keep it simple
 
-We adhere to the [KISS] principle. Unnecessarily complex/obtuse code completely goes against our rule of coding for humans. It's difficult to understand, slows us down, and reduces maintainability. Don't do it.
+We adhere to the [KISS](https://en.wikipedia.org/wiki/KISS_principle) principle. Unnecessarily complex/obtuse code completely goes against our rule of coding for humans. It's difficult to understand, slows us down, and reduces maintainability. Don't do it.
 
-It is also important to remember that [duplication is far cheaper than the wrong abstraction].
+It is also important to remember that [duplication is far cheaper than the wrong abstraction](http://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction).
 
 ```js
 // We don't do this
@@ -124,7 +124,7 @@ Code Style
 
 ### Linting
 
-JavaScript code should be linted with the most recent version of [XO], using the default lint settings. XO uses [eslint] under the hood. 
+JavaScript code should be linted with the most recent version of [XO](https://github.com/sindresorhus/xo), using the default lint settings. XO uses [eslint](http://eslint.org/) under the hood.
 
 If you are using ES2015+ syntax, XO provides [configuration](https://github.com/sindresorhus/xo#esnext) to enforce relevant rules. Add this in your `package.json` to enable it:
 
@@ -305,7 +305,7 @@ Ensure indentation consistency is maintained with a tool such as [EditorConfig](
 
 Except in package.json files, we indent our JavaScript using single tabs, not spaces. You can convert characters automatically in most editors, and you're advised to do this.
 
-Follow the [BSD-KNF] indentation style.
+Follow the [BSD-KNF](https://en.wikipedia.org/wiki/Indent_style#Variant:_BSD_KNF) indentation style.
 
 We do this:
 
@@ -386,7 +386,7 @@ var baz = function() {
 
 ### Variables
 
-We define variables with multiple `var` statements and trust our developers to understand [hoisting]. We generally discourage defining variables inside loops or blocks.
+We define variables with multiple `var` statements and trust our developers to understand [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting). We generally discourage defining variables inside loops or blocks.
 
 We do this:
 
@@ -419,7 +419,7 @@ In ES2015 we do this:
 const foo = 'bar';
 ```
 
-We use `let` only when a variable _explicitly_ [needs to be mutable]:
+We use `let` only when a variable _explicitly_ [needs to be mutable](https://ada.is/blog/2015/07/13/immutable/):
 
 ```js
 let foo = 'bar';
@@ -770,13 +770,3 @@ The `utils` directory is used to house JavaScript written for the project that d
   - It can expose functions and/or prototypal classes
 
 An example utility might be a function to make a string title-case.
-
-
-[KISS]: https://en.wikipedia.org/wiki/KISS_principle
-[duplication is far cheaper than the wrong abstraction]: http://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction
-[keep complexity down]: https://en.wikipedia.org/wiki/Cyclomatic_complexity
-[eslint]: http://eslint.org/
-[jshint]: http://jshint.com/
-[hoisting]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
-[needs to be mutable]: https://ada.is/blog/2015/07/13/immutable/
-[xo]: https://github.com/sindresorhus/xo
