@@ -22,10 +22,6 @@ Please keep discussion inside the issues and pull requests, avoiding Slack, hall
 
 [Read the full contributor guide](CONTRIBUTING.md).
 
-## Links
-
-If you need to reuse a hyperlink, turn it into a [reference link](https://daringfireball.net/projects/markdown/syntax#link). Otherwise, use an inline link.
-
 # License
 
 The Front-End Playbook is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
