@@ -43,8 +43,7 @@ All advertising must also comply with the rest of our [accessibility guidelines]
 * IAB Display Advertising Guidelines  
 [https://www.iab.com/guidelines/iab-display-advertising-guidelines/](https://www.iab.com/guidelines/iab-display-advertising-guidelines/)
 
-* UK Code of Non-broadcast Advertising and Direct & Promotional Marketing (CAP Code)  
-[https://www.asa.org.uk/codes-and-rulings/advertising-codes/non-broadcast-code.html](https://www.asa.org.uk/codes-and-rulings/advertising-codes/non-broadcast-code.html)
+* UK Code of Non-broadcast Advertising and Direct & Promotional Marketing (CAP Code)  [https://www.asa.org.uk/codes-and-rulings/advertising-codes/non-broadcast-code.html](https://www.asa.org.uk/codes-and-rulings/advertising-codes/non-broadcast-code.html)
 
 * Advertising Standards Authority (ASA)  
 [https://www.asa.org.uk/](https://www.asa.org.uk/)

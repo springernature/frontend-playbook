@@ -38,6 +38,3 @@ For most people with partial sight and/or congenital color deficiencies, the lig
 Color deficiencies associated with partial sight and congenital deficiencies make it difficult to discriminate between colors of similar hue.
 
 ![Ineffective adjacent hues](images/color_contrast_05.gif)
-
-
-

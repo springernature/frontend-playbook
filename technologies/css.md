@@ -2,9 +2,9 @@
 # CSS Style Guide -- WIP
 
 
-This document aspires to outline the way we write CSS/SASS, and is based at the moment on the existing [Nature playbook(private)]. This is just a first pass, and is likely to be incomplete (and wrong) in places.  It's a living styleguide – it will grow and adapt as our practices do.
+This document aspires to outline the way we write CSS/SASS, and is based at the moment on the existing [Nature playbook (Private repo)](https://github.com/springernature/playbook). This is just a first pass, and is likely to be incomplete (and wrong) in places.  It's a living styleguide – it will grow and adapt as our practices do.
 
-Projects should use [StyleLint] to enforce these rules. You can find _an example_ config file in the [config directory](config).
+Projects should use [StyleLint](https://github.com/stylelint/stylelint) to enforce these rules. You can find _an example_ config file in the [config directory](config).
 
 - [General Principles](#general-principles)
 - [Code Style](#code-style)
@@ -30,8 +30,8 @@ Projects should use [StyleLint] to enforce these rules. You can find _an example
 
 We write our CSS using design patterns that aim to maximise maintainability and reuse;
 
-- We make use of [OOCSS] to author CSS. Some teams make heavy use of utility classes, others less so.
-- [BEM] naming conventions are used in some teams
+- We make use of [OOCSS](../practices/css/oocss.md) to author CSS. Some teams make heavy use of utility classes, others less so.
+- [BEM](../practices/css/bem-css.md) naming conventions are used in some teams
 
 See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style.
 
@@ -724,10 +724,3 @@ But in the following example we would not use it:
     text-overflow: ellipsis;
 }
 ```
-
-[Nature playbook(private)]: https://github.com/nature/playbook
-[bem]: ../practices/css/bem-css.md
-[OOCSS]: ../practices/css/oocss.md
-[stylelint]: https://github.com/stylelint/stylelint
-[debunked as a fallacy]: http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
-[rems bug in chrome]: http://stackoverflow.com/questions/20099844/chrome-not-respecting-rem-font-size-on-body-tag
