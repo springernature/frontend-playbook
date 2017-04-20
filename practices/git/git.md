@@ -4,7 +4,6 @@
 * [Commit Messages](#commit-messages)
 * [Versioning](#versioning)
 
-
 ## Repositories
 
 We use a standard naming format for our Git repositories. Repository names are _lowercase-hyphenated_ (all lowercase, words separated by a hyphen), and begin with "frontend" followed by your project name.
@@ -23,7 +22,6 @@ We do this:
 ```
 frontend-project-name
 ```
-
 
 ## Commit Messages
 
@@ -45,7 +43,6 @@ A few blog posts on writing better commit messages:
 * [Git Commit](http://chris.beams.io/posts/git-commit/)
 * [Writing Good Commit Messages](https://github.com/erlang/otp/wiki/Writing-good-commit-messages)
 * [Better Commit Messages with a `.gitmessage` Template](https://robots.thoughtbot.com/better-commit-messages-with-a-gitmessage-template)
-
 
 ## Versioning
 

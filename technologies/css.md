@@ -1,6 +1,4 @@
-
-# CSS Style Guide -- WIP
-
+# CSS Style Guide
 
 This document aspires to outline the way we write CSS/SASS, and is based at the moment on the existing [Nature playbook (Private repo)](https://github.com/springernature/playbook). This is just a first pass, and is likely to be incomplete (and wrong) in places.  It's a living styleguide – it will grow and adapt as our practices do.
 
@@ -84,8 +82,7 @@ We do this:
 }
 ```
 
-Avoid shorthand properties, if you aren't setting all the values in the property. This applies to all properties with a shorthand: border, margin, padding, font, etc.  
-Use your judgement on this, as there are exceptions.
+Avoid shorthand properties, if you aren't setting all the values in the property. This applies to all properties with a shorthand: border, margin, padding, font, etc. Use your judgement on this, as there are exceptions.
 
 We _don't_ do this:
 ```scss
@@ -117,7 +114,7 @@ Nesting selectors increases specificity, meaning that overriding any CSS set the
 
 If possible, try and avoid using nesting for anything other than:
 
-**Pseudo selectors and state selectors**. We do this:  
+**Pseudo selectors and state selectors**. We do this:
 ```scss
 a {
     &:hover {

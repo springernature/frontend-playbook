@@ -1,5 +1,4 @@
-JavaScript Style Guide
-======================
+# JavaScript Style Guide
 
 This document outlines the way we write JavaScript. It's a living styleguide – it will grow as our practices do.
 
@@ -30,10 +29,7 @@ This document outlines the way we write JavaScript. It's a living styleguide –
     - [Vendor Directory](#vendor-directory)
     - [Utils Directory](#utils-directory)
 
-
-General Principles
-------------------
-
+## General Principles
 
 ### Code For Humans
 

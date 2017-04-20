@@ -3,9 +3,8 @@
 * [What is progressive enhancement](#what-is-progressive-enhancement)
 * [Why we use progressive enhancement](#why-we-use-progressive-enhancement)
 * [Common concerns](#common-concerns)
-    * [Why do we care about those crusty old browsers? I'm building a ✨Web App✨, not a web page!](#why-do-we-care-about-those-crusty-old-browsers-im-building-a-✨web-app✨-not-a-web-page)
+  * [Why do we care about those crusty old browsers? I'm building a ✨Web App✨, not a web page!](#why-do-we-care-about-those-crusty-old-browsers-im-building-a-✨web-app✨-not-a-web-page)
 * [Find out more:](#find-out-more)
-
 
 ## What is progressive enhancement
 
@@ -29,7 +28,7 @@ Finally by starting with just the most basic layer of content and moving on from
 
 First of all; a web app is a web page, put your sparkles away. Secondly, why do you think it's only crusty old browsers who might not be able to render all of your bells and whistles? What about a shiny modern browser that has had its connection terminated before it downloaded your CSS/JS/other when its owners train plunged into a tunnel? Or what happens when one of your third-party advertising/analytics/other scripts causes a JavaScript exception that prevents further execution on the page? Progressive enhancement is not just a solution for clients with poor support for more modern technologies, it's also a failsafe for EVERY client which guarantees your site/application is as useful as it can be to everyone all the time.
 
-## Find out more:
+## Find out more
 
 * [A List Apart: Understanding Progressive Enhancement](http://alistapart.com/article/understandingprogressiveenhancement) October 07, 2008
 * [Progressive enhancement is a team sport](https://seesparkbox.com/foundry/Progressive_Enhancement_Is_A_Team_Sport)
