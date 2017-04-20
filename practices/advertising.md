@@ -7,7 +7,6 @@
 
 These guidelines are based on ethical, [accessibility](accessibility/accessibility.md) and performance recommendations and best practices.
 
-
 ## Ethical
 
 * Do use clear, intelligible, and unambiguous information.
@@ -20,7 +19,6 @@ These guidelines are based on ethical, [accessibility](accessibility/accessibili
 * Don't use [pop-under ads](https://en.wikipedia.org/wiki/Pop-up_ad#Pop-under_ads).
 * Adverts must not contain spyware, malware or any software that results in an unexpected or deceptive experience. This includes links to sites containing these products.
 
-
 ## Accessibility
 
 * Don't use ads that make use of fast animations or flashing content.
@@ -29,14 +27,12 @@ These guidelines are based on ethical, [accessibility](accessibility/accessibili
 
 All advertising must also comply with the rest of our [accessibility guidelines](accessibility/accessibility-checklist.md).
 
-
 ## Performance
 
 * Do load ads asynchronously.
 * Don't use ads that add a significant size to the page.
 * Do use a maximum of 15 file requests for initial file load, as per the [IAB display advertising guidelines](https://www.iab.com/guidelines/iab-display-advertising-guidelines/).
 * All assets must be packaged together for delivery. All assets should be delivered in compressed format (e.g. GZIP).
-
 
 ## References
 

@@ -10,11 +10,9 @@ This document outlines the way we write markup and why. See our [house style doc
 	- [Follow the HTML 4 outline model for heading levels](#follow-the-html-4-outline-model-for-heading-levels)
 - [Templates](#templates)
 
-
 ## HTML vs XHTML
 
 HTML up to 3.2 was written with SGML syntax rules.  HTML 4 could be written with either SGML syntax (HTML 4.01) or XML (XHTML 1.0).  [HTML 5 breaks with SGML and has two serializations](https://www.w3.org/blog/2008/01/html5-is-html-and-xml/), a new one called "html" (which looks like SGML but is not an application of SGML) and again XML (XHTML).
-
 
 ### We author HTML 5
 
@@ -30,13 +28,11 @@ It is not impossible to imagine a back-end markup-generation system that only ou
 
 As such it seems beneficial to choose HTML 5 over XHTML.
 
-
 ### Validation
 
 We do what is reasonable to ensure our documents [validate](https://validator.w3.org/).
 
 Invalid markup results in authors relying on all clients to do what they intended, not what they instructed.  Clients regularly disagree on how to interpret out instructions, yet alone our intentions, so to promote consistency of execution we must do what we can to ensure our HTML is valid.
-
 
 ### Do not omit optional end tags
 
@@ -60,7 +56,6 @@ We *don't* do this:
 </ol>
 ```
 
-
 ### Implicitly close void elements
 
 Explicitly closing void elements (e.g. `<br />`) is not invalid per se in HTML 5.  However, explicitly closing void elements is an artifact of XML serialization, not HTML 5's "html" serialization, so may introduce cognitive dissonance in many authors given that we are authoring html.  Additionally, explicitly closing void elements was invalid in older versions of HTML.
@@ -78,7 +73,6 @@ We *don't* do this:
 ```html
 <meta charset="UTF-8" />
 ```
-
 
 ## Semantics
 
