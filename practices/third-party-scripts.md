@@ -1,6 +1,6 @@
 # Third party scripts
 
-Whenever possible, we make use of a tag managers in order to easily manage the scripts being included on a page. We currently use:
+Whenever possible, we make use of tag managers in order to easily manage the scripts being included on a page. We currently use:
 
 * [Ensighten](https://manage.ensighten.com)
 * [Google Tag Manager](https://tagmanager.google.com)
