@@ -1,4 +1,4 @@
-# Best pratices when dealing with images for the Web
+# Best practices when dealing with images for the Web
 
 In a front-end workflow we typically deal with two kinds of images:
 
