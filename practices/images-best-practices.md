@@ -15,13 +15,6 @@ Most best practices are common to both categories.
 * Use SVGs whenever you want to display a vector image.
 * Use JPEGs for photo images, or images with many little details.
 * Use PNGs for graphs and other images with large areas of the same colour. Also for images that require transparency.
-* Don't use GIFs.
-
-### About WebP
-
-We don't encourage the use of the [WebP format](https://developers.google.com/speed/webp/) as support for it is still not widespread. [MS is not planning to add support to Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/webpimageformat/) at the moment. Firefox is currently working in adding support for it, so we may reconsider after that.
-
-Recently, new encoders like [Mozilla's mozjpeg](https://github.com/mozilla/mozjpeg) or [Google's Guetzli](https://github.com/google/guetzli) have appeared that can create better optimised JPEGs. Therefore WebP is not as advantageous as it used to be.
 
 ### JPEG images
 
