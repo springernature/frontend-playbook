@@ -1,6 +1,6 @@
 # Best practices when dealing with images for the Web
 
-This document describes the use of image at Springer Nature.
+This document describes the use of images at Springer Nature.
 
 In a front-end workflow we typically deal with two kinds of images:
 
@@ -55,14 +55,14 @@ There's also an [ImageOptim-CLI](https://github.com/JamieMason/ImageOptim-CLI) t
 
 We work under the assumption that images are encoded only once but decoded many times. Therefore, encoding times are usually secondary to the savings in e.g. file size.
 
-When optimising non-content images that are going to be commited to a repo, make sure you always use the maximum settings if you're using lossless optimisations.
+When optimising non-content images that are going to be committed to a repo, make sure you always use the maximum settings if you're using lossless optimisations.
 
 For content images, we encourage using an image server like [Immagine](https://github.com/springernature/immagine) or an image service like [Kraken.io](https://kraken.io/) in order to:
 
 * Ensure that images are optimised automatically.
 * Ensure that appropriate cache headers are set.
 
-Also, future improvements to these tools will automatically be reflected in all of our images being served, instead of them having to be re-encoded.
+Also, future improvements to these tools will automatically be reflected in all of the images being served, instead of them having to be re-encoded.
 
 ## Comparing the quality of images
 
