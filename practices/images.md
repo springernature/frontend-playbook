@@ -14,9 +14,9 @@ Most best practices are common to both categories.
 
 ### Which format to use
 
-* Use SVGs for icons, logos, and other images with sharply defined edges, as long as you have access to the original image in a vector format (e.g. Adobe Illustrator). Don't convert vector to raster images, or raster images to SVG.
-* Use JPEGs for still images, photography, or in any other case where using a PNG will generate an image that is too big to be delivered over the network.
-* Use PNGs for illustrations, graphs, flat colour graphics, images containing transparency (which JPEG doesn't support), and other images with text. An 8-bit PNG will usually also allow the delivery of an indexed colour image, with binary transparency, [at a smaller size than a GIF](https://helpx.adobe.com/photoshop-elements/using/optimizing-images-gif-or-png.html).
+* Use SVG for an icon, logo, or other image with sharply defined edges.
+* Use JPEG for a still image, photograph, or in any other case where a PNG would be too large to be delivered over the network.
+* Use PNG for an illustration, graph, flat-colour graphic, image containing transparency (which JPEG doesn't support), or an image containing text. An 8-bit PNG will usually also allow the delivery of an indexed colour image, with binary transparency, [at a smaller size than a GIF](https://helpx.adobe.com/photoshop-elements/using/optimizing-images-gif-or-png.html).
 
 ### SVG images
 
