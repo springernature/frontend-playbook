@@ -1,4 +1,4 @@
-# Graded Browser Support
+# Graded browser support
 
 * [Our criteria for browser support](#our-criteria-for-browser-support)
 * [How we implement graded browser support](#how-we-implement-graded-browser-support)

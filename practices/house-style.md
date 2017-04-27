@@ -1,5 +1,5 @@
-House Style Guide
-======================
+House style guide
+=================
 
 This document outlines the reasons for our having a house style, and generally-applicable principles. It's a living styleguide – it will grow as our practices do.
 
@@ -42,7 +42,7 @@ Read our [Accessibility guide](accessibility/accessibility.md) and [accessibilit
 
 ### Progressive enhancement and browser support
 
-We support *all* browsers to different degrees of functionality. "Support" does *not* mean that everybody gets the same thing. Read our [Graded Browser Support page](../practices/graded-browser-support.md) to understand our approach and where to aim your efforts.
+We support *all* browsers to different degrees of functionality. "Support" does *not* mean that everybody gets the same thing. Read our [graded browser support page](../practices/graded-browser-support.md) to understand our approach and where to aim your efforts.
 
 Using graded browser support means that you MUST practice progressive enhancement when building sites for Springer Nature, not graceful degradation. See the [progressive enhancement guide](../practices/progressive-enhancement.md) to understand what this means.
 

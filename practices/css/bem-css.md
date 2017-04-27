@@ -16,7 +16,7 @@ BEM naming follows this pattern:
 .block--modifier {}
 ```
 
-## Naming Style
+## Naming style
 
 All class names should be _lowercase-hyphenated_ - all lowercase, words separated by a hyphen.
 
@@ -57,7 +57,7 @@ We do this:
 - `.alert-box--success`
 - `.button--expanded`
 
-## BEM Best practices
+## BEM best practices
 
 Don't `@extend` block modifiers with the block base, always require that the base/unmodified class is present
 
