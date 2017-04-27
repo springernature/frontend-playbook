@@ -1,22 +1,22 @@
-# Best practices when dealing with images for the Web
+# Images
 
-This document describes the use of images at Springer Nature.
+This document describes best practices for the use of images on the web at Springer Nature.
 
-In a front-end workflow we typically deal with two kinds of images:
+In a front-end workflow we typically deal with two kinds of image:
 
-* **Icons, logos, buttons and other graphical elements** that are part of the User Interface of the page. These are usually managed by the frontend, and so they are stored with the rest of the resources (templates, CSS, JS). Like those resources, they may be shared between many different pages.
+* **User interface images**, including icons, logos, and buttons. Usually managed by the frontend, these are stored with other client-side resources such as templates, CSS and JS. Like those resources, they may be shared between many different pages.
 
-* **Content images**. These are unique to a page (or a handful of pages). They will be usually provided from a database or a content management system.
+* **Content images**. These are unique to a page (or a handful of pages). They will usually be provided from a database or a content management system.
 
 Most best practices are common to both categories.
 
 ## Formats
 
-### What format to use
+### Which format to use
 
-* Use SVGs for icons, logos, and other images with sharply defined edges, as long as you have access to the original image in a vector format (i.e. Adobe Illustrator). Don't convert vector to raster images, or raster images to SVG.
+* Use SVGs for icons, logos, and other images with sharply defined edges, as long as you have access to the original image in a vector format (e.g. Adobe Illustrator). Don't convert vector to raster images, or raster images to SVG.
 * Use JPEGs for still images, photography, or in any other case where using a PNG will generate an image that is too big to be delivered over the network.
-* Use PNGs for illustrations, graphs, flat colour graphics, and other images with text. Also for images that require transparency, as JPEG doesn't support it.
+* Use PNGs for illustrations, graphs, flat colour graphics, images containing transparency (which JPEG doesn't support), and other images with text. An 8-bit PNG will usually also allow the delivery of an indexed colour image, with binary transparency, [at a smaller size than a GIF](https://helpx.adobe.com/photoshop-elements/using/optimizing-images-gif-or-png.html).
 
 ### SVG images
 
