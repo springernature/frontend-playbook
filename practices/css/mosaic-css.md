@@ -122,11 +122,11 @@ Notice that following the rules of separating structure and skin, we are only in
 
 Common styles and patterns can then be reused across projects, and for Nature content displayed in the mosaic style, our common shared CSS can be found in [shunter-mosaic (private repo)](https://github.com/stubbornella/oocss/wiki/FAQ). We can then build on top of this within each project to add styles and patterns that are specific to that project.
 
-### Class Names
+### Class names
 
 Traditionally we have always been told to use semantic class names, that they should reflect the intended structure or meaning of the element it is applied to, as oppose to the presentation. However, this idea has been [debunked as a fallacy](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/), as classes aren’t understood by machines (with microformats being a notable exception). Rather than worrying about creating semantic class names, we should be thinking about creating _sensible_ class names that offer flexibility and reusability. They should give meaning to an element to make it easier to understand and maintain for _developers_. We can do this by naming them based on their function (role) or based on their form (visual).
 
-#### Functional Class Names
+#### Functional class names
 Use functional class names when the styling is based on their function or meaning. There is a strong connection between the class name, the styles it applies, and the reason the styles are being applied. Functional class names will always be used to describe OOCSS objects, as these are styles grouped together to carry out a particular function, and also for positioning utility classes. Some examples include:
 
 ```css
@@ -139,7 +139,7 @@ Use functional class names when the styling is based on their function or meanin
 .position-absolute {} /*  positioning utility class */
 ```
 
-#### Presentational Class Names
+#### Presentational class names
 Presentational class names describe the way an element looks. The name itself is describing the styles that are being applied. These classes are conducive to code reuse as they don't care what they are being used to style. This also comes with the benefit of scaling gracefully. As you're developing new components, you just need to add existing styles to your markup. Soon you will find that creating a new component requires no new CSS to be written, you are just applying existing styles to your HTML. Presentation class names are used for utility styling classes. Some examples include:
 
 ```css
@@ -154,15 +154,15 @@ Presentational class names describe the way an element looks. The name itself is
 .padding10 {}
 ```
 
-#### Naming Convention
+#### Naming convention
 
 All class names should be _lowercase-hyphenated_ - all lowercase, words separated by a hyphen. So ```.object-name``` and not ```.objectName``` or ```.ObjectName``` or ```.Object-Name```.
 
-### The Classitis Tradeoff
+### The classitis tradeoff
 
 One of the downsides of this approach is the bloating of the HTML with classes. Separating structure from skin and container from content results in more classes on elements than traditional methods. In the end it comes down to whether you would rather have DRY CSS or DRY HTML, and we came to the conclusion that DRY CSS using the object oriented methodology is preferable due to its maintainability - it may be easier to add/remove classes in your html when updating a component than it is to rewrite your CSS when something changes. On large sites the OOCSS approach produces significantly less CSS making it easier to maintain and adapt to change.
 
-### Font Sizing
+### Font sizing
 
 All font sizes MUST be specified using rems only with a pixel fall back. Do not use percentages, ems or pixels alone. When using Shunter the px fallback is added automatically. In order for rems to be easily calculated you should have the following in your css:
 
@@ -178,7 +178,7 @@ body {
 
 The font size on the html element resets the base font size to ```10px```, allowing the rem value to be the pixel value divided by 10 - so ```11px``` would be ```1.1rem```. The use of ```font-size: 1.7em``` on the body fixes a [rems bug in chrome].
 
-### Javascript Hooks
+### Javascript hooks
 
 Using some form of JavaScript-specific classes can help to reduce the risk that changes to components will break any JavaScript that is also applied. We used to take the approach of using certain classes only for JavaScript hooks – ```js-*``` – and not to hang any presentation off them. This has been dropped in favour of using Data Attributes.
 

@@ -1,4 +1,4 @@
-# Code Reviews
+# Code reviews
 
 * [Why](#why)
 * [How](#how)

@@ -1,4 +1,4 @@
-# Object Oriented CSS
+# Object oriented CSS
 
 * [What is OOCSS](#what-is-oocss)
 * [Why we use OOCSS](#why-we-use-oocss)

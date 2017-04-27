@@ -1,4 +1,4 @@
-# JavaScript Style Guide
+# JavaScript style guide
 
 This document outlines the way we write JavaScript. It's a living styleguide – it will grow as our practices do.
 
@@ -29,9 +29,9 @@ This document outlines the way we write JavaScript. It's a living styleguide –
     - [Vendor Directory](#vendor-directory)
     - [Utils Directory](#utils-directory)
 
-## General Principles
+## General principles
 
-### Code For Humans
+### Code for humans
 
 Your JavaScript should always be optimised for readability first, as someone is going to have to maintain your code. Most of the rules in this style guide are here to help enforce this. See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style. 
 
@@ -62,7 +62,7 @@ function loadConfigFile(filePath, callback) {
 }
 ```
 
-### Modules Over Monoliths
+### Modules over monoliths
 
 Wherever possible, you should try to think in smaller single-purpose modules and functions. This encourages reuse and helps to [keep complexity down](https://en.wikipedia.org/wiki/Cyclomatic_complexity).
 
@@ -107,7 +107,7 @@ foo = bar;
 bar = tempVar;
 ```
 
-### Performant Code
+### Performant code
 
 We should always try to write fast code, but not if it makes the code difficult to understand. It's inefficient to optimise in favour of performance unless evidence shows that you really _need_ to do that.
 
@@ -154,7 +154,7 @@ const object = {
 };
 ```
 
-#### Questions and Answers
+#### Questions and answers
 
 Q: XO is complaining about the following code:
 
@@ -334,13 +334,13 @@ if (foo) {
 
 We use automated tools (like Snyk) to monitor the status of dependencies in our package.json files. The majority of these tools expect two spaces for indentation, not tabs. Follow this convention in your package.json files to avoid irritating merges when one of the tools raises an automatic Pull Request. 
 
-### White Space
+### White space
 
 We use white space liberally to help keep code readable. You're encouraged to use newlines to break up long functions into logical chunks.
 
 You should also remove trailing white space from lines of code. Your editor should be able to either remove this or highlight it when present, for example, [atom-whitespace](https://github.com/atom/whitespace).
 
-### Semi-Colons
+### Semi-colons
 
 We require the use of semi-colons. The only statements that don't need to end with semi-colons are function declarations and blocks.
 
@@ -464,7 +464,7 @@ var loadConfig = function (filePaths, callback) {
 function loadConfig(filePaths, callback){ /* ... */ }
 ```
 
-#### Pure Functions
+#### Pure functions
 
 Where possible, keep your [JavaScript functions pure](http://alistapart.com/article/making-your-javascript-pure).
 
@@ -662,7 +662,7 @@ for (const prop in obj) {
 }
 ```
 
-#### Error Handling
+#### Error handling
 
 `try/catch` blocks must be indented in the same way as conditionals, with `catch` starting on the same line as the end curly brace of the `try`.
 
@@ -690,7 +690,7 @@ try { foo += 1; }
 catch (error) { console.log(error); }
 ```
 
-### Strict Mode
+### Strict mode
 
 You should assume that your code will fail, and take steps to handle those failures.
 
@@ -700,11 +700,11 @@ In Node.js, you can add `'use strict';` to the top of each of your source files.
 
 In-browser you should not add your `'use strict';` to the top of the file; instead you should add it to either the file's [IIFE](http://benalman.com/news/2010/11/immediately-invoked-function-expression/) or each defined function if an IIFE isn't present. This is because global strict mode in browsers can cause issues with third-party code.
 
-Client-Side JavaScript Architecture
+Client-side JavaScript architecture
 -----------------------------------
 
 
-### Directory Structure
+### Directory structure
 
 Client-Side JavaScript normally lives in `resources/js` in our projects, unless the back-end you're using dictates a different directory.  We should try to stick as closely to this as possible though.
 
@@ -720,7 +720,7 @@ Within this directory, you should always use the following structure. We'll go i
 
 File names in these directories should be lower-case, with words separated by dashes.
 
-#### Components Directory
+#### Components directory
 
 The `components` directory is used to house JavaScript that couples to the DOM. There are several conditions that need to be met for a file to live in here:
 
@@ -730,7 +730,7 @@ The `components` directory is used to house JavaScript that couples to the DOM. 
 
 An example component might be an auto-complete, tab group, or loading spinner.
 
-#### Polyfills Directory
+#### Polyfills directory
 
 The `polyfills` directory contains JavaScript that polyfills browser behaviour for older clients. JavaScript in this directory must meet these conditions:
 
@@ -740,7 +740,7 @@ The `polyfills` directory contains JavaScript that polyfills browser behaviour f
 
 An example polyfill might add `requestAnimationFrame` for any grade-A browsers which don't support it.
 
-#### Vendor Directory
+#### Vendor directory
 
 The `vendor` directory is where third-party code lives. It's also where we add code which is written in-house but managed and versioned elsewhere, e.g. as an open source project.
 
@@ -755,7 +755,7 @@ JavaScript in this directory must meet these conditions:
 
 An example vendor library might be jQuery, which would live in a file named `jquery-2.1.4.js`.
 
-#### Utils Directory
+#### Utils directory
 
 The `utils` directory is used to house JavaScript written for the project that doesn't fit into the rules for the `components` directory. Utilities still have some conditions of their own:
 

@@ -1,4 +1,4 @@
-# CSS Style Guide
+# CSS style guide
 
 This document aspires to outline the way we write CSS/SASS, and is based at the moment on the existing [Nature playbook (Private repo)](https://github.com/springernature/playbook). This is just a first pass, and is likely to be incomplete (and wrong) in places.  It's a living styleguide – it will grow and adapt as our practices do.
 
@@ -24,7 +24,7 @@ Projects should use [StyleLint](https://github.com/stylelint/stylelint) to enfor
   - [General](#general)
   - [Single Line CSS](#single-line-css)
 
-## General Principles
+## General principles
 
 We write our CSS using design patterns that aim to maximise maintainability and reuse;
 
@@ -33,7 +33,7 @@ We write our CSS using design patterns that aim to maximise maintainability and 
 
 See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style.
 
-## Code Style
+## Code style
 
 Avoid using HTML tags in CSS selectors. And always prefer using a class over HTML tags (with some exceptions)
 
@@ -104,7 +104,7 @@ We do this:
 
 Don't use `!important`. If you must, leave a comment, and prioritise resolving specificity issues before resorting to `!important`.
 
-## Preprocessors
+## Preprocessorså
 
 Our preferred CSS preprocessor is [SASS](http://sass-lang.com/) using the [SCSS syntax](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html).
 
@@ -435,7 +435,7 @@ a {
 }
 ```
 
-### Media Features
+### Media features
 
 There MUST be a single space after the colon.  
 There MUST NOT be whitespace before the colon.  
@@ -616,7 +616,7 @@ a,
 b { color: pink; }
 ```
 
-### Value Lists
+### Value lists
 
 There MUST be a newline after the commas in multi-line value lists.  
 There MUST be a single space after the commas in single-line value lists.  
@@ -686,7 +686,7 @@ a { color: pink; }
  * This newline */
 ```
 
-### Single Line CSS
+### Single line CSS
 
 A quick note on single line CSS. We allow single line CSS when there is only one declaration, but we shouldn't always use it. We only ever use single line CSS when there are groups of multiple CSS classes with one declaration, for example spacing, to aid legibility. In this case we also do not require a space between classes. So we would use it in the following example:
 
