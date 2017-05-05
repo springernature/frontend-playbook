@@ -154,6 +154,31 @@ const object = {
 };
 ```
 
+#### Disabling rules
+
+XO provides a sane set of [sensible defaults](https://github.com/sindresorhus/eslint-config-xo/blob/b61bee396a67e2ea8e2fd9ae34bad36c9143cb15/index.js#L16-L264), it is unnecessary to disable rules according to your personal preferences.
+
+If you feel the need to disable a rule, you should:
+
+- Understand why the rule exists in the first place. For example the [no-unassigned-import](https://github.com/benmosher/eslint-plugin-import/blob/bd0e5e3dd5781b125dc02971ddb011aaa554bf4f/docs/rules/no-unassigned-import.md) rule provides: a readable description + pass/fail code examples.
+- Raise it with your team, providing a compelling reason to disable a rule.
+
+To disable a rule, wrap the offending code in `eslint-disable` directives, for example:
+
+```js
+/* eslint-disable no-unassigned-import */
+require('polyfill');
+/* eslint-enable no-unassigned-import */
+```
+
+Do not switch rules off permanently in a project unless you have a strong reason for doing so. If you do have a strong reason, ensure your have discussed this with your team beforehand.
+
+Switching off a rule _permanently_ can present some problems:
+-  You introduce potential inconsistencies within a single project.
+-  You become subject to JavaScript quirks which a linter would typically warn you of. (Does not apply to stylistic rules)
+-  You forget to enable the rule again when the offending code is removed from the codebase.
+-  You mask the original reason and context as to why the rule was disabled in the first place. (You can improve this point with comments)
+
 #### Questions and answers
 
 Q: XO is complaining about the following code:
@@ -169,10 +194,6 @@ A: This breaks the [no-undef](http://eslint.org/docs/rules/no-undef) rule of ESL
 ```js
 /* global adsProvider */
 ```
-
-Q: The [default set of rules](https://github.com/sindresorhus/eslint-config-xo/blob/7511eed20ff7e21b9e32b5d240f3bcaca09c0f70/index.js#L16) XO is using is too strict, how should I handle this?
-
-A: [Configure rules](https://github.com/sindresorhus/xo#rules) according to your use case, however, be wary of turning rules off. Strive for consistency.
 
 Q: I just added XO into the build, now everything is failing the linting process.
 
@@ -191,6 +212,10 @@ gulp.task('lint', () =>
 Q: XO is complaining about undefined variables in my JavaScript unit test code.
 
 A: XO supports many [popular environment global variables](http://eslint.org/docs/user-guide/configuring#specifying-environments). Specify an environment of your choice to add the necessary global variables. Combine this with [Config Overrides](https://github.com/sindresorhus/xo#config-overrides) to ensure you don't apply one or many environments to your entire codebase accidentally.
+
+Q: I transformed my code to adhere to XO, but now it is less readable.
+
+A: Code linting should help improve your overall code quality. If you now have less readable code, consider if there is a [code smell](https://en.wikipedia.org/wiki/Code_smell) that is conducive to breaking a lint rule, if so, you might need to refactor your code.
 
 ### Asynchronicity
 
