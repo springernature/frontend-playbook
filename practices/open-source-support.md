@@ -10,7 +10,7 @@
 
 ## Versioning
 
-Our open source projects are versioned with [semver](git/semver.md). You should read through the [semver documentation](http://semver.org) if you're going to release new versions.
+Our open source projects are versioned with [SemVer](git/semver.md). You should read through the [SemVer documentation](http://semver.org) if you're going to release new versions.
 
 
 ## Release process
@@ -18,7 +18,7 @@ Our open source projects are versioned with [semver](git/semver.md). You should 
 To publish a new version of one of our open source projects:
 
 * Switch to the `master` branch. Version commits are the only ones that shouldn't be committed to a feature branch.
-* Increment either the major, minor, or patch version in the `package.json` file. If you're unsure which, check with the rest of the team or re-read the semver docs. Also verify if there are any mentions to the old version in the `README.md` or any other files, and update them too.
+* Increment either the major, minor, or patch version in the `package.json` file. If you're unsure which, check with the rest of the team or re-read the SemVer docs. Also verify if there are any mentions to the old version in the `README.md` or any other files, and update them too.
 * Add an entry to the `HISTORY.md` file outlining the changes in the new version. Take your time, this log should be useful to developers who use this project - it should help them make decisions about whether they can or should upgrade. If there are additional commits on the `master` branch since the last version, be sure to include a description of what they do in your history update - talk to the developers who committed them, if necessary.
 * Commit your changes with a message formatted as `Version 1.2.3` - this helps people find version commits in the log.
 * Tag your newly created commit with the version number. E.g. `git tag 1.2.3`. Do *not* prepend a `v` or `Version`, for example do not use either `git tag v1.2.3` nor `git tag "Version 1.2.3"`.

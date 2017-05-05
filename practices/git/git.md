@@ -46,4 +46,4 @@ A few blog posts on writing better commit messages:
 
 ## Versioning
 
-Our open source projects are versioned with [semver](semver.md). Check our [Open Source support](../open-source-support.md) guide for details on how to version and release an update to an open source project.
+Our open source projects are versioned with [SemVer](semver.md). Check our [Open Source support](../open-source-support.md) guide for details on how to version and release an update to an open source project.
