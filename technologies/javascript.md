@@ -171,7 +171,7 @@ require('polyfill');
 /* eslint-enable no-unassigned-import */
 ```
 
-Do not switch rules off permanently in a project unless you have a strong reason for doing so. If you do have a strong reason, ensure your have discussed this with your team beforehand.
+Do not switch rules off permanently in a project unless you have a strong reason for doing so. If you do have a strong reason, ensure you have discussed this with your team beforehand.
 
 Switching off a rule _permanently_ can present some problems:
 -  You introduce potential inconsistencies within a single project.
