@@ -18,13 +18,18 @@ Our browser support in summary:
 | Tables                      | Grade-A support                 | Grade-C support    |
 | --------------------------- |:-------------------------------:| ------------------:|
 | Chrome                      | latest stable, latest stable -1 | < 29               |
-| Edge                        | latest stable, latest stable -1 | < latest stable -1 |
+| Edge                        | latest stable, latest stable -1 | n/a                |
 | Firefox                     | latest stable, latest stable -1 | < 29               |
-| IE                          | 10                              | < 10               |
+| IE                          | 10 + 11                         | < 10               |
 | Opera                       | latest stable                   | < 16               |
 | Safari iOS                  | latest stable, latest stable -1 | < 7                |
 | Safari MacOS                | latest stable, latest stable -1 | < 6.1              |
 | Android browser (Chromium)  | Latest stable                   | < 4.4              |
+
+### Notes
+
+- Edge has no explicit Grade-C support.
+- IE has no Grade-X support.
 
 ## How we implement graded browser support
 
