@@ -17,9 +17,9 @@ Our browser support in summary:
 
 | Tables                      | Grade-A support                 | Grade-C support    |
 | --------------------------- |:-------------------------------:| ------------------:|
-| Chrome                      | latest stable                   | < 29               |
-| Edge                        | latest stable                   | < latest stable -1 |
-| Firefox                     | latest stable                   | < 28               |
+| Chrome                      | latest stable, latest stable -1 | < 29               |
+| Edge                        | latest stable, latest stable -1 | < latest stable -1 |
+| Firefox                     | latest stable, latest stable -1 | < 28               |
 | IE                          | 10                              | < 10               |
 | Opera                       | latest stable                   | < 12.1             |
 | Safari iOS                  | latest stable, latest stable -1 | < 7                |
