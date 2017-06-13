@@ -19,7 +19,7 @@ Our browser support in summary:
 | --------------------------- |:-------------------------------:| ------------------:|
 | Chrome                      | latest stable, latest stable -1 | < 29               |
 | Edge                        | latest stable, latest stable -1 | < latest stable -1 |
-| Firefox                     | latest stable, latest stable -1 | < 28               |
+| Firefox                     | latest stable, latest stable -1 | < 29               |
 | IE                          | 10                              | < 10               |
 | Opera                       | latest stable                   | < 16               |
 | Safari iOS                  | latest stable, latest stable -1 | < 7                |
