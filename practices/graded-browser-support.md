@@ -41,7 +41,7 @@ This technique is documented here: [Cutting the Mustard with Media queries](http
 
 The media queries we use are based upon [CSS Only Mustard Cut](https://github.com/Fall-Back/CSS-Mustard-Cut), with a preference towards combining them into one rather than separating them out into multiple `<link>` elements.  Note that you **cannot** add line breaks to the media query if they are combined.
 
-Note that while our graded browser support table specifies Internet Explorer 10 and below as grade-c, until an updated media query is found this approach renders IE10 as grade-A.
+Note: As mentioned above, while our graded browser support table specifies Internet Explorer 10 and below as Grade-C, until an updated media query is found this approach will render IE10 as Grade-A.
 
 ```html
 <link rel="stylesheet" href="your-css.css" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
