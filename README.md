@@ -8,7 +8,7 @@ See "[Changing the laws of engineering with pull requests](https://www.youtube.c
 
 This is a living document that we contribute to in a _public_ GitHub repo. Reasons for doing this in the open include (but are not limited to):
 
-1. Interacting with and learning from others. Receiving contributions from people who don't work here can help us, providing learning opportunities that we would not receive otherwise - for example, see [this contribution](https://github.com/springernature/frontend/pull/48#issuecomment-236139605) from @rowanmanning.
+1. Interacting with and learning from others. Receiving contributions from people who don't work here can help us, providing learning opportunities that we would not receive otherwise - for example, see [this contribution](https://github.com/springernature/frontend-playbook/pull/48#issuecomment-236139605) from @rowanmanning.
 
 1. Providing a showcase for our work/ethics. This is _really_ useful when hiring people (for both parties). We've had very positive feedback from interviewees - it's a great recruiting tool. It also means that people are quickly up and running when they join.
 

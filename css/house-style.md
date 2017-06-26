@@ -28,8 +28,8 @@ Projects should use [StyleLint](https://github.com/stylelint/stylelint) to enfor
 
 We write our CSS using design patterns that aim to maximise maintainability and reuse;
 
-- We make use of [OOCSS](../practices/css/oocss.md) to author CSS. Some teams make heavy use of utility classes, others less so.
-- [BEM](../practices/css/bem-css.md) naming conventions are used in some teams
+- We make use of [OOCSS](oocss.md) to author CSS. Some teams make heavy use of utility classes, others less so.
+- [BEM](bem-css.md) naming conventions are used in some teams
 
 See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style.
 
