@@ -22,7 +22,7 @@ Read this excellent [article by Nicholas C. Zakas](https://www.smashingmagazine.
 
 ## General principles
 
-Read the [markup guide](../technologies/markup.md), the [JavaScript guide](../technologies/javascript.md) and the [CSS guide](../technologies/css.md) to understand our house style in these technologies. You should also familiarise yourself with our [Git](git/git.md) strategies. The team you're deployed to may also have its own strategies in addition to these.
+Read the [markup guide](../markup/house-style.md), the [JavaScript guide](../javascript/house-style.md) and the [CSS guide](../css/house-style.md) to understand our house style in these technologies. You should also familiarise yourself with our [Git](git/git.md) strategies. The team you're deployed to may also have its own strategies in addition to these.
 
 ### Linting
 
@@ -32,13 +32,13 @@ We lint our CSS, JavaScript, and templates written with DustJS. This helps us to
 * For JavaScript, use [XO](https://github.com/sindresorhus/xo)
 * For DustJS, use [Dustmite](https://www.npmjs.com/package/dustmite)
 
-See the [CSS](../technologies/css.md), [JavaScript](../technologies/javascript.md), and [markup](../technologies/markup.md) guides for further details.
+See the [CSS](../css/house-style.md), [JavaScript](../javascript/house-style.md), and [markup](../markup/house-style.md) guides for further details.
 
 ### Accessibility 
 
 We care a great deal about accessibility. We aim to comply with the [Web Content Accessibility Guidelines 1](https://www.w3.org/TR/WCAG10/) AA + the [WCAG Samurai Errata](http://www.wcagsamurai.org/erratas/introduction/). In doing so, we also achieve a high pass rate with [Web Content Accessibility Guidelines 2](https://www.w3.org/TR/WCAG20/) AA. All of our websites MUST comply with [US Section 508](https://www.section508.gov/) and [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents).
 
-Read our [Accessibility guide](accessibility/accessibility.md) and [accessibility checklist](accessibility/accessibility-checklist.md) to understand how we meet these aims.
+Read our [Accessibility guide](../accessibility/accessibility.md) and [accessibility checklist](../accessibility/accessibility-checklist.md) to understand how we meet these aims.
 
 ### Progressive enhancement and browser support
 
@@ -56,7 +56,7 @@ Read the [code review guide](../practices/code-review.md) for details on how we 
 
 ### Written communications
 
-Not all written communications need to follow house style - for e.g. we don't expect you to follow any rules in Slack, beyond what's expected of you as a professional. If you write for any of our open source repositories (including documentation), [Cruft.io](http://cruft.io/), or any of our [social media accounts](../practices/social-media.md), please familiarise yourself with the [Language guide](../practices/language.md).
+Not all written communications need to follow house style - for e.g. we don't expect you to follow any rules in Slack, beyond what's expected of you as a professional. If you write for any of our open source repositories (including documentation), [Cruft.io](http://cruft.io/), or any of our [social media accounts](../writing/social-media.md), please familiarise yourself with the [Language guide](../writing/language.md).
 
 
 ## Making changes to the house style
