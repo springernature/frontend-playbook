@@ -22,7 +22,7 @@ Read this excellent [article by Nicholas C. Zakas](https://www.smashingmagazine.
 
 ## General principles
 
-Read the [markup guide](../markup/house-style.md), the [JavaScript guide](../javascript/house-style.md) and the [CSS guide](../css/house-style.md) to understand our house style in these technologies. You should also familiarise yourself with our [Git](git/git.md) strategies. The team you're deployed to may also have its own strategies in addition to these.
+Read the [markup guide](../markup/house-style.md), the [JavaScript guide](../javascript/house-style.md) and the [CSS guide](../css/house-style.md) to understand our house style in these technologies. You should also familiarise yourself with our [Git](../git/git.md) strategies. The team you're deployed to may also have its own strategies in addition to these.
 
 ### Linting
 
