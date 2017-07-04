@@ -1,8 +1,9 @@
 # Language
 
 * [Writing style](#writing-style)
-    * [Tone of Voice](#tone-of-voice)
+    * [Tone of voice](#tone-of-voice)
     * [Plain English](#plain-english)
+    * [Technical writing](#technical-writing)
 * [Non-discriminatory language](#non-discriminatory-language)
     * [Unacceptable language](#unacceptable-language)
     * [Examples](#examples)
@@ -14,12 +15,12 @@
 
 ## Writing style
 
-We don't enforce strict standards on writing style as we want you to use your own words to express your own personality. That said, we have two general sets of guidelines - Tone of Voice and Plain English.
+We don't enforce strict standards on writing style as we want you to use your own words to express your own personality. That said, we have three general sets of guidelines - tone of voice, plain English, and technical writing.
 
 
-### Tone of Voice
+### Tone of voice
 
-Write like a human. Be professional, but conversational - we want our contributors and readers to feel comfortable joining in at any time.
+For a general audience, you should write like a human. Be professional, but conversational - we want our contributors and readers to feel comfortable joining in at any time. The exception to this is in writing [technical content](#technical-writing) for a technical audience.
 
 Be thankful to contributors and those who log issues. They're giving up their time to make our playbook better. Make sure they know we're grateful to them.
 
@@ -42,6 +43,16 @@ Follow Plain English guidelines to help safeguard the accessibility of your writ
 - Be informative
   - Consider your audience. General information may not look the same as information aimed at a technical audience.
   - Be as precise as you can usefully be - consider linking to high quality external resources where relevant.
+
+
+### Technical writing
+
+When expressing technical concepts, you'll need to use technical language. This may be complex, contain jargon, or seem formal. That's ok! Technical writing isn't for a general audience. Your priorities must be clarity, brevity, and accuracy, not the emotional impact of your words. 
+
+All of the advice in the [plain English](#plain-english) section applies. Additionally:
+
+- Expand acronyms the first time you use them, and limit their use thereafter e.g. "Avoid the use of TLAs (Three Letter Acronyms)".
+- When defining technical requirements, you may use the keywords defined in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) for those requirement levels, e.g. "MUST", "SHOULD", "OPTIONAL".
 
 
 ## Non-discriminatory language
