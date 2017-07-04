@@ -6,9 +6,7 @@
     * [Technical writing](#technical-writing)
 * [Non-discriminatory language](#non-discriminatory-language)
     * [Unacceptable language](#unacceptable-language)
-    * [Examples](#examples)
-        * [Genderless language](#genderless-language)
-        * [_Bro_ language](#bro-language)
+    * [Gendered language](#gendered-language)
     * [Disability and accessibility](#disability-and-accessibility)
 * [Frontend or front-end](#frontend-or-front-end)
 
@@ -74,41 +72,28 @@ Inappropriate or unacceptable language highlights perceived or actual difference
 Stereotyping means presuming a range of things about people based on one or two of their personal characteristics such as their appearance, apparent intelligence, personality or character, or their gender, sexual orientation, race, ethnicity, age, location, socioeconomic status or disability. We don't use language that reinforces stereotypes.
 
 
-### Examples
+### Gendered language
 
-#### Genderless language
+In most cases your writing will address the reader directly as "you", but if you do need to write about people in the abstract, avoid language that centers the male identity as the default. Try recasting your sentences as plural to make them more inclusive and concise. You can also use the [singular _they_](http://www.poynter.org/2015/the-washington-post-will-allow-singular-they/387542/) as per the Washington Post.
 
-* We prefer to recast sentences as plural to avoid both the sexist and antiquated universal default to male pronouns and the awkward use of _he_ or _she_, _him_ or _her_ and the like:
+Avoid "bro" language, even in verbal communication. 
 
 We _don't_ say this:
 > Each student must complete his or her homework.
 
-We say this:
-> All students must complete their homework
-
-When such a rewrite is impossible, we prefer to use the singular _they_. We also use _they_ as the genderless pronoun, in references to people who identify as neither male nor female.
-
-This mirrors the guidelines introduced by the Washington Post<sup>[\[3\]][post]</sup>.
-
-
-#### _Bro_ language
-
-* We avoid examples that use _bro_ and _manly_ language, even when using verbal communication.
-
-We _don't_ say this:
 > Server: Hello.
 >
 > Client: Hey _bro_, I have a message for you.
 
+> Hey guys!
+
 We say this:
+> All students must complete their homework
+
 > Server: Hello.
 >
 > Client: Hey server, I have a message for you.
 
-We _don't_ say this:
-> Hey guys!
-
-We say this:
 > Hey people!
 > Hey team!
 
