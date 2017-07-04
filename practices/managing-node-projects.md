@@ -1,10 +1,11 @@
-# Dependency management
+# Managing Node.js-based projects and dependencies
 
 * [Specifying versions of dependencies](#specifying-versions-of-dependencies)
     * [Run-time dependencies](#run-time-dependencies)
         * [Examples](#examples)
     * [Development dependencies](#development-dependencies)
         * [Examples](#examples-1)
+* [Publishing projects on NPM](#publising-projects-on-npm)
 * [Dependency management tools](#dependency-management-tools)
 
 The following guide describes how we manage package dependencies in [Springer Nature Node.js-based projects](https://github.com/springernature?utf8=%E2%9C%93&q=&type=public&language=javascript).
@@ -110,10 +111,27 @@ We _don't_ do this:
 ```
 
 
+## Publishing projects on NPM
+
+### Naming projects
+
+We have a springernature organisation on NPM: [https://www.npmjs.com/org/springernature](https://www.npmjs.com/org/springernature).
+
+You must use the `springernature` [scope](https://docs.npmjs.com/getting-started/scoped-packages) when publishing packages to NPM.
+
+```
+@springernature/project-name
+```
+
+This allows us to choose meanunful names for our projects without risking collisions with other existing open source projects.
+
+
 ## Dependency management tools
 
-These are some of the tools that we use to help us manage the dependencies of our projects and alert us of any vulnerabilities in them:
+[Snyk](https://snyk.io/) is a tool to find, fix and monitor known vulnerabilities in Node.js applications. It also supports Ruby, Java, and other languages and platforms.
 
-* [Node Security Platform](https://nodesecurity.io/)
-* [Snyk](https://snyk.io/)
-* [Bithound](https://www.bithound.io/)
+Snyk not only provides alerts when a new vulnerability is detected in one of the dependencies that we use, but also remediation options.
+
+[Using components with known vulnerabilities caused 24% of the top 50 breaches](https://snyk.io/blog/owasp-top-10-breaches/). Keeping dependencies up-to-date is therefore crucial to maintain our standards of security.
+
+Every node.js project must be added to the Springer Nature organisation in Snyk so it can be monitored for security vulnerabilities.
