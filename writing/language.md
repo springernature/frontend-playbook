@@ -8,7 +8,7 @@
     * [Unacceptable language](#unacceptable-language)
     * [Examples](#examples)
         * [Genderless language](#genderless-language)
-        * [_Bro_ language](#_bro_-language)
+        * [_Bro_ language](#bro_-language)
     * [Disability and accessibility](#disability-and-accessibility)
 * [Frontend or front-end](#frontend-or-front-end)
 
@@ -121,18 +121,18 @@ Use positive language that emphasises abilities rather than limitations. Conside
 
 We _don't_ say this:
 
-> The disabled.
-> Dyslexics.
-> Susan is a victim of blindness.
-> People suffering from deafness.
-> Users who cannot see a screen.
+> The disabled.  
+> Dyslexics.  
+> Susan is a victim of blindness.  
+> People suffering from deafness.  
+> Users who cannot see a screen.  
 
 We say this:
 
-> Disabled people.
-> Dyslexic people.
-> Susan is blind.
-> Deaf people.
+> Disabled people.  
+> Dyslexic people.  
+> Susan is blind.  
+> Deaf people.  
 > Screenreader users / blind users. [where relevant]
 
 The Special Interest Group on Accessible Computing (SIGACCESS) has published a [comprehensive guide to writing about disability](http://www.sigaccess.org/welcome-to-sigaccess/resources/accessible-writing-guide/) within the context of science and technology.
