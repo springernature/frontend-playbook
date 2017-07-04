@@ -94,7 +94,7 @@ We say this:
 >
 > Client: Hey server, I have a message for you.
 
-> Hey people!
+> Hey people!  
 > Hey team!
 
 
