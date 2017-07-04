@@ -8,7 +8,7 @@
     * [Unacceptable language](#unacceptable-language)
     * [Examples](#examples)
         * [Genderless language](#genderless-language)
-        * [_Bro_ language](#bro_-language)
+        * [_Bro_ language](#bro-language)
     * [Disability and accessibility](#disability-and-accessibility)
 * [Frontend or front-end](#frontend-or-front-end)
 
