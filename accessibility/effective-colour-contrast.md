@@ -1,13 +1,12 @@
 # Effective colour contrast
 
+This page contains three basic guidelines for making effective color choices that work for nearly everyone. It is a partial copy of a brochure on effective colour contrast by the ["Lighthouse International" charity](http://www.lighthouseguild.org/). The original brochure no longer exists on the Lighthouse International website, but a [full reproduction is available](http://www.cs.mtu.edu/~nilufer/classes/cs3611/interesting-stuff/designing-with-colors-1/color_contrast.htm).
+
 * [How does impaired vision affect color perception?](#how-does-impaired-vision-affect-color-perception)
 * [The three rules](#the-three-rules)
     * [Exaggerate lightness differences between foreground and background colors, and avoid using colors of similar lightness adjacent to one another, even if they differ in saturation or hue.](#exaggerate-lightness-differences-between-foreground-and-background-colors-and-avoid-using-colors-of-similar-lightness-adjacent-to-one-another-even-if-they-differ-in-saturation-or-hue)
     * [Choose dark colors with hues from the bottom half of this hue circle against light colors from the top half of the circle.](#choose-dark-colors-with-hues-from-the-bottom-half-of-this-hue-circle-against-light-colors-from-the-top-half-of-the-circle)
     * [Avoid contrasting hues from adjacent parts of the hue circle, especially if the colors do not contrast sharply in lightness.](#avoid-contrasting-hues-from-adjacent-parts-of-the-hue-circle-especially-if-the-colors-do-not-contrast-sharply-in-lightness)
-
-
-This page contains three basic guidelines for making effective color choices that work for nearly everyone. It is a partial copy of a brochure on effective colour contrast by the ["Lighthouse International" charity](http://www.lighthouseguild.org/). The original brochure no longer exists on the Lighthouse International website, but a [full reproduction is available](http://www.cs.mtu.edu/~nilufer/classes/cs3611/interesting-stuff/designing-with-colors-1/color_contrast.htm).
 
 ## How does impaired vision affect color perception?
 
