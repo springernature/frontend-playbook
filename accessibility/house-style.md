@@ -1,6 +1,6 @@
 # Accessibility style guide
 
-This document outlines the way we implement accessibility. It's a living styleguide – it will grow as our practices do.
+This document outlines the way we make our sites accessible. It's a living styleguide – it will grow as our practices do.
 
 - [General Principles](#general-principles)
   - [What is accessibility?](#what-is-accessibility)
@@ -9,8 +9,8 @@ This document outlines the way we implement accessibility. It's a living stylegu
 - [How we conform](#how-we-conform)
   - [Standards](#standards-we-conform-to)
   - [Tools and techniques](#tools-and-techniques)
-    - [Pa11y](#pa11y)
     - [Guidelines](#guidelines)
+    - [Pa11y](#pa11y)
     - [Assistive technology](#assistive-technology)
     - [Testing with real users](#testing-with-real-users)
     - [Resources](#resources)
@@ -95,7 +95,7 @@ You're encouraged to test your pages with assistive technology (AT). Many operat
 
 In OSX you can enable [VoiceOver](https://support.apple.com/kb/PH22549?locale=en_US) in System Preferences > Accessibility. You may also find navigating without an input device using [Dictation](https://support.apple.com/en-us/HT202584) instructive. Ensure your interfaces work with keyboard navigation. 
 
-*Caveat:* unless you're familiar with using AT devices, your experience won't be comparable to that of a habitual AT user. Beware of making inferences about what's "easier" for AT users based on your own preferences. 
+*Caveat:* unless you're familiar with using AT, your experience won't be comparable to that of a habitual AT user. Beware of making inferences about what's "easier" for AT users based on your own preferences. 
 
 
 #### Testing with real users
