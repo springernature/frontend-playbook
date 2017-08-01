@@ -5,7 +5,7 @@
 * [Performance](#performance)
 * [References](#references)
 
-These guidelines are based on ethical, [accessibility](../accessibility/accessibility.md) and performance recommendations and best practices.
+These guidelines are based on ethical, [accessibility](../accessibility/house-style.md) and performance recommendations and best practices.
 
 ## Ethical
 

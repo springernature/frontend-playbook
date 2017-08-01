@@ -36,9 +36,9 @@ See the [CSS](../css/house-style.md), [JavaScript](../javascript/house-style.md)
 
 ### Accessibility 
 
-We care a great deal about accessibility. We aim to comply with the [Web Content Accessibility Guidelines 1](https://www.w3.org/TR/WCAG10/) AA + the [WCAG Samurai Errata](http://www.wcagsamurai.org/erratas/introduction/). In doing so, we also achieve a high pass rate with [Web Content Accessibility Guidelines 2](https://www.w3.org/TR/WCAG20/) AA. All of our websites MUST comply with [US Section 508](https://www.section508.gov/) and [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents).
+We care a great deal about accessibility. We aim to comply with the [Web Content Accessibility Guidelines 1](https://www.w3.org/TR/WCAG10/) AA + the [WCAG Samurai Errata](http://www.wcagsamurai.org/erratas/introduction/). In doing so, we also achieve a high pass rate with [Web Content Accessibility Guidelines 2](https://www.w3.org/TR/WCAG20/) AA. All of our websites MUST comply with [US Section 508](https://www.section508.gov/) and [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). As of January 18th 2018, WCAG 2.0 AA will be incorporated into Section 508. 
 
-Read our [Accessibility guide](../accessibility/accessibility.md) and [accessibility checklist](../accessibility/accessibility-checklist.md) to understand how we meet these aims.
+Read our [Accessibility guide](../accessibility/house-style.md) to understand how we meet these aims.
 
 ### Progressive enhancement and browser support
 
