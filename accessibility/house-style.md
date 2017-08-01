@@ -62,7 +62,7 @@ We aim to comply with [WCAG 1](https://www.w3.org/TR/WCAG10/) AA and the [WCAG S
 
 Most Web sites that already conform to WCAG 1.0 do not require significant (or any) changes to conform to WCAG 2.0 (Source: [W3C WAI - How WCAG 2.0 Differs from WCAG 1.0](https://www.w3.org/WAI/WCAG20/from10/diff)). 
 
-As of January 18th 2018, WCAG 2.0 AA will be incorporated into Section 508 (see [Section 508 Refresh (Part 1)](https://www.paciellogroup.com/blog/2017/01/section-508-refresh-part-1/ by the Paciello Group). Many features that were compliant with Section 508 before 18th January 2018 requirements are _not_ compliant under WCAG 2.0. 
+As of January 18th 2018, WCAG 2.0 AA will be incorporated into Section 508 (see [Section 508 Refresh Part 1](https://www.paciellogroup.com/blog/2017/01/section-508-refresh-part-1/ by the Paciello Group). Many features that were compliant with Section 508 before 18th January 2018 requirements are _not_ compliant under WCAG 2.0. 
 
 
 ### Tools and techniques
