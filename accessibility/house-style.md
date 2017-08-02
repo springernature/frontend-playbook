@@ -11,6 +11,7 @@ This document outlines the way we make our sites accessible. It's a living style
   - [Tools and techniques](#tools-and-techniques)
     - [Guidelines](#guidelines)
     - [Pa11y](#pa11y)
+    - [Other accessibility testing tools](#other-accessibility-testing-tools)
     - [Assistive technology](#assistive-technology)
     - [Testing with real users](#testing-with-real-users)
     - [Resources](#resources)
