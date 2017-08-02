@@ -38,7 +38,7 @@ Accessibility supports social inclusion for people with disabilities as well as 
 ### Why do we care about accessibility?
 
 - *It's a legal requirement:* we're legally obliged to make our content accessible to users with diverse needs. All of our websites MUST comply with [US Section 508](https://www.section508.gov/) of the US Rehabilitation Act 1973, [EU Directive 2016/2102](http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016L2102) and the [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). 
-- *It makes financial sense:* around 20% of working age adults in the UK are estimated to have some kind of permanent disability (Source: [Scope UK](https://www.scope.org.uk/media/disability-facts-figures)). The Financial Times estimates that 26% of their users have a permanent disability (Source: [Laura Carvajal, JSConf](https://www.youtube.com/watch?v=H4FzW9oFObs). Also taking into account people who are [temporarily disabled](https://userway.org/blog/how-situational-disabilities-impact-us-all), failing to make our websites accessible can cause a significant reduction in real market share. 
+- *It makes financial sense:* around 20% of working age adults in the UK are estimated to have some kind of permanent disability (Source: [Scope UK](https://www.scope.org.uk/media/disability-facts-figures)). The Financial Times estimates that 26% of their users have a permanent disability (Source: [Laura Carvajal, JSConf](https://www.youtube.com/watch?v=H4FzW9oFObs)). Also taking into account people who are [temporarily disabled](https://userway.org/blog/how-situational-disabilities-impact-us-all), failing to make our websites accessible can cause a significant reduction in real market share. 
 - *It's a technical requirement:* catering for all users complements our [browser support policy](../practices/graded-browser-support.md) (we aim to support all browsers), and our use of [progressive enhancement](../practices/progressive-enhancement.md). 
 - *It's the right thing to do:* we have a duty to cater for all users regardless of ability. If we know that people can encounter difficulties accessing our content (which we do), and we know that we can do things to facilitate that access (which we do), then not making something accessible is knowingly contributing to the oppression of people with disabilities.
 
@@ -49,7 +49,7 @@ Accessible sites can be used by more people - including people with disabilities
 
 A Voluntary Product Accessibility Template (VPAT) is a document which evaluates how accessible a particular product is [according to the Section 508 Standards](https://www.section508.gov/content/sell/vpat). 
 
-A VPAT MUST be produced by you or your team for every product or service that we make commercially available in the United States. If something changes, e.g. accessibility is improved for a particular criteria, you MUST update the VPAT to reflect the change, if necessary. 
+A VPAT MUST be produced by you or your team for every product or service that we make commercially available in the United States. If something changes, e.g. accessibility is improved for a particular criteria, you MUST update the VPAT to reflect the change. 
 
 You may use [our VPAT template](https://github.com/springernature/vpat) when creating this for your own products. 
 
@@ -62,7 +62,7 @@ We aim to comply with [WCAG 1](https://www.w3.org/TR/WCAG10/) AA and the [WCAG S
 
 Most Web sites that already conform to WCAG 1.0 do not require significant (or any) changes to conform to WCAG 2.0 (Source: [W3C WAI - How WCAG 2.0 Differs from WCAG 1.0](https://www.w3.org/WAI/WCAG20/from10/diff)). 
 
-As of January 18th 2018, WCAG 2.0 AA will be incorporated into Section 508 (see [Section 508 Refresh Part 1](https://www.paciellogroup.com/blog/2017/01/section-508-refresh-part-1/) by the Paciello Group). Many features that were compliant with Section 508 requirements before 18th January 2018 are _not_ compliant under WCAG 2.0. 
+As of January 18th 2018, WCAG 2.0 AA will be incorporated into Section 508 (see [Section 508 Refresh Part 1](https://www.paciellogroup.com/blog/2017/01/section-508-refresh-part-1/) by the Paciello Group). 
 
 
 ### Tools and techniques
@@ -87,6 +87,16 @@ Mature projects using Pa11y for the first time MAY use the `threshold` flag to s
 Read [Automated accessibility testing with Travis CI](http://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/) to see how to integrate Pa11y with your build process. If you're not using Travis, adjust the setup for the software that you are using. 
 
 *Caveat:* it's possible to build a site that passes Pa11y's testing with flying colours, but is still completely inaccessible for real users. You MUST NOT rely on Pa11y as your sole safeguard for accessibility testing. 
+
+
+#### Other accessibility testing tools
+
+- Pa11y is based on HTMLCodesniffer by Squizlabs. They also have a [bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) for quick tests. 
+- Google's Accessibility Developer Tools are available from the [Chrome Web Store](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en).
+- WebAim's [WAVE toolbar](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for Chrome evaluates accessibility in place on the page.
+- Check colour contrast compliance with Jonathan Snook's [Colour Contrast Checker](https://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333).
+
+*Caveat:* None of these tools on their own will catch every error. Even by combining all of them, it's still possible to produce an inaccessible webpage. Terrill Thompson [compared several of the most popular tools](http://terrillthompson.com/blog/730) which should give you some idea of the scale of the problem. You MUST NOT rely on accessibility tools as your sole safeguard for accessibility testing.
 
 
 #### Assistive technology
