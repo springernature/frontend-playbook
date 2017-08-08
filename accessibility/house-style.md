@@ -97,7 +97,9 @@ Read [Automated accessibility testing with Travis CI](http://cruft.io/posts/auto
 - WebAim's [WAVE toolbar](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for Chrome evaluates accessibility in place on the page.
 - Check colour contrast compliance with Jonathan Snook's [Colour Contrast Checker](https://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333).
 
-*Caveat:* None of these tools on their own will catch every error. Even by combining all of them, it's still possible to produce an inaccessible webpage. Terrill Thompson [compared several of the most popular tools](http://terrillthompson.com/blog/730) which should give you some idea of the scale of the problem. You MUST NOT rely on accessibility tools as your sole safeguard for accessibility testing.
+*Caveat:* None of these tools on their own will catch every error. Even by combining all of them, it's still possible to produce an inaccessible webpage. Terrill Thompson [compared several of the most popular tools](http://terrillthompson.com/blog/730) which should give you some idea of the scale of the problem. The Government Digital Service also [conducted their own tool audit](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/). 
+
+You MUST NOT rely on accessibility tools as your sole safeguard for accessibility testing.
 
 
 #### Assistive technology
@@ -121,4 +123,3 @@ You can arrange your own user testing, but it's better to engage a third party l
 Udacity have published an [excellent free course on Web Accessibility](https://www.udacity.com/course/web-accessibility--ud891) with Google engineers Alice Boxhall and Rob Dodson. 
 
 The Financial Times have produced an [accessibility tip sheet](https://ft-interactive.github.io/accessibility/index.html).
-
