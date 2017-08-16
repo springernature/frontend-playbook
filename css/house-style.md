@@ -2,6 +2,8 @@
 
 This document aspires to outline the way we write CSS/SASS, and is based at the moment on the existing [Nature playbook (Private repo)](https://github.com/springernature/playbook). This is just a first pass, and is likely to be incomplete (and wrong) in places.  It's a living styleguide – it will grow and adapt as our practices do.
 
+We namespace our CSS as detailed in our [how we write CSS](how-we-write-css.md) guide. For the purposes of the examples here, we will use the `component` namespace.
+
 - [General Principles](#general-principles)
 - [Code Style](#code-style)
 - [Preprocessors](#preprocessors)
@@ -33,12 +35,12 @@ Avoid using HTML tags in CSS selectors. And always prefer using a class over HTM
 We _don't_ do this
 ```scss
 div {}
-div.modal {}
+div.c-modal {}
 ```
 
 We do this:
 ```scss
-.modal {}
+.c-modal {}
 ```
 
 Don't use [ids in selectors](http://csswizardry.com/2011/09/when-using-ids-can-be-a-pain-in-the-class/)
@@ -50,27 +52,27 @@ We _don't_ do this:
 
 We do this:
 ```scss
-.header {}
+.c-header {}
 ```
 
 Avoid using `margin-top`. Vertical margins [collapse](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing). Always prefer `padding-top` or `margin-bottom` on preceding elements
 
 We _don't_ do this:
 ```scss
-.list__item {
+.c-list__item {
     margin-top: 10px;
 }
 ```
 
 We do this:
 ```scss
-.list__item {
+.c-list__item {
     padding-top: 10px;
 }
 
 /* or */
 
-.list__item {
+.c-list__item {
     margin-bottom: 10px;
 }
 ```
@@ -79,7 +81,7 @@ Avoid shorthand properties, if you aren't setting all the values in the property
 
 We _don't_ do this:
 ```scss
-.modal {
+.c-modal {
     // overrides other values encapsulated by the shorthand property.
     // In this case, background-image and its associative properties are set to “none”
     background: $white;
@@ -89,7 +91,7 @@ We _don't_ do this:
 
 We do this:
 ```scss
-.modal {
+.c-modal {
     background-color: $white;
     border-width: 1px;
 }
@@ -154,7 +156,7 @@ table {
 
 **Non-js fallbacks/JS only styles**. We do this:
 ```scss
-.class {
+.c-class {
     .js & {
         display: none;
     }
@@ -166,7 +168,7 @@ table {
 
 **Inline html tags within other elements**. We do this:
 ```scss
-.class {
+.c-c-class {
     span {}
     em {}
     small {}
@@ -686,33 +688,33 @@ a { color: pink; }
 A quick note on single line CSS. We allow single line CSS when there is only one declaration, but we shouldn't always use it. We only ever use single line CSS when there are groups of multiple CSS classes with one declaration, for example spacing, to aid legibility. In this case we also do not require a space between classes. So we would use it in the following example:
 
 ```css
-.ma0 { margin: 0; }
-.ma1 { margin: 1px; }
-.ma2 { margin: 2px; }
-.ma4 { margin: 4px; }
-.ma6 { margin: 6px; }
-.ma10 { margin: 10px; }
-.ma15 { margin: 15px; }
-.ma20 { margin: 20px; }
-.ma30 { margin: 30px; }
-.ma40 { margin: 40px; }
-.ma50 { margin: 50px; }
-.ma70 { margin: 70px; }
+.c-ma0 { margin: 0; }
+.c-ma1 { margin: 1px; }
+.c-ma2 { margin: 2px; }
+.c-ma4 { margin: 4px; }
+.c-ma6 { margin: 6px; }
+.c-ma10 { margin: 10px; }
+.c-ma15 { margin: 15px; }
+.c-ma20 { margin: 20px; }
+.c-ma30 { margin: 30px; }
+.c-ma40 { margin: 40px; }
+.c-ma50 { margin: 50px; }
+.c-ma70 { margin: 70px; }
 ```
 
 But in the following example we would not use it:
 
 ```css
-.nowrap {
+.c-nowrap {
     white-space: nowrap;
 }
 
-.prewrap {
+.c-prewrap {
     word-wrap: break-word;
     white-space: pre-wrap;
 }
 
-.overflow-ellipsis {
+.c-overflow-ellipsis {
     text-overflow: ellipsis;
 }
 ```
