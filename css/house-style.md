@@ -2,8 +2,6 @@
 
 This document aspires to outline the way we write CSS/SASS, and is based at the moment on the existing [Nature playbook (Private repo)](https://github.com/springernature/playbook). This is just a first pass, and is likely to be incomplete (and wrong) in places.  It's a living styleguide – it will grow and adapt as our practices do.
 
-Projects should use [StyleLint](https://github.com/stylelint/stylelint) to enforce these rules. You can find _an example_ config file in the [config directory](config).
-
 - [General Principles](#general-principles)
 - [Code Style](#code-style)
 - [Preprocessors](#preprocessors)
@@ -26,12 +24,7 @@ Projects should use [StyleLint](https://github.com/stylelint/stylelint) to enfor
 
 ## General principles
 
-We write our CSS using design patterns that aim to maximise maintainability and reuse;
-
-- We make use of [OOCSS](oocss.md) to author CSS. Some teams make heavy use of utility classes, others less so.
-- [BEM](bem-css.md) naming conventions are used in some teams
-
-See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style.
+We write our CSS using design patterns that aim to maximise maintainability and reuse; See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style.
 
 ## Code style
 
@@ -104,7 +97,7 @@ We do this:
 
 Don't use `!important`. If you must, leave a comment, and prioritise resolving specificity issues before resorting to `!important`.
 
-## Preprocessorså
+## Preprocessors
 
 Our preferred CSS preprocessor is [SASS](http://sass-lang.com/) using the [SCSS syntax](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html).
 
@@ -187,6 +180,8 @@ These should be nested within the relevant parent using `@include`.
 One exception to these rules is targeting a BEM element from within a nested block rule. See the [BEM documentation][bem] for more information on BEM and nesting.
 
 ## The Rules
+
+Projects should use [StyleLint](https://github.com/stylelint/stylelint) to enforce these rules. You can find _an example_ config file in the [config directory](config).
 
 ### Indentation
 
