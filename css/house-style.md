@@ -168,7 +168,7 @@ table {
 
 **Inline html tags within other elements**. We do this:
 ```scss
-.c-c-class {
+.c-class {
     span {}
     em {}
     small {}
