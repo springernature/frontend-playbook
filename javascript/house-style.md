@@ -9,6 +9,7 @@ This document outlines the way we write JavaScript. It's a living styleguide –
   - [Performant Code](#performant-code)
 - [Code Style](#code-style)
   - [Linting](#linting)
+  - [Comments](#comments)
   - [Asynchronicity](#asynchronicity)
   - [Indentation](#indentation)
   - [White Space](#white-space)
@@ -216,6 +217,53 @@ A: XO supports many [popular environment global variables](http://eslint.org/doc
 Q: I transformed my code to adhere to XO, but now it is less readable.
 
 A: Code linting should help improve your overall code quality. If you now have less readable code, consider if there is a [code smell](https://en.wikipedia.org/wiki/Code_smell) that is conducive to breaking a lint rule, if so, you might need to refactor your code.
+
+### Comments
+
+Your JavaScript code should be self-documenting. Self-documenting code is easier to maintain, and simpler to read. Excessive comments can become out of sync with the usual code. Keep comments succinct & factual.
+
+Where necessary, adjust the structure of your code to make it self-documenting, for example:
+
+We do this:
+
+```js
+const isVisible = el.offsetWidth && el.offsetHeight;
+
+if (isVisible) {}
+```
+
+We don't do this:
+
+```js
+if (el.offsetWidth && el.offsetHeight) {}
+```
+
+For code which is not self-documenting (e.g. magic numbers), leave a comment to explain intent & reasoning:
+
+```js
+// 42 is the only value the server can handle
+fetch('https://example.com/?number=42')
+
+// We must set items to null as a workaround for this bug: github.com/.....
+window.items = null;
+```
+
+Do not explain code just because it uses new APIs, e.g.:
+
+We don't do this:
+
+```js
+// Call a callback function in the next animation loop
+requestAnimationFrame(() => {})
+```
+
+We don't do this:
+
+```js
+
+// Sets can filter out non-unique values for us
+const uniqueIDs = new Set([1, 2, 1, 2]);
+```
 
 ### Asynchronicity
 
