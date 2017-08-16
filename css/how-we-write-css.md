@@ -8,13 +8,15 @@ Any CSS that we write should conform to our [house style](house-style.md).
 
 ## Architecture
 
-The architecture is split into a series of **levels** with each level representing a folder that contains our SASS split out into different files. Where applicable content can be organised into sub folders.
+The architecture is split into a series of **levels** with each level representing a folder that contains our SASS split out into different files. Where applicable, content can be organised into sub-folders.
 
 We follow some of the principles of ITCSS - this means that the CSS is organised in specificity order and the SASS files should be included in the order denoted by this structure.
 
-The lower the level number the more generic the styles, the higher the number the more explicit. As the levels increase, so does the specificity. If a level is not needed, it can be excluded. At a project level we may need to add levels into the stack.
+The lower the level number the more generic the styles, the higher the number the more explicit. As the levels increase, so does the specificity. If a level is not needed, it can be excluded. At a product level we may need to add levels into the stack.
 
 ### Summary
+
+A summary of the different levels and their purpose:
 
 #### Settings
 Contains all **global** SASS variables for your project e.g. colors, fonts, media queries.
@@ -27,19 +29,6 @@ Contains all **global** SASS mixins, this includes mixin definitions used in the
 
 #### Base
 A Base rule is applied to an element using an element/type selector, a descendant selector, or a child selector, along with any pseudo-classes. Base styles are related to the basic styles of your product, like typography, reset and global elements like links. Use this level to include any (third-party) resets or normalization css.
-
-examples:
-```scss
-blockquote {}
-
-a {
-	&:hover {}
-}
-
-ul {
-	> li {}
-}
-```
 
 #### Components
 Components use classes to map to specific UI elements. They should exist as stand-alone UI components and **never** depend on other components.
@@ -68,7 +57,7 @@ It can be useful to use numbers at the start of your folder names so that the or
 
 ### Wider architecture
 
-The way that CSS is written, and particularly the use of **levels**, is designed to fit into a wider componentised architecture plan. We aim to create shared components that can be used across products and across brands. These components can contain one or more of CSS, Javascript, and templates.
+The way that CSS is written, and particularly the use of **levels**, is designed to fit into a wider componentised architecture. We aim to create shared components that can be used across products and across brands. These components can contain one or more of CSS, Javascript, and templates.
 
 We can think of this architecture as comprising of three distinct groups - company, brand, product. **Company** level components are small self-contained snippets that are applicable to _any_ product and can be customisable to work within their context. If we are talking about CSS then an example might be a set of utilities - `float: left` is the same no matter the brand or product. At the **brand** level we have collections of brand specific components - CSS, Javascript and templates. When talking about CSS, this might include a header component that is specific to a particular brand, and applicable to all products within this brand. Components at this level may have dependencies on company level components. At the most specific level we have **products**. These will contain product specific CSS, Javascript and templating, as well as dependencies at the brand and company levels.
 
@@ -76,7 +65,7 @@ Decisions on what components to use should made **at the product level**. An ind
 
 ## Rules
 
-We implement the following rules to define the content at each level:
+We implement the following rules within each level:
 
 #### 10 Settings
 * Contains _only_ variable definitions
@@ -85,7 +74,7 @@ We implement the following rules to define the content at each level:
 * Contains _only_ function definitions
 
 #### 30 Mixins
-* Can include _private_ functions and variables
+* Can include _private_ functions and variables (exist at this level)
 
 #### 40 Base
 * Should avoid type selectors where possible 
@@ -94,7 +83,7 @@ We implement the following rules to define the content at each level:
 
 #### 50 Components
 * Should avoid type selectors where possible
-* Can include _private_ functions and variables
+* Can include _private_ functions and variables (exist at this level)
 * Can include _private_ mixins (exist at _this_ level), not shared in the `30 Mixins` level
 * Can use global mixins
 
@@ -113,7 +102,6 @@ We implement the following rules to define the content at each level:
 * Should consist of a single class
 * MUST NOT include child elements, except pseudo-classes
 * Where there is more than one rule, an associated `@mixin` should be provided at the `30 Mixins` level
-* MUST NOT use global mixins (other than it's own)
 * MUST NOT include any cosmetic styling (color, border, background, etc)
 
 ## HTML class naming
@@ -122,9 +110,7 @@ We follow the following rules when writing class names:
 
 * All classnames are lowercase
 * All words are separated by a dash/hyphen
-* BEM naming conventions are followed
-
-You can read more about our [approach to writing BEM](bem-css.md).
+* BEM naming conventions are followed (read more about our [approach to writing BEM](bem-css.md))
 
 ### Namespaces
 
