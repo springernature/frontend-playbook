@@ -776,6 +776,143 @@ In-browser you should not add your `'use strict';` to the top of the file; inste
 Client-side JavaScript architecture
 -----------------------------------
 
+Write small, isolated & well tested JavaScript modules.
+
+### Module Structure
+
+The JavaScript in your application should consist of one or more entry points and "modules". For example, you might have a module which is only responsible for one of the following:
+
+- An autocomplete module.
+- A module which handles all analytics events.
+- A module which implements sticky header functionality.
+
+Your module should expose an `init` method which is consumed by the entry point of your application:
+
+```js
+// my-module-1.js
+
+import 'otherModule' from './some-other-module-you-need';
+
+function addEventListeners() {}
+
+function init() {
+   otherModule();
+   addEventListeners();
+}
+
+exports default { init };
+```
+
+Your modules are to be _consumed_ by your entry point:
+
+```js
+// main.js
+
+import module1 from './my-module-1.js';
+import module2 from './my-module-2.js';
+import module3 from './my-module-3.js';
+
+document.addEventListener('DOMContentLoaded', function(event) {
+  module1.init();
+  module2.init();
+  module3.init();
+});
+```
+
+This approach is:
+
+- Easy to read and intuitive.
+- Standards compliant (ES2015 module syntax - import and exports).
+- Adherent to clean code practices as the `main.js` file only becomes an orchestrator, and it is kept free of logic. It has one job, which is to invoke other smaller modules.
+- Useful for unit testing as the small isoloated modules are easy to test.
+
+### Configuration
+
+If you need to pass in configuration to a module, pass in an object:
+
+```js
+import module1 from './my-module-1.js';
+
+module1.init({
+  url: 'https://...'
+});
+```
+
+Your module code should handle configuration appropriately, and be resilient towards missing inputs:
+
+```js
+function module({url = 'https://...', animate = false}) {
+  console.log(url, animate)
+}
+
+exports default { init };
+```
+
+### Events
+
+Modules which are related to each other, and modules which are not, should communicate in different ways.
+
+#### Events for Related Modules
+
+Expose an API:
+
+```js
+// easings.js
+
+import 'easings' from './easings';
+
+function isValid(easing) {
+  // Logic here
+}
+
+function get(easing) {
+  // Logic here
+}
+
+exports default { get, isValid };
+```
+
+Then consume the API:
+
+```js
+// animations.js
+
+import 'easings' from './easings';
+
+function init({element, easing}) {
+  if (easings.isValid(easing)) {
+    element.animate(easings.get(easing))
+  } else {
+    element.animate()
+  }
+}
+
+exports default { init };
+```
+
+#### Events for Unrelated Modules
+
+Use a small Publish Subscribe implementation, like [PubSubJS](https://github.com/mroderick/PubSubJS):
+
+```js
+// analytics.js
+
+import 'PubSub' from 'pub-sub';
+
+function beaconToAnalytics(event) {}
+
+function init() {
+  PubSub.subscribe('event:navigation', beaconToAnalytics)
+}
+
+exports default { init };
+```
+
+### DOM Binding
+
+If you have a heavy JavaScript application and you can justify the performance penalty your users will pay for the download + execution of your script, then a JavaScript framework might make sense. Consider something small like [Preact](https://github.com/developit/preact). Using a JavaScript framework can handle DOM binding efficiently.
+
+For the majority of websites, especially those which may by viewed on low powered devices, you should minimise the JavaScript you send down the wire and implement DOM binding yourself. For simple use cases, manually cherry picking elements out of the DOM and reading/setting attributes on them is a reasonable approach.
 
 ### Directory structure
 
