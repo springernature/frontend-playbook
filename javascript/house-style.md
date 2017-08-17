@@ -24,6 +24,12 @@ This document outlines the way we write JavaScript. It's a living styleguide –
     - [Error handling](#error-handling)
   - [Strict mode](#strict-mode)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
+  - [Module Architecture](#module-architecture)
+    - [Configuration](#configuration)
+  - [Events](#events)
+    - [Events for Related Modules](#events-for-related-modules)
+    - [Events for Unrelated Modules](#events-for-unrelated-modules)
+  - [DOM Binding](#dom-binding)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
     - [Polyfills Directory](#polyfills-directory)
@@ -778,7 +784,7 @@ Client-side JavaScript architecture
 
 Write small, isolated & well tested JavaScript modules.
 
-### Module Structure
+### Module Architecture
 
 The JavaScript in your application should consist of one or more entry points and "modules". For example, you might have a module which is only responsible for one of the following:
 
@@ -826,7 +832,7 @@ This approach is:
 - Adherent to clean code practices as the `main.js` file only becomes an orchestrator, and it is kept free of logic. It has one job, which is to invoke other smaller modules.
 - Useful for unit testing as the small isoloated modules are easy to test.
 
-### Configuration
+#### Configuration
 
 If you need to pass in configuration to a module, pass in an object:
 
