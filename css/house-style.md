@@ -187,7 +187,7 @@ Projects should use [StyleLint](https://github.com/stylelint/stylelint) to enfor
 
 ### Indentation
 
-We indent our css using single tabs, not spaces. You can convert characters automatically in most editors, and you're advised to do this.
+We indent our CSS using single tabs, not spaces. You can convert characters automatically in most editors, and you're advised to do this.
 
 ### At Rules
 
@@ -685,21 +685,21 @@ a { color: pink; }
 
 ### Single line CSS
 
-A quick note on single line CSS. We allow single line CSS when there is only one declaration, but we shouldn't always use it. We only ever use single line CSS when there are groups of multiple CSS classes with one declaration, for example spacing, to aid legibility. In this case we also do not require a space between classes. So we would use it in the following example:
+A quick note on single line CSS. We allow single line CSS when there is only one declaration, but we shouldn't always use it. We only ever use single line CSS when there are groups of multiple CSS classes with one declaration, for example spacing, to aid legibility. In this case we also do not require a space between classes. So we would use it as in the following example:
 
 ```css
-.c-ma0 { margin: 0; }
-.c-ma1 { margin: 1px; }
-.c-ma2 { margin: 2px; }
-.c-ma4 { margin: 4px; }
-.c-ma6 { margin: 6px; }
-.c-ma10 { margin: 10px; }
-.c-ma15 { margin: 15px; }
-.c-ma20 { margin: 20px; }
-.c-ma30 { margin: 30px; }
-.c-ma40 { margin: 40px; }
-.c-ma50 { margin: 50px; }
-.c-ma70 { margin: 70px; }
+.c-margin-0 { margin: 0; }
+.c-margin-1 { margin: 1px; }
+.c-margin-2 { margin: 2px; }
+.c-margin-4 { margin: 4px; }
+.c-margin-6 { margin: 6px; }
+.c-margin-10 { margin: 10px; }
+.c-margin-15 { margin: 15px; }
+.c-margin-20 { margin: 20px; }
+.c-margin-30 { margin: 30px; }
+.c-margin-40 { margin: 40px; }
+.c-margin-50 { margin: 50px; }
+.c-margin-70 { margin: 70px; }
 ```
 
 But in the following example we would not use it:

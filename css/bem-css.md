@@ -61,7 +61,7 @@ We do this:
 
 ## BEM best practices
 
-Don't `@extend` block modifiers with the block base, always require that the base/unmodified class is present
+Don’t extend the block element with a modifier, without the unmodified block element also being present.
 
 We _don't_ do this:
 ```html
@@ -108,14 +108,14 @@ Targeting a BEM element/modifier from within a nested block rule (see above) sho
 
 ```scss
 .c-block {
-    &--modifier { // compiles to .block--modifier
+    &--modifier { // compiles to .c-block--modifier
         text-align: center;
     }
 }
 .c-block__element {
     color: red;
 
-    &--modifier { // compiles to .block__element--modifier
+    &--modifier { // compiles to .c-block__element--modifier
         color: blue;
     }
 }

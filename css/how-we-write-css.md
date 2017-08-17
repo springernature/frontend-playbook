@@ -77,7 +77,7 @@ We implement the following rules within each level:
 * Can include _private_ functions and variables (exist at this level)
 
 #### 40 Base
-* Should avoid type selectors where possible 
+* Should avoid class selectors where possible 
 * MUST NOT include _private_ functions and variables (exist at _this_ level)
 * MUST NOT include _private_ mixins (exist at _this_ level)
 
