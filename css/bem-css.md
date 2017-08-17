@@ -51,7 +51,7 @@ We do this:
 .c-button
 ```
 
-**Element**: styles that only apply to children of a block. Elements can also be blocks themselves. Class name is a concatenation of the block name, two underscores and the element name. Examples:
+**Element**: styles that only apply to children of a block. Class name is a concatenation of the block name, two underscores and the element name. Examples:
 - `.c-alert-box__close`
 - `.c-button__icon`
 
@@ -81,7 +81,7 @@ We _don't_ do this:
 ```
 
 Choose your modifiers wisely. These two rules have very different meaning:
-```scss
+```css
 .c-block--modifier .c-block__element { color: red; }
 .c-block__element--modifier { color: red; }
 ```
