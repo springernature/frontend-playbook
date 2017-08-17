@@ -183,7 +183,10 @@ One exception to these rules is targeting a BEM element from within a nested blo
 
 ## The Rules
 
-Projects should use [StyleLint](https://github.com/stylelint/stylelint) to enforce these rules. You can find _an example_ config file in the [config directory](config).
+Projects must lint their stylesheets with the appropriate tool:
+
+- If you author in __CSS__, use [StyleLint](https://github.com/stylelint/stylelint) to enforce these rules. You can find _an example_ config file in the [config directory](config).
+- If you author in __Sass__, use [Sass Lint](https://github.com/sasstools/sass-lint) to enforce these rules. You can find _an example_ `.sass-lint.yml` config file in the [config directory](config).
 
 ### Indentation
 
