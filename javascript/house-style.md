@@ -865,8 +865,6 @@ Expose an API:
 ```js
 // easings.js
 
-import 'easings' from './easings';
-
 function isValid(easing) {
   // Logic here
 }
