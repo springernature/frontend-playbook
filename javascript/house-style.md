@@ -24,9 +24,16 @@ This document outlines the way we write JavaScript. It's a living styleguide –
     - [Error handling](#error-handling)
   - [Strict mode](#strict-mode)
 - [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
+  - [Module Architecture](#module-architecture)
+    - [Configuration](#configuration)
+    - [Imports](#imports)
+  - [Events](#events)
+    - [Events for Related Modules](#events-for-related-modules)
+    - [Events for Unrelated Modules](#events-for-unrelated-modules)
+  - [DOM Binding](#dom-binding)
+  - [Polyfills](#polyfills)
   - [Directory Structure](#directory-structure)
     - [Components Directory](#components-directory)
-    - [Polyfills Directory](#polyfills-directory)
     - [Vendor Directory](#vendor-directory)
     - [Utils Directory](#utils-directory)
 
@@ -776,19 +783,185 @@ In-browser you should not add your `'use strict';` to the top of the file; inste
 Client-side JavaScript architecture
 -----------------------------------
 
+Write small, isolated & well tested JavaScript modules.
+
+### Module Architecture
+
+The JavaScript in your application should consist of one or more entry points and "modules". For example, you might have a module which is only responsible for one of the following:
+
+- An autocomplete module.
+- A module which handles all analytics events.
+- A module which implements sticky header functionality.
+
+Your module should expose an `init` method which is consumed by the entry point of your application:
+
+```js
+// my-module-1.js
+
+import otherModule from './some-other-module-you-need';
+
+function addEventListeners() {}
+
+function init() {
+   otherModule();
+   addEventListeners();
+}
+
+exports default { init };
+```
+
+Your modules are to be _consumed_ by your entry point:
+
+```js
+// main.js
+
+import module1 from './my-module-1.js';
+import module2 from './my-module-2.js';
+import module3 from './my-module-3.js';
+
+document.addEventListener('DOMContentLoaded', function(event) {
+  module1.init();
+  module2.init();
+  module3.init();
+});
+```
+
+This approach is:
+
+- Easy to read and intuitive.
+- Standards compliant (ES2015 module syntax - import and exports).
+- Adherent to clean code practices as the `main.js` file only becomes an orchestrator, and it is kept free of logic. It has one job, which is to invoke other smaller modules.
+- Useful for unit testing as the small isoloated modules are easy to test.
+
+#### Configuration
+
+If you need to pass in configuration to a module, pass in an object:
+
+```js
+import module1 from './my-module-1.js';
+
+module1.init({
+  url: 'https://...'
+});
+```
+
+Your module code should handle configuration appropriately, and be resilient towards missing inputs:
+
+```js
+function module({url = 'https://...', animate = false}) {
+  console.log(url, animate)
+}
+
+exports default { init };
+```
+
+#### Imports
+
+You must export items which allows the consumer to import __only what is needed__. This helps prepare you for bundling techniques like tree-shaking.
+
+We do this:
+
+```js
+import { flatten, merge } from 'lodash';
+```
+
+We don't do this:
+
+```js
+import _ from 'lodash';
+
+const flatten = _.flatten;
+const merge = _.merge;
+```
+
+### Events
+
+Modules which are related to each other, and modules which are not, should communicate in different ways.
+
+#### Events for Related Modules
+
+Expose an API:
+
+```js
+// easings.js
+
+function isValid(easing) {
+  // Logic here
+}
+
+function get(easing) {
+  // Logic here
+}
+
+exports default { get, isValid };
+```
+
+Then consume the API:
+
+```js
+// animations.js
+
+import easings from './easings';
+
+function init({element, easing}) {
+  if (easings.isValid(easing)) {
+    element.animate(easings.get(easing))
+  } else {
+    element.animate()
+  }
+}
+
+exports default { init };
+```
+
+#### Events for Unrelated Modules
+
+Use a small Publish Subscribe implementation, like [PubSubJS](https://github.com/mroderick/PubSubJS):
+
+```js
+// analytics.js
+
+import PubSub from 'pub-sub';
+
+function beaconToAnalytics(event) {}
+
+function init() {
+  PubSub.subscribe('event:navigation', beaconToAnalytics)
+}
+
+exports default { init };
+```
+
+### DOM Binding
+
+If you have a heavy JavaScript application and you can justify the performance penalty your users will pay for the download + execution of your script, then a JavaScript framework might make sense. Consider something small like [Preact](https://github.com/developit/preact). Using a JavaScript framework can handle DOM binding efficiently.
+
+For the majority of websites, especially those which may by viewed on low powered devices, you should minimise the JavaScript you send down the wire and implement DOM binding yourself. For simple use cases, manually cherry picking elements out of the DOM and reading/setting attributes on them is a reasonable approach.
+
+#### Polyfills
+
+If you utilise a Polyfill, the JavaScript must meet these conditions:
+
+  - It must _not_ override native browser functionality
+  - It must match native browser functionality exactly (where possible)
+  - It can be either third-party, or written in-house
+  - Must be installed via NPM
+
+An example polyfill might add `requestAnimationFrame` for any grade-A browsers which don't support it. Consider adding third-party code, like polyfills, to a separate `vendor.js` which is not part of your `main.js` entry point.
 
 ### Directory structure
 
-Client-Side JavaScript normally lives in `resources/js` in our projects, unless the back-end you're using dictates a different directory.  We should try to stick as closely to this as possible though.
+Client-Side JavaScript normally lives in `resources/js` in our projects, unless the back-end you're using dictates a different directory. Stick to this as closely as possible.
 
-Within this directory, you should always use the following structure. We'll go into more detail as to what these directories are for shortly:
+Within this directory, you should use the following structure.
 
 ```
 <root>
   ├── components
-  ├── polyfills
   ├── utils
   └── vendor
+  └── main.js
+  └── vendor.js (optional)
 ```
 
 File names in these directories should be lower-case, with words separated by dashes.
@@ -799,25 +972,12 @@ The `components` directory is used to house JavaScript that couples to the DOM. 
 
   - It must bind to the DOM
   - It must add behaviour to and/or manipulates the DOM
-  - It must expose itself on the global `SN.Component` object
 
-An example component might be an auto-complete, tab group, or loading spinner.
-
-#### Polyfills directory
-
-The `polyfills` directory contains JavaScript that polyfills browser behaviour for older clients. JavaScript in this directory must meet these conditions:
-
-  - It must _not_ override native browser functionality
-  - It must match native browser functionality exactly (where possible)
-  - It can be either third-party, or written in-house
-
-An example polyfill might add `requestAnimationFrame` for any grade-A browsers which don't support it.
+An example component might be an autocomplete, tab group, or loading spinner.
 
 #### Vendor directory
 
-The `vendor` directory is where third-party code lives. It's also where we add code which is written in-house but managed and versioned elsewhere, e.g. as an open source project.
-
-If the code fits the requirements outlined by the `polyfills` directory, it should go there instead of in the `vendor` directory.
+The `vendor` directory is where third-party code lives. You should only commit third party code to version control when you are unable to use a version from the NPM registry. Alternatively, code written in-house but managed and versioned elsewhere can live here, e.g. as an open source project.
 
 JavaScript in this directory must meet these conditions:
 
@@ -826,8 +986,6 @@ JavaScript in this directory must meet these conditions:
   - It must include a link to the original source code in a comment
   - It must _not_ be modified within the project
 
-An example vendor library might be jQuery, which would live in a file named `jquery-2.1.4.js`.
-
 #### Utils directory
 
 The `utils` directory is used to house JavaScript written for the project that doesn't fit into the rules for the `components` directory. Utilities still have some conditions of their own:
@@ -835,7 +993,6 @@ The `utils` directory is used to house JavaScript written for the project that d
   - It must _not_ bind to the DOM
   - It must _not_ add behaviour to and/or manipulate the DOM
   - It must _not_ be destructive – arguments passed in cannot be modified
-  - It must expose itself on the global `SN.util` object
   - It can expose functions and/or prototypal classes
 
 An example utility might be a function to make a string title-case.
