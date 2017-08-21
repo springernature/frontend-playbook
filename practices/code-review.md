@@ -19,7 +19,7 @@ We manage code review via **pull requests**, which we communicate in the `#front
     * facilitates people moving to other teams as they are more familiar with the codebase.
 * Ensure that any changes to front-end code conforms to the same standards and guidelines.
 * Fosters discussion and collaboration.
-* Having someone who has not worked on the ticket look at it is a good way to spot logic errors and bugs.
+* Having someone who has not worked on the ticket look at it is a good way to spot architectural inconsistencies (required or not). This is especially noticeable when review is performed by people from different teams.
 * Prepares people for work on open source software projects.
 
 ## How
