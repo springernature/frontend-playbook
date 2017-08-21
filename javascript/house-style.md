@@ -3,6 +3,7 @@
 This document outlines the way we write JavaScript. It's a living styleguide – it will grow as our practices do.
 
 - [General Principles](#general-principles)
+  - [Progressively Enhance](#progressively-enhance)
   - [Write code for humans](#code-for-humans)
   - [Write modules over monoliths](#modules-over-monoliths)
   - [KISS](#keep-it-simple)
@@ -38,6 +39,10 @@ This document outlines the way we write JavaScript. It's a living styleguide –
     - [Utils Directory](#utils-directory)
 
 ## General principles
+
+### Progressively Enhance
+
+JavaScript solutions must exist purely as a [progressive enhancement](../practices/progressive-enhancement.md) of existing functionality.
 
 ### Code for humans
 
@@ -934,9 +939,15 @@ exports default { init };
 
 ### DOM Binding
 
-If you have a heavy JavaScript application and you can justify the performance penalty your users will pay for the download + execution of your script, then a JavaScript framework might make sense. Consider something small like [Preact](https://github.com/developit/preact). Using a JavaScript framework can handle DOM binding efficiently.
+If your project makes heavy use of DOM-manipulating JavaScript (and you can justify the performance penalty your users will pay for the download + execution of your script) then a JavaScript framework might make sense. Consider something small like [Preact](https://github.com/developit/preact). Using a JavaScript framework can handle DOM binding efficiently.
+
+Bear in mind all solutions must form part of a robust, [progressively-enhanced]((../practices/progressive-enhancement.md)) solution.
 
 For the majority of websites, especially those which may by viewed on low powered devices, you should minimise the JavaScript you send down the wire and implement DOM binding yourself. For simple use cases, manually cherry picking elements out of the DOM and reading/setting attributes on them is a reasonable approach.
+
+#### Client-side templating
+
+Client-side templating is typically to be avoided - e.g. in the example of an AJAX search response, render the HTML server-side and return an HTML fragment. It is much more efficient to use `innerHTML` than template a JSON response.
 
 #### Polyfills
 
