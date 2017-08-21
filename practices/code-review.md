@@ -28,10 +28,10 @@ Here's the general protocol that we use:
 
 1. Create a local branch based off master.
 1. Branches should adhere to the following best practices to ensure they align with [Continous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html) & [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html), as much as is reasonable;
-	* atomic i.e. one unit of work that cannot be sensibly broken up into smaller parts. (Therefore they should contain their own tests.)
-	* as limited in scope as possible. Massive PR's are hard to review, more painful to merge, and once merged & a bug is traced back to that commit, harder to debug.
 	* as short lived as possible.
-	* releasable independently. 
+	* atomic i.e. one unit of work that cannot be sensibly subdivided. (Therefore they should contain their own tests.)
+	* as limited in scope as possible. Massive PR's are hard to review, more painful to merge, and once merged & a bug is traced back to that commit, harder to debug.
+	* therefore they should be releasable independently. 
 1. When you are getting close to being ready for PR, `git rebase master` -- especially if other devs are working on the same code.  Avoid rebase hell by;
 	* _talking to your team_ to divide work across files sensibly & co-ordinate merges if required.
 	* pull origin master & rebase often.
@@ -43,13 +43,13 @@ Here's the general protocol that we use:
 1. A colleague (or multiple colleagues) other than the author reviews the pull request, and they make comments and ask questions directly on lines of code in the GitHub web interface.
 1. When satisfied, the reviewer(s) will comment on the pull request with a +1 or some other simple message indicating that the code is ready to merge.
 1. Give your code one last visual check in github.
-1. Double-check the commit message, and any commit message detail, then "Squash & Merge" commits via github. We do not want lots of "work in progress" commits cluttering master. One unit of work, one commit, makes debugging much easier.
+1. Double-check the commit message, and any commit message detail, then "Squash & Merge" commits via github. We do not want lots of "work in progress" commits cluttering the commit history on master. One unit of work, one commit, makes debugging much easier.
 1. Delete your remote branch.
 1. Delete your local branch.
 
 ## What to look out for
 
-* Are there syntactic inconsistencies that the linter did not catch?
+* Are there syntactic inconsistencies the linter did not catch?
 * Overly complex code.
 * PRs which are non-atomic and should be split into separate PRs, e.g. a new UI feature combined with an unrelated configuration change.
 * Code which could be split up into reusable modules.
