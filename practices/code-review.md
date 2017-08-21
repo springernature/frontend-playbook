@@ -44,7 +44,7 @@ Here's the general process that we use:
 1. A colleague (or multiple colleagues) other than the author reviews the pull request, and they make comments and ask questions directly on lines of code in the GitHub web interface.
 1. When satisfied, the reviewer(s) will comment on the pull request with a +1 or some other simple message indicating that the code is ready to merge.
 1. Give your code one last visual check in github.
-1. Double-check the commit message, and any commit message detail, then "Squash & Merge" commits via github. We do not want lots of "work in progress" commits cluttering the commit history on master. One unit of work, one commit, makes debugging much easier.
+1. Double-check the commit message, and any commit message detail, then "Squash & Merge" commits via github. We do not want lots of "work in progress" commits cluttering the commit history on master. _One unit of work, one commit._
 1. Delete your remote branch.
 1. Delete your local branch.
 
