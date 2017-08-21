@@ -29,9 +29,10 @@ Here's the general protocol that we use:
 1. Create a local branch based off master.
 1. Branches should adhere to the following best practices to ensure they align with [Continous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html) & [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html), as much as is reasonable;
 	* as short lived as possible.
-	* atomic i.e. one unit of work that cannot be sensibly subdivided. (Therefore they should contain their own tests.)
-	* as limited in scope as possible. Massive PR's are hard to review, more painful to merge, and once merged & a bug is traced back to that commit, harder to debug.
-	* therefore they should be releasable independently. 
+	* atomic i.e. one unit of work that cannot be sensibly subdivided.
+		* Therefore they should contain their own tests.
+		* Therefore they should be releasable independently. 
+	* as limited in scope as possible. Massive PR's are hard to review and more painful to merge. Also, once merged & a bug is traced back to that commit, they are harder to debug.
 1. When you are getting close to being ready for PR, `git rebase master` -- especially if other devs are working on the same code.  Avoid rebase hell by;
 	* _talking to your team_ to divide work across files sensibly & co-ordinate merges if required.
 	* pull origin master & rebase often.
