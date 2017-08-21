@@ -3,6 +3,7 @@
 This document outlines the way we write JavaScript. It's a living styleguide – it will grow as our practices do.
 
 - [General Principles](#general-principles)
+  - [Progressively Enhance](#progressively-enhance)
   - [Write code for humans](#code-for-humans)
   - [Write modules over monoliths](#modules-over-monoliths)
   - [KISS](#keep-it-simple)
