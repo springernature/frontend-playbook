@@ -4,34 +4,40 @@
 * [How](#how)
 * [What to look out for](#what-to-look-out-for)
 
-
 Code Review, or Peer Code Review, is the act of having your code checked by others for mistakes, errors, and omissions (e.g. missing tests). Like pair-programming (which we also support), it accelerates and streamlines software development.
 
-We manage code review via **pull requests**, which we communicate in the `#frontend-pr` Slack channel, and manage in GitHub. All discussion happens in GitHub comments. We leave it to the requester to merge their own changes when they are ready, because sometimes the requester might not want their work merged immediately.
+We manage code review via **pull requests**, which we communicate in the `#frontend-pr` Slack channel, and manage in GitHub. Discussion should happen in the GitHub comments, or the `#frontend` Slack channel, but not the `#frontend-pr` channel.
+
+We leave it to the requester to merge their own changes when they are ready, because sometimes the requester might not want their work merged immediately.
+
 
 ## Why
 
-* PR reviews are cross-team.
+1. PR reviews are cross-team;
+    * allows everyone to learn from their colleagues.
     * allows greater visibility of other teams work.
-    * allows for standardisation of methodology across teams.
-    * allows more junior members of staff to learn best practices quicker.
-    * allows EVERYONE to learn from their colleagues.
+    * FED works encompasses many areas of expertise, and no-one is expert in more than 2 or 3 areas.
     * facilitates people moving to other teams as they are more familiar with the codebase.
-* Ensure that any changes to front-end code conforms to the same standards and guidelines.
-* Fosters discussion and collaboration.
-* Having someone who has not worked on the ticket look at it is a good way to spot architectural inconsistencies (required or not). This is especially noticeable when review is performed by people from different teams.
-* Prepares people for work on open source software projects.
+    * helps prevent knowledge silos.
+    * helps identify areas where code re-use may be of benefit ("should that be a component?").
+    * if the code requires so much domain-specifc knowledge it cannot be understood by other teams, maybe that code needs refactoring?
+    * generally aids onboarding and training.
+1. Ensure that any changes to front-end code conforms to the same standards and guidelines.
+1. Fosters discussion and collaboration.
+1. Fosters caution and code quality over temporary hacks.
+1. Prepares people for work on open source software projects.
+
 
 ## How
 
 Here's the general process that we use:
 
 1. Create a local branch based off master.
-1. Branches should adhere to the following best practices to ensure they align with [Continous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html) & [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) as much as is reasonable;
+1. Branches should adhere to the following best practices to ensure they align with [Continous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html) & [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) as much as is reasonable (given the constraints of team structure and the discipline);
 	* Branches should be as short lived as possible.
 	* Branches should be _atomic_ i.e. one unit of work that cannot be sensibly subdivided.
 		* Therefore they should contain their own tests.
-		* Therefore they should be releasable independently. 
+		* Therefore they should be releasable independently.
 	* Branches should be as limited in scope as possible. Large PR's are hard to review and can be painful to merge. Also, once merged & a bug is traced back to that commit, they are much harder to debug.
 1. When you are getting close to being ready for PR, `git rebase master` -- especially if other devs are working on the same code.  Avoid rebase hell by;
 	* _talking to your team_ to divide work across files sensibly & co-ordinate merges if required.
