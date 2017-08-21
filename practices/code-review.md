@@ -26,17 +26,23 @@ We manage code review via **pull requests**, which we communicate in the `#front
 
 Here's the general protocol that we use:
 
-1. Create a local short-lived feature branch based off master.
-* When feature is complete and tests pass, stage the changes and commit them.
-* Write a [good commit message](../git/git.md#commit-messages).
-* Submit a [pull request](https://help.github.com/articles/using-pull-requests/).
-* Ask for a code review in Slack.
-* A colleague (or multiple colleagues) other than the author reviews the pull request, and they make comments and ask questions directly on lines of code in the GitHub web interface.
-* When satisfied, the reviewer(s) will comment on the pull request with a +1 or some other simple message indicating that the code is ready to merge.
-* Rebase interactively. Squash commits like "Fix whitespace", or micro-commits that serve no purpose without the following commits into one or a small number of valuable commit(s). Edit commit messages to reveal intent.
-* View a list of new commits. View changed files. Merge branch into master.
-* Delete your remote feature branch.
-* Delete your local feature branch.
+1. Create a local branch based off master.
+1. Branches should be;
+	* atomic i.e. one unit of work that cannot be sensibly broken up into smaller parts. (Therefore they should contain their own tests.)
+	* as limited in scope as possible.
+	* as short lived as possible.
+	* releasable independently. 
+1. When you are getting close to beign ready for PR, rebase it over master
+1. When the unit of work is complete and tests pass, stage the changes and commit them.
+1. Write a [good commit message](../git/git.md#commit-messages).
+1. Submit a [pull request](https://help.github.com/articles/using-pull-requests/).
+1. Ask for a code review in Slack.
+1. A colleague (or multiple colleagues) other than the author reviews the pull request, and they make comments and ask questions directly on lines of code in the GitHub web interface.
+1. When satisfied, the reviewer(s) will comment on the pull request with a +1 or some other simple message indicating that the code is ready to merge.
+1. Rebase interactively. Squash commits like "Fix whitespace", or micro-commits that serve no purpose without the following commits into one or a small number of valuable commit(s). Edit commit messages to reveal intent.
+1. View a list of new commits. View changed files. Merge branch into master.
+1. Delete your remote branch.
+1. Delete your local branch.
 
 ## What to look out for
 
