@@ -2,19 +2,19 @@
 
 This document outlines the way we write JavaScript. It's a living styleguide – it will grow as our practices do.
 
-- [General Principles](#general-principles)
-  - [Progressively Enhance](#progressively-enhance)
+- [General principles](#general-principles)
+  - [Progressively enhance](#progressively-enhance)
   - [Write code for humans](#code-for-humans)
   - [Write modules over monoliths](#modules-over-monoliths)
   - [KISS](#keep-it-simple)
-  - [Performant Code](#performant-code)
-- [Code Style](#code-style)
+  - [Performant code](#performant-code)
+- [Code style](#code-style)
   - [Linting](#linting)
   - [Comments](#comments)
   - [Asynchronicity](#asynchronicity)
   - [Indentation](#indentation)
-  - [White Space](#white-space)
-  - [Semi-Colons](#semi-colons)
+  - [White space](#white-space)
+  - [Semi-colons](#semi-colons)
   - [Variables](#variables)
   - [Functions](#functions)
   - [Classes](#classes)
@@ -24,23 +24,23 @@ This document outlines the way we write JavaScript. It's a living styleguide –
     - [Loops](#loops)
     - [Error handling](#error-handling)
   - [Strict mode](#strict-mode)
-- [Client-Side JavaScript Architecture](#client-side-javascript-architecture)
-  - [Module Architecture](#module-architecture)
+- [Client-side JavaScript architecture](#client-side-javascript-architecture)
+  - [Module architecture](#module-architecture)
     - [Configuration](#configuration)
     - [Imports](#imports)
   - [Events](#events)
-    - [Events for Related Modules](#events-for-related-modules)
-    - [Events for Unrelated Modules](#events-for-unrelated-modules)
-  - [DOM Binding](#dom-binding)
+    - [Events for related modules](#events-for-related-modules)
+    - [Events for unrelated modules](#events-for-unrelated-modules)
+  - [DOM binding](#dom-binding)
   - [Polyfills](#polyfills)
-  - [Directory Structure](#directory-structure)
-    - [Components Directory](#components-directory)
-    - [Vendor Directory](#vendor-directory)
-    - [Utils Directory](#utils-directory)
+  - [Directory structure](#directory-structure)
+    - [Components directory](#components-directory)
+    - [Vendor directory](#vendor-directory)
+    - [Utils directory](#utils-directory)
 
 ## General principles
 
-### Progressively Enhance
+### Progressively enhance
 
 JavaScript solutions must exist purely as a [progressive enhancement](../practices/progressive-enhancement.md) of existing functionality.
 
@@ -128,7 +128,7 @@ If you're writing a small library with a single simple purpose, and you really _
 
 Understanding [when to optimise](https://en.wikipedia.org/wiki/Program_optimization#When_to_optimize) is a valuable skill in software development.
 
-Code Style
+Code style
 ---------
 
 ### Linting
@@ -883,7 +883,7 @@ const merge = _.merge;
 
 Modules which are related to each other, and modules which are not, should communicate in different ways.
 
-#### Events for Related Modules
+#### Events for related modules
 
 Expose an API:
 
@@ -919,7 +919,7 @@ function init({element, easing}) {
 exports default { init };
 ```
 
-#### Events for Unrelated Modules
+#### Events for unrelated modules
 
 Use a small Publish Subscribe implementation, like [PubSubJS](https://github.com/mroderick/PubSubJS):
 
@@ -937,7 +937,7 @@ function init() {
 exports default { init };
 ```
 
-### DOM Binding
+### DOM binding
 
 If your project makes heavy use of DOM-manipulating JavaScript (and you can justify the performance penalty your users will pay for the download + execution of your script) then a JavaScript framework might make sense. Consider something small like [Preact](https://github.com/developit/preact). Using a JavaScript framework can handle DOM binding efficiently.
 
