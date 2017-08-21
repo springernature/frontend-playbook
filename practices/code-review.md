@@ -27,27 +27,31 @@ We manage code review via **pull requests**, which we communicate in the `#front
 Here's the general protocol that we use:
 
 1. Create a local branch based off master.
-1. Branches should be;
+1. Branches should adhere to the following best practices to ensure they align with [Continous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html) as much as possible;
 	* atomic i.e. one unit of work that cannot be sensibly broken up into smaller parts. (Therefore they should contain their own tests.)
-	* as limited in scope as possible.
+	* as limited in scope as possible. Massive PR's are hard to review, more painful to merge, and once merged & a bug is traced back to that commit, harder to debug.
 	* as short lived as possible.
 	* releasable independently. 
-1. When you are getting close to beign ready for PR, rebase it over master
+1. When you are getting close to being ready for PR, `git rebase master` -- especially if other devs are working on the same code.  Avoid rebase hell by;
+	* _talking to your team_ to divide work across files sensibly & co-ordinate merges if required.
+	* pull origin master & rebase often.
+	* make sure branches are short-lived! (Did we mention that branches should be short-lived?)
 1. When the unit of work is complete and tests pass, stage the changes and commit them.
 1. Write a [good commit message](../git/git.md#commit-messages).
 1. Submit a [pull request](https://help.github.com/articles/using-pull-requests/).
 1. Ask for a code review in Slack.
 1. A colleague (or multiple colleagues) other than the author reviews the pull request, and they make comments and ask questions directly on lines of code in the GitHub web interface.
 1. When satisfied, the reviewer(s) will comment on the pull request with a +1 or some other simple message indicating that the code is ready to merge.
-1. Rebase interactively. Squash commits like "Fix whitespace", or micro-commits that serve no purpose without the following commits into one or a small number of valuable commit(s). Edit commit messages to reveal intent.
-1. View a list of new commits. View changed files. Merge branch into master.
+1. Give your code one last visual check in github.
+1. Double-check the commit message, and any commit message detail, then "Squash & Merge" commits via github. We do not want lots of "work in progress" commits cluttering master. One unit of work, one commit, makes debugging much easier.
 1. Delete your remote branch.
 1. Delete your local branch.
 
 ## What to look out for
 
-* Are there syntactic inconsistencies within the code? Suggest using a linter to scan for such problems automatically.
+* Are there syntactic inconsistencies that the linter did not catch?
 * Overly complex code.
+* PRs which are non-atomic and should be split into separate PRs, e.g. a new UI feature combined with an unrelated configuration change.
 * Code which could be split up into reusable modules.
 * Non-performant code. Suggest testing with [WebPageTest](https://www.webpagetest.org/) and/or other tools.
 * Inaccessible code. Suggest testing with [pa11y](https://github.com/pa11y) and/or other tools.
