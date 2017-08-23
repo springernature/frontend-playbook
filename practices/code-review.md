@@ -4,44 +4,62 @@
 * [How](#how)
 * [What to look out for](#what-to-look-out-for)
 
-
 Code Review, or Peer Code Review, is the act of having your code checked by others for mistakes, errors, and omissions (e.g. missing tests). Like pair-programming (which we also support), it accelerates and streamlines software development.
 
-We manage code review via **pull requests**, which we communicate in the `#frontend-pr` Slack channel, and manage in GitHub. All discussion happens in GitHub comments. We leave it to the requester to merge their own changes when they are ready, because sometimes the requester might not want their work merged immediately.
+We manage code review via **pull requests**, which we communicate in the `#frontend-pr` Slack channel, and manage in GitHub. Discussion should happen in the GitHub comments, not Slack.
+
+We leave it to the requester to merge their own changes when they are ready, because sometimes the requester might not want their work merged immediately.
+
 
 ## Why
 
-* PR reviews are cross-team.
+1. PR reviews are cross-team;
+    * allows everyone to learn from their colleagues.
     * allows greater visibility of other teams work.
-    * allows for standardisation of methodology across teams.
-    * allows more junior members of staff to learn best practices quicker.
-    * allows EVERYONE to learn from their colleagues.
+    * FED works encompasses many areas of expertise, and no-one is expert in more than 2 or 3 areas.
     * facilitates people moving to other teams as they are more familiar with the codebase.
-* Ensure that any changes to front-end code conforms to the same standards and guidelines.
-* Fosters discussion and collaboration.
-* Having someone who has not worked on the ticket look at it is a good way to spot architectural inconsistencies (required or not). This is especially noticeable when review is performed by people from different teams.
-* Prepares people for work on open source software projects.
+    * helps prevent knowledge silos.
+    * helps identify areas where code re-use may be of benefit ("should that be a component?").
+    * if the code requires so much domain-specifc knowledge it cannot be understood by other teams, maybe that code needs refactoring?
+    * generally aids onboarding and training.
+1. Ensure that any changes to front-end code conforms to the same standards and guidelines.
+1. Fosters discussion and collaboration.
+1. Fosters caution and code quality over temporary hacks.
+1. Prepares people for work on open source software projects.
+
 
 ## How
 
-Here's the general protocol that we use:
+Here's the general process that we use:
 
-1. Create a local short-lived feature branch based off master.
-* When feature is complete and tests pass, stage the changes and commit them.
-* Write a [good commit message](../git/git.md#commit-messages).
-* Submit a [pull request](https://help.github.com/articles/using-pull-requests/).
-* Ask for a code review in Slack.
-* A colleague (or multiple colleagues) other than the author reviews the pull request, and they make comments and ask questions directly on lines of code in the GitHub web interface.
-* When satisfied, the reviewer(s) will comment on the pull request with a +1 or some other simple message indicating that the code is ready to merge.
-* Rebase interactively. Squash commits like "Fix whitespace", or micro-commits that serve no purpose without the following commits into one or a small number of valuable commit(s). Edit commit messages to reveal intent.
-* View a list of new commits. View changed files. Merge branch into master.
-* Delete your remote feature branch.
-* Delete your local feature branch.
+1. Create a local branch based off master.
+1. Branches should adhere to the following best practices to ensure they align with [Continous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html) & [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) as much as is reasonable (given the constraints of team structure and the discipline);
+	* Branches should be as short lived as possible.
+	* Branches should be _atomic_ i.e. one unit of work that cannot be sensibly subdivided.
+		* Therefore they should contain their own tests.
+		* Therefore they should be releasable independently.
+	* Branches should be as limited in scope as possible. Large PR's are hard to review and can be painful to merge. Also, once merged & a bug is traced back to that commit, they are much harder to debug.
+1. When you are getting close to being ready for PR, `git rebase master` or merge -- especially if other devs are working on the same code.  Avoid merge pain by;
+	* _talking to your team_ to divide work across files sensibly & co-ordinate merges if required.
+	* pull origin master & rebase or merge often.
+	* make sure branches are short-lived! (Did we mention that branches should be short-lived?)
+1. When the unit of work is complete and tests pass, stage the changes and commit them.
+1. Write a [good commit message](../git/git.md#commit-messages).
+1. Submit a [pull request](https://help.github.com/articles/using-pull-requests/).
+1. Ask for a code review in Slack.
+1. A colleague (or multiple colleagues) other than the author reviews the pull request, and they make comments and ask questions directly on lines of code in the GitHub web interface.
+1. When satisfied, the reviewer(s) will approve the pull request indicating that the code is ready to merge.
+1. Give your code one last visual check in github.
+1. Double-check the commit message -- and any commit message detail -- then "Squash & Merge" commits via github. We do not want lots of "work in progress" commits cluttering the commit history on master. _One unit of work, one commit._
+1. Delete your remote branch.
+1. Delete your local branch.
+
 
 ## What to look out for
 
-* Are there syntactic inconsistencies within the code? Suggest using a linter to scan for such problems automatically.
+* Are there syntactic inconsistencies the linter did not catch?
 * Overly complex code.
+* PRs which are non-atomic and should be split into separate PRs, e.g. a new UI feature combined with an unrelated configuration change.
 * Code which could be split up into reusable modules.
 * Non-performant code. Suggest testing with [WebPageTest](https://www.webpagetest.org/) and/or other tools.
 * Inaccessible code. Suggest testing with [pa11y](https://github.com/pa11y) and/or other tools.
