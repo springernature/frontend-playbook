@@ -6,7 +6,7 @@
 
 Code Review, or Peer Code Review, is the act of having your code checked by others for mistakes, errors, and omissions (e.g. missing tests). Like pair-programming (which we also support), it accelerates and streamlines software development.
 
-We manage code review via **pull requests**, which we communicate in the `#frontend-pr` Slack channel, and manage in GitHub. Discussion should happen in the GitHub comments, or the `#frontend` Slack channel, but not the `#frontend-pr` channel.
+We manage code review via **pull requests**, which we communicate in the `#frontend-pr` Slack channel, and manage in GitHub. Discussion should happen in the GitHub comments, not Slack.
 
 We leave it to the requester to merge their own changes when they are ready, because sometimes the requester might not want their work merged immediately.
 
@@ -39,20 +39,21 @@ Here's the general process that we use:
 		* Therefore they should contain their own tests.
 		* Therefore they should be releasable independently.
 	* Branches should be as limited in scope as possible. Large PR's are hard to review and can be painful to merge. Also, once merged & a bug is traced back to that commit, they are much harder to debug.
-1. When you are getting close to being ready for PR, `git rebase master` -- especially if other devs are working on the same code.  Avoid rebase hell by;
+1. When you are getting close to being ready for PR, `git rebase master` or merge -- especially if other devs are working on the same code.  Avoid merge pain by;
 	* _talking to your team_ to divide work across files sensibly & co-ordinate merges if required.
-	* pull origin master & rebase often.
+	* pull origin master & rebase or merge often.
 	* make sure branches are short-lived! (Did we mention that branches should be short-lived?)
 1. When the unit of work is complete and tests pass, stage the changes and commit them.
 1. Write a [good commit message](../git/git.md#commit-messages).
 1. Submit a [pull request](https://help.github.com/articles/using-pull-requests/).
 1. Ask for a code review in Slack.
 1. A colleague (or multiple colleagues) other than the author reviews the pull request, and they make comments and ask questions directly on lines of code in the GitHub web interface.
-1. When satisfied, the reviewer(s) will comment on the pull request with a +1 or some other simple message indicating that the code is ready to merge.
+1. When satisfied, the reviewer(s) will approve the pull request indicating that the code is ready to merge.
 1. Give your code one last visual check in github.
-1. Double-check the commit message, and any commit message detail, then "Squash & Merge" commits via github. We do not want lots of "work in progress" commits cluttering the commit history on master. _One unit of work, one commit._
+1. Double-check the commit message -- and any commit message detail -- then "Squash & Merge" commits via github. We do not want lots of "work in progress" commits cluttering the commit history on master. _One unit of work, one commit._
 1. Delete your remote branch.
 1. Delete your local branch.
+
 
 ## What to look out for
 
