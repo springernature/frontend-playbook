@@ -7,7 +7,7 @@
         * [Examples](#examples-1)
 * [Publishing projects on NPM](#publising-projects-on-npm)
 * [Dependency management tools](#dependency-management-tools)
-* [Handling dependencies from third parties](#third-party-modules)
+* [Handling dependencies from third parties](#handling-dependencies-from-third-parties)
 
 The following guide describes how we manage package dependencies in [Springer Nature Node.js-based projects](https://github.com/springernature?utf8=%E2%9C%93&q=&type=public&language=javascript).
 
