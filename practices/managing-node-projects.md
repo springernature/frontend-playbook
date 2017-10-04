@@ -139,7 +139,7 @@ Every node.js project must be added to the Springer Nature organisation in Snyk 
 
 ## Handling dependencies from third parties
 
-A question that often comes up, should we commit the contents of `node_modules` directory or any selected module. The answer on balance is that we don't recommend it. 
+A question that often comes up, should we commit the contents of the `node_modules` directory or any selected module. The answer on balance is that we don't recommend it. 
 
 Wherever possible we suggest instead:
 
