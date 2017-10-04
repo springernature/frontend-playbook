@@ -139,7 +139,7 @@ Every node.js project must be added to the Springer Nature organisation in Snyk 
 
 ## Handling dependencies from third parties
 
-A question that comes up from time-to-time is, should we commit the contents of the `node_modules` directory or any selected module into version control. On the whole we don't recommend this practice, as you should be able to install & deploy apps and their external dependencies reliably. Also some modules may be compiled differently on each host platform.
+A question that comes up from time-to-time is, "should we commit the contents of the `node_modules` directory or any selected module into version control?" On the whole we don't recommend this practice, as you should be able to install & deploy apps and their external dependencies reliably. Also some modules may be compiled differently on each host platform.
 
 Wherever possible we suggest instead:
 
