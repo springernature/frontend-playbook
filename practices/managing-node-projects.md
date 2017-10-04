@@ -7,6 +7,7 @@
         * [Examples](#examples-1)
 * [Publishing projects on NPM](#publising-projects-on-npm)
 * [Dependency management tools](#dependency-management-tools)
+* [Handling dependencies from third parties](#third-party-modules)
 
 The following guide describes how we manage package dependencies in [Springer Nature Node.js-based projects](https://github.com/springernature?utf8=%E2%9C%93&q=&type=public&language=javascript).
 
@@ -135,3 +136,21 @@ Snyk not only provides alerts when a new vulnerability is detected in one of the
 [Using components with known vulnerabilities caused 24% of the top 50 breaches](https://snyk.io/blog/owasp-top-10-breaches/). Keeping dependencies up-to-date is therefore crucial to maintain our standards of security.
 
 Every node.js project must be added to the Springer Nature organisation in Snyk so it can be monitored for security vulnerabilities.
+
+## Handling dependencies from third parties
+
+A question that often comes up, should we commit the contents of `node_modules` directory or any selected module. The answer on balance is that we don't recommend it. 
+
+Wherever possible we suggest instead:
+
+i). For you to create a `package.json` file if not added already, where you can specify package names and appropriate version numbers.
+
+ii). For instances where you might need a specific package version or dependency, you can add in `package-lock` or `shrink-wrap` file. For instance in cases like
+- Our app requires dependency A which requires dependency B which requires dependency C which requires dependency D. There’s a vulnerability in package D, an updated is released. Using a package lock file will *prevent* the update from been used on a re-deploy, so our app will still be vulnerable, which is bad.
+- Our app requires dependency A which requires dependency B which requires dependency C which requires dependency D. There’s a minor bump in dependency D that actually breaks things. Using a package lock file will *prevent* the app from breaking after a re-deploy, which is good.
+
+iii). If you want to prevent npm from opting for a package in a lock file, create a `.npmrc file` with following contents
+
+```
+package-lock=false
+```
