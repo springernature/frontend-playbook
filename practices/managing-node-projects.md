@@ -149,7 +149,7 @@ ii). For instances where you might need a specific package version or dependency
 - Our app requires dependency A which requires dependency B which requires dependency C which requires dependency D. There’s a vulnerability in package D, an update has been released. Using a package lock file will *prevent* the update from being used on a re-deploy, so our app will still be vulnerable, which is bad.
 - Our app requires dependency A which requires dependency B which requires dependency C which requires dependency D. There’s a minor bump in dependency D that actually breaks things. Using a package lock file will *prevent* the app from breaking after a re-deploy, which is good.
 
-iii). If you want to prevent npm from opting for a package in a lock file, create a `.npmrc file` with following contents
+iii). If you want to prevent NPM from opting for a package in a lock file, create a `.npmrc` file with following contents
 
 ```
 package-lock=false
