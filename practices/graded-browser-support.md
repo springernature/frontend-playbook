@@ -28,7 +28,7 @@ Our browser support in summary:
 
 ### Notes
 
-- We have no no explicit Grade-C support for Edge.
+- We have no explicit Grade-C support for Edge.
 - We have no Grade-X support for IE, as we officially only support IE11, with anything below that being Grade-C. However, due to browser technical limitations we can only detect IE10+, so IE10 is, for now, included in our CTM media query. 
 
 ## How we implement graded browser support
