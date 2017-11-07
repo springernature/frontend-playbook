@@ -41,5 +41,5 @@ What _might_ be a worry is if your version looked like 2.1.45 - did you really r
 ## Find out more:
 
 * [Canonical source of info](http://semver.org/)
-* [How we version and release our open-source software](https://github.com/springernature/shunter/blob/master/docs/developer-guide.md#versioning)
+* [How we version and release our open-source software](../practices/open-source-support.md)
 * [What is Semantic Versioning (SemVer)?](https://abdulapopoola.com/2015/10/26/what-is-semver/)
