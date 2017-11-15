@@ -35,6 +35,10 @@ From a financial standpoint, a major benefit of Web accessibility is the potenti
 
 Accessible sites can be used by more people - including people with disabilities, people using mobile devices, older people, people with low literacy, people who are not fluent in the language of the site, people with low bandwidth connections to the Internet, people with older technologies, and new and infrequent web users.
 
+![Microsoft illustration of how designing for permanent disabilities helps many people facing temporary or situational disability](github.com/springernature/frontend/accessibility/images/microsoft-accessibility.jpg)
+
+(image &copy; Microsoft)
+
 
 ## What standards we conform to
 
