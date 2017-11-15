@@ -1,7 +1,5 @@
 # Accessibility style guide
 
-This document outlines the way we make our sites accessible. It's a living styleguide – it will grow as our practices do.
-
 - [General Principles](#general-principles)
   - [What is accessibility?](#what-is-accessibility)
   - [Why do we care about accessibility?](#why-do-we-care-about-accessibility)
@@ -38,7 +36,7 @@ Accessibility supports social inclusion for people with disabilities as well as 
 
 ### Why do we care about accessibility?
 
-- *It's a legal requirement:* we're legally obliged to make our content accessible to users with diverse needs. All of our websites MUST comply with [US Section 508](https://www.section508.gov/) of the US Rehabilitation Act 1973, [EU Directive 2016/2102](http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016L2102) and the [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). 
+- *It's a legal requirement:* we're legally obliged to make our content accessible to users with diverse needs. All of our websites MUST comply with [US Section 508](https://www.section508.gov/) of the US Rehabilitation Act 1973, [EU Directive 2016/2102](http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016L2102) and the [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). From January 18th 2018, compliance with Section 508 requires us to comply with WCAG 2.0 AA.   
 - *It makes financial sense:* around 20% of working age adults in the UK are estimated to have some kind of permanent disability (Source: [Scope UK](https://www.scope.org.uk/media/disability-facts-figures)). The Financial Times estimates that 26% of their users have a permanent disability (Source: [Laura Carvajal, JSConf](https://www.youtube.com/watch?v=H4FzW9oFObs)). Also taking into account people who are [temporarily disabled](https://userway.org/blog/how-situational-disabilities-impact-us-all), failing to make our websites accessible can cause a significant reduction in real market share. 
 - *It's a technical requirement:* catering for all users complements our [browser support policy](../practices/graded-browser-support.md) (we aim to support all browsers), and our use of [progressive enhancement](../practices/progressive-enhancement.md). 
 - *It's the right thing to do:* we have a duty to cater for all users regardless of ability. If we know that people can encounter difficulties accessing our content (which we do), and we know that we can do things to facilitate that access (which we do), then not making something accessible is knowingly contributing to the oppression of people with disabilities.
@@ -48,22 +46,20 @@ Accessible sites can be used by more people - including people with disabilities
 
 ## VPATs
 
-A Voluntary Product Accessibility Template (VPAT) is a document which evaluates how accessible a particular product is [according to the Section 508 Standards](https://www.section508.gov/content/sell/vpat). 
+A Voluntary Product Accessibility Template (VPAT) is a document that explains how accessible a particular product is [according to the Section 508 Standards](https://www.section508.gov/content/sell/vpat). Our customers in the United States use our VPATs to show that they comply with U.S. accessibility law. 
 
-A VPAT MUST be produced by you or your team for every product or service that we make commercially available in the United States. If something changes, e.g. accessibility is improved for a particular criteria, you MUST update the VPAT to reflect the change. 
+A VPAT MUST be produced by you or your team for every product or service that we make commercially available in the United States. If something changes, e.g. accessibility is improved for a particular criteria, you MUST update the VPAT to reflect the change. You MUST NOT regress accessibility to below the level detailed in the VPAT.
 
-You may use [our VPAT template](https://github.com/springernature/vpat) when creating this for your own products. 
+You may use [our VPAT template](https://github.com/springernature/vpat) when evaluating your own products. 
 
 
 ## How we conform
 
 ### Standards we conform to
 
-We aim to comply with [WCAG 1](https://www.w3.org/TR/WCAG10/) AA and the [WCAG Samurai Errata](http://www.wcagsamurai.org/erratas/introduction/). This gives us a high pass rate with [Web Content Accessibility Guidelines 2](https://www.w3.org/TR/WCAG20/) AA. 
+Our target standards are [WCAG 2.0](https://www.w3.org/TR/WCAG20/) level AA.
 
-Most Web sites that already conform to WCAG 1.0 do not require significant (or any) changes to conform to WCAG 2.0 (Source: [W3C WAI - How WCAG 2.0 Differs from WCAG 1.0](https://www.w3.org/WAI/WCAG20/from10/diff)). 
-
-As of January 18th 2018, WCAG 2.0 AA will be incorporated into Section 508 (see [Section 508 Refresh Part 1](https://www.paciellogroup.com/blog/2017/01/section-508-refresh-part-1/) by the Paciello Group). 
+As of January 18th 2018, WCAG 2.0 AA will be incorporated by reference into Section 508 (see [Section 508 Refresh Part 1](https://www.paciellogroup.com/blog/2017/01/section-508-refresh-part-1/) by the Paciello Group). This means that in order to comply with Section 508, your products MUST also comply with WCAG 2.0 to level AA. See the Access Board's Executive Summary, Summary of Key Provisions section 2, [_Broad Application of Web Content Accessibility Guidelines 2.0_](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/i-executive-summary) for further detail.
 
 
 ### Tools and techniques
@@ -71,6 +67,10 @@ As of January 18th 2018, WCAG 2.0 AA will be incorporated into Section 508 (see 
 #### Guidelines
 
 You are expected to be aware of the Web Content Accessibility Guidelines and to adhere to their recommendations. You are also expected to understand the foundational four principles of accessibility (Perceivable, Operable, Understandable, Robust) and to be able to apply them in your work. Be alert to the possibility of regressions that cannot be detected by software.
+
+When implementing WCAG 2.0, we aim to comply with [WCAG 1](https://www.w3.org/TR/WCAG10/) AA and the [WCAG Samurai Errata](http://www.wcagsamurai.org/erratas/introduction/). This gives us a high pass rate with WCAG 2.0 AA. 
+
+Most Web sites that already conform to WCAG 1.0 do not require significant (or any) changes to conform to WCAG 2.0 (Source: [W3C WAI - How WCAG 2.0 Differs from WCAG 1.0](https://www.w3.org/WAI/WCAG20/from10/diff)). 
 
 The companion document [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html) explains what each of the success criterion in WCAG 2.0 actually means. You might also find the [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/) useful when building features. 
 
@@ -123,3 +123,9 @@ You can arrange your own user testing, but it's better to engage a third party l
 Udacity have published an [excellent free course on Web Accessibility](https://www.udacity.com/course/web-accessibility--ud891) with Google engineers Alice Boxhall and Rob Dodson. 
 
 The Financial Times have produced an [accessibility tip sheet](https://ft-interactive.github.io/accessibility/index.html).
+
+The Government Digital Service frequently publishes excellent resources. Some highlights are:
+
+* [We're making accessibility clearer and easier](https://gds.blog.gov.uk/2017/10/23/were-making-accessibility-clearer-and-easier/)
+* [Making your service accessible: an introduction](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction)
+
