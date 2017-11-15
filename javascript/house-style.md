@@ -939,6 +939,33 @@ exports default { init };
 
 ### DOM binding
 
+When it comes time to attach your [JavaScript module](#module-architecture) to a specific DOM element (or collection of elements), we favour the use of descriptive `data-component` attributes in the markup rather than using specific class names or ids.
+
+We do this:
+
+```html
+<nav class="c-popout-nav c-popout-nav--dark" data-component="popout">
+  <button class="c-popout-nav__close" data-component="popout-close">Close</button>
+  (etc.)
+</nav>
+```
+
+We don't do this:
+
+```html
+<nav class="c-popout-nav c-popout-nav--dark" data-popout>...</nav>
+
+<nav class="js-popout c-popout-nav c-popout-nav--dark">...</nav>
+
+<nav id="popout" class="c-popout-nav c-popout-nav--dark">...</nav>
+```
+
+As demonstrated above, we use `data-component` attributes to label the "main" element that is being bound by the JavaScript, and also any additional elements used by the module which can't otherwise be unabiguously selected.  In instaces where child elements can be inferred without using additional attributes &mdash; for example a module which is expected to contain just a single input &mdash; then it may be acceptable to use other selectors such as type selectors, however care should be taken.
+
+The selector(s) based on these data-attributes may be defined as a default selector within the JavaScript module, which is able to be overridden in the `init` call.  Alternatively for simpler cases you may choose to keep the selector outside of the module itself, and instead initialise the module with a collection of elements.
+
+#### Complex 2-way binding
+
 If your project makes heavy use of DOM-manipulating JavaScript (and you can justify the performance penalty your users will pay for the download + execution of your script) then a JavaScript framework might make sense. Consider something small like [Preact](https://github.com/developit/preact). Using a JavaScript framework can handle DOM binding efficiently.
 
 Bear in mind all solutions must form part of a robust, [progressively-enhanced]((../practices/progressive-enhancement.md)) solution.
