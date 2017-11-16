@@ -960,7 +960,7 @@ We don't do this:
 <nav id="popout" class="c-popout-nav c-popout-nav--dark">...</nav>
 ```
 
-As demonstrated above, we use `data-component` attributes to label the "main" element that is being bound by the JavaScript, and also any additional elements used by the module which can't otherwise be unabiguously selected.  In instaces where child elements can be inferred without using additional attributes &mdash; for example a module which is expected to contain just a single input &mdash; then it may be acceptable to use other selectors such as type selectors, however care should be taken.
+As demonstrated above, we use `data-component` attributes to label any elements that are being bound by the JavaScript.  In instances where other related elements can be inferred without using additional data attributes &mdash; for example a module which is expected to contain just a single input &mdash; then it may be acceptable to use other selectors such as type selectors, however care should be taken.
 
 Initialising a module can then be achieved simply by passing in one of more elements that match these selectors;
 
