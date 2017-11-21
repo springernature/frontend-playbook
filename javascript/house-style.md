@@ -1015,7 +1015,7 @@ If you utilise a Polyfill, the JavaScript must meet these conditions:
   - It can be either third-party, or written in-house
   - Must be installed via NPM (or dynamically via [polyfill.io](https://polyfill.io/v2/docs/), at your discretion).
 
-Note that `polyfill.io` adds one additional blocking HTTP request, and if loading asynchronously one must be careful to manage loading order of scripts.  For these reasons it is preferred to bundle polyfills with your main application code.
+Note that `polyfill.io` adds one additional blocking HTTP request, and if loading asynchronously one must be careful to manage the loading order of scripts.  So please consider the performance impact of using `polyfill.io` versus the maintenance overhead of bundling polyfills with your main application code.
 
 If your project is JS-heavy you may wish to consider adding third-party code like polyfills, to a separate `vendor.js` bundle which is not part of your `main.js` entry point — the reasoning being the `vendor.js` bundle will change less frequently and is more likely to be cached by the client. If your visitors are unlikely to have primed caches, one bundle would probably be the better option.
 
