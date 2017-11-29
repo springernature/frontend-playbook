@@ -4,19 +4,31 @@ This document outlines the way we write JavaScript. It's a living styleguide –
 
 - [General principles](#general-principles)
   - [Progressively enhance](#progressively-enhance)
-  - [Write code for humans](#code-for-humans)
-  - [Write modules over monoliths](#modules-over-monoliths)
-  - [KISS](#keep-it-simple)
+  - [Code for humans](#code-for-humans)
+  - [Modules over monoliths](#modules-over-monoliths)
+  - [Keep it simple](#keep-it-simple)
   - [Performant code](#performant-code)
 - [Code style](#code-style)
   - [Linting](#linting)
+    - [Automatically fixing code](#automatically-fixing-code)
+    - [Disabling rules](#disabling-rules)
+    - [Questions and answers](#questions-and-answers)
   - [Comments](#comments)
   - [Asynchronicity](#asynchronicity)
+    - [Things to consider](#things-to-consider)
+    - [Tips](#tips)
+      - [Awaiting multiple promises](#awaiting-multiple-promises)
+      - [Multiple awaits in a one-liner](#multiple-awaits-in-a-one-liner)
+      - [Arrow function sytax with await](#arrow-function-sytax-with-await)
+      - [Fallback to promises](#fallback-to-promises)
+    - [Further reading](#further-reading)
   - [Indentation](#indentation)
   - [White space](#white-space)
   - [Semi-colons](#semi-colons)
   - [Variables](#variables)
   - [Functions](#functions)
+    - [Pure functions](#pure-functions)
+    - [Arguments](#arguments)
   - [Classes](#classes)
   - [Operators](#operators)
   - [Blocks](#blocks)
@@ -32,11 +44,15 @@ This document outlines the way we write JavaScript. It's a living styleguide –
     - [Events for related modules](#events-for-related-modules)
     - [Events for unrelated modules](#events-for-unrelated-modules)
   - [DOM binding](#dom-binding)
-  - [Polyfills](#polyfills)
+    - [Test hook attributes](#test-hook-attributes)
+    - [Complex 2-way binding](#complex-2-way-binding)
+    - [Client-side templating](#client-side-templating)
+    - [Polyfills](#polyfills)
   - [Directory structure](#directory-structure)
     - [Components directory](#components-directory)
     - [Vendor directory](#vendor-directory)
     - [Utils directory](#utils-directory)
+
 
 ## General principles
 
@@ -319,7 +335,7 @@ await ajax(url);
 console.log('Two ajax requests have completed')
 ```
 
-#### Things to consider:
+#### Things to consider
 
 * `async/await` has limited [browser support](http://caniuse.com/#feat=async-functions), you might need to use a [transpiler](https://babeljs.io/docs/plugins/transform-async-to-generator/) to gain cross-browser support.
 * You might ship a larger JavaScript payload to your users by converting an `async` function. Profile your website to evaluate if this is worth it.
@@ -790,7 +806,7 @@ Client-side JavaScript architecture
 
 Write small, isolated & well tested JavaScript modules.
 
-### Module Architecture
+### Module architecture
 
 The JavaScript in your application should consist of one or more entry points and "modules". For example, you might have a module which is only responsible for one of the following:
 
@@ -960,7 +976,7 @@ We don't do this:
 <nav id="popout" class="c-popout-nav c-popout-nav--dark">...</nav>
 ```
 
-As demonstrated above, we use `data-component` attributes to label any elements that are being bound by the JavaScript.  In instances where other related elements can be inferred without using additional data attributes &mdash; for example a module which is expected to contain just a single input &mdash; then it may be acceptable to use other selectors such as type selectors, however care should be taken.
+As demonstrated above, we use `data-component` attributes to label any elements that are being bound by the JavaScript.  In instances where other related elements can be inferred without using additional data attributes &mdash; for example a module which is expected to contain just a single input &mdash; then it may be acceptable to use other selectors such as type selectors to target child elements, however care should be taken.
 
 Initialising a module can then be achieved simply by passing in one of more elements that match these selectors;
 
@@ -991,6 +1007,13 @@ myComplexModule.init({
 });
 ```
 
+#### Test hook attributes
+
+Implicity coupling markup and test code is brittle and to be avoided. This means avoiding the use of pre-existing classes and ID's as selectors in your test code. Instead, we prefer explicitly stating the coupling by using e.g. `data-test="component-name"` in your markup and `[data-test="component-name"]` as a selector in your test code.
+
+In this way developers can refactor their CSS & templates safe in the knowledge they are not accidentally breaking any tests.
+
+The downside to this is markup bloat &mdash; however internally we have solutions for dynamically removing these attributes so they are not served to the client.
 
 #### Complex 2-way binding
 
