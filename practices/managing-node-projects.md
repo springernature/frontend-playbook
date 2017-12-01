@@ -5,6 +5,7 @@
         * [Examples](#examples)
     * [Development dependencies](#development-dependencies)
         * [Examples](#examples-1)
+    * [Classifying "built" run-time dependencies](#classifying-built-run-time-dependencies)
 * [Publishing projects on NPM](#publising-projects-on-npm)
 * [Dependency management tools](#dependency-management-tools)
 * [Handling dependencies from third parties](#handling-dependencies-from-third-parties)
@@ -111,6 +112,15 @@ We _don't_ do this:
 }
 ```
 
+### Classifying "built" run-time dependencies
+
+While the classification of run-time and development dependencies is usually fairly clear-cut, there can be grey-areas.  For example dependencies that are required for the running of your website/app but are processed by a build tool (perhaps to concatenate or transpile them).
+
+In these instances it is technically true that the dependency wouldn't need to be installed in production since only the built asset would be served.  However classifying it as a development dependency would mischaracterise its contribution to the application, and could lead it to be treated with less care than it deserves (including with a looser semver range [as above](#examples-1)).
+
+In an ideal world where HTTP2, modern JavaScript syntax, and ES6 modules are widely supported, there would be no need to transpile or concatenate any dependencies even for browsers.  Instead, they would simply be loaded using `import` statements and as such those dependencies would be directly served from their installed location (and as such would umabiguiously be run-time dependencies, not development dependencies). When working within a Node.js environment this is already possible through its native support for CommonJS `require` statements. 
+
+As such the fact that the asset may sometimes need to be built when serving it to a browser &mdash; rather than being served directly &mdash; can be considered an accident of circumstance. It should not change the classification of that dependency as a run-time dependency. That way we maintain consistency between Node.js and web applications, and provide a clear distinction between tools that are only used in the development of the application, and assets that directly contribute functionality to the production application.
 
 ## Publishing projects on NPM
 
