@@ -51,6 +51,13 @@ For images that are going to be included in a repo, you can use tools like [Imag
 
 There's also an [ImageOptim-CLI](https://github.com/JamieMason/ImageOptim-CLI) that can be integrated with CI systems.
 
+If an image is still too big, you can try several other optimisations that will require editing the image. These will allow you to generate images with a smaller size.
+
+* Reduce noise and other complexity.
+* Decrease export quality.
+* Blur unimportant areas.
+
+
 ## Serving images
 
 We work under the assumption that images are encoded only once but decoded many times. Therefore, encoding times are usually secondary to the savings in e.g. file size.
