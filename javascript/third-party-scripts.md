@@ -19,4 +19,4 @@ Most of these are taken from Andrew Welch's "[Tags Gone Wild! Managing Tag Manag
 * Tags that coincide with a marketing campaign should be set up to expire at an appropriate date.
 * Tags should be audited on a regular basis, and pruned back regularly.
 
-We carry regular tests using tools like [WebPagetest](https://www.webpagetest.org/) and [SpeedCurve](https://www.speedcurve.org/) to ensure that performance is not affected by these scripts.
+We carry regular tests using tools like [WebPagetest](https://www.webpagetest.org/) and [SpeedCurve](https://www.speedcurve.com/) to ensure that performance is not affected by these scripts.
