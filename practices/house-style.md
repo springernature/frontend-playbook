@@ -58,7 +58,7 @@ Read the [code review guide](../practices/code-review.md) for details on how we 
 
 ### Written communications
 
-Not all written communications need to follow house style - for e.g. we don't expect you to follow any rules in Slack, beyond what's expected of you as a professional. If you write for any of our open source repositories (including documentation), [Cruft.io](http://cruft.io/), or any of our [social media accounts](../writing/social-media.md), please familiarise yourself with the [Language guide](../writing/language.md).
+Not all written communications need to follow house style - for e.g. we don't expect you to follow any rules in Slack, beyond what's expected of you as a professional. If you write for any of our open source repositories (including documentation), [Cruft.io](http://cruft.io/), or any of our [social media accounts](../writing/social-media.md), please familiarise yourself with the [Language guide](../writing/house-style.md). Always use [inclusive language](../writing/inclusive-language.md).
 
 
 ## Making changes to the house style
