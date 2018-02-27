@@ -17,8 +17,9 @@ Cruft has also a [@cruftio Twitter account](https://twitter.com/cruftio) that is
 
 Before publishing anything ensure that:
 
-* All the public communications follow our [language standards](language.md).
+* All the public communications follow our [language standards](house-style.md).
 * When reporting bugs or security issues, remember to use positive language instead of blaming.
+* Always use [inclusive language](inclusive-language.md).
 
 We do:
 > Released Shunter 1.2.3. Security upgrade of `nac` to 3.2.1 which addresses several vulns. https://github.com/springernature/shunter/blob/master/HISTORY.md#123-2017-03-08
