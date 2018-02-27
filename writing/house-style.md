@@ -14,7 +14,7 @@ We don't enforce strict standards on writing style as we want you to use your ow
 
 ### Tone of voice
 
-For a general audience, you should write like a human. Be professional, but conversational - we want our contributors and readers to feel comfortable joining in at any time. The exception to this is in writing [technical content](#technical-writing) for a technical audience.
+For a general audience, you should write like a human. Be professional, but conversational - we want our contributors and readers to feel comfortable joining in at any time.
 
 Be thankful to contributors and those who log issues. They're giving up their time to make our playbook better. Make sure they know we're grateful to them.
 
@@ -32,7 +32,7 @@ Follow Plain English guidelines to help safeguard the accessibility of your writ
   - Use contractions (e.g. "can't", "it's").
   - Go straight to the point.
 - Be specific
-  - Use the active voice instead of the passive voice (e.g. "NPM will install the dependencies" instead of "the dependencies will be installed").
+  - Prefer the active voice to the passive voice<sup>[\[1\]][active-passive]</sup> (e.g. "NPM will install the dependencies" instead of "the dependencies will be installed").
   - Address the user as "you" where possible.
   - Avoid referring to "things" or "stuff".
   - Be direct. Avoid metaphor, simile, and slang.
@@ -48,7 +48,7 @@ When expressing technical concepts, you'll need to use technical language. This 
 All of the advice in the [plain English](#plain-english) section applies. Additionally:
 
 - Expand acronyms the first time you use them, and limit their use thereafter e.g. "Avoid the use of TLAs (Three Letter Acronyms)".
-- When defining technical requirements, you may use the keywords defined in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) for those requirement levels, e.g. "MUST", "SHOULD", "OPTIONAL".
+- When defining technical requirements, you may use the keywords defined in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) for those requirement levels, e.g. "MUST", "SHOULD", "OPTIONAL", etc.
 
 
 ## Frontend or front-end
@@ -58,3 +58,4 @@ All of the advice in the [plain English](#plain-english) section applies. Additi
 
 
 [writing-well]: http://writersdiet.com/?page_id=16
+[active-passive]: https://oxfordediting.com/the-active-verb-form-makes-academic-writing-more-readable/
