@@ -54,9 +54,9 @@ Here's the general process that we use:
 1. Delete your remote branch.
 1. (Optional) Delete your local branch.
 
-## What about GitHub's pull request reviews?
+### What about GitHub's pull request reviews?
 
-[GitHub's pull request reviews feature](https://help.github.com/articles/about-pull-request-reviews/) programatically blocks merging of the code until it has been reviewed. This feature may or may not be enabled on a repository, at the discretion of the individual team.
+[GitHub's pull request reviews feature](https://help.github.com/articles/about-pull-request-reviews/) programatically blocks merging of the code until it has been reviewed, thereby preventing the developer who opened the PR from merging themselves. This feature may or may not be enabled on a repository, at the discretion of the individual team.
 
 ## What to look out for
 
