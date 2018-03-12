@@ -56,7 +56,7 @@ Here's the general process that we use:
 
 ## What about GitHub's pull request reviews?
 
-(https://help.github.com/articles/about-pull-request-reviews/)[GitHub's pull request reviews] programatically block merging of the code unless it has been formally reviewed. This feature may or may not be enabled on a repository, at the discretion of the product team.
+[GitHub's pull request reviews feature](https://help.github.com/articles/about-pull-request-reviews/) programatically blocks merging of the code until it has been reviewed. This feature may or may not be enabled on a repository, at the discretion of the individual team.
 
 ## What to look out for
 
