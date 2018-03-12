@@ -6,7 +6,7 @@
 
 Code Review, or Peer Code Review, is the act of having your code checked by others for mistakes, errors, and omissions (e.g. missing tests). Like pair-programming (which we also support), it accelerates and streamlines software development.
 
-We manage code review via **pull requests**, which we communicate in the `#frontend-pr` Slack channel, and manage in GitHub. Discussion should happen in the GitHub comments, not Slack.
+While we can support "traditional" Code Reviews, we routinely review via **pull requests**. These are communicated in the `#frontend-pr` Slack channel, and managed via GitHub. Discussion should happen in the GitHub comments, not Slack.
 
 We leave it to the requester to merge their own changes when they are ready, because sometimes the requester might not want their work merged immediately.
 
@@ -39,7 +39,7 @@ Here's the general process that we use:
 		* Therefore they should contain their own tests.
 		* Therefore they should be releasable independently.
 	* Branches should be as limited in scope as possible. Large PR's are hard to review and can be painful to merge. Also, once merged & a bug is traced back to that commit, they are much harder to debug.
-1. When you are getting close to being ready for PR, `git rebase master` or merge -- especially if other devs are working on the same code.  Avoid merge pain by;
+1. When you are getting close to being ready for PR, `git rebase master` or merge -- especially if other devs are working on the same code. Avoid merge pain by;
 	* _talking to your team_ to divide work across files sensibly & co-ordinate merges if required.
 	* pull origin master & rebase or merge often.
 	* make sure branches are short-lived! (Did we mention that branches should be short-lived?)
@@ -50,10 +50,13 @@ Here's the general process that we use:
 1. A colleague (or multiple colleagues) other than the author reviews the pull request, and they make comments and ask questions directly on lines of code in the GitHub web interface.
 1. When satisfied, the reviewer(s) will approve the pull request indicating that the code is ready to merge.
 1. Give your code one last visual check in github.
-1. Double-check the commit message -- and any commit message detail -- then "Squash & Merge" commits via github. We do not want lots of "work in progress" commits cluttering the commit history on master. _One unit of work, one commit._
+1. Double-check the commit message -- and any commit message detail -- then **"Squash & Merge" commits via github**. We do not want lots of "work in progress" commits cluttering the commit history on master. _One unit of work, one commit._
 1. Delete your remote branch.
-1. Delete your local branch.
+1. (Optional) Delete your local branch.
 
+### What about GitHub's pull request reviews?
+
+[GitHub's pull request reviews feature](https://help.github.com/articles/about-pull-request-reviews/) programatically blocks merging of the code until it has been reviewed, thereby preventing the developer who opened the PR from merging themselves. This feature may or may not be enabled on a repository, at the discretion of the individual team.
 
 ## What to look out for
 
@@ -63,5 +66,5 @@ Here's the general process that we use:
 * Code which could be split up into reusable modules.
 * Non-performant code. Suggest testing with [WebPageTest](https://www.webpagetest.org/) and/or other tools.
 * Inaccessible code. Suggest testing with [pa11y](https://github.com/pa11y) and/or other tools.
-    * [private Springer Nature instance of pa11y](http://pa11y-dashboard.dev.cf.springer-sbm.com/)
+    * [internal-only pa11y dashboard](http://pa11y.springernature.com/)
 * Do you see something which may have wider ramifications than the author anticipated? Double check they are aware which can of worms they have just opened :)
