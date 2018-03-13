@@ -18,7 +18,7 @@ Begin with the [house style guide](practices/house-style.md).
 
 ## Contributing
 
-To contribute please create a new branch for each section, then create a pull request to merge your changes in.
+To contribute please clone the repo (or fork it if you're an external contributor), create a new branch for your changes, then create a pull request to merge your changes in.
 
 Please keep discussion inside the issues and pull requests, avoiding Slack, hallway conversations etc. Remember that this repo is public, and the discussions we have can be of benefit to people apart from us.
 
