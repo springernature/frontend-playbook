@@ -55,7 +55,7 @@ In order to check this, we use [window.matchMedia](https://developer.mozilla.org
 ```javascript
 (function() {
     var linkEl = document.querySelector('link');
-    if (window.matchMedia && window.matchMedia(linkEl.media)) {
+    if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
         var script = document.createElement('script');
         script.src = 'your-script.js';
         script.async = true;
