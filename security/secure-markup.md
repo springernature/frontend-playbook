@@ -25,11 +25,11 @@ Sanitising user input is the job of the server and/or JavaScript, but we can hel
 
 **TODO: how contentious is ^that?**
 
-- `form` -- specify `accept-charset` and `enctype` **TODO: not specifying these smells bad (I seem to remember bugs around this), but is it?**
-- `input` -- if the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, specify the `maxlength` attribute.
-- `textarea` -- specify the `maxlength` attribute.
+- `form` &mdash; specify `accept-charset` and `enctype` **TODO: not specifying these smells bad (I seem to remember bugs around this), but is it?**
+- `input` &mdash; if the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, specify the `maxlength` attribute.
+- `textarea` &mdash; specify the `maxlength` attribute.
 - for non-essential "autocomplete" functionality, consider using a `datalist` element instead of JavaScript.
-- `input type="file"` -- use the `accept` attribute **TODO: not specifying this smells bad, but is it?**
+- `input type="file"` &mdash; use the `accept` attribute **TODO: not specifying this smells bad, but is it?**
 - `autocomplete` **TODO there are info leakage issues (at least) around use of this if a vector is found, but is that enough for a blanket "considered harmful"?**
 - `keygen` is deprecated, don't use it.
 
@@ -41,7 +41,7 @@ Note the default behaviour of the attribute is very strict (e.g. no JavaScript, 
 
 ## Use the `type` & `typemustmatch` attribute for `object`s
 
-`typemustmatch` is currently very new, and lacking support in browsers -- but no harm including it if you can.
+`typemustmatch` is currently very new, and lacking support in browsers &mdash; but no harm including it if you can.
 
 > This Boolean attribute indicates if the type attribute and the actual content type of the resource must match to be used.
 > &mdash; <cite>[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-typemustmatch)</cite>
