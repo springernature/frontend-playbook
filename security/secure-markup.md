@@ -15,7 +15,7 @@ Do this: `<meta charset="utf-8">`.
 
 Not specifying the appropriate character set has historically has been a source of [charset-related security problems](https://code.google.com/archive/p/doctype-mirror/wikis/ArticleUtf7.wiki) as well as a source of rendering bugs.
 
-## Add `rel="nopener"` to outbound links in new windows
+## Add `rel="noopener"` to outbound links in new windows
 
 Links leak the context of the opening window in the `window.opener` object. This allows the opened window to alter the opening window via JavaScript, regardless of whether the window is opened via JavaScript or simply a `target="_blank"` attribute. Exploiting this context leaking is known as ["tabnabbing"](https://mathiasbynens.github.io/rel-noopener/).
 
