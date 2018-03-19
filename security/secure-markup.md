@@ -5,7 +5,7 @@ TODO: add TOC
 ## Scope of this document
 Developers should be aware of the security implications of their front-end code. This document outlines some steps developers can take to reduce the risk of markup exposing us, or our users, to security flaws.
 
-Note: this document does not cover JavaScript, or interactions which may touch the server, e.g. XSS or HTTP headers. (It is assumed security-related HTTP headers are set in the headers, not in `meta` tag equivalents.)
+Note: this document does not cover JavaScript, or interactions which may touch the server, e.g. XSS or HTTP headers. (It is assumed security-related headers are set in the HTTP headers, not in `meta` tag equivalents.)
 
 Additionally, developers are encouraged to familiarise themsevles with the [OWASP HTML5 Security Cheat Sheet](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet).
 
@@ -17,15 +17,15 @@ Not specifying the appropriate character set has historically has been a source 
 
 ## Add `rel="nopener"` to outbound links in new windows
 
-Links leak the context of the opening window in the `window.opener` object. This allows the opened window to alter the opening window via JavaScript. Exploiting this context leaking is known as ["tabnabbing"](https://mathiasbynens.github.io/rel-noopener/).
+Links leak the context of the opening window in the `window.opener` object. This allows the opened window to alter the opening window via JavaScript, regardless of whether the window is opened via JavaScript or simply a `target="_blank"` attribute. Exploiting this context leaking is known as ["tabnabbing"](https://mathiasbynens.github.io/rel-noopener/).
 
 ## Use sane form defaults
 
-Sanitising user input is the job of the server and/or JavaScript, but we can help by specifying some attributes of form widgets as part of a ["belt & braces"](https://www.collinsdictionary.com/dictionary/english/belt-and-braces) approach to security:
+Sanitising user input is the job of the server and/or JavaScript, but we can help by specifying some form widget attributes as part of a ["belt & braces"](https://www.collinsdictionary.com/dictionary/english/belt-and-braces) approach to security:
 
 **TODO: how contentious is ^that?**
 
-- `form` -- specify `accept-charset` and `enctype` **TODO: not specifying these smells bad, but is it?**
+- `form` -- specify `accept-charset` and `enctype` **TODO: not specifying these smells bad (I seem to remember bugs around this), but is it?**
 - `input` -- if the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, specify the `maxlength` attribute.
 - `textarea` -- specify the `maxlength` attribute.
 - for non-essential "autocomplete" functionality, consider using a `datalist` element instead of JavaScript.
