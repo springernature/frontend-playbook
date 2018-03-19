@@ -1,8 +1,11 @@
 # Secure Markup
 
-Developers should be aware of the security implications of their front-end code. This document outlines some steps developers can follow to ensure their makup does not expose us, or users, to common security flaws.
+TODO: add TOC
 
-Note: this document does not cover JavaScript, or interactions which may touch the server, e.g. XSS or HTTP headers. (It is assumed security-related HTTP headers are set in the headers, not in the `meta` tag equivalents.)
+## Scope of this document
+Developers should be aware of the security implications of their front-end code. This document outlines some steps developers can take to reduce the risk of markup exposing us, or our users, to security flaws.
+
+Note: this document does not cover JavaScript, or interactions which may touch the server, e.g. XSS or HTTP headers. (It is assumed security-related HTTP headers are set in the headers, not in `meta` tag equivalents.)
 
 Additionally, developers are encouraged to familiarise themsevles with the [OWASP HTML5 Security Cheat Sheet](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet).
 
@@ -10,13 +13,11 @@ Additionally, developers are encouraged to familiarise themsevles with the [OWAS
 
 Do this: `<meta charset="utf-8">`.
 
-Not specifying the appropriate character set is a source of rendering bugs and historically has been a source of [charset-related security problems](https://code.google.com/archive/p/doctype-mirror/wikis/ArticleUtf7.wiki).
+Not specifying the appropriate character set has historically has been a source of [charset-related security problems](https://code.google.com/archive/p/doctype-mirror/wikis/ArticleUtf7.wiki) as well as a source of rendering bugs.
 
-(As an aside, the longer `<meta http-equiv="Content-Type" content="text/html; charset=utf-8">` is functionally equivalent and should be avoided.)
+## Add `rel="nopener"` to outbound links in new windows
 
-## Add `rel="nopener"` to outbound links
-
-Links leak the context of the opening window in the `window.opener` property, most notably a problem with links opening in new windows. This allows the opened window to alter the opening window via JavaScript. Exploiting this context leaking is know as ["tabnabbing"](https://mathiasbynens.github.io/rel-noopener/).
+Links leak the context of the opening window in the `window.opener` object. This allows the opened window to alter the opening window via JavaScript. Exploiting this context leaking is known as ["tabnabbing"](https://mathiasbynens.github.io/rel-noopener/).
 
 ## Use sane form defaults
 
