@@ -29,11 +29,13 @@ Links leak the context of the opening window to the opened window, via the `wind
 
 ## Use Subresource Integrity
 
-Often we serve assets such as JavaScript or CSS files via [CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)'s for performance reasons. But what if that resource is corrupted, on the CDN or over the network?
+Often we serve assets such as JavaScript or CSS files via [CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)'s for performance reasons. But what if that resource is corrupted, either on the CDN or over the network?
 
-Files served via CDN's (or your own asset servers) are high-priority targets for attackers as they enable them to inject payloads into many sites with just one breach.
+Files served via CDN's (or your own asset servers) are high-priority targets for attackers, because they enable attackers to inject [payloads](https://en.wikipedia.org/wiki/Payload_(computing)#Security) into many sites with just one breach.
 
 Subresource Integrity protects against corrupted resource files by instructing the browser to generate a base64-encoded cryptographic hash of the file, and comparing that hash to a hash we specify in the markup. If the hashes don't match, the browser doesn't parse the loaded file.
+
+This may sound complicated but it's actually easy to do!
 
 Example markup (from the [MDN article on Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)):
 ```
@@ -42,13 +44,13 @@ Example markup (from the [MDN article on Subresource Integrity](https://develope
   crossorigin="anonymous"></script>
 ```
 
-Use of the `crossorigin` attribute depends on CORS support of the asset server.
+Use of the `crossorigin` attribute depends on [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) support of the asset server.
 
 Subresource Integrity can be used in conjunction with a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) but does not require a CSP to work.
 
 At the time of writing, [browser support for Subresource Integrity](https://caniuse.com/#feat=subresource-integrity) is very good and getting better.
 
-As it should be relatively easy to add to a front-end build tool chain, it's recommended you use it for any `script` or `link` element.
+As Subresource Integrity should be relatively easy to add to a front-end build tool chain, it's recommended you use it for any `script` or `link` element.
 
 - [Gentle introduction to Subresource Integrity by keycdn.com](https://www.keycdn.com/support/subresource-integrity/)
 - [MDN article on Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
@@ -59,7 +61,7 @@ We must not write data that comes from the user into the DOM without first [sani
 
 Sanitising input is the responsibility of the server in most cases, but we must also sanitise input in rich JavaScript applications (e.g. URL fragments) at the risk of exposing our users to attacks like [DOM XSS/Client-Side XSS](https://www.owasp.org/index.php/Types_of_Cross-Site_Scripting#DOM_Based_XSS_.28AKA_Type-0.29).
 
-Such sanitisation is beyond the scope of this document, but as authors of HTML forms in particular we can mitigate _some_ classes of client-side attack by specifying some form widget attributes. This is no substitute for sanitisation but forms part of a ["belt & braces"](https://www.collinsdictionary.com/dictionary/english/belt-and-braces) approach to security, as well as reducing a common source of bugs.
+Such sanitisation is beyond the scope of this document, but as authors of HTML forms we can mitigate _some_ classes of client-side attack by specifying some form widget attributes. This is no substitute for sanitisation but constitutes part of a ["belt & braces"](https://www.collinsdictionary.com/dictionary/english/belt-and-braces) approach to security, as well as reducing a common source of bugs.
 
 - `form` &mdash; specify `accept-charset="utf-8"`. Charset issues are a common source of bugs generally. If a page has been parsed as UTF-8 the browser _should_ default to sending data as UTF-8, but it's easy to specify the `accept-charset` as extra protection in case something breaks, so why not do it?
 - `input` &mdash; if the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, specify the `maxlength` attribute.
