@@ -1,11 +1,17 @@
 # Secure Markup
 
-TODO: add TOC
+  * [Scope of this document](#scope-of-this-document)
+  * [Use UTF-8 and specify this in a `meta` tag](#use-utf-8-and-specify-this-in-a-meta-tag)
+  * [Add `rel="noopener"` to outbound links in new windows](#add-relnoopener-to-outbound-links-in-new-windows)
+  * [Use Subresource Integrity](#use-subresource-integrity)
+  * [Use sane form defaults](#use-sane-form-defaults)
+  * [Use the `sandbox` attribute for `iframe`s](#use-the-sandbox-attribute-for-iframes)
+  * [Use the `type` & `typemustmatch` attribute for `object`s](#use-the-type--typemustmatch-attribute-for-objects)
 
 ## Scope of this document
 You should be aware of the security implications of your front-end code. This document outlines some steps you can take to reduce the risk of markup exposing us, or our users, to security flaws.
 
-Note: this document does not cover JavaScript, or interactions which may touch the server, e.g. XSS or HTTP headers. (It is assumed security-related headers are set in the HTTP headers, not in `meta` tag equivalents.)
+Note: this document does not cover JavaScript or interactions which may touch the server, e.g. XSS or HTTP headers. (It is assumed security-related headers are set in the HTTP headers, not in `meta` tag equivalents.)
 
 Additionally, you're encouraged to familiarise yourself with the [OWASP HTML5 Security Cheat Sheet](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet).
 
@@ -19,18 +25,20 @@ Ideally this should be specified in both the HTTP header and a `meta` element, i
 
 ## Add `rel="noopener"` to outbound links in new windows
 
-Links leak the context of the opening window in the `window.opener` object. This allows the opened window to alter the opening window via JavaScript, regardless of whether the window is opened via JavaScript or simply a `target="_blank"` attribute. Exploiting this context leaking is known as ["tabnabbing"](https://mathiasbynens.github.io/rel-noopener/).
+Links leak the context of the opening window to the opened window, via the `window.opener` object. This allows the opened window to alter the opening window via JavaScript, regardless of whether the window is opened via JavaScript or simply a `target="_blank"` attribute. Exploiting this context leaking is known as ["tabnabbing"](https://mathiasbynens.github.io/rel-noopener/).
 
 ## Use Subresource Integrity
 
-Often we serve assets such as JavaScript or CSS files via [CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)'s for performance reasons. But what if that resource is corrupted on the CDN or over the network?
+Often we serve assets such as JavaScript or CSS files via [CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)'s for performance reasons. But what if that resource is corrupted, on the CDN or over the network?
 
-Subresource Integrity protects against this by instructing the browser to generate a base64-encoded cryptographic hash of the file and comparing that hash to a hash we specify in the markup. If the hashes don't match, the browser does not parse the loaded file.
+Files served via CDN's (or your own asset servers) are high-priority targets for attackers as they enable them to inject payloads into many sites with just one breach.
+
+Subresource Integrity protects against corrupted resource files by instructing the browser to generate a base64-encoded cryptographic hash of the file, and comparing that hash to a hash we specify in the markup. If the hashes don't match, the browser doesn't parse the loaded file.
 
 Example markup (from the [MDN article on Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)):
-><script src="https://example.com/example-framework.js"
-        integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-        crossorigin="anonymous"></script>
+> <script src="https://example.com/example-framework.js"
+>        integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+>        crossorigin="anonymous"></script>
 
 Use of the `crossorigin` attribute depends on CORS support of the asset server.
 
