@@ -19,6 +19,10 @@ Not specifying the appropriate character set has historically has been a source 
 
 Links leak the context of the opening window in the `window.opener` object. This allows the opened window to alter the opening window via JavaScript, regardless of whether the window is opened via JavaScript or simply a `target="_blank"` attribute. Exploiting this context leaking is known as ["tabnabbing"](https://mathiasbynens.github.io/rel-noopener/).
 
+## Use Sub Resource Integrity
+
+TODO 
+
 ## Use sane form defaults
 
 We must not write data that comes from the user into the DOM without first [sanitising](https://www.smashingmagazine.com/2011/01/keeping-web-users-safe-by-sanitizing-input-data/) that data. Input includes not only form data, but also things like user agent strings, request headers, URL parameters and cookies.
