@@ -3,11 +3,11 @@
 TODO: add TOC
 
 ## Scope of this document
-Developers should be aware of the security implications of their front-end code. This document outlines some steps developers can take to reduce the risk of markup exposing us, or our users, to security flaws.
+You should be aware of the security implications of your front-end code. This document outlines some steps you can take to reduce the risk of markup exposing us, or our users, to security flaws.
 
 Note: this document does not cover JavaScript, or interactions which may touch the server, e.g. XSS or HTTP headers. (It is assumed security-related headers are set in the HTTP headers, not in `meta` tag equivalents.)
 
-Additionally, developers are encouraged to familiarise themsevles with the [OWASP HTML5 Security Cheat Sheet](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet).
+Additionally, you're encouraged to familiarise yourself with the [OWASP HTML5 Security Cheat Sheet](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet).
 
 ## Use UTF-8 and specify this in a `meta` tag
 
@@ -21,11 +21,13 @@ Links leak the context of the opening window in the `window.opener` object. This
 
 ## Use sane form defaults
 
-Sanitising user input is the job of the server and/or JavaScript, but we can help by specifying some form widget attributes as part of a ["belt & braces"](https://www.collinsdictionary.com/dictionary/english/belt-and-braces) approach to security:
+We must not write data that comes from the user into the DOM without first [sanitising](https://www.smashingmagazine.com/2011/01/keeping-web-users-safe-by-sanitizing-input-data/) that data. Input includes not only form data, but also things like user agent strings, request headers, URL parameters and cookies.
 
-**TODO: how contentious is ^that?**
+Sanitising input is the responsibility of the server in most cases, but we must also sanitise input in rich JavaScript applications (e.g. URL fragments) at the risk of exposing our users to attacks like [DOM XSS/Client-Side XSS](https://www.owasp.org/index.php/Types_of_Cross-Site_Scripting#DOM_Based_XSS_.28AKA_Type-0.29).
 
-- `form` &mdash; specify `accept-charset` and `enctype` **TODO: not specifying these smells bad (I seem to remember bugs around this), but is it?**
+Such sanitisation is beyond the scope of this document, but as authors of HTML forms in particular we can mitigate _some_ classes of client-side attack by specifying some form widget attributes. This is no substitute for sanitisation but forms part of a ["belt & braces"](https://www.collinsdictionary.com/dictionary/english/belt-and-braces) approach to security, as well as reducing a common source of bugs.
+
+- `form` &mdash; specify `accept-charset="utf-8"`. Charset issues are a common source of bugs generally. If a page has been parsed as UTF-8 the browser _should_ default to sending data as UTF-8, but it's easy to specify the `accept-charset` as extra protection in case something breaks, so why not do it?
 - `input` &mdash; if the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, specify the `maxlength` attribute.
 - `textarea` &mdash; specify the `maxlength` attribute.
 - for non-essential "autocomplete" functionality, consider using a `datalist` element instead of JavaScript.
