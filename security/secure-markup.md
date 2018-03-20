@@ -36,9 +36,11 @@ Files served via CDN's (or your own asset servers) are high-priority targets for
 Subresource Integrity protects against corrupted resource files by instructing the browser to generate a base64-encoded cryptographic hash of the file, and comparing that hash to a hash we specify in the markup. If the hashes don't match, the browser doesn't parse the loaded file.
 
 Example markup (from the [MDN article on Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)):
-> <script src="https://example.com/example-framework.js"
->   integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
->   crossorigin="anonymous"></script>
+```
+<script src="https://example.com/example-framework.js"
+  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+  crossorigin="anonymous"></script>
+```
 
 Use of the `crossorigin` attribute depends on CORS support of the asset server.
 
