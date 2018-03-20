@@ -15,13 +15,33 @@ Do this: `<meta charset="utf-8">`.
 
 Not specifying the appropriate character set has historically has been a source of [charset-related security problems](https://code.google.com/archive/p/doctype-mirror/wikis/ArticleUtf7.wiki) as well as a source of rendering bugs.
 
+Ideally this should be specified in both the HTTP header and a `meta` element, in case one breaks.
+
 ## Add `rel="noopener"` to outbound links in new windows
 
 Links leak the context of the opening window in the `window.opener` object. This allows the opened window to alter the opening window via JavaScript, regardless of whether the window is opened via JavaScript or simply a `target="_blank"` attribute. Exploiting this context leaking is known as ["tabnabbing"](https://mathiasbynens.github.io/rel-noopener/).
 
-## Use Sub Resource Integrity
+## Use Subresource Integrity
 
-TODO 
+Often we serve assets such as JavaScript or CSS files via [CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)'s for performance reasons. But what if that resource is corrupted on the CDN or over the network?
+
+Subresource Integrity protects against this by instructing the browser to generate a base64-encoded cryptographic hash of the file and comparing that hash to a hash we specify in the markup. If the hashes don't match, the browser does not parse the loaded file.
+
+Example markup (from the [MDN article on Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)):
+><script src="https://example.com/example-framework.js"
+        integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+        crossorigin="anonymous"></script>
+
+Use of the `crossorigin` attribute depends on CORS support of the asset server.
+
+Subresource Integrity can be used in conjunction with a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) but does not require a CSP to work.
+
+At the time of writing, [browser support for Subresource Integrity](https://caniuse.com/#feat=subresource-integrity) is very good and getting better.
+
+As it should be relatively easy to add to a front-end build tool chain, it's recommended you use it for any `script` or `link` element.
+
+- [Gentle introduction to Subresource Integrity by keycdn.com](https://www.keycdn.com/support/subresource-integrity/)
+- [MDN article on Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
 
 ## Use sane form defaults
 
@@ -41,9 +61,9 @@ Such sanitisation is beyond the scope of this document, but as authors of HTML f
 
 ## Use the `sandbox` attribute for `iframe`s
 
-Even if you control the content of the `iframe`, do use the `sandbox` attribute. This attribute restricts the functionality of the framed document.
+Even if you control the content of the `iframe`, do use the `sandbox` attribute if you can. This attribute restricts the functionality of the framed document [(_why "sandbox"?_)](https://en.wikipedia.org/wiki/Sandbox_(computer_security)).
 
-Note the default behaviour of the attribute is very strict (e.g. no JavaScript, forms cannot be submitted) so tailor the value of the attribute to your use case. Mike West has written [a great article about `iframe sandbox`](https://www.html5rocks.com/en/tutorials/security/sandboxed-iframes/) and MDN has [a lovely reference article on `sandbox`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox).
+Note the default sandbox is very strict (e.g. no JavaScript, forms cannot be submitted) so tailor the value of the attribute to your use case. Mike West has written [a great article about `iframe sandbox`](https://www.html5rocks.com/en/tutorials/security/sandboxed-iframes/) and MDN has [a lovely reference article on `sandbox`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox).
 
 ## Use the `type` & `typemustmatch` attribute for `object`s
 
