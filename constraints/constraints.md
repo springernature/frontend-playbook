@@ -13,8 +13,9 @@ Particularly, the solutions that we deliver:
 * must be Legally Robust,
 * will reflect Management & Org Structure,
 * are bound by our Infrastructure,
-* need to be appropriately Secure, and
-* need to reflect the Company's Stature.
+* need to be appropriately Secure, 
+* need to reflect the Company's Stature, and
+* need to endure over a long-period of time.
 
 As a result of these constraints, the solutions that we provide are:
 
