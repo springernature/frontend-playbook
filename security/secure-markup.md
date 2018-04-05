@@ -5,6 +5,7 @@
   * [Add `rel="noopener"` to outbound links in new windows](#add-relnoopener-to-outbound-links-in-new-windows)
   * [Use Subresource Integrity](#use-subresource-integrity)
   * [Use sane form defaults](#use-sane-form-defaults)
+    + [A note on autofill](#a-note-on-autofill)
   * [Use the `sandbox` attribute for `iframe`s](#use-the-sandbox-attribute-for-iframes)
   * [Use the `type` & `typemustmatch` attribute for `object`s](#use-the-type--typemustmatch-attribute-for-objects)
 
@@ -61,15 +62,27 @@ We must not write data that comes from the user into the DOM without first [sani
 
 Sanitising input is the responsibility of the server in most cases, but we must also sanitise input in rich JavaScript applications (e.g. URL fragments) at the risk of exposing our users to attacks like [DOM XSS/Client-Side XSS](https://www.owasp.org/index.php/Types_of_Cross-Site_Scripting#DOM_Based_XSS_.28AKA_Type-0.29).
 
-Such sanitisation is beyond the scope of this document, but as authors of HTML forms we can mitigate _some_ classes of client-side attack by specifying some form widget attributes. This is no substitute for sanitisation but constitutes part of a ["belt & braces"](https://www.collinsdictionary.com/dictionary/english/belt-and-braces) approach to security, as well as reducing a common source of bugs.
+Such sanitisation is beyond the scope of this document, but as authors of HTML forms we can mitigate _some_ classes of client-side attack by specifying some form widget attributes. This is no substitute for sanitisation but constitutes part of a ["belt & braces"](https://www.collinsdictionary.com/dictionary/english/belt-and-braces) approach to security, as well as reducing common sources of bugs.
 
 - `form` &mdash; specify `accept-charset="utf-8"`. Charset issues are a common source of bugs generally. If a page has been parsed as UTF-8 the browser _should_ default to sending data as UTF-8, but it's easy to specify the `accept-charset` as extra protection in case something breaks, so why not do it?
 - `input` &mdash; if the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, specify the `maxlength` attribute.
 - `textarea` &mdash; specify the `maxlength` attribute.
+- `input type="file"` &mdash; use the `accept` attribute to specify which types of file can be uploaded (specify by extension or MIME type). Again this is no substitute for server validation but improves usability.
 - for non-essential "autocomplete" functionality, consider using a `datalist` element instead of JavaScript.
-- `input type="file"` &mdash; use the `accept` attribute **TODO: not specifying this smells bad, but is it?**
-- `autocomplete` **TODO there are info leakage issues (at least) around use of this if a vector is found, but is that enough for a blanket "considered harmful"?**
 - `keygen` is deprecated, don't use it.
+
+### A note on autofill
+
+The autofill behaviour of browsers is controlled by the [`autocomplete` attribute](https://www.w3.org/TR/html5/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute), for which there are a large number of potential values.
+
+While there are security concerns about autofill & <abbr title="Personally Identifiable Information">PII</abbr>,
+
+> ...in-browser password management is generally seen as a net gain for security. Since users do not have to remember passwords that the browser stores for them, they are able to choose stronger passwords than they would otherwise.
+> For this reason, many modern browsers do not support autocomplete="off" for login fields
+> &mdash; <cite>[MDN - Turning off form autocompletion](https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion)</cite>
+
+As such, while you can disable autofill for sensitive fields (see MDN article above) browser vendors feel it is not a good idea overall.
+
 
 ## Use the `sandbox` attribute for `iframe`s
 
@@ -82,7 +95,7 @@ Note the default sandbox is very strict (e.g. no JavaScript, forms cannot be sub
 `typemustmatch` is currently very new, and lacking support in browsers &mdash; but no harm including it if you can.
 
 > This Boolean attribute indicates if the type attribute and the actual content type of the resource must match to be used.
-> &mdash; <cite>[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-typemustmatch)</cite>
+> &mdash; <cite>[MDN - typemustmatch](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-typemustmatch)</cite>
 
 For more information please see the [W3C HTML5.3 specification](https://www.w3.org/TR/html53/semantics-embedded-content.html).
 
