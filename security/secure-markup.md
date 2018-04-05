@@ -75,7 +75,7 @@ Such sanitisation is beyond the scope of this document, but as authors of HTML f
 
 The autofill behaviour of browsers is controlled by the [`autocomplete` attribute](https://www.w3.org/TR/html5/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute), for which there are a large number of potential values.
 
-While there are security concerns about autofill & <abbr title="Personally Identifiable Information">PII</abbr>,
+While there are security concerns about autofill & Personally Identifiable Information (PII),
 
 > ...in-browser password management is generally seen as a net gain for security. Since users do not have to remember passwords that the browser stores for them, they are able to choose stronger passwords than they would otherwise.
 > For this reason, many modern browsers do not support autocomplete="off" for login fields
