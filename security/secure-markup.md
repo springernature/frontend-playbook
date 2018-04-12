@@ -20,7 +20,7 @@ Additionally, you're encouraged to familiarise yourself with the [OWASP HTML5 Se
 
 Do this: `<meta charset="utf-8">`.
 
-Not specifying the appropriate character set has historically has been a source of [charset-related security problems](https://code.google.com/archive/p/doctype-mirror/wikis/ArticleUtf7.wiki) as well as a source of rendering bugs.
+Not specifying the appropriate character set has historically been a source of [charset-related security problems](https://code.google.com/archive/p/doctype-mirror/wikis/ArticleUtf7.wiki) as well as a source of rendering bugs.
 
 Ideally this should be specified in both the HTTP header and a `meta` element, in case one breaks.
 
