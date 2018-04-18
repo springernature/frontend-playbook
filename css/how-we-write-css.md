@@ -2,7 +2,7 @@
 
 Our approach to writing CSS aims to provide a framework for working that allows individual teams the flexibility to make project appropriate decisions within a company wide structure. By following a consistent approach across teams we aim to make it easier to move developers around and allow for the easy evolution of our approach within a large company.
 
-We advocate a componentised approach that is designed for scale, is based on [SASS](http://sass-lang.com/) (using the [SCSS](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) syntax), follows the [BEM Methodology](https://github.com/springernature/frontend-playbook/blob/master/practices/css/bem-css.md), and borrows elements from [OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/), Utility Classes, and [ITCSS](http://itcss.io/).
+We advocate a componentised approach that is designed for scale, is based on [SASS](http://sass-lang.com/) (using the [SCSS](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) syntax), follows the [BEM Methodology](bem-css.md), and borrows elements from [OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/), Utility Classes, and [ITCSS](http://itcss.io/).
 
 Any CSS that we write should conform to our [house style](house-style.md).
 
