@@ -3,7 +3,10 @@
 This checklist aims to help you and your team create accessible products. It's heavily inspired by Vox Media's [Accessibility Guidelines](http://accessibility.voxmedia.com/). 
 
 - [Semantics and structure](#semantics-and-structure)
-- [Images](#images)
+- [Media](#media)
+- [Colours](#colours)
+- [Interactivity](#interactivity)
+- [Content](#content)
 
 
 ## Semantics and structure
@@ -81,7 +84,6 @@ Resources:
 
 * [Playbook: Progressive enhancement](../practices/progressive-enhancement.md)
 
------
 
 ## Media
 
@@ -105,7 +107,6 @@ Resources:
 * [Article: How long can an "alt" attribute be?](https://www.washington.edu/accessit/print.html?ID=1257)
 * [Article: Longdesc alternatives in HTML5](https://cookiecrook.com/longdesc/)
 
------
 
 ## Colours
 
@@ -130,8 +131,6 @@ Resources:
 
 * [Article: Don’t use color alone to convey meaning](http://universalusability.com/access_by_design/color/alone.html)
 
-
------
 
 ## Interactivity
 
@@ -188,8 +187,6 @@ Resources:
 * [Article: HTML5 Accessibility Chops: the placeholder attribute](https://developer.paciellogroup.com/blog/2011/02/html5-accessibility-chops-the-placeholder-attribute/)
 * [Article: 11 reasons why placeholders are problematic](https://medium.com/simple-human/10-reasons-why-placeholders-are-problematic-f8079412b960)
 
-
------
 
 ## Content
 
