@@ -9,7 +9,7 @@ In the context of the web, structured data refers to information describing and 
 
 ## How we implement structured data
 
-Our primary method of implementation is JSON-LD. This involves defining information in JSON, adhering to the [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) format. Here's an example:
+Our primary method of implementation is JSON-LD. This involves defining information in JSON, adhering to the [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) format. You can add these inside `<script>` elements on the page (multiple JSON-LD script elements on a page are perfectly valid) or you can externalise the data as a file on it's own URL. Here's an example:
 ```html
 <!-- An article, fully linked to the issue, volume, and periodical in which it was published -->
 <script type="application/ld+json">
@@ -54,3 +54,17 @@ Our primary method of implementation is JSON-LD. This involves defining informat
 }
 </script>
 ```
+
+## Why JSON-LD?
+Expressing information in this format, opposed to the other techniques which are based on marking up HTML, provides benefits including:
+
+- Separation of structured data and HTML. Provides information about the page without binding it to specific HTML elements. This improves the maintainability of both HTML and structured data.
+- We believe that generally speaking it will be easier to generate from the backend. This is especially true for apps that already deal with JSON data as part of their implementation.
+- Easier for client apps to consume if you consider that those apps no longer need to trawl through HTML to extract.
+- JSON-LD is an official [W3C Recommendation](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium#W3C_recommendation_(REC)).
+- Google [recommends](https://developers.google.com/search/docs/guides/intro-structured-data) JSON-LD for structured data.
+
+## Vocabulary
+A shared, standardised vocabulary ensures that structured data is interpreted consistently by people and machines. We use the vocabulary defined and maintained at [https://www.schema.org](https://www.schema.org). Since its creation in 2011 by Google, Bing, Yahoo! and Yandex this vocabulary has been widely adopted and is the most commonly implemented.
+
+Tip - after adding a new JSON-LD script to your website, be sure to validate your use of vocabulary by using [Google’s structured data test tool](https://search.google.com/structured-data/testing-tool).
