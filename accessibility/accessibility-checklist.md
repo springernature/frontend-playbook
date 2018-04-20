@@ -1,94 +1,212 @@
 # A simple accessibility checklist
 
-This checklist is a synthesis of the [Web Content Accessibility Guidelines 1](https://www.w3.org/TR/WCAG10/), the [WCAG Samurai Errata](http://www.wcagsamurai.org/erratas/introduction/), and one guideline from [Web Content Accessibility Guidelines 2](https://www.w3.org/TR/WCAG20/).
+This checklist aims to help you and your team create accessible products. It's heavily inspired by Vox Media's [Accessibility Guidelines](http://accessibility.voxmedia.com/). 
 
-It has proven helpful when building sites that comply with [US Section 508](https://www.section508.gov/) and the [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents) \(all of our sites must comply with these pieces of legislation).
+- [Semantics and structure](#semantics-and-structure)
+- [Images](#images)
 
-Be sure to create an issue or submit a pull request if you have any questions, or have spotted any improvements that can be made.
 
-1. **Where meaning would be lost if a non-text item were removed, has a text alternative been provided?**  
-   [Samurai errata (guideline 1)](http://www.wcagsamurai.org/erratas/errata-listing/#GL1)
+## Semantics and structure
 
-1. **Are audio and video accessible?**  
-   [Samurai Errata (guideline 1, sound)](http://www.wcagsamurai.org/erratas/errata-listing/#sound)  
-   [Samurai Errata (guideline 1, video)](http://www.wcagsamurai.org/erratas/errata-listing/#video)
+### Use the correct HTML element
 
-1. **For actual content (in most cases, that means text), have confusable colours been avoided?**  
-   For example, do not set light green text on a pink background.  
-   There is no limitation on using confusable colours as design elements, nor is there a limitation on displaying areas of confusable colours next to each other (e.g., green type on a white background can sit alongside a solid red rectangle).  
-   See this page about [effective colour contrast](effective-colour-contrast.md).
+Browsers build the [accessibility tree](https://developer.paciellogroup.com/blog/2015/01/the-browser-accessibility-tree/) by making assumptions about page elements and the sort of content they are likely to contain. 
 
-1. **Has colour been avoided as a sole method of indicating an item on a page, either in its markup or style or via reference?**  
-   For example, do not return a form with errors indicated solely in red; use additional markup, like strong, and/or use additional text like an asterisk or a visual icon with text equivalent, and/or explain in words what the errors are and where they are located.
-   [Samurai Errata (guideline 2)](http://www.wcagsamurai.org/erratas/errata-listing/#GL2)
+Using the correct HTML elements helps the browser make sense of your page, and helps assistive technology users navigate it more easily. 
 
-1. **Does text have a contrast ratio which makes it perceivable by people with colour blindness?**  
-   The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:
+Resources: 
 
-   * Large Text: Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;
-   * Incidental: Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.
-   * Logotypes: Text that is part of a logo or brand name has no minimum contrast requirement.
+* [Article: Semantic structure](https://webaim.org/techniques/semanticstructure/)
 
-   [WCAG 2 (guideline 1.4.3)](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast)
 
-1. **Is the natural language of a page's text and any text equivalents (e.g., captions), identified through use of the lang attribute?**  
-   For example: Identify the primary language of a document &ndash; preferably on the html tag, through use of the html lang attribute (or xml:lang attribute for xhtml). Where other languages are embedded within a document, an html lang attribute must be used (on an enclosing element) to indicate this.
-   [Samurai errata (guideline 4)](http://www.wcagsamurai.org/erratas/errata-listing/#GL4)
+### Use HTML landmarks
 
-1. **Have documents been organized so they may be read without style sheets?**  
-   For example, when an HTML document is rendered without associated style sheets, it must still be possible to read the document.
-   [WCAG 1, guideline 6.1](http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-order-style-sheets)
+Assistive technology may make use of ARIA landmark roles or HTML5 landmark elements for navigation. These allow users to quickly jump between page sections. 
 
-1. **Does the page transform gracefully?**  
-   For example: Do not provide alternative presentations or alternate pages. Make the original page accessible. In particular, this requires you to use JavaScript or other scripting in a way that is intrinsically accessible. You are not required to create a single page that works exactly the same with and without scripting, nor should you create one page with scripting and another without it.  
-   [Samurai Errata (guideline 6)](http://www.wcagsamurai.org/erratas/errata-listing/#GL6)
+There are 8 landmark roles. Most browsers implicitly detect these roles if you use the correct HTML5 semantic element, but you may need to add the appropriate ARIA `role=` if you have to support an older browser. 
 
-1. **Does the user have control of time-sensitive content changes?**  
-   For example, do not cause flickering, flashing, or blinking. Advertisements, including advertisements served by a third party on a page you control, are covered by this guideline. They too may not cause flickering, flashing, or blinking.  
-   [Samurai Errata (guideline 7)](http://www.wcagsamurai.org/erratas/errata-listing/#GL7)
+Resources:
 
-1. **Are embedded elements of the interface accessible?**  
-   For example: are programmatic elements such as scripts directly accessible? Are they device independent? Are they keyboard operable?  
-   [WCAG 1, guideline 8](http://www.w3.org/TR/WCAG10/wai-pageauth.html#gl-own-interface)
+* [Article: WAI finding with ARIA landmark roles](http://alistapart.com/column/wai-finding-with-aria-landmark-roles)
+* [Video: How ARIA landmark roles help screen reader users](https://www.youtube.com/watch?v=IhWMou12_Vk&feature=youtu.be)
+* [Tool: Landmarks extension for Chrome, Firefox and Opera](http://matatk.agrip.org.uk/landmarks/)
+* [Tool: HTML5 accessibility feature support for sections](http://www.html5accessibility.com/#sections)
 
-1. **Has the page been designed for device-independence? E.g. is it keyboard accessible?**  
-   For example: do not use server side image maps, do not use tabindex, do not use accesskey.  
-   [Samurai Errata (guideline 9)](http://www.wcagsamurai.org/erratas/errata-listing/#GL9)  
-   Also see [WCAG 1 glossary: "device independent"](http://www.w3.org/TR/WCAG10/wai-pageauth.html#device-independent)
 
-1. **Are tables used appropriately?**  
-   I.e. do data tables transform gracefully, and are layout tables absent?  
-   [Samurai Errata (guideline 9)](http://www.wcagsamurai.org/erratas/errata-listing/#GL5)
+### Declare a language attribute
 
-1. **Have interim solutions been used?**  
-   For example: 
-   * have pop-ups been avoided? 
-   * If form placeholder text is used, is it done in an accessible way (e.g. using HTML5 placeholder attribute)? 
-   * If opening a hyperlink in a new window cannot be avoided, has an advanced warning been provided? Does the link have a visible marker indicating its behaviour? 
-      * Is that marker also accessible to screenreaders?  
-      
-   [WCAG 1, Guideline 10.1](https://www.w3.org/TR/WCAG10/wai-pageauth.html#until-user-agents)  
-   [WCAG 2.0, Guideline 3.2.5](https://www.w3.org/TR/WCAG20/#consistent-behavior)  
-   [Samurai Errata (guideline 10)](http://www.wcagsamurai.org/erratas/errata-listing/#GL10)  
-   Also see:  
-   [Techniques for WCAG 2.0 G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)  
-   [Techniques for WCAG 2.0 G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)    
+Declaring a language attribute on the HTML element allows a screen reader to read out text with correct pronunciation. It also helps search engines return language-specific results. 
 
-1. **Does the page Use W3C technologies and guidelines?**  
-   For example: HTML for content, CSS for presentation.  
-   [Samurai Errata (guideline 11)](http://www.wcagsamurai.org/erratas/errata-listing/#GL11)
+If you include text on a page that uses a different language to the main document (e.g. your HTML lang is `en` and you are including a passage in `jp`), also identify that text with its own lang attribute. 
 
-1. **Has context and orientation information been provided?**  
-   For example: have labels been explicitly associated with their controls?  
-   Have large blocks of information been divided into groups, for example using fieldset, optgroup, nested lists, and headings?  
-   [Samurai Errata (guideline 12)](http://www.wcagsamurai.org/erratas/errata-listing/#GL12)  
-   Also see [WCAG guideline 12.3](http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-group-information) and [WCAG guideline 12.4](http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-associate-labels)
+Resources: 
 
-1. **Are there clear navigation mechanisms?**  
-   For example: have "click here" type links been avoided? Are navigation mechanisms consistent? Has metadata been provided (e.g. microformats)? Is there a sitemap?  
-   [WCAG guideline 13](http://www.w3.org/TR/WCAG10/wai-pageauth.html#gl-facilitate-navigation)
+* [Article: Using the HTML lang attribute](https://developer.paciellogroup.com/blog/2016/06/using-the-html-lang-attribute/)
+* [Samurai errata GL4: Clarify natural-language usage](http://www.wcagsamurai.org/erratas/errata-listing/#GL4)
 
-1. **Are documents clear and simple?**  
-   For example: Has the clearest and simplest language been used for the page's content? Have graphic or auditory presentations been used (where they will facilitate comprehension)? Is there a style of presentation that is consistent across pages?  
-   [WCAG 1, guideline 14](http://www.w3.org/TR/WCAG10/wai-pageauth.html#gl-facilitate-comprehension)  
-   (Also see [WCAG 1 core technique 5: "Comprehension"](http://www.w3.org/TR/WCAG10-CORE-TECHS/#comprehension))
+
+### Use a logical source order
+
+Your page should still make sense when you look at it without CSS. This is a core [progressive enhancement technique](../practices/progressive-enhancement.md). 
+
+Don't surprise users by using CSS to make changes to apparent source order. 
+
+Resources:
+
+* [Article: Logical document structures](http://www.bettertesting.co.uk/content/?p=1619)
+* [Article: Source order matters](http://adrianroselli.com/2015/09/source-order-matters.html)
+* [Tool: Wave Extension](https://wave.webaim.org/extension/)
+
+
+### Use headings correctly
+
+The [HTML5 outline algorithm](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines) can't yet be relied on to convey information to users. Freely use HTML5 sectioning elements, but use headings to define the structure of your document. 
+
+Use an appropriate heading for each section. You can visually hide headings, but make sure they're still accessible to screen reader users. 
+
+Don't skip heading levels.
+
+Resources: 
+
+* [Article: Semantic Structure](https://webaim.org/techniques/semanticstructure/)
+* [Tool: HeadingsMap extension for Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en)
+* [Tool: HeadingsMap extension for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/headingsmap/)
+
+
+### Use progressive enhancement
+
+Progressive enhancement means starting with a logical and semantic HTML document with all key functionality, then enhancing it with an aesthetic layer (CSS) and behavioural layer (JavaScript). It has benefits beyond accessibility but is a key starting point for creating accessible experiences. 
+
+Resources: 
+
+* [Playbook: Progressive enhancement](../practices/progressive-enhancement.md)
+
+-----
+
+## Media
+
+### Audio or video elements should be accessible
+
+This could involve adding captions to videos, providing transcripts of audio content, or including audio description on videos. 
+
+
+### Provide text alternatives for images
+
+Alt attributes should describe the image they're applied to. For e.g. the alt attribute for a photograph should describe what's happening in the photograph, not just say "photograph". 
+
+Screen reader users prefer alt text to be short and informative. Avoid redundant phrases like "image of...", and try to keep the total text under 125 characters. Don't use the `longdesc` element for longer descriptions - its browser support is patchy and there are better-supported alternatives. 
+
+If an image provides no information, is purely decorative, and can't be moved from HTML into CSS, an empty alt attribute (`alt=""`) is preferred. 
+
+Resources:
+
+* [Article: How to Design Great Alt Text](https://www.deque.com/blog/great-alt-text-introduction/)
+* [Article: Alternative Text](https://webaim.org/techniques/alttext/)
+* [Article: How long can an "alt" attribute be?](https://www.washington.edu/accessit/print.html?ID=1257)
+* [Article: Longdesc alternatives in HTML5](https://cookiecrook.com/longdesc/)
+
+-----
+
+## Colours
+
+### Use adequate colour contrast
+
+Text and images of text must have a colour contrast ratio of at least 4.5:1. 
+
+Don't use confusable colours. Make sure your choices can be perceived by people with colour blindness. 
+
+Resources:
+
+* [Article: Colour contrast - why does it matter?](https://accessibility.blog.gov.uk/2016/06/17/colour-contrast-why-does-it-matter/)
+* [Tool: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+* [Tool: Funkify](http://www.funkify.org/)
+
+
+### Don't convey information with colour alone
+
+Use text equivalents or semantic emphasis like `<strong>` or `<em>` when conveying important information to users. 
+
+Resources:
+
+* [Article: Don’t use color alone to convey meaning](http://universalusability.com/access_by_design/color/alone.html)
+
+
+-----
+
+## Interactivity
+
+### Give enough time to read and use content
+
+Let the user pause, stop, or hide content that moves, blinks, scrolls, or automatically updates. 
+
+Resources:
+
+* [Case studies: How People with Disabilities Use the Web](https://www.w3.org/WAI/intro/people-use-web/principles#time)
+
+
+### Design for device independence
+
+Make sure users can interact with your page using the keyboard alone. 
+
+Don't rely on device-dependent event handlers (e.g. `onhover`) to convey information or to complete tasks. 
+
+Make sure interactable elements are large enough for touchscreen users to easily access controls. Leave enough space around controls so that they don't overlap with other touch targets. 
+
+Resources:
+
+* [Article: Touch Target Sizes](https://www.lukew.com/ff/entry.asp?1085)
+
+
+### Give context and orientation information
+
+Associate all form controls with appropriate labels. Use fieldsets or optgroups to group related controls. 
+
+Give users a way to know where they are in a set of related pages (e.g. the [Steps Left pattern](http://ui-patterns.com/patterns/StepsLeft)). 
+
+Make sure the currently-focused element has a focus ring, and make sure the focus sequence is logical. 
+
+
+### Avoid opening links in new windows
+
+This can be disorientating to screen reader users or users with cognitive disabilites. 
+
+If you must do it, warn the user _before_ they click on the link that it'll open in a new window. You can use text like "opens in a new window" or a visual icon. If you choose to use an icon, make sure it's accessible to screen reader users. 
+
+Resources:
+
+* [Article: Opening links in a new window](https://www.nomensa.com/blog/2011/opening-links-new-window)
+
+
+### Don't use HTML5 input placeholders for important information
+
+Input placeholders disappear when the user begins typing, may be mistaken for a value, and may not provide adequate context. 
+
+Never put user instructions in input placeholders - always use a label. 
+
+Resources:
+
+* [Article: HTML5 Accessibility Chops: the placeholder attribute](https://developer.paciellogroup.com/blog/2011/02/html5-accessibility-chops-the-placeholder-attribute/)
+* [Article: 11 reasons why placeholders are problematic](https://medium.com/simple-human/10-reasons-why-placeholders-are-problematic-f8079412b960)
+
+
+-----
+
+## Content
+
+### Use link text that makes sense out of context
+
+Screen reader users may navigate a page by links alone. Avoid link text that says "click here", or context-free text like "More details" repeatedly applied to a list of links. 
+
+Resources:
+
+* [Article: Writing good link text](https://www.nomensa.com/blog/2011/writing-good-link-text)
+
+
+### Use tables appropriately
+
+Don't use tables for layout. If a data table lacks important characteristics like `<th>` elements, some assistive technology may treat it as though it's a layout table and read its contents linearly. This can make it much more difficult for a screen reader user to understand. 
+
+Resources:
+
+* [Article: Creating Accessible Tables](https://webaim.org/techniques/tables/)
+
