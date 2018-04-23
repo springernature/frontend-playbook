@@ -47,7 +47,6 @@ We do this:
 ```
 <p>This document has the lang="en" attribute, and this text matches the document language.</p>
 <p lang="jp">このテキストは日本語です</p>
-
 ```
 
 Resources: 
