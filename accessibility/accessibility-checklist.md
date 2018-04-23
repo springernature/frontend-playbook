@@ -103,7 +103,7 @@ This could involve adding [captions to videos](https://www.youtube.com/watch?v=5
 
 ### Provide text alternatives for images
 
-Alt attributes should describe the image they're applied to. For e.g. the alt attribute for a photograph should describe what's happening in the photograph, not just say "photograph". 
+Alt attributes should describe the image they're applied to. E.g. the alt attribute for a photograph should describe what's happening in the photograph, not just say "photograph". 
 
 Screen reader users prefer alt text to be short and informative. Avoid redundant phrases like "image of...", and try to keep the total text under 125 characters. Don't use the `longdesc` element for longer descriptions - its browser support is patchy and there are better-supported alternatives. 
 
