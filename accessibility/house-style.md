@@ -63,7 +63,7 @@ You may use [our VPAT template](https://github.com/springernature/vpat) when eva
 
 Our target standards are [WCAG 2.0](https://www.w3.org/TR/WCAG20/) level AA.
 
-As of January 18th 2018, WCAG 2.0 AA will be incorporated by reference into Section 508 (see [Section 508 Refresh Part 1](https://www.paciellogroup.com/blog/2017/01/section-508-refresh-part-1/) by the Paciello Group). This means that in order to comply with Section 508, your products MUST also comply with WCAG 2.0 to level AA. See the Access Board's Executive Summary, Summary of Key Provisions section 2, [_Broad Application of Web Content Accessibility Guidelines 2.0_](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/i-executive-summary) for further detail.
+As of January 18th 2018, WCAG 2.0 AA has been incorporated by reference into Section 508 (see [Section 508 Refresh Part 1](https://www.paciellogroup.com/blog/2017/01/section-508-refresh-part-1/) by the Paciello Group). This means that in order to comply with Section 508, your products MUST also comply with WCAG 2.0 to level AA. See the Access Board's Executive Summary, Summary of Key Provisions section 2, [_Broad Application of Web Content Accessibility Guidelines 2.0_](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/i-executive-summary) for further detail.
 
 
 ### Tools and techniques
@@ -72,7 +72,7 @@ As of January 18th 2018, WCAG 2.0 AA will be incorporated by reference into Sect
 
 You are expected to be aware of the Web Content Accessibility Guidelines and to adhere to their recommendations. You are also expected to understand the foundational four principles of accessibility (Perceivable, Operable, Understandable, Robust) and to be able to apply them in your work. Be alert to the possibility of regressions that cannot be detected by software.
 
-The companion document [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html) explains what each of the success criterion in WCAG 2.0 actually means. You might also find the [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/) useful when building features. You may find [WCAG 1](https://www.w3.org/TR/WCAG10/) AA plus the [WCAG Samurai Errata](http://www.wcagsamurai.org/erratas/introduction/) clearer and easier to understand. 
+The companion document [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html) explains what each of the success criterion in WCAG 2.0 actually means. You might also find the [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/) useful when building features.
 
 We've also created [a simple accessibility checklist](accessibility-checklist.md), to help you become familiar with the guidelines/standards, and to aid you when manually assessing pages. 
 
