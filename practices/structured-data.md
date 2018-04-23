@@ -58,10 +58,10 @@ We primarily use JSON-LD. Information is defined in JSON using the [RDF](https:/
 ```
 
 ## Why JSON-LD?
-Expressing information in this format, opposed to the other techniques which are based on marking up HTML, provides benefits including:
+Using JSON-LD instead of marking up HTML with one of the other techniques has benefits:
 
 - Separation of structured data and HTML. Provides information about the page without binding it to specific HTML elements. This improves the maintainability of both HTML and structured data.
-- We believe that generally speaking it will be easier to generate from the backend. This is especially true for apps that already deal with JSON data as part of their implementation.
+- Generally speaking, it will be easier to generate from the backend. This is especially true for apps that already deal with JSON data as part of their implementation.
 - Easier for client apps to consume if you consider that those apps no longer need to trawl through HTML to extract.
 - JSON-LD is an official [W3C Recommendation](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium#W3C_recommendation_(REC)).
 - Google [recommends](https://developers.google.com/search/docs/guides/intro-structured-data) JSON-LD for structured data.
