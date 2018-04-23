@@ -72,9 +72,9 @@ As of January 18th 2018, WCAG 2.0 AA has been incorporated by reference into Sec
 
 You are expected to be aware of the Web Content Accessibility Guidelines and to adhere to their recommendations. You are also expected to understand the foundational four principles of accessibility (Perceivable, Operable, Understandable, Robust) and to be able to apply them in your work. Be alert to the possibility of regressions that cannot be detected by software.
 
-The companion document [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html) explains what each of the success criterion in WCAG 2.0 actually means. You might also find the [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/) useful when building features.
+The companion document [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html) explains what each of the success criterion in WCAG 2.0 actually means. You might also find the [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/) useful when building features. 
 
-We've also created [a simple accessibility checklist](accessibility-checklist.md), to help you become familiar with the guidelines/standards, and to aid you when manually assessing pages. 
+W3C WAI have published a [quick reference document for WCAG](https://www.w3.org/WAI/WCAG20/quickref/). It describes the WCAG success criteria and shows techniques and failures for each. We've also created [a simple accessibility checklist](accessibility-checklist.md), to help you become familiar with the guidelines/standards, and to aid you when manually assessing pages. 
 
 Freely use [WAI-ARIA](https://www.w3.org/TR/wai-aria/) roles and properties in your code where they help to improve accessibility of your interfaces but you SHOULD NOT use aria techniques as a way of compensating for the abuse of semantics (e.g. do not apply `role="link"` to a `div` element, instead of using `a`, etc.)
 
