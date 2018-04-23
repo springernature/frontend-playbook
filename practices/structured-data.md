@@ -1,6 +1,8 @@
 # Structured data
 
-In the context of the web, structured data refers to information describing and classifying the content of a webpage. For example; on a scientific article page, who the author is, what the article title is, and so on. Structured data contributes towards the vision of the [Semantic Web](https://en.wikipedia.org/wiki/Semantic_Web#Semantic_Web_solutions) as well as providing SEO benefit. There are 4 widely accepted ways to implement structured data:
+In the context of the web, structured data refers to information describing and classifying the content of a webpage. For example; on a scientific article page, who the author is, what the article title is, and so on. Structured data contributes towards the vision of the [Semantic Web](https://en.wikipedia.org/wiki/Semantic_Web#Semantic_Web_solutions) as well as providing SEO benefit.
+
+There are 4 widely accepted ways to implement structured data:
 - [JSON-LD](https://en.wikipedia.org/wiki/JSON-LD) (a W3C Recommendation)
 - [RDFa](https://en.wikipedia.org/wiki/RDFa) (a W3C Recommendation)
 - [Microdata](https://en.wikipedia.org/wiki/Microdata_(HTML))
