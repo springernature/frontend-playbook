@@ -26,7 +26,7 @@ Resources:
 
 Assistive technology may make use of ARIA landmark roles or HTML5 landmark elements for navigation. These allow users to quickly jump between page sections. 
 
-There are 8 landmark roles. Most browsers implicitly detect these roles if you use the correct HTML5 semantic element, but you may need to add the appropriate ARIA `role=` if you have to support an older browser. 
+There are 8 landmark roles. Most browsers implicitly detect these roles if you use the correct HTML5 semantic element, but you may need to add the appropriate ARIA `role=` if you have to support an [older browser](http://www.html5accessibility.com/#sections). 
 
 Resources:
 
