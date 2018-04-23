@@ -42,6 +42,14 @@ Declaring a language attribute on the HTML element allows a screen reader to rea
 
 If you include text on a page that uses a different language to the main document (e.g. your HTML lang is `en` and you are including a passage in `jp`), also identify that text with its own lang attribute. 
 
+We do this:
+
+```
+<p>This document has the lang="en" attribute, and this text matches the document language.</p>
+<p lang="jp">このテキストは日本語です</p>
+
+```
+
 Resources: 
 
 * [Article: Using the HTML lang attribute](https://developer.paciellogroup.com/blog/2016/06/using-the-html-lang-attribute/)
@@ -52,7 +60,9 @@ Resources:
 
 Your page should still make sense when you look at it without CSS. This is a core [progressive enhancement technique](../practices/progressive-enhancement.md). 
 
-Don't surprise users by using CSS to make changes to apparent source order. 
+Don't surprise users by using CSS to make changes to apparent source order, e.g. by using floats and absolutely-positioned elements. 
+
+Flexbox and CSS grids are particularly vulnerable to apparent source order surprises, and you should take extra care when using them. 
 
 Resources:
 
@@ -89,7 +99,7 @@ Resources:
 
 ### Audio or video elements should be accessible
 
-This could involve adding captions to videos, providing transcripts of audio content, or including audio description on videos. 
+This could involve adding [captions to videos](https://www.youtube.com/watch?v=5AXApBbj1ps), providing [transcripts of audio content](https://www.nature.com/nature/podcast/v546/n7658/nature-2017-06-15.html), or including audio description on videos. 
 
 
 ### Provide text alternatives for images
