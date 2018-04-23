@@ -11,7 +11,7 @@ There are 4 widely accepted ways to implement structured data:
 
 ## How we implement structured data
 
-Our primary method of implementation is JSON-LD. This involves defining information in JSON, adhering to the [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) format. You can add these inside `<script>` elements on the page (multiple JSON-LD script elements on a page are perfectly valid) or you can externalise the data as a file on it's own URL. Here's an example:
+We primarily use JSON-LD. Information is defined in JSON using the [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) format. You can add these inside `<script>` elements on the page (multiple JSON-LD script elements on a page are perfectly valid) or you can externalise the data as a file on it's own URL. Here's an example:
 ```html
 <!-- An article, fully linked to the issue, volume, and periodical in which it was published -->
 <script type="application/ld+json">
