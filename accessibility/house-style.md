@@ -63,7 +63,7 @@ You may use [our VPAT template](https://github.com/springernature/vpat) when eva
 
 Our target standards are [WCAG 2.0](https://www.w3.org/TR/WCAG20/) level AA.
 
-As of January 18th 2018, WCAG 2.0 AA will be incorporated by reference into Section 508 (see [Section 508 Refresh Part 1](https://www.paciellogroup.com/blog/2017/01/section-508-refresh-part-1/) by the Paciello Group). This means that in order to comply with Section 508, your products MUST also comply with WCAG 2.0 to level AA. See the Access Board's Executive Summary, Summary of Key Provisions section 2, [_Broad Application of Web Content Accessibility Guidelines 2.0_](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/i-executive-summary) for further detail.
+As of January 18th 2018, WCAG 2.0 AA has been incorporated by reference into Section 508 (see [Section 508 Refresh Part 1](https://www.paciellogroup.com/blog/2017/01/section-508-refresh-part-1/) by the Paciello Group). This means that in order to comply with Section 508, your products MUST also comply with WCAG 2.0 to level AA. See the Access Board's Executive Summary, Summary of Key Provisions section 2, [_Broad Application of Web Content Accessibility Guidelines 2.0_](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/i-executive-summary) for further detail.
 
 
 ### Tools and techniques
@@ -72,13 +72,9 @@ As of January 18th 2018, WCAG 2.0 AA will be incorporated by reference into Sect
 
 You are expected to be aware of the Web Content Accessibility Guidelines and to adhere to their recommendations. You are also expected to understand the foundational four principles of accessibility (Perceivable, Operable, Understandable, Robust) and to be able to apply them in your work. Be alert to the possibility of regressions that cannot be detected by software.
 
-When implementing WCAG 2.0, we aim to comply with [WCAG 1](https://www.w3.org/TR/WCAG10/) AA and the [WCAG Samurai Errata](http://www.wcagsamurai.org/erratas/introduction/). This gives us a high pass rate with WCAG 2.0 AA. 
-
-Most Web sites that already conform to WCAG 1.0 do not require significant (or any) changes to conform to WCAG 2.0 (Source: [W3C WAI - How WCAG 2.0 Differs from WCAG 1.0](https://www.w3.org/WAI/WCAG20/from10/diff)). 
-
 The companion document [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html) explains what each of the success criterion in WCAG 2.0 actually means. You might also find the [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/) useful when building features. 
 
-We've also created [a simple accessibility checklist](accessibility-checklist.md), to help you become familiar with the guidelines/standards, and to aid you when manually assessing pages.
+W3C WAI have published a [quick reference document for WCAG](https://www.w3.org/WAI/WCAG20/quickref/). It describes the WCAG success criteria and shows techniques and failures for each. We've also created [a simple accessibility checklist](accessibility-checklist.md), to help you become familiar with the guidelines/standards, and to aid you when manually assessing pages. 
 
 Freely use [WAI-ARIA](https://www.w3.org/TR/wai-aria/) roles and properties in your code where they help to improve accessibility of your interfaces but you SHOULD NOT use aria techniques as a way of compensating for the abuse of semantics (e.g. do not apply `role="link"` to a `div` element, instead of using `a`, etc.)
 
