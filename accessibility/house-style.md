@@ -83,7 +83,7 @@ Freely use [WAI-ARIA](https://www.w3.org/TR/wai-aria/) roles and properties in y
 
 We use [Pa11y](http://pa11y.org/) to perform automated accessibility testing. Projects MUST have Pa11y integrated at the build stage, and builds MUST fail if errors are introduced. You MUST NOT allow accessibility regressions to enter your project's codebase. 
 
-Mature projects using Pa11y for the first time MAY use the `threshold` flag to specify a baseline number of errors to allow through, but MUST aim to reduce that threshold to zero at the earliest opportunity. Watch this talk by Laura Carvajal of the Financial Times to get a [high level overview of the concept](https://www.youtube.com/watch?v=H4FzW9oFObs). 
+Mature projects using Pa11y for the first time MAY use the `threshold` flag to specify a baseline number of errors to allow through, but MUST aim to reduce that threshold to zero at the earliest opportunity. [Watch this talk by Laura Carvajal of the Financial Times](https://www.youtube.com/watch?v=H4FzW9oFObs) to get a high level overview of the concept. 
 
 Read [Automated accessibility testing with Travis CI](http://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/) to see how to integrate Pa11y with your build process. If you're not using Travis, adjust the setup for the software that you are using. 
 
@@ -94,8 +94,11 @@ Read [Automated accessibility testing with Travis CI](http://cruft.io/posts/auto
 
 - Pa11y is based on HTMLCodesniffer by Squizlabs. They also have a [bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) for quick tests. 
 - Google's Accessibility Developer Tools are available from the [Chrome Web Store](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en).
-- WebAim's [WAVE toolbar](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for Chrome evaluates accessibility in place on the page.
-- Check colour contrast compliance with Jonathan Snook's [Colour Contrast Checker](https://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333).
+- WebAim's [WAVE extension](https://wave.webaim.org/extension/) for Chrome and Firefox evaluates accessibility in place on the page.
+- Check colour contrast compliance with WebAim's [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/).
+- The [Landmarks browser extension](http://matatk.agrip.org.uk/landmarks/) (for Firefox, Chrome and Opera) enables navigation of WAI-ARIA landmarks, via the keyboard or a pop-up menu.
+- [Funkify](http://www.funkify.org/) is an extension for Chrome that helps you experience the web and interfaces through the eyes of users with different abilities and disabilities.
+- HeadingsMap (for [Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en) and [Firefox](https://addons.mozilla.org/en-GB/firefox/addon/headingsmap/)) generates a documentmap or index of any web document structured with headings, and shows its HTML 5 outline.
 
 *Caveat:* None of these tools on their own will catch every error. Even by combining all of them, it's still possible to produce an inaccessible webpage. Terrill Thompson [compared several of the most popular tools](http://terrillthompson.com/blog/730) which should give you some idea of the scale of the problem. The Government Digital Service also [conducted their own tool audit](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/). 
 
