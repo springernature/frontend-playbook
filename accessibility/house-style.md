@@ -93,7 +93,7 @@ Read [Automated accessibility testing with Travis CI](http://cruft.io/posts/auto
 #### Other accessibility testing tools
 
 - Pa11y is based on HTMLCodesniffer by Squizlabs. They also have a [bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) for quick tests. 
-- Google's Accessibility Developer Tools are available from the [Chrome Web Store](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en).
+- Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse/) audits accessibility as well as other metrics (e.g. performance) and is available as an extension, in the Chrome dev console, or as a Node CLI tool. 
 - WebAim's [WAVE extension](https://wave.webaim.org/extension/) for Chrome and Firefox evaluates accessibility in place on the page.
 - Check colour contrast compliance with WebAim's [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/).
 - The [Landmarks browser extension](http://matatk.agrip.org.uk/landmarks/) (for Firefox, Chrome and Opera) enables navigation of WAI-ARIA landmarks, via the keyboard or a pop-up menu.
