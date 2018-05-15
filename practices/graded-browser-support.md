@@ -13,7 +13,7 @@ Our browser support in summary:
 
 - Grade-A are modern and/or popular browser versions that receive all styling and behaviour. Bugs are addressed with high priority.
 - Grade-C are old and/or uncommon browser versions which are known to break if receiving full styling and behaviour. We serve only minimum CSS and JavaScript (detailed below). Bugs are addressed with high priority.
-- Grade-X is the grey area between Grade-A and Grade-C. We serve them the same code as Grade-A, but we do not test our products against these browser versions. We expect our sites to work in these browsers. Over time, analysis of errors and usage patterns may cause some browsers in Grade-X to be deliberately changed to either Grade-A or Grade-C, to allow for better support. 
+- Grade-X browsers exist in the grey area between Grade-A and Grade-C. We serve them the same code as Grade-A, but we do not test our products against these browser versions. We expect our sites to work in these browsers. Over time, analysis of errors and usage patterns may cause some browsers in Grade-X to be deliberately changed to either Grade-A or Grade-C, to allow for better support. 
 
 | Tables                      | Grade-A support                 | Grade-C support    |
 | --------------------------- |:-------------------------------:| ------------------:|
