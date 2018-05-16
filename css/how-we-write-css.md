@@ -37,7 +37,7 @@ They should be **reusable** and independent of context i.e. they should not exis
 
 They should be **modular**, which means they should have a single focus, and contain everything neccessary to display that part of the UI.
 
-They should be <a name="isolated"></a>**isolated**, meaning they do not directly modify or depend on another component. This is more important than code reuse across components as this _could_ increase dependencies and tight coupling.
+They should be **isolated**, meaning they do not directly modify or depend on another component. This is more important than code reuse across components as this _could_ increase dependencies and tight coupling.
 
 #### Utilities
 Utilities are high-specificity, very explicit immutable classes that apply a single rule or a single piece of functionality. They are used as overrides, helper classes, and to quickly build up simple page elements.
@@ -135,26 +135,16 @@ We can think of it like a spectrum with a class based OOCSS/utility approach at 
 
 ## Combining components
 
-[this is a link](#isolated)
+As stated before, our components should be **isolated**, meaning they should
 
-We have already discussed how our components should be stand-alone and have no knowledge of their container, but what about situtions where a component has to change characteristics based on it's location within another component? For example, imagine we have two components:
+> not directly modify or depend on another component. This is more important than code reuse across components as this _could_ increase dependencies and tight coupling.
 
-* `.c-navigation` that styles a list of links inline with bullet points to represent page navigation
+We would like to avoid a situation where any component _depends_ on another component, but what about situations where components have to combine together. For example, imagine we have two components:
+
 * `.c-header` that gives a header area a background colour, bottom border, and a logo floated left
+* `.c-button` a set of 'call to action' button styles
 
-In some instances we have pages where this is all that exists in the header (e.g. error pages), and we have some instances where we use the navigation styles outside of the header. But we also have pages where the navigation element exists inside the header floated to the right.
-
-We know that components should have no knowledge of their container so we would **not** create a modifier class within the navigation component, but we can create a child element within our header component like this:
-
-```scss
-.c-header {
-  .c-header__navigation {
-    float: right;
-  }
-}
-```
-
-Now all we need to do is add the `c-navigation c-header__navigation` classes to the navigation element, keeping both components de-coupled. In this instance we can also achieve the same outcome by using utility classes, for example we could add `c-navigation u-pin-right` to the navigation element. In this instance this would be the simpler approach, but consider an example where there is not a single rule - maybe we want different behaviour at different media queries, and it becomes cleaner to use the first approach.
+Imagine we want a button component that sits semantically within our header, floated to the right. Because of the modular nature of our components, we should be able to use the component classes on the individual DOM elements without clashes. We can then use utility classes to float the button. Our components stay isolated but work together. If the positioning of the button within the header means that the _cosmetic_ styling of the button needs to change, then we either need to update the button component to cater for this variation, or if it has changed significantly, then this should be built into the header component and the button not used. We need to be in a position where updating the button component does not break the header component.
 
 ## Further reading
 
