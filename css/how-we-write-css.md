@@ -33,11 +33,11 @@ A Base rule is applied to an element using an element/type selector, a descendan
 #### Components
 Components use classes to map to specific UI elements.
 
-They should be **reusable**, independent of context i.e. they should not exist only on a specific part of the DOM tree or require the use of certain element types.
+They should be **reusable** and independent of context i.e. they should not exist only on a specific part of the DOM tree or require the use of certain element types.
 
 They should be **modular**, which means they should have a single focus, and contain everything neccessary to display that part of the UI.
 
-They should be **isolated**, meaning they do not directly modify or depend on another component. This is more important than code reuse across components as this _could_ increase dependencies and tight coupling.
+They should be <a name="isolated"></a>**isolated**, meaning they do not directly modify or depend on another component. This is more important than code reuse across components as this _could_ increase dependencies and tight coupling.
 
 #### Utilities
 Utilities are high-specificity, very explicit immutable classes that apply a single rule or a single piece of functionality. They are used as overrides, helper classes, and to quickly build up simple page elements.
@@ -87,7 +87,6 @@ We implement the following rules within each level:
 * Should avoid type selectors where possible
 * Can include _private_ functions and variables (exist at this level)
 * Can include _private_ mixins (exist at _this_ level), not shared in the `30 Mixins` level
-* Can use global mixins
 * Can include child elements
 
 #### 60 Utilities
@@ -135,6 +134,8 @@ By requiring that utilities have both a class and an associated `@mixin`, we are
 We can think of it like a spectrum with a class based OOCSS/utility approach at one end, and a componentised approach at the other, with all projects sitting somewhere along that spectrum.
 
 ## Combining components
+
+[this is a link](#isolated)
 
 We have already discussed how our components should be stand-alone and have no knowledge of their container, but what about situtions where a component has to change characteristics based on it's location within another component? For example, imagine we have two components:
 
