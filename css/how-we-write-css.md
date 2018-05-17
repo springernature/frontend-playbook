@@ -88,6 +88,7 @@ We implement the following rules within each level:
 * Can include _private_ functions and variables (exist at this level)
 * Can include _private_ mixins (exist at _this_ level), not shared in the `30 Mixins` level
 * Can include child elements
+* MUST NOT include any associated mixins at the `30 Mixins` level
 
 #### 60 Utilities
 * MUST NOT include type selectors
