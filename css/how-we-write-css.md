@@ -33,7 +33,7 @@ A Base rule is applied to an element using an element/type selector, a descendan
 #### Components
 Components use classes to map to specific UI elements.
 
-They should be **reusable** and independent of context i.e. they should not exist only on a specific part of the DOM tree or require the use of certain element types.
+They should be **reusable** and independent of context.
 
 They should be **modular**, which means they should have a single focus, and contain everything neccessary to display that part of the UI.
 
