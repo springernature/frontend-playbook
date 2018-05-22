@@ -35,7 +35,7 @@ Components use classes to map to specific UI elements.
 
 They should be **reusable** and independent of context.
 
-They should be **modular**, which means they should have a single focus, and contain everything neccessary to display that part of the UI.
+They should be **modular**, which means they should have a single focus, and contain everything necessary to display that part of the UI.
 
 They should be **isolated**, meaning they do not directly modify or depend on another component. This is more important than code reuse across components as this _could_ increase dependencies and tight coupling.
 
@@ -122,9 +122,9 @@ HTML classes that have an impact only at specific screen sizes have a @breakpoin
 <p class="u-text-center u-text-left@small">Center align until small breakpoint, then align left.</p>
 ```
 
-## Components vs Utilties
+## Components vs Utilities
 
-The key differences between components and utilties are that utilites should be purely structural and contain no child elements, whereas components can combine both structural and cosmetic rules, and can make use of child and descendent selectors.
+The key differences between components and utilities are that utilites should be purely structural and contain no child elements, whereas components can combine both structural and cosmetic rules, and can make use of child and descendent selectors.
 
 Components can be large or small, and map to particular UI elements. Components will often require a distinct set of markup, and might have associated javascript.
 
