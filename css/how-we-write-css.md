@@ -40,7 +40,7 @@ They should be **modular**, which means they should have a single focus, and con
 They should be **isolated**, meaning they do not directly modify or depend on another component. This is more important than code reuse across components as this _could_ increase dependencies and tight coupling.
 
 #### Utilities
-Utilities are high-specificity, very explicit immutable classes that apply a single rule or a single piece of functionality. They are used as overrides, helper classes, and to quickly build up simple page elements.
+Utilities are high-specificity, very explicit immutable classes that apply a single rule or a single piece of functionality. They are used as overrides, helper classes, and to quickly scaffold up simple page elements.
 
 Utilities can be used by applying the class to an element, or by including the mixin within the other levels. They should be able to apply to any element and not be bound to any particular markup, and also be independent of any cosmetic styling or branding.
 
