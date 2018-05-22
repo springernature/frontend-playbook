@@ -25,19 +25,22 @@ Contains all **global** SASS variables for your project e.g. colors, fonts, medi
 Contains all **global** SASS functions e.g. em calculation, unit stripping.
 
 #### Mixins
-Contains all **global** SASS mixins, this includes mixin definitions used in the **pattern** and **utility** levels.
+Contains all **global** SASS mixins, this includes mixin definitions used in the **component** and **utility** levels.
 
 #### Base
 A Base rule is applied to an element using an element/type selector, a descendant selector, or a child selector, along with any pseudo-classes. Base styles are related to the basic styles of your product, like typography, reset and global elements like links. Use this level to include any (third-party) resets or normalization css.
 
 #### Components
-Components use classes to map to specific UI elements. They should exist as stand-alone UI components and **never** depend on other components.
+Components use classes to map to specific UI elements.
 
-#### Patterns
-Patterns use classes to apply a reusable design pattern. This level should include any pattern that does not bind itself to a particular UI element. Styles written here can include both structural and cosmetic rules, and apply branding.
+They should be **reusable** and independent of context.
+
+They should be **modular**, which means they should have a single focus, and contain everything necessary to display that part of the UI.
+
+They should be **isolated**, meaning they do not directly modify or depend on another component. This is more important than code reuse across components as this _could_ increase dependencies and tight coupling.
 
 #### Utilities
-Utilities are high-specificity, very explicit classes that apply a single rule or a single piece of functionality. They are used as overrides, helper classes, and to quickly build up simple page elements.
+Utilities are high-specificity, very explicit immutable classes that apply a single rule or a single piece of functionality. They are used as overrides, helper classes, and to quickly scaffold up simple page elements.
 
 Utilities can be used by applying the class to an element, or by including the mixin within the other levels. They should be able to apply to any element and not be bound to any particular markup, and also be independent of any cosmetic styling or branding.
 
@@ -51,8 +54,7 @@ It can be useful to use numbers at the start of your folder names so that the or
 30-mixins
 40-base
 50-components
-60-patterns
-70-utilities
+60-utilities
 ```
 
 ### Wider architecture
@@ -77,7 +79,7 @@ We implement the following rules within each level:
 * Can include _private_ functions and variables (exist at this level)
 
 #### 40 Base
-* Should avoid class selectors where possible 
+* Should avoid class selectors where possible
 * MUST NOT include _private_ functions and variables (exist at _this_ level)
 * MUST NOT include _private_ mixins (exist at _this_ level)
 
@@ -85,23 +87,16 @@ We implement the following rules within each level:
 * Should avoid type selectors where possible
 * Can include _private_ functions and variables (exist at this level)
 * Can include _private_ mixins (exist at _this_ level), not shared in the `30 Mixins` level
-* Can use global mixins
-
-#### 60 Patterns
-* Should avoid type selectors where possible
-* MUST NOT include _private_ functions and variables (exist at _this_ level)
-* MUST NOT include _private_ mixins (exist at _this_ level)
-* Where there is more than one rule, an associated `@mixin` should be provided at the `30 Mixins` level
-* Can use global mixins
 * Can include child elements
+* Can include any associated mixins at the `30 Mixins` level
 
-#### 70 Utilities
+#### 60 Utilities
 * MUST NOT include type selectors
 * MUST NOT include _private_ functions and variables (exist at _this_ level)
 * MUST NOT include _private_ mixins (exist at _this_ level)
 * Should consist of a single class
 * MUST NOT include child elements, except pseudo-classes
-* Where there is more than one rule, an associated `@mixin` should be provided at the `30 Mixins` level
+* Where there is more than one rule, an associated mixin should be provided at the `30 Mixins` level
 * MUST NOT include any cosmetic styling (color, border, background, etc)
 
 ## HTML class naming
@@ -117,7 +112,6 @@ We follow the following rules when writing class names:
 Every HTML class should be prefixed with a namespace according to the level to which it belongs:
 
 * `c-` for components e.g. `c-button`
-* `p-` for patterns e.g. `p-external-link`
 * `u-` for utilities e.g. `u-clearfix`
 
 ### Breakpoint Suffixes
@@ -128,40 +122,30 @@ HTML classes that have an impact only at specific screen sizes have a @breakpoin
 <p class="u-text-center u-text-left@small">Center align until small breakpoint, then align left.</p>
 ```
 
-## Patterns vs Utilties vs Components
+## Components vs Utilities
 
-The key difference between patterns and utilties are that utilites should be purely structural and contain no child elements, whereas patterns can combine both structural and cosmetic rules, and can make use of child and descendent selectors.
+The key differences between components and utilities are that utilites should be purely structural and contain no child elements, whereas components can combine both structural and cosmetic rules, and can make use of child and descendent selectors.
 
-The difference between patterns and components is that components are often larger and can map to particular UI elements. Components will often require a distinct set of markup, and might have associated javascript.
+Components can be large or small, and map to particular UI elements. Components will often require a distinct set of markup, and might have associated javascript.
 
-## A range of approaches
+## Classes vs Mixins
 
-Hopefully the methodology we have described allows for a range of approaches within our defined framework. By requiring that both utilities and patterns **all** have both a class and an associated `@mixin`, we are allowing elmements to be constructed by using a traditional OOCSS approach - by breaking stuff down into smaller shared design patterns, then using them by building up classes on html elements, or by using a more componentised approach that focuses more on creating UI components that make extensive use of mixins to build themselves within the SASS.
-
-It is perfectly possible that some projects will make heavy use of the pattern layer combined with utility classes whilst being light on components, where as some projects don't have so many reuseable design patterns and instead make extensive use of mixins and the components layer.
+By requiring that utilities have both a class and an associated `@mixin`, we are allowing simple UI elmements to be constructed by using a traditional OOCSS approach - by combining component and utility classes on html elements - or by using a more componentised approach that focuses on creating UI components that make extensive use of mixins.
 
 We can think of it like a spectrum with a class based OOCSS/utility approach at one end, and a componentised approach at the other, with all projects sitting somewhere along that spectrum.
 
 ## Combining components
 
-We have already discussed how our components should be stand-alone and have no knowledge of their container, but what about situtions where a component has to change characteristics based on it's location within another component? For example, imagine we have two components:
+As stated before, our components should be **isolated**, meaning they should
 
-* `.c-navigation` that styles a list of links inline with bullet points to represent page navigation
+> not directly modify or depend on another component. This is more important than code reuse across components as this _could_ increase dependencies and tight coupling.
+
+We would like to avoid a situation where any component _depends_ on another component, but what about situations where components have to combine together. For example, imagine we have two components:
+
 * `.c-header` that gives a header area a background colour, bottom border, and a logo floated left
+* `.c-button` a set of 'call to action' button styles
 
-In some instances we have pages where this is all that exists in the header (e.g. error pages), and we have some instances where we use the navigation styles outside of the header. But we also have pages where the navigation element exists inside the header floated to the right.
-
-We know that components should have no knowledge of their container so we would **not** create a modifier class within the navigation component, but we can create a child element within our header component like this:
-
-```scss
-.c-header {
-  .c-header__navigation {
-    float: right;
-  }
-}
-```
-
-Now all we need to do is add the `c-navigation c-header__navigation` classes to the navigation element, keeping both components de-coupled. In this instance we can also achieve the same outcome by using utility classes, for example we could add `c-navigation u-pin-right` to the navigation element. In this instance this would be the simpler approach, but consider an example where there is not a single rule - maybe we want different behaviour at different media queries, and it becomes cleaner to use the first approach.
+Imagine we want a button component that sits semantically within our header, floated to the right. Because of the modular nature of our components, we should be able to use the component classes on the individual DOM elements without clashes. We can then use utility classes to float the button. Our components stay isolated but work together. If the positioning of the button within the header means that the _cosmetic_ styling of the button needs to change, then we either need to update the button component to cater for this variation, or if it has changed significantly, then this should be built into the header component and the button not used. We need to be in a position where updating the button component does not break the header component.
 
 ## Further reading
 
