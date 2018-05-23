@@ -828,7 +828,7 @@ function init() {
    addEventListeners();
 }
 
-exports default { init };
+export default { init };
 ```
 
 Your modules are to be _consumed_ by your entry point:
@@ -850,7 +850,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 This approach is:
 
 - Easy to read and intuitive.
-- Standards compliant (ES2015 module syntax - import and exports).
+- Standards compliant (ES2015 module syntax - import and export).
 - Adherent to clean code practices as the `main.js` file only becomes an orchestrator, and it is kept free of logic. It has one job, which is to invoke other smaller modules.
 - Useful for unit testing as the small isoloated modules are easy to test.
 
@@ -873,7 +873,7 @@ function module({url = 'https://...', animate = false}) {
   console.log(url, animate)
 }
 
-exports default { init };
+export default { init };
 ```
 
 #### Imports
@@ -914,7 +914,7 @@ function get(easing) {
   // Logic here
 }
 
-exports default { get, isValid };
+export default { get, isValid };
 ```
 
 Then consume the API:
@@ -932,7 +932,7 @@ function init({element, easing}) {
   }
 }
 
-exports default { init };
+export default { init };
 ```
 
 #### Events for unrelated modules
@@ -950,7 +950,7 @@ function init() {
   PubSub.subscribe('event:navigation', beaconToAnalytics)
 }
 
-exports default { init };
+export default { init };
 ```
 
 ### DOM binding
@@ -998,7 +998,7 @@ function init(settings) {
     const selectors = Object.assign({}, defaults, settings)
 }
 
-module.exports = {init};
+module.export = {init};
 ```
 ```js
 myComplexModule.init({
