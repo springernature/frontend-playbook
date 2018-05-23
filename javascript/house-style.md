@@ -828,7 +828,7 @@ function init() {
    addEventListeners();
 }
 
-export default { init };
+export default init;
 ```
 
 Your modules are to be _consumed_ by your entry point:
@@ -873,7 +873,7 @@ function module({url = 'https://...', animate = false}) {
   console.log(url, animate)
 }
 
-export default { init };
+export default init;
 ```
 
 #### Imports
@@ -914,7 +914,7 @@ function get(easing) {
   // Logic here
 }
 
-export default { get, isValid };
+export { get, isValid };
 ```
 
 Then consume the API:
@@ -932,7 +932,7 @@ function init({element, easing}) {
   }
 }
 
-export default { init };
+export default init;
 ```
 
 #### Events for unrelated modules
@@ -950,7 +950,7 @@ function init() {
   PubSub.subscribe('event:navigation', beaconToAnalytics)
 }
 
-export default { init };
+export default init;
 ```
 
 ### DOM binding
@@ -998,7 +998,7 @@ function init(settings) {
     const selectors = Object.assign({}, defaults, settings)
 }
 
-module.export = {init};
+export default init;
 ```
 ```js
 myComplexModule.init({
