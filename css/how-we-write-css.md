@@ -124,7 +124,7 @@ HTML classes that have an impact only at specific screen sizes have a @breakpoin
 
 ## Components vs Utilities
 
-The key differences between components and utilities are that utilites should be purely structural and contain no child elements, whereas components can combine both structural and cosmetic rules, and can make use of child and descendent selectors.
+The key differences between components and utilities are that utilities should be purely structural and contain no child elements, whereas components can combine both structural and cosmetic rules, and can make use of child and descendant selectors.
 
 Components can be large or small, and map to particular UI elements. Components will often require a distinct set of markup, and might have associated javascript.
 
