@@ -25,7 +25,7 @@ We leave it to the requester to merge their own changes when they are ready, bec
 1. Ensure that any changes to front-end code conforms to the same standards and guidelines.
 1. Fosters discussion and collaboration.
 1. Fosters caution and code quality over temporary hacks.
-1. Prepares people for work on open source software projects.
+1. Prepares people for work on [open source software projects](https://github.com/springernature/open-source-directory).
 
 
 ## How
