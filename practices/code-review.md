@@ -11,21 +11,23 @@ While we can support "traditional" Code Reviews, we routinely review via **pull 
 We leave it to the requester to merge their own changes when they are ready, because sometimes the requester might not want their work merged immediately.
 
 
-## Why
+## Why do them?
 
-1. PR reviews are cross-team;
-    * allows everyone to learn from their colleagues.
-    * allows greater visibility of other teams work.
-    * FED works encompasses many areas of expertise, and no-one is expert in more than 2 or 3 areas.
-    * facilitates people moving to other teams as they are more familiar with the codebase.
-    * helps prevent knowledge silos.
-    * helps identify areas where code re-use may be of benefit ("should that be a component?").
-    * if the code requires so much domain-specifc knowledge it cannot be understood by other teams, maybe that code needs refactoring?
-    * generally aids onboarding and training.
-1. Ensure that any changes to front-end code conforms to the same standards and guidelines.
-1. Fosters discussion and collaboration.
-1. Fosters caution and code quality over temporary hacks.
+**PR reviews are cross-team helping to foster discussion and feedback**
+
+1. Knowledge sharing and transfer within and between teams:
+	* allows everyone to learn from their colleagues;
+	* allows greater visibility and familiarity of other team's work;
+	* helps prevent knowledge silos or domain-specific codebases;
+	* allows FEDs to share expertise.
+1. Standards compliance across teams:
+	* aids the ability for developers to easily move between teams;
+	* ensures changes to codebase conforms to the same standards and guidelines;
+	* helps identify areas where code re-use are beneficial ("should that be a component?");
+	* helps identify areas of compliance, which are missed during development;
+	* fosters caution and code quality over temporary hacks.
 1. Prepares people for work on [open source software projects](https://github.com/springernature/open-source-directory).
+1. Generally aids onboarding and training.
 
 
 ## How
