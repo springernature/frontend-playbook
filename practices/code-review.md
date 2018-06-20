@@ -62,23 +62,23 @@ Here's the general process that we use:
 
 * **Accessibility**
 
-  * Accessibility problems. Suggest testing with [pa11y](https://github.com/pa11y) and/or other tools.
+  * [Accessibility](../accessibility/accessibility-checklist.md) problems. Suggest testing with [pa11y](https://github.com/pa11y) and/or other tools.
     * [internal-only pa11y dashboard](http://pa11y.springernature.com/)
 
 * **Complexity**
 
-  * Overly complex code: code that solves problems we don't have, or makes things more complex instead of simplifying things.
-  * Code that introduces unnecessary dependencies into the project.
+  * [Overly complex code](https://www.codesimplicity.com/post/what-is-overengineering/): code that solves problems we don't have, or makes things more complex instead of less.
+  * Code that introduces [out-of-date](https://docs.npmjs.com/cli/outdated) or unnecessary dependencies into the project.
   * Changes which may have wider ramifications than the author anticipated. Double check they are aware which can of worms they have just opened :)
 
 * **Performance**
 
-  * Premature and/or micro optimisations.
+  * [Premature](http://wiki.c2.com/?PrematureOptimization) and/or micro optimisations.
   * Non-performant code. Suggest testing with [Lighthouse](https://developers.google.com/web/tools/lighthouse/), [SpeedCurve](https://speedcurve.com), [WebPageTest](https://www.webpagetest.org/) and/or other tools.
 
 * **Scope**
 
-  * PRs which are non-atomic and should be split into separate PRs, e.g. a new UI feature combined with an unrelated configuration change.
+  * [PRs which are non-atomic](https://medium.com/@fagnerbrack/one-pull-request-one-concern-e84a27dfe9f1) and should be split into separate PRs, e.g. a new UI feature combined with an unrelated configuration change.
   * Code which could be split up into reusable modules.
 
 * **Security**
@@ -86,4 +86,4 @@ Here's the general process that we use:
   * Code that introduces potential vulnerabilities. Suggest testing with [Snyk](https://snyk.io) and/or other tools.
 
 * **Syntax**
-  * Syntactic inconsistencies the linter did not catch.
+  * Syntactic inconsistencies the [linter](https://github.com/springernature/frontend-playbook/blob/master/practices/house-style.md#linting) did not catch.
