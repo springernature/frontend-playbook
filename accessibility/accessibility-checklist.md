@@ -195,6 +195,7 @@ Resources:
 
 * [Article: HTML5 Accessibility Chops: the placeholder attribute](https://developer.paciellogroup.com/blog/2011/02/html5-accessibility-chops-the-placeholder-attribute/)
 * [Article: 11 reasons why placeholders are problematic](https://medium.com/simple-human/10-reasons-why-placeholders-are-problematic-f8079412b960)
+* [Article: Don’t Use The Placeholder Attribute](https://www.smashingmagazine.com/2018/06/placeholder-attribute)
 
 
 ## Content
