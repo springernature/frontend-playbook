@@ -13,7 +13,7 @@ We leave it to the requester to merge their own changes when they are ready, bec
 
 ## Why do them?
 
-**PR reviews are cross-team helping to foster discussion and feedback**
+**PR reviews are cross-team, thereby helping to foster discussion and feedback**
 
 1. Knowledge sharing and transfer within and between teams:
 	* allows everyone to learn from their colleagues;
