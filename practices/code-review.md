@@ -11,21 +11,23 @@ While we can support "traditional" Code Reviews, we routinely review via **pull 
 We leave it to the requester to merge their own changes when they are ready, because sometimes the requester might not want their work merged immediately.
 
 
-## Why
+## Why do them?
 
-1. PR reviews are cross-team;
-    * allows everyone to learn from their colleagues.
-    * allows greater visibility of other teams work.
-    * FED works encompasses many areas of expertise, and no-one is expert in more than 2 or 3 areas.
-    * facilitates people moving to other teams as they are more familiar with the codebase.
-    * helps prevent knowledge silos.
-    * helps identify areas where code re-use may be of benefit ("should that be a component?").
-    * if the code requires so much domain-specifc knowledge it cannot be understood by other teams, maybe that code needs refactoring?
-    * generally aids onboarding and training.
-1. Ensure that any changes to front-end code conforms to the same standards and guidelines.
-1. Fosters discussion and collaboration.
-1. Fosters caution and code quality over temporary hacks.
+**PR reviews are cross-team, thereby helping to foster discussion and feedback**
+
+1. Knowledge sharing and transfer within and between teams:
+	* Allows everyone to learn from their colleagues.
+	* Allows greater visibility and familiarity of other team's work.
+	* Helps prevent knowledge silos or domain-specific codebases.
+	* Allows FEDs to share expertise.
+1. Standards compliance across teams:
+	* Aids the ability for developers to easily move between teams.
+	* Ensures changes to codebase conforms to the same standards and guidelines.
+	* Helps identify areas where code re-use are beneficial ("should that be a component?").
+	* Helps identify areas of compliance, which are missed during development.
+	* Fosters caution and code quality over temporary hacks.
 1. Prepares people for work on [open source software projects](https://github.com/springernature/open-source-directory).
+1. Generally aids onboarding and training.
 
 
 ## How
