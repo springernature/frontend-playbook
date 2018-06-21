@@ -16,16 +16,16 @@ We leave it to the requester to merge their own changes when they are ready, bec
 **PR reviews are cross-team, thereby helping to foster discussion and feedback**
 
 1. Knowledge sharing and transfer within and between teams:
-	* allows everyone to learn from their colleagues;
-	* allows greater visibility and familiarity of other team's work;
-	* helps prevent knowledge silos or domain-specific codebases;
-	* allows FEDs to share expertise.
+	* Allows everyone to learn from their colleagues.
+	* Allows greater visibility and familiarity of other team's work.
+	* Helps prevent knowledge silos or domain-specific codebases.
+	* Allows FEDs to share expertise.
 1. Standards compliance across teams:
-	* aids the ability for developers to easily move between teams;
-	* ensures changes to codebase conforms to the same standards and guidelines;
-	* helps identify areas where code re-use are beneficial ("should that be a component?");
-	* helps identify areas of compliance, which are missed during development;
-	* fosters caution and code quality over temporary hacks.
+	* Aids the ability for developers to easily move between teams.
+	* Ensures changes to codebase conforms to the same standards and guidelines.
+	* Helps identify areas where code re-use are beneficial ("should that be a component?").
+	* Helps identify areas of compliance, which are missed during development.
+	* Fosters caution and code quality over temporary hacks.
 1. Prepares people for work on [open source software projects](https://github.com/springernature/open-source-directory).
 1. Generally aids onboarding and training.
 
