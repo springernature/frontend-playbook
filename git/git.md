@@ -1,7 +1,9 @@
 # Git
 
 * [Repositories](#repositories)
-* [Commit Messages](#commit-messages)
+* [Working with branches](#working-with-branches)
+* [Commit messages](#commit-messages)
+* [Pull requests](#pull-requests)
 * [Versioning](#versioning)
 
 ## Repositories
