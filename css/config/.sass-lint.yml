@@ -20,7 +20,7 @@ rules:
     indentation:
         - 2
         -
-          size: 4
+          size: 'tab'
     brace-style:
         - 2
         -
