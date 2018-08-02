@@ -1,6 +1,6 @@
 # JavaScript style guide
 
-This document outlines the way we write JavaScript. It's a living styleguide – it will grow as our practices do.
+This document outlines the way we write JavaScript. It's a living style guide – it will grow as our practices do.
 
 - [General principles](#general-principles)
   - [Progressively enhance](#progressively-enhance)
@@ -10,16 +10,13 @@ This document outlines the way we write JavaScript. It's a living styleguide –
   - [Performant code](#performant-code)
 - [Code style](#code-style)
   - [Linting](#linting)
-    - [Automatically fixing code](#automatically-fixing-code)
-    - [Disabling rules](#disabling-rules)
-    - [Questions and answers](#questions-and-answers)
   - [Comments](#comments)
   - [Asynchronicity](#asynchronicity)
     - [Things to consider](#things-to-consider)
     - [Tips](#tips)
       - [Awaiting multiple promises](#awaiting-multiple-promises)
       - [Multiple awaits in a one-liner](#multiple-awaits-in-a-one-liner)
-      - [Arrow function sytax with await](#arrow-function-sytax-with-await)
+      - [Arrow function syntax with await](#arrow-function-syntax-with-await)
       - [Fallback to promises](#fallback-to-promises)
     - [Further reading](#further-reading)
   - [Indentation](#indentation)
@@ -53,7 +50,6 @@ This document outlines the way we write JavaScript. It's a living styleguide –
     - [Vendor directory](#vendor-directory)
     - [Utils directory](#utils-directory)
 
-
 ## General principles
 
 ### Progressively enhance
@@ -62,7 +58,7 @@ JavaScript solutions must exist purely as a [progressive enhancement](../practic
 
 ### Code for humans
 
-Your JavaScript should always be optimised for readability first, as someone is going to have to maintain your code. Most of the rules in this style guide are here to help enforce this. See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style. 
+Your JavaScript should always be optimised for readability first, as someone is going to have to maintain your code. Most of the rules in this style guide are here to help enforce this. See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style.
 
 Code should be self-documenting wherever possible. This means writing sensible method names and using variables which adequately describe the object in question. Assume no prior knowledge when somebody new starts to contribute to the codebase.
 
@@ -144,107 +140,15 @@ If you're writing a small library with a single simple purpose, and you really _
 
 Understanding [when to optimise](https://en.wikipedia.org/wiki/Program_optimization#When_to_optimize) is a valuable skill in software development.
 
-Code style
----------
+## Code style
 
 ### Linting
 
-JavaScript code should be linted with the most recent version of [XO](https://github.com/sindresorhus/xo), using the default lint settings. XO uses [eslint](http://eslint.org/) under the hood.
+Static analysis tools like linters can flag programming errors, bugs and stylistic errors, making your code more robust and maintainable.
 
-If you are using ES2015+ syntax, XO provides [configuration](https://github.com/sindresorhus/xo#esnext) to enforce relevant rules. Add this in your `package.json` to enable it:
+JavaScript code should be linted with [eslint](https://eslint.org/) using the [Springer Nature `eslint-config`](https://github.com/springernature/eslint-config-springernature). This configuration allows us to maintain consistency between different projects.
 
-```js
-"xo": {
-  "esnext": true
-}
-```
-
-Consider the following scenario: Assume the `semicolon` rule is `on`, if you omit a semicolon from your JavaScript code, it is suggested the following actions occur:
-
-1. Your code editor should inform you of this linting failure. There are [XO plugins](https://github.com/sindresorhus/xo#editor-plugins) for popular editors such as [Sublime Text](https://github.com/sindresorhus/SublimeLinter-contrib-xo) and [Atom](https://github.com/sindresorhus/atom-linter-xo).
-2. Your local `watch` tasks, e.g. those run through Grunt, Gulp, Make etc. inform you of this error in your terminal. There are [XO plugins](https://github.com/sindresorhus/xo#build-system-plugins) for [Grunt](https://github.com/sindresorhus/grunt-xo), [Gulp](https://github.com/sindresorhus/gulp-xo) and the [CLI](https://github.com/sindresorhus/xo#install).
-3. When you push code which fails to lint, your build pipeline should invoke XO as part of a build task. The job should then fail.
-
-#### Automatically fixing code
-
-You can use XO as a command line tool. Once you install it, XO can automatically fix _some_ linting failures. Given a file `file.js` which contains the following:
-
-```js
-const object = {
-    foo:function(){}
-}
-```
-
-You can run XO with the `fix` option: `xo --fix file.js`. The same file now contains this:
-
-```js
-const object = {
-    foo: function () {}
-};
-```
-
-#### Disabling rules
-
-XO provides a sane set of [sensible defaults](https://github.com/sindresorhus/eslint-config-xo/blob/b61bee396a67e2ea8e2fd9ae34bad36c9143cb15/index.js#L16-L264), it is unnecessary to disable rules according to your personal preferences.
-
-If you feel the need to disable a rule, you should:
-
-- Understand why the rule exists in the first place. For example the [no-unassigned-import](https://github.com/benmosher/eslint-plugin-import/blob/bd0e5e3dd5781b125dc02971ddb011aaa554bf4f/docs/rules/no-unassigned-import.md) rule provides: a readable description + pass/fail code examples.
-- Raise it with your team, providing a compelling reason to disable a rule.
-
-To disable a rule, wrap the offending code in `eslint-disable` directives, for example:
-
-```js
-/* eslint-disable no-unassigned-import */
-require('polyfill');
-/* eslint-enable no-unassigned-import */
-```
-
-Do not switch rules off permanently in a project unless you have a strong reason for doing so. If you do have a strong reason, ensure you have discussed this with your team beforehand.
-
-Switching off a rule _permanently_ can present some problems:
--  You introduce potential inconsistencies within a single project.
--  You become subject to JavaScript quirks which a linter would typically warn you of. (Does not apply to stylistic rules)
--  You forget to enable the rule again when the offending code is removed from the codebase.
--  You mask the original reason and context as to why the rule was disabled in the first place. (You can improve this point with comments)
-
-#### Questions and answers
-
-Q: XO is complaining about the following code:
-
-```js
-adsProvider.load();
-```
-
-It says `adsProvider` is not defined, but it's a global variable already present in the page. What should I do?
-
-A: This breaks the [no-undef](http://eslint.org/docs/rules/no-undef) rule of ESLint. You must specify to ESLint that this is an expected global variable. Do not define this project-wide, but rather, be explicit about which file or files need it.
-
-```js
-/* global adsProvider */
-```
-
-Q: I just added XO into the build, now everything is failing the linting process.
-
-A: If your codebase has never been linted before, you might find rules being broken in each file. Fixing large amounts of code to pass linting may not be possible to do in one go. As a team, consider adopting an approach to successfully lint each file you touch as part of regular feature development. During this period, alter your build task accordingly to only lint files which you know you have linted. E.g.
-
-```js
-gulp.task('lint', () =>
-    gulp.src([
-      'js/file1.js',
-      'js/file2.js'
-    ])
-    .pipe(xo())
-);
-```
-
-Q: XO is complaining about undefined variables in my JavaScript unit test code.
-
-A: XO supports many [popular environment global variables](http://eslint.org/docs/user-guide/configuring#specifying-environments). Specify an environment of your choice to add the necessary global variables. Combine this with [Config Overrides](https://github.com/sindresorhus/xo#config-overrides) to ensure you don't apply one or many environments to your entire codebase accidentally.
-
-Q: I transformed my code to adhere to XO, but now it is less readable.
-
-A: Code linting should help improve your overall code quality. If you now have less readable code, consider if there is a [code smell](https://en.wikipedia.org/wiki/Code_smell) that is conducive to breaking a lint rule, if so, you might need to refactor your code.
+You can check the [README](https://github.com/springernature/eslint-config-springernature/blob/master/README.md) for details about installing and configuring the tools.
 
 ### Comments
 
@@ -361,7 +265,7 @@ You can wrap the `await` + function call in parentheses to enable calls like thi
 await (await fetch('http://numbersapi.com/random/year?json')).json()
 ```
 
-##### Arrow function sytax with await
+##### Arrow function syntax with await
 
 You can use `async` functions with the arrow function syntax:
 
