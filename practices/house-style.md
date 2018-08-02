@@ -1,5 +1,4 @@
-House style guide
-=================
+# House style guide
 
 This document outlines the reasons for our having a house style, and generally-applicable principles. It's a living styleguide – it will grow as our practices do.
 
@@ -12,13 +11,11 @@ This document outlines the reasons for our having a house style, and generally-a
   - [Written communications](#written-communications)
 - [Making changes to the house style](#making-changes-to-the-house-style)
 
-
 ## Rationale
 
 The benefits of choosing one house style outweigh the benefits of allowing people free rein with code style. Personal preference is outweighed by the greater good. This isn't to say that we shouldn't constantly be looking to improve our ways of working. We aim to reduce friction for ourselves as we move between teams, and we do this by maintaining a general house style, linting, and agreeing on common practices.
 
 Read this excellent [article by Nicholas C. Zakas](https://www.smashingmagazine.com/2012/10/why-coding-style-matters/) to understand why having a house style is important.
-
 
 ## General principles
 
@@ -26,19 +23,17 @@ Read the [markup guide](../markup/house-style.md), the [JavaScript guide](../jav
 
 ### Linting
 
-We lint our CSS, JavaScript, and templates written with DustJS. This helps us to keep our codebases consistent, avoid common logic and implementation errors, and lets us concentrate on solving problems instead of formatting.
+We lint our CSS, JavaScript, and templates written with DustJS. This helps us to keep our different codebases consistent, avoid common logic and implementation errors, and lets us concentrate on solving problems instead of formatting.
 
-* For CSS, use [StyleLint](https://github.com/stylelint/stylelint)
-* For JavaScript, use [XO](https://github.com/sindresorhus/xo)
-* For DustJS, use [Dustmite](https://www.npmjs.com/package/dustmite)
+* For DustJS templates, we use [Dustmite](https://www.npmjs.com/package/dustmite). You can find more details about how we write markup in our [markup guide](../markup/house-style.md).
+* For CSS linting, we use [StyleLint](https://github.com/stylelint/stylelint) and [sass-lint](https://github.com/sasstools/sass-lint). You can find our configuration and examples in our [CSS style guide](../css/house-style.md).
+* For JavaScript linting, we use [eslint](https://eslint.org/) with our own [eslint configuration](https://github.com/springernature/eslint-config-springernature). You can find our principles and best practices in the [JavaScript style guide](../javascript/house-style.md).
 
-See the [CSS](../css/house-style.md), [JavaScript](../javascript/house-style.md), and [markup](../markup/house-style.md) guides for further details.
-
-### Accessibility 
+### Accessibility
 
 We care a great deal about accessibility. Our target standards for all of our products are [WCAG 2.0](https://www.w3.org/TR/WCAG20/) level AA.
 
-All of our websites MUST comply with [US Section 508](https://www.section508.gov/) and [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). As of January 18th 2018, WCAG 2.0 AA will be incorporated into Section 508. 
+All of our websites MUST comply with [US Section 508](https://www.section508.gov/) and [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). As of January 18th 2018, WCAG 2.0 AA will be incorporated into Section 508.
 
 Read our [Accessibility guide](../accessibility/house-style.md) to understand how we meet these aims.
 
@@ -60,7 +55,6 @@ Read the [code review guide](../practices/code-review.md) for details on how we 
 
 Not all written communications need to follow house style - for e.g. we don't expect you to follow any rules in Slack, beyond what's expected of you as a professional. If you write for any of our open source repositories (including documentation), [Cruft.io](http://cruft.io/), or any of our [social media accounts](../writing/social-media.md), please familiarise yourself with the [Language guide](../writing/house-style.md). Always use [inclusive language](../writing/inclusive-language.md).
 
-
 ## Making changes to the house style
 
 The playbook outlines our _current_ agreed house style. It's not written in stone, everybody has the opportunity to contribute and make changes. However, it's easy to [waste time and effort](https://en.wikipedia.org/wiki/Law_of_triviality) discussing code style. We use a process to make these discussions structured and productive.
@@ -68,6 +62,6 @@ The playbook outlines our _current_ agreed house style. It's not written in ston
 If you would like to propose a change to house style, follow these steps:
 
 1. Read the relevant page in the playbook (assuming it exists).
-2. Understand that you SHOULD NOT deviate from this style unless there are valid reasons in particular circumstances when the particular behavior is acceptable or even useful.
+2. Understand that you SHOULD NOT deviate from this style unless there are valid reasons in particular circumstances when the particular behaviour is acceptable or even useful.
 3. If you believe that your situation or case meets the criteria in point 2, detail to the rest of the team the benefits of making an exception or a change.
-4. If the team agrees that your exeption (or change) is acceptable and useful, submit a PR to the playbook, detailing the exception (or change) to the world.
+4. If the team agrees that your exception (or change) is acceptable and useful, submit a PR to the playbook, detailing the exception (or change) to the world.
