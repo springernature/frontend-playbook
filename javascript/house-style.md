@@ -144,7 +144,7 @@ Understanding [when to optimise](https://en.wikipedia.org/wiki/Program_optimizat
 
 ### Linting
 
-Static analysis tools like linters can flag programming errors, bugs and stylistic errors, making your code more robust and maintainable.
+Static analysis tools like linters can flag programming errors, bugs and stylistic errors, making your code more robust, readable and maintainable.
 
 JavaScript code should be linted with [eslint](https://eslint.org/) using the [Springer Nature `eslint-config`](https://github.com/springernature/eslint-config-springernature). This configuration allows us to maintain consistency between different projects.
 
