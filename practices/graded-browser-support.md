@@ -1,67 +1,90 @@
-# Graded browser support
+# Browser support
 
-* [Our criteria for browser support](#our-criteria-for-browser-support)
-* [How we implement graded browser support](#how-we-implement-graded-browser-support)
+This page describes the way that we support different browsers and browser versions when building sites at Springer Nature.
 
+* [Our criteria for browser support](#Our-criteria-for-browser-support)
+* [Graded browser support list](#Graded-browser-support-list)
+* [Implementing graded browser support](#Implementing-graded-browser-support)
+  * [Implementation details](#Implementation-details)
+  * [Caveats](#Caveats)
+    * [Internet Explorer 10 support](#Internet-Explorer-10-support)
+    * [Browsers without TLS 1.2 support](#Browsers-without-TLS-1.2-support)
 
 ## Our criteria for browser support
 
-We follow the guidelines for graded browser support outlined by Nate Koechley at Yahoo:
-[Yahoo Grade Browser Support guide](https://github.com/yui/yui3/wiki/Graded-Browser-Support)
+We follow the guidelines for graded browser support outlined by Yahoo in their [Graded Browser Support guide](https://github.com/yui/yui3/wiki/Graded-Browser-Support).
 
-Our browser support in summary:
+The graded browser support works by classifying all browser versions in one of three different grades:
 
-- Grade-A are modern and/or popular browser versions that receive all styling and behaviour. Bugs are addressed with high priority.
-- Grade-C are old and/or uncommon browser versions which are known to break if receiving full styling and behaviour. We serve only minimum CSS and JavaScript (detailed below). Bugs are addressed with high priority.
-- Grade-X browsers exist in the grey area between Grade-A and Grade-C. We serve them the same code as Grade-A, but we do not test our products against these browser versions. We expect our sites to work in these browsers. Over time, analysis of errors and usage patterns may cause some browsers in Grade-X to be deliberately changed to either Grade-A or Grade-C, to allow for better support. 
+* Grade-A are capable or very popular browser versions. These browsers will receive the full experience, with all styling and behaviour. Bugs are addressed with high priority.
+* Grade-C are incapable and/or uncommon browser versions which are known to break if receiving full styling and behaviour. These browsers will receive a core experience, with only minimum CSS and JavaScript. Bugs are addressed with high priority.
+* Grade-X browsers exist in the grey area between Grade-A and Grade-C. We serve them the same code as Grade-A, so they will receive the full experience, but we do not test our products against these browser versions. We expect our sites to work in these browsers. Over time, analysis of errors and usage patterns may cause some browsers in Grade-X to be deliberately changed to either Grade-A or Grade-C, to allow for better support.
 
-| Tables                      | Grade-A support                 | Grade-C support    |
-| --------------------------- |:-------------------------------:| ------------------:|
-| Chrome                      | latest stable, latest stable -1 | < 29               |
-| Edge                        | latest stable, latest stable -1 | n/a                |
-| Firefox                     | latest stable, latest stable -1 | < 29               |
-| IE                          | 11                              | < 11               |
-| Opera                       | latest stable                   | < 16               |
-| Safari iOS                  | latest stable, latest stable -1 | < 7                |
-| Safari MacOS                | latest stable, latest stable -1 | < 6.1              |
-| Android browser (Chromium)  | Latest stable                   | < 4.4              |
+## Graded browser support list
 
-### Notes
+This is the current list of browser versions and their corresponding grades:
 
-- We have no explicit Grade-C support for Edge.
-- We have no Grade-X support for IE, as we officially only support IE11, with anything below that being Grade-C. However, due to browser technical limitations we can only detect IE10+, so IE10 is, for now, included in our CTM media query. 
+| Tables                    | Grade-A support                 | Grade-C support |
+| ------------------------- |:-------------------------------:| ---------------:|
+| Chrome                    | latest stable, latest stable -1 | < 29            |
+| Edge                      | latest stable, latest stable -1 | none            |
+| Firefox                   | latest stable, latest stable -1 | < 29            |
+| IE                        | 11                              | < 11            |
+| Opera                     | latest stable                   | < 16            |
+| Safari iOS                | latest stable, latest stable -1 | < 7             |
+| Safari MacOS              | latest stable, latest stable -1 | < 6.1           |
+| Android browser (Webview) | Latest stable                   | < 4.4           |
 
-## How we implement graded browser support
+Every unlisted browser version is Grade-X.
 
-Our primary approach to graded browser support is the "cutting the mustard" progressive enhancement technique, based upon the principles developed by the BBC: [Cutting the Mustard](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard).  However, user agent sniffing is still applied on some legacy projects.
+## Implementing graded browser support
 
-We load a basic stylesheet to all users. This contains only [normalisation](https://necolas.github.io/normalize.css/) and a few small enhancements to the user-agent stylesheet.
-To load the full experience only in modern browsers (grade-A and grade-X) we implement logic in the media attribute of the `<link>` element that identifies the main stylesheet, loading the stylesheet only in browsers that recognise the properties of that media query.
-This technique is documented here: [Cutting the Mustard with Media queries](https://www.sitepoint.com/cutting-the-mustard-with-css-media-queries/).
+Our primary approach to graded browser support is the "[Cutting the Mustard (CTM)](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard)" progressive enhancement technique, based upon the principles developed by the BBC.
 
-The media queries we use are based upon [CSS Only Mustard Cut](https://github.com/Fall-Back/CSS-Mustard-Cut), with a preference towards combining them into one rather than separating them out into multiple `<link>` elements.  Note that you **cannot** add line breaks to the media query if they are combined.
+This approach works by using feature detection in order to determine which browsers (Grade-A and Grade-X) will receive the full experience (i.e. they "[cut the mustard](https://en.wiktionary.org/wiki/cut_the_mustard)") and which ones (Grade-C) will receive the core experience.
 
-Note: As mentioned above, while our graded browser support table specifies Internet Explorer 10 and below as Grade-C, until an updated media query is found this approach will render IE10 as Grade-A.
+### Implementation details
+
+All browser versions load a basic stylesheet that contains only [normalisation](https://necolas.github.io/normalize.css/) and a few small enhancements to the user-agent stylesheet.
+
+We then use CSS media queries to detect capable browsers. Unlike the approach described by the BBC, we don't use a JavaScript-based featured detection. We want users to have the best possible experience even if JavaScript is not available.
+
+To load the full experience only in grade-A and grade-X browsers we implement logic in the media attribute of the `<link>` element that identifies the main stylesheet, loading the stylesheet only in browsers that recognise the properties of that media query:
 
 ```html
 <link rel="stylesheet" href="your-css.css" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
 ```
 
-We couple the loading of JavaScript to the loading of the enhanced CSS.
-If the browser loads the CSS within the media query, then load the JavaScript.
+This technique is documented in [Cutting the Mustard with Media queries](https://www.sitepoint.com/cutting-the-mustard-with-css-media-queries/). The specific media queries we use are based upon [CSS Only Mustard Cut](https://github.com/Fall-Back/CSS-Mustard-Cut), with a preference towards combining them into one rather than separating them out into multiple `<link>` elements. Note that you **cannot** add line breaks to the media query if they are combined.
 
-In order to check this, we use [window.matchMedia](https://developer.mozilla.org/en/docs/Web/API/Window/matchMedia).
+We couple the loading of JavaScript to the loading of the enhanced CSS. We use the [window.matchMedia](https://developer.mozilla.org/en/docs/Web/API/Window/matchMedia) API to detect when the browser loads the CSS within the media query. Once the enhanced CSS loads, this will cause the JavaScript code to load too.
 
 ```javascript
 (function() {
-    var linkEl = document.querySelector('link');
-    if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
-        var script = document.createElement('script');
-        script.src = 'your-script.js';
-        script.async = true;
-        document.body.appendChild(script);
-    }
+  var linkEl = document.querySelector('link');
+  if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+    var script = document.createElement('script');
+    script.src = 'your-script.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }
 })();
 ```
 
-The javascript code outlined above will fail in Internet Explorer if there is more than one link element. You can get around this by targeting the specific link element using a class or ID.
+Please note that this JavaScript code will fail in Internet Explorer if there is more than one link element. You can get around this by targeting the specific link element using a class or ID.
+
+### Caveats
+
+#### Internet Explorer 10 support
+
+As on January 2017, we consider Internet Explorer 10 as grade-C. This is mainly due to its lack of support for certain modern features plus a very low usage. IE10 also stopped receiving security updates in January 2016 from its manufacturer.
+
+Unfortunately, both IE10 and IE11 support the same CSS media queries, which means that it's not possible to use a CSS-only method of differentiating between both browsers.
+
+This means that even if we consider IE10 a Grade-C browser, we currently serve IE10 users the full experience.
+
+#### Browsers without TLS 1.2 support
+
+As of June 2018, all our sites are served through HTTPS using the [TLS 1.2 cryptographic protocol](https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2) or newer. This means that users of browsers that don't support TLS 1.2 (e.g. Safari on iOS 4) or that have support for TLS 1.2 disabled (e.g. Internet Explorer on Windows 7) may not be able to access our sites. We consider that this is required in order to keep our users secure.
+
+The way that we restrict the connection to our sites when not using TLS 1.2 doesn't impact the way that we design and build our sites and our commitment to an approach based on progressive enhancement techniques.
