@@ -50,28 +50,28 @@ npm config set save-prefix '~'
 We do this:
 ```json
 {
-    "dependencies": {
-        "boomcatch": "~1.2.0",
-        "dustmite": "~1.0.0",
-        "hasbin": "~0.8.0",
-        "shunter": "~4.2.1",
-        "thundermole": "~1.0.3",
-        "truffler": "~1.1.0"
-    }
+  "dependencies": {
+    "boomcatch": "~1.2.0",
+    "dustmite": "~1.0.0",
+    "hasbin": "~0.8.0",
+    "shunter": "~4.2.1",
+    "thundermole": "~1.0.3",
+    "truffler": "~1.1.0"
+  }
 }
 ```
 
 We _don't_ do this:
 ```json
 {
-    "dependencies": {
-        "boomcatch": "latest",
-        "dustmite": "*",
-        "hasbin": "~1.1",
-        "shunter": "~4",
-        "thundermole": "^1.0.3",
-        "truffler": "~1.x"
-    }
+  "dependencies": {
+    "boomcatch": "latest",
+    "dustmite": "*",
+    "hasbin": "~1.1",
+    "shunter": "~4",
+    "thundermole": "^1.0.3",
+    "truffler": "~1.x"
+  }
 }
 ```
 
@@ -93,22 +93,22 @@ We do this:
 
 ```json
 {
-    "devDependencies": {
-        "jscs": "^2.0.0",
-        "mocha": "^3.1.0",
-        "xo": "^1.1.1"
-    }
+  "devDependencies": {
+    "jscs": "^2.0.0",
+    "mocha": "^3.1.0",
+    "xo": "^1.1.1"
+  }
 }
 ```
 
 We _don't_ do this:
 ```json
 {
-    "dependencies": {
-        "jscs": "latest",
-        "mocha": "*",
-        "xo": "~1.1.1",
-    }
+  "dependencies": {
+    "jscs": "latest",
+    "mocha": "*",
+    "xo": "~1.1.1",
+  }
 }
 ```
 
