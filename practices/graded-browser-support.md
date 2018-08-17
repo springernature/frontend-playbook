@@ -12,7 +12,7 @@ This page describes the way that we support different browsers and browser versi
 
 ## Our criteria for browser support
 
-We follow the guidelines for Graded Browser Support outlined by Nate Koechley at Yahoo in their [Graded Browser Support guide](https://github.com/yui/yui3/wiki/Graded-Browser-Support).
+We follow the guidelines for Graded Browser Support outlined by [Nate Koechley](https://web.archive.org/web/20060304042737/http://developer.yahoo.net/yui/articles/gbs/gbs.html) at Yahoo in their [Graded Browser Support guide](https://github.com/yui/yui3/wiki/Graded-Browser-Support).
 
 Graded Browser Support works by classifying all browser versions in one of three different grades:
 
