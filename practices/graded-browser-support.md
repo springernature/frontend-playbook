@@ -12,9 +12,9 @@ This page describes the way that we support different browsers and browser versi
 
 ## Our criteria for browser support
 
-We follow the guidelines for graded browser support outlined by Yahoo in their [Graded Browser Support guide](https://github.com/yui/yui3/wiki/Graded-Browser-Support).
+We follow the guidelines for Graded Browser Support outlined by Yahoo in their [Graded Browser Support guide](https://github.com/yui/yui3/wiki/Graded-Browser-Support).
 
-The graded browser support works by classifying all browser versions in one of three different grades:
+Graded Browser Support works by classifying all browser versions in one of three different grades:
 
 * Grade-A are capable or very popular browser versions. These browsers will receive the full experience, with all styling and behaviour. Bugs are addressed with high priority.
 * Grade-C are incapable and/or uncommon browser versions which are known to break if receiving full styling and behaviour. These browsers will receive a core experience, with only minimum CSS and JavaScript. Bugs are addressed with high priority.
@@ -39,7 +39,7 @@ Every unlisted browser version is Grade-X.
 
 ## Implementing graded browser support
 
-Our primary approach to graded browser support is the "[Cutting the Mustard (CTM)](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard)" progressive enhancement technique, based upon the principles developed by the BBC.
+Our primary approach to Graded Browser Support is the "[Cutting the Mustard (CTM)](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard)" progressive enhancement technique, based upon the principles developed by the BBC.
 
 This approach works by using feature detection in order to determine which browsers (Grade-A and Grade-X) will receive the full experience (i.e. they "[cut the mustard](https://en.wiktionary.org/wiki/cut_the_mustard)") and which ones (Grade-C) will receive the core experience.
 
@@ -49,10 +49,10 @@ All browser versions load a basic stylesheet that contains only [normalisation](
 
 We then use CSS media queries to detect capable browsers. Unlike the approach described by the BBC, we don't use a JavaScript-based featured detection. We want users to have the best possible experience even if JavaScript is not available.
 
-To load the full experience only in grade-A and grade-X browsers we implement logic in the media attribute of the `<link>` element that identifies the main stylesheet, loading the stylesheet only in browsers that recognise the properties of that media query:
+To load the full experience only in Grade-A and Grade-X browsers we implement logic in the media attribute of the `<link>` element that identifies the main stylesheet, loading the stylesheet only in browsers that recognise the properties of that media query:
 
 ```html
-<link rel="stylesheet" href="your-css.css" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+<link rel="stylesheet" href="your-css.css" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)" id="core-stylesheet">
 ```
 
 This technique is documented in [Cutting the Mustard with Media queries](https://www.sitepoint.com/cutting-the-mustard-with-css-media-queries/). The specific media queries we use are based upon [CSS Only Mustard Cut](https://github.com/Fall-Back/CSS-Mustard-Cut), with a preference towards combining them into one rather than separating them out into multiple `<link>` elements. Note that you **cannot** add line breaks to the media query if they are combined.
@@ -61,7 +61,7 @@ We couple the loading of JavaScript to the loading of the enhanced CSS. We use t
 
 ```javascript
 (function() {
-  var linkEl = document.querySelector('link');
+  var linkEl = document.queryElementByID('core-stylesheet');
   if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
     var script = document.createElement('script');
     script.src = 'your-script.js';
@@ -77,7 +77,7 @@ Please note that this JavaScript code will fail in Internet Explorer if there is
 
 #### Internet Explorer 10 support
 
-As on January 2017, we consider Internet Explorer 10 as grade-C. This is mainly due to its lack of support for certain modern features plus a very low usage. IE10 also stopped receiving security updates in January 2016 from its manufacturer.
+As of January 2017, we consider Internet Explorer 10 as Grade-C. This is mainly due to its lack of support for certain modern features plus a very low usage. IE10 also stopped receiving security updates in January 2016 from its manufacturer.
 
 Unfortunately, both IE10 and IE11 support the same CSS media queries, which means that it's not possible to use a CSS-only method of differentiating between both browsers.
 
