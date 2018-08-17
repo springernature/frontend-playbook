@@ -24,16 +24,16 @@ Graded Browser Support works by classifying all browser versions in one of three
 
 This is the current list of browser versions and their corresponding grades:
 
-| Tables                    | Grade-A support                 | Grade-C support |
-| ------------------------- |:-------------------------------:| ---------------:|
-| Chrome                    | latest stable, latest stable -1 | < 29            |
-| Edge                      | latest stable, latest stable -1 | none            |
-| Firefox                   | latest stable, latest stable -1 | < 29            |
-| IE                        | 11                              | < 11            |
-| Opera                     | latest stable                   | < 16            |
-| Safari iOS                | latest stable, latest stable -1 | < 7             |
-| Safari MacOS              | latest stable, latest stable -1 | < 6.1           |
-| Android browser (Webview) | Latest stable                   | < 4.4           |
+| Tables          | Grade-A support                 | Grade-C support    |
+| --------------- |:-------------------------------:| ------------------:|
+| Chrome          | latest stable, latest stable -1 | < 29               |
+| Edge            | latest stable, latest stable -1 | none               |
+| Firefox         | latest stable, latest stable -1 | < 29               |
+| IE              | 11                              | < 11               |
+| Opera           | latest stable                   | < 16               |
+| Safari iOS      | latest stable, latest stable -1 | < 7                |
+| Safari MacOS    | latest stable, latest stable -1 | < 6.1              |
+| Android Webview | Latest stable                   | < 30 (Android 4.4) |
 
 Every unlisted browser version is Grade-X.
 
