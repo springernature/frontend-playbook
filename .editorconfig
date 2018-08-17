@@ -11,8 +11,6 @@ trim_trailing_whitespace = true
 
 [*.json]
 insert_final_newline = false
-
-[package.json]
 indent_size = 2
 indent_style = space
 
