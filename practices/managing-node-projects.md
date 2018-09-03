@@ -29,13 +29,14 @@ It is important to specify which versions of node your application expects. Ther
 
 Developers should always ensure they are using the correct version of node (and implicitly `npm`) before doing an `npm install`.
 
+Running `nvm use` before `npm install` is good because:
+1. It make installs _more_ predictable, which minimises "but it works on my machine" issues.
+1. It minimises changes to the `package-lock.json` (if your project is comitting that file).
+
 A problem with using `npm` at the time of writing (September 2018) is that `npm install` does not guarantee reproducible builds, as neither the `package.json` nor `package-lock.json` is a source of authority for what is installed. The `npm ci` command will always install predictably (using the `package-lock.json` as a source of authority) but `npm ci` is not available in any current LTS version of node. It should be available with node 10 which should be in LTS [in October](https://nodejs.org/en/blog/release/v10.0.0/).
 
 (You could specify a newer version of `npm` than is recommended for your [particular version of node](https://nodejs.org/en/download/releases/) so you could then use `npm ci`, but it is assumed versions of `node` and `npm` ship together for good reasons.)
 
-Running `nvm use` before `npm install` is good because:
-1. It make installs _more_ predictable, which minimises "but it works on my machine" issues.
-1. It minimises changes to the `package-lock.json` (if your project is comitting that file).
 
 ## Specifying versions of dependencies
 
