@@ -17,10 +17,10 @@ The following guide describes how we use node and manage package dependencies in
 
 ## Specifying versions of node
 
-It's important to specify which versions of node your application expects. There are two ways of doing this, and you are encouraged to do both.
+It's important to specify which versions of node your application expects. There are two ways of doing this, and you're encouraged to do both.
 
 1. The [`engines`](https://docs.npmjs.com/files/package.json#engines) field in `package.json`:
-    * `engines` is important if authoring libraries. Let's assume we are using a different version of node to that specified in `engines` field for package `foo`.
+    * `engines` is important if authoring libraries. Let's assume we're using a different version of node to that specified in `engines` field for package `foo`.
     When running `npm install` to install `foo`'s dependencies, `npm` will warn about the problem.
     When `npm install`ing a package _which depends on_ `foo`, `npm` will warn and error.
     * Some deployment environments also respect it.
@@ -34,7 +34,7 @@ It's important to specify which versions of node your application expects. There
 
 ### Run `nvm use` before `npm install`
 
-You should always ensure you are using the correct version of node (and implicitly `npm`) before doing an `npm install`.
+You should always ensure you're using the correct version of node (and implicitly `npm`) before doing an `npm install`.
 
 Running `nvm use` before `npm install` is good because:
 1. It make installs _more_ predictable, which minimises "but it works on my machine" issues.
@@ -150,11 +150,11 @@ We _don't_ do this:
 
 While the classification of run-time and development dependencies is usually fairly clear-cut, there can be grey areas.  For example, dependencies that are required for the running of your website/app but are processed by a build tool (perhaps to concatenate or transpile them).
 
-In these instances it is technically true that the dependency wouldn't need to be installed in production since only the built asset would be served.  However classifying it as a development dependency would mischaracterise its contribution to the application, and could lead it to be treated with less care than it deserves (including with a looser semver range, as per the [previous example](#examples-1)).
+In these instances it's technically true that the dependency wouldn't need to be installed in production since only the built asset would be served.  However classifying it as a development dependency would mischaracterise its contribution to the application, and could lead it to be treated with less care than it deserves (including with a looser semver range, as per the [previous example](#examples-1)).
 
-In an ideal world where HTTP2, modern JavaScript syntax, and ES6 modules are widely supported, there would be no need to transpile or concatenate JavaScript dependencies for browsers.  Instead, they would simply be loaded using `import` statements and would be directly served from their installed location. Therefore they would unambiguously be run-time dependencies, not development dependencies. (When working within a Node.js environment this is already possible through its native support for CommonJS `require` statements.)
+In an ideal world where HTTP2, modern JavaScript syntax, and ES6 modules are widely supported, there would be no need to transpile or concatenate JavaScript dependencies for browsers.  Instead, they'd be loaded using `import` statements and would be directly served from their installed location. Therefore they'd unambiguously be run-time dependencies, not development dependencies. In a Node.js environment this is already possible through its native support for CommonJS `require` statements.
 
-As such, the fact that the asset may sometimes need to be built when serving it to a browser could be considered an accident of circumstance. It should not change the classification of that dependency as a run-time dependency. In this way we maintain consistency between Node.js and web applications, and provide a clear distinction between tools that are only used in the _development_ of the application, and assets that directly contribute _functionality_ to the production application.
+As such, the fact that the asset may sometimes need to be built when serving it to a browser could be considered an accident of circumstance. It shouldn't change the classification of that dependency as a run-time dependency. In this way we maintain consistency between Node.js and web applications, and provide a clear distinction between tools that are only used in the _development_ of the application, and assets that directly contribute _functionality_ to the production application.
 
 ## Publishing projects on NPM
 
