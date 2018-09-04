@@ -17,25 +17,34 @@ The following guide describes how we use node and manage package dependencies in
 
 ## Specifying versions of node
 
-It is important to specify which versions of node your application expects. There are two ways of doing this, and you are encouraged to do both.
+It's important to specify which versions of node your application expects. There are two ways of doing this, and you are encouraged to do both.
 
 1. The [`engines`](https://docs.npmjs.com/files/package.json#engines) field in `package.json`:
-    * Important if authoring libraries, because `npm install` only _enforces_ compatibility on the basis of the `engines` field if the package is a dependency.
+    * `engines` is important if authoring libraries. Let's assume we are using a different version of node to that specified in `engines` field for package `foo`.
+    When running `npm install` to install `foo`'s dependencies, `npm` will warn about the problem.
+    When `npm install`ing a package _which depends on_ `foo`, `npm` will warn and error.
     * Some deployment environments also respect it.
     * It makes compatibility requirements explicit to developers working on your application.
-1. Using an `.nvmrc` file: An `.nvmrc` file is a configuration file for `nvm` (Node Version Manager). `nvm` enables developers to use different versions of node for different projects, on a per-directory basis. Projects should include an [`.nvmrc` file](https://github.com/creationix/nvm#nvmrc) in the root directory of the project to specify which version(s) of node are compatible. Developers can then run `nvm use` to use the right version of node, and [if using ZSH this shell script will run it automatically](https://github.com/creationix/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file). Additionally [Travis respects `.nvmrc` files](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions-using-nvmrc), so using one will simplify your Travis configuration.
+1. Using an `.nvmrc` file:
+    * An `.nvmrc` file is a configuration file for `nvm` ([Node Version Manager](https://github.com/creationix/nvm)).
+    `nvm` enables you to use different versions of node for different projects, on a per-directory basis.
+    Your project should include an [`.nvmrc` file](https://github.com/creationix/nvm#nvmrc) in the root directory of the project to specify which version(s) of node are compatible.
+    You can then run `nvm use` to use the right version of node, and [if using ZSH this shell script will run it automatically](https://github.com/creationix/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file).
+    Additionally [Travis respects `.nvmrc` files](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions-using-nvmrc), so using one will simplify your Travis configuration.
 
 ### Run `nvm use` before `npm install`
 
-Developers should always ensure they are using the correct version of node (and implicitly `npm`) before doing an `npm install`.
+You should always ensure you are using the correct version of node (and implicitly `npm`) before doing an `npm install`.
 
 Running `nvm use` before `npm install` is good because:
 1. It make installs _more_ predictable, which minimises "but it works on my machine" issues.
 1. It minimises changes to the `package-lock.json` (if your project is comitting that file).
 
-A problem with using `npm` at the time of writing (September 2018) is that `npm install` does not guarantee reproducible builds, as neither the `package.json` nor `package-lock.json` is a source of authority for what is installed. The `npm ci` command will always install predictably (using the `package-lock.json` as a source of authority) but `npm ci` is not available in any current LTS version of node. It should be available with node 10 which should be in LTS [in October](https://nodejs.org/en/blog/release/v10.0.0/).
+A problem with using `npm` at the time of writing (September 2018) is that `npm install` doesn't guarantee reproducible builds, as neither the `package.json` nor `package-lock.json` is a source of authority for what's installed.
 
-(You could specify a newer version of `npm` than is recommended for your [particular version of node](https://nodejs.org/en/download/releases/) so you could then use `npm ci`, but it is assumed versions of `node` and `npm` ship together for good reasons.)
+The `npm ci` command will always install predictably (using the `package-lock.json` as a source of authority) but `npm ci` is not available in any current LTS version of node. It should be available with node 10 which should be in LTS [in October](https://nodejs.org/en/blog/release/v10.0.0/).
+
+(You could use `npm ci` by specifing a newer version of `npm` than is recommended for your [particular version of node](https://nodejs.org/en/download/releases/), but `npm` is itself written in node and [only supports certain node versions](https://github.com/npm/cli/blob/latest/lib/utils/unsupported.js).)
 
 
 ## Specifying versions of dependencies
@@ -112,7 +121,7 @@ These are defined in the `devDependencies` section of the `package.json` file an
 Version numbers for run-time dependencies are defined using a caret `^` plus a full version number in the `MAJOR.MINOR.PATCH` form. For a package version specified as `^2.3.4` this means that all releases from `2.3.4` (inclusive) up to, but not including `3.0.0` are acceptable.
 
 
-#### Examples
+#### <a name="examples-1">Examples</a>
 
 We do this:
 
@@ -139,13 +148,13 @@ We _don't_ do this:
 
 ### Classifying "built" run-time dependencies
 
-While the classification of run-time and development dependencies is usually fairly clear-cut, there can be grey-areas.  For example dependencies that are required for the running of your website/app but are processed by a build tool (perhaps to concatenate or transpile them).
+While the classification of run-time and development dependencies is usually fairly clear-cut, there can be grey areas.  For example, dependencies that are required for the running of your website/app but are processed by a build tool (perhaps to concatenate or transpile them).
 
-In these instances it is technically true that the dependency wouldn't need to be installed in production since only the built asset would be served.  However classifying it as a development dependency would mischaracterise its contribution to the application, and could lead it to be treated with less care than it deserves (including with a looser semver range [as above](#examples-1)).
+In these instances it is technically true that the dependency wouldn't need to be installed in production since only the built asset would be served.  However classifying it as a development dependency would mischaracterise its contribution to the application, and could lead it to be treated with less care than it deserves (including with a looser semver range, as per the [previous example](#examples-1)).
 
-In an ideal world where HTTP2, modern JavaScript syntax, and ES6 modules are widely supported, there would be no need to transpile or concatenate any dependencies even for browsers.  Instead, they would simply be loaded using `import` statements and as such those dependencies would be directly served from their installed location (and as such would umabiguiously be run-time dependencies, not development dependencies). When working within a Node.js environment this is already possible through its native support for CommonJS `require` statements.
+In an ideal world where HTTP2, modern JavaScript syntax, and ES6 modules are widely supported, there would be no need to transpile or concatenate JavaScript dependencies for browsers.  Instead, they would simply be loaded using `import` statements and would be directly served from their installed location. Therefore they would unambiguously be run-time dependencies, not development dependencies. (When working within a Node.js environment this is already possible through its native support for CommonJS `require` statements.)
 
-As such the fact that the asset may sometimes need to be built when serving it to a browser &mdash; rather than being served directly &mdash; can be considered an accident of circumstance. It should not change the classification of that dependency as a run-time dependency. That way we maintain consistency between Node.js and web applications, and provide a clear distinction between tools that are only used in the development of the application, and assets that directly contribute functionality to the production application.
+As such, the fact that the asset may sometimes need to be built when serving it to a browser could be considered an accident of circumstance. It should not change the classification of that dependency as a run-time dependency. In this way we maintain consistency between Node.js and web applications, and provide a clear distinction between tools that are only used in the _development_ of the application, and assets that directly contribute _functionality_ to the production application.
 
 ## Publishing projects on NPM
 
