@@ -25,7 +25,7 @@ It is important to specify which versions of node your application expects. Ther
     * It makes compatibility requirements explicit to developers working on your application.
 1. Using an `.nvmrc` file: An `.nvmrc` file is a configuration file for `nvm` (Node Version Manager). `nvm` enables developers to use different versions of node for different projects, on a per-directory basis. Projects should include an [`.nvmrc` file](https://github.com/creationix/nvm#nvmrc) in the root directory of the project to specify which version(s) of node are compatible. Developers can then run `nvm use` to use the right version of node, and [if using ZSH this shell script will run it automatically](https://github.com/creationix/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file). Additionally [Travis respects `.nvmrc` files](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions-using-nvmrc), so using one will simplify your Travis configuration.
 
-## Run `nvm use` before `npm install`
+### Run `nvm use` before `npm install`
 
 Developers should always ensure they are using the correct version of node (and implicitly `npm`) before doing an `npm install`.
 
