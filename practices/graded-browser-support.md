@@ -61,7 +61,7 @@ We couple the loading of JavaScript to the loading of the enhanced CSS. We use t
 
 ```javascript
 (function() {
-  var linkEl = document.getElementByID('core-stylesheet');
+  var linkEl = document.getElementById('core-stylesheet');
   if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
     var script = document.createElement('script');
     script.src = 'your-script.js';
