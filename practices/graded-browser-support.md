@@ -83,6 +83,16 @@ Unfortunately, both IE10 and IE11 support the same CSS media queries, which mean
 
 This means that even if we consider IE10 a Grade-C browser, we currently serve IE10 users the full experience.
 
+#### Internet Explorer and CSS Grid
+
+CSS Grid has been availalable in all evergreen browsers for the last year. It offers a much-simplified way of working with layout and offers new design opportunities.
+
+However, CSS Grid is not available in the full standardised form in Internet Explorer 10 or 11, both of which are currently *de facto* supported by us.
+
+The syntax and capabilities for CSS Grid is radically different in IE than it is in any other browser. The development costs to match IE with other browsers can range from trivial for simple localised layouts, to major for gross page layout
+
+We therefore accept that some teams will wish to develop with layouts using CSS Grid, but will not be able to justify devoting time to supporting IE. For those teams we suggest a highly-styled linear layout, that has all the features of a Grade A browser experience, except for some layout. It is therefore up to any teams making this devision to make sure the Grade A experience is acceptable in IE 10 and 11. 
+
 #### Browsers without TLS 1.2 support
 
 As of June 2018, all our sites are served through HTTPS using the [TLS 1.2 cryptographic protocol](https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2) or newer. This means that users of browsers that don't support TLS 1.2 (e.g. Safari on iOS 4) will not be able to access our sites. Browsers that have support for TLS 1.2 not enabled by default (e.g. Internet Explorer on Windows 7) will not be able to access our sites, unless they change their default settings. We consider that this is required in order to keep our users secure.
