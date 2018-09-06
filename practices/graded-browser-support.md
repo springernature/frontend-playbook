@@ -89,9 +89,9 @@ This means that even if we consider IE10 a Grade-C browser, we currently serve I
 
 However, CSS Grid is not available in the full standardised form in Internet Explorer 10 or 11, both of which are currently *de facto* supported by us (see above).
 
-The syntax and capabilities for CSS Grid is radically different in IE than it is in any other browser. The development costs to match IE with other browsers can range from trivial for simple localised layouts, to major for gross page layout
+The syntax and capabilities for CSS Grid are radically different in IE than it is in any other browser. As a result the development costs to match IE with other browsers can range from trivial, for simple localised layouts, to major for large-scale page layouts.
 
-We therefore accept that some teams will wish to develop with layouts using CSS Grid, but will not be able to justify devoting time to supporting IE. For those teams we suggest a highly-styled linear layout, that has all the features of a Grade A browser experience, except for some layout. It is therefore up to any teams making this devision to make sure the Grade A experience is acceptable in IE 10 and 11. 
+We therefore accept that some teams will wish to develop their layouts using CSS Grid, but will not be able to justify devoting time to supporting IE. For those teams we suggest a highly-styled linear layout, which has all the features of a Grade A browser experience, except for the page layout. It is up to any teams making this decision to ensure the Grade A experience is acceptable in IE 10 and 11.
 
 #### Browsers without TLS 1.2 support
 
