@@ -87,7 +87,7 @@ This means that even if we consider IE10 a Grade-C browser, we currently serve I
 
 [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) has been available in all evergreen browsers [for the last year](https://caniuse.com/#feat=css-grid). It offers a much-simplified way of working with layout and offers new design opportunities.
 
-However, CSS Grid is not available in the full standardised form in Internet Explorer 10 or 11, both of which are currently *de facto* supported as Grade A browseres by us (see above).
+However, CSS Grid is not available in the full standardised form in Internet Explorer 10 or 11, both of which are currently *de facto* supported as Grade A browsers by us (see above).
 
 The syntax and capabilities for CSS Grid are radically different in IE than in any other browser. As a result the development costs to match the visual experience in IE with other browsers can range from trivial, for simple component-level layouts, to major for page-level layouts.
 
