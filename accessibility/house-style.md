@@ -36,7 +36,7 @@ Accessibility supports social inclusion for people with disabilities as well as 
 
 ### Why do we care about accessibility?
 
-- *It's a legal requirement:* we're legally obliged to make our content accessible to users with diverse needs. All of our websites MUST comply with [US Section 508](https://www.section508.gov/) of the US Rehabilitation Act 1973, [EU Directive 2016/2102](http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016L2102) and the [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). From January 18th 2018, compliance with Section 508 requires us to comply with WCAG 2.0 AA.   
+- *It's a legal requirement:* we're legally obliged to make our content accessible to users with diverse needs. All of our websites MUST comply with [US Section 508](https://www.section508.gov/) of the US Rehabilitation Act 1973, [EU Directive 2016/2102](http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016L2102) and the [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). From January 18th 2018, compliance with Section 508 requires us to comply with WCAG 2.0 AA. We expect this to be updated to WCAG 2.1 AA in due course.   
 - *It makes financial sense:* around 20% of working age adults in the UK are estimated to have some kind of permanent disability (Source: [Scope UK](https://www.scope.org.uk/media/disability-facts-figures)). Forrester Research found that *_57%_* of computer users aged 18 to 64 have disabilites that make them "likely or very likely" to benefit from the use of assistive technology (Source: [Pubmed](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2788505/)). Also taking into account people who are [temporarily disabled](https://userway.org/blog/how-situational-disabilities-impact-us-all), failing to make our websites accessible can cause a significant reduction in real market share. 
 - *It's a technical requirement:* catering for all users complements our [browser support policy](../practices/graded-browser-support.md) (we aim to support all browsers), and our use of [progressive enhancement](../practices/progressive-enhancement.md). 
 - *It's the right thing to do:* we have a duty to cater for all users regardless of ability. If we know that people can encounter difficulties accessing our content (which we do), and we know that we can do things to facilitate that access (which we do), then not making something accessible is knowingly contributing to the oppression of people with disabilities.
@@ -61,9 +61,13 @@ You may use [our VPAT template](https://github.com/springernature/vpat) when eva
 
 ### Standards we conform to
 
-Our target standards are [WCAG 2.0](https://www.w3.org/TR/WCAG20/) level AA.
+Our target standards are [WCAG 2.1](https://www.w3.org/TR/WCAG21/) level AA.
 
-As of January 18th 2018, WCAG 2.0 AA has been incorporated by reference into Section 508 (see [Section 508 Refresh Part 1](https://www.paciellogroup.com/blog/2017/01/section-508-refresh-part-1/) by the Paciello Group). This means that in order to comply with Section 508, your products MUST also comply with WCAG 2.0 to level AA. See the Access Board's Executive Summary, Summary of Key Provisions section 2, [_Broad Application of Web Content Accessibility Guidelines 2.0_](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/i-executive-summary) for further detail.
+As of mid-September 2018, WCAG 2.1 AA has been adopted in the European [EN 301 549 “Accessibility requirements for ICT products and services”](https://www.w3.org/blog/2018/09/wcag-2-1-adoption-in-europe/). This means that in order to comply with EN 301 549, your products MUST also comply with WCAG 2.1 to level AA.
+
+As of January 18th 2018, WCAG 2.0 AA (the previous candidate recommendation) was incorporated by reference into Section 508 (see [Section 508 Refresh Part 1](https://www.paciellogroup.com/blog/2017/01/section-508-refresh-part-1/) by the Paciello Group). 
+
+Our expectation is that Section 508 will be updated to reference WCAG 2.1 in due course. Comply with WCAG 2.1 now to avoid retrofitting repairs later!  
 
 
 ### Tools and techniques
@@ -72,9 +76,9 @@ As of January 18th 2018, WCAG 2.0 AA has been incorporated by reference into Sec
 
 You are expected to be aware of the Web Content Accessibility Guidelines and to adhere to their recommendations. You are also expected to understand the foundational four principles of accessibility (Perceivable, Operable, Understandable, Robust) and to be able to apply them in your work. Be alert to the possibility of regressions that cannot be detected by software.
 
-The companion document [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/Overview.html) explains what each of the success criterion in WCAG 2.0 actually means. You might also find the [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/) useful when building features. 
+The companion document [Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/) (Editor's Draft) explains what each of the success criterion in WCAG 2.1 actually means. You might also find the [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/) (Editor's Draft) useful when building features. 
 
-W3C WAI have published a [quick reference document for WCAG](https://www.w3.org/WAI/WCAG20/quickref/). It describes the WCAG success criteria and shows techniques and failures for each. We've also created [a simple accessibility checklist](accessibility-checklist.md), to help you become familiar with the guidelines/standards, and to aid you when manually assessing pages. 
+W3C WAI have published a [quick reference document for WCAG](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0). It describes the WCAG success criteria and shows techniques and failures for each. We've also created [a simple accessibility checklist](accessibility-checklist.md), to help you become familiar with the guidelines/standards, and to aid you when manually assessing pages. 
 
 Freely use [WAI-ARIA](https://www.w3.org/TR/wai-aria/) roles and properties in your code where they help to improve accessibility of your interfaces but you SHOULD NOT use aria techniques as a way of compensating for the abuse of semantics (e.g. do not apply `role="link"` to a `div` element, instead of using `a`, etc.)
 

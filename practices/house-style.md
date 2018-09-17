@@ -31,9 +31,9 @@ We lint our CSS, JavaScript, and templates written with DustJS. This helps us to
 
 ### Accessibility
 
-We care a great deal about accessibility. Our target standards for all of our products are [WCAG 2.0](https://www.w3.org/TR/WCAG20/) level AA.
+We care a great deal about accessibility. Our target standards for all of our products are [WCAG 2.1](https://www.w3.org/TR/WCAG21/) level AA.
 
-All of our websites MUST comply with [US Section 508](https://www.section508.gov/) and [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). As of January 18th 2018, WCAG 2.0 AA will be incorporated into Section 508.
+All of our websites MUST comply with [US Section 508](https://www.section508.gov/) and [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). As of January 18th 2018, WCAG 2.0 AA will be incorporated into Section 508. We expect this to be updated to WCAG 2.1 AA in due course. 
 
 Read our [Accessibility guide](../accessibility/house-style.md) to understand how we meet these aims.
 
