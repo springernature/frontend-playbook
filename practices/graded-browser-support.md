@@ -79,9 +79,19 @@ Please note that this JavaScript code will fail in Internet Explorer if there is
 
 As of January 2017, we consider Internet Explorer 10 as Grade-C. This is mainly due to its lack of support for certain modern features plus a very low usage. IE10 also stopped receiving security updates in January 2016 from its manufacturer.
 
-Unfortunately, both IE10 and IE11 support the same CSS media queries, which means that it's not possible to use a CSS-only method of differentiating between both browsers.
+Unfortunately, both IE10 and IE11 support the same CSS media queries, which means that it is not possible to use a CSS-only method of differentiating between both browsers.
 
 This means that even if we consider IE10 a Grade-C browser, we currently serve IE10 users the full experience.
+
+#### Internet Explorer and CSS Grid
+
+[CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) has been available in all evergreen browsers [for the last year](https://caniuse.com/#feat=css-grid). It offers a much-simplified way of working with layout and offers new design opportunities.
+
+However, CSS Grid is not available in the full standardised form in Internet Explorer 10 or 11, both of which are currently *de facto* supported as Grade A browsers by us (see above).
+
+The syntax and capabilities for CSS Grid are radically different in IE than in any other browser. As a result the development costs to match the visual experience in IE with other browsers can range from trivial, for simple component-level layouts, to major for page-level layouts.
+
+We therefore accept that some teams will wish to develop their layouts using CSS Grid, but will not be able to justify devoting time to supporting IE. For those teams we suggest a highly-styled linear layout, which has all the features of a Grade A browser experience, except for the page layout. It is up to any teams making this decision to ensure the IE10/11 Grade A experience is acceptable to their users and business owners.
 
 #### Browsers without TLS 1.2 support
 
