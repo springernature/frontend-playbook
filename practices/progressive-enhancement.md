@@ -14,9 +14,15 @@ There is a subtle but important difference in this approach vs the outdated appr
 
 ## Why we use it
 
-There are several key benefits to using progressive enhancement;
+Progressive Enhancement fits perfectly with the [Rule of Least Power](https://en.wikipedia.org/wiki/Rule_of_least_power).
 
-It allows you to create software that's fault tolerant by design - a key consideration for writing software for the web which will be downloaded and interpreted/executed in an incomprehensibly diverse plethora of devices and environments. Unlike graceful degradation, this fault tolerance is built in *from the start* and so is much less likely to be skipped out in the interests of hitting a deadline (or because it's less spangly than the next feature X).
+> In the web front-end stack — HTML, CSS, JS, and ARIA — if you can solve a problem with a simpler solution lower in the stack, you should. It’s less fragile, more foolproof, and just works.
+>
+> -- [Ian Featherstone, April 23rd 2014](https://simplyaccessible.com/article/data-attributes/)
+
+By keeping the Rule of Least Power in mind you can create software that's fault tolerant by design - a key consideration for writing software for the web which will be downloaded and interpreted/executed in an incomprehensibly diverse plethora of devices and environments.
+
+Unlike graceful degradation, this fault tolerance is built in *from the start* and so is much less likely to be skipped out in the interests of hitting a deadline (or because it's less spangly than the next feature X).
 
 Developing software using progressive enhancement also encourages Lean thinking, by aligning development priorities with end-user priorities (people are likely here for your content, not for how pretty your buttons look). This is both very useful for prioritisation of features (and refinement of the fabled MVP) but also biases you towards delivery of software that can be tested early; so you can see if your core content and functionality is working before spending too much time on making it "cutting-edge".
 
@@ -33,3 +39,4 @@ First of all; a web app is a web page, put your sparkles away. Secondly, why do 
 * [A List Apart: Understanding Progressive Enhancement](http://alistapart.com/article/understandingprogressiveenhancement) October 07, 2008
 * [Progressive enhancement is a team sport](https://seesparkbox.com/foundry/Progressive_Enhancement_Is_A_Team_Sport)
 * [Progressive enhancement is still important](https://jakearchibald.com/2013/progressive-enhancement-still-important/) July 03, 2013
+* [Robustness and least power](https://adactio.com/journal/14327) September 10th, 2018
