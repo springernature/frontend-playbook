@@ -17,8 +17,8 @@ There is a subtle but important difference in this approach vs the outdated appr
 Progressive Enhancement firts perfectly with the [Rule of Least Power](https://en.wikipedia.org/wiki/Rule_of_least_power).
 
 > In the web front-end stack — HTML, CSS, JS, and ARIA — if you can solve a problem with a simpler solution lower in the stack, you should. It’s less fragile, more foolproof, and just works.
-
-- [Ian Featherstone, April 23rd 2014](https://simplyaccessible.com/article/data-attributes/)
+>
+> - [Ian Featherstone, April 23rd 2014](https://simplyaccessible.com/article/data-attributes/)
 
 By keeping the Rule of Least Power in mind you can create software that's fault tolerant by design - a key consideration for writing software for the web which will be downloaded and interpreted/executed in an incomprehensibly diverse plethora of devices and environments.
 
