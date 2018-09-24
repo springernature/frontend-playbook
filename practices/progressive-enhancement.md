@@ -14,7 +14,7 @@ There is a subtle but important difference in this approach vs the outdated appr
 
 ## Why we use it
 
-Progressive Enhancement firts perfectly with the [Rule of Least Power](https://en.wikipedia.org/wiki/Rule_of_least_power).
+Progressive Enhancement fits perfectly with the [Rule of Least Power](https://en.wikipedia.org/wiki/Rule_of_least_power).
 
 > In the web front-end stack — HTML, CSS, JS, and ARIA — if you can solve a problem with a simpler solution lower in the stack, you should. It’s less fragile, more foolproof, and just works.
 >
