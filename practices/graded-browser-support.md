@@ -2,13 +2,14 @@
 
 This page describes the way that we support different browsers and browser versions when building sites at Springer Nature.
 
-* [Our criteria for browser support](#Our-criteria-for-browser-support)
-* [Graded browser support list](#Graded-browser-support-list)
-* [Implementing graded browser support](#Implementing-graded-browser-support)
-  * [Implementation details](#Implementation-details)
-  * [Caveats](#Caveats)
-    * [Internet Explorer 10 support](#Internet-Explorer-10-support)
-    * [Browsers without TLS 1.2 support](#Browsers-without-TLS-1.2-support)
+* [Our criteria for browser support](#our-criteria-for-browser-support)
+* [Graded browser support list](#graded-browser-support-list)
+* [Implementing graded browser support](#implementing-graded-browser-support)
+  * [Implementation details](#implementation-details)
+  * [Caveats](#caveats)
+    * [Internet Explorer 10 support](#internet-explorer-10-support)
+    * [Internet Explorer and CSS Grid](#internet-explorer-and-css-grid)
+    * [Browsers without TLS 1.2 support](#browsers-without-tls-1.2-support)
 
 ## Our criteria for browser support
 
