@@ -34,7 +34,7 @@ This is the current list of browser versions and their corresponding grades:
 | Opera           | latest stable                   | < 16               |
 | Safari iOS      | latest stable, latest stable -1 | < 7                |
 | Safari MacOS    | latest stable, latest stable -1 | < 6.1              |
-| Android Webview | Latest stable                   | < 30 (Android 4.4) |
+| Android Webview | latest stable                   | < 30 (Android 4.4) |
 
 Every unlisted browser version is Grade-X.
 
