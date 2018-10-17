@@ -186,7 +186,7 @@ One exception to these rules is targeting a BEM element from within a nested blo
 Projects must lint their stylesheets with the appropriate tool:
 
 - If you author in __CSS__, use [StyleLint](https://github.com/stylelint/stylelint) to enforce these rules. You can find _an example_ config file in the [config directory](config).
-- If you author in __Sass__, use [Sass Lint](https://github.com/sasstools/sass-lint) to enforce these rules. You can find _an example_ `.sass-lint.yml` config file in the [config directory](config).
+- If you author in __Sass__, use [Sass Lint](https://github.com/sasstools/sass-lint) to enforce these rules. We use the [Springer Nature `sasslint-config`](https://github.com/springernature/sasslint-config-springernature) on our projects.
 
 ### Indentation
 
