@@ -176,7 +176,7 @@ table {
 }
 ```
 
-**Breakpoints**  
+**Breakpoints**
 These should be nested within the relevant parent using `@include`.
 
 One exception to these rules is targeting a BEM element from within a nested block rule. See the [BEM documentation][bem-css.md] for more information on BEM and nesting.
@@ -186,7 +186,7 @@ One exception to these rules is targeting a BEM element from within a nested blo
 Projects must lint their stylesheets with the appropriate tool:
 
 - If you author in __CSS__, use [StyleLint](https://github.com/stylelint/stylelint) to enforce these rules. You can find _an example_ config file in the [config directory](config).
-- If you author in __Sass__, use [Sass Lint](https://github.com/sasstools/sass-lint) to enforce these rules. You can find _an example_ `.sass-lint.yml` config file in the [config directory](config).
+- If you author in __Sass__, use [Sass Lint](https://github.com/sasstools/sass-lint) to enforce these rules. We use the [Springer Nature `sasslint-config`](https://github.com/springernature/sasslint-config-springernature) on our projects.
 
 ### Indentation
 
@@ -230,12 +230,12 @@ a {}
 
 ### Blocks
 
-There MUST be a newline after the closing brace.  
-There MUST be a newline before the closing brace in multi-line blocks.  
-There MUST be a single space before the closing brace in single-line blocks.  
-There MUST be a newline after the opening brace in multi-line blocks.  
-There MUST be a single space after the opening brace in single-line blocks.  
-There MUST be a single space before the opening brace.  
+There MUST be a newline after the closing brace.
+There MUST be a newline before the closing brace in multi-line blocks.
+There MUST be a single space before the closing brace in single-line blocks.
+There MUST be a newline after the opening brace in multi-line blocks.
+There MUST be a single space after the opening brace in single-line blocks.
+There MUST be a single space before the opening brace.
 Blocks MUST NOT be empty.
 
 We _don't_ do this:
@@ -271,8 +271,8 @@ b {
 
 ### Colors
 
-Hex colors should be lowercase.  
-We should use short notation for hex colors.  
+Hex colors should be lowercase.
+We should use short notation for hex colors.
 Disallow invalid hex colors.
 
 We _don't_ do this:
@@ -329,14 +329,14 @@ a {
 
 ### Declarations
 
-There MUST NOT be whitespace after the bang.  
-There MUST be a single space before the bang.  
-There MUST be a newline after the semicolon in multi-line rules.  
-There MUST be a single space after the semicolon in single-line declaration blocks.  
-There MUST NOT be whitespace before the semicolons.  
-Limit the number of declarations within a single line declaration block to 1.  
-There MUST be a newline after the colon if the declaration's value is multi-line.  
-There MUST be a single space after the colon if the declaration's value is single-line.  
+There MUST NOT be whitespace after the bang.
+There MUST be a single space before the bang.
+There MUST be a newline after the semicolon in multi-line rules.
+There MUST be a single space after the semicolon in single-line declaration blocks.
+There MUST NOT be whitespace before the semicolons.
+Limit the number of declarations within a single line declaration block to 1.
+There MUST be a newline after the colon if the declaration's value is multi-line.
+There MUST be a single space after the colon if the declaration's value is single-line.
 There MUST NOT be whitespace before the colon.
 
 We _don't_ do this:
@@ -383,12 +383,12 @@ a {
 
 ### Functions
 
-Disallow an unspaced operator within calc functions.  
-There MUST be a newline after the commas in multi-line functions.  
-There MUST be a single space after the commas in single-line functions.  
-There MUST NOT be whitespace before the commas.  
-There MUST be a newline inside the parentheses of multi-line functions.  
-There MUST NOT be a whitespace inside the parentheses of single-line functions.  
+Disallow an unspaced operator within calc functions.
+There MUST be a newline after the commas in multi-line functions.
+There MUST be a single space after the commas in single-line functions.
+There MUST NOT be whitespace before the commas.
+There MUST be a newline inside the parentheses of multi-line functions.
+There MUST NOT be a whitespace inside the parentheses of single-line functions.
 There MUST be whitespace after the function.
 
 We _don't_ do this:
@@ -437,13 +437,13 @@ a {
 
 ### Media features
 
-There MUST be a single space after the colon.  
-There MUST NOT be whitespace before the colon.  
-There MUST be a single space after the range operator.  
-There MUST be a single space before the range operator.  
-There MUST be a newline after the commas in multi-line media query lists.  
-There MUST be a single space after the commas in single-line media query lists.  
-There MUST NOT be whitepace before the commas.  
+There MUST be a single space after the colon.
+There MUST NOT be whitespace before the colon.
+There MUST be a single space after the range operator.
+There MUST be a single space before the range operator.
+There MUST be a newline after the commas in multi-line media query lists.
+There MUST be a single space after the commas in single-line media query lists.
+There MUST NOT be whitepace before the commas.
 There MUST NOT be whitespace on the inside the parentheses.
 
 We _don't_ do this:
@@ -483,8 +483,8 @@ We do this:
 
 ### Numbers
 
-There MUST be a leading zero.  
-Disallow trailing zeros within numbers.  
+There MUST be a leading zero.
+Disallow trailing zeros within numbers.
 Disallow units for zero lengths.
 
 We _don't_ do this:
@@ -525,8 +525,8 @@ a { top: 1.001vh }
 
 ### Rules
 
-Disallow shorthand properties that override related longhand properties.  
-There MUST be an empty line before multi-line rules.  
+Disallow shorthand properties that override related longhand properties.
+There MUST be an empty line before multi-line rules.
 There MUST be a trailing semicolon.
 
 We _don't_ do this:
@@ -581,9 +581,9 @@ a { color: pink; }
 
 ### Selectors
 
-There MUST be a single space after the combinators.  
-There MUST be a single space before the combinators.  
-There MUST be a newline after the commas.  
+There MUST be a single space after the combinators.
+There MUST be a single space before the combinators.
+There MUST be a newline after the commas.
 There MUST NOT be whitespace before the commas.
 
 We _don't_ do this:
@@ -618,8 +618,8 @@ b { color: pink; }
 
 ### Value lists
 
-There MUST be a newline after the commas in multi-line value lists.  
-There MUST be a single space after the commas in single-line value lists.  
+There MUST be a newline after the commas in multi-line value lists.
+There MUST be a single space after the commas in single-line value lists.
 There MUST NOT be whitespace before the commas.
 
 We _don't_ do this:
@@ -647,9 +647,9 @@ a { background-size: 0,
 
 ### General
 
-Limit the number of adjacent empty lines to 1.  
-Disallow end-of-line whitespace.  
-Strings MUST be wrapped with single quotes.  
+Limit the number of adjacent empty lines to 1.
+Disallow end-of-line whitespace.
+Strings MUST be wrapped with single quotes.
 Disallow missing end-of-file newlines in non-empty files.
 
 We _don't_ do this:
