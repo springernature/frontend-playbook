@@ -1,18 +1,18 @@
 # Managing Node.js-based projects and dependencies
 
-  - [Specifying versions of node](#specifying-versions-of-node)
-      - [Run `nvm use` before `npm install`](#run-nvm-use-before-npm-install)
-          - [Automatically running `nvm use`](#automatically-running-nvm-use)
-  - [Specifying versions of dependencies](#specifying-versions-of-dependencies)
-      - [Run-time dependencies](#run-time-dependencies)
-          - [Examples](#examples)
-      - [Development dependencies](#development-dependencies)
-          - [<a name="examples-1">Examples</a>](#a-nameexamples-1examplesa)
-      - [Classifying "built" run-time dependencies](#classifying-built-run-time-dependencies)
-  - [Publishing projects on NPM](#publishing-projects-on-npm)
-      - [Naming projects](#naming-projects)
-  - [Dependency management tools](#dependency-management-tools)
-  - [Handling dependencies from third parties](#handling-dependencies-from-third-parties)
+- [Specifying versions of node](#specifying-versions-of-node)
+    - [Run `nvm use` before `npm install`](#run-nvm-use-before-npm-install)
+        - [Automatically running `nvm use`](#automatically-running-nvm-use)
+- [Specifying versions of dependencies](#specifying-versions-of-dependencies)
+    - [Run-time dependencies](#run-time-dependencies)
+        - [Examples](#examples)
+    - [Development dependencies](#development-dependencies)
+        - [<a name="examples-1">Examples</a>](#a-nameexamples-1examplesa)
+    - [Classifying "built" run-time dependencies](#classifying-built-run-time-dependencies)
+- [Publishing projects on NPM](#publishing-projects-on-npm)
+    - [Naming projects](#naming-projects)
+- [Dependency management tools](#dependency-management-tools)
+- [Handling dependencies from third parties](#handling-dependencies-from-third-parties)
 
 The following guide describes how we use node and manage package dependencies in [Springer Nature Node.js-based projects](https://github.com/springernature?utf8=%E2%9C%93&q=&type=public&language=javascript).
 
