@@ -1,16 +1,18 @@
 # Managing Node.js-based projects and dependencies
 
-* [Specifying versions of node](#specifying-versions-of-node)
-    * [Run `nvm use` before `npm install`](#run-nvm-use-before-npm-install)
-* [Specifying versions of dependencies](#specifying-versions-of-dependencies)
-    * [Run-time dependencies](#run-time-dependencies)
-        * [Examples](#examples)
-    * [Development dependencies](#development-dependencies)
-        * [Examples](#examples-1)
-    * [Classifying "built" run-time dependencies](#classifying-built-run-time-dependencies)
-* [Publishing projects on NPM](#publising-projects-on-npm)
-* [Dependency management tools](#dependency-management-tools)
-* [Handling dependencies from third parties](#handling-dependencies-from-third-parties)
+- [Specifying versions of node](#specifying-versions-of-node)
+    - [Run `nvm use` before `npm install`](#run-nvm-use-before-npm-install)
+        - [Automatically running `nvm use`](#automatically-running-nvm-use)
+- [Specifying versions of dependencies](#specifying-versions-of-dependencies)
+    - [Run-time dependencies](#run-time-dependencies)
+        - [Examples](#examples)
+    - [Development dependencies](#development-dependencies)
+        - [<a name="examples-1">Examples</a>](#a-nameexamples-1examplesa)
+    - [Classifying "built" run-time dependencies](#classifying-built-run-time-dependencies)
+- [Publishing projects on NPM](#publishing-projects-on-npm)
+    - [Naming projects](#naming-projects)
+- [Dependency management tools](#dependency-management-tools)
+- [Handling dependencies from third parties](#handling-dependencies-from-third-parties)
 
 The following guide describes how we use node and manage package dependencies in [Springer Nature Node.js-based projects](https://github.com/springernature?utf8=%E2%9C%93&q=&type=public&language=javascript).
 
@@ -29,8 +31,7 @@ It's important to specify which versions of node your application expects. There
     * An `.nvmrc` file is a configuration file for `nvm` ([Node Version Manager](https://github.com/creationix/nvm)).
     `nvm` enables you to use different versions of node for different projects, on a per-directory basis.
     Your project should include an [`.nvmrc` file](https://github.com/creationix/nvm#nvmrc) in the root directory of the project to specify which version(s) of node are compatible.
-    You can then run `nvm use` to use the right version of node, and [if using ZSH this shell script will run it automatically](https://github.com/creationix/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file).
-    Additionally [Travis respects `.nvmrc` files](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions-using-nvmrc), so using one will simplify your Travis configuration.
+    You can then run `nvm use` to use the right version of node. Additionally [Travis respects `.nvmrc` files](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions-using-nvmrc), so using one will simplify your Travis configuration.
 
 ### Run `nvm use` before `npm install`
 
@@ -40,12 +41,18 @@ Running `nvm use` before `npm install` is good because:
 1. It make installs _more_ predictable, which minimises "but it works on my machine" issues.
 1. It minimises changes to the `package-lock.json` (if your project is comitting that file).
 
-A problem with using `npm` at the time of writing (September 2018) is that `npm install` doesn't guarantee reproducible builds, as neither the `package.json` nor `package-lock.json` is a source of authority for what's installed.
+A problem with using `npm install` is that it doesn't guarantee reproducible builds, as neither the `package.json` nor `package-lock.json` is a source of authority for what's installed.
 
-The `npm ci` command will always install predictably (using the `package-lock.json` as a source of authority) but `npm ci` is not available in any current LTS version of node. It should be available with node 10 which should be in LTS [in October](https://nodejs.org/en/blog/release/v10.0.0/).
+Better is to use a version of node that ships with `npm` version 5.7.0 or higher ([node v10.3+ or 8.12+](https://nodejs.org/en/download/releases/)). This is because `npm` 5.7.0+ supports the `ci` argument, which is good because **`npm ci` will always install predictably**, using the `package-lock.json` as a source of authority.
 
 (You could use `npm ci` by specifing a newer version of `npm` than is recommended for your [particular version of node](https://nodejs.org/en/download/releases/), but `npm` is itself written in node and [only supports certain node versions](https://github.com/npm/cli/blob/latest/lib/utils/unsupported.js).)
 
+#### Automatically running `nvm use`
+
+To avoid accidentally forgetting to run `nvm use` before working on a node project, there are useful shell extensions which will do it for you 
+([zsh](https://github.com/creationix/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file), 
+[bash](https://stackoverflow.com/questions/23556330/run-nvm-use-automatically-every-time-theres-a-nvmrc-file-on-the-directory)), 
+which are well worth installing!
 
 ## Specifying versions of dependencies
 
