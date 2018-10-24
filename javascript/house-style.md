@@ -400,7 +400,7 @@ We _don't_ do this:
 let foo = [1,2];
 
 if (bar) {
-    foo.push(1);
+    foo.push(3);
 }
 ```
 
