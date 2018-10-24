@@ -368,8 +368,8 @@ We use `let` only when a variable _explicitly_ [needs to be mutable](https://ada
 You can also use destructuring assignment with objects and arrays. These don't have to be multi-line, but there must be spaces after the commas:
 
 ```js
-let {foo, bar} = getFooAndBar();
-let [baz, qux] = getBazAndQux();
+const {foo, bar} = getFooAndBar();
+const [baz, qux] = getBazAndQux();
 ```
 
 #### Use of var
