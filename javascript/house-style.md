@@ -346,7 +346,8 @@ You should also remove trailing white space from lines of code. Your editor shou
 
 ### Variables
 
-#### Use of const and let
+#### Defining variables
+
 We define variables with multiple `const` and `let` statements.
 
 We do this:
@@ -356,6 +357,11 @@ const foo = 1;
 const bar = 2;
 ```
 
+```js
+let foo = 1;
+let bar = 2;
+```
+
 We _don't_ do this:
 
 ```js
@@ -363,7 +369,40 @@ const foo = 1,
       bar = 2;
 ```
 
+```js
+let foo = 1,
+    bar = 2;
+```
+
 We use `let` only when a variable _explicitly_ [needs to be mutable](https://ada.is/blog/2015/07/13/immutable/):
+
+We do this:
+
+```js
+let foo = 1;
+
+if (foo) {	
+    foo += 1;	
+}
+```
+
+```js
+const foo = [1,2];
+
+if (bar) {
+    foo.push(3);
+}
+```
+
+We _don't_ do this:
+
+```js
+let foo = [1,2];
+
+if (bar) {
+    foo.push(1);
+}
+```
 
 #### Use of var
 
