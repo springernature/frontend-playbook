@@ -302,7 +302,7 @@ Practical code examples, including error handling examples, can be read here: [A
 
 ### Indentation
 
-Ensure indentation consistency is maintained with a tool such as [EditorConfig](http://editorconfig.org/). Using this tool, you can specify indentation settings for your codebase. Team members should then install the corresponding plugin for their editor. E.g. [atom-editorconfig](https://github.com/sindresorhus/atom-editorconfig#readme)
+Ensure indentation consistency is maintained with a tool such as [EditorConfig](http://editorconfig.org/). Using this tool, you can specify indentation settings for your codebase. Team members should then install the corresponding plugin for their editor. E.g. [atom-editorconfig](https://github.com/sindresorhus/atom-editorconfig#readme), [vscode-editor-config](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
 Except in package.json files, we indent our JavaScript using single tabs, not spaces. You can convert characters automatically in most editors, and you're advised to do this.
 
@@ -343,7 +343,7 @@ We use automated tools (like Snyk) to monitor the status of dependencies in our 
 
 We use white space liberally to help keep code readable. You're encouraged to use newlines to break up long functions into logical chunks.
 
-You should also remove trailing white space from lines of code. Your editor should be able to either remove this or highlight it when present, for example, [atom-whitespace](https://github.com/atom/whitespace).
+You should also remove trailing white space from lines of code. Your editor should be able to either remove this or highlight it when present, for example, [atom-whitespace](https://github.com/atom/whitespace), [vscode-trailing-spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces).
 
 ### Semi-colons
 
