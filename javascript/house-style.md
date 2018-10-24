@@ -365,13 +365,6 @@ const foo = 1,
 
 We use `let` only when a variable _explicitly_ [needs to be mutable](https://ada.is/blog/2015/07/13/immutable/):
 
-You can also use destructuring assignment with objects and arrays. These don't have to be multi-line, but there must be spaces after the commas:
-
-```js
-const {foo, bar} = getFooAndBar();
-const [baz, qux] = getBazAndQux();
-```
-
 #### Use of var
 
 If the environment you're running in does not support ES2015 (Node.js 4.x/[Babel](https://babeljs.io/)), and therefore you are using `var` instead of `const` and `let`, we trust our developers to understand [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting). 
