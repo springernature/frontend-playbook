@@ -368,7 +368,7 @@ We use `let` only when a variable _explicitly_ [needs to be mutable](https://ada
 #### Use of var
 
 If you have to use `var` instead of `const` and `let` (because your environment doesn't support ES2015 (Node.js 4.x/[Babel](https://babeljs.io/))), you need to understand [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting). 
-We generally discourage defining variables inside loops or blocks.
+Avoid defining variables inside loops or blocks.
 
 We do this:
 
