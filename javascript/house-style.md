@@ -81,7 +81,7 @@ function loadConfigFile(filePath, callback) {
         if (error) {
             return callback(error);
         }
-        var config = processConfig(fileContents);
+        const config = processConfig(fileContents);
         callback(null, config);
     });
 }
@@ -256,7 +256,6 @@ You can `await` multiple promises:
 const [response1, response2] = await Promise.all([promise1, promise2]);
 ```
 
-
 ##### Multiple awaits in a one-liner
 
 You can wrap the `await` + function call in parentheses to enable calls like this:
@@ -302,7 +301,7 @@ Practical code examples, including error handling examples, can be read here: [A
 
 ### Indentation
 
-Ensure indentation consistency is maintained with a tool such as [EditorConfig](http://editorconfig.org/). Using this tool, you can specify indentation settings for your codebase. Team members should then install the corresponding plugin for their editor. E.g. [atom-editorconfig](https://github.com/sindresorhus/atom-editorconfig#readme)
+Ensure indentation consistency is maintained with a tool such as [EditorConfig](http://editorconfig.org/). Using this tool, you can specify indentation settings for your codebase. Team members should then install the corresponding plugin for their editor. E.g. [atom-editorconfig](https://github.com/sindresorhus/atom-editorconfig#readme), [vscode-editor-config](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
 Except in package.json files, we indent our JavaScript using single tabs, not spaces. You can convert characters automatically in most editors, and you're advised to do this.
 
@@ -343,51 +342,72 @@ We use automated tools (like Snyk) to monitor the status of dependencies in our 
 
 We use white space liberally to help keep code readable. You're encouraged to use newlines to break up long functions into logical chunks.
 
-You should also remove trailing white space from lines of code. Your editor should be able to either remove this or highlight it when present, for example, [atom-whitespace](https://github.com/atom/whitespace).
+You should also remove trailing white space from lines of code. Your editor should be able to either remove this or highlight it when present, for example, [atom-whitespace](https://github.com/atom/whitespace), [vscode-trailing-spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces).
 
-### Semi-colons
+### Variables
 
-We require the use of semi-colons. The only statements that don't need to end with semi-colons are function declarations and blocks.
+#### Defining variables
+
+We define variables with multiple `const` and `let` statements.
 
 We do this:
 
 ```js
-var foo = 1;
+const foo = 1;
+const bar = 2;
+```
 
-if (foo) {
-    foo += 1;
-}
-
-function bar() {
-    // ...
-}
-
-var baz = function() {
-    // ...
-};
+```js
+let foo = 1;
+let bar = 2;
 ```
 
 We _don't_ do this:
 
 ```js
-var foo = 1
+const foo = 1,
+      bar = 2;
+```
 
-if (foo) {
-    foo += 1
-};
+```js
+let foo = 1,
+    bar = 2;
+```
 
-function bar() {
-    // ...
-};
+We use `let` only when a variable _explicitly_ [needs to be mutable](https://ada.is/blog/2015/07/13/immutable/):
 
-var baz = function() {
-    // ...
+We do this:
+
+```js
+let foo = 1;
+
+if (foo) {	
+    foo += 1;	
 }
 ```
 
-### Variables
+```js
+const foo = [1,2];
 
-We define variables with multiple `var` statements and trust our developers to understand [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting). We generally discourage defining variables inside loops or blocks.
+if (bar) {
+    foo.push(3);
+}
+```
+
+We _don't_ do this:
+
+```js
+let foo = [1,2];
+
+if (bar) {
+    foo.push(3);
+}
+```
+
+#### Use of var
+
+If you have to use `var` instead of `const` and `let` (because your environment doesn't support ES2015 (Node.js 4.x/[Babel](https://babeljs.io/))), you need to understand [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting). 
+Avoid defining variables inside loops or blocks.
 
 We do this:
 
@@ -412,45 +432,16 @@ if (foo === bar) {
 }
 ```
 
-If the environment you're running in supports ES2015 (Node.js 4.x/[Babel](https://babeljs.io/)) then you should not use `var` statements at all – you should be using `let` and `const`:
-
-In ES2015 we do this:
-
-```js
-const foo = 'bar';
-```
-
-We use `let` only when a variable _explicitly_ [needs to be mutable](https://ada.is/blog/2015/07/13/immutable/):
-
-```js
-let foo = 'bar';
-```
-
-In ES2015 we _don't_ do this:
-
-```js
-var foo = 'bar';
-```
-
-You can also use destructuring assignment with objects and arrays. These don't have to be multi-line, but there must be spaces after the commas:
-
-```js
-let {foo, bar} = getFooAndBar();
-let [baz, qux] = getBazAndQux();
-```
-
 ### Functions
 
 We use lowerCamelCase naming for functions, and functions should be named descriptively.
 
 Functions are not allowed to be written on a single line – you must always follow our [indentation](#indentation) rules.
 
-Whitespace in functions is different to in blocks: there must be no space between the function declaration and the opening arguments bracket.
-
 We do this:
 
 ```js
-var loadConfig = function(filePaths, callback) {
+const loadConfig = function(filePaths, callback) {
     // ...
 }
 
@@ -462,11 +453,13 @@ function loadConfig(filePaths, callback) {
 We _don't_ do this:
 
 ```js
-var loadConfig = function (filePaths, callback) {
+const loadconfig = function(filePaths, callback) {
     // ...
 }
 
-function loadConfig(filePaths, callback){ /* ... */ }
+function loadconfig(filePaths, callback) { 
+	// ...
+}
 ```
 
 #### Pure functions
@@ -486,7 +479,6 @@ greet('Hello', 'friend')
 We _don't_ do this:
 
 ```js
-
 const greeting = 'Hello';
 
 function greet(subject) {
@@ -494,81 +486,9 @@ function greet(subject) {
 }
 
 greet('friend')
-
-```
-
-#### Arguments
-
-Arguments must be separated from the preceding comma by a space, and there should be no padding whitespace at the start and end of the arguments.
-
-We do this:
-
-```js
-var loadConfig = function(filePaths, callback) {
-    // ...
-}
-```
-
-We _don't_ do this:
-
-```js
-var loadConfig = function(filePaths,callback) {
-    // ...
-}
-```
-
-If the environment you're running in supports ES2015 (Node.js 4.x/[Babel](https://babeljs.io/)) then you can use rest and default arguments.
-
-Default and rest arguments must follow the same spacing rules as other arguments and regular variable assignment.
-
-We do this:
-
-```js
-var sayHello = function(person = 'World', ...others) {
-    // ...
-}
-```
-
-We _don't_ do this:
-
-```js
-var sayHello = function(person="world",...others) {
-    // ...
-}
-```
-
-### Classes
-
-If the environment you're running in supports ES2015 (Node.js 4.x/[Babel](https://babeljs.io/)) then you can use classes. Classes and their methods must be indented in the same way as functions. Also methods should be spaced apart.
-
-We do this:
-
-```js
-class Apple extends Fruit {
-    constructor() {
-        this.color = 'red';
-    }
-
-    peel() {
-        // ...
-    }
-}
-```
-
-We _don't_ do this:
-
-```js
-class Apple extends Fruit{
-    constructor(){ this.color = 'red'; }
-    peel () {
-        // ...
-    }
-}
 ```
 
 ### Operators
-
-All operators must have padding whitespace on either side of them. The only exceptions are increment (`++`), decrement (`--`), unary negation (`-foo`), and unary plus (`+foo`).
 
 We disallow the use of normal equal and not equal, requiring you to use the strict equivalents.
 
@@ -577,9 +497,6 @@ We do this:
 ```js
 foo === bar;
 foo !== bar;
-foo += bar;
-baz = 'hello ' + qux;
-foo++;
 ```
 
 We _don't_ do this:
@@ -587,71 +504,17 @@ We _don't_ do this:
 ```js
 foo == bar;
 foo != bar;
-foo+=bar;
-baz = 'hello '+qux;
-foo ++;
-```
-
-### Blocks
-
-All blocks must use curly braces and are not allowed to be written on a single line – see the [indentation](#indentation) rules.
-
-Blocks must also have padding whitespace on both sides (unless it's at the start of a line).
-
-If a block requires brackets, there must be padding whitespace between the brackets and the keyword as well as the opening curly brace.
-
-#### Conditionals
-
-In conditionals, `else` blocks must start on the same line as the end curly brace of the `if`.
-
-We do this:
-
-```js
-if (foo) {
-    foo += 1;
-}
-
-if (foo) {
-    foo += 1;
-} else {
-    bar += 1;
-}
-```
-
-We _don't_ do this:
-
-```js
-if(foo){
-    foo += 1;
-}
-
-if (foo) { foo += 1; }
-
-if (foo) return;
-
-if (foo) {
-    foo += 1;
-}
-else {
-    bar += 1;
-}
 ```
 
 #### Loops
 
-In `for` loops, there must be space after the semi-colons.
-
-`for..in` loops must include a check with `hasOwnProperty`.
+In `for...in` loops, there must be a check with `hasOwnProperty`.
 
 We do this:
 
 ```js
-for (let i = 0; i < 10; i += 1) {
-    // ...
-}
-
 for (const prop in obj) {
-    if (obj.hasOwnProperty(prop)) {
+    if (Object.prototype.hasOwnProperty.call(obj, prop)) {
         // ...
     }
 }
@@ -660,39 +523,9 @@ for (const prop in obj) {
 We _don't_ do this:
 
 ```js
-for (let i = 0;i < 10;i += 1) // ...
-
 for (const prop in obj) {
     // ...
 }
-```
-
-#### Error handling
-
-`try/catch` blocks must be indented in the same way as conditionals, with `catch` starting on the same line as the end curly brace of the `try`.
-
-We do this:
-
-```js
-try {
-    foo += 1;
-} catch (error) {
-    console.log(error);
-}
-```
-
-We _don't_ do this:
-
-```js
-try {
-    foo += 1;
-}
-catch (error) {
-    console.log(error);
-}
-
-try { foo += 1; }
-catch (error) { console.log(error); }
 ```
 
 ### Strict mode
@@ -906,10 +739,11 @@ function init(settings) {
 
 export default init;
 ```
+
 ```js
 myComplexModule.init({
-      wrapper: '[data-component="renamed-complex-module"]',
-      close: '[data-component="renamed-complex-module-close"]'
+    wrapper: '[data-component="renamed-complex-module"]',
+    close: '[data-component="renamed-complex-module-close"]'
 });
 ```
 
