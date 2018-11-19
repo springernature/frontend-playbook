@@ -1,7 +1,5 @@
 # CSS style guide
 
-This document aspires to outline the way we write CSS/SASS, and is based at the moment on the existing [Nature playbook (Private repo)](https://github.com/springernature/playbook). This is just a first pass, and is likely to be incomplete (and wrong) in places.  It's a living styleguide – it will grow and adapt as our practices do.
-
 We namespace our CSS as detailed in our [how we write CSS](how-we-write-css.md) guide. For the purposes of the examples here, we will use the `component` namespace.
 
 - [General Principles](#general-principles)
