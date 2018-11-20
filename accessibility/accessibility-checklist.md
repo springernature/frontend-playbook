@@ -28,9 +28,12 @@ Assistive technology may make use of ARIA landmark roles or HTML5 landmark eleme
 
 There are 8 landmark roles. Most browsers implicitly detect these roles if you use the correct HTML5 semantic element, but you may need to add the appropriate ARIA `role=` if you have to support an [older browser](http://www.html5accessibility.com/#sections). 
 
+If you use more than one landmark of the same type, give each landmark a unique label so that screen reader users can tell them apart easily. 
+
 Resources:
 
 * [Article: WAI finding with ARIA landmark roles](http://alistapart.com/column/wai-finding-with-aria-landmark-roles)
+* [Article: Labeling Regions](https://www.w3.org/WAI/tutorials/page-structure/labels/)
 * [Video: How ARIA landmark roles help screen reader users](https://www.youtube.com/watch?v=IhWMou12_Vk&feature=youtu.be)
 * [Tool: Landmarks extension for Chrome, Firefox and Opera](http://matatk.agrip.org.uk/landmarks/)
 * [Tool: HTML5 accessibility feature support for sections](http://www.html5accessibility.com/#sections)
@@ -80,6 +83,7 @@ Don't skip heading levels.
 
 Resources: 
 
+* [Article: Heading structures are tables of contents](https://hiddedevries.nl/en/blog/2018-09-01-heading-structures-are-tables-of-contents)
 * [Article: Semantic Structure](https://webaim.org/techniques/semanticstructure/)
 * [Tool: HeadingsMap extension for Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en)
 * [Tool: HeadingsMap extension for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/headingsmap/)
