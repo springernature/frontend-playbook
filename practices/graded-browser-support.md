@@ -101,7 +101,7 @@ As of June 2018, all our sites are served through HTTPS using the [TLS 1.2 crypt
 The way that we restrict the connection to our sites when not using TLS 1.2 doesn't impact the way that we design and build our sites and our commitment to an approach based on progressive enhancement techniques.
 
 ### Browerslist
-CSS should be automatically prefixed for older browsers using Autoprefixer. While we do not actively test grade X browsers, we still work towards the best experience for all our users. A `.browserslistrc` should cover all browsers that receive CSS. 
+CSS should be prefixed for older browsers using Autoprefixer. While we do not test grade-X browsers, we still work towards the best experience for all our users. Automatically adding vendor prefixes allows us to support a tranche of grade-X browsers with little extra effort. A `.browserslistrc` file should cover all browsers that receive CSS. 
 
 Our recommended `.browserlistrc`: 
 
