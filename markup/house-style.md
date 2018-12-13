@@ -32,7 +32,7 @@ As such it seems beneficial to choose HTML 5 over XHTML.
 
 Do what is reasonable to ensure your documents [validate](https://validator.w3.org/). 
 
-Invalid markup results in authors relying on all clients to do what they intended, not what they instructed.  Clients regularly disagree on how to interpret out instructions, yet alone our intentions, so to promote consistency of execution you must do what you can to ensure your HTML is valid.
+Invalid markup results in authors relying on all clients to do what they intended, not what they instructed.  Clients regularly disagree on how to interpret our instructions, yet alone our intentions, so to promote consistency of execution you must do what you can to ensure your HTML is valid.
 
 Additionally, invalid HTML violates WCAG 2.1 Success Criterion [4.1.1 Parsing](https://www.w3.org/TR/WCAG21/#parsing) (Level A), and areas where your product falls short must be noted on your product's VPAT. It's probably easier just to make sure your HTML is valid in the first place. 
 
