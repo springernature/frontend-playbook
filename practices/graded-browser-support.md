@@ -72,8 +72,6 @@ We couple the loading of JavaScript to the loading of the enhanced CSS. We use t
 })();
 ```
 
-Please note that this JavaScript code will fail in Internet Explorer if there is more than one link element. You can get around this by targeting the specific link element using a class or ID.
-
 ### Caveats
 
 #### Internet Explorer 10 support
