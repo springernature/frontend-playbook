@@ -84,4 +84,4 @@ Your work is now merged, good job! Delete your remote branch, and delete your lo
 
 ## Versioning
 
-Our open source projects are versioned with [SemVer](semver.md). Check our [Open Source support](../open-source-support.md) guide for details on how to version and release an update to an open source project.
+Our open source projects are versioned with [SemVer](semver.md). Check our [Open Source support](../practices/open-source-support.md) guide for details on how to version and release an update to an open source project.
