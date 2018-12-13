@@ -75,7 +75,7 @@ Resources:
 
 ### Use headings correctly
 
-The [HTML5 outline algorithm](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines) can't yet be relied on to convey information to users. Freely use HTML5 sectioning elements, but use headings to define the structure of your document. 
+The [HTML5 outline algorithm](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines) can't yet be relied on to convey information to users. Freely use HTML5 sectioning elements, but use headings to define the structure of your document. See our [HTML markup house style](https://github.com/springernature/frontend-playbook/blob/master/markup/house-style.md#follow-the-html-4-outline-model-for-heading-levels) for more information.
 
 Use an appropriate heading for each section. You can visually hide headings, but make sure they're still accessible to screen reader users. 
 
@@ -85,8 +85,6 @@ Resources:
 
 * [Article: Heading structures are tables of contents](https://hiddedevries.nl/en/blog/2018-09-01-heading-structures-are-tables-of-contents)
 * [Article: Semantic Structure](https://webaim.org/techniques/semanticstructure/)
-* [Tool: HeadingsMap extension for Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en)
-* [Tool: HeadingsMap extension for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/headingsmap/)
 
 
 ### Use progressive enhancement
@@ -100,9 +98,11 @@ Resources:
 
 ## Media
 
-### Audio or video elements should be accessible
+### Audio or video elements must be accessible
 
-This could involve adding [captions to videos](https://www.youtube.com/watch?v=5AXApBbj1ps), providing [transcripts of audio content](https://www.nature.com/nature/podcast/v546/n7658/nature-2017-06-15.html), or including audio description on videos. 
+This could involve adding [captions to videos](https://www.youtube.com/watch?v=5AXApBbj1ps), providing [transcripts of audio content](https://www.nature.com/nature/podcast/v546/n7658/nature-2017-06-15.html), including audio description on videos, or including a text alternative for videos that have no audio track. 
+
+Automatic captions (e.g. those provided by YouTube) are insufficient for accessibility compliance. 
 
 
 ### Provide text alternatives for images
@@ -134,6 +134,7 @@ Resources:
 * [Article: Colour contrast - why does it matter?](https://accessibility.blog.gov.uk/2016/06/17/colour-contrast-why-does-it-matter/)
 * [Tool: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 * [Tool: Funkify](http://www.funkify.org/)
+* [Tool: Visbug extension for Chrome](https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc)
 
 
 ### Don't convey information with colour alone
@@ -160,7 +161,7 @@ Resources:
 
 Make sure users can interact with your page using the keyboard alone. 
 
-Don't rely on device-dependent event handlers (e.g. `onhover`) to convey information or to complete tasks. 
+Don't rely on device-dependent event handlers (e.g. `onhover`) as the sole method to convey information or to complete tasks. 
 
 Make sure interactable elements are large enough for touchscreen users to easily access controls. Leave enough space around controls so that they don't overlap with other touch targets. 
 

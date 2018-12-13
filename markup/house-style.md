@@ -30,9 +30,11 @@ As such it seems beneficial to choose HTML 5 over XHTML.
 
 ### Validation
 
-We do what is reasonable to ensure our documents [validate](https://validator.w3.org/).
+Do what is reasonable to ensure your documents [validate](https://validator.w3.org/). 
 
-Invalid markup results in authors relying on all clients to do what they intended, not what they instructed.  Clients regularly disagree on how to interpret out instructions, yet alone our intentions, so to promote consistency of execution we must do what we can to ensure our HTML is valid.
+Invalid markup results in authors relying on all clients to do what they intended, not what they instructed.  Clients regularly disagree on how to interpret our instructions, yet alone our intentions, so to promote consistency of execution you must do what you can to ensure your HTML is valid.
+
+Additionally, invalid HTML violates WCAG 2.1 Success Criterion [4.1.1 Parsing](https://www.w3.org/TR/WCAG21/#parsing) (Level A), and areas where your product falls short must be noted on your product's VPAT. It's probably easier just to make sure your HTML is valid in the first place. 
 
 ### Do not omit optional end tags
 
@@ -80,9 +82,11 @@ We *don't* do this:
 
 When HTML 5 was first announced, it brought with it a plethora of new semantic elements and an entirely new document outline model which leveraged them to provide meaning.  This was intended to supplant the HTML 4 model in which the heading level (h1 - h6) was used to imply the structure of the HTML document.  See [Using HTML sections and outlines](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines) for more information.
 
-Unfortunately, this new document outline model was never well supported by browsers or assistive technologies.  We considered sticking with the HTML 5 document outline model used in conjunction with setting ARIA attributes (`role="heading" aria-level="3"`) but this rather defeated any benefit from using the more localised heading levels, and was also poorly supported in some key assistive technologies.
+Unfortunately, this new document outline model was never well supported by browsers or assistive technologies. We considered sticking with the HTML 5 document outline model used in conjunction with setting ARIA attributes (`role="heading" aria-level="3"`) but this rather defeated any benefit from using the more localised heading levels, and was also poorly supported in some key assistive technologies.
 
-Instead, we have decided to continue to use the older HTML 4 style heading levels in conjunction with the new HTML 5 semantic elements.  This has since become [the recommendation for use in all HTML 5 documents](https://www.w3.org/TR/html5/sections.html#outlines).
+The HTML 5 document outline algorithm specification has been removed in HTML 5.1. You should continue to use the older HTML 4 style heading levels in conjunction with the new HTML 5 semantic elements. Do not use multiple H1 headings on a single page. 
+
+See the HTML specification for [the current recommendation for use in all HTML 5 documents](https://www.w3.org/TR/html5/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements).
 
 We do this:
 
