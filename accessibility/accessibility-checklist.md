@@ -98,9 +98,11 @@ Resources:
 
 ## Media
 
-### Audio or video elements should be accessible
+### Audio or video elements must be accessible
 
-This could involve adding [captions to videos](https://www.youtube.com/watch?v=5AXApBbj1ps), providing [transcripts of audio content](https://www.nature.com/nature/podcast/v546/n7658/nature-2017-06-15.html), or including audio description on videos. 
+This could involve adding [captions to videos](https://www.youtube.com/watch?v=5AXApBbj1ps), providing [transcripts of audio content](https://www.nature.com/nature/podcast/v546/n7658/nature-2017-06-15.html), including audio description on videos, or including a text alternative for videos that have no audio track. 
+
+Automatic captions (e.g. those provided by YouTube) are insufficient for accessibility compliance. 
 
 
 ### Provide text alternatives for images
@@ -159,7 +161,7 @@ Resources:
 
 Make sure users can interact with your page using the keyboard alone. 
 
-Don't rely on device-dependent event handlers (e.g. `onhover`) to convey information or to complete tasks. 
+Don't rely on device-dependent event handlers (e.g. `onhover`) as the sole method to convey information or to complete tasks. 
 
 Make sure interactable elements are large enough for touchscreen users to easily access controls. Leave enough space around controls so that they don't overlap with other touch targets. 
 
