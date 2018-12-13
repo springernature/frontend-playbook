@@ -132,6 +132,7 @@ Resources:
 * [Article: Colour contrast - why does it matter?](https://accessibility.blog.gov.uk/2016/06/17/colour-contrast-why-does-it-matter/)
 * [Tool: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 * [Tool: Funkify](http://www.funkify.org/)
+* [Tool: Visbug extension for Chrome](https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc)
 
 
 ### Don't convey information with colour alone
