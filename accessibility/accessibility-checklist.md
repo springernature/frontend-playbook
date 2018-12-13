@@ -85,8 +85,6 @@ Resources:
 
 * [Article: Heading structures are tables of contents](https://hiddedevries.nl/en/blog/2018-09-01-heading-structures-are-tables-of-contents)
 * [Article: Semantic Structure](https://webaim.org/techniques/semanticstructure/)
-* [Tool: HeadingsMap extension for Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en)
-* [Tool: HeadingsMap extension for Firefox](https://addons.mozilla.org/en-GB/firefox/addon/headingsmap/)
 
 
 ### Use progressive enhancement
