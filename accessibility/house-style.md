@@ -113,7 +113,7 @@ You MUST NOT rely on accessibility tools as your sole safeguard for accessibilit
 
 You're encouraged to test your pages with assistive technology (AT). Many operating systems include some AT as standard, including screenreaders, magnifiers, or input remapping. 
 
-In OSX you can enable [VoiceOver](https://support.apple.com/kb/PH22549?locale=en_US) in System Preferences > Accessibility. You may also find navigating without an input device using [Dictation](https://support.apple.com/en-us/HT202584) instructive. Ensure your interfaces work with keyboard navigation. 
+In OSX you can enable [VoiceOver](https://help.apple.com/voiceover/info/guide/10.12/#/) in System Preferences > Accessibility. You may also find navigating without an input device using [Dictation](https://support.apple.com/en-us/HT202584) instructive. Ensure your interfaces work with keyboard navigation. 
 
 *Caveat:* unless you're familiar with using AT, your experience won't be comparable to that of a habitual AT user. Beware of making inferences about what's "easier" for AT users based on your own preferences. 
 
