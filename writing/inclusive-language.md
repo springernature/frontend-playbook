@@ -28,7 +28,7 @@ Stereotyping means presuming a range of things about people based on their perso
 
 ### Gendered language
 
-In most cases your writing will address the reader directly as "you", but if you do need to write about people in the abstract, avoid language that centers the male identity as the default. Try recasting your sentences as plural to make them more inclusive and concise. You can also use the [singular _they_](http://www.poynter.org/2015/the-washington-post-will-allow-singular-they/387542/) as per the Washington Post.
+In most cases your writing will address the reader directly as "you", but if you do need to write about people in the abstract, avoid language that centers the male identity as the default. Try recasting your sentences as plural to make them more inclusive and concise. You can also use the [singular _they_](https://www.poynter.org/reporting-editing/2015/the-washington-post-will-allow-singular-they/) as per the Washington Post.
 
 Avoid "bro" language, even in verbal communication. 
 

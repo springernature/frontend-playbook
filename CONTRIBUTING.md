@@ -2,13 +2,13 @@
 
 If you're on this page because you'd like to contribute to the Playbook, that's fantastic! Thank you for getting involved ❤️
 
-Contributing to the Playbook is for everyone. Whether you work at Springer Nature or not, the Playbook is for you - a guide to good working standards and practices that support healthy, happy teams. You don't need to be a developer to get involved. We cover many areas, from cultural and technical writing to specific technical practices. Please adhere to our [language guidelines](writing/language.md) when you make your contributions. 
+Contributing to the Playbook is for everyone. Whether you work at Springer Nature or not, the Playbook is for you - a guide to good working standards and practices that support healthy, happy teams. You don't need to be a developer to get involved. We cover many areas, from cultural and technical writing to specific technical practices. Please adhere to our [house style](writing/house-style.md) and [inclusive language](writing/inclusive-language.md) guidelines when you make your contributions. 
 
 ## How do I contribute?
 
 ### Discussing
 
-You can get involved in discussions in issues and pull requests. Sometimes we need a discussion to [come to an agreement](https://github.com/springernature/frontend/issues/92) on a particular issue before a pull request is opened. Sometimes [a pull request](https://github.com/springernature/frontend/pull/87) will be discussed. Both types of discussion help bring us to a common understanding, and your input at this stage is really valuable. 
+You can get involved in discussions in issues and pull requests. Sometimes we need a discussion to [come to an agreement](https://github.com/springernature/frontend-playbook/issues/92) on a particular issue before a pull request is opened. Sometimes [a pull request](https://github.com/springernature/frontend-playbook/pull/87) will be discussed. Both types of discussion help bring us to a common understanding, and your input at this stage is really valuable. 
 
 ### Opening and assigning issues
 
