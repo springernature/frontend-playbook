@@ -1,10 +1,10 @@
-# Springer Nature front-end playbook
+# The Front-End Playbook
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this playbook are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
 ## What's this?
 
-This repo contains the Springer Nature front-end playbook. It details how we run software development and how we make web and mobile products together. It's filled with things we've learned based on our own experience and study of others' experiences.
+This repo contains The Front-End Playbook. It details how we run software development and how we make web and mobile products together. It's filled with things we've learned based on our own experience and study of others' experiences.
 
 See "[Changing the laws of engineering with pull requests](https://www.youtube.com/watch?v=YIpNpptGX6Q)" for an in depth explanation of how developing a playbook like this is of benefit.
 
