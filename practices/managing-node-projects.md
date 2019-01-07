@@ -1,20 +1,21 @@
 # Managing Node.js-based projects and dependencies
 
+The following guide describes how we use node and manage package dependencies in [Springer Nature Node.js-based projects](https://github.com/springernature?utf8=%E2%9C%93&q=&type=public&language=javascript).
+
 - [Specifying versions of node](#specifying-versions-of-node)
-    - [Run `nvm use` before `npm install`](#run-nvm-use-before-npm-install)
-        - [Automatically running `nvm use`](#automatically-running-nvm-use)
+  - [Run `nvm use` before `npm install`](#run-nvm-use-before-npm-install)
+    - [Automatically running `nvm use`](#automatically-running-nvm-use)
+  - [Should I check in `package-lock.json` to version control?](#should-i-check-in-package-lockjson-to-version-control)
 - [Specifying versions of dependencies](#specifying-versions-of-dependencies)
-    - [Run-time dependencies](#run-time-dependencies)
-        - [Examples](#examples)
-    - [Development dependencies](#development-dependencies)
-        - [<a name="examples-1">Examples</a>](#a-nameexamples-1examplesa)
-    - [Classifying "built" run-time dependencies](#classifying-built-run-time-dependencies)
+  - [Run-time dependencies](#run-time-dependencies)
+    - [Examples](#examples)
+  - [Development dependencies](#development-dependencies)
+    - [Examples](#examples-1)
+  - [Classifying "built" run-time dependencies](#classifying-built-run-time-dependencies)
 - [Publishing projects on NPM](#publishing-projects-on-npm)
-    - [Naming projects](#naming-projects)
+  - [Naming projects](#naming-projects)
 - [Dependency management tools](#dependency-management-tools)
 - [Handling dependencies from third parties](#handling-dependencies-from-third-parties)
-
-The following guide describes how we use node and manage package dependencies in [Springer Nature Node.js-based projects](https://github.com/springernature?utf8=%E2%9C%93&q=&type=public&language=javascript).
 
 
 ## Specifying versions of node
@@ -27,9 +28,9 @@ It's important to specify which versions of node your application expects. There
     When `npm install`ing a package _which depends on_ `foo`, `npm` will warn and error.
     * Some deployment environments also respect it.
     * It makes compatibility requirements explicit to developers working on your application.
-1. Using an `.nvmrc` file:
+2. Using an `.nvmrc` file:
     * An `.nvmrc` file is a configuration file for `nvm` ([Node Version Manager](https://github.com/creationix/nvm)).
-    `nvm` enables you to use different versions of node for different projects, on a per-directory basis.
+    `nvm` enables you to use different versions of node for different projects.
     Your project should include an [`.nvmrc` file](https://github.com/creationix/nvm#nvmrc) in the root directory of the project to specify which version(s) of node are compatible.
     You can then run `nvm use` to use the right version of node. Additionally [Travis respects `.nvmrc` files](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions-using-nvmrc), so using one will simplify your Travis configuration.
 
@@ -49,10 +50,19 @@ Better is to use a version of node that ships with `npm` version 5.7.0 or higher
 
 #### Automatically running `nvm use`
 
-To avoid accidentally forgetting to run `nvm use` before working on a node project, there are useful shell extensions which will do it for you 
-([zsh](https://github.com/creationix/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file), 
-[bash](https://stackoverflow.com/questions/23556330/run-nvm-use-automatically-every-time-theres-a-nvmrc-file-on-the-directory)), 
+To avoid accidentally forgetting to run `nvm use` before working on a node project, there are useful shell extensions which will do it for you
+([zsh](https://github.com/creationix/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file),
+[bash](https://stackoverflow.com/questions/23556330/run-nvm-use-automatically-every-time-theres-a-nvmrc-file-on-the-directory)),
 which are well worth installing!
+
+### Should I check in `package-lock.json` to version control?
+
+If using a version of `npm` that supports the `ci` argument, yes you should, for two main reasons:
+
+1. Predictable builds, as discussed above.
+1. Dependency analysis tools (such as `npm audit` & `snyk`) can spot insecure dependencies anywhere in the dependency tree by analysing the `package-lock.json` file. Furthermore these tools can force patch version updates of insecure dependencies way down the tree, rather than having to wait for all the package maintainers down that branch of the tree to release new packages with updated dependencies. This would not be possible without a `package-lock.json`.
+
+The downside is it requires developers to all use `nvm` (which is probably a good thing).
 
 ## Specifying versions of dependencies
 
@@ -128,7 +138,7 @@ These are defined in the `devDependencies` section of the `package.json` file an
 Version numbers for run-time dependencies are defined using a caret `^` plus a full version number in the `MAJOR.MINOR.PATCH` form. For a package version specified as `^2.3.4` this means that all releases from `2.3.4` (inclusive) up to, but not including `3.0.0` are acceptable.
 
 
-#### <a name="examples-1">Examples</a>
+#### Examples
 
 We do this:
 
