@@ -59,7 +59,7 @@ which are well worth installing!
 
 ### Should I check in `package-lock.json` to version control?
 
-If using a version of `npm` that supports the `ci` argument, yes you should, for two main reasons:
+Yes, if you're using a version of `npm` that supports the `ci` argument. There are two main reasons:
 
 1. Predictable builds, as discussed above.
 1. Dependency analysis tools (such as `npm audit` & `snyk`) can spot insecure dependencies anywhere in the dependency tree by analysing the `package-lock.json` file. Furthermore these tools can force patch version updates of insecure dependencies way down the tree, rather than having to wait for all the package maintainers down that branch of the tree to release new packages with updated dependencies. This would not be possible without a `package-lock.json`.
