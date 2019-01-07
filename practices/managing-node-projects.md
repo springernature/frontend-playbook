@@ -46,7 +46,7 @@ A problem with using `npm install` is that it doesn't guarantee reproducible bui
 
 Better is to use a version of node that ships with `npm` version 5.7.0 or higher ([node v10.3+ or 8.12+](https://nodejs.org/en/download/releases/)). This is because `npm` 5.7.0+ supports the `ci` argument, which is good because **`npm ci` will always install predictably**, using the `package-lock.json` as a source of authority.
 
-[`npm ci` is also much quicker than `npm install`](https://docs.npmjs.com/cli/ci.html#description) if the `./node_modules` directory is not present (such as in a Ci environment).
+[`npm ci` is also much quicker than `npm install`](https://docs.npmjs.com/cli/ci.html#description) if the `./node_modules` directory is not present (such as in a CI environment).
 
 (You could use `npm ci` by specifing a newer version of `npm` than is recommended for your [particular version of node](https://nodejs.org/en/download/releases/), but `npm` is itself written in node and [only supports certain node versions](https://github.com/npm/cli/blob/latest/lib/utils/unsupported.js).)
 
