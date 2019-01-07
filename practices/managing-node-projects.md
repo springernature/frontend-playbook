@@ -28,7 +28,7 @@ It's important to specify which versions of node your application expects. There
     When `npm install`ing a package _which depends on_ `foo`, `npm` will warn and error.
     * Some deployment environments also respect it.
     * It makes compatibility requirements explicit to developers working on your application.
-2. Using an `.nvmrc` file:
+1. Using an `.nvmrc` file:
     * An `.nvmrc` file is a configuration file for `nvm` ([Node Version Manager](https://github.com/creationix/nvm)).
     `nvm` enables you to use different versions of node for different projects.
     Your project should include an [`.nvmrc` file](https://github.com/creationix/nvm#nvmrc) in the root directory of the project to specify which version(s) of node are compatible.
