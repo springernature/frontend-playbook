@@ -3,18 +3,14 @@
 We namespace our CSS as detailed in our [how we write CSS](how-we-write-css.md) guide. For the purposes of the examples here, we will use the `component` namespace.
 
 - [General Principles](#general-principles)
-- [Preprocessors](#preprocessors)
-  - [Nesting](#nesting)
 - [Code Style](#code-style)
   - [Linting](#linting)
+- [Preprocessors](#preprocessors)
+  - [Nesting](#nesting)
 
 ## General principles
 
 We write our CSS using design patterns that aim to maximise maintainability and reuse; See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style.
-
-## Preprocessors
-
-Our preferred CSS preprocessor is [SASS](http://sass-lang.com/) using the [SCSS syntax](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html).
 
 ## Code style
 
@@ -91,12 +87,16 @@ Don't use `!important`. If you must, leave a comment, and prioritise resolving s
 
 Static analysis tools like linters can flag programming errors, bugs and stylistic errors, making your code more robust, readable and maintainable.
 
+CSS code (not compiled) should be linted with [styleLint](https://github.com/stylelint/stylelint). You can find _an example_ config file in the [config directory](config).
+
 SASS code should be linted with [sass-lint](https://github.com/sasstools/sass-lint) using the [Springer Nature 
 `sasslint-config`](https://github.com/springernature/sasslint-config-springernature). This configuration allows us to maintain consistency between different projects.
 
 You can check the [README](https://github.com/springernature/sasslint-config-springernature/blob/master/README.md) for details about installing and configuring the tools.
 
-CSS code (not compiled) should be linted with [styleLint](https://github.com/stylelint/stylelint). You can find _an example_ config file in the [config directory](config).
+## Preprocessors
+
+Our preferred CSS preprocessor is [SASS](http://sass-lang.com/) using the [SCSS syntax](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html).
 
 ### Nesting
 
