@@ -12,6 +12,10 @@ We namespace our CSS as detailed in our [how we write CSS](how-we-write-css.md) 
 
 We write our CSS using design patterns that aim to maximise maintainability and reuse; See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style.
 
+## Preprocessors
+
+Our preferred CSS preprocessor is [SASS](http://sass-lang.com/) using the [SCSS syntax](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html).
+
 ## Code style
 
 Avoid using HTML tags in CSS selectors. And always prefer using a class over HTML tags (with some exceptions)
@@ -82,10 +86,6 @@ We do this:
 ```
 
 Don't use `!important`. If you must, leave a comment, and prioritise resolving specificity issues before resorting to `!important`.
-
-## Preprocessors
-
-Our preferred CSS preprocessor is [SASS](http://sass-lang.com/) using the [SCSS syntax](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html).
 
 ### Linting
 
