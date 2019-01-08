@@ -83,19 +83,20 @@ We do this:
 
 Don't use `!important`. If you must, leave a comment, and prioritise resolving specificity issues before resorting to `!important`.
 
+## Preprocessors
+
+Our preferred CSS preprocessor is [SASS](http://sass-lang.com/) using the [SCSS syntax](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html).
+
 ### Linting
 
 Static analysis tools like linters can flag programming errors, bugs and stylistic errors, making your code more robust, readable and maintainable.
 
-SASS code should be linted with [sasslint](https://github.com/sasstools/sass-lint) using the [Springer Nature `sasslint-config`](https://github.com/springernature/sasslint-config-springernature). This configuration allows us to maintain consistency between different projects.
+SASS code should be linted with [sass-lint](https://github.com/sasstools/sass-lint) using the [Springer Nature 
+`sasslint-config`](https://github.com/springernature/sasslint-config-springernature). This configuration allows us to maintain consistency between different projects.
 
 You can check the [README](https://github.com/springernature/sasslint-config-springernature/blob/master/README.md) for details about installing and configuring the tools.
 
 CSS code (not compiled) should be linted with [styleLint](https://github.com/stylelint/stylelint). You can find _an example_ config file in the [config directory](config).
-
-## Preprocessors
-
-Our preferred CSS preprocessor is [SASS](http://sass-lang.com/) using the [SCSS syntax](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html).
 
 ### Nesting
 
