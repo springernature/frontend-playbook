@@ -3,10 +3,10 @@
 We namespace our CSS as detailed in our [how we write CSS](how-we-write-css.md) guide. For the purposes of the examples here, we will use the `component` namespace.
 
 - [General Principles](#general-principles)
-- [Code Style](#code-style)
-  - [Linting](#linting)
 - [Preprocessors](#preprocessors)
   - [Nesting](#nesting)
+- [Code Style](#code-style)
+  - [Linting](#linting)
 
 ## General principles
 
