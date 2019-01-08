@@ -174,4 +174,4 @@ table {
 **Breakpoints**  
 These should be nested within the relevant parent using `@include`.
 
-One exception to these rules is targeting a BEM element from within a nested block rule. See the [BEM documentation][bem-css.md] for more information on BEM and nesting.
+One exception to these rules is targeting a BEM element from within a nested block rule. See the [BEM documentation](bem-css.md) for more information on BEM and nesting.
