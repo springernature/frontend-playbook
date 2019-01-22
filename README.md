@@ -25,10 +25,6 @@ This is a living document that we contribute to in a _public_ GitHub repo. Reaso
 
 See "[Changing the laws of engineering with pull requests](https://www.youtube.com/watch?v=YIpNpptGX6Q)" for an in depth explanation of how developing a playbook like this is of benefit.
 
-### Where do I start?
-
-Begin with the [house style guide](practices/house-style.md).
-
 ## Contributing
 
 To contribute please clone the repo (or fork it if you're an external contributor), create a new branch for your changes, then create a pull request to merge your changes in.
