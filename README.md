@@ -1,12 +1,6 @@
 # The Front-End Playbook
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this playbook are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
-
-## What's this?
-
 This repo contains The Front-End Playbook. It details how we run software development and how we make web and mobile products together. It's filled with things we've learned based on our own experience and study of others' experiences.
-
-See "[Changing the laws of engineering with pull requests](https://www.youtube.com/watch?v=YIpNpptGX6Q)" for an in depth explanation of how developing a playbook like this is of benefit.
 
 This is a living document that we contribute to in a _public_ GitHub repo. Reasons for doing this in the open include (but are not limited to):
 
@@ -14,9 +8,21 @@ This is a living document that we contribute to in a _public_ GitHub repo. Reaso
 
 1. Providing a showcase for our work/ethics. This is _really_ useful when hiring people (for both parties). We've had very positive feedback from interviewees - it's a great recruiting tool. It also means that people are quickly up and running when they join.
 
-### Where do I start?
+See "[Changing the laws of engineering with pull requests](https://www.youtube.com/watch?v=YIpNpptGX6Q)" for an in depth explanation of how developing a playbook like this is of benefit.
 
-Begin with the [house style guide](practices/house-style.md).
+## Sections
+
+There's no particular order to which you should read the playbook, but the [Practices section](practices/README.md) is probably a good starting point.
+
+* [Accessibility](accessibility/README.md)
+* [CSS](css/README.md)
+* [Git](git/README.md)
+* [JavaScript](javascript/README.md)
+* [Markup](markup/README.md)
+* [Performance](performance/README.md)
+* [Practices](practices/README.md)
+* [Security](security/README.md)
+* [Writing](writing/README.md)
 
 ## Contributing
 
@@ -25,6 +31,10 @@ To contribute please clone the repo (or fork it if you're an external contributo
 Please keep discussion inside the issues and pull requests, avoiding Slack, hallway conversations etc. Remember that this repo is public, and the discussions we have can be of benefit to people apart from us.
 
 [Read the full contributor guide](CONTRIBUTING.md).
+
+## Key words
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this playbook are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
 ## License
 
