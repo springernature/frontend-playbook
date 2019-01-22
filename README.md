@@ -2,9 +2,18 @@
 
 This repo contains The Front-End Playbook. It details how we run software development and how we make web and mobile products together. It's filled with things we've learned based on our own experience and study of others' experiences.
 
-## Table of contents
+This is a living document that we contribute to in a _public_ GitHub repo. Reasons for doing this in the open include (but are not limited to):
 
-* [Introduction](#whats-this)
+1. Interacting with and learning from others. Receiving contributions from people who don't work here can help us, providing learning opportunities that we would not receive otherwise - for example, see [this contribution](https://github.com/springernature/frontend-playbook/pull/48#issuecomment-236139605) from @rowanmanning.
+
+1. Providing a showcase for our work/ethics. This is _really_ useful when hiring people (for both parties). We've had very positive feedback from interviewees - it's a great recruiting tool. It also means that people are quickly up and running when they join.
+
+See "[Changing the laws of engineering with pull requests](https://www.youtube.com/watch?v=YIpNpptGX6Q)" for an in depth explanation of how developing a playbook like this is of benefit.
+
+## Sections
+
+There's no particular order to which you should read the playbook, but the [Practices section](practices/README.md) is probably a good starting point.
+
 * [Accessibility](accessibility/README.md)
 * [CSS](css/README.md)
 * [Git](git/README.md)
@@ -14,16 +23,6 @@ This repo contains The Front-End Playbook. It details how we run software develo
 * [Practices](practices/README.md)
 * [Security](security/README.md)
 * [Writing](writing/README.md)
-
-## What's this?
-
-This is a living document that we contribute to in a _public_ GitHub repo. Reasons for doing this in the open include (but are not limited to):
-
-1. Interacting with and learning from others. Receiving contributions from people who don't work here can help us, providing learning opportunities that we would not receive otherwise - for example, see [this contribution](https://github.com/springernature/frontend-playbook/pull/48#issuecomment-236139605) from @rowanmanning.
-
-1. Providing a showcase for our work/ethics. This is _really_ useful when hiring people (for both parties). We've had very positive feedback from interviewees - it's a great recruiting tool. It also means that people are quickly up and running when they join.
-
-See "[Changing the laws of engineering with pull requests](https://www.youtube.com/watch?v=YIpNpptGX6Q)" for an in depth explanation of how developing a playbook like this is of benefit.
 
 ## Contributing
 
