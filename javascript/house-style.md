@@ -714,7 +714,7 @@ We don't do this:
 </nav>
 ```
 
-As demonstrated above, we use `data-component` attributes to label any elements that are being bound by the JavaScript. We structure the name of the attribute to include the component's name and where we feel necessary we follow with any words that help describe it's purpose. In the above example the component name is `collapse` and the words `toggle` and `togglable` assist other developers in understanding what the attributes are being used for in the context of that component. This structure makes it easier for another person to understand an implementation by looking at the html alone and lessens the need for investigations whilst refactoring. We recommend that you carefully choose words that mean something to an outsider who has no pre-existing knowledge of the component's implementation.
+As demonstrated above, we use `data-component` attributes to label any elements that are being bound by the JavaScript. We structure the name of the attribute to include the component's name and where we feel necessary we follow with any words that help describe it's purpose. In the above example the component name is `collapse` and the words `toggle` and `togglable` assist others in understanding what the attributes are being used for in the context of that component. This structure makes it easier for another person to understand an implementation by looking at the html alone and lessens the need for investigations whilst refactoring. We recommend that you carefully choose words that mean something to an outsider who has no pre-existing knowledge of the component's implementation.
 
 Initialising a module can then be achieved simply by passing in one of more elements that match these selectors;
 
