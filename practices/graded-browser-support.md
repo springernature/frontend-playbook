@@ -15,7 +15,7 @@ This page describes the way that we support different browsers and browser versi
 
 We follow the principles of [Progressive Enhancement](progressive-enhancement.md) and implement it at the broadest level using using a variant of [Yahoo's Graded Browser support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) (a concept originally conceived by [Nate Koechley](https://web.archive.org/web/20060304042737/http://developer.yahoo.net/yui/articles/gbs/gbs.html).
 
-Graded Browser Support works by classifying all browsers versions into one of two different grades:
+Graded Browser Support works by classifying all versions of all browsers into one of two different grades:
 
 * **"Core"** is our universal support grade. We serve all browsers at this grade server-side rendered semantic HTML and minimal CSS. Essential user journey's must be accessible at this grade.
 * **"Advanced"** is our support grade for modern and/or [evergreen browsers](https://www.techopedia.com/definition/31094/evergreen-browser). As well as the Core HTML and CSS, we serve these browsers JavaScript and more advanced CSS, giving them a more interactive and visually pleasing product experience. Bugs at this level are addressed with high priority.
