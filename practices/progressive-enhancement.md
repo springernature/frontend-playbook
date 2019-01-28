@@ -28,6 +28,16 @@ Developing software using progressive enhancement also encourages Lean thinking,
 
 Finally by starting with just the most basic layer of content and moving on from there, progressive enhancement encourages a lighter, more performant delivery of software. For someone on a slow network, or with a device which can't support the layers of sophistication you've built into your site, they'll appreciate being able to access the content and basic functionality you've provided even while the bells and whistles are downloaded/parsed/executed (or none of the above).
 
+## Implementation
+
+We enable progressive enhancement at every level of our products.
+
+On the broadest level our implementation of [Graded Browser Support](graded-browser-support.md) lets us offer Core versions of our products that work for all users, in all situations, and which are then enhanced when the browser is deemed advanced enough.
+
+On the CSS level we build basic implementations first, using primitive CSS, and then enhance in Advanced browsers using the [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade), [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity), source order, and [feature queries](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports).
+
+With JavaScript we acknowledge that, given our [Graded Browser Support shart](graded-browser-support.md#graded-browser-support-list), we must support ES5 browsers, which we do so via transpiling from ES6/Next to ES5. However we can then use [feature detection](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) to offer more capabilities as the browser supports them.
+
 ## Common concerns
 
 ### Why do we care about those crusty old browsers? I'm building a ✨Web App✨, not a web page!
