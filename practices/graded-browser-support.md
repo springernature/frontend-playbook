@@ -103,7 +103,7 @@ However, CSS Grid is not available in the full standardised form in Internet Exp
 
 The syntax and capabilities for CSS Grid are radically different in IE than in any other browser. As a result the development costs to match the visual experience in IE with other browsers can range from trivial, for simple component-level layouts, to major for page-level layouts.
 
-We therefore accept that some teams will wish to develop their layouts using CSS Grid, but will not be able to justify devoting time to supporting IE. For those teams we suggest a highly-styled linear layout, which has all the features of a Grade A browser experience, except for the page layout. It is up to any teams making this decision to ensure the IE10/11 Grade A experience is acceptable to their users and business owners.
+We therefore accept that some teams will wish to develop their layouts using CSS Grid, but will not be able to justify devoting time to supporting IE. For those teams we suggest a highly-styled linear layout, which has all the features of an Advanced browser experience, except for the page layout. It is up to any teams making this decision to ensure the IE10/11 Advanced experience is acceptable to their users and business owners.
 
 #### Browsers without TLS 1.2 support
 
