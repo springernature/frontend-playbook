@@ -89,7 +89,7 @@ We couple the loading of JavaScript to the loading of the enhanced CSS. We use t
 
 #### Internet Explorer 10 support
 
-As of January 2017, we consider Internet Explorer 10 as a Core browser. This is mainly due to its lack of support for certain modern features plus very low usage numbers. IE10 also stopped receiving security updates in January 2016 from its manufacturer.
+As of January 2017, we consider Internet Explorer 10 a Core browser. This is mainly due to its lack of support for certain modern features plus very low usage numbers. IE10 also stopped receiving security updates in January 2016 from its manufacturer.
 
 Unfortunately, both IE10 and IE11 respond to the same CSS media queries, which means that it is not possible to use a CSS-only method of differentiating between both browsers.
 
