@@ -699,23 +699,22 @@ When it comes time to attach your [JavaScript module](#module-architecture) to a
 We do this:
 
 ```html
-<nav class="c-popout-nav c-popout-nav--dark" data-component="popout">
-  <button class="c-popout-nav__close" data-component="popout-close">Close</button>
-  (etc.)
+<button class="c-button" data-component-collapse-activator="header-menu">Menu</button>
+<nav class="c-header-menu u-hidden" data-component-collapse-target="header-menu">
+    (etc.)
 </nav>
 ```
 
 We don't do this:
 
 ```html
-<nav class="c-popout-nav c-popout-nav--dark" data-popout>...</nav>
-
-<nav class="js-popout c-popout-nav c-popout-nav--dark">...</nav>
-
-<nav id="popout" class="c-popout-nav c-popout-nav--dark">...</nav>
+<button class="c-button" data-component="collapse" data-target="header-menu">Menu</button>
+<nav class="c-header-menu u-hidden" id="header-menu">
+    (etc.)
+</nav>
 ```
 
-As demonstrated above, we use `data-component` attributes to label any elements that are being bound by the JavaScript.  In instances where other related elements can be inferred without using additional data attributes &mdash; for example a module which is expected to contain just a single input &mdash; then it may be acceptable to use other selectors such as type selectors to target child elements, however care should be taken.
+As demonstrated above, we use `data-component` attributes to label any elements that are being bound by the JavaScript. We structure the name of the attribute to include the component's name and where we feel necessary we follow with any words that help describe it's purpose. In the above example the component name is `collapse` and the words `activator` and `target` assist others in understanding what the attributes are being used for in the context of that component. This structure makes it easier for another person to understand an implementation by looking at the html alone and lessens the need for investigations whilst refactoring. We recommend that you carefully choose words that mean something to an outsider who has no pre-existing knowledge of the component's implementation.
 
 Initialising a module can then be achieved simply by passing in one of more elements that match these selectors;
 
