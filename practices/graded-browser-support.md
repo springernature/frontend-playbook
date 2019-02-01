@@ -22,10 +22,11 @@ Our approach to browser support works by classifying all versions of all browser
 
 ## Rationale
 
-We have two core reasons for this:
+There are two motivators for approaching browser support like we do:
 
-* We wish to support all users. No matter their device, browser, or network condition, the user should find a working and robust product.
-* We wish to keep support costs low. Given the previous statement, we do not want to spend significant time [making advanced CSS and JavaScript work in older browsers](https://en.wikipedia.org/wiki/Pareto_principle#In_software).
+* We must support all users. No matter their device, browser, or network condition, the user should find a working and robust product.
+* We should apply effort efficiently. It is both impractical _and_ counterproductive [making advanced CSS and JavaScript work in older browsers](https://en.wikipedia.org/wiki/Pareto_principle#In_software). Attempting to do so results in fragile sites, code bloat, and no benefit for users.
+
 
 ## Browser support list
 
