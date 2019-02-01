@@ -15,10 +15,10 @@ This page describes the way that we support different browsers and browser versi
 
 We follow the principles of [Progressive Enhancement](progressive-enhancement.md) and implement it at the broadest level using using a variant of [Yahoo's Graded Browser support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) (a concept originally conceived by [Nate Koechley](https://web.archive.org/web/20060304042737/http://developer.yahoo.net/yui/articles/gbs/gbs.html).
 
-Our approach to browser support works by classifying all versions of all browsers into one of two grades:
+Our approach to browser support works by classifying all versions of all browsers into one of two levels:
 
-* **"Core"** is our universal support grade. We serve all browsers at this grade server-side rendered semantic HTML and minimal CSS. Essential user journey's must be accessible at this grade.
-* **"Advanced"** is our support grade for modern and/or [evergreen browsers](https://www.techopedia.com/definition/31094/evergreen-browser). As well as the Core HTML and CSS, we serve these browsers JavaScript and more advanced CSS, giving them a more interactive and visually pleasing product experience. Bugs at this level are addressed with high priority.
+* **"Core"** is our universal support level. We serve all browsers at this level server-side rendered semantic HTML and minimal CSS. Essential user journey's must be accessible at this level.
+* **"Advanced"** is our support level for modern and/or [evergreen browsers](https://www.techopedia.com/definition/31094/evergreen-browser). As well as the Core HTML and CSS, we serve these browsers JavaScript and more advanced CSS, giving them a more interactive and visually pleasing product experience. Bugs at this level are addressed with high priority.
 
 ## Rationale
 
@@ -29,7 +29,7 @@ We have two core reasons for this:
 
 ## Browser support list
 
-This is the current list of browser versions and their corresponding grades:
+This is the current list of browser versions and their corresponding support level:
 
 | Browser         | Advanced                        | Core               |
 | --------------- |:-------------------------------:| ------------------:|
@@ -44,7 +44,7 @@ This is the current list of browser versions and their corresponding grades:
 
 ### Grey area browsers
 
-Some browser versions exist in the grey area outside and/or between Advanced and Core grades. For example:
+Some browser versions exist in the grey area outside and/or between Advanced and Core levels. For example:
 
 * Old versions of an evergreen browser: a user has turned off auto-updates, or their upgrade opportunities are limited by their device or administrator.
 * Nightly or developer versions of evergreen browsers.
@@ -93,7 +93,7 @@ As of January 2017, we consider Internet Explorer 10 a Core browser. This is mai
 
 Unfortunately, both IE10 and IE11 respond to the same CSS media queries, which means that it is not possible to use a CSS-only method of differentiating between both browsers.
 
-This means that even if we consider IE10 a Grade-C browser, we currently serve IE10 users the full experience.
+This means that even if we consider IE10 a Core browser, we currently have to serve IE10 users Advanced code.
 
 #### Internet Explorer and CSS Grid
 
