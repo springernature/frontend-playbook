@@ -9,7 +9,7 @@ Development of products at Springer Nature is informed by two primary constraint
 
 * [House style](house-style.md)
 * [Code reviews](code-review.md)
-* [Graded browser support](graded-browser-support.md)
+* [Browser support](graded-browser-support.md)
 * [Managing node projects](managing-node-projects.md)
 * [Open source support](open-source-support.md)
 * [Progressive enhancement](progressive-enhancement.md)

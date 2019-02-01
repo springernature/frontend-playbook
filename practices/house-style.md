@@ -39,9 +39,9 @@ Read our [Accessibility guide](../accessibility/house-style.md) to understand ho
 
 ### Progressive enhancement and browser support
 
-We support *all* browsers to different degrees of functionality. "Support" does *not* mean that everybody gets the same thing. Read our [graded browser support page](../practices/graded-browser-support.md) to understand our approach and where to aim your efforts.
+We support *all* browsers to different degrees of functionality. "Support" does *not* mean that everybody gets the same thing. Read our [browser support page](../practices/graded-browser-support.md) to understand our approach and where to aim your efforts.
 
-Using graded browser support means that you MUST practice progressive enhancement when building sites for Springer Nature, not graceful degradation. See the [progressive enhancement guide](../practices/progressive-enhancement.md) to understand what this means.
+Our approach to browser support means that you MUST practice progressive enhancement when building sites for Springer Nature, not graceful degradation. See the [progressive enhancement guide](../practices/progressive-enhancement.md) to understand what this means.
 
 ### Code review
 
