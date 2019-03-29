@@ -100,7 +100,7 @@ This means that even if we consider IE10 a Core browser, we currently have to se
 
 [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) has been available in all evergreen browsers [for some time now](https://caniuse.com/#feat=css-grid). It offers a much-simplified way of working with layout and offers new design opportunities.
 
-However, CSS Grid is not available in the full standardised form in Internet Explorer 10 or 11, both of which are currently supported *de facto* as Advanced browsers (see above). There is an easy to use solution: Autoprefixer. As of version is 9.3.1, by enabling Autoprefixer's grid option, we are now able to reliably generate vendor prefixes for IE10 and IE11. There are a few minor caveats such as ensuring you always define `grid-template-columns` with `grid-template-areas` together if you want `grid-column-gap` to be prefixed correctly. These are well documented in this excellent [article by CSS Tricks](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer).
+However, CSS Grid is not available in the full standardised form in Internet Explorer 10 or 11, both of which are currently supported *de facto* as Advanced browsers (see above). There is an easy to use solution: Autoprefixer. As of version 9.3.1 we are now able to reliably generate vendor prefixes for IE10 and IE11 by enabling Autoprefixer's grid option. There are a few minor caveats such as ensuring you always define `grid-template-columns` with `grid-template-areas` together if you want `grid-column-gap` to be prefixed correctly. These are well documented [on CSS Tricks](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer).
 
 #### Browsers without TLS 1.2 support
 
