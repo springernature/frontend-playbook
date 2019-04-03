@@ -1,7 +1,8 @@
 # Progressive enhancement
 
-* [What is progressive enhancement](#what-is-progressive-enhancement)
-* [Why we use progressive enhancement](#why-we-use-progressive-enhancement)
+* [What is it?](#what-is-it)
+* [Why we use it](#why-we-use-it)
+* [Implementation](#implementation)
 * [Common concerns](#common-concerns)
   * [Why do we care about those crusty old browsers? I'm building a ✨Web App✨, not a web page!](#why-do-we-care-about-those-crusty-old-browsers-im-building-a-✨web-app✨-not-a-web-page)
 * [Find out more:](#find-out-more)
