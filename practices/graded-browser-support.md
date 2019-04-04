@@ -53,9 +53,7 @@ We serve these grey area browsers the Advanced version of a site, so they will r
 
 #### .browerslist
 
-While we do not test [grey-area browsers](#grey-area-browsers), we still work towards the best experience for all our users. CSS for grey-area browsers should therefore be prefixed using [Autoprefixer](https://github.com/postcss/autoprefixer).
-
-Automatically adding vendor prefixes allows us to increase support for these browsers with little extra effort.
+While we do not test [grey-area browsers](#grey-area-browsers), we still work towards the best experience for all our users. CSS for grey-area browsers should therefore be prefixed using [Autoprefixer](https://github.com/postcss/autoprefixer). Automatically adding vendor prefixes allows us to increase support for these browsers with little extra effort.
 
 The following `.browserslistrc` file ([a standard way of sharing target browser data](https://github.com/browserslist/browserslist)) should cover all browsers that receive Advanced CSS according to our [Browser Support list](#browser-support-list).
 
