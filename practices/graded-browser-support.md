@@ -124,3 +124,18 @@ However, CSS Grid is not available in the full standardised form in Internet Exp
 As of June 2018, all our sites are served through HTTPS using the [TLS 1.2 cryptographic protocol](https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2) or newer. This means that users of browsers that don't support TLS 1.2 (e.g. Safari on iOS 4) will not be able to access our sites. Browsers that have support for TLS 1.2 not enabled by default (e.g. Internet Explorer on Windows 7) will not be able to access our sites, unless they change their default settings. We consider that this is required in order to keep our users secure.
 
 The way that we restrict the connection to our sites when not using TLS 1.2 doesn't impact the way that we design and build our sites and our commitment to an approach based on progressive enhancement techniques.
+
+### Browerslist
+CSS should be prefixed for older browsers using Autoprefixer. While we do not test grade-X browsers, we still work towards the best experience for all our users. Automatically adding vendor prefixes allows us to support a tranche of grade-X browsers with little extra effort. A `.browserslistrc` file should cover all browsers that receive CSS. 
+
+Our recommended `.browserlistrc`: 
+
+```
+defaults
+ie 10-11
+ff > 29
+chrome > 29
+safari > 6 
+edge > 1
+opera > 15
+```
