@@ -85,38 +85,3 @@ Choose your modifiers wisely. These two rules have very different meaning:
 .c-block--modifier .c-block__element { color: red; }
 .c-block__element--modifier { color: red; }
 ```
-
-## Nesting
-
-If you are using a CSS pre-processor, excessive nesting can be avoided by using smart class naming (with the help of BEM). Avoid nesting selectors more than _3 levels_ deep, and prefer using nesting as a convenience to extend the parent selector over targeting nested elements. For example:
-
-```scss
-.c-block {
-    padding: 24px;
-
-    &--modifier {
-        padding: 12px;
-    }
-
-    &__element {
-        color: $white;
-    }
-}
-```
-
-Targeting a BEM element/modifier from within a nested block rule (see above) should be done with caution. If your selectors contain a large number of declarations then you should consider moving the element out of the nested rule to make them more readable, and easier to follow. Always adhere to the [KISS](https://en.wikipedia.org/wiki/KISS_principle) principle. You can target a modifier as follows, whilst keeping the element separate for better readability:
-
-```scss
-.c-block {
-    &--modifier { // compiles to .c-block--modifier
-        text-align: center;
-    }
-}
-.c-block__element {
-    color: red;
-
-    &--modifier { // compiles to .c-block__element--modifier
-        color: blue;
-    }
-}
-```
