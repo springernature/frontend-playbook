@@ -538,6 +538,15 @@ In Node.js, you can add `'use strict';` to the top of each of your source files.
 
 In-browser you should not add your `'use strict';` to the top of the file; instead you should add it to either the file's [IIFE](http://benalman.com/news/2010/11/immediately-invoked-function-expression/) or each defined function if an IIFE isn't present. This is because global strict mode in browsers can cause issues with third-party code.
 
+We do this:
+
+```js
+(function () {
+    'use strict';
+    // ...
+})();
+```
+
 Client-side JavaScript architecture
 -----------------------------------
 
