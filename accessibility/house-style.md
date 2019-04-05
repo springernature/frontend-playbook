@@ -80,7 +80,10 @@ The companion document [Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Un
 
 W3C WAI have published a [quick reference document for WCAG](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0). It describes the WCAG success criteria and shows techniques and failures for each. We've also created [a simple accessibility checklist](accessibility-checklist.md), to help you become familiar with the guidelines/standards, and to aid you when manually assessing pages. 
 
-Freely use [WAI-ARIA](https://www.w3.org/TR/wai-aria/) roles and properties in your code where they help to improve accessibility of your interfaces but you SHOULD NOT use aria techniques as a way of compensating for the abuse of semantics (e.g. do not apply `role="link"` to a `div` element, instead of using `a`, etc.)
+Use [WAI-ARIA](https://www.w3.org/TR/wai-aria/) roles and properties in your code where they help to improve accessibility of your interfaces but you SHOULD NOT: 
+* Use aria techniques as a way of compensating for the abuse of semantics (e.g. do not apply `role="link"` to a `div` element, instead of using `a`, etc.);
+* Use aria roles, properties, or design patterns without understanding what they do;
+* Use aria roles, properties, or design patterns without testing them with assistive technologies.
 
 
 #### Pa11y
