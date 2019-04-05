@@ -542,8 +542,8 @@ We do this:
 
 ```js
 (function () {
-  'use strict';
-    // ... 
+    'use strict';
+    // ...
 })();
 ```
 
