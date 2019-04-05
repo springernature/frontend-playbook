@@ -85,3 +85,42 @@ Choose your modifiers wisely. These two rules have very different meaning:
 .c-block--modifier .c-block__element { color: red; }
 .c-block__element--modifier { color: red; }
 ```
+
+Don't nest class names when using a preprocessor. Here are a few reasons why:
+
+1. It prevents from being able to find the class names easily
+2. It hinders developers understanding the context that they are working on
+3. When reviewing a pull request, it requires extra effort to see the actual
+   selector and to do a proper review
+
+We _do_ this:
+
+```css
+.c-block { padding: 24px; }
+
+.c-block--modifier { padding: 12px; }
+
+.c-block__element { color: white; }
+
+.c-block__element--modifier { color: black }
+```
+
+We _don't_ do this:
+
+```css
+.c-block {
+    padding: 24px;
+
+    &--modifier {
+        padding: 12px;
+    }
+
+    &__element {
+        color: white;
+
+        &--modifier {
+            color: black;
+        }
+    }
+}
+```
