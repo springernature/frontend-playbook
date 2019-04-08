@@ -14,7 +14,7 @@ You should be aware of the security implications of your front-end code. This do
 
 Note: this document does not cover JavaScript or interactions which may touch the server, e.g. XSS or HTTP headers. (It is assumed security-related headers are set in the HTTP headers, not in `meta` tag equivalents.)
 
-Additionally, you're encouraged to familiarise yourself with the [OWASP HTML5 Security Cheat Sheet](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet).
+Additionally, you're encouraged to familiarise yourself with the [OWASP HTML5 Security Cheat Sheet](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/HTML5_Security_Cheat_Sheet.md).
 
 ## Use UTF-8 and specify this in a `meta` tag
 
