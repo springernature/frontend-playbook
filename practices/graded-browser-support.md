@@ -51,22 +51,6 @@ Some browser versions exist in the grey area outside and/or between Advanced and
 
 We serve these grey area browsers the Advanced version of a site, so they will receive the full experience. Due to resourcing implications we do not specifically test our products against them - however we do expect them to work (because, for example, [we strive to provide compatible CSS via Autoprefixer](#browserslist)). Over time, analysis of errors and usage patterns may cause some browsers in this grey area to be deliberately changed to either Advanced or Core, to allow for better support.
 
-#### .browerslist
-
-While we do not test [grey-area browsers](#grey-area-browsers), we still work towards the best experience for all our users. CSS for grey-area browsers should therefore be prefixed using [Autoprefixer](https://github.com/postcss/autoprefixer). Automatically adding vendor prefixes allows us to increase support for these browsers with little extra effort.
-
-The following `.browserslistrc` file ([a standard way of sharing target browser data](https://github.com/browserslist/browserslist)) should cover all browsers that receive Advanced CSS according to our [Browser Support list](#browser-support-list).
-
-```nanorc
-defaults
-ie 10-11
-ff > 29
-chrome > 29
-safari > 6
-edge > 1
-opera > 15
-```
-
 ## Implementing browser support
 
 Our primary approach to classifying a browser support level is the "[Cutting the Mustard (CTM)](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard)" progressive enhancement technique, based upon the principles developed by the BBC.
@@ -123,17 +107,18 @@ As of June 2018, all our sites are served through HTTPS using the [TLS 1.2 crypt
 
 The way that we restrict the connection to our sites when not using TLS 1.2 doesn't impact the way that we design and build our sites and our commitment to an approach based on progressive enhancement techniques.
 
-### Browerslist
-CSS should be prefixed for older browsers using Autoprefixer. While we do not test grade-X browsers, we still work towards the best experience for all our users. Automatically adding vendor prefixes allows us to support a tranche of grade-X browsers with little extra effort. A `.browserslistrc` file should cover all browsers that receive CSS. 
+#### .browerslist
 
-Our recommended `.browserlistrc`: 
+While we do not test [grey-area browsers](#grey-area-browsers), we still work towards the best experience for all our users. CSS for grey-area browsers should therefore be prefixed using [Autoprefixer](https://github.com/postcss/autoprefixer). Automatically adding vendor prefixes allows us to increase support for these browsers with little extra effort.
 
-```
+The following `.browserslistrc` file ([a standard way of sharing target browser data](https://github.com/browserslist/browserslist)) should cover all browsers that receive Advanced CSS according to our [Browser Support list](#browser-support-list).
+
+```nanorc
 defaults
 ie 10-11
 ff > 29
 chrome > 29
-safari > 6 
+safari > 6
 edge > 1
 opera > 15
 ```
