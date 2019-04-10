@@ -728,9 +728,9 @@ As demonstrated above, we use `data-component` attributes to label any elements 
 Initialising a module can then be achieved simply by passing in one of more elements that match these selectors;
 
 ```js
-const moduleInstances = document.querySelectorAll('[data-component="simple-module"]');
+const moduleInstances = document.querySelectorAll('[data-component-collapse-activator]');
 if (moduleInstances.length > 0) {
-    mySimpleModule.init(moduleInstances);
+    myCollapseModule.init(moduleInstances);
 }
 ```
 
@@ -739,8 +739,8 @@ Alternatively for more complex modules that need to be bound to multiple DOM ele
 ```js
 function init(settings) {
     const defaults = {
-        wrapper: '[data-component="complex-module"]',
-        close: '[data-component="complex-module-close"]'
+        wrapper: '[data-component-complex-module]',
+        close: '[data-component-complex-module-close]'
     };
     const selectors = Object.assign({}, defaults, settings)
 }
@@ -750,8 +750,8 @@ export default init;
 
 ```js
 myComplexModule.init({
-    wrapper: '[data-component="renamed-complex-module"]',
-    close: '[data-component="renamed-complex-module-close"]'
+    wrapper: '[data-component-renamed-complex-module]',
+    close: '[data-component-renamed-complex-module-close]'
 });
 ```
 
