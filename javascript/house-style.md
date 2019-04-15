@@ -567,7 +567,7 @@ Your module should expose an `init` method which is consumed by the entry point 
 ```js
 // my-module-1.js
 
-import {otherModule}{}} from './some-other-module-you-need';
+import {otherModule} from './some-other-module-you-need';
 
 function addEventListeners() {}
 
