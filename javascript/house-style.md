@@ -560,7 +560,20 @@ The JavaScript in your application should consist of one or more entry points an
 - A module which handles all analytics events.
 - A module which implements sticky header functionality.
 
-Your module should use named exports for all exports. 
+Your module should use named exports for all exports.
+ 
+We do this:
+
+```js
+export {init};
+```
+
+We _don't_ do this:
+
+```js
+export default init;
+```
+
 
 Your module should expose an `init` method which is consumed by the entry point of your application:
 
