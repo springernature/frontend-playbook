@@ -33,7 +33,7 @@ Follow Plain English guidelines to help safeguard the accessibility of your writ
   - Go straight to the point.
 - Be specific
   - Prefer the active voice to the passive voice<sup>[\[1\]][active-passive]</sup> (e.g. "NPM will install the dependencies" instead of "the dependencies will be installed").
-  - Address the user as "you" where possible.
+  - Address the reader as "you" where possible.
   - Avoid referring to "things" or "stuff".
   - Be direct. Avoid metaphor, simile, and slang.
 - Be informative
@@ -43,7 +43,7 @@ Follow Plain English guidelines to help safeguard the accessibility of your writ
 
 ### Technical writing
 
-When expressing technical concepts, you'll need to use technical language. This may be complex, contain jargon, or seem formal. That's ok! Technical writing isn't for a general audience. Your priorities must be clarity, brevity, and accuracy, not the emotional impact of your words. 
+When expressing technical concepts, you'll need to use technical language. This may be complex, contain jargon, or seem formal. That's ok! Technical writing isn't for a general audience. Your priorities must be clarity, brevity, and accuracy. If you think your reader may need additional context to understand a concept, link out to external resources. 
 
 All of the advice in the [plain English](#plain-english) section applies. Additionally:
 
