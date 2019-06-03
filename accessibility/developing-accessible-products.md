@@ -4,7 +4,7 @@ Businesses with an online presence must ensure they make their offering accessib
 
 Certain organisations such as scientific or educational institutions may be prevented by federal regulations from procuring products and services that do not meet accessibility requirements. 
 
-Commercial products are generally covered under civil rights legislation such as the Americans with Disabilities Act in the US or the Equality Act in the UK. If a commercial website is found to be accessible, the website owner can be sued for discrimination under various civil rights legislatory mechanisms.
+Commercial products are generally covered under civil rights legislation such as the Americans with Disabilities Act in the US or the Equality Act in the UK. If a commercial website is found to be inaccessible, the website owner can be sued for discrimination under various civil rights legislatory mechanisms.
 
 
 ## What is WCAG?
