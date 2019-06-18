@@ -13,7 +13,7 @@ Commercial products are generally covered under civil rights legislation such as
 
 Several legal jurisdictions, including those in the US and the EU, explicitly refer to WCAG as the standard to which website operators are expected to adhere. 
 
-Our target standard is WCAG 2.1 AA, in line with the current EU legislation, EN 301 549. All first and third party web products and components published by Springer Nature must conform to WCAG 2.1 AA. 
+Our target standard is WCAG 2.1 AA, in line with the current EU legislation, EN 301 549. *All first and third party web products and components published by Springer Nature must conform to WCAG 2.1 AA.* 
 
 
 ## How do I make sure my product complies?
@@ -55,7 +55,15 @@ Manual accessibility testing fills in the gaps that automated tools miss.
 
 #### Guided tests
 
-As a first step for manual testing, we recommend using Microsoft’s [free Accessibility Insights tool](https://accessibilityinsights.io/), a browser extension for Chrome. Use the “Assessment” functionality provided to be guided through the process of assessing a webpage yourself. The “Fast Pass” function is included as part of the “Assessment” process. 
+As a first step for manual testing, we recommend using Microsoft’s [free Accessibility Insights tool](https://accessibilityinsights.io/), a browser extension for Chrome. This tool will guide you through the process of assessing a webpage for basic accessibility compliance. It includes (but is not limited to) tests for:
+
+* Unacceptably low contrast
+* Missing alternative text on images
+* Missing form labels
+* Lack of keyboard navigability
+* Lack of captions, audio descriptions, or alternatives to rich media
+
+Use the “Assessment” functionality for this test. The “Fast Pass” function is included as part of the “Assessment” process. 
 
 The Fast Pass functionality is based on Axe, but bear in mind that the bundled Axe version may not be in sync with the official package, and you may get inconsistent results if you rely on the version bundled by Microsoft. 
 
