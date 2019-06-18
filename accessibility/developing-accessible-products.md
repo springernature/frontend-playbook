@@ -62,6 +62,7 @@ As a first step for manual testing, we recommend using Microsoft’s [free Acces
 * Missing form labels
 * Lack of keyboard navigability
 * Lack of captions, audio descriptions, or alternatives to rich media
+* Lack of visible focus styles
 
 Use the “Assessment” functionality for this test. The “Fast Pass” function is included as part of the “Assessment” process. 
 
