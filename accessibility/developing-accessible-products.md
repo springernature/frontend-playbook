@@ -45,6 +45,8 @@ At Springer Nature, we use [Pa11y](http://pa11y.org/) and [Axe](https://www.dequ
 
 We expect your product to be free of errors when these two tools are passed over it. You’re welcome to use other automated accessibility testing tools in addition to these. 
 
+You should also check your HTML is valid before handing off your work - you can use a service like the [WC3 validator](https://validator.w3.org/) or a browser extension. As well as reducing cross-browser bugs, this will catch some common accessibility errors.
+
 
 ### Manual testing
 
