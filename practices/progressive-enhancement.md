@@ -5,6 +5,7 @@
 * [Implementation](#implementation)
 * [Common concerns](#common-concerns)
   * [Why do we care about those crusty old browsers? I'm building a ✨Web App✨, not a web page!](#why-do-we-care-about-those-crusty-old-browsers-im-building-a-✨web-app✨-not-a-web-page)
+  * [So you're saying I can't use JavaScript?](#so-youre-saying-i-cant-use-javascript)
 * [Find out more:](#find-out-more)
 
 ## What is it?
