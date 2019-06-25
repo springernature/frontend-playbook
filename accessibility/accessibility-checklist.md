@@ -166,7 +166,7 @@ Resources:
 
 * [Article: Introduction to Reduced Motion Media Query](https://css-tricks.com/introduction-reduced-motion-media-query/)
 * [Article: Revisiting prefers-reduced-motion](https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/)
-* [Prefers reduced motion](https://developers.google.com/web/updates/2019/03/prefers-reduced-motion)
+* [Article: Prefers reduced motion](https://developers.google.com/web/updates/2019/03/prefers-reduced-motion)
 
 ### Design for device independence
 
