@@ -164,7 +164,7 @@ Make sure that all animations, including loading of webfonts (which can cause FO
 
 Resources:
 
-* [Introduction to Reduced Motion Media Query](https://css-tricks.com/introduction-reduced-motion-media-query/)
+* [Article: Introduction to Reduced Motion Media Query](https://css-tricks.com/introduction-reduced-motion-media-query/)
 * [Revisiting prefers-reduced-motion](https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/)
 * [Prefers reduced motion](https://developers.google.com/web/updates/2019/03/prefers-reduced-motion)
 
