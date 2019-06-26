@@ -560,14 +560,27 @@ The JavaScript in your application should consist of one or more entry points an
 - A module which handles all analytics events.
 - A module which implements sticky header functionality.
 
-If you are exporting only one thing, use `export default`. If you are exporting more than one thing, use __only__ named exports. You should not export both default and named exports from the same module. 
+Your module should use named exports for all exports.
+ 
+We do this:
+
+```js
+export {init};
+```
+
+We _don't_ do this:
+
+```js
+export default init;
+```
+
 
 Your module should expose an `init` method which is consumed by the entry point of your application:
 
 ```js
 // my-module-1.js
 
-import otherModule from './some-other-module-you-need';
+import {otherModule} from './some-other-module-you-need';
 
 function addEventListeners() {}
 
@@ -576,7 +589,7 @@ function init() {
    addEventListeners();
 }
 
-export default init;
+export {init};
 ```
 
 Your modules are to be _consumed_ by your entry point:
@@ -584,9 +597,9 @@ Your modules are to be _consumed_ by your entry point:
 ```js
 // main.js
 
-import module1 from './my-module-1.js';
-import module2 from './my-module-2.js';
-import module3 from './my-module-3.js';
+import {module1} from './my-module-1.js';
+import {module2} from './my-module-2.js';
+import {module3} from './my-module-3.js';
 
 document.addEventListener('DOMContentLoaded', function(event) {
   module1.init();
@@ -607,7 +620,7 @@ This approach is:
 If you need to pass in configuration to a module, pass in an object:
 
 ```js
-import module1 from './my-module-1.js';
+import {module1} from './my-module-1.js';
 
 module1.init({
   url: 'https://...'
@@ -621,7 +634,7 @@ function module({url = 'https://...', animate = false}) {
   console.log(url, animate)
 }
 
-export default init;
+export {module};
 ```
 
 #### Imports
@@ -670,7 +683,7 @@ Then consume the API:
 ```js
 // animations.js
 
-import easings from './easings';
+import {easings} from './easings';
 
 function init({element, easing}) {
   if (easings.isValid(easing)) {
@@ -680,7 +693,7 @@ function init({element, easing}) {
   }
 }
 
-export default init;
+export {init};
 ```
 
 #### Events for unrelated modules
@@ -690,7 +703,7 @@ Use a small Publish Subscribe implementation, like [PubSubJS](https://github.com
 ```js
 // analytics.js
 
-import PubSub from 'pub-sub';
+import {PubSub} from 'pub-sub';
 
 function beaconToAnalytics(event) {}
 
@@ -698,7 +711,7 @@ function init() {
   PubSub.subscribe('event:navigation', beaconToAnalytics)
 }
 
-export default init;
+export {init};
 ```
 
 ### DOM binding
@@ -745,7 +758,7 @@ function init(settings) {
     const selectors = Object.assign({}, defaults, settings)
 }
 
-export default init;
+export {init};
 ```
 
 ```js
