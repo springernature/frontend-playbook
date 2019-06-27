@@ -12,7 +12,7 @@ For this kind of static resources is our choice to **self-host them on our serve
 
 ## Benefits of self-hosting static assets
 
-* **Resilience.** As long as our site is up, the resource will be up. We don't depend on other servers or additional CDNs and we won't be affected by their outages.
+* **Resilience.** As long as our site is up, the resource will be up. We don't depend on other servers or additional CDNs and we won't be affected by their outages, or closure of the service.
 * **Consistency.** Static assets are cached and served in exactly the same way that the reset of our resources are, and they use the same CDN. As a result, timings and user experience is more consistent all around the world.
 * **Security.** reduces our front-end [attack surface](https://en.wikipedia.org/wiki/Attack_surface).
 * **Performance.** Self-hosting can save us the cost of the DNS request, TCP connection and TLS negotiation, which in slow connections can easily be between 1000ms and 2000ms. This can also be mitigated with `rel=preconnect`.
