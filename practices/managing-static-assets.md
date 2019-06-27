@@ -8,7 +8,7 @@ By **static assets** we mean webfonts, JavaScript libraries (like jQuery or Math
 
 Usually these assets are added to the page as part of the application, and not through tag managers.
 
-For this kind of static resources is our choice to **self-host them in our servers** instead of including them on our pages from an external CDN.
+For this kind of static resources is our choice to **self-host them on our servers** instead of including them on our pages from an external CDN.
 
 ## Benefits of self-hosting static assets
 
