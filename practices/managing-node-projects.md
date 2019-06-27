@@ -23,16 +23,16 @@ The following guide describes how we use node and manage package dependencies in
 It's important to specify which versions of node your application expects. There are two ways of doing this, and you're encouraged to do both.
 
 1. The [`engines`](https://docs.npmjs.com/files/package.json#engines) field in `package.json`:
-    * `engines` is important if authoring libraries. Let's assume we're using a different version of node to that specified in `engines` field for package `foo`.
-    When running `npm install` to install `foo`'s dependencies, `npm` will warn about the problem.
-    When `npm install`ing a package _which depends on_ `foo`, `npm` will warn and error.
-    * Some deployment environments also respect it.
-    * It makes compatibility requirements explicit to developers working on your application.
+  * `engines` is important if authoring libraries. Let's assume we're using a different version of node to that specified in `engines` field for package `foo`.
+  When running `npm install` to install `foo`'s dependencies, `npm` will warn about the problem.
+  When `npm install`ing a package _which depends on_ `foo`, `npm` will warn and error.
+  * Some deployment environments also respect it.
+  * It makes compatibility requirements explicit to developers working on your application.
 1. Using an `.nvmrc` file:
-    * An `.nvmrc` file is a configuration file for `nvm` ([Node Version Manager](https://github.com/creationix/nvm)).
-    `nvm` enables you to use different versions of node for different projects.
-    Your project should include an [`.nvmrc` file](https://github.com/creationix/nvm#nvmrc) in the root directory of the project to specify which version(s) of node are compatible.
-    You can then run `nvm use` to use the right version of node. Additionally [Travis respects `.nvmrc` files](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions-using-nvmrc), so using one will simplify your Travis configuration.
+  * An `.nvmrc` file is a configuration file for `nvm` ([Node Version Manager](https://github.com/creationix/nvm)).
+  `nvm` enables you to use different versions of node for different projects.
+  Your project should include an [`.nvmrc` file](https://github.com/creationix/nvm#nvmrc) in the root directory of the project to specify which version(s) of node are compatible.
+  You can then run `nvm use` to use the right version of node. Additionally [Travis respects `.nvmrc` files](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions-using-nvmrc), so using one will simplify your Travis configuration.
 
 ### Run `nvm use` before `npm install`
 
@@ -48,7 +48,7 @@ Better is to use a version of node that ships with `npm` version 5.7.0 or higher
 
 [`npm ci` is also much quicker than `npm install`](https://docs.npmjs.com/cli/ci.html#description) if the `./node_modules` directory is not present (such as in a CI environment).
 
-(You could use `npm ci` by specifing a newer version of `npm` than is recommended for your [particular version of node](https://nodejs.org/en/download/releases/), but `npm` is itself written in node and [only supports certain node versions](https://github.com/npm/cli/blob/latest/lib/utils/unsupported.js).)
+(You could use `npm ci` by specifying a newer version of `npm` than is recommended for your [particular version of node](https://nodejs.org/en/download/releases/), but `npm` is itself written in node and [only supports certain node versions](https://github.com/npm/cli/blob/latest/lib/utils/unsupported.js).)
 
 #### Automatically running `nvm use`
 
@@ -74,7 +74,6 @@ We find that the this approach strikes a good balance between the potential brea
 
 We use some [dependency management tools](#dependency-management-tools) to help us keep our apps up to date when new versions of their dependencies are released.
 
-
 ### Run-time dependencies
 
 [Run-time dependencies](https://docs.npmjs.com/files/package.json#dependencies) are modules that are required for your application to run, independently of the environment or mode (e.g. development vs production) used.
@@ -84,6 +83,7 @@ These are defined in the `dependencies` section of the `package.json` file.
 Version numbers for run-time dependencies are defined using a tilde `~` plus a full version number in the `MAJOR.MINOR.PATCH` form. For a package version specified as `~2.3.4` this means that all releases from `2.3.4` (inclusive) up to, but not including `2.4.0` are acceptable.
 
 Specifying the versions in this way ensures that:
+
 * We can easily get bugfixes made to the dependencies when these have been released as a PATCH.
 * We don't expose the users of our modules to an unnecessary risk if one of our dependencies releases a MINOR update that breaks our app.
 * Dependencies in early lifecycle projects (Version `0.MINOR.PATCH`) are traditionally considered of beta quality, or undergoing heavy development, and any minor could potentially contain breaking changes. Limiting the scope to PATCH updates heavily reduces the chance of our app breaking.
@@ -96,7 +96,6 @@ If you use `npm install --save` a lot, you may want to change npm's config so it
 ```sh
 npm config set save-prefix '~'
 ```
-
 
 #### Examples
 
@@ -130,7 +129,6 @@ We _don't_ do this:
 
 [Optional dependencies](https://docs.npmjs.com/files/package.json#optionaldependencies), if present, should also use the same format as run-time dependencies.
 
-
 ### Development dependencies
 
 [Development dependencies](https://docs.npmjs.com/files/package.json#devdependencies) are required during the development, testing, or build process of the app. For example, you may include a test runner, a minifier, a bundler, etc.
@@ -138,7 +136,6 @@ We _don't_ do this:
 These are defined in the `devDependencies` section of the `package.json` file and are not used in production environments.
 
 Version numbers for run-time dependencies are defined using a caret `^` plus a full version number in the `MAJOR.MINOR.PATCH` form. For a package version specified as `^2.3.4` this means that all releases from `2.3.4` (inclusive) up to, but not including `3.0.0` are acceptable.
-
 
 #### Examples
 
@@ -174,6 +171,12 @@ In these instances it's technically true that the dependency wouldn't need to be
 In an ideal world where HTTP2, modern JavaScript syntax, and ES6 modules are widely supported, there would be no need to transpile or concatenate JavaScript dependencies for browsers.  Instead, they'd be loaded using `import` statements and would be directly served from their installed location. Therefore they'd unambiguously be run-time dependencies, not development dependencies. In a Node.js environment this is already possible through its native support for CommonJS `require` statements.
 
 As such, the fact that the asset may sometimes need to be built when serving it to a browser could be considered an accident of circumstance. It shouldn't change the classification of that dependency as a run-time dependency. In this way we maintain consistency between Node.js and web applications, and provide a clear distinction between tools that are only used in the _development_ of the application, and assets that directly contribute _functionality_ to the production application.
+
+## Configuration
+
+Some tools, like security or static analysing tools, allow us to specify a configuration for them in either an `.rc` file in the root of the repository or as an additional entry in the `package.json` file.
+
+When using tools that require configuration, it's always preferable to include the configuration in an `.rc` file than inside the `package.json`. This makes is easier to understand what tools are being used, and with what configuration, and also share those configurations between different projects.
 
 ## Publishing projects on NPM
 

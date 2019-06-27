@@ -33,8 +33,8 @@ Follow [Continous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.ht
 
 * As short lived as possible.
 * _Atomic_, i.e. one unit of work that can't be sensibly subdivided.
-	* They should contain their own tests.
-	* They should be releasable independently.
+  * They should contain their own tests.
+  * They should be releasable independently.
 * As limited in scope as possible. Large pull requests are hard to review and can be painful to merge. Also, once merged & a bug is traced back to that commit, they are much harder to debug.
 
 When your work is almost complete, `git rebase master` or merge -- especially if other people are working on the same code. Avoid merge pain by;
