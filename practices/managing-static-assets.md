@@ -14,7 +14,7 @@ For this kind of static resources is our choice to **self-host them on our serve
 
 * **Resilience.** As long as our site is up, the resource will be up. We don't depend on other servers or additional CDNs and we won't be affected by their outages.
 * **Consistency.** Static assets are cached and served in exactly the same way that the reset of our resources are, and they use the same CDN. As a result, timings and user experience is more consistent all around the world.
-* **Risk** that the service hosting the asset shuts down in the future, forcing us to upgrade a bunch of apps, some of which may be unmaintained.
+* **Security.** reduces our front-end [attack surface](https://en.wikipedia.org/wiki/Attack_surface).
 * **Performance.** Self-hosting can save us the cost of the DNS request, TCP connection and TLS negotiation, which in slow connections can easily be between 1000ms and 2000ms. This can also be mitigated with `rel=preconnect`.
 * **Filtering.** Some CDNs are filtered by the big firewall in China. This can slow down the loading of the page, or even make them break. Self-hosting static assets prevents this.
 * **Security.** Self-hosting the asset makes it easier for us to use [Subresource Integrity (SRI)](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) in the future.
