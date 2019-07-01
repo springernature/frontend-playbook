@@ -639,7 +639,7 @@ export {module};
 
 #### Imports
 
-You must export items which allows the consumer to import __only what is needed__. This helps prepare you for bundling techniques like tree-shaking.
+You must export items to allow the consumer to import __only what is needed__. This helps prepare you for bundling techniques like tree-shaking.
 
 We do this:
 
