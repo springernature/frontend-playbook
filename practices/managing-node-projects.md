@@ -174,7 +174,7 @@ As such, the fact that the asset may sometimes need to be built when serving it 
 
 ## Configuration
 
-Some tools, like security or static analysis tools, allow us to specify a configuration for them in either configuration files in the root of the repository (usually with `.rc`, `.json`, or `.js` extensions), or as an additional entry in the `package.json` file.
+Some tools, like security or static analysis tools, allow us to specify a configuration for them in either configuration files in the root of the repository (usually with `.{TOOL_NAME}rc`, `.json`, or `.js` extensions), or as an additional entry in the `package.json` file.
 
 When using these tools, it's always preferable to include the configuration in a file than inside the `package.json`. This makes is easier to understand what tools are being used, and with what configuration, and also share those configurations between different projects.
 
