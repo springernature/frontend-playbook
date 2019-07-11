@@ -36,7 +36,7 @@ Files served via CDN's (or your own asset servers) are high-priority targets for
 
 Subresource Integrity protects against corrupted resource files by instructing the browser to calculate a [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) of the downloaded file's content, then compare that hash to one we previously computed for the known-good file. If the hashes don't match, the browser doesn't parse the loaded file.
 
-We tell the browser the hash of the known-good file by embedding the hash value in the HTML&mdash;using the `integrity` atrribute on the corresponding `script` or `link` element.
+We tell the browser the hash of the known-good file by embedding the hash value in the HTML&mdash;using the `integrity` attribute on the corresponding `script` or `link` element.
 
 This may sound complicated but it's not too hard to do!
 
