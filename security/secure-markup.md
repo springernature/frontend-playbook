@@ -34,9 +34,11 @@ Often we serve assets such as JavaScript or CSS files via [CDN](https://www.clou
 
 Files served via CDN's (or your own asset servers) are high-priority targets for attackers, because they enable attackers to inject [payloads](https://en.wikipedia.org/wiki/Payload_(computing)#Security) into many sites with just one breach.
 
-Subresource Integrity protects against corrupted resource files by instructing the browser to generate a base64-encoded cryptographic hash of the file, and comparing that hash to a hash we specify in the markup. If the hashes don't match, the browser doesn't parse the loaded file.
+Subresource Integrity protects against corrupted resource files by instructing the browser to calculate a [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) of the downloaded file's content, then compare that hash to one we previously computed for the known-good file. If the hashes don't match, the browser doesn't parse the loaded file.
 
-This may sound complicated but it's actually easy to do!
+We tell the browser the hash of the known-good file by embedding the hash value in the HTML&mdash;using the `integrity` atrribute on the corresponding `script` or `link` element.
+
+This may sound complicated but it's not too hard to do!
 
 Example markup (from the [MDN article on Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)):
 ```
@@ -45,13 +47,11 @@ Example markup (from the [MDN article on Subresource Integrity](https://develope
   crossorigin="anonymous"></script>
 ```
 
-Use of the `crossorigin` attribute depends on [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) support of the asset server.
+(Use of the `crossorigin` attribute depends on [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) support of the asset server.)
 
 Subresource Integrity can be used in conjunction with a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) but does not require a CSP to work.
 
-At the time of writing, [browser support for Subresource Integrity](https://caniuse.com/#feat=subresource-integrity) is very good and getting better.
-
-As Subresource Integrity should be relatively easy to add to a front-end build tool chain, it's recommended you use it for any `script` or `link` element.
+As Subresource Integrity should be relatively easy to add to a front-end build tool chain, it's recommended you use it for any `script` or `link` element, especially as [browser support for Subresource Integrity](https://caniuse.com/#feat=subresource-integrity) is good.
 
 - [Gentle introduction to Subresource Integrity by keycdn.com](https://www.keycdn.com/support/subresource-integrity/)
 - [MDN article on Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
@@ -73,15 +73,22 @@ Such sanitisation is beyond the scope of this document, but as authors of HTML f
 
 ### A note on autofill
 
-The autofill behaviour of browsers is controlled by the [`autocomplete` attribute](https://www.w3.org/TR/html5/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute), for which there are a large number of potential values.
+Whether the browser autofills input elements is controlled by the `autocomplete` attribute, for which there are a [large number of potential values](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete#Values).
 
-While there are security concerns about autofill & Personally Identifiable Information (PII),
+Firstly, while there are security concerns about autofill & Personally Identifiable Information (PII),
 
 > ...in-browser password management is generally seen as a net gain for security. Since users do not have to remember passwords that the browser stores for them, they are able to choose stronger passwords than they would otherwise.
 > For this reason, many modern browsers do not support autocomplete="off" for login fields
 > &mdash; <cite>[MDN - Turning off form autocompletion](https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion)</cite>
 
 As such, while you can disable autofill for sensitive fields (see MDN article above) browser vendors feel it is not a good idea overall.
+
+Secondly,
+
+> User agents should verify that all fields with the autocomplete attribute are visible within the viewport before automatically entering data.
+> &mdash; <cite>[HTML 5.3 specification](https://www.w3.org/TR/html53/sec-forms.html#sec-autofill)</cite>
+
+So to be sure, *avoid enabling autocomplete for elements which may be visually-hidden*.
 
 
 ## Use the `sandbox` attribute for `iframe`s
