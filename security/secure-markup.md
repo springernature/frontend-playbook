@@ -51,7 +51,7 @@ Example markup (from the [MDN article on Subresource Integrity](https://develope
 
 Subresource Integrity can be used in conjunction with a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) but does not require a CSP to work.
 
-As Subresource Integrity should be relatively easy to add to a front-end build tool chain, it's recommended you use it for any `script` or `link` element, especially as [browser support for Subresource Integrity](https://caniuse.com/#feat=subresource-integrity) is good.
+As Subresource Integrity should be relatively easy to add to a front-end build tool chain, you should use it for any `script` or `link` element, especially as [browser support for Subresource Integrity](https://caniuse.com/#feat=subresource-integrity) is good.
 
 - [Gentle introduction to Subresource Integrity by keycdn.com](https://www.keycdn.com/support/subresource-integrity/)
 - [MDN article on Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
