@@ -18,6 +18,7 @@ This info sits alongside our general guide to writing emails at ????.
 - Alt text should be used the same as on a web site
 - If the image conveys meaning, add an alt description.
 - If the image is purely presentational, add an empty alt attribute to allow the screenreader to skip it.
+- If the image is an image of text, the alt attribute must contain that same text.
 - Never leave an image without an alt tag (empty of filled) as the assistive tech will read out the filename instead.
 
 ## Use logical source order
