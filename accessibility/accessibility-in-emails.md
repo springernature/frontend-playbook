@@ -1,11 +1,11 @@
 # Accessibility in emails
 
-This info sits alongside our general guide to writing emails at ????.
+This info sits alongside our general guide to writing emails at ????. (er, need to write this, maybe).
 
 ## Layout
 
 - Rich visual emails typically use tables for layout.
-- ??? Setting `role="presentation"` seems like a good idea, but some ppl recommend against it. 
+- Using ARIA to set `role="presentation"` on the table will help prevent it being seen as a data table by screen readers.
 
 ## Specify a language
 
@@ -26,7 +26,7 @@ This info sits alongside our general guide to writing emails at ????.
 
 ## Use semantic content
 
-- Pre-HTML5 elemets `<p>` and `<h1>`, `<h2>`, etc are a good bet.
+- Pre-HTML5 elements `<p>` and `<h1>`, `<h2>`, etc are a good bet.
 
 ## Avoid HTML5 tags
 
@@ -35,7 +35,6 @@ This info sits alongside our general guide to writing emails at ????.
 ## Link back to browser version
 
 - Reliability of rendering in clients can be poor, so always have a public URL available that contains a version of the email.
-
 
 ## Resources
 
