@@ -22,7 +22,7 @@ Here are the few differing constraints and techniques that should be considered.
 
 ## Specify a language
 
-- ??? Not sure if this makes a difference. Would put it in by default, but need to check if it's harmful.
+- Setting the language of the email on the root element will allow assistive technology to use the appropriate language profile.
 
 ## Alternative text
 
