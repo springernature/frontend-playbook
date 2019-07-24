@@ -1,11 +1,12 @@
 # Accessibility in emails
 
-This info sits alongside our general guide to writing emails at ????. (er, need to write this, maybe).
+This info sits alongside our general guide to writing emails at ????.
 
 ## Layout
 
 - Rich visual emails typically use tables for layout.
-- Using ARIA to set `role="presentation"` on the table will help prevent it being seen as a data table by screen readers.
+- This is because email clients use old and conservative browser engines that do not cope well nor consistently with CSS-based layouts.
+- Using ARIA to set `role="presentation"` on layout tables will help prevent them being seen as data tables by screen readers.
 
 ## Specify a language
 
@@ -14,9 +15,10 @@ This info sits alongside our general guide to writing emails at ????. (er, need 
 ## Alternative text
 
 - Marketing emails tend to make heavy use of images.
-- Alt text should be used just the same as on a web site
+- Alt text should be used the same as on a web site
 - If the image conveys meaning, add an alt description.
-- If the image is purely presentational, add an empty alt attribute.
+- If the image is purely presentational, add an empty alt attribute to allow the screenreader to skip it.
+- Never leave an image without an alt tag (empty of filled) as the assistive tech will read out the filename instead.
 
 ## Use logical source order
 
@@ -38,4 +40,10 @@ This info sits alongside our general guide to writing emails at ????. (er, need 
 
 ## Resources
 
-- Litmus
+- [Why does email accessibility matter?](https://content.myemma.com/blog/why-does-email-accessibility-matter)
+- [Email Accessibility: Looks aren’t everything](https://explore.reallygoodemails.com/email-accessibility-looks-arent-everything-ad0b1f6af0a4)
+- [Email Accessibility Best Practices](https://www.emailonacid.com/blog/article/email-development/email-accessibilty-in-2017/)
+- [Accessibility in Email Marketing | MailChimp](https://mailchimp.com/resources/accessibility-in-email-marketing/)
+- [The Ultimate Guide to Accessible Emails](https://litmus.com/blog/ultimate-guide-accessible-emails)
+- [Emailgeeks Slack channel](https://email.geeks.chat)
+- [ZURB Foundation for Emails](https://foundation.zurb.com/emails/email-templates.html)
