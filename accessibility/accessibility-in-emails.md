@@ -29,7 +29,7 @@ Here are the few differing constraints and techniques that should be considered.
 - Marketing emails tend to make heavy use of images.
 - Alt text should be used as it would be on a web site
 - If the image conveys meaning, add an alt description.
-- If the image is purely presentational, add an empty alt attribute to allow the screenreader to skip it.
+- If the image is purely presentational, add an empty alt attribute (`alt=""`) to allow the screenreader to skip it.
 - If the image is an image of text, the alt attribute must contain that same text.
 - Never leave an image without an alt tag (empty of filled) as the assistive tech will read out the filename instead.
 - Do not use alt text to prompt the user to enable images in their email client.
