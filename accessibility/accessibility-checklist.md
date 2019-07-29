@@ -61,7 +61,7 @@ You should supply CSS that hides the Skip Navigation _for sighted users only_, a
 Resources:
 
 * [Article: WebAIM's overview of Skip Navigation techniques](https://webaim.org/techniques/skipnav/)
-* [https://link.springer.com](Springer Link: an example of a well-done skip navigation)
+* [Example: Springer Link's well-done skip navigation](https://link.springer.com)
 
 ### Declare a language attribute
 
