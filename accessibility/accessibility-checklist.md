@@ -39,6 +39,30 @@ Resources:
 * [Tool: HTML5 accessibility feature support for sections](http://www.html5accessibility.com/#sections)
 
 
+### Provide a Skip Navigation option
+
+Not all users are able to navigate by landmarks. For those users the multiple links typically found at the head of a document all have to be read via assistive technology, or laboriously tabbed through using a keyboard.
+
+To help them out you can add a "Skip Navigation" link to the top of each page which, when clicked, will take them to the main section of the page.
+
+We do this:
+
+```
+<body>
+<p><a href="#maincontent">Skip to main content</a></p>
+...
+<main id="maincontent">
+<h1>Heading</h1>
+<p>This is the first paragraph</p>
+```
+
+You should supply CSS that hides the Skip Navigation _for sighted users only_, and makes it highly visible when it receives focus via tabbing.
+
+Resources:
+
+* [https://webaim.org/techniques/skipnav/](WebAIM's overview of Skip Navigation techniques)
+* [https://link.springer.com](Springer Link: an example of a well-done skip navigation)
+
 ### Declare a language attribute
 
 Declaring a language attribute on the HTML element allows a screen reader to read out text with correct pronunciation. It also helps search engines return language-specific results.
