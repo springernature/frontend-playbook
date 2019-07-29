@@ -39,7 +39,7 @@ Resources:
 * [Tool: HTML5 accessibility feature support for sections](http://www.html5accessibility.com/#sections)
 
 
-### Provide a Skip Navigation option
+### Provide skip links to bypass repetitive content
 
 Not all users are able to navigate by landmarks. For those users the multiple links typically found at the head of a document all have to be read via assistive technology, or laboriously tabbed through using a keyboard.
 
