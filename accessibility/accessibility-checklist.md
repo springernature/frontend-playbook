@@ -41,7 +41,7 @@ Resources:
 
 ### Provide skip links to bypass repetitive content
 
-Not all users are able to navigate by landmarks. For those users the multiple links typically found at the head of a document all have to be read via assistive technology, or laboriously tabbed through using a keyboard.
+Not all users are able to easily navigate by landmarks. Multiple navigation links typically found at the top of a document all have to be laboriously tabbed through using a keyboard, on every page the user visits.
 
 To help them out you can add a "Skip Navigation" link to the top of each page which, when activated, will take them to the main section of the page.
 
