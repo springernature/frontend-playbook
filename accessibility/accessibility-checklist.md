@@ -51,17 +51,20 @@ We do this:
 <body>
 <p><a href="#maincontent">Skip to main content</a></p>
 ...
-<main id="maincontent">
+<main id="maincontent" tabindex="-1">
 <h1>Heading</h1>
 <p>This is the first paragraph</p>
 ```
 
-You should supply CSS that hides the Skip Navigation _for sighted users only_, and makes it highly visible when it receives focus via tabbing.
+We add `tabindex="-1"` to the targeted element so that it can be visibly focussed when skipped to.
+
+You should supply CSS that hides the Skip Navigation _for sighted users only_, and makes the link highly visible when it receives focus via tabbing.
 
 Resources:
 
 * [Article: WebAIM's overview of Skip Navigation techniques](https://webaim.org/techniques/skipnav/)
 * [Example: Springer Link's well-done skip navigation](https://link.springer.com)
+
 
 ### Declare a language attribute
 
