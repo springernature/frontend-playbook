@@ -43,7 +43,7 @@ Resources:
 
 Not all users are able to navigate by landmarks. For those users the multiple links typically found at the head of a document all have to be read via assistive technology, or laboriously tabbed through using a keyboard.
 
-To help them out you can add a "Skip Navigation" link to the top of each page which, when clicked, will take them to the main section of the page.
+To help them out you can add a "Skip Navigation" link to the top of each page which, when activated, will take them to the main section of the page.
 
 We do this:
 
