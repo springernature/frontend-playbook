@@ -14,7 +14,7 @@ Here are the few differing constraints and techniques that should be considered.
 
 Rich visual emails typically use tables for layout. This is because email clients use old and conservative browser engines that do not cope well nor consistently with CSS-based layouts.
 
-- Using ARIA to set `role="presentation"` on layout tables will help prevent them being seen as data tables by screen readers.
+- Using ARIA to set `role="presentation"` on layout tables will help prevent them being seen as data tables by screen readers, and allow screen reader users to read the email contents easily.
 
 ## Specify a language
 
