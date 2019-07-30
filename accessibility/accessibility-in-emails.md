@@ -10,7 +10,7 @@ Accessibility in emails can be summarised with 3 key points:
 1. Writing and visual design are key components of an accessible email campaign.
 1. Email templates can be made immediately more accessible with a few simple coding techniques.
 
-Creating accessible emails are not fundamentally different from creating accessible websites.
+Creating accessible emails is not fundamentally different from creating accessible websites.
 
 Here are the few differing constraints and techniques that should be considered.
 
