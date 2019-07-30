@@ -22,6 +22,14 @@ Emails, even if sent in English, can be read out loud by browsers and operating 
 
 - Setting the language of the email on the root element will allow assistive technology to use the appropriate language profile.
 
+## Use logical source order
+
+Screenreaders will rely on the logical source order of the HTML when they read out content.
+
+- Use the logical source order for the language you are writing in.
+- For most western languages, English included, this is left to right and top to bottom.
+- This includes the table cells and rows used for email layout.
+
 ## Alternative text
 
 Marketing emails tend to make heavy use of images, so it is important to ensure alt text is used well.
@@ -32,14 +40,6 @@ Marketing emails tend to make heavy use of images, so it is important to ensure 
 - If the image is an image of text, the alt attribute must contain that same text.
 - Never leave an image without an alt attribute as the assistive tech will read out the filename instead. If you're sure the image doesn't need alt text, use an empty alt attribute (`alt=""`). 
 - Do not use alt text to prompt the user to enable images in their email client.
-
-## Use logical source order
-
-Screenreaders will rely on the logical source order of the HTML when they read out content.
-
-- Use the logical source order for the language you are writing in.
-- For most western languages, English included, this is left to right and top to bottom.
-- This includes the table cells and rows used for email layout.
 
 ## Use semantic content
 
