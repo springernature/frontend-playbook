@@ -50,7 +50,7 @@ Here are the few differing constraints and techniques that should be considered.
 
 ## Link back to browser version
 
-- Reliability of rendering in clients can be poor, so always have a public URL available that contains a version of the email.
+- Reliability of rendering in clients can be poor, so always have a public URL available that displays an HTML version of the email.
 
 ## Resources
 
