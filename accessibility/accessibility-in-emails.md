@@ -26,7 +26,7 @@ Emails, even if sent in English, can be read out loud by browsers and operating 
 
 Marketing emails tend to make heavy use of images, so it is important to ensure alt text is used well.
 
-- Alt text should be used as it would be on a web site
+- Alt text should be used as it would be on a web site.
 - If the image conveys meaning, add an alt description.
 - If the image is purely presentational, add an empty alt attribute (`alt=""`) to allow the screenreader to skip it.
 - If the image is an image of text, the alt attribute must contain that same text.
