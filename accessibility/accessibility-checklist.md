@@ -56,7 +56,7 @@ We do this:
 <p>This is the first paragraph</p>
 ```
 
-We add `tabindex="-1"` to the targeted element so that it can be visibly focussed when skipped to.
+We add `tabindex="-1"` to the targeted element so that it can be programmatically focussed when skipped to.
 
 You should supply CSS that hides the Skip Navigation _for sighted users only_, and makes the link highly visible when it receives focus via tabbing.
 
