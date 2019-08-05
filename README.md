@@ -1,6 +1,6 @@
-# The Front-End Playbook
+# The Frontend Playbook
 
-This repo contains The Front-End Playbook. It details how we run software development and how we make web and mobile products together. It's filled with things we've learned based on our own experience and study of others' experiences.
+This repo contains The Frontend Playbook. It details how we run software development and how we make web and mobile products together. It's filled with things we've learned based on our own experience and study of others' experiences.
 
 This is a living document that we contribute to in a _public_ GitHub repo. Reasons for doing this in the open include (but are not limited to):
 
@@ -38,6 +38,6 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ## License
 
-The Front-End Playbook is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+The Frontend Playbook is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
 You should have received a copy of the license along with this work. If not, see [Creative Commons BY-NC-SA 4.0 license](http://creativecommons.org/licenses/by-nc-sa/4.0/).

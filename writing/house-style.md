@@ -1,9 +1,9 @@
 # Language style guide
 
 * [Writing style](#writing-style)
-    * [Tone of voice](#tone-of-voice)
-    * [Plain English](#plain-english)
-    * [Technical writing](#technical-writing)
+  * [Tone of voice](#tone-of-voice)
+  * [Plain English](#plain-english)
+  * [Technical writing](#technical-writing)
 * [Frontend or front-end](#frontend-or-front-end)
 
 
@@ -53,9 +53,7 @@ All of the advice in the [plain English](#plain-english) section applies. Additi
 
 ## Frontend or front-end
 
-* Use `front-end` when you need an adjective (e.g. "the front-end team", "front-end principles").
-* Use `frontend` when you need a noun (e.g. "the application's frontend"), when you refer to a repository, or in your code.
-
+Always use `frontend` regardless of the context. It's less confusing and error prone, and ensures consistency across all our documentation and portfolio of products.
 
 [writing-well]: http://writersdiet.com/?page_id=16
 [active-passive]: https://oxfordediting.com/the-active-verb-form-makes-academic-writing-more-readable/

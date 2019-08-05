@@ -10,7 +10,7 @@
   * [Use the `type` & `typemustmatch` attribute for `object`s](#use-the-type--typemustmatch-attribute-for-objects)
 
 ## Scope of this document
-You should be aware of the security implications of your front-end code. This document outlines some steps you can take to reduce the risk of markup exposing us, or our users, to security flaws.
+You should be aware of the security implications of your frontend code. This document outlines some steps you can take to reduce the risk of markup exposing us, or our users, to security flaws.
 
 Note: this document does not cover JavaScript or interactions which may touch the server, e.g. XSS or HTTP headers. (It is assumed security-related headers are set in the HTTP headers, not in `meta` tag equivalents.)
 
@@ -51,7 +51,7 @@ Example markup (from the [MDN article on Subresource Integrity](https://develope
 
 Subresource Integrity can be used in conjunction with a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) but does not require a CSP to work.
 
-As Subresource Integrity should be relatively easy to add to a front-end build tool chain, you should use it for any `script` or `link` element, especially as [browser support for Subresource Integrity](https://caniuse.com/#feat=subresource-integrity) is good.
+As Subresource Integrity should be relatively easy to add to a frontend build tool chain, you should use it for any `script` or `link` element, especially as [browser support for Subresource Integrity](https://caniuse.com/#feat=subresource-integrity) is good.
 
 - [Gentle introduction to Subresource Integrity by keycdn.com](https://www.keycdn.com/support/subresource-integrity/)
 - [MDN article on Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
