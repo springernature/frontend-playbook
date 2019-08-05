@@ -13,7 +13,7 @@ A lower number of requests is directly related to better performance and higher 
 * Ensuring that there are [no redirects](https://learning.oreilly.com/library/view/high-performance-web/9780596529307/ch13.html) on the page itself or in any of the first party resources.
 * Concatenating first party CSS and JS, when suitable. This is true even when using HTTP2.
 * Ensuring that no first party resources are returning HTTP 4xx or 5xx errors.
-* Ensure that first party resources are served from as few different domains as possible in order to [reduce DNS lookups](https://www.oreilly.com/library/view/high-performance-web/9780596529307/ch11.html).
+* Serve first party resources from as few different domains as possible in order to [reduce DNS lookups](https://www.oreilly.com/library/view/high-performance-web/9780596529307/ch11.html).
 
 ## Page weight
 
