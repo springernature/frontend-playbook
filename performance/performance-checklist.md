@@ -11,7 +11,7 @@ Remember that, for most of these rules, there's always the chance that following
 A lower number of requests is directly related to better performance and higher user engagement. Make sure that the [number of HTTP requests is as small as possible](https://learning.oreilly.com/library/view/high-performance-web/9780596529307/ch03.html) by:
 
 * Ensuring that there are [no redirects](https://learning.oreilly.com/library/view/high-performance-web/9780596529307/ch13.html) on the page itself or in any of the first party resources.
-* Ensuring that first party CSS and JS are concatenated, when suitable. This is true even when using HTTP2.
+* Concatenating first party CSS and JS, when suitable. This is true even when using HTTP2.
 * Ensuring that no first party resources are returning HTTP 4xx or 5xx errors.
 * Ensure that first party resources are served from as few different domains as possible in order to [reduce DNS lookups](https://www.oreilly.com/library/view/high-performance-web/9780596529307/ch11.html).
 
