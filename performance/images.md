@@ -38,13 +38,13 @@ Always use the maximum compression level (9).
 
 * Make sure that you save images using an [sRGB](https://en.wikipedia.org/wiki/SRGB) ICC profile. Although modern browsers support images with ICCv2 profiles like [Adobe RGB](https://en.wikipedia.org/wiki/Adobe_RGB_color_space) and even [ProPhoto RGB](https://en.wikipedia.org/wiki/ProPhoto_RGB_color_space), colour space issues are extremely difficult to debug. Saving the images as sRGB and removing the colour profile is encouraged.
 * Strip the metadata from the image. This includes:
-    * EXIF data
-    * Copyright information (unless required)
-    * GPS data
-    * Colour profiles
-    * Thumbnails in JPEGs
-    * Comments
-    * Etc.
+  * EXIF data
+  * Copyright information (unless required)
+  * GPS data
+  * Colour profiles
+  * Thumbnails in JPEGs
+  * Comments
+  * Etc.
 * Set appropriate cache headers for the images. (See [Serving images](#serving-images), below.)
 
 For images that are going to be included in a repo, you can use tools like [ImageOptim](https://imageoptim.com/mac) to optimise them and strip the metadata before committing them.
@@ -56,7 +56,6 @@ If an image is still too big, you can try several other optimisations that will 
 * Reduce noise and other complexity.
 * Decrease export quality.
 * Blur unimportant areas.
-
 
 ## Serving images
 
