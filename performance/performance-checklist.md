@@ -19,7 +19,7 @@ A lower number of requests is directly related to better performance and higher 
 
 Another important factor that impacts user engagement is [the size of the resources](https://blog.chriszacharias.com/page-weight-matters). On low performing networks or devices, the size of the resources being loaded can delay the loading of the page by several seconds and increase power consumption significantly.
 
-* Ensure that all text resources over 1500 bytes [are minified](https://learning.oreilly.com/library/view/high-performance-web/9780596529307/ch12.html).
+* [Minify all text resources](https://learning.oreilly.com/library/view/high-performance-web/9780596529307/ch12.html) over 1500 bytes.
 * Ensure that all text resources over 1500 bytes use Brotli, Zopfli or [GZip compression](https://learning.oreilly.com/library/view/high-performance-web/9780596529307/ch06.html).
 * [Choose the right format for images, and optimise images and SVGs](images.md).
 * Set an [appropriate expiry date or a maximum age](https://learning.oreilly.com/library/view/high-performance-web/9780596529307/ch05.html) for all static resources.
@@ -29,14 +29,14 @@ Another important factor that impacts user engagement is [the size of the resour
 
 CSS and JS resources can be [render blocking](https://developers.google.com/web/tools/lighthouse/audits/blocking-resources) as the browser will pause rendering of a page while a CSS file or a synchronous JS file or script are being loaded. On slow connections this can delay the page load by several seconds. Ensure there are as few render blocking resources as possible by:
 
-* Ensure all JavaScript files use [`async` or, when possible, `defer` attributes](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html).
-* Ensure that only the smallest amount of CSS needed to render the page is being loaded synchronously. [Load the rest of the CSS asynchronously](https://www.filamentgroup.com/lab/load-css-simpler/).
+* Using [`async` or, when possible, `defer` attributes](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html) in all JavaScript files.
+* Only loading synchronously the smallest amount of CSS needed to render the page. [Load the rest of the CSS asynchronously](https://www.filamentgroup.com/lab/load-css-simpler/).
 
 ## The critical rendering path
 
 The [critical rendering path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp) is made up by the resources that are required in order for the browser to complete rendering the current view. By optimizing the critical rendering path you can improve the time to first render of our pages.
 
-* Study the waterfall and find out which resources are in the critical path. Make them load earlier by using [`rel="dns-prefetch"` and `rel="preconnect"`](https://www.keycdn.com/blog/resource-hints) resource hints as appropriate. Ensure that resources [like CSS](https://web.dev/defer-non-critical-css/)that are _not_ in the critical path are loaded asynchronously or lazy-loaded when possible.
+* Study the waterfall and find out which resources are in the critical path. Make them load earlier by using [`rel="dns-prefetch"` and `rel="preconnect"`](https://www.keycdn.com/blog/resource-hints) resource hints as appropriate. Ensure that resources [like CSS](https://web.dev/defer-non-critical-css/) that are _not_ in the critical path are loaded asynchronously or lazy-loaded when possible.
 
 ## Post launch
 
