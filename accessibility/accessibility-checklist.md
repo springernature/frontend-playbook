@@ -39,6 +39,33 @@ Resources:
 * [Tool: HTML5 accessibility feature support for sections](http://www.html5accessibility.com/#sections)
 
 
+### Provide skip links to bypass repetitive content
+
+Not all users are able to easily navigate by landmarks. Multiple navigation links typically found at the top of a document all have to be laboriously tabbed through using a keyboard, on every page the user visits.
+
+To help them out you can add a "Skip Navigation" link to the top of each page which, when activated, will take them to the main section of the page.
+
+We do this:
+
+```
+<body>
+<p><a href="#maincontent">Skip to main content</a></p>
+...
+<main id="maincontent" tabindex="-1">
+<h1>Heading</h1>
+<p>This is the first paragraph</p>
+```
+
+We add `tabindex="-1"` to the targeted element so that it can be programmatically focussed when skipped to.
+
+You should supply CSS that hides the Skip Navigation _for sighted users only_, and makes the link highly visible when it receives focus via tabbing.
+
+Resources:
+
+* [Article: WebAIM's overview of Skip Navigation techniques](https://webaim.org/techniques/skipnav/)
+* [Example: Springer Link's well-done skip navigation](https://link.springer.com)
+
+
 ### Declare a language attribute
 
 Declaring a language attribute on the HTML element allows a screen reader to read out text with correct pronunciation. It also helps search engines return language-specific results.
