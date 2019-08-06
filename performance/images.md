@@ -2,7 +2,7 @@
 
 This document describes best practices for the use of images on the web at Springer Nature.
 
-In a front-end workflow we typically deal with two kinds of image:
+In a frontend workflow we typically deal with two kinds of image:
 
 * **User interface images**, including icons, logos, and buttons. Usually managed by the frontend, these are stored with other client-side resources such as templates, CSS and JS. Like those resources, they may be shared between many different pages.
 

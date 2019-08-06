@@ -1,4 +1,4 @@
-# Contributing to the Front-End Playbook
+# Contributing to the Frontend Playbook
 
 If you're on this page because you'd like to contribute to the Playbook, that's fantastic! Thank you for getting involved ❤️
 
@@ -28,6 +28,6 @@ If you work at Springer Nature, please remember to keep discussion inside the is
 
 ### Publicising your changes
 
-A bot notifies the #frontend Slack room when work is merged, because changes to the playbook are relevant to all Front-End developers at Springer Nature.
+A bot notifies the #frontend Slack room when work is merged, because changes to the playbook are relevant to all Frontend developers at Springer Nature.
 
 We hope the wider development community will be interested in the work we have committed here. We welcome feedback and involvement from all - so feel free to link to your latest contribution on Twitter, or your social media platform of choice.
