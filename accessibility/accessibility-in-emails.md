@@ -38,8 +38,14 @@ Marketing emails tend to make heavy use of images, so it is important to ensure 
 - If the image conveys meaning, add an alt description.
 - If the image is purely presentational, add an empty alt attribute (`alt=""`) to allow the screenreader to skip it.
 - If the image is an image of text, the alt attribute must contain that same text.
-- Never leave an image without an alt attribute as the assistive tech will read out the filename instead. If you're sure the image doesn't need alt text, use an empty alt attribute (`alt=""`). 
+- Never leave an image without an alt attribute as the assistive tech will read out the filename instead. If you're sure the image doesn't need alt text, use an empty alt attribute (`alt=""`).
 - Do not use alt text to prompt the user to enable images in their email client.
+
+## Fonts
+
+Before the age of webfonts, browser content was restricted to a short list of ~10 “web-safe” fonts, or text in images. HTML emails are largely still subject to this restriction. While many email clients will allow an embedded webfont, the biggest one – GMail – does not. Also a webfont is another embedded resource in the email so using a webfont forces every user (including those on mobile) to download the custom font just to read a short email.
+
+TL;DR: use Courier for monospace, Times or Georgia for serif, and Arial/Helvetica for sans-serif, and **always** specify the default fallback at the end of the font stack.
 
 ## Use semantic content
 
@@ -69,3 +75,4 @@ Reliability of rendering in clients can be poor.
 - [The Ultimate Guide to Accessible Emails](https://litmus.com/blog/ultimate-guide-accessible-emails)
 - [Emailgeeks Slack channel](https://email.geeks.chat)
 - [ZURB Foundation for Emails](https://foundation.zurb.com/emails/email-templates.html)
+- [BeeFree Email Best Practices](https://emaildesign.beefree.io/2016/05/email-fonts-best-practices/)
