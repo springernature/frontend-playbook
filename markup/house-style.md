@@ -9,6 +9,7 @@ This document outlines the way we write markup and why. See our [house style doc
 - [Semantics](#semantics)
 	- [Follow the HTML 4 outline model for heading levels](#follow-the-html-4-outline-model-for-heading-levels)
 - [Templates](#templates)
+- [Forms](#forms)
 
 ## HTML vs XHTML
 
@@ -121,3 +122,23 @@ We *don't* do this:
 ## Templates
 
 Templates should, where possible, be written using [DustJS](http://www.dustjs.com/) or [Handlebars](http://handlebarsjs.com/). Use of linting is encouraged to prevent common errors. For projects using DustJS  [Dustmite](https://www.npmjs.com/package/dustmite) should be used. Dustmite will prevent any syntax errors. It also enforces consistent style in your template code and can catch more subtle errors like usage of the potentially unsafe `{@if}` dust helper.
+
+## Forms
+
+On modern browsers, `button type="submit"` provides a superset of functionality when compared to `input type=submit`.
+
+We do this:
+
+```html
+<form>
+	<button type="submit">Search</button>
+</form>
+```
+
+We *don't* do this:
+
+```html
+<form>
+	<input type="submit">Search</input>
+</form>
+```
