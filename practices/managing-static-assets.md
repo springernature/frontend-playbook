@@ -1,12 +1,8 @@
 # Managing static assets
 
-By **static assets** we mean webfonts, JavaScript libraries (like jQuery or Mathjax), and any other files that get loaded by the browser from a domain that is not ours. These static assets are characterised by:
+Static assets are files that don't need to be generated, modified or processed by an application before being delivered to the user. This typically includes CSS, JavaScript, images and web fonts.
 
-* Being essential or important for the working of a page.
-* Being updated infrequently.
-* Require some manual intervention in order to be updated.
-
-Usually these assets are added to the page as part of the application, and not through tag managers.
+This content rarely changes and its contents don't depend on user input or preferences.
 
 For this kind of static resources it is our choice to **self-host them on our servers** instead of including them on our pages from an external CDN.
 
