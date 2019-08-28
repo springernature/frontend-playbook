@@ -78,7 +78,7 @@ We *don't* do this:
 ```
 ### Form submit controls
 
-On modern browsers, `button type="submit"` provides a superset of functionality when compared to `input type=submit`.
+In modern browsers, `button type="submit"` provides a superset of functionality when compared to `input type=submit`.
 
 `button` elements are much easier to style than `input` elements. You can add
 inner HTML content (think `<em>`, `<strong>`, or even `<img>`), and use
@@ -125,13 +125,13 @@ This becomes problematic when using multiple submit buttons in a single form wit
 
 Here are some suggestions to work around these:
 
-- Interfaces could be redesigned so multiple submit buttons are not required.
+- Redesign the interface so multiple submit buttons are not required.
   - (Preferred) Use a multiple pages form as recommended by GOV.UK in [Structuring forms,
     Start with one thing per
     page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page).
   - Replace them with radio buttons and a single submit button (requires an
     extra click from the user though);
-- A separate form can be used for each instance, with a hidden `input` providing
+- Use a separate form for each instance, with a hidden `input` providing
   the data the submit `button` would normally carry. This can be a good
   solution when you have a simple “Delete this row” problem.
 - Last resort solution: Hide the value inside the name of the control. A loop
