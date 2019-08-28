@@ -85,8 +85,12 @@ inner HTML content (think `<em>`, `<strong>`, or even `<img>`), and use
 `::after` and `::before` pseudo-elements to achieve complex rendering while
 `input` only accepts a textual value attribute.
 
+**Note**: Submitting is `button` default behaviour, but we want to "code for
+humans". Therefore do not ommit `type="submit"`.
+
 Make sure to specify `name` and `value` attributes to maximize browsers
-compatibility.
+compatibility ([See IE11-Only Submit Bug on Stack
+Overflow](https://stackoverflow.com/a/22703881/9461391)).
 
 We do this:
 
@@ -96,13 +100,21 @@ We do this:
 </form>
 ```
 
-or
-
 We *don't* do this:
 
 ```html
 <form>
 	<input type="submit" value="Continue">
+</form>
+```
+
+and
+
+We *don't* do this:
+
+```html
+<form>
+	<button>Continue</button>
 </form>
 ```
 
@@ -114,17 +126,18 @@ This becomes problematic when using multiple submit buttons in a single form wit
 Here are some suggestions to work around these:
 
 - Interfaces could be redesigned so multiple submit buttons are not required.
-  - Replacing them with radio buttons and a single submit button (requires an
-    extra click from the user though);
-  - Use a mutliple pages form as recommended by Gov.uk in [Structuring forms,
+  - (Preferred) Use a multiple pages form as recommended by GOV.UK in [Structuring forms,
     Start with one thing per
     page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page).
+  - Replace them with radio buttons and a single submit button (requires an
+    extra click from the user though);
 - A separate form can be used for each instance, with a hidden `input` providing
   the data the submit `button` would normally carry. This can be a good
   solution when you have a simple “Delete this row” problem.
 - Last resort solution: Hide the value inside the name of the control. A loop
   over the names from the form data is needed in the business logic then. Please
-  avoid as much as you can!
+  avoid as much as you can as this adds complexity to code and may degrade
+  performance.
 
 ## Semantics
 
