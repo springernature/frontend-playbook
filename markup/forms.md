@@ -1,4 +1,22 @@
-# Forms
+# Form checklist
+
+This document is to help you in the process of building forms.
+
+## Basics
+
+As with everything else, forms should be developed in a progressively enhanced manner. Use the SN Cutting the Mustard technique to send a Core experience to all browsers, and upgrade it to an Advanced experience when the browser is capable.
+
+### Core experience
+
+- Build the form with server-side generated HTML and Core CSS.
+- Ensure the form can send data to a POST endpoint on the server (as specified in the form's `action` attribute), and that the server can return back to the browser either:
+  - a) A success page if there are no validation errors; or
+  - b) The same form with inline errors highlighted.
+
+### Advanced experience
+
+- Enhance the form using client-side JavaScript, so that errors and validation are checked in the browser before POSTing to the server.
+- Consider creating a more inline experience by using JavaScript to send the POST data, overriding the `action` using `fetch` or `xmlhttprequest`.
 
 ## Checklist
 
