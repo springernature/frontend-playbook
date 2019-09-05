@@ -15,9 +15,11 @@
 * If it is under your control, ensure the server provides a validation token (`ETag`) header. The `ETag` header is an additional identifier for a specific version of a resource. It is especially useful to prevent simultaneous updates overwriting each other. If you use a CDN, it is likely this header will already be provided. Learn more:
     * [MDN ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag)
     * [Express options for 'ETag' setting](https://expressjs.com/en/api.html#etag.options.table)
+* You no longer need to use [`Expires` headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires) as it has been superseded by `Cache-Control` header with `max-age`, which is [supported by modern browsers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#Browser_compatibility).
 
 It’s important to note that there isn’t a one-size-fits-all approach to caching, so always decide a caching strategy based on your needs.
 
 ## Further resources
 
 * [Web Fundamentals: HTTP Caching](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
+* [HTTP Cache Headers: A Complete Guide](https://www.keycdn.com/blog/http-cache-headers)
