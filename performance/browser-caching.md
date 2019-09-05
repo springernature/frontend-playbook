@@ -7,7 +7,7 @@
 
 ## CSS, JS and Images
 
-* Set a long `max-age` eg: `Cache-Control: max-age: 31536000` (one year). Content on these URLs should typically not change so it should be safe to cache them for really long periods.
+* Set a long `max-age` eg: `Cache-Control: max-age: 31536000` (one year). The `max-age` directive states the maximum amount of time in seconds that fetched responses are allowed to be used again (from the time when a request is made) and because content on these URLs typically don't change, it is safe to cache them for really long periods.
 * Use a [cache-busting](https://www.keycdn.com/support/what-is-cache-busting) mechanism for versioning assets to ensure that the browser caches each version as a different URL. Example: `sncss-29d48c7.css` or `sncss.js?v=29d48c7` where “_29d48c7_” is an auto-generated number unique to every version of the file. Frameworks like [Shunter](https://github.com/springernature/shunter) use the filename version style which is preferred.
 
 ## General
