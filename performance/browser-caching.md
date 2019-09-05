@@ -7,12 +7,12 @@
 ## CSS, JS and Images
 
 * Set a long `max-age` eg: `Cache-Control: max-age: 31536000` (one year). Content on these URLs should typically not change so it should be safe to cache them for really long periods.
-* Use a [cache-busting](https://www.keycdn.com/support/what-is-cache-busting) mechanism for versioning assets to ensure that the browser caches each version as a different URL. Example: `sncss-29d48c7.css` where “_29d48c7_” is an auto-generated number unique to every version of the file.
+* Use a [cache-busting](https://www.keycdn.com/support/what-is-cache-busting) mechanism for versioning assets to ensure that the browser caches each version as a different URL. Example: `sncss-29d48c7.css` or `sncss.js?v=29d48c7` where “_29d48c7_” is an auto-generated number unique to every version of the file. Frameworks like [Shunter](https://github.com/springernature/shunter) use the filename version style which is preferred.
 
 ## General
 
 * If it is under your control, ensure the server provides a validation token (`ETag`) header. The `ETag` header is an additional identifier for a specific version of a resource. It is especially useful to prevent simultaneous updates overwriting each other. If you use a CDN, it is likely this header will already be provided. Learn more:
-    *  [MDN ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag)
+    * [MDN ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag)
     * [Express options for 'ETag' setting](https://expressjs.com/en/api.html#etag.options.table)
 
 It’s important to note that there isn’t a one-size-fits-all approach to caching, so always decide a caching strategy based on your needs.
