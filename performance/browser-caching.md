@@ -3,6 +3,7 @@
 ## HTML Markup
 
 * Serve these with a `Cache-Control: no-cache` header. This will instruct the browser to cache locally but only after checking with the server that the content hasn’t changed. Note that `no-cache` does NOT mean "don’t cache", rather it tells the browser to always revalidate when the resource is requested. `no-store` tells the browser not to cache at all, which isn’t usually desirable.
+* See [Caching best practices](https://jakearchibald.com/2016/caching-best-practices/) for more information.
 
 ## CSS, JS and Images
 
