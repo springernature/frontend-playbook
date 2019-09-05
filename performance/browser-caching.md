@@ -7,7 +7,7 @@
 ## CSS, JS and Images
 
 * Set a long `max-age` eg: `Cache-Control: max-age: 31536000` (one year). Content on these URLs should typically not change so it should be safe to cache them for really long periods.
-* Do ensure you have a mechanism for versioning assets to ensure that the browser caches each version as a different URL. Example: `https://www.nature.com/naturecareers/public/resources/sncss-29d48c7.css` where “_29d48c7_” is an auto-generated number unique to every version of the file.
+* Use a [cache-busting](https://www.keycdn.com/support/what-is-cache-busting) mechanism for versioning assets to ensure that the browser caches each version as a different URL. Example: `sncss-29d48c7.css` where “_29d48c7_” is an auto-generated number unique to every version of the file.
 
 ## General
 
