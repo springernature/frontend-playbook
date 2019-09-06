@@ -60,6 +60,7 @@ You may use [our VPAT template](https://github.com/springernature/vpat) when eva
 ## How we conform
 
 ### Standards we aim for
+
 Our target standards are [WCAG 2.1](https://www.w3.org/TR/WCAG21/) level AA.
 
 As of mid-September 2018, WCAG 2.1 AA has been adopted in the European [EN 301 549 “Accessibility requirements for ICT products and services”](https://www.w3.org/blog/2018/09/wcag-2-1-adoption-in-europe/). This means that in order to comply with EN 301 549, your products MUST also comply with WCAG 2.1 to level AA.
