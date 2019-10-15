@@ -5,7 +5,7 @@
   - [Why do we care about accessibility?](#why-do-we-care-about-accessibility)
 - [VPATs](#vpats)
 - [How we conform](#how-we-conform)
-  - [Standards](#standards-we-conform-to)
+  - [Standards](#standards-we-aim-for)
   - [Tools and techniques](#tools-and-techniques)
     - [Guidelines](#guidelines)
     - [Pa11y](#pa11y)
