@@ -6,6 +6,7 @@ This checklist aims to help you and your team create accessible products. It's h
 - [Media](#media)
 - [Colours](#colours)
 - [Interactivity](#interactivity)
+- [Forms](#forms)
 - [Content](#content)
 
 
@@ -210,12 +211,9 @@ Resources:
 
 ### Give context and orientation information
 
-Associate all form controls with appropriate labels. Use fieldsets or optgroups to group related controls.
-
 Give users a way to know where they are in a set of related pages (e.g. the [Steps Left pattern](http://ui-patterns.com/patterns/StepsLeft)).
 
 Make sure the currently-focused element has a focus ring, and make sure the focus sequence is logical.
-
 
 ### Avoid opening links in new windows
 
@@ -228,6 +226,14 @@ Resources:
 * [Article: Opening links in a new window](https://www.nomensa.com/blog/2011/opening-links-new-window)
 
 
+## Forms
+
+### Labels and context
+
+Associate all form controls with appropriate labels. 
+
+Use fieldsets or optgroups to group related controls.
+
 ### Don't use HTML5 input placeholders for important information
 
 Input placeholders disappear when the user begins typing, may be mistaken for a value, and may not provide adequate context.
@@ -239,7 +245,6 @@ Resources:
 * [Article: HTML5 Accessibility Chops: the placeholder attribute](https://developer.paciellogroup.com/blog/2011/02/html5-accessibility-chops-the-placeholder-attribute/)
 * [Article: 11 reasons why placeholders are problematic](https://medium.com/simple-human/10-reasons-why-placeholders-are-problematic-f8079412b960)
 * [Article: Don’t Use The Placeholder Attribute](https://www.smashingmagazine.com/2018/06/placeholder-attribute)
-
 
 ## Content
 
