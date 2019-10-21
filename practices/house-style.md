@@ -31,7 +31,7 @@ We lint our CSS, JavaScript, and templates written with DustJS. This helps us to
 
 ### Accessibility
 
-We care a great deal about accessibility. Our target standards for all of our products are [WCAG 2.1](https://www.w3.org/TR/WCAG21/) level AA, in line with the current EU legislation, [EN 301 549](http://mandate376.standards.eu/standard). *All first and third party web products and components published by Springer Nature must conform to WCAG 2.1 AA.* 
+We care a great deal about accessibility. Our target standards for all of our products are [WCAG 2.1](https://www.w3.org/TR/WCAG21/) level AA, in line with the current EU legislation, [EN 301 549](https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1571662799042&uri=CELEX:32016L2102). *All first and third party web products and components published by Springer Nature must conform to WCAG 2.1 AA.* 
 
 Civil and federal legislation worldwide is converging on WCAG. Meeting WCAG 2.1 AA will also bring us into alignment with federal regulations like [US Section 508](https://www.section508.gov/) and [UK Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/introduction/made), and with civil rights legislation like the [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents) and the [Americans with Disabilities Act](https://www.ada.gov/2010_regs.htm). 
 
