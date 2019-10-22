@@ -35,8 +35,8 @@ Accessibility supports social inclusion for people with disabilities as well as 
 
 
 ### Why do we care about accessibility?
-
-- *It's a legal requirement:* we're legally obliged to make our content accessible to users with diverse needs. All of our websites MUST comply with [US Section 508](https://www.section508.gov/) of the US Rehabilitation Act 1973, [EU Directive 2016/2102](http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016L2102) and the [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents). From January 18th 2018, compliance with Section 508 requires us to comply with WCAG 2.0 AA. We expect this to be updated to WCAG 2.1 AA in due course.   
+  
+- *It's a legal requirement:* we're legally obliged in almost all jurisdictions worldwide to make our content accessible to users with diverse needs. All of our websites MUST comply with [EU Directive 2016/2102 (EN 301 549)](https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1571662799042&uri=CELEX:32016L2102), [US Section 508](https://www.section508.gov/) of the US Rehabilitation Act 1973, the [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents), and [The Americans with Disabilities Act of 1990 and Revised ADA Regulations Implementing Title II and Title III](https://www.ada.gov/2010_regs.htm). 
 - *It makes financial sense:* around 20% of working age adults in the UK are estimated to have some kind of permanent disability (Source: [Scope UK](https://www.scope.org.uk/media/disability-facts-figures)). Forrester Research found that *_57%_* of computer users aged 18 to 64 have disabilities that make them "likely or very likely" to benefit from the use of assistive technology (Source: [Pubmed](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2788505/)). Also taking into account people who are [temporarily disabled](https://userway.org/blog/how-situational-disabilities-impact-us-all), failing to make our websites accessible can cause a significant reduction in real market share. 
 - *It's a technical requirement:* catering for all users complements our [browser support policy](../practices/graded-browser-support.md) (we aim to support all browsers), and our use of [progressive enhancement](../practices/progressive-enhancement.md). 
 - *It's the right thing to do:* we have a duty to cater for all users regardless of ability. If we know that people can encounter difficulties accessing our content (which we do), and we know that we can do things to facilitate that access (which we do), then not making something accessible is knowingly contributing to the oppression of people with disabilities.
@@ -50,7 +50,7 @@ Accessible sites can be used by more people - including people with disabilities
 
 ## VPATs
 
-A Voluntary Product Accessibility Template (VPAT) is a document that explains how accessible a particular product is [according to the Section 508 Standards](https://www.section508.gov/content/sell/vpat). Our customers in the United States use our VPATs to show that they comply with U.S. accessibility law. 
+A Voluntary Product Accessibility Template (VPAT) is a reporting format document that explains how accessible a particular product is according to WCAG, EN 301 549, and Section 508 Standards. Our customers in the United States and the European Union use our VPATs to show that they comply with their local accessibility laws. The VPAT reporting format is published by ITI - see [https://www.itic.org/policy/accessibility/vpat](https://www.itic.org/policy/accessibility/vpat) for more information. 
 
 A VPAT MUST be produced by you or your team for every product or service that we make commercially available in the United States. If something changes, e.g. accessibility is improved for a particular criteria, you MUST update the VPAT to reflect the change. You MUST NOT regress accessibility to below the level detailed in the VPAT.
 
