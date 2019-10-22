@@ -246,6 +246,26 @@ Resources:
 * [Article: 11 reasons why placeholders are problematic](https://medium.com/simple-human/10-reasons-why-placeholders-are-problematic-f8079412b960)
 * [Article: Don’t Use The Placeholder Attribute](https://www.smashingmagazine.com/2018/06/placeholder-attribute)
 
+### Help users make the most of autocomplete and autofill
+
+By default, browsers remember information that users submit into input fields. The browser can then suggest possible completions for fields that the user has started typing in (autocomplete) or pre-populate certain fields when the page loads (autofill). This behaviour can be turned off in HTML with the `autocomplete="false"` attribute.
+
+Don't indiscriminately disable autocomplete for input fields. The default autocomplete and autofill behaviours are useful for many users with and without disabilities. 
+
+For example, autocomplete helps users with motor disabilities by reducing the amount of typing they need to do in input fields. Autofill can help users with cognitive disabilities by automatically filling in common information like addresses or telephone numbers. 
+
+Don't disable autocomplete on sensitive fields like username and password fields. Any security benefits of doing this is negligible compared to the benefits of users' in-browser password managers, and has a direct negative impact on accessibility. Read the note on autofill in the [secure markup guide](https://github.com/springernature/frontend-playbook/blob/master/security/secure-markup.md#a-note-on-autofill) for more on that. 
+
+For fields where the user is expected to input information _about themselves_, use a valid autocomplete value if one exists - this helps make form filling software more effective. The HTML specification provides a [list of valid autocomplete values](https://www.w3.org/TR/html53/sec-forms.html#sec-autofill). 
+
+Don't use autocomplete values on input fields where the user is expected to input one-time information about _somebody else_ (e.g. a teacher filling out a form with the details of a list their students). 
+
+Resources:
+
+* [Article: Making password managers play ball with your login form](https://hiddedevries.nl/en/blog/2018-01-13-making-password-managers-play-ball-with-your-login-form)
+* [Understanding WCAG 2.1: Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html)
+* [MDN reference: The HTML autocomplete attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)
+
 ## Content
 
 ### Use link text that makes sense out of context
