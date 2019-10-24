@@ -230,9 +230,8 @@ Resources:
 
 ### Labels and context
 
-Associate all form controls with appropriate labels. 
-
-Use fieldsets or optgroups to group related controls.
+* Associate all form controls with appropriate labels. 
+* Use fieldsets or optgroups to group related controls.
 
 ### Don't use HTML5 input placeholders for important information
 
