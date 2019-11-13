@@ -36,6 +36,15 @@ When using axe, you may prefer to use the standalone [NPM module](https://github
 
 ## Assistive technology
 
+### Screen readers
+
+If you don’t use a screen reader regularly, the way that you use it will be different to that of a habitual screen reader user, so be cautious in extrapolating your own experiences to those other users. But also bear in mind that not all regular screen reader users are experts or power users, just like not all users of web browsers are experts. 
+
+If you’re a Mac user, VoiceOver is built-in to OSX and is a decent, basic screen reader. This guide from WebAIM [explains the basics of using VoiceOver to test pages](https://webaim.org/articles/voiceover/). 
+
+If you’re a Windows user, NVDA is one of the more popular screen readers amongst blind users. This guide from WebAIM [explains the basics of using NVDA to test pages](https://webaim.org/articles/nvda/).
+
+On mobile, VoiceOver is built-in on iOS devices, and TalkBack is usually built-in on Android devices. 71% of respondents to the [WebAIM Screen Reader User Survey #8](https://webaim.org/projects/screenreadersurvey8/#mobilescreenreaders) use iOS VoiceOver on mobile. 
 
 ## Other accessibility tools
 
