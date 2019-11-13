@@ -39,6 +39,11 @@ When using axe, you may prefer to use the standalone [NPM module](https://github
 
 ## Other accessibility tools
 
+None of these tools on their own will catch every error. Even by combining all of them, it's still possible to produce an inaccessible webpage. Terrill Thompson [compared several of the most popular tools](http://terrillthompson.com/blog/730) which should give you some idea of the scale of the problem. The Government Digital Service also [conducted their own tool audit](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/). 
+
+You MUST NOT rely on these accessibility tools as your sole safeguard for accessibility testing.
+
+
 ### Accessibility testing tools in the browser
 
 - Squizlabs also have an [HMTML_Codesniffer bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) for quick tests. 
@@ -54,5 +59,18 @@ When using axe, you may prefer to use the standalone [NPM module](https://github
 
 
 ## Simulators
+
+- [Funkify](http://www.funkify.org/) is an extension for Chrome that helps you experience the web and interfaces through the eyes of users with different abilities and disabilities.
+
+
+
+
+
+
+
+
+
+
+
 
 
