@@ -87,16 +87,21 @@ Use [WAI-ARIA](https://www.w3.org/TR/wai-aria/) roles and properties in your cod
 
 The W3C [Using ARIA](https://www.w3.org/TR/using-aria/#NOTES) working draft explains why you shouldn't do those things. Familiarise yourself in particular with the First and Second Rules of ARIA! 
 
-
 #### Pa11y
 
-We use [Pa11y](http://pa11y.org/) to perform automated accessibility testing. Projects MUST have Pa11y integrated at the build stage, and builds MUST fail if errors are introduced. You MUST NOT allow accessibility regressions to enter your project's codebase. 
+We use [Pa11y](http://pa11y.org/) to perform automated accessibility testing. Pa11y is an automated accessibility testing tool that supports [HTML_Codesniffer](https://squizlabs.github.io/HTML_CodeSniffer/) by Squizlabs, and [axe](https://www.deque.com/axe/) by Deque. 
+
+Projects MUST have Pa11y integrated at the build stage, and builds MUST fail if errors are introduced. You MUST NOT allow accessibility regressions to enter your project's codebase. 
 
 Mature projects using Pa11y for the first time MAY use the `threshold` flag to specify a baseline number of errors to allow through, but MUST aim to reduce that threshold to zero at the earliest opportunity. [Watch this talk by Laura Carvajal of the Financial Times](https://www.youtube.com/watch?v=H4FzW9oFObs) to get a high level overview of the concept. 
 
 Read [Automated accessibility testing with Travis CI](http://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/) to see how to integrate Pa11y with your build process. If you're not using Travis, adjust the setup for the software that you are using. 
 
-*Caveat:* it's possible to build a site that passes Pa11y's testing with flying colours, but is still completely inaccessible for real users. You MUST NOT rely on Pa11y as your sole safeguard for accessibility testing. 
+You can use HTML_Codesniffer or axe as your test suite; we recommend using both. Neither engine is "better" than the other, they just use different testing strategies. When you fail builds based on Pa11y results, bear in mind that the two engines return different numbers of results, and that the results are formatted differently. 
+
+When using axe, you may prefer to use the standalone [NPM module](https://github.com/dequelabs/axe-core) directly, instead of wrapping it with Pa11y. 
+
+*Caveat:* it's possible to build a site that passes automated testing with flying colours, but is still completely inaccessible for real users. You MUST NOT rely on Pa11y (or axe) as your sole safeguard for accessibility testing. 
 
 
 #### Other accessibility testing tools
