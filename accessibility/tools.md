@@ -4,6 +4,7 @@
   - [Pa11y and axe](#pa11y-and-axe)
 - [Manual testing](#manual-testing)
 - [Assistive technology](#assistive-technology)
+  [Screen readers](#screen-readers)
 - [Other accessibility tools](#other-accessibility-tools)
   - [Accessibility testing tools in the browser](accessibility-testing-tools-in-the-browser)
   - [Tools for manually analysing web pages](tools-for-manually-analysing-web-pages)
@@ -33,8 +34,18 @@ When using axe, you may prefer to use the standalone [NPM module](https://github
 
 ## Manual testing
 
+Manual accessibility testing fills in the gaps that automated tools miss. 
+
+- Microsoft’s [free Accessibility Insights tool](https://accessibilityinsights.io/) is a browser extension for Chrome that will guide you through the process of assessing a webpage for basic accessibility compliance. 
+
 
 ## Assistive technology
+
+You're encouraged to test your pages with assistive technology (AT). Many operating systems include some AT as standard, including screenreaders, magnifiers, or input remapping. 
+
+Make sure you test your work at high magnification. You may also find navigating without an input device using [Voice Control](https://support.apple.com/en-au/HT210539) instructive. Ensure your interfaces work with keyboard navigation. 
+
+Unless you're familiar with using AT, your experience won't be comparable to that of a habitual AT user. Beware of making inferences about what's "easier" for AT users based on your own preferences. 
 
 ### Screen readers
 
