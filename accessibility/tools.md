@@ -4,7 +4,7 @@
   - [Pa11y and axe](#pa11y-and-axe)
 - [Manual testing](#manual-testing)
 - [Assistive technology](#assistive-technology)
-  [Screen readers](#screen-readers)
+  - [Screen readers](#screen-readers)
 - [Other accessibility tools](#other-accessibility-tools)
   - [Accessibility testing tools in the browser](accessibility-testing-tools-in-the-browser)
   - [Tools for manually analysing web pages](tools-for-manually-analysing-web-pages)
