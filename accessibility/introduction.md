@@ -6,7 +6,7 @@
 - [VPATs](#vpats)
 - [How we conform](#how-we-conform)
   - [Standards](#standards-we-aim-for)
-  - [Tools and techniques](#techniques)
+  - [Techniques](#techniques)
     - [Guidelines](#guidelines)
     - [Testing with real users](#testing-with-real-users)
     - [Resources](#resources)
