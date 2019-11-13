@@ -4,7 +4,9 @@
   - [Pa11y and axe](#pa11y-and-axe)
 - [Manual testing](#manual-testing)
 - [Assistive technology](#assistive-technology)
-- [Other accessibility testing tools](#other-accessibility-testing-tools)
+- [Other accessibility tools](#other-accessibility-tools)
+  - [Accessibility testing tools in the browser](accessibility-testing-tools-in-the-browser)
+  - [Tools for manually analysing web pages](tools-for-manually-analysing-web-pages)
 - [Simulators](#simulators)
 
 ## Automated testing
@@ -35,8 +37,22 @@ When using axe, you may prefer to use the standalone [NPM module](https://github
 ## Assistive technology
 
 
-## Other accessibility testing tools
+## Other accessibility tools
+
+### Accessibility testing tools in the browser
+
+- Squizlabs also have an [HMTML_Codesniffer bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) for quick tests. 
+- The Axe engine comes as a [browser extension](https://www.deque.com/axe/) and as an [NPM module](https://github.com/dequelabs/axe-core) that you can integrate with your build, like Pa11y. 
+- WebAim's [WAVE extension](https://wave.webaim.org/extension/) for Chrome and Firefox evaluates accessibility in place on the page. 
+- Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse/) audits accessibility as well as other metrics (e.g. performance) and is available as an extension, in the Chrome dev console, or as a Node CLI tool. 
+
+
+### Tools for manually analysing web pages
+
+- Check colour contrast compliance with WebAim's [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/).
+- The [Landmarks browser extension](http://matatk.agrip.org.uk/landmarks/) (for Firefox, Chrome and Opera) enables navigation of WAI-ARIA landmarks, via the keyboard or a pop-up menu.
 
 
 ## Simulators
+
 
