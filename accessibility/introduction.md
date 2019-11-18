@@ -10,6 +10,7 @@
     - [Guidelines](#guidelines)
     - [Testing with real users](#testing-with-real-users)
     - [Resources](#resources)
+    - [Tools](#tools)
 
 
 ## General principles

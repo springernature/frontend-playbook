@@ -6,8 +6,8 @@
 - [Assistive technology](#assistive-technology)
   - [Screen readers](#screen-readers)
 - [Other accessibility tools](#other-accessibility-tools)
-  - [Accessibility testing tools in the browser](accessibility-testing-tools-in-the-browser)
-  - [Tools for manually analysing web pages](tools-for-manually-analysing-web-pages)
+  - [Accessibility testing tools in the browser](#accessibility-testing-tools-in-the-browser)
+  - [Tools for manually analysing web pages](#tools-for-manually-analysing-web-pages)
 - [Simulators](#simulators)
 
 ## Automated testing
@@ -49,7 +49,7 @@ Unless you're familiar with using AT, your experience won't be comparable to tha
 
 ### Screen readers
 
-If you don’t use a screen reader regularly, the way that you use it will be different to that of a habitual screen reader user, so be cautious in extrapolating your own experiences to those other users. But also bear in mind that not all regular screen reader users are experts or power users, just like not all users of web browsers are experts. 
+If you don’t use a screen reader regularly, the way that you use it will be different to that of a habitual screen reader user, so be cautious in extrapolating your own experiences to those of other users. But also bear in mind that not all regular screen reader users are experts or power users, just like not all users of web browsers are experts. 
 
 If you’re a Mac user, VoiceOver is built-in to OSX and is a decent, basic screen reader. This guide from WebAIM [explains the basics of using VoiceOver to test pages](https://webaim.org/articles/voiceover/). 
 
