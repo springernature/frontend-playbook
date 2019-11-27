@@ -45,8 +45,6 @@ You're encouraged to test your pages with assistive technology (AT). Many operat
 
 Make sure you test your work at high magnification. You may also find navigating without an input device using [Voice Control](https://support.apple.com/en-au/HT210539) instructive. Ensure your interfaces work with keyboard navigation. 
 
-Unless you're familiar with using AT, your experience won't be comparable to that of a habitual AT user. Beware of making inferences about what's "easier" for AT users based on your own preferences. 
-
 ### Screen readers
 
 If you don’t use a screen reader regularly, the way that you use it will be different to that of a habitual screen reader user, so be cautious in extrapolating your own experiences to those of other users. But also bear in mind that not all regular screen reader users are experts or power users, just like not all users of web browsers are experts. 
