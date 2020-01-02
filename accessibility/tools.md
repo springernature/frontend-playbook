@@ -27,9 +27,7 @@ Mature projects using Pa11y for the first time MAY use the `threshold` flag to s
 
 Read [Automated accessibility testing with Travis CI](http://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/) to see how to integrate Pa11y with your build process. If you're not using Travis, adjust the setup for the software that you are using. 
 
-You can use HTML_Codesniffer or axe as your test suite; we recommend using both. Neither engine is "better" than the other, they just use different testing strategies. When you fail builds based on Pa11y results, bear in mind that the two engines return different numbers of results, and that the results are formatted differently. 
-
-When using axe, you may prefer to use the standalone [NPM module](https://github.com/dequelabs/axe-core) directly, instead of wrapping it with Pa11y. 
+You can use HTML_Codesniffer or axe as your test suite; we recommend using both. Neither engine is "better" than the other, they just use different testing strategies. When you fail builds based on Pa11y results, bear in mind that the two testing engines return different numbers of results, and their results are formatted differently. 
 
 
 ## Manual testing
