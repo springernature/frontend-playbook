@@ -180,7 +180,7 @@ We _don’t_ do this:
 
 
 
-### Logo image
+### Brand logos
 
 For an image `alt` attribute is sufficient and more meaningful.
 No need of title attribute, use an inline image with an alt attribute for the brand logo.
