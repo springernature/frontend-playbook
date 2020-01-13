@@ -140,7 +140,7 @@ Alt text should be used to convey the intent of an image. Avoid using generic st
 
 We do this:
 ```html
-<img src="/images/kinghenry.jpg" alt="King Henry VIII of England" />
+<img src="/images/kinghenry.jpg" alt="King Henry VIII of England">
 ```
 
 We don't do this:
