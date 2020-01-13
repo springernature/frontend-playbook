@@ -71,7 +71,10 @@ We _don’t_ do this:
 
 
 
-####  Anchor elements with the [tabindex=-1] attribute are not usable by keyboard users.
+####  Inappropriate negative tabindex
+
+Interactive elements with a negative tabindex attribute (`tabindex=-1`) are not usable by keyboard users. 
+
 
 
 ### Visual order is not followed with source code
