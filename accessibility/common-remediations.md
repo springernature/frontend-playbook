@@ -111,7 +111,7 @@ We don't do this:
 
 
 
-### No advance warning when opening new window 
+## No advance warning when opening new window 
 
 Opening new windows automatically when a link is activated can be disorienting for people who have difficulty perceiving visual content, and for some people with cognitive disabilities, if they are not warned in advance.
 
