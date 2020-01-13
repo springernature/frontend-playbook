@@ -188,7 +188,7 @@ Make sure any text in images of text is at least 14 points and has good contrast
 
 We do this:
 ```html
-<a href="https://www.w3.org/"> <img src="w3c.png" alt="W3C home"></a>
+<a href="https://www.w3.org/"> <img src="w3c.png" alt="W3C"></a>
 ```
 
 We don't do this:
