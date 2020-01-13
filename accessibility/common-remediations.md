@@ -84,7 +84,7 @@ As a rule, try tabbing through your pages every so often just to make sure you h
 
 We do this:
 ```html
-<button> I Should <button />
+<button> I Should </button>
 <button> Be focused<button />
 <button> Last <button />
 ```
