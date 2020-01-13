@@ -145,7 +145,7 @@ We do this:
 
 We don't do this:
 ```html
- <img src="/images/kinghenry.jpg" alt="Image of King" />
+ <img src="/images/kinghenry.jpg" alt="Image of King">
 ```
 
 
