@@ -4,10 +4,10 @@ This page describes some common accessibility issues, and gives examples and sug
 
 - [Keyboard navigation](#keyboard-navigation)
   - [Missing or inadequate focus styles?](#missing-or-inadequate-focus-styles)
+  - [Visual order is not followed with source code](#visual-order-is-not-followed-with-source-code)
   - [Unsemantic elements used for interactive components?](#unsemantic-elements-used-for-interactive-components)
   - [Links with no href](#links-with-no-href)
   - [Inappropriate negative tabindex](#inappropriate-negative-tabindex)
-  - [Visual order is not followed with source code](#visual-order-is-not-followed-with-source-code)
   - [No advance warning when opening new window](#no-advance-warning-when-opening-new-window)
 
 - [Images](#images)
@@ -49,6 +49,27 @@ a:focus {
 ```
 
 
+
+### Visual order is not followed with source code
+Just try to follow the visual order of elements while coding in HTML, don’t adjust elements to take positions with CSS, then this is confusing to keyboard users who expect to tab forwards and backwards in a linear sequence.
+
+As a rule, try tabbing through your pages every so often just to make sure you haven't accidentally messed up the tab order. 
+
+We do this:
+```html
+<button> I Should </button>
+<button> Be focused</button>
+<button> Last </button>
+```
+
+We don't do this:
+```html
+<button style=”float: right”> I Should </button>
+<button> Be focused</button>
+<button> Last </button>
+```
+
+
 ### Unsemantic elements used for interactive components
 
 Built-in interactive HTML elements like anchors, text fields, buttons, and select lists (among others) are handled automatically by the browser. Users can interact with them with the mouse, the keyboard, by voice, or any other kind of technology that they like. 
@@ -87,27 +108,6 @@ We _don’t_ do this:
 ###  Inappropriate negative tabindex
 
 Interactive elements with a negative tabindex attribute (`tabindex=-1`) are not usable by keyboard users. 
-
-
-
-### Visual order is not followed with source code
-Just try to follow the visual order of elements while coding in HTML, don’t adjust elements to take positions with CSS, then this is confusing to keyboard users who expect to tab forwards and backwards in a linear sequence.
-
-As a rule, try tabbing through your pages every so often just to make sure you haven't accidentally messed up the tab order. 
-
-We do this:
-```html
-<button> I Should </button>
-<button> Be focused</button>
-<button> Last </button>
-```
-
-We don't do this:
-```html
-<button style=”float: right”> I Should </button>
-<button> Be focused</button>
-<button> Last </button>
-```
 
 
 
