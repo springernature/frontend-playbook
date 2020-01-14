@@ -6,9 +6,9 @@ This page describes some common accessibility issues, and gives examples and sug
   - [Missing or inadequate focus styles?](#missing-or-inadequate-focus-styles)
   - [Visual order is not followed with source code](#visual-order-is-not-followed-with-source-code)
   - [Unsemantic elements used for interactive components?](#unsemantic-elements-used-for-interactive-components)
-  - [Links with no href](#links-with-no-href)
-  - [Inappropriate negative tabindex](#inappropriate-negative-tabindex)
-  - [No advance warning when opening new window](#no-advance-warning-when-opening-new-window)
+    - [Links with no href](#links-with-no-href)
+    - [Inappropriate negative tabindex](#inappropriate-negative-tabindex)
+- [No advance warning when opening new window](#no-advance-warning-when-opening-new-window)
 
 - [Images](#images)
    - [Images with no alt attribute](#images-with-no-alt-attribute)
