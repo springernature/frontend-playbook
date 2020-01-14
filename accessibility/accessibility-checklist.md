@@ -219,7 +219,7 @@ Make sure the currently-focused element has a focus ring, and make sure the focu
 
 This can be disorientating to screen reader users or users with cognitive disabilites.
 
-If you must do it, warn the user _before_ they click on the link that it'll open in a new window. You can use text like "opens in a new window" or a visual icon. If you choose to use an icon, make sure it's accessible to screen reader users.
+If you must do it, warn the user _before_ they click on the link that it'll open in a new window. You can use visible text like "opens in a new window" or a visual icon. If you choose to use an icon, make sure it's accessible to screen reader users.
 
 Resources:
 
