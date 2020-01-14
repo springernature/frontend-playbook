@@ -113,14 +113,22 @@ We don't do this:
 
 ## No advance warning when opening new window 
 
-Opening new windows automatically when a link is activated can be disorienting for people who have difficulty perceiving visual content, and for some people with cognitive disabilities, if they are not warned in advance.
+Avoid opening links in new windows
+This can be disorientating to screen reader users or users with cognitive disabilites.
+
+If you must do it, warn the user before they click on the link that it'll open in a new window. You can use text like "opens in a new window" or a visual icon. If you choose to use an icon, make sure it's accessible to screen reader users.
 
 We do this:
 ```html
 <a href="https://mysite.com" target="_blank" rel="noopener">
- My site
- <span class="visuallyhidden">, opens in a new window</span>
+   My site (opens in a new window)
 </a>
+
+ Or
+ 
+<a href="https://mysite.com" target="_blank" rel="noopener">
+   My site <img src="..." alt="opens in a new window"> 
+</a> 
 ```
 
 We don’t do this:
