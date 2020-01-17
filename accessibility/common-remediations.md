@@ -19,17 +19,17 @@ This page describes some common accessibility issues, and gives examples and sug
    - [Brand logos](#brand-logos)
 
 - [Page titles](#page-titles)
-   - [Title doesn’t describe the page](#title-doesn’t-describe-the-page)
+   - [Title doesn’t describe the page](#title-doesnt-describe-the-page)
    - [Same title used on multiple pages](#same-title-used-on-multiple-pages)
 
 - [Headings](#headings)
    - [Headings used for styling](#headings-used-for-styling)
    - [Implied headings](#implied-headings)
-   - [Multiple H1s per page](#multiple-H1s-per-page)
+   - [Multiple H1s per page](#multiple-h1s-per-page)
    - [Heading sequence is not logical](#heading-sequence-is-not-logical)
 
 - [HTML Attributes](#html-attributes)
-   - [Reliance on title attributes](#reliance-on-title-attributes)
+   - [Reliance on title attributes for accessibility](#reliance-on-title-attributes-for-accessibility)
    - [Redundant title attributes](#redundant-title-attributes)
 
 - [Semantics](#semantics)
@@ -252,7 +252,7 @@ Do not use semantic heading tags to control the appearance of text. Use CSS for 
 
 We do this:
 ```html
-<h2 class=”level-4-styling”>This content needs a level 2 heading but I want it to look like a level 4 heading</h2>
+<h2 class=”h4”>This content needs a level 2 heading but I want it to look like a level 4 heading</h2>
 ```
  
 We _don’t_ do this:
