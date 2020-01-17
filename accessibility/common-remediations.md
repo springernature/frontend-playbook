@@ -25,11 +25,11 @@ This page describes some common accessibility issues, and gives examples and sug
 - [Headings](#headings)
    - [Headings used for styling](#headings-used-for-styling)
    - [Implied headings](#implied-headings)
-   - [Multiple H1s per page](#multiple-H1s-per-page)
+   - [Multiple H1s per page](#multiple-h1s-per-page)
    - [Heading sequence is not logical](#heading-sequence-is-not-logical)
 
 - [HTML Attributes](#html-attributes)
-   - [Reliance on title attributes for accessibility](#Reliance on title attributes for accessibility)
+   - [Reliance on title attributes for accessibility](#reliance-on-title-attributes-for-accessibility)
    - [Redundant title attributes](#redundant-title-attributes)
 
 - [Semantics](#semantics)
