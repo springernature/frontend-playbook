@@ -252,7 +252,7 @@ Do not use semantic heading tags to control the appearance of text. Use CSS for 
 
 We do this:
 ```html
-<h2 class=”level-4-styling”>This content needs a level 2 heading but I want it to look like a level 4 heading</h2>
+<h2 class=”h4”>This content needs a level 2 heading but I want it to look like a level 4 heading</h2>
 ```
  
 We _don’t_ do this:
