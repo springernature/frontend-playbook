@@ -19,7 +19,7 @@ This page describes some common accessibility issues, and gives examples and sug
    - [Brand logos](#brand-logos)
 
 - [Page titles](#page-titles)
-   - [Title doesn’t describe the page](#title-doesn’t-describe-the-page)
+   - [Title doesn’t describe the page](#title-doesnt-describe-the-page)
    - [Same title used on multiple pages](#same-title-used-on-multiple-pages)
 
 - [Headings](#headings)
