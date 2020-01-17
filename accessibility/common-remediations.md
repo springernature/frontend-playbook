@@ -29,7 +29,7 @@ This page describes some common accessibility issues, and gives examples and sug
    - [Heading sequence is not logical](#heading-sequence-is-not-logical)
 
 - [HTML Attributes](#html-attributes)
-   - [Reliance on title attributes](#reliance-on-title-attributes)
+   - [Reliance on title attributes for accessibility](#Reliance on title attributes for accessibility)
    - [Redundant title attributes](#redundant-title-attributes)
 
 - [Semantics](#semantics)
