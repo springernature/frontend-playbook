@@ -335,7 +335,7 @@ We _don't_ do this:
 
 ### Reliance on title attributes for accessibility
 
-Avoid the use of the `title` attribute for any purpose beyond naming a frame or iframe. The HTML 5 specification [explicitly discourages its use] (https://www.w3.org/TR/html53/dom.html#the-title-attribute). 
+Avoid the use of the `title` attribute for any purpose beyond naming a frame or iframe. The HTML 5 specification [explicitly discourages its use](https://www.w3.org/TR/html53/dom.html#the-title-attribute). 
 
 The `title` attribute can’t be perceived by touchscreen device users, as there’s no `hover` event available to them. Some screen readers do not expose information provided in a `title` attribute to the user. 
 
