@@ -12,9 +12,11 @@
 
 ## Automated testing
 
-Automated accessibility testing can be used to detect the most common accessibility problems. This is only the first step in the process; you MUST NOT rely on automated testing as your sole method of verification! 
+Automated accessibility testing can be used to detect the most common accessibility problems. This is only the first step in the process; you MUST NOT rely on automated testing as your sole method of verification! None of these tools on their own will catch every error. Even by combining all of them, it's still possible to produce an inaccessible webpage. 
 
-The GDS Accessibility team ran an experiment in 2017 to [audit the performance of a large number of available automated accessibility testing tools](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/). They found that the highest number of errors that one tool was able to detect was 40%. The majority of the tools fell into the 20%-30% range. 
+Terrill Thompson [compared several of the most popular tools](http://terrillthompson.com/blog/730) which should give you some idea of the scale of the problem. The GDS Accessibility team ran an experiment in 2017 to [audit the performance of a large number of available automated accessibility testing tools](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/). They found that the highest number of errors that one tool was able to detect was 40%. The majority of the tools fell into the 20%-30% range. 
+
+You MUST NOT rely on these accessibility tools as your sole safeguard for accessibility testing.
 
 
 ### Pa11y and axe
@@ -54,11 +56,6 @@ If you’re a Windows user, NVDA is one of the more popular screen readers among
 On mobile, VoiceOver is built-in on iOS devices, and TalkBack is usually built-in on Android devices. 71% of respondents to the [WebAIM Screen Reader User Survey #8](https://webaim.org/projects/screenreadersurvey8/#mobilescreenreaders) use iOS VoiceOver on mobile. 
 
 ## Other accessibility tools
-
-None of these tools on their own will catch every error. Even by combining all of them, it's still possible to produce an inaccessible webpage. Terrill Thompson [compared several of the most popular tools](http://terrillthompson.com/blog/730) which should give you some idea of the scale of the problem. The Government Digital Service also [conducted their own tool audit](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/). 
-
-You MUST NOT rely on these accessibility tools as your sole safeguard for accessibility testing.
-
 
 ### Accessibility testing tools in the browser
 
