@@ -6,13 +6,11 @@
 - [VPATs](#vpats)
 - [How we conform](#how-we-conform)
   - [Standards](#standards-we-aim-for)
-  - [Tools and techniques](#tools-and-techniques)
+  - [Techniques](#techniques)
     - [Guidelines](#guidelines)
-    - [Pa11y](#pa11y)
-    - [Other accessibility testing tools](#other-accessibility-testing-tools)
-    - [Assistive technology](#assistive-technology)
     - [Testing with real users](#testing-with-real-users)
     - [Resources](#resources)
+    - [Tools](#tools)
 
 
 ## General principles
@@ -70,7 +68,7 @@ As of January 18th 2018, WCAG 2.0 AA (the previous candidate recommendation) was
 Our expectation is that Section 508 will be updated to reference WCAG 2.1 in due course. Comply with WCAG 2.1 now to avoid retrofitting repairs later!  
 
 
-### Tools and techniques
+### Techniques
 
 #### Guidelines
 
@@ -86,46 +84,6 @@ Use [WAI-ARIA](https://www.w3.org/TR/wai-aria/) roles and properties in your cod
 * Use ARIA roles, properties, or design patterns without testing them with assistive technologies.
 
 The W3C [Using ARIA](https://www.w3.org/TR/using-aria/#NOTES) working draft explains why you shouldn't do those things. Familiarise yourself in particular with the First and Second Rules of ARIA! 
-
-#### Pa11y
-
-We use [Pa11y](http://pa11y.org/) to perform automated accessibility testing. Pa11y is an automated accessibility testing tool that supports [HTML_Codesniffer](https://squizlabs.github.io/HTML_CodeSniffer/) by Squizlabs, and [axe](https://www.deque.com/axe/) by Deque. 
-
-Projects MUST have Pa11y integrated at the build stage, and builds MUST fail if errors are introduced. You MUST NOT allow accessibility regressions to enter your project's codebase. 
-
-Mature projects using Pa11y for the first time MAY use the `threshold` flag to specify a baseline number of errors to allow through, but MUST aim to reduce that threshold to zero at the earliest opportunity. [Watch this talk by Laura Carvajal of the Financial Times](https://www.youtube.com/watch?v=H4FzW9oFObs) to get a high level overview of the concept. 
-
-Read [Automated accessibility testing with Travis CI](http://cruft.io/posts/automated-accessibility-testing-node-travis-ci-pa11y/) to see how to integrate Pa11y with your build process. If you're not using Travis, adjust the setup for the software that you are using. 
-
-You can use HTML_Codesniffer or axe as your test suite; we recommend using both. Neither engine is "better" than the other, they just use different testing strategies. When you fail builds based on Pa11y results, bear in mind that the two engines return different numbers of results, and that the results are formatted differently. 
-
-When using axe, you may prefer to use the standalone [NPM module](https://github.com/dequelabs/axe-core) directly, instead of wrapping it with Pa11y. 
-
-*Caveat:* it's possible to build a site that passes automated testing with flying colours, but is still completely inaccessible for real users. You MUST NOT rely on Pa11y (or axe) as your sole safeguard for accessibility testing. 
-
-
-#### Other accessibility testing tools
-
-- Squizlabs also have an [HMTML_Codesniffer bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) for quick tests. 
-- The Axe engine comes as a [browser extension](https://www.deque.com/axe/) and as an [NPM module](https://github.com/dequelabs/axe-core) that you can integrate with your build, like Pa11y. 
-- Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse/) audits accessibility as well as other metrics (e.g. performance) and is available as an extension, in the Chrome dev console, or as a Node CLI tool. 
-- WebAim's [WAVE extension](https://wave.webaim.org/extension/) for Chrome and Firefox evaluates accessibility in place on the page. 
-- Check colour contrast compliance with WebAim's [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/).
-- The [Landmarks browser extension](http://matatk.agrip.org.uk/landmarks/) (for Firefox, Chrome and Opera) enables navigation of WAI-ARIA landmarks, via the keyboard or a pop-up menu.
-- [Funkify](http://www.funkify.org/) is an extension for Chrome that helps you experience the web and interfaces through the eyes of users with different abilities and disabilities.
-
-*Caveat:* None of these tools on their own will catch every error. Even by combining all of them, it's still possible to produce an inaccessible webpage. Terrill Thompson [compared several of the most popular tools](http://terrillthompson.com/blog/730) which should give you some idea of the scale of the problem. The Government Digital Service also [conducted their own tool audit](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/). 
-
-You MUST NOT rely on accessibility tools as your sole safeguard for accessibility testing.
-
-
-#### Assistive technology
-
-You're encouraged to test your pages with assistive technology (AT). Many operating systems include some AT as standard, including screenreaders, magnifiers, or input remapping. 
-
-In OSX you can enable [VoiceOver](https://help.apple.com/voiceover/info/guide/10.12/#/) in System Preferences > Accessibility. You may also find navigating without an input device using [Dictation](https://support.apple.com/en-us/HT202584) instructive. Ensure your interfaces work with keyboard navigation. 
-
-*Caveat:* unless you're familiar with using AT, your experience won't be comparable to that of a habitual AT user. Beware of making inferences about what's "easier" for AT users based on your own preferences. 
 
 
 #### Testing with real users
@@ -146,3 +104,6 @@ The Government Digital Service frequently publishes excellent resources. Some hi
 * [We're making accessibility clearer and easier](https://gds.blog.gov.uk/2017/10/23/were-making-accessibility-clearer-and-easier/)
 * [Making your service accessible: an introduction](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction)
 
+#### Tools 
+
+A breakdown of the tools we recommend for testing accessibility, including assistive technology, can be found on the Playbook [Accessibility tools](tools.md) page. 
