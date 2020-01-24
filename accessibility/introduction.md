@@ -7,7 +7,8 @@
 - [How we conform](#how-we-conform)
   - [Standards](#standards-we-aim-for)
   - [Techniques](#techniques)
-    - [Guidelines](#guidelines)
+    - [Web Content Accessibility Guidelines](#web-content-accessibility-guidelines)
+    - [WAI-ARIA Authoring Practices](#wai-aria-authoring-practices)    
     - [Testing with real users](#testing-with-real-users)
     - [Resources](#resources)
     - [Tools](#tools)
@@ -70,16 +71,18 @@ Our expectation is that Section 508 will be updated to reference WCAG 2.1 in due
 
 ### Techniques
 
-#### Guidelines
+#### Web Content Accessibility Guidelines
 
-You are expected to be aware of the Web Content Accessibility Guidelines and to adhere to their recommendations. You are also expected to understand the foundational four principles of accessibility (Perceivable, Operable, Understandable, Robust) and to be able to apply them in your work. Be alert to the possibility of regressions that cannot be detected by software.
+You're expected to be aware of the [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG21/) and to adhere to their recommendations. You're also expected to understand the foundational four principles of accessibility (Perceivable, Operable, Understandable, Robust) and to be able to apply them in your work. Be alert to the possibility of regressions that can't be detected by software.
 
 The companion document [Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/) (Editor's Draft) explains what each of the success criterion in WCAG 2.1 actually means. You might also find the [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/) (Editor's Draft) useful when building features. 
 
 W3C WAI have published a [quick reference document for WCAG](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0). It describes the WCAG success criteria and shows techniques and failures for each. We've also created [a simple accessibility checklist](accessibility-checklist.md), to help you become familiar with the guidelines/standards, and to aid you when manually assessing pages. 
 
-Use [WAI-ARIA](https://www.w3.org/TR/wai-aria/) roles and properties in your code where they help to improve accessibility of your interfaces but you SHOULD NOT: 
-* Use ARIA techniques as a way of compensating for the abuse of semantics (e.g. do not apply `role="link"` to a `div` element, instead of using `a`, etc.);
+#### WAI-ARIA Authoring Practices
+
+Use [WAI-ARIA](https://www.w3.org/TR/wai-aria/) roles and properties and [WAI-ARIA Authoring Practices](http://w3.org/TR/wai-aria-practices/) where they help to improve accessibility of your interfaces but you SHOULD NOT: 
+* Use ARIA techniques to compensate for the abuse of semantics (e.g. do not apply `role="link"` to a `div` element, instead of using `a`, etc.);
 * Use ARIA roles, properties, or design patterns without understanding what they do;
 * Use ARIA roles, properties, or design patterns without testing them with assistive technologies.
 
