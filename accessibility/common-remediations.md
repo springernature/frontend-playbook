@@ -83,11 +83,17 @@ CSS positioning has been used so that the visual order of interactive elements d
 
 #### Why's it a problem?
 
-Keyboard users (including screen reader users) expect to tab forwards and backwards in a linear sequence. Switching the visual order of elements can confuse these users or cause them to activate the wrong control. 
+Keyboard users (including screen reader users) expect to tab forwards and backwards through interactive elements in a linear sequence. For left-to-right languages, this means the elements should be presented in left-to-right order. 
+
+Switching the visual order of elements with CSS but not changing the order in the source code can lead to focus being placed on unexpected elements, which can confuse users or cause them to activate the wrong control. 
+
+For example, using a `float:right;` on an interactive element can make it visually appear to be the last control in a group, but when a keyboard user tabs into the component, it may be the first control they interact with. 
 
 #### How do I fix it? 
 
-Make sure the visual order of components matches the order in the HTML source. Tab through your pages every so often just to make sure you haven't accidentally messed up the tab order.
+* Take care when using CSS positioning, flexbox, and grid layouts
+* Make sure the visual order of components matches the order in the HTML source
+* Tab through your document to make sure the focus order is expected
 
 We do this:
 ```html
@@ -342,7 +348,7 @@ We don't do this:
 
 #### What's the problem?
 
-The `<title>` attribute fails to describe the purpose of the page. 
+The `<title>` element fails to describe the purpose of the page. You may have failed to add a title, used title text that is too generic to be useful, or used an excessively long title that obscures the page purpose. 
 
 #### Who's affected by the problem?
 
@@ -355,10 +361,11 @@ When your page titles are inadequate:
 * Screen reader users are unable to know what the point of a page is without scanning its entire contents
 * All users are unable to easily find the correct tab if they temporarily change contexts
 * All users who bookmark the page with their browser are given a poor default name for the bookmark
+* Search engines may only display the first 50-60 characters of the title attribute, so information could be lost in [SERPs](https://en.wikipedia.org/wiki/Search_engine_results_page)
 
 #### How do I fix it? 
 
-All page titles must clearly summarise the purpose of the page.
+All page titles must clearly summarise the purpose of the page. Front-load the most important information about the page so that it appears first. 
 
 We do this:
 ```html
@@ -369,6 +376,8 @@ We do this:
 We _don’t_ do this:
 ```html
 <title>Website.com</title>
+<title>Website</title>
+<title>Website.com sells vital products in very important markets to our many happy customers | Contact Us</title>
 ```
 
 ### Same title used on multiple pages
@@ -421,7 +430,7 @@ Semantic heading tags (i.e. `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`) are 
 
 Semantic tags have meaning. When you use a semantic tag for something other than its meaningful purpose, your document makes less sense. This is a severe issue for screen reader users, who need proper semantic structure in order to understand how your document is structured. 
 
-Search engines also use heading levels to get a sense of the information that your page contains. If your document misuses semantic tags for visual effect, search engines are less able to parse the information in your document and your pages could be penalised in SERPs, or be less discoverable to search engine users. 
+Search engines also use heading levels to get a sense of the information that your page contains. If your document misuses semantic tags for visual effect, search engines are less able to parse the information in your document and your pages could be penalised in [SERPs](https://en.wikipedia.org/wiki/Search_engine_results_page), or be less discoverable to search engine users. 
 
 The purpose of CSS is to separate the concerns of visual styling from the base structure of semantic HTML. Mixing the two together violates the principle of [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns#HTML,_CSS,_JavaScript). 
 
@@ -455,7 +464,7 @@ CSS has been used to visually style text so that it looks like a heading, but th
 
 Semantic tags have meaning. When semantic tags are absent from your document, it makes less sense. This is a severe issue for screen reader users, who need proper semantic structure in order to understand how your document is structured. 
 
-Search engines also use heading levels to get a sense of the information that your page contains. If your document omits semantic tags, search engines are less able to parse the information in your document and your pages could be penalised in SERPs, or be less discoverable to search engine users. 
+Search engines also use heading levels to get a sense of the information that your page contains. If your document omits semantic tags, search engines are less able to parse the information in your document and your pages could be penalised in [SERPs](https://en.wikipedia.org/wiki/Search_engine_results_page), or be less discoverable to search engine users. 
 
 #### How do I fix it? 
 
@@ -531,7 +540,7 @@ The sequence of headings doesn't accurately describe the structure of the page. 
 
 Semantic tags have meaning. When your semantic tags are arranged incorrectly, your document makes less sense. This is a severe issue for screen reader users, who need proper semantic structure in order to understand how your document is structured. 
 
-Search engines also use heading levels to get a sense of the information that your page contains. If your document omits semantic tags, or uses them incorrectly, search engines are less able to parse the information in your document and your pages could be penalised in SERPs, or be less discoverable to search engine users. 
+Search engines also use heading levels to get a sense of the information that your page contains. If your document omits semantic tags, or uses them incorrectly, search engines are less able to parse the information in your document and your pages could be penalised in [SERPs](https://en.wikipedia.org/wiki/Search_engine_results_page), or be less discoverable to search engine users. 
 
 #### How do I fix it? 
 
@@ -649,7 +658,7 @@ We _don’t_ do this:
 
 #### What's the problem?
 
-Elements with no semantics (`<div>`s and `<span>`s) have been used instead of elements with the correct semantics. The elements may be styled with CSS to look like semantic elements, and/or have JavaScript functionality attached that makes them perform in a similar way to a native element, but the correct native element has not been used. 
+HTML elements with no semantics (`<div>`s and `<span>`s) have been used instead of elements with the correct semantics. The elements may be styled with CSS to look like semantic elements, and/or have JavaScript functionality attached that makes them perform in a similar way to a native element, but the correct native element has not been used. 
 
 #### Who's affected by the problem?
 
@@ -657,7 +666,7 @@ Elements with no semantics (`<div>`s and `<span>`s) have been used instead of el
 
 #### Why's it a problem?
 
-Elements with no semantics (divs and spans) are not understood or handled automatically by user agents. Unless you fully understand the entire specification for a native element (such as a button), and implement it precisely to that specification, your attempts to replicate its functionality will fail. 
+HTML elements with no semantics are not understood or handled automatically by user agents. Unless you fully understand the entire specification for a native element (such as a `<button>`), and implement it precisely to that specification, your attempts to replicate its functionality robustly for all users will fail. 
 
 Screen reader users, voice input users, keyboard users, switch device users, users of other kinds of Assistive Technologies, search engines, various types of automated testing software, among others, are likely to be unable to use your interface if you use unsemantic elements. 
 
