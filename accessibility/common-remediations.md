@@ -4,7 +4,7 @@ This page describes some common accessibility issues, and gives examples and sug
 
 - [Keyboard navigation](#keyboard-navigation)
   - [Missing or inadequate focus styles](#missing-or-inadequate-focus-styles)
-  - [Visual order is not followed with source code](#visual-order-is-not-followed-with-source-code)
+  - [Visual order doesn't match source order](#visual-order-doesnt-match-source-order)
 - [Links and buttons](#links-and-buttons)
    - [Links with no href](#links-with-no-href)
    - [No advance warning when opening new window](#no-advance-warning-when-opening-new-window)
@@ -70,7 +70,7 @@ a:focus {
 }
 ```
 
-### Visual order is not followed with source code
+### Visual order doesn't match source order
 
 #### What's the problem?
 
