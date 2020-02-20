@@ -151,7 +151,7 @@ Having a window open unexpectedly when you click on a link can be disorientating
 
 #### How do I fix it? 
 
-Always avoid opening links in new windows wherever possible. 
+Avoid opening links in new windows wherever possible. 
 
 If you really have to do it, warn the user before they click on the link that it'll open in a new window. You can use text like "opens in a new window" or a visual icon. If you choose to use an icon, make sure it's accessible to screen reader users. 
 
