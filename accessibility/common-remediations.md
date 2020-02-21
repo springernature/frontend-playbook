@@ -161,7 +161,7 @@ Avoid opening links in new windows wherever possible.
 
 If you really have to do it, warn the user before they click on the link that it'll open in a new window. You can use text like "opens in a new window" or a visual icon. If you choose to use an icon, make sure it's accessible to screen reader users. 
 
-Note: you MUST use `rel="noopener"` on outbound links that open in a new window. See the [secure markup guide](../security/secure-markup.md/#add-relnoopener-to-outbound-links-in-new-windows) for an explanation. 
+You MUST use `rel="noopener"` on outbound links that open in a new window. See the [secure markup guide](../security/secure-markup.md/#add-relnoopener-to-outbound-links-in-new-windows) for an explanation. 
 
 We do this:
 ```html
@@ -610,7 +610,7 @@ We _don’t_ do this:
 <span title="Important instructions that the user needs to be able to read to understand the UI"></span>
 ```
 
-Note: There is one exception. A `title=""` is required on iframes to describe to the user what the purpose of the iframe is. Always use a title attribute on iframes. 
+There is one exception. A `title=""` is required on iframes to describe to the user what the purpose of the iframe is. Always use a title attribute on iframes. 
 
 ### Redundant title attributes
 
