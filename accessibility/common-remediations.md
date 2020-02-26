@@ -713,7 +713,7 @@ Programmatic focus is absent. You may have written an SPA that fails to handle f
 
 Most SPA frameworks fail to handle this automatically, and you need to implement it yourself. When a user activates a control to trigger a route change, the view visually updates. When you don't implement focus management, screen reader users are not made aware that the context has changed, and are left guessing whether or not activating the control did anything. Keyboard users may be able to see the visual changes, but they're left with their keyboard focus still on the trigger control. The control is no longer visible on the screen and may require additional, unnecessary work from the keyboard user to get reoriented. 
 
-Implementing ARIA patterns that require focus management (e.g. modal dialogs), but neglecting to implement that focus management, can also confuse users or prevent them from being able to use your document.  
+Implementing ARIA patterns that require focus management (e.g. modal dialogs), but neglecting to implement that focus management can also confuse users or prevent them from being able to use your document.  
 
 #### How do I fix it?
 
