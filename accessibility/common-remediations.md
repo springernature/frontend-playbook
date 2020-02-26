@@ -29,6 +29,7 @@ This page describes some common accessibility issues, and gives examples and sug
    - [No built-in semantics](#no-built-in-semantics)
 - [Focus management](#focus-management)
    - [No focus management](#no-focus-management)
+   - [Inappropriate use of `autofocus`](#inappropriate-use-of-autofocus)
 
 ## Keyboard navigation
 
