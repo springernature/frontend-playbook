@@ -6,6 +6,7 @@ This document outlines the way we write markup and why. See our [house style doc
 	- [Validation](#validation)
 	- [Do not omit optional end tags](#do-not-omit-optional-end-tags)
 	- [Implicitly close void elements](#implicitly-close-void-elements)
+	- [Form submit controls](#form-submit-controls)
 - [Semantics](#semantics)
 	- [Follow the HTML 4 outline model for heading levels](#follow-the-html-4-outline-model-for-heading-levels)
 - [Templates](#templates)
@@ -75,6 +76,68 @@ We *don't* do this:
 ```html
 <meta charset="UTF-8" />
 ```
+### Form submit controls
+
+In modern browsers, `button type="submit"` provides a superset of functionality when compared to `input type=submit`.
+
+`button` elements are much easier to style than `input` elements. You can add
+inner HTML content (think `<em>`, `<strong>`, or even `<img>`), and use
+`::after` and `::before` pseudo-elements to achieve complex rendering while
+`input` only accepts a textual value attribute.
+
+**Note**: Submitting is `button` default behaviour, but we want to "code for
+humans". Therefore do not ommit `type="submit"`.
+
+Make sure to specify `name` and `value` attributes to maximize browsers
+compatibility ([See IE11-Only Submit Bug on Stack
+Overflow](https://stackoverflow.com/a/22703881/9461391)).
+
+We do this:
+
+```html
+<form>
+	<button type="submit" name="myButton" value="foo">Continue</button>
+</form>
+```
+
+We *don't* do this:
+
+```html
+<form>
+	<input type="submit" value="Continue">
+</form>
+```
+
+and
+
+We *don't* do this:
+
+```html
+<form>
+	<button>Continue</button>
+</form>
+```
+
+**Caution**: There is a shortcoming for Internet Explorer when using the `button`
+element. Indeed it submits the text within the `button` element as its value in
+the form data rather than the value of its `value` attribute.
+This becomes problematic when using multiple submit buttons in a single form with each a different value and purpose. 
+
+Here are some suggestions to work around these:
+
+- Redesign the interface so multiple submit buttons are not required.
+  - (Preferred) Use a multiple pages form as recommended by GOV.UK in [Structuring forms,
+    Start with one thing per
+    page](https://www.gov.uk/service-manual/design/form-structure#start-with-one-thing-per-page).
+  - Replace them with radio buttons and a single submit button (requires an
+    extra click from the user though);
+- Use a separate form for each instance, with a hidden `input` providing
+  the data the submit `button` would normally carry. This can be a good
+  solution when you have a simple “Delete this row” problem.
+- Last resort solution: Hide the value inside the name of the control. A loop
+  over the names from the form data is needed in the business logic then. Please
+  avoid as much as you can as this adds complexity to code and may degrade
+  performance.
 
 ## Semantics
 
