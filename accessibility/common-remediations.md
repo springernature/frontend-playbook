@@ -33,6 +33,7 @@ This page describes some common accessibility issues, and gives examples and sug
 - [Focus management](#focus-management)
    - [No focus management](#no-focus-management)
    - [Inappropriate use of `autofocus`](#inappropriate-use-of-autofocus)
+   - [Focus fails to return to triggering element](#focus-fails-to-return-to-triggering-element)
 
 ## Keyboard navigation
 
@@ -831,3 +832,31 @@ The autofocus behaviour can cause dynamic keyboards to display on some touch dev
 #### How do I fix it?
 
 The `autofocus` attribute is rarely helpful. If the user can perform multiple tasks on the page, or if the automatically-focused form field comes after other page content, then the `autofocus` attribute should not be used. 
+
+### Focus fails to return to triggering element
+
+#### What's the problem?
+
+Upon some interaction, focus has been programmatically placed inside a component. When that component is closed, the user's focus is not returned to where it was before the new behaviour was triggered. 
+
+#### Who's affected by the problem?
+
+* Keyboard users
+* Screen reader users
+
+#### Why's it a problem?
+
+Users expect consistency in an interface. Sometimes you need to programmatically set a user's focus in a component so they can carry out a task. If you don't return their focus afterwards to what they were doing before, it can be very confusing for users who navigate with the keyboard. 
+
+If focus is placed on an unexpected or unrelated element, then the user might activate the wrong thing or struggle to work out where they are on the page. 
+
+If focus is kept on a component that has been moved off-screen or hidden, a keyboard user will have a difficult time working out how they can get back to interacting with the visible components. 
+
+If focus is lost entirely, then the browser will automatically return it to the top of the page. Keyboard and screen reader users will have a frustrating time getting back to where they were before you interrupted them. 
+
+#### How do I fix it? 
+
+Whenever you use programmatic focus to orient a user in some component (e.g. a menu or a modal dialog), make sure that their focus is returned to the invoking element when that component is closed. For example, if the component was invoked by activating a button, when the component is closed, focus must be returned to that button. 
+
+If there was no invoking element (e.g. your component automatically appears when some JavaScript loads), return the user's focus to whatever they were interacting with before you manipulated their focus. 
+
