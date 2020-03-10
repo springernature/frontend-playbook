@@ -434,7 +434,7 @@ The language specified in the HTML `lang` attribute doesn't match the language u
 
 #### Why's it a problem?
 
-Words are pronounced differently in different languages. Screen reader software is designed to respect these pronounciation differences when it encounters web pages that specify their main language. 
+Words are pronounced differently in different languages. Screen reader software is designed to respect these pronunciation differences when it encounters web pages that specify their main language. 
 
 If the language specified doesn't match the actual language used, the screen reader software may mispronounce the text of the page. 
 
@@ -473,7 +473,7 @@ An element on the page contains text in a different language to the rest of the 
 
 #### Why's it a problem?
 
-Words are pronounced differently in different languages. Screen reader software is designed to respect these pronounciation differences when it encounters components on web pages that specify a change in language. 
+Words are pronounced differently in different languages. Screen reader software is designed to respect these pronunciation differences when it encounters components on web pages that specify a change in language. 
 
 If a piece of text in a document is presented in a different language without programmatically indicating the change, the screen reader software may mispronounce the text. 
 
