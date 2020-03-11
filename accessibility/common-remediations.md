@@ -419,10 +419,9 @@ We do this:
 ```
 
 We _don't_ do this:
-```html
-<span class="nature-logo"></span>
 ```
-```css
+<span class="nature-logo"></span>
+
 .nature-logo { background-image: url("nature.png"); }
 ```
 
