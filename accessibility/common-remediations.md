@@ -14,6 +14,10 @@ This page describes some common accessibility issues, and gives examples and sug
    - [Meaningless images with meaningful alt attributes](#meaningless-images-with-meaningful-alt-attributes)
    - [Redundant alt attributes](#redundant-alt-attributes)
    - [Brand logos](#brand-logos)
+   - [Decorative SVG inside a control is focusable](#decorative-svg-inside-a-control-is-focusable)
+   - [CSS background images have no accessible name](#css-background-images-have-no-accessible-name)
+   - [Icon has no visible label](#icon-has-no-visible-label)
+   - [Icon font in or as accessible name](#icon-font-in-or-as-accessible-name)
 - [Page titles](#page-titles)
    - [Title doesn’t describe the page](#title-doesnt-describe-the-page)
    - [Same title used on multiple pages](#same-title-used-on-multiple-pages)
@@ -350,6 +354,133 @@ We don't do this:
 <img src="w3c.png" alt="logo image">
 <img src="nature-logo.png" alt="Click here to go to the Nature homepage">
 <img src="bmc-logo.png" alt="BMC">
+```
+
+### Decorative SVG inside a control is focusable
+
+#### What's the problem?
+
+A decorative SVG (e.g. an icon) inside a control (e.g. a link or a button) is present, but tab focusing has not been explicitly disabled. 
+
+The SVG may or may not have `aria-hidden="true"` applied to hide it from Assistive Technology. 
+
+#### Who's affected by the problem?
+
+* Screen reader users with IE
+* Keyboard users with IE
+
+#### Why's it a problem?
+
+A bug in IE incorrectly gives SVGs inside a control the `focusable="true"` property by default. This can cause unexpected issues for sighted keyboard users, including loss of visible focus, and additional unnecessary tab stops. 
+
+Applying `aria-hidden="true"` to an SVG removes it from the accessibility tree. Screen reader users on IE can still tab into it, but don't get any useful information about the element. 
+
+#### How do I fix it? 
+
+We do this:
+```html
+<a href="/">Link text <svg focusable="false">...</svg></a>
+
+<button>Button text <svg focusable="false" aria-hidden="true">...</svg>
+
+```
+
+We _don't_ do this:
+```html
+<a href="/">Link text <svg>...</svg></a>
+
+<button>Button text <svg aria-hidden="true">...</svg>
+```
+
+### CSS background images have no accessible name
+
+#### What's the problem?
+
+A CSS background image has been used to express information. This may a logo, an icon, or some other form of image that has meaning in the UI. 
+
+#### Who's affected by the problem?
+
+* Screen reader users
+* Users experiencing technical problems (e.g. network connectivity issues, CDN failures, etc.)
+
+#### Why's it a problem?
+
+A CSS background image can't have alt text. Screen reader users are unaware of what the image represents, and in many cases are unaware it exists at all. 
+
+If the stylesheets fail for any reason (usually because of technical problems), users don't get a graceful fallback for the missing image. 
+
+#### How do I fix it? 
+
+Use an HTML image with appropriate alt text for images that are meaningful. 
+
+We do this:
+```html
+<img src="nature.png" alt="Nature">
+```
+
+We _don't_ do this:
+```
+<span class="nature-logo"></span>
+
+.nature-logo { background-image: url("nature.png"); }
+```
+
+### Icon has no visible label
+
+#### What's the problem?
+
+An icon is used to express information, but there's no visible text label that describes what it does. If the icon is part of a control, it may be associated with visually-hidden text or have an `aria-label` property. 
+
+#### Who's affected by the problem?
+
+* Voice input users
+* Visual display users who are unfamiliar with the meaning of the icon
+
+#### Why's it a problem?
+
+The purpose of an icon isn't always easy to guess. Some users who can see the icon may be confused about what it's trying to tell them.
+
+If the icon has visually-hidden text or an `aria-label`, but it's not obvious what that label might be, a voice input user may not be able to guess the right thing to say to activate the control. 
+
+#### How do I fix it? 
+
+Unless the icon has a very obvious purpose and accessible name that almost all people would understand (e.g. an 'x' icon in a top corner to close a component), use a visible text label. This can be instead of or in addition to the icon. 
+
+#### Where do I find out more? 
+
+* [Icon Usability - Nielsen Norman Group](https://www.nngroup.com/articles/icon-usability/)
+
+### Icon font in or as accessible name
+
+#### What's the problem?
+
+An icon font has been used to create an icon that expresses information. The icon may be the only accessible name, or part of a longer accessible name. 
+
+#### Who's affected by the problem?
+
+* Screen reader users
+* Voice input users
+
+#### Why's it a problem?
+
+Icon fonts use CSS `content` to display an icon. 
+
+Used alone, they have no usable accessible text and can't be understood by screen reader users. Some screen reader software may not announce CSS content, so some screen reader users may not be aware the icon exists at all. When used in a control, voice input users will be unable to guess the right thing to say to activate the control. 
+
+When used alongside accessible text, the icon's font character may be read out by some screen reader software, which may confuse those users. 
+
+#### How do I fix it? 
+
+Hide supplementary font icons from assistive technology. Do not use a font icon as the only accessible text for a control. 
+
+We do this:
+```html
+<button>Shopping cart <span class="ico-cart" aria-hidden="true"></span></button>
+```
+
+We _don't_ do this:
+```html
+<button><span class="ico-cart"></span></button>
 ```
 
 ## Page titles
