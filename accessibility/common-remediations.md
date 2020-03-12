@@ -809,7 +809,7 @@ A section or context lacks a heading. It may be a section of a page, or a standa
 
 Headings help users understand the structure of a page. When new sections or contexts are introduced without them, it can be difficult for users to understand how the content relates to the rest of the page. 
 
-If a screen reader user is taken to a new context (e.g. a modal dialog) without a heading, it can be difficult for them to understand what's just happened without tabbing through the rest of the elements to work it out.
+If a screen reader user is taken to a new context (e.g. a modal dialog) without a heading, it can be difficult for them to understand what's just happened without tabbing through the rest of the document to work it out.
 
 #### How do I fix it? 
 
