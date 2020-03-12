@@ -798,7 +798,7 @@ We _don't_ do this:
 
 #### What's the problem?
 
-A section or context lacks a heading. It may be a section on a page, or a standalone context like a modal dialog. 
+A section or context lacks a heading. It may be a section of a page, or a standalone context like a modal dialog. 
 
 #### Who's affected by the problem?
 
