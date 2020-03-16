@@ -813,7 +813,7 @@ If a screen reader user is taken to a new context (e.g. a modal dialog) without 
 
 #### How do I fix it? 
 
-When you change context or open a new section, use a heading to group the content. 
+When you change context or begin a new section, use a heading to announce the content.
 
 It may help to think about the heading structure of a web page as its table of contents. A ToC contains a reference to everything on the page - your heading structure should do the same. 
 
