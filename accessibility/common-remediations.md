@@ -5,7 +5,7 @@ This page describes some common accessibility issues, and gives examples and sug
 - [Keyboard navigation](#keyboard-navigation)
   - [Missing or inadequate focus styles](#missing-or-inadequate-focus-styles)
   - [Visual order doesn't match source order](#visual-order-doesnt-match-source-order)
-- [Links and buttons](#links-and-buttons)
+- [Controls](#controls)
    - [Links with no href](#links-with-no-href)
    - [No advance warning when opening new window](#no-advance-warning-when-opening-new-window)
 - [Images](#images)
@@ -123,7 +123,7 @@ We don't do this:
 <button> Last </button>
 ```
 
-## Links and buttons
+## Controls
 
 ### Links with no href
 
