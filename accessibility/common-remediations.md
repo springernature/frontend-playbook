@@ -8,6 +8,7 @@ This page describes some common accessibility issues, and gives examples and sug
 - [Controls](#controls)
    - [Links with no href](#links-with-no-href)
    - [No advance warning when opening new window](#no-advance-warning-when-opening-new-window)
+   - [No accessible text on controls](#no-accessible-text-on-controls)
 - [Images](#images)
    - [Images with no alt attribute](#images-with-no-alt-attribute)
    - [Meaningful images with meaningless alt attributes](#meaningful-images-with-meaningless-alt-attributes)
