@@ -29,6 +29,7 @@ This page describes some common accessibility issues, and gives examples and sug
    - [Implied headings](#implied-headings)
    - [Multiple H1s per page](#multiple-h1s-per-page)
    - [Heading sequence is not logical](#heading-sequence-is-not-logical)
+   - [Missing heading](#missing-heading)
 - [HTML Attributes](#html-attributes)
    - [Reliance on title attributes for accessibility](#reliance-on-title-attributes-for-accessibility)
    - [Redundant title attributes](#redundant-title-attributes)
@@ -792,6 +793,29 @@ We _don't_ do this:
       <p>News Headline subtopic</p>
   <h3>Headline Topic 2</h3>
 ```
+
+### Missing heading
+
+#### What's the problem?
+
+A section or context lacks a heading. It may be a section of a page, or a standalone context like a modal dialog. 
+
+#### Who's affected by the problem?
+
+* Screen reader users
+* Users with cognitive disabilites or challenges
+
+#### Why's it a problem?
+
+Headings help users understand the structure of a page. When new sections or contexts are introduced without them, it can be difficult for users to understand how the content relates to the rest of the page. 
+
+If a screen reader user is taken to a new context (e.g. a modal dialog) without a heading, it can be difficult for them to understand what's just happened without tabbing through the rest of the document to work it out.
+
+#### How do I fix it? 
+
+When you change context or begin a new section, use a heading to announce the content.
+
+It may help to think about the heading structure of a web page as its table of contents. A ToC contains a reference to everything on the page - your heading structure should do the same. 
 
 ## HTML Attributes
 
