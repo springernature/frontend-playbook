@@ -994,7 +994,7 @@ We _don’t_ do this:
 
 #### What's the problem?
 
-Programmatic focus is absent. You may have written an SPA that fails to handle focus management automatically, or you may have neglected to implement programmatic focus on a component that changes the user's context (e.g. a modal dialog).
+Programmatic focus is absent. You may have written an SPA that fails to handle focus management automatically, or you may have neglected to implement programmatic focus on a component that changes the user's context (e.g. a modal dialog, a menu, or a custom page scrolling system).
 
 #### Who's affected by the problem?
 
@@ -1007,11 +1007,13 @@ Programmatic focus is absent. You may have written an SPA that fails to handle f
 
 Most SPA frameworks fail to handle this automatically, and you need to implement it yourself. When a user activates a control to trigger a route change, the view visually updates. When you don't implement focus management, screen reader users are not made aware that the context has changed, and are left guessing whether or not activating the control did anything. Keyboard users may be able to see the visual changes, but they're left with their keyboard focus still on the trigger control. The control is no longer visible on the screen and may require additional, unnecessary work from the keyboard user to get reoriented. 
 
-Implementing ARIA patterns that require focus management (e.g. modal dialogs), but neglecting to implement that focus management can also confuse users or prevent them from being able to use your document.  
+Implementing ARIA patterns that require focus management (e.g. modal dialogs or menus, among others), but neglecting to implement that focus management can also confuse users or prevent them from being able to use your document.  
+
+Scroll hijacking ("scrolljacking") or custom scrolling components can allow a user to click on a navigation item, but fail to set their focus to the correct location. Screen reader users and and keyboard users are left to tab through the entire document to get to the section that they want to use, instead of having their focus placed there automatically. 
 
 #### How do I fix it?
 
-Watch this video by Google Developer Advocate Rob Dodson on [Managing Focus (7:23)](https://www.youtube.com/watch?v=srLRSQg6Jgg&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=23&t=0s) for a demonstration of the problem and an explanation of how to fix it. 
+Watch this video by Google Developer Advocate Rob Dodson on [Managing Focus (7:23)](https://www.youtube.com/watch?v=srLRSQg6Jgg&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=23&t=0s) for a demonstration of the problem and an explanation of how to fix it in a broad range of contexts. 
 
 If you're building a component that has an ARIA pattern (e.g. a modal dialog), follow the ARIA specification for the pattern you're using. Watch this video by Rob Dodson on [Accessible Modal Dialogs (12:45)](https://www.youtube.com/watch?v=JS68faEUduk&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=19) to see an example of how to apply the ARIA specification to a modal dialog. 
 
