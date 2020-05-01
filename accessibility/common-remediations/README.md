@@ -1,6 +1,6 @@
 # Common remediations
 
-This part of the Playbook describes some common accessibility issues, and gives examples and suggestions for repairs. 
+This part of the Playbook describes some common accessibility issues that _can't_ be detected with automated tools, and gives examples and suggestions for repairs. 
 
 * [Keyboard navigation](keyboard-navigation.md)
 * [Controls](controls.md)
