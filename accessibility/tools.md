@@ -73,14 +73,14 @@ On mobile, VoiceOver is built-in on iOS devices, and TalkBack is usually built-i
 
 ## Simulators
 
-Disability simulators are apps, extensions, or experiments that imitate the experience of being disabled for able-bodied people. They're designed to increase empathy and awareness of the issues facing disabled people. 
+Disability simulators are apps, extensions, or experiments that imitate the experience of being disabled for non-disabled people. They're designed to increase empathy and awareness of the issues facing disabled people. 
 
 It's very important that you understand the limitations of disability simulators. No browser extension could ever give you an appreciation of what it's like to navigate the world as a disabled person. No blindfold game can teach you what it's like to be systematically discriminated against in virtually every aspect of your daily life. You can just switch the simulator off - a 
 disabled person doesn't have that option. 
 
-If used carelessly, disability simulators can also have the opposite effect of what's intended. Instead of giving able-bodied people empathy with those who experience disability in a particular context, they can elicit sympathy or pity reactions. Pity reactions lead to responses like "that's terrible", and not "how can we help?". As web professionals who care about the experiences of all of our users, we need to make sure our response to any disability simulators is "how can we help?". The [June 2017 issue of Braille Monitor](https://www.nfb.org/images/nfb/publications/bm/bm17/bm1706/bm170602.htm) discusses the research on disability simulation, its limitations, and how it can be improved. 
+If used carelessly, disability simulators can also have the opposite effect of what's intended. Instead of giving non-disabled people empathy with those who experience disability in a particular context, they can elicit sympathy or pity reactions. Pity reactions lead to responses like "that's terrible", and not "how can we help?". As web professionals who care about the experiences of all of our users, we need to make sure our response to any disability simulators is "how can we help?". The [June 2017 issue of Braille Monitor](https://www.nfb.org/images/nfb/publications/bm/bm17/bm1706/bm170602.htm) discusses the research on disability simulation, its limitations, and how it can be improved. 
 
-With this caveat in mind, here are some disability simulators that _may_ help you or your team understand _some_ of the ways in which people with some disabilities may perceive your web pages. 
+With this caveat in mind, here are some disability simulators that _may_ help you or your team understand _some_ of the ways in which people with some disabilities _may_ perceive your web pages. 
 
 - [Funkify](http://www.funkify.org/) is an extension for Chrome that helps you experience the web and interfaces through the eyes of users with different abilities and disabilities.
 - [Empathy prompts](https://empathyprompts.net/) are flashcards with things to consider when making things for others to use.
