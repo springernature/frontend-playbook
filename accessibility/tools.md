@@ -73,7 +73,7 @@ On mobile, VoiceOver is built-in on iOS devices, and TalkBack is usually built-i
 
 ## Simulators
 
-Disability simulators are apps, extensions, or experiments that imitate the experience of being disabled for able-bodied people. They're designed to increase empathy and awareness of the issues facing disabled people. 
+Disability simulators are apps, extensions, or experiments that imitate the experience of being disabled for non-disabled people. They're designed to increase empathy and awareness of the issues facing disabled people. 
 
 It's very important that you understand the limitations of disability simulators. No browser extension could ever give you an appreciation of what it's like to navigate the world as a disabled person. No blindfold game can teach you what it's like to be systematically discriminated against in virtually every aspect of your daily life. You can just switch the simulator off - a 
 disabled person doesn't have that option. 
