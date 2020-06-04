@@ -2,6 +2,8 @@
 
 This repo contains The Frontend Playbook. It details how we run software development and how we make web and mobile products together. It's filled with things we've learned based on our own experience and study of others' experiences.
 
+The main motivator for this playbook is not to document a list of guidelines, but rather to create an opportunity to collaborate on them, and to gain consensus.
+
 This is a living document that we contribute to in a _public_ GitHub repo. Reasons for doing this in the open include (but are not limited to):
 
 1. Interacting with and learning from others. Receiving contributions from people who don't work here can help us, providing learning opportunities that we would not receive otherwise - for example, see [this contribution](https://github.com/springernature/frontend-playbook/pull/48#issuecomment-236139605) from @rowanmanning.
