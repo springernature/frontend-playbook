@@ -46,6 +46,7 @@ The [critical rendering path](https://developers.google.com/web/fundamentals/per
 
 The following tools can be used to run performance tests on one or more pages:
 
+* [Lighthouse](https://developers.google.com/web/tools/lighthouse/): A Google tool that audits pages for performance, accessibility, and others. Available as part of [Chrome's devtools](https://developers.google.com/web/tools/lighthouse/#devtools).
 * [WebPagetest](https://www.webpagetest.org/): The standard tool for synthetic web performance testing.
 * Private WebPage test instance: coming soon.
 * [Speedcurve](https://speedcurve.com/): A tool that automates running tests on WebPagetest and provides graphs, trends, and alerts.

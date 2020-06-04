@@ -45,7 +45,7 @@ Requesters merge their own changes when they're ready. Keep your fingers off tha
 * **Performance**
 
   * [Premature](http://wiki.c2.com/?PrematureOptimization) and/or micro optimisations.
-  * Non-performant code. Suggest testing with [SpeedCurve](https://speedcurve.com), [WebPageTest](https://www.webpagetest.org/) and/or other tools.
+  * Non-performant code. Suggest testing with [Lighthouse](https://developers.google.com/web/tools/lighthouse/), [SpeedCurve](https://speedcurve.com), [WebPageTest](https://www.webpagetest.org/) and/or other tools.
 
 * **Scope**
 
