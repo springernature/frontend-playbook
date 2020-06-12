@@ -21,17 +21,11 @@ This document outlines the way we write JavaScript. It's a living style guide â€
     - [Further reading](#further-reading)
   - [Indentation](#indentation)
   - [White space](#white-space)
-  - [Semi-colons](#semi-colons)
   - [Variables](#variables)
   - [Functions](#functions)
     - [Pure functions](#pure-functions)
-    - [Arguments](#arguments)
-  - [Classes](#classes)
   - [Operators](#operators)
-  - [Blocks](#blocks)
-    - [Conditionals](#conditionals)
-    - [Loops](#loops)
-    - [Error handling](#error-handling)
+  - [Loops](#loops)
   - [Strict mode](#strict-mode)
 - [Client-side JavaScript architecture](#client-side-javascript-architecture)
   - [Module architecture](#module-architecture)
@@ -506,7 +500,7 @@ foo == bar;
 foo != bar;
 ```
 
-#### Loops
+### Loops
 
 In `for...in` loops, there must be a check with `hasOwnProperty`.
 
