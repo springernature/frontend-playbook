@@ -14,5 +14,6 @@ Development of products at Springer Nature is informed by two primary constraint
 * [Open source support](open-source-support.md)
 * [Progressive enhancement](progressive-enhancement.md)
 * [Structured data](structured-data.md)
+* [Javascript dependent styling](javascript-styling.md)
 
 [Main table of contents](../README.md#table-of-contents)

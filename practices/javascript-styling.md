@@ -1,0 +1,35 @@
+# Javascript dependent styling
+
+A class name of `.js` on the document root element (normally `html`) will be used to bootstrap JS-only visual styles. We do this to prevent the visual flicker and browser reflow that may occur when JavaScript applies CSS styles to a component after the page has loaded.
+
+## Scripts
+
+The `.js` class must be added via a micro (but blocking) script, placed as far up in the `<head>` of the document as possible.
+
+```html
+<script>
+    // JS Detection Script
+    (function(e){var t=e.documentElement,n=e.implementation;t.className='js';})(document)
+</script>
+```
+
+## Styles
+
+All UI elements MUST be usable and visually-acceptable when Javascript is not present. Enhancements can be made when Javascript is present by nesting those styles underneath the `.js` class.
+
+```scss
+// Define a base style
+.c-component {
+	color: black;
+	padding-bottom: 1rem;
+
+}
+
+// Add and override declarations when JS is present
+.js .c-component {
+	height: 200px;
+	padding-bottom: 0; // overridden now that JS is present
+	background-color: #e4e4e4;
+	margin: 10px;
+}
+```
