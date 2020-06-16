@@ -1,6 +1,6 @@
 # Javascript dependent styling
 
-A class name of `.js` on the document root element (normally `html`) will be used to bootstrap JS-only visual styles. We do this to prevent the visual flicker and browser reflow that may occur when JavaScript applies CSS styles to a component after the page has loaded.
+A class name of `.js` on the document root element (normally `html`) is used to target JS-dependent visual styles via CSS.
 
 ## Scripts
 
