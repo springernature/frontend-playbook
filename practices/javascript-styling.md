@@ -4,7 +4,9 @@ A class name of `.js` on the document root element (normally `html`) is used to 
 
 ## Scripts
 
-The `.js` class must be added via a micro (but blocking) script, placed as far up in the `<head>` of the document as possible.
+The `.js` class must be added via a micro—but blocking—script, placed as far up in the `<head>` of the document as possible.
+
+The blocking nature of the script prevents any visual flickering or browser reflows, unlike other techniques where JavaScript may cause styles to be applied after the page has rendered.
 
 ```html
 <script>
