@@ -149,13 +149,13 @@ table {
 }
 ```
 
-**Non-js fallbacks/JS only styles**. We do this:
+**Javascript-only style enhancements**. We do this:
 ```scss
 .c-class {
 	display: block;
 
     .js & {
-        display: none;
+        display: flex;
     }
 }
 ```
