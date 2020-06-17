@@ -19,7 +19,7 @@ The blocking nature of the script prevents any visual flickering or browser refl
 
 All UI elements MUST be usable and visually-acceptable when Javascript is not present. Enhancements can be made when Javascript is present by nesting those styles underneath the `.js` class.
 
-Following the principles of [Progressive Enhancement](./progressive-enhancement.md), consider buiding and releasing your core unenhanced version first. Then build and deliver the javascript enhanced version in a subsequent iteration.
+Following the principles of [Progressive Enhancement](./progressive-enhancement.md), consider building and releasing your core unenhanced version first. Then build and deliver the Javascript enhanced version in a subsequent iteration.
 
 ```scss
 // Define core styles
