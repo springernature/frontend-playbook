@@ -149,17 +149,17 @@ table {
 }
 ```
 
-**Non-js fallbacks/JS only styles**. We do this:
+**Javascript-only style enhancements**. We do this:
 ```scss
 .c-class {
+	display: block;
+
     .js & {
-        display: none;
-    }
-    .no-js & {
-        display: block;
+        display: flex;
     }
 }
 ```
+> _Read more about [how to add the `.js` class](../practices/javascript-styling.md)_
 
 **Inline html tags within other elements**. We do this:
 ```scss
