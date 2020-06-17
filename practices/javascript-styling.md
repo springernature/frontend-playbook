@@ -24,16 +24,15 @@ Following the principles of [Progressive Enhancement](./progressive-enhancement.
 ```scss
 // Define core styles
 .c-component {
-	color: black;
-	padding-bottom: 1rem;
-
+    color: black;
+    padding-bottom: 1rem;
 }
 
 // Add and override declarations when JS is present
 .js .c-component {
-	height: 200px;
-	padding-bottom: 0; // overridden now that JS is present
-	background-color: #e4e4e4;
-	margin: 10px;
+    height: 200px;
+    padding-bottom: 0; // overridden now that JS is present
+    background-color: #e4e4e4;
+    margin: 10px;
 }
 ```
