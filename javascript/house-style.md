@@ -692,20 +692,43 @@ export {init};
 
 #### Events for unrelated modules
 
-Use a small Publish Subscribe implementation, like [PubSubJS](https://github.com/mroderick/PubSubJS):
+Use the [`createEvent` module](https://github.com/springernature/frontend-toolkits/tree/master/toolkits/global/packages/global-javascript#createevent) from the Springer Nature Elements toolkit. This module functions as a namespaced wrapper around Javascript `customEvent`.
+
+One limitation of using the existing infrastructure that Javscript provides — the ability to create an `Event` and consume using `addEventListener` — instead of a [PubSub](https://addyosmani.com/blog/understanding-the-publishsubscribe-pattern-for-greater-javascript-scalability/) style implementation, is that you have to hang the event handler off a `DOM Element` or the `window`.
+
+In the case of two unrelated modules, this would mean that if `moduleA` publishes an event, then `moduleB` would have no knowledge of the DOM element that the event is bound to. This is solved by having your application manage event listeners, and keeping your modules fully isolated with no knowledge of other modules. A simple example:
 
 ```js
-// analytics.js
+// Module A
+const event = createEvent('event', 'component', {
+	detail: {
+        hazcheeseburger: true
+    }
+});
+moduleAelement.dispatchEvent(event);
+```
 
-import {PubSub} from 'pub-sub';
-
-function beaconToAnalytics(event) {}
-
-function init() {
-  PubSub.subscribe('event:navigation', beaconToAnalytics)
+```js
+// Module B
+function doSomething(detail) {
+	if (detail.hazcheeseburger) {
+		// Do something
+	}
 }
+```
 
-export {init};
+```js
+// Application
+import {moduleA} from '@springernature/moduleA';
+import {moduleB} from '@springernature/moduleB';
+
+const moduleAelement = document.querySelector('[data-component-module-a]');
+
+moduleA.init(moduleAelement);
+
+moduleAelement.addEventListener('component:event', function (event) {
+	moduleB.doSomething(event.detail);
+}, false);
 ```
 
 ### DOM binding
