@@ -700,6 +700,7 @@ In the case of two unrelated modules, this would mean that if `moduleA` publishe
 
 ```js
 // Module A
+// Relevant excerpt only
 const event = createEvent('event', 'component', {
 	detail: {
         hazcheeseburger: true
@@ -710,6 +711,7 @@ moduleAelement.dispatchEvent(event);
 
 ```js
 // Module B
+// Relevant excerpt only
 function doSomething(detail) {
 	if (detail.hazcheeseburger) {
 		// Do something
@@ -723,8 +725,10 @@ import {moduleA} from '@springernature/moduleA';
 import {moduleB} from '@springernature/moduleB';
 
 const moduleAelement = document.querySelector('[data-component-module-a]');
+const moduleBelement = document.querySelector('[data-component-module-b]');
 
 moduleA.init(moduleAelement);
+moduleB.init(moduleBelement);
 
 moduleAelement.addEventListener('component:event', function (event) {
 	moduleB.doSomething(event.detail);
