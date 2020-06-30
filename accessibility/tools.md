@@ -68,6 +68,7 @@ On mobile, VoiceOver is built-in on iOS devices, and TalkBack is usually built-i
 
 - Check colour contrast compliance with WebAim's [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/).
 - The [Landmarks browser extension](http://matatk.agrip.org.uk/landmarks/) (for Firefox, Chrome and Opera) enables navigation of WAI-ARIA landmarks, via the keyboard or a pop-up menu.
+- The [ARC Toolkit](https://www.paciellogroup.com/toolkit/) by the Paciello Group is a useful extension for Chrome that (among other things) can detect semantic/structural issues, and problematic use of ARIA. 
 
 
 ## Simulators
