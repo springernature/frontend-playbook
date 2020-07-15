@@ -199,7 +199,7 @@ Here is an example:
 
 ```js
 ajax('https://example.com', response => {
-  console.log(response)
+    console.log(response)
 });
 ```
 
@@ -207,11 +207,11 @@ If you need to execute another `ajax` request based on the result of the origina
 
 ```js
 ajax('https://example.com', response => {
-  console.log(response); // { status: 200, url: 'https://...' }
+    console.log(response); // { status: 200, url: 'https://...' }
 
-  ajax(response.url, () => {
-    console.log('Two ajax requests have completed')
-  });
+    ajax(response.url, () => {
+        console.log('Two ajax requests have completed')
+    });
 });
 ```
 
@@ -219,9 +219,9 @@ To avoid the journey to '[callback hell](http://callbackhell.com/)', you should 
 
 ```js
 ajax('https://example.com').then(response => response.url).then(url => {
-  ajax(url, () => {
-    console.log('Two ajax requests have completed')
-  });
+    ajax(url, () => {
+        console.log('Two ajax requests have completed')
+    });
 })
 ```
 
@@ -277,15 +277,15 @@ This code snippet highlights two things:
 
 ```js
 async function five() {
-  return Promise.resolve(5);
+    return Promise.resolve(5);
 }
 
 async function six() {
-  return 1 + await five();
+    return 1 + await five();
 }
 
 six().then(result => {
-  console.log(result); // 6
+    console.log(result); // 6
 });
 ```
 
@@ -452,7 +452,7 @@ const loadconfig = function(filePaths, callback) {
 }
 
 function loadconfig(filePaths, callback) { 
-	// ...
+    // ...
 }
 ```
 
@@ -464,7 +464,7 @@ We do this:
 
 ```js
 function greet(greeting, subject) {
-  return `${greeting}, ${subject}`;
+    return `${greeting}, ${subject}`;
 }
 
 greet('Hello', 'friend')
@@ -476,7 +476,7 @@ We _don't_ do this:
 const greeting = 'Hello';
 
 function greet(subject) {
-  return `${greeting}, ${subject}`;
+    return `${greeting}, ${subject}`;
 }
 
 greet('friend')
@@ -579,8 +579,8 @@ import {otherModule} from './some-other-module-you-need';
 function addEventListeners() {}
 
 function init() {
-   otherModule();
-   addEventListeners();
+    otherModule();
+    addEventListeners();
 }
 
 export {init};
@@ -596,9 +596,9 @@ import {module2} from './my-module-2.js';
 import {module3} from './my-module-3.js';
 
 document.addEventListener('DOMContentLoaded', function(event) {
-  module1.init();
-  module2.init();
-  module3.init();
+    module1.init();
+    module2.init();
+    module3.init();
 });
 ```
 
@@ -617,7 +617,7 @@ If you need to pass in configuration to a module, pass in an object:
 import {module1} from './my-module-1.js';
 
 module1.init({
-  url: 'https://...'
+    url: 'https://...'
 });
 ```
 
@@ -625,7 +625,7 @@ Your module code should handle configuration appropriately, and be resilient tow
 
 ```js
 function module({url = 'https://...', animate = false}) {
-  console.log(url, animate)
+    console.log(url, animate)
 }
 
 export {module};
@@ -662,11 +662,11 @@ Expose an API:
 // easings.js
 
 function isValid(easing) {
-  // Logic here
+    // Logic here
 }
 
 function get(easing) {
-  // Logic here
+    // Logic here
 }
 
 export { get, isValid };
@@ -680,11 +680,11 @@ Then consume the API:
 import {easings} from './easings';
 
 function init({element, easing}) {
-  if (easings.isValid(easing)) {
-    element.animate(easings.get(easing))
-  } else {
-    element.animate()
-  }
+    if (easings.isValid(easing)) {
+        element.animate(easings.get(easing))
+    } else {
+        element.animate()
+    }
 }
 
 export {init};
@@ -702,7 +702,7 @@ In the case of two unrelated modules, this would mean that if `moduleA` publishe
 // Module A
 // Relevant excerpt only
 const event = createEvent('event', 'component', {
-	detail: {
+    detail: {
         hazcheeseburger: true
     }
 });
@@ -713,9 +713,9 @@ moduleAelement.dispatchEvent(event);
 // Module B
 // Relevant excerpt only
 function doSomething(detail) {
-	if (detail.hazcheeseburger) {
-		// Do something
-	}
+    if (detail.hazcheeseburger) {
+        // Do something
+    }
 }
 ```
 
@@ -731,7 +731,7 @@ moduleA.init(moduleAelement);
 moduleB.init(moduleBelement);
 
 moduleAelement.addEventListener('component:event', function (event) {
-	moduleB.doSomething(event.detail);
+    moduleB.doSomething(event.detail);
 }, false);
 ```
 
