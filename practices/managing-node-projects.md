@@ -38,7 +38,7 @@ It's important to specify which versions of node your application expects. There
 
 ### Installing packages predictably
 
-To reduce "but it works on my machine" issues, use a method that makes installs more predictable, and minimises changes to the `package-lock.json` (if your project is comitting that file).
+To reduce "but it works on my machine" issues, use a method that makes installs more predictable, and minimises changes to the `package-lock.json` (if your project is committing that file - this will be the case if your software is a node _application_, but not if it's a _library_).
 
 #### Prefer `npm ci` to `npm install` where possible
 
