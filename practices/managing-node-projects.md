@@ -48,9 +48,9 @@ If your project has a `package-lock.json` file (see [Should I check in `package-
 
 #### nvm users run `nvm use` before `npm install`
 
-If `npm ci` is unavailable (because you're using an older version of npm), or otherwise unsuitable (e.g. you have no `package-lock.json`, or you're installing new/updating existing dependencies), use `npm install`. 
-
 If you're an nvm user, you should always ensure you're using the correct version of node (and implicitly `npm`) before doing an `npm install`.
+
+If `npm ci` is unavailable (because you're using an older version of npm), or otherwise unsuitable (e.g. you have no `package-lock.json`, or you're installing new/updating existing dependencies), use `npm install`. 
 
 Using `npm install` doesn't guarantee reproducible builds, as neither the `package.json` nor `package-lock.json` is a source of authority for what's installed. 
 
