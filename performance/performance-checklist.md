@@ -22,7 +22,7 @@ Another important factor that impacts user engagement is [the size of the resour
 * [Minify all text resources](https://learning.oreilly.com/library/view/high-performance-web/9780596529307/ch12.html) over 1500 bytes.
 * Ensure that all text resources over 1500 bytes use Brotli, Zopfli or [GZip compression](https://learning.oreilly.com/library/view/high-performance-web/9780596529307/ch06.html).
 * [Choose the right format for images, and optimise images and SVGs](images.md).
-* Set an [appropriate expiry date or a maximum age](https://learning.oreilly.com/library/view/high-performance-web/9780596529307/ch05.html) for all static resources.
+* Set an [appropriate expiry date or a maximum age](browser-caching.md#css-js-and-images) for all static resources.
 * For resources that change rarely, consider [fingerprinting them](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching) and setting a expiry date [far in the future](https://developers.google.com/web/tools/lighthouse/audits/cache-policy).
 
 ## Render blocking resources
