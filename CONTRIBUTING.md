@@ -27,7 +27,7 @@ Include a summary of your pull request when you open it. We prefer to use commit
 If you work at Springer Nature, please remember to keep discussion inside the issues and pull requests, avoiding Slack, hallway conversations etc. Remember that this repo is public, and the discussions we have can be of benefit to people apart from us.
 
 ### Merging pull requests
-With short-lived feature branches, a key rule is that [code should be quickly merged and deleted](https://trunkbaseddevelopment.com/short-lived-feature-branches/).
+With short-lived feature branches, a key rule is that [branches should be quickly merged and deleted](https://trunkbaseddevelopment.com/short-lived-feature-branches/).
 
 With a playbook PR, __this rule does not apply__. The aim is to get many people reading or contributing-to the pull request (and the likelihood of a conflict upon merge is very very low). 
 
