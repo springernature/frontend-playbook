@@ -100,6 +100,8 @@ You can arrange your own user testing, but it's better to engage a third party l
 
 Udacity have published an [excellent free course on Web Accessibility](https://www.udacity.com/course/web-accessibility--ud891) with Google engineers Alice Boxhall and Rob Dodson. 
 
+The Financial Times have produced an [accessibility tip sheet](https://ft-interactive.github.io/accessibility/index.html).
+
 The Government Digital Service frequently publishes excellent resources. Some highlights are:
 
 * [We're making accessibility clearer and easier](https://gds.blog.gov.uk/2017/10/23/were-making-accessibility-clearer-and-easier/)
