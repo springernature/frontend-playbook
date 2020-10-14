@@ -26,6 +26,13 @@ Include a summary of your pull request when you open it. We prefer to use commit
 
 If you work at Springer Nature, please remember to keep discussion inside the issues and pull requests, avoiding Slack, hallway conversations etc. Remember that this repo is public, and the discussions we have can be of benefit to people apart from us.
 
+### Merging pull requests
+With short-lived feature branches, a key rule is that [branches should be quickly merged and deleted](https://trunkbaseddevelopment.com/short-lived-feature-branches/).
+
+With a playbook PR, __this rule does not apply__. The aim is to get many people reading or contributing-to the pull request (and the likelihood of a conflict upon merge is very very low). 
+
+Because of this, it is fine (in many cases highly _desired_) to propose something, then wait a week or so before reminding people that there is a PR open. Let people know you'll be merging in a week or so, assuming there's no continuing discussion. That way, more people will have a chance to contribute.
+
 ### Publicising your changes
 
 A bot notifies the #frontend Slack room when work is merged, because changes to the playbook are relevant to all Frontend developers at Springer Nature.
