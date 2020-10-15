@@ -78,7 +78,7 @@ which run `nvm` and switch node versions for you when `cd`-ing into a directory.
 Yes. There are two main reasons:
 
 1. Predictable builds, as discussed above.
-1. Dependency analysis tools (such as `npm audit`, GitHub Security Alerts and `snyk`) can spot insecure dependencies anywhere in the dependency tree by analysing the `package-lock.json` file. Furthermore these tools can force patch version updates of insecure dependencies way down the tree, rather than having to wait for all the package maintainers down that branch of the tree to release new packages with updated dependencies. This would not be possible without a `package-lock.json` and is a huge benefit.
+1. Dependency analysis tools (such as `npm audit`, GitHub Security Alerts and `snyk`) can spot insecure dependencies anywhere in the dependency tree by analysing the `package-lock.json` file. These tools can force patch version updates of insecure dependencies in the tree, without waiting for third-party package maintainers to release new packages with updated dependencies. This wouldn't be possible without a `package-lock.json` and is a huge benefit.
 
 The downside is it requires all developers to use `nvm` and `npm ci` to install dependencies, otherwise there will be constant conflicts in the `package-lock.json` file.
 
