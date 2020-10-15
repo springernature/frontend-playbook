@@ -26,7 +26,7 @@ The following guide describes how we use node and manage package dependencies in
 
 There are two methods for installing node dependencies: `npm install` and `npm ci`.
 
-`npm install` is the most common method, but it does not guarantee reproducible/consistent builds because npm can install varying versions of dependencies, according to [semantic versioning](https://docs.npmjs.com/files/package.json#dependencies) and the version of node used when installing. When running `npm install`, it will create a `package-lock.json` file describing the complete dependency graph and specifying exact versions of all the dependencies installed.
+`npm install` is the most common method, but it doesn't guarantee reproducible/consistent builds. npm can install varying versions of dependencies, according to [semantic versioning](https://docs.npmjs.com/files/package.json#dependencies) and the version of node used when installing. `npm install` will create a `package-lock.json` file describing the complete dependency graph and specifying exact versions of all the dependencies installed.
 
 Note that if a `package-lock.json` is present **`npm install` will not use it** as the source of authority for what to install.
 
