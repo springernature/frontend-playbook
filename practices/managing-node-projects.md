@@ -32,7 +32,7 @@ Note that if a `package-lock.json` is present **`npm install` will not use it** 
 
 This is the method we recommend for installing dependencies when authoring node _libraries_.
 
-`npm ci` however installs the complete dependency graph exactly as specified in the `package-lock.json` file, and so guarantees reproducible/consistent builds. This helps reduce "but it works on my machine" issues and is suitable for CI/CD environments (as the name implies).
+`npm ci` installs the complete dependency graph exactly as specified in the `package-lock.json` file, and so guarantees reproducible/consistent builds. This helps reduce "but it works on my machine" issues and is suitable for CI/CD environments (as the name implies).
 
 [`npm ci` is also much quicker than `npm install`](https://docs.npmjs.com/cli/ci.html#description) if the `./node_modules` directory is not present (such as in a CI environment).
 
