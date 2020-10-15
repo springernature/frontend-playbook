@@ -36,7 +36,7 @@ This is the method we recommend for installing dependencies when authoring node 
 
 [`npm ci` is also much quicker than `npm install`](https://docs.npmjs.com/cli/ci.html#description) if the `./node_modules` directory is not present (such as in a CI environment).
 
-It is the method recommended for installing dependencies when authoring node _applications_.
+This is the method we recommend for installing dependencies when authoring node _applications_.
 
 ### Using the right version of node
 
