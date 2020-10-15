@@ -42,7 +42,9 @@ It is the method recommended for installing dependencies when authoring node _ap
 
 When authoring libraries you are probably supporting multiple versions of node, so it not required to use a specific version when installing (as long as the version is supported by your library).
 
-When authoring node applications, and therefore using `npm ci`, it is important to specify a version of node to use. This is because the `package-lock.json` file will reflect the version of node used when the `package-lock.json` file was created. If you don't use the same version of node when running `npm ci`, the versions of dependencies specified in the `package-lock.json` may be incompatible with the version of node you are currently using, and you may get installation errors.
+When authoring node applications, and therefore using `npm ci`, it is important to specify a version of node to use. This is because the `package-lock.json` file will reflect the version of node used when the `package-lock.json` file was created.  
+
+If you don't use the same version of node when running `npm ci`, the versions of dependencies specified in the `package-lock.json` may be incompatible with the version of node you are currently using, and you may get installation errors.
 
 ### How to specify the version of node to use
 
