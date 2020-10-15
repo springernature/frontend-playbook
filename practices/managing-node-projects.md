@@ -63,7 +63,7 @@ There are two main ways of doing this, and you're encouraged to do both.
 
 #### `nvm` usage
 
-When developers check out your project, they should first run `nvm use` before `npm ci` to ensure the project is running on the same version of node as you. Additionally [Travis respects `.nvmrc` files](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions-using-nvmrc), so using one will simplify your Travis configuration.
+When you check out a project, you should first run `nvm use` before `npm ci` to ensure you're running on the same version of node the project expects. Additionally [Travis respects `.nvmrc` files](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions-using-nvmrc), so using one will simplify your Travis configuration and help other developers avoid mistakes.
 
 #### Automatically running `nvm use`
 
