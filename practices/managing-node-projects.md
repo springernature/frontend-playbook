@@ -30,7 +30,7 @@ There are two methods for installing node dependencies: `npm install` and `npm c
 
 Note that if a `package-lock.json` is present **`npm install` will not use it** as the source of authority for what to install.
 
-It is the method recommended for installing dependencies when authoring node _libraries_.
+This is the method we recommend for installing dependencies when authoring node _libraries_.
 
 `npm ci` however installs the complete dependency graph exactly as specified in the `package-lock.json` file, and so guarantees reproducible/consistent builds. This helps reduce "but it works on my machine" issues and is suitable for CI/CD environments (as the name implies).
 
