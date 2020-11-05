@@ -48,9 +48,7 @@ This is the method we recommend for installing dependencies when authoring node 
 
 When authoring libraries you're probably supporting multiple versions of node, so you're not required to use a specific version when installing (as long as the version is supported by your library).
 
-When authoring node applications, and therefore using `npm ci`, it is important to specify a version of node to use. This is because the `package-lock.json` file will reflect the version of node used when the `package-lock.json` file was created.
-
-If you don't use the same version of node when running `npm ci`, the versions of dependencies specified in the `package-lock.json` may be incompatible with the version of node you are currently using, and you may get installation errors.
+When authoring node applications, and therefore using `npm ci`, it is important to specify a version of node to use. If you don't use the same version of node when running `npm ci`, the versions of dependencies specified in the `package-lock.json` may be incompatible with the version of node you are currently using and you may get installation errors.
 
 ### How to specify the version of node to use
 
@@ -59,7 +57,7 @@ There are two main ways of doing this, and you're encouraged to do both.
 1. The [`engines`](https://docs.npmjs.com/files/package.json#engines) field in `package.json`:
      * `engines` is important if authoring libraries. Let's assume we're using a different version of node to that specified in `engines` field for package `foo`.
      When running `npm install` to install `foo`'s dependencies, `npm` will warn about the problem.
-     When `npm install`ing a package _which depends on_ `foo`, `npm` will warn and error.
+     When `npm install`ing a package _which depends on_ `foo`, `npm` will warn.
      * Some deployment environments also respect it.
      * It makes compatibility requirements explicit to developers working on your application.
 2. Using an `.nvmrc` file:
