@@ -28,7 +28,7 @@ Ideally this should be specified in both the HTTP header and a `meta` element, i
 
 Links leak the context of the opening window to the opened window, via the `window.opener` object. This allows the opened window to alter the opening window via JavaScript, regardless of whether the window is opened via JavaScript or simply a `target="_blank"` attribute. Exploiting this context leaking is known as ["tabnabbing"](https://mathiasbynens.github.io/rel-noopener/).
 
-**Nov 2020 update**: [Chrome 88+](https://chromium-review.googlesource.com/c/chromium/src/+/1630010) will match Safari and Firefox's behavior of treating `target=_blank` links as `noopener` by default (thanks [@mikewest](https://twitter.com/mikewest/status/1325694207546318851))
+**Nov 2020 update**: [Chrome 88+](https://chromium-review.googlesource.com/c/chromium/src/+/1630010) will match Safari and Firefox's behavior of treating `target=_blank` links as `noopener` by default (thanks [@mikewest](https://twitter.com/mikewest/status/1325694207546318851)). However we still recommend including this attribute at this time in line with our browser support policy.
 
 ## Use Subresource Integrity
 
