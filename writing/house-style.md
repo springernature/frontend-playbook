@@ -26,8 +26,10 @@ Follow Plain English guidelines to help safeguard the accessibility of your writ
 
 * Be concise
   * Check any sentences with more than 25 words to see if you can split them to make them clearer.
+  * Ideally no more than 1-2 points per sentence.
   * Use contractions (e.g. "can't", "it's").
   * Go straight to the point.
+  * Avoid unnecessary words (e.g. There is, It is, very, really, pretty, just, actually). 
 * Be specific
   - Prefer the active voice to the passive voice<sup>[\[1\]][active-passive]</sup> (e.g. "NPM will install the dependencies" instead of "the dependencies will be installed").
   * Address the reader as "you" where possible.
