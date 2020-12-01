@@ -1,4 +1,4 @@
-# Accessibility style guide
+# Accessibility
 
 - [General Principles](#general-principles)
   - [What is accessibility?](#what-is-accessibility)
