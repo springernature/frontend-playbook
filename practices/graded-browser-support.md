@@ -18,7 +18,7 @@ We follow the principles of [Progressive Enhancement](progressive-enhancement.md
 Our approach to browser support works by classifying all versions of all browsers into one of two levels:
 
 * **"Core"** is our universal support level. We serve all browsers at this level server-side rendered semantic HTML and minimal CSS. Essential user journey's must be accessible at this level.
-* **"Advanced"** is our support level for modern and/or [evergreen browsers](https://www.techopedia.com/definition/31094/evergreen-browser). As well as the Core HTML and CSS, we serve these browsers JavaScript and more advanced CSS, giving them a more interactive and visually pleasing product experience. Bugs at this level are addressed with high priority.
+* **"Enhanced"** is our support level for modern and/or [evergreen browsers](https://www.techopedia.com/definition/31094/evergreen-browser). As well as the Core HTML and CSS, we serve these browsers JavaScript and more advanced CSS, giving them a more interactive and visually pleasing product experience. Bugs at this level are addressed with high priority.
 
 ## Rationale
 
@@ -31,7 +31,7 @@ There are two motivators for approaching browser support like we do:
 
 This is the current list of browser versions and their corresponding support level:
 
-| Browser         | Advanced                        | Core               |
+| Browser         | Enhanced                        | Core               |
 | --------------- |:-------------------------------:| ------------------:|
 | Chrome          | latest stable, latest stable -1 | < 29               |
 | Edge            | latest stable, latest stable -1 | n/a                |
@@ -44,18 +44,18 @@ This is the current list of browser versions and their corresponding support lev
 
 ### Grey area browsers
 
-Some browser versions exist in the grey area outside and/or between Advanced and Core levels. For example:
+Some browser versions exist in the grey area outside and/or between Enhanced and Core levels. For example:
 
 * Old versions of an evergreen browser: a user has turned off auto-updates, or their upgrade opportunities are limited by their device or administrator.
 * Nightly or developer versions of evergreen browsers.
 
-We serve these grey area browsers the Advanced version of a site, so they will receive the full experience. Due to resourcing implications we do not specifically test our products against them - however we do expect them to work (because, for example, [we strive to provide compatible CSS via Autoprefixer](#browserslist)). Over time, analysis of errors and usage patterns may cause some browsers in this grey area to be deliberately changed to either Advanced or Core, to allow for better support.
+We serve these grey area browsers the Enhanced version of a site, so they will receive the full experience. Due to resourcing implications we do not specifically test our products against them - however we do expect them to work (because, for example, [we strive to provide compatible CSS via Autoprefixer](#browserslist)). Over time, analysis of errors and usage patterns may cause some browsers in this grey area to be deliberately changed to either Enhanced or Core, to allow for better support.
 
 ## Implementing browser support
 
 Our primary approach to classifying a browser support level is the "[Cutting the Mustard (CTM)](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard)" progressive enhancement technique, based upon the principles developed by the BBC.
 
-This approach works by using feature detection in order to determine which browsers will receive the full Advanced experience (i.e. they "[cut the mustard](https://en.wiktionary.org/wiki/cut_the_mustard)") and which ones will receive only the Core experience.
+This approach works by using feature detection in order to determine which browsers will receive the full Enhanced experience (i.e. they "[cut the mustard](https://en.wiktionary.org/wiki/cut_the_mustard)") and which ones will receive only the Core experience.
 
 ### Implementation details
 
@@ -63,10 +63,10 @@ All browser versions load a basic stylesheet that contains only [normalisation](
 
 We then use CSS media queries to detect capable browsers. Unlike the approach described by the BBC, we don't use a JavaScript-based featured detection. We want users to have the best possible experience even if JavaScript is not available.
 
-To load the full experience only in Advanced browsers we implement logic in the media attribute of the `<link>` element that identifies the main stylesheet, loading the stylesheet only in browsers that recognise the properties of that media query:
+To load the full experience only in Enhanced browsers we implement logic in the media attribute of the `<link>` element that identifies the main stylesheet, loading the stylesheet only in browsers that recognise the properties of that media query:
 
 ```html
-<link rel="stylesheet" href="advanced.css" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)" id="advanced-stylesheet">
+<link rel="stylesheet" href="enhanced.css" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)" id="enhanced-stylesheet">
 ```
 
 This technique is documented in [Cutting the Mustard with Media queries](https://www.sitepoint.com/cutting-the-mustard-with-css-media-queries/). The specific media queries we use are based upon [CSS Only Mustard Cut](https://github.com/Fall-Back/CSS-Mustard-Cut), with a preference towards combining them into one rather than separating them out into multiple `<link>` elements. Note that you **cannot** add line breaks to the media query if they are combined.
@@ -75,10 +75,10 @@ We couple the loading of JavaScript to the loading of the enhanced CSS. We use t
 
 ```javascript
 (function() {
-  var linkEl = document.getElementById('advanced-stylesheet');
+  var linkEl = document.getElementById('enhanced-stylesheet');
   if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
     var script = document.createElement('script');
-    script.src = 'advanced-script.js';
+    script.src = 'enhanced-script.js';
     script.async = true;
     document.body.appendChild(script);
   }
@@ -93,13 +93,13 @@ As of January 2017, we consider Internet Explorer 10 a Core browser. This is mai
 
 Unfortunately, both IE10 and IE11 respond to the same CSS media queries, which means that it is not possible to use a CSS-only method of differentiating between both browsers.
 
-This means that even if we consider IE10 a Core browser, we currently have to serve IE10 users Advanced code.
+This means that even if we consider IE10 a Core browser, we currently have to serve IE10 users Enhanced code.
 
 #### Internet Explorer and CSS Grid
 
 [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) has been available in all evergreen browsers [for some time now](https://caniuse.com/#feat=css-grid). It offers a much-simplified way of working with layout and offers new design opportunities.
 
-However, CSS Grid is not available in the full standardised form in Internet Explorer 10 or 11, both of which are currently supported *de facto* as Advanced browsers (see above). There is an easy to use solution: Autoprefixer. As of version 9.3.1 we are now able to reliably generate vendor prefixes for IE10 and IE11 by enabling Autoprefixer's grid option. There are a few minor caveats such as ensuring you always define `grid-template-columns` with `grid-template-areas` together if you want `grid-column-gap` to be prefixed correctly. These are well documented [on CSS Tricks](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer).
+However, CSS Grid is not available in the full standardised form in Internet Explorer 10 or 11, both of which are currently supported *de facto* as Enhanced browsers (see above). There is an easy to use solution: Autoprefixer. As of version 9.3.1 we are now able to reliably generate vendor prefixes for IE10 and IE11 by enabling Autoprefixer's grid option. There are a few minor caveats such as ensuring you always define `grid-template-columns` with `grid-template-areas` together if you want `grid-column-gap` to be prefixed correctly. These are well documented [on CSS Tricks](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer).
 
 #### Browsers without TLS 1.2 support
 
@@ -111,7 +111,7 @@ The way that we restrict the connection to our sites when not using TLS 1.2 does
 
 While we do not test [grey-area browsers](#grey-area-browsers), we still work towards the best experience for all our users. CSS for grey-area browsers should therefore be prefixed using [Autoprefixer](https://github.com/postcss/autoprefixer). Automatically adding vendor prefixes allows us to increase support for these browsers with little extra effort.
 
-The following `.browserslistrc` file ([a standard way of sharing target browser data](https://github.com/browserslist/browserslist)) should cover all browsers that receive Advanced CSS according to our [Browser Support list](#browser-support-list).
+The following `.browserslistrc` file ([a standard way of sharing target browser data](https://github.com/browserslist/browserslist)) should cover all browsers that receive Enhanced CSS according to our [Browser Support list](#browser-support-list).
 
 ```nanorc
 defaults

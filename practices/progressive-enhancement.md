@@ -36,7 +36,7 @@ We enable progressive enhancement at every level of our products.
 
 On the broadest level our [browser support](graded-browser-support.md) approach lets us offer Core versions of our products that work for all users, in all situations, and which are then enhanced when the browser is deemed advanced enough.
 
-On the CSS level we build basic implementations first, using primitive CSS, and then enhance in Advanced browsers using the [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade), [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity), source order, and [feature queries](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports).
+On the CSS level we build basic implementations first, using primitive CSS, and then enhance in more advanced browsers using the [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade), [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity), source order, and [feature queries](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports).
 
 With JavaScript we acknowledge that, given our [browser support chart](graded-browser-support.md#graded-browser-support-list), we must support ES5 browsers, which we do so via transpiling from ES6/Next to ES5. However we can then use [feature detection](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) to offer more capabilities as the browser supports them.
 
