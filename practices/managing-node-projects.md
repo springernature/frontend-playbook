@@ -48,7 +48,7 @@ This is the method we recommend for installing dependencies when authoring node 
 There are two main ways of doing this, and you're encouraged to do both.
 
 1. The [`engines`](https://docs.npmjs.com/files/package.json#engines) field in `package.json`:
-     * `engines` is important if authoring libraries. Let's assume we're using a different version of node to that specified in `engines` field for package `foo`.
+     * `engines` is important if you're authoring libraries. Let's assume we're using a different version of node to that specified in `engines` field for package `foo`.
      When running `npm install` to install `foo`'s dependencies, `npm` will warn about the problem.
      When `npm install`ing a package _which depends on_ `foo`, `npm` will warn.
      * Some deployment environments also respect it.
