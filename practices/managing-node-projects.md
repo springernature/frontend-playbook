@@ -87,7 +87,7 @@ Firstly, bear in mind machine-generated files should not be hand-edited, and `pa
 
 Secondly, if you are seeing unexpected merge conflicts in `package-lock.json` it can be a symptom of someone using `npm install` instead of `npm ci`. Speak to the developer and see if they are having trouble.
 
-Additionally, when updating your application it's strongly recommended to keep `package-lock.json` changes as a result of `npm update` or `npm audit fix` in a separate PR to other changes to the application. This helps by making your PRs easier to review.
+When you update your application, we strongly recommend that you keep `package-lock.json` changes as a result of `npm update` or `npm audit fix` in a separate PR to other changes to the application. This helps by making your PRs easier to review.
 
 ## Specifying versions of dependencies
 
