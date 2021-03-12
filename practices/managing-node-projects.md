@@ -55,7 +55,7 @@ There are two main ways of doing this, and you're encouraged to do both.
      * It makes compatibility requirements explicit to developers working on your application.
 2. Using an `.nvmrc` file:
      * An `.nvmrc` file is a configuration file for `nvm` ([Node Version Manager](https://github.com/creationix/nvm)).
-     Use of `nvm` is strongly encouraged as an application author, as it enables you to specify to other developers what versions of node they should be using when running your app.
+     We strongly encourage you to use `nvm` when you're authoring applications, as it enables you to specify to other developers what versions of node they should be using when running your app.
      * Your application should include an [`.nvmrc` file](https://github.com/creationix/nvm#nvmrc) in the root directory of the project to specify which version(s) of node are compatible.
      * It also is required for proper `npm ci` usage, as explained above.
      * It also makes life much easier when working on multiple node projects locally that require different versions of node.
