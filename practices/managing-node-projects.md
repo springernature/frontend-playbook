@@ -3,7 +3,6 @@
 - [Installing dependencies](#installing-dependencies)
   - [`npm install`](#npm-install)
   - [`npm ci`](#npm-ci)
-  - [Using the right version of node](#using-the-right-version-of-node)
   - [How to specify the version of node to use](#how-to-specify-the-version-of-node-to-use)
     - [`nvm` usage](#nvm-usage)
     - [Automatically running `nvm use`](#automatically-running-nvm-use)
@@ -43,12 +42,6 @@ This is the method we recommend for installing dependencies when authoring node 
 [`npm ci` is also much quicker than `npm install`](https://docs.npmjs.com/cli/ci.html#description) if the `./node_modules` directory is not present (such as in a CI environment).
 
 This is the method we recommend for installing dependencies when authoring node _applications_.
-
-### Using the right version of node
-
-When authoring libraries you're probably supporting multiple versions of node, so you're not required to use a specific version when installing (as long as the version is supported by your library).
-
-When authoring node applications, and therefore using `npm ci`, it is important to specify a version of node to use. If you don't use the same version of node when running `npm ci`, the versions of dependencies specified in the `package-lock.json` may be incompatible with the version of node you are currently using and you may get installation errors.
 
 ### How to specify the version of node to use
 
