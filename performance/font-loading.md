@@ -5,7 +5,7 @@
 It's worth asking this question initially. What benefit do you believe a webfont will give you and is it worth the cost in page performance? Afterall, system fonts are battle tested and were produced with legibility in mind.
 
 ## Implementation
-We do not prescribe a particular implementation. Each team should  determine which implementation is best suited for them. However, before selecting an implementation a team should be mindful of our working practises such as:
+We do not prescribe a particular implementation. Each team should determine which implementation is best suited for them. However, before selecting an implementation a team should be mindful of our working practices such as:
 
 - [Graded Browser Support](https://github.com/springernature/frontend-playbook/blob/main/practices/graded-browser-support.md)
   - Is the implementation supported by all "enhanced" browsers? If not, is there a good justification for selecting it anyway?
