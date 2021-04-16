@@ -32,7 +32,7 @@ We believe that FOIT should be avoided as it is the worst experience for the use
 
 ### Understand the different implementations available
 
-We highly recommend reading [Zach Leat's comprehensive guide](https://www.zachleat.com/web/comprehensive-webfonts/) to get a good understand of the different techniques available. There is also a good [follow-up article](https://css-tricks.com/the-best-font-loading-strategies-and-how-to-execute-them/) that summarises Zach's findings.
+We highly recommend reading [Zach Leat's comprehensive guide](https://www.zachleat.com/web/comprehensive-webfonts/) to get a good understanding of the different techniques available. There is also a good [follow-up article](https://css-tricks.com/the-best-font-loading-strategies-and-how-to-execute-them/) that summarises Zach's findings.
 
 ### Serve WOFF and WOFF2 font formats
 
