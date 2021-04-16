@@ -1,8 +1,12 @@
 # Font Loading
 
-## Are you sure you need to use webfonts?
+## When to use webfonts
+Before using webfonts it's worth understanding what benefits you believe a webfont will provide your product and assess those against the potential impact they may have on things like accessibility or page speed. For example:
 
-It's worth asking this question initially. What benefit do you believe a webfont will give you and is it worth the cost in page performance? Afterall, system fonts are battle tested and were produced with legibility in mind.
+- System fonts are battle tested and were produced with legibility in mind. Using webfonts may reduce the readability of the site, especially for people with dyslexia.
+- Webfonts can negatively impact page performance (additional http requests and increased page weight) especially in markets of strategic importance for Springer Nature like China. This will in turn impact usage numbers.
+
+Make sure that you feel that on balance the benefit outweighs the impact.
 
 ## Implementation
 We do not prescribe a particular implementation. Each team should determine which implementation is best suited for them. However, before selecting an implementation a team should be mindful of our working practices such as:
