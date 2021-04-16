@@ -24,9 +24,9 @@ Here are some quick suggestions for techniques that may prove useful:
 
 ### Understand the different user experiences in font loading: FOIT, FOUT and FOIT
 
-- FOIT means flash of invisible text. When web fonts are loading, we hide text so users don’t see anything. We only show the text when web fonts are loaded.
-- FOUT means flash of unstyled text. When web fonts are loading, we show users a system font. When the web font gets loaded, we change the text back to the desired web font.
-- FOFT means flash of faux text. Only load the roman character set initially and load the others later for less page render blocking. "Faux" refers to the fact the browser fakes italics and bold before those character sets have loaded.
+- FOIT means _flash of invisible text_. When web fonts are loading, we hide text so users don’t see anything. We only show the text when web fonts are loaded.
+- FOUT means _flash of unstyled text_. When web fonts are loading, we show users a system font. When the web font gets loaded, we change the text back to the desired web font.
+- FOFT means _flash of faux text_. Only load the roman character set initially and load the others later for less page render blocking. "Faux" refers to the fact the browser fakes italics and bold before those character sets have loaded.
 
 We believe that FOIT should be avoided as it is the worst experience for the user.
 
