@@ -36,7 +36,7 @@ We highly recommend reading [Zach Leat's comprehensive guide](https://www.zachle
 
 ### Serve WOFF and WOFF2 font formats
 
-WOFF2 has the superior compression. However, unfortunately it does not cover all of our Enhanced browsers at the time of writing. Therefore consider serving both formats. 
+WOFF2 has the superior compression. However, unfortunately [it does not cover all of our Enhanced browsers](https://caniuse.com/woff2) at the time of writing. Therefore consider serving both formats. 
 
 ### [font-display CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display)
 
