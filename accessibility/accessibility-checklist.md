@@ -237,10 +237,11 @@ Resources:
 
 Input placeholders disappear when the user begins typing, may be mistaken for a value, and may not provide adequate context.
 
-Never put user instructions in input placeholders - always use a label.
+Never put user instructions in input placeholders - always use a label. The HTML5 specification clarifies that a placeholder should not be used as an alternative to a label. 
 
 Resources:
 
+* [HTML5 Living Specification: the placeholder attribute](https://html.spec.whatwg.org/dev/input.html#the-placeholder-attribute)
 * [Article: HTML5 Accessibility Chops: the placeholder attribute](https://developer.paciellogroup.com/blog/2011/02/html5-accessibility-chops-the-placeholder-attribute/)
 * [Article: 11 reasons why placeholders are problematic](https://medium.com/simple-human/10-reasons-why-placeholders-are-problematic-f8079412b960)
 * [Article: Don’t Use The Placeholder Attribute](https://www.smashingmagazine.com/2018/06/placeholder-attribute)
