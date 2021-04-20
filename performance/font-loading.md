@@ -7,7 +7,7 @@ We do not recommend the use of webfonts due to the impact they have on accessibi
 - Using webfonts may reduce the readability of the site, especially for people with dyslexia.
 - Webfonts can negatively impact page performance (additional http requests and increased page weight) especially in markets of strategic importance for Springer Nature like China. This will in turn impact usage numbers.
 
-It is worth considering the using a [system font](https://css-tricks.com/snippets/css/system-font-stack/) instead of a webfont. System fonts are extensively tested, incur no performance impact, and are produced with legibility in mind.
+It is worth considering using a [system font](https://css-tricks.com/snippets/css/system-font-stack/) instead of a webfont. System fonts are extensively tested, incur no performance impact, and are produced with legibility in mind.
 
 However, if you feel a webfont is needed, make sure you define the benefit and can demonstrate that the benefit outweighs the cost.
 
