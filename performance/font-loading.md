@@ -4,10 +4,10 @@
 
 We do not recommend the use of webfonts due to the impact they have on accessibility and page speed. For example:
 
-- Using webfonts may reduce the readability of the site, especially for people with dyslexia.
+- Using webfonts may reduce the readability of the site, for example for people with dyslexia, or low vision.
 - Webfonts can negatively impact page performance (additional http requests and increased page weight) especially in markets of strategic importance for Springer Nature like China. This will in turn impact usage numbers.
 
-It is worth considering using a [system font](https://css-tricks.com/snippets/css/system-font-stack/) instead of a webfont. System fonts are extensively tested, incur no performance impact, and are produced with legibility in mind.
+Consider using a [system font](https://css-tricks.com/snippets/css/system-font-stack/) instead of a webfont. System fonts are extensively tested, incur no performance impact, and are produced with legibility in mind.
 
 However, if you feel a webfont is needed, make sure you define the benefit and can demonstrate that the benefit outweighs the cost.
 
@@ -43,7 +43,7 @@ WOFF2 has the superior compression. However, unfortunately [it does not cover al
 
 ### [font-display CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display)
 
-[`font-display`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display) is useful and has the benefit of being a technique that does not require javascript and is easy and straight forward to implement.
+[`font-display`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display) is useful and has the benefit of being a technique that does not require JavaScript and is easy and straight forward to implement.
 
 `font-display: swap` can be used to achieve FOUT which ensures a user can read text with a fallback font whilst a webfont loads.
 
@@ -59,4 +59,4 @@ If you have to load a font the conventional way using a `<link>` then consider u
 
 ### Self host webfonts if possible
 
-Some webfonts prevent you from self hosting because of their licensing so check that first. But if you can, consider self hosting a font. As this will potentially reduce the possible points of failure or poor page performance. And it will open up more options to you in terms of possible font loading implementations.
+Some webfonts prevent you from self hosting because of their licensing so check that first. But if you can, consider self hosting a font. This will potentially reduce the possible points of failure or poor page performance, and it will open up more options to you in terms of possible font loading implementations.
