@@ -50,7 +50,7 @@ WOFF2 has the superior compression. However, unfortunately [it does not cover al
 
 [`font-display`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display) is useful and has the benefit of being a technique that does not require JavaScript and is easy and straight forward to implement.
 
-`font-display: swap` can be used to achieve FOUT which ensures a user can read text with a fallback font whilst a webfont loads.
+We recommend reading this [comprehensive analysis of font-display](https://calendar.perfplanet.com/2020/a-font-display-setting-for-slow-connections/) values when deciding which value is best for you.
 
 ### Loading fonts with JavaScript
 
