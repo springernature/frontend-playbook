@@ -2,14 +2,16 @@
 
 ## When to use webfonts
 
-We do not recommend the use of webfonts due to the impact they have on accessibility and page speed. For example:
+Webfonts allow us to bring emotion, personality and tone to our sites - which can make them more successful.
+
+However, the task of choosing a webfont and implementing it on your site should be approached cautiously. Webfonts have the potential to impact aspects of your sites such as accessibility and page speed. For example:
 
 - Using webfonts may reduce the readability of the site, for example for people with dyslexia, or low vision.
 - Webfonts can negatively impact page performance (additional http requests and increased page weight) especially in markets of strategic importance for Springer Nature like China. This will in turn impact usage numbers.
 
-Consider using a [system font](https://css-tricks.com/snippets/css/system-font-stack/) instead of a webfont. System fonts are extensively tested, incur no performance impact, and are produced with legibility in mind.
+Our recommendation is that you use a [system font](https://css-tricks.com/snippets/css/system-font-stack/) instead of a webfont. System fonts are extensively tested, incur no performance penalty, and are produced with legibility in mind.
 
-However, if you feel a webfont is needed, make sure you define the benefit and can demonstrate that the benefit outweighs the cost.
+If a webfont is needed then close collaboration between User Experience and Accessibility specialists should be sought to ensure the webfont chosen is satisfactory from both typographic and accessibility perspectives.
 
 ## Implementation
 We do not prescribe a particular implementation. Each team should determine which implementation is best suited for them. However, before selecting an implementation a team should be mindful of our working practices such as:
