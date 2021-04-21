@@ -6,7 +6,7 @@ Webfonts allow us to bring emotion, personality and tone to our sites - which ca
 
 However, the task of choosing a webfont and implementing it on your site should be approached cautiously. Webfonts have the potential to impact aspects of your sites such as accessibility and page speed. For example:
 
-- Using webfonts may reduce the readability of the site, for example for people with dyslexia, or low vision.
+- Certain webfonts may reduce the readability of the site, for example for people with dyslexia, or low vision.
 - Webfonts can negatively impact page performance (additional http requests and increased page weight) especially in markets of strategic importance for Springer Nature like China. This will in turn impact usage numbers.
 
 Our recommendation is that you use a [system font](https://css-tricks.com/snippets/css/system-font-stack/) instead of a webfont. System fonts are extensively tested, incur no performance penalty, and are produced with legibility in mind.
