@@ -49,7 +49,7 @@ WOFF2 has the superior compression. However, unfortunately [it does not cover al
 
 `font-display: swap` can be used to achieve FOUT which ensures a user can read text with a fallback font whilst a webfont loads.
 
-### Loading fonts with javascript
+### Loading fonts with JavaScript
 
 Consider using [FontFaceObserver](https://github.com/bramstein/fontfaceobserver) instead of the [CSS Font Loader API](https://drafts.csswg.org/css-font-loading/), as the latter does not have support for all our Enhanced browsers.
 
