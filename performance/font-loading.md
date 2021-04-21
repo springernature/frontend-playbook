@@ -11,7 +11,7 @@ However, the task of choosing a webfont and implementing it on your site should 
 
 Our recommendation is that you use a [system font](https://css-tricks.com/snippets/css/system-font-stack/) instead of a webfont. System fonts are extensively tested, incur no performance penalty, and are produced with legibility in mind.
 
-If a webfont is needed then close collaboration between User Experience and Accessibility specialists should be sought to ensure the webfont chosen is satisfactory from both typographic and accessibility perspectives.
+If you need a webfont, then close collaboration between User Experience and Accessibility specialists should be sought to ensure your chosen webfont is satisfactory from both typographic and accessibility perspectives.
 
 ## Implementation
 We do not prescribe a particular implementation. Each team should determine which implementation is best suited for them. However, before selecting an implementation a team should be mindful of our working practices such as:
