@@ -11,9 +11,12 @@ However, the task of choosing a webfont and implementing it on your site should 
 
 Our recommendation is that you prioritise a [system font](https://css-tricks.com/snippets/css/system-font-stack/) over a webfont. System fonts are extensively tested, and incur no performance penalty.
 
-If you need a webfont, then close collaboration between User Experience and Accessibility specialists should be sought to ensure your chosen webfont is satisfactory from both typographic and accessibility perspectives.
+If a webfont is needed then close collaboration between user experience, accessibility, and web performance specialists must be sought to ensure the choice is satisfactory from typographic, accessibility, and performance perspectives.
+
+As a Frontend Developer, it's your role to provide technical guidance and feedback, not to choose the font.
 
 ## Implementation
+
 We do not prescribe a particular implementation. Each team should determine which implementation is best suited for them. However, before selecting an implementation a team should be mindful of our working practices such as:
 
 - [Graded Browser Support](https://github.com/springernature/frontend-playbook/blob/main/practices/graded-browser-support.md)
