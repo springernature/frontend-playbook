@@ -30,7 +30,7 @@ We do not prescribe a particular implementation. Each team should determine whic
 ## Quick Tips
 Here are some quick suggestions for techniques that may prove useful:
 
-### Understand the different user experiences in font loading: FOIT, FOUT and FOIT
+### Understand the different user experiences in font loading: FOIT, FOUT and FOFT
 
 - FOIT means _flash of invisible text_. Text on the page is hidden while webfonts are loading, so users will see a page with images but no text. We only show the text when webfonts are loaded.
 - FOUT means _flash of unstyled text_. When webfonts are loading, we show users a system font. When the webfont gets loaded, we change the text back to the desired webfont.
