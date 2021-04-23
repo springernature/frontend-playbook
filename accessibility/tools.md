@@ -60,7 +60,7 @@ On mobile, VoiceOver is built-in on iOS devices, and TalkBack is usually built-i
 ### Accessibility testing tools in the browser
 
 - Squizlabs also have an [HMTML_Codesniffer bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) for quick tests. 
-- The Axe engine comes as a [browser extension](https://www.deque.com/axe/) and as an [NPM module](https://github.com/dequelabs/axe-core) that you can integrate with your build, like Pa11y. 
+- The Axe engine comes as a [browser extension](https://www.deque.com/axe/browser-extensions/) for Chrome, Firefox, and Edge, and as an [NPM module](https://github.com/dequelabs/axe-core) that you can integrate with your build, like Pa11y. 
 - WebAim's [WAVE extension](https://wave.webaim.org/extension/) for Chrome and Firefox evaluates accessibility in place on the page. 
 
 
