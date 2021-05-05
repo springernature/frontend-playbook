@@ -31,6 +31,8 @@ Read [Automated accessibility testing with Travis CI](http://cruft.io/posts/auto
 
 You can use HTML_Codesniffer or axe as your test suite; we recommend using both. Neither engine is "better" than the other, they just use different testing strategies. When you fail builds based on Pa11y results, bear in mind that the two testing engines return different numbers of results, and their results are formatted differently. 
 
+If you're a VS Code user, you can also install Deque's [axe accessibility linter](https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter) from the Visual Studio marketplace and catch some common accessibility errors before they get to the build stage. 
+
 
 ## Manual testing
 
