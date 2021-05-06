@@ -6,7 +6,7 @@ Faster page speeds have been shown to increase visitor retention and user satisf
 
 * [Advertising](advertising.md)
 * [Browser Caching](browser-caching.md)
-* [Fonts](fonts.md)
+* [Font Loading](font-loading.md)
 * [Images](images.md)
 
 [Main table of contents](../README.md#table-of-contents)
