@@ -522,6 +522,27 @@ for (const prop in obj) {
 }
 ```
 
+About `for...of` loops, avoid using them on **client side Javascript** as long as we support Internet Explorer.  
+On modern browsers you can use them as a mean to iterate over a `NodeList`. An Internet Explorer-compatible way of doing this is to use [Array.prototype.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) for iteration.
+
+We do this:
+
+```js
+const list = document.querySelectorAll('input[type=checkbox]');
+Array.prototype.forEach.call(list, function (checkbox) {
+    // ...
+});
+```
+
+We _don't_ do this:
+
+```js
+const list = document.querySelectorAll('input[type=checkbox]');
+for (let checkbox of list) {
+    // ..
+}
+```
+
 ### Strict mode
 
 You should assume that your code will fail, and take steps to handle those failures.
