@@ -522,27 +522,6 @@ for (const prop in obj) {
 }
 ```
 
-About `for...of` loops, avoid using them on **client side Javascript** as long as we support Internet Explorer.  
-On modern browsers you can use them as a mean to iterate over a `NodeList`. An Internet Explorer-compatible way of doing this is to use [Array.prototype.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) for iteration.
-
-We do this:
-
-```js
-const list = document.querySelectorAll('input[type=checkbox]');
-Array.prototype.forEach.call(list, function (checkbox) {
-    // ...
-});
-```
-
-We _don't_ do this:
-
-```js
-const list = document.querySelectorAll('input[type=checkbox]');
-for (let checkbox of list) {
-    // ..
-}
-```
-
 ### Strict mode
 
 You should assume that your code will fail, and take steps to handle those failures.
@@ -892,3 +871,41 @@ The `utils` directory is used to house JavaScript written for the project that d
   - It can expose functions and/or prototypal classes
 
 An example utility might be a function to make a string title-case.
+
+### Be careful when transpiling
+
+As exciting it can be to use modern Javascript syntax, it remains our
+responsibility as web developers to make sure our benefits do not harm our user
+experience. Any negative impact on performance affects the user experience.  
+Transpiling does increase Javascript bundles size.  
+We therefore advise to monitor, with tools like [Babel
+REPL](https://babeljs.io/repl/), the footprint of your code and reconsider your
+options, most especially if the only purpose is syntax sugar.
+
+#### `for...of loops`, a common use case
+
+We _don't_ do this:
+
+```js
+const list = document.querySelectorAll('input[type=checkbox]');
+for (let checkbox of list) {
+    // ..
+}
+```
+
+We do this:
+
+```js
+const list = document.querySelectorAll('input[type=checkbox]');
+Array.prototype.forEach.call(list, function (checkbox) {
+    // ...
+});
+```
+
+If you would run the above "We don't do this" snippet into [Babel REPL](https://babeljs.io/repl/),
+using our [browserslist](https://github.com/springernature/frontend-playbook/blob/main/practices/graded-browser-support.md#browerslist),
+it transpiles down to 23 lines where in opposition the "We do this" snippet
+transpiles down to 5 lines.  If you would multiply this by the amount of
+occurences of `for...of` in your code base, this can quickly get out of control.
+
+You can find more in depth details about this use case in [Transpiled for-of Loops are Bad for the Client, by Dave Ruppert](https://daverupert.com/2017/10/for-of-loops-are-bad/).
