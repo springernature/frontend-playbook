@@ -874,13 +874,17 @@ An example utility might be a function to make a string title-case.
 
 ### Be careful when transpiling
 
-As exciting it can be to use modern Javascript syntax, it remains our
-responsibility as web developers to make sure our benefits do not harm our user
-experience. Any negative impact on performance affects the user experience.  
-Transpiling does increase Javascript bundles size.  
-We therefore advise to monitor, with tools like [Babel
-REPL](https://babeljs.io/repl/), the footprint of your code and reconsider your
-options, most especially if the only purpose is syntax sugar.
+As enticing as it can be to use modern Javascript syntax, it remains the
+developers responsibility to ensure the developer experience does not negatively
+impact the user experience, e.g. by decreasing performance.  
+Transpiling can easily increase the JavaScript bundle size, by incorporating
+polyfills to for supported browsers.
+
+There are two ways of avoiding an increase in bundle size:
+1. Monitoring, with tools like [BabelREPL](https://babeljs.io/repl/), which show
+   the size of your transpiled code.
+2. Using "older" JavaScript syntax to achieve the same effect. An example of
+   this is given below.
 
 #### `for...of loops`, a common use case
 
@@ -902,10 +906,12 @@ Array.prototype.forEach.call(list, function (checkbox) {
 });
 ```
 
-If you would run the above "We don't do this" snippet into [Babel REPL](https://babeljs.io/repl/),
+If you would run the above "We don't do this" snippet in [Babel REPL](https://babeljs.io/repl/),
 using our [browserslist](https://github.com/springernature/frontend-playbook/blob/main/practices/graded-browser-support.md#browerslist),
-it transpiles down to 23 lines where in opposition the "We do this" snippet
-transpiles down to 5 lines.  If you would multiply this by the amount of
+it transpiles down to 23 lines, whereas the "We do this" snippet
+transpiles down to 5 lines.  If you multiply this by the amount of
 occurences of `for...of` in your code base, this can quickly get out of control.
 
-You can find more in depth details about this use case in [Transpiled for-of Loops are Bad for the Client, by Dave Ruppert](https://daverupert.com/2017/10/for-of-loops-are-bad/).
+Further reading: 
+- [Transpiled for-of Loops are Bad for the Client, by Dave Ruppert](https://daverupert.com/2017/10/for-of-loops-are-bad/).
+- [Avoiding Babel’s Production Bloat](https://webreflection.medium.com/avoiding-babels-production-bloat-d53eea2e1cbf)
