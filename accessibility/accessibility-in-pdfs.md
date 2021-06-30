@@ -3,7 +3,7 @@
 - [A warning](#a-warning)
 - [Is PDF the right choice?](#is-pdf-the-right-choice)
 - [Creating accessible PDF documents](#creating-accessible-pdf-documents)
-- [Creation From a word processor (e.g. Microsoft Word or Google Docs with Grackle)](#creation-from-a-word-processor-eg-microsoft-word-or-google-docs-with-grackle)
+- [Creation from a word processor (e.g. Microsoft Word or Google Docs with Grackle)](#creation-from-a-word-processor-eg-microsoft-word-or-google-docs-with-grackle)
   - [Headings](#headings)
   - [Alt text](#alt-text)
   - [Links](#links)
@@ -38,7 +38,7 @@ Microsoft has an [accessibility checker](https://support.microsoft.com/en-us/top
 
 [Grackle Docs](https://www.grackledocs.com/) is a Google Workspace addon that does the same thing for Google suite documents. You’ll need a [paid plan](https://www.grackledocs.com/features/create-tagged-pdf/) to export tagged PDFs from Grackle. 
 
-## Creation From a word processor (e.g. Microsoft Word or Google Docs with Grackle)
+## Creation from a word processor (e.g. Microsoft Word or Google Docs with Grackle)
 
 ### Headings
 
