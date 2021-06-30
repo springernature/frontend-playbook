@@ -15,6 +15,8 @@
   - [Forms](#forms)
   - [Font Size](#font-size)
 - [Further resources](#further-resources)
+- [How to fix non-accessible PDFs?](#how-to-fix-non-accessible-pdfs)
+- [References](#references)
 
 ## A warning
 
@@ -103,7 +105,7 @@ PDF documents don’t let the user change the font size, so avoid small text siz
 - [Microsoft: How to make your Word documents accessible to people with disabilities](https://support.microsoft.com/en-us/topic/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d)
 - [Google: Make your document or presentation more accessible](https://support.google.com/docs/answer/6199477?hl=en-GB)
 
-# How to fix non-accessible PDFs?
+## How to fix non-accessible PDFs?
 
 Fixing a non-accessible PDF requires using Adobe Acrobat Pro to manually tag the whole document. This could be a time consuming, tedious task, so it's best to create an accessible PDF from an accessible native document (e.g. Word, Google documents, or InDesign).
 
@@ -111,7 +113,7 @@ If you have no choice, follow the guidelines from Adobe on [Creating Accessible 
 
 A full explanation of tagging PDFs is out of scope for this document - if you need training or support to do this kind of remediation work, we recommend [contacting a specialist like AbilityNet](https://www.abilitynet.org.uk/creating-accessible-pdfs) to help you understand what needs to be done and how to do it. 
 
-# References
+## References
 
 - [PDF Accessibility Overview (Adobe)](https://www.adobe.com/accessibility/pdf/pdf-accessibility-overview.html)
 - [Create and Verify PDF Accessibility (Adobe)](https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html)
