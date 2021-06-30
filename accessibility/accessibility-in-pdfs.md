@@ -18,9 +18,7 @@
 
 ## A warning
 
-We specialise in web accessibility, not Portable Document Format (PDF) accessibility. We can give you some pointers, but following this advice is **not** a guarantee that your document will be accessible. 
-
-If you’re concerned about the accessibility of your PDF documents, then you should [consult a specialist like AbilityNet](https://www.abilitynet.org.uk/creating-accessible-pdfs) to review what you have, make expert recommendations, and potentially remediate issues for you. 
+If you’re concerned about the accessibility of your Portable Document Format (PDF) documents, then you should [consult a specialist like AbilityNet](https://www.abilitynet.org.uk/creating-accessible-pdfs) to review what you have, make expert recommendations, and potentially remediate issues for you. 
 
 ## Is PDF the right choice?
 
