@@ -274,7 +274,7 @@ Screen reader users may navigate a page by links alone. Avoid link text that say
 
 Resources:
 
-* [Article: Writing good link text](https://www.nomensa.com/blog/2011/writing-good-link-text)
+* [Article: Writing good link text](https://www.nomensa.com/blog/how-write-good-link-text)
 
 
 ### Use tables appropriately
