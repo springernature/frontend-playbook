@@ -20,7 +20,7 @@
 
 ## A warning
 
-If you’re concerned about the accessibility of PDF documents, then you should [consult a specialist like AbilityNet](https://www.abilitynet.org.uk/creating-accessible-pdfs) to review what you have, make expert recommendations, and potentially remediate issues for you. 
+If you’re concerned about the accessibility of your PDF documents, then you should [consult a specialist like AbilityNet](https://www.abilitynet.org.uk/creating-accessible-pdfs) to review what you have, make expert recommendations, and potentially remediate issues for you. 
 
 ## Is PDF the right choice?
 
