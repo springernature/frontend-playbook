@@ -20,7 +20,7 @@
 
 ## A warning
 
-If you’re concerned about the accessibility of your Portable Document Format (PDF) documents, then you should [consult a specialist like AbilityNet](https://www.abilitynet.org.uk/creating-accessible-pdfs) to review what you have, make expert recommendations, and potentially remediate issues for you. 
+If you’re concerned about the accessibility of PDF documents, then you should [consult a specialist like AbilityNet](https://www.abilitynet.org.uk/creating-accessible-pdfs) to review what you have, make expert recommendations, and potentially remediate issues for you. 
 
 ## Is PDF the right choice?
 
@@ -32,7 +32,7 @@ If you don’t have a choice, then you must purposefully build your PDFs to be a
 
 ## Creating accessible PDF documents
 
-PDF is a destination format, created from a source document (e.g. Microsoft Word or Adobe InDesign). In order to create accessible PDFs, the source documents themselves must be accessible. For screen reader users, this means the document must be correctly formatted with headings and alternative text, among other requirements. A correctly-formatted document can be exported as a [tagged PDF](https://helpx.adobe.com/uk/acrobat/using/creating-accessible-pdfs.html#tag_the_pdf), which allows screen reader software to describe the meaning of different pieces of text. 
+PDF (Portable Document Format) is a destination format, created from a source document (e.g. Microsoft Word or Adobe InDesign). In order to create accessible PDFs, the source documents themselves must be accessible. For screen reader users, this means the document must be correctly formatted with headings and alternative text, among other requirements. A correctly-formatted document can be exported as a [tagged PDF](https://helpx.adobe.com/uk/acrobat/using/creating-accessible-pdfs.html#tag_the_pdf), which allows screen reader software to describe the meaning of different pieces of text. 
 
 Some source document applications include an automated accessibility checker to help you identify basic accessibility issues.
 
