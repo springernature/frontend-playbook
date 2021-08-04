@@ -128,7 +128,7 @@ Resources:
 
 ### Audio or video elements must be accessible
 
-This could involve adding [captions to videos](https://www.youtube.com/watch?v=5AXApBbj1ps), providing [transcripts of audio content](https://www.nature.com/nature/podcast/v546/n7658/nature-2017-06-15.html), including audio description on videos, or including a text alternative for videos that have no audio track.
+This could involve adding [captions to videos](https://www.youtube.com/watch?v=5AXApBbj1ps), providing [transcripts of audio content](https://www.nature.com/articles/d41586-021-01491-0), including audio description on videos, or including a text alternative for videos that have no audio track.
 
 Automatic captions (e.g. those provided by YouTube) are insufficient for accessibility compliance.
 

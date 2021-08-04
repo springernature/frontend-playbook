@@ -74,5 +74,5 @@ Reliability of rendering in clients can be poor.
 - [Accessibility in Email Marketing | MailChimp](https://mailchimp.com/resources/accessibility-in-email-marketing/)
 - [The Ultimate Guide to Accessible Emails](https://litmus.com/blog/ultimate-guide-accessible-emails)
 - [Emailgeeks Slack channel](https://email.geeks.chat)
-- [ZURB Foundation for Emails](https://foundation.zurb.com/emails/email-templates.html)
+- [ZURB Foundation for Emails](https://get.foundation/emails.html)
 - [BeeFree Email Best Practices](https://emaildesign.beefree.io/2016/05/email-fonts-best-practices/)

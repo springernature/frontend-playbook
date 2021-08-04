@@ -27,7 +27,6 @@ When creating interactive components, look for an accessible design pattern befo
 
 * [https://a11yproject.com/patterns](https://a11yproject.com/patterns) 
 * [https://www.w3.org/WAI/tutorials/](https://www.w3.org/WAI/tutorials/) 
-* [https://design-patterns.tink.uk/](https://design-patterns.tink.uk/) 
 * [https://inclusive-components.design/](https://inclusive-components.design/) 
 * [https://design-system.service.gov.uk/components/](https://design-system.service.gov.uk/components/) 
 * [https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex](https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex) 

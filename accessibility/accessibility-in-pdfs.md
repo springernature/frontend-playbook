@@ -38,7 +38,7 @@ Some source document applications include an automated accessibility checker to 
 
 Microsoft has an [accessibility checker](https://support.microsoft.com/en-us/topic/improve-accessibility-with-the-accessibility-checker-a16f6de0-2f39-4a2b-8bd8-5ad801426c7f) built into its tools. When you save a document as a PDF, make sure that the option to save tagged PDFs is checked.
 
-[Grackle Docs](https://www.grackledocs.com/) is a Google Workspace addon that does the same thing for Google suite documents. You’ll need a [paid plan](https://www.grackledocs.com/features/create-tagged-pdf/) to export tagged PDFs from Grackle. 
+[Grackle Docs](https://www.grackledocs.com/) is a Google Workspace addon that does the same thing for Google suite documents.
 
 ## Creation from a word processor (e.g. Microsoft Word or Google Docs with Grackle)
 
