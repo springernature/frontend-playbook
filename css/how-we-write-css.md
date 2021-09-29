@@ -109,7 +109,7 @@ We follow the following rules when writing class names:
 
 ## Sass variable naming
 
-We follow the following rules when writing Sass variable names:
+We follow these rules when writing Sass variable names:
 
 * Variables should be prefixed with the component name, omitting the name of the toolkit
 * Double hyphen should separate the component name prefix and the variable identifier
