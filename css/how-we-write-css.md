@@ -55,7 +55,7 @@ It can be useful to use numbers at the start of your folder names so that the or
 40-base
 50-components
 60-utilities
-```
+``` 
 
 ### Wider architecture
 
@@ -107,7 +107,7 @@ We follow these rules when writing class names:
 * All words are separated by a dash/hyphen
 * BEM naming conventions are followed (read more about our [approach to writing BEM](bem-css.md))
 
-## Sass variable naming
+## Sass variables
 
 We follow these rules when writing Sass variable names:
 
@@ -128,6 +128,8 @@ $card--background: transparent;
 $card--title-spacing: $card--spacing;
 $card--title-font-weight: $context--font-weight-normal;
 ```
+
+If available use existing context Sass variables instead of hard coded values. For example, in the code above, `$context--font-weight-normal` was taken from the Global/Brand context instead of hard coding the value. It is good to assess what is available in the context before writing the Sass variables for your package.
 
 ### Namespaces
 
