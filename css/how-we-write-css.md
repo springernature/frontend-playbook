@@ -19,7 +19,7 @@ The lower the level number the more generic the styles, the higher the number th
 A summary of the different levels and their purpose:
 
 #### Settings
-Contains all **global** SASS variables ([see Sass naming](https://github.com/springernature/frontend-playbook/css/how-we-write-css.md#sass-variable-naming)) for your project e.g. colors, fonts, media queries.
+Contains all **global** SASS variables ([see Sass naming](https://github.com/springernature/frontend-playbook/blob/main/css/how-we-write-css.md#sass-variable-naming)) for your project e.g. colors, fonts, media queries.
 
 #### Functions
 Contains all **global** SASS functions e.g. em calculation, unit stripping.
