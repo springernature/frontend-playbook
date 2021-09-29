@@ -101,7 +101,7 @@ We implement the following rules within each level:
 
 ## HTML class naming
 
-We follow the following rules when writing class names:
+We follow these rules when writing class names:
 
 * All classnames are lowercase
 * All words are separated by a dash/hyphen
