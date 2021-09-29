@@ -19,7 +19,7 @@ The lower the level number the more generic the styles, the higher the number th
 A summary of the different levels and their purpose:
 
 #### Settings
-Contains all **global** SASS variables for your project e.g. colors, fonts, media queries.
+Contains all **global** SASS variables ([see Sass naming](https://github.com/springernature/frontend-playbook/blob/main/css/how-we-write-css.md#sass-variable-naming)) for your project e.g. colors, fonts, media queries.
 
 #### Functions
 Contains all **global** SASS functions e.g. em calculation, unit stripping.
@@ -55,7 +55,7 @@ It can be useful to use numbers at the start of your folder names so that the or
 40-base
 50-components
 60-utilities
-```
+``` 
 
 ### Wider architecture
 
@@ -101,11 +101,35 @@ We implement the following rules within each level:
 
 ## HTML class naming
 
-We follow the following rules when writing class names:
+We follow these rules when writing class names:
 
 * All classnames are lowercase
 * All words are separated by a dash/hyphen
 * BEM naming conventions are followed (read more about our [approach to writing BEM](bem-css.md))
+
+## Sass variables
+
+We follow these rules when writing Sass variable names:
+
+* Variables should be prefixed with the component name, omitting the name of the toolkit
+* Double hyphen should separate the component name prefix and the variable identifier
+
+Example Sass variables for the component Global Card:
+```Sass
+// toolkits/global/packages/global-card/scss/10-settings
+
+$card--gutter: 16px;
+$card--font-family: inherit;
+$card--font-size: 1.4rem;
+$card--spacing: $card--gutter / 2;
+$card--padding: $card--gutter;
+$card--padding-x: 24px 0;
+$card--background: transparent;
+$card--title-spacing: $card--spacing;
+$card--title-font-weight: $context--font-weight-normal;
+```
+
+If available use existing context Sass variables instead of hard coded values. For example, in the code above, `$context--font-weight-normal` was taken from the Global/Brand context instead of hard coding the value. It is good to assess what is available in the context before writing the Sass variables for your package.
 
 ### Namespaces
 
