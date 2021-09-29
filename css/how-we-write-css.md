@@ -107,6 +107,28 @@ We follow the following rules when writing class names:
 * All words are separated by a dash/hyphen
 * BEM naming conventions are followed (read more about our [approach to writing BEM](bem-css.md))
 
+## Sass variable naming
+
+We follow the following rules when writing Sass variable names:
+
+* Variables should be prefixed with the component name, omitting the name of the toolkit
+* Double hyphen should separate the component name prefix and the variable identifier
+
+Example Sass variables for the component Global Card:
+```Sass
+// toolkits/global/packages/global-card/scss/10-settings
+
+$card--gutter: 16px;
+$card--font-family: inherit;
+$card--font-size: 1.4rem;
+$card--spacing: $card--gutter / 2;
+$card--padding: $card--gutter;
+$card--padding-x: 24px 0;
+$card--background: transparent;
+$card--title-spacing: $card--spacing;
+$card--title-font-weight: $context--font-weight-normal;
+```
+
 ### Namespaces
 
 Every HTML class should be prefixed with a namespace according to the level to which it belongs:
