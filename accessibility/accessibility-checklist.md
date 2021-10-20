@@ -223,7 +223,9 @@ If you must do it, warn the user _before_ they click on the link that it'll open
 
 Resources:
 
-* [Article: Opening links in a new window](https://www.nomensa.com/blog/2011/opening-links-new-window)
+* [Article: Link Targets and 3.2.5](https://adrianroselli.com/2020/02/link-targets-and-3-2-5.html)
+* [Article: How to Stop Opening Links in New Windows without Warning](https://knowbility.org/blog/2019/links-opening-new-windows-no-warning)
+* [Article: Should links open in new windows?](https://www.smashingmagazine.com/2008/07/should-links-open-in-new-windows/)
 
 
 ## Forms
