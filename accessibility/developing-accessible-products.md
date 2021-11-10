@@ -40,9 +40,9 @@ Before handing off your product for review, you should do the following:
 
 Automated accessibility testing can be used to detect the most common accessibility problems. This is only the first step in the process; you must not rely on automated testing as your sole method of verification. The GDS Accessibility team ran an experiment in 2017 to [audit the performance of a large number of available automated accessibility testing tools](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/). They found that the highest number of errors that one tool was able to detect was 40%. The majority of the tools fell into the 20%-30% range. 
 
-At Springer Nature, we use [Pa11y](http://pa11y.org/) and [Axe](https://www.deque.com/axe/). Both of these tools can be installed as part of your Continuous Integration setup if you’re using one, or can otherwise be used on the command line. Axe can also be used in the browser. 
+At Springer Nature, we use [Pa11y](http://pa11y.org/). It incorporates the [Axe](https://www.deque.com/axe/) and [HTML_Codesniffer](https://squizlabs.github.io/HTML_CodeSniffer/) automated accessibility testing engines. Pa11y can be installed as part of your Continuous Integration setup if you’re using one, or can otherwise be used on the command line. Axe and HTML_Codesniffer can also be used in the browser. 
 
-We expect your product to be free of errors when these two tools are passed over it. You’re welcome to use other automated accessibility testing tools in addition to these. 
+We expect your product to be free of errors when passed through Pa11y. You’re welcome to use [other automated accessibility testing tools](https://github.com/springernature/frontend-playbook/blob/main/accessibility/tools.md#other-accessibility-tools) in addition. 
 
 You should also check your HTML is valid before handing off your work - you can use a service like the [WC3 validator](https://validator.w3.org/) or a browser extension. As well as reducing cross-browser bugs, this will catch some common accessibility errors.
 
