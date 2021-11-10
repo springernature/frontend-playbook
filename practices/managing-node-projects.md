@@ -213,7 +213,7 @@ You must use the `springernature` [scope](https://docs.npmjs.com/getting-started
 @springernature/project-name
 ```
 
-This allows us to choose meanunful names for our projects without risking collisions with other existing open source projects.
+This allows us to choose meaningful names for our projects without risking collisions with other existing open source projects.
 
 
 ## Dependency management tools
