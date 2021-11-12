@@ -2,8 +2,8 @@
 
 We namespace our CSS as detailed in our [how we write CSS](how-we-write-css.md) guide. For the purposes of the examples here, we will use the `component` namespace.
 
-- [General Principles](#general-principles)
-- [Code Style](#code-style)
+- [General principles](#general-principles)
+- [Code style](#code-style)
   - [Linting](#linting)
 - [Preprocessors](#preprocessors)
   - [Nesting](#nesting)
@@ -89,10 +89,10 @@ Static analysis tools like linters can flag programming errors, bugs and stylist
 
 CSS code (not compiled) should be linted with [styleLint](https://github.com/stylelint/stylelint). You can find _an example_ config file in the [config directory](config).
 
-SASS code should be linted with [sass-lint](https://github.com/sasstools/sass-lint) using the [Springer Nature 
+SASS code should be linted with [sass-lint](https://github.com/sasstools/sass-lint) using the [Springer Nature
 `sasslint-config`](https://github.com/springernature/sasslint-config-springernature). This configuration allows us to maintain consistency between different projects.
 
-You can check the [README](https://github.com/springernature/sasslint-config-springernature/blob/master/README.md) for details about installing and configuring the tools.
+You can check the [README](https://github.com/springernature/sasslint-config-springernature/blob/main/README.md) for details about installing and configuring the tools.
 
 ## Preprocessors
 
@@ -171,7 +171,7 @@ table {
 }
 ```
 
-**Breakpoints**  
+**Breakpoints**
 These should be nested within the relevant parent using `@include`.
 
 One exception to these rules is targeting a BEM element from within a nested block rule. See the [BEM documentation](bem-css.md) for more information on BEM and nesting.

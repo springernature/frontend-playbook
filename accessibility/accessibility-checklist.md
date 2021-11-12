@@ -103,7 +103,7 @@ Resources:
 
 ### Use headings correctly
 
-The [HTML5 outline algorithm](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines) can't yet be relied on to convey information to users. Freely use HTML5 sectioning elements, but use headings to define the structure of your document. In basic terms this means one H1 per page! See our [HTML markup house style](https://github.com/springernature/frontend-playbook/blob/master/markup/house-style.md#follow-the-html-4-outline-model-for-heading-levels) for more information on the outline algorithm and why we don't use multiple level one headings.
+The [HTML5 outline algorithm](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines) can't yet be relied on to convey information to users. Freely use HTML5 sectioning elements, but use headings to define the structure of your document. In basic terms this means one H1 per page! See our [HTML markup house style](https://github.com/springernature/frontend-playbook/blob/main/markup/house-style.md#follow-the-html-4-outline-model-for-heading-levels) for more information on the outline algorithm and why we don't use multiple level one headings.
 
 Use an appropriate heading for each section. You can visually hide headings, but make sure they're still accessible to screen reader users.
 
@@ -232,14 +232,14 @@ Resources:
 
 ### Labels and context
 
-* Associate all form controls with appropriate labels. 
+* Associate all form controls with appropriate labels.
 * Use fieldsets or optgroups to group related controls.
 
 ### Don't use HTML5 input placeholders for important information
 
 Input placeholders disappear when the user begins typing, may be mistaken for a value, and may not provide adequate context.
 
-Never put user instructions in input placeholders - always use a label. The HTML5 specification clarifies that a placeholder should not be used as an alternative to a label. 
+Never put user instructions in input placeholders - always use a label. The HTML5 specification clarifies that a placeholder should not be used as an alternative to a label.
 
 Resources:
 
@@ -252,15 +252,15 @@ Resources:
 
 By default, browsers remember information that users submit into input fields. The browser can then suggest possible completions for fields that the user has started typing in (autocomplete) or pre-populate certain fields when the page loads (autofill). This behaviour can be turned off in HTML with the `autocomplete="false"` attribute.
 
-Don't indiscriminately disable autocomplete for input fields. The default autocomplete and autofill behaviours are useful for many users with and without disabilities. 
+Don't indiscriminately disable autocomplete for input fields. The default autocomplete and autofill behaviours are useful for many users with and without disabilities.
 
-For example, autocomplete helps users with motor disabilities by reducing the amount of typing they need to do in input fields. Autofill can help users with cognitive disabilities by automatically filling in common information like addresses or telephone numbers. 
+For example, autocomplete helps users with motor disabilities by reducing the amount of typing they need to do in input fields. Autofill can help users with cognitive disabilities by automatically filling in common information like addresses or telephone numbers.
 
-Don't disable autocomplete on sensitive fields like username and password fields. Any security benefits of doing this is negligible compared to the benefits of users' in-browser password managers, and has a direct negative impact on accessibility. Read the note on autofill in the [secure markup guide](https://github.com/springernature/frontend-playbook/blob/master/security/secure-markup.md#a-note-on-autofill) for more on that. 
+Don't disable autocomplete on sensitive fields like username and password fields. Any security benefits of doing this is negligible compared to the benefits of users' in-browser password managers, and has a direct negative impact on accessibility. Read the note on autofill in the [secure markup guide](https://github.com/springernature/frontend-playbook/blob/main/security/secure-markup.md#a-note-on-autofill) for more on that.
 
-For fields where the user is expected to input information _about themselves_, use a valid autocomplete value if one exists - this helps make form filling software more effective. The HTML specification provides a [list of valid autocomplete values](https://www.w3.org/TR/html53/sec-forms.html#sec-autofill). 
+For fields where the user is expected to input information _about themselves_, use a valid autocomplete value if one exists - this helps make form filling software more effective. The HTML specification provides a [list of valid autocomplete values](https://www.w3.org/TR/html53/sec-forms.html#sec-autofill).
 
-Don't use autocomplete values on input fields where the user is expected to input one-time information about _somebody else_ (e.g. a teacher filling out a form with the details of a list their students). 
+Don't use autocomplete values on input fields where the user is expected to input one-time information about _somebody else_ (e.g. a teacher filling out a form with the details of a list their students).
 
 Resources:
 

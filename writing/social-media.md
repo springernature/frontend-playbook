@@ -1,11 +1,11 @@
 # Social media
 
-* [Cruft.io](#cruft-io)
-* [Posting publicly](#posting-publicly)
+- [Cruft.io](#cruftio)
+- [Posting publicly](#posting-publicly)
 
 An important part of our work as developers is not only to create quality products, but also to raise awareness of accessibility, performance and progressive enhancement best practices. This includes promoting our work and our practices in open spaces like social media, conferences, talks and other events.
 
-For open-source projects, we aim to keep our projects up to date and fix any vulnerabilities in a timely fashion. Please see our [Open Source Support page](https://github.com/springernature/frontend-playbook/blob/master/practices/open-source-support.md) for details on how we do this.
+For open-source projects, we aim to keep our projects up to date and fix any vulnerabilities in a timely fashion. Please see our [Open Source Support page](https://github.com/springernature/frontend-playbook/blob/main/practices/open-source-support.md) for details on how we do this.
 
 ## Cruft.io
 

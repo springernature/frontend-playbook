@@ -22,6 +22,8 @@ This document outlines the way we write JavaScript. It's a living style guide â€
   - [Indentation](#indentation)
   - [White space](#white-space)
   - [Variables](#variables)
+    - [Defining variables](#defining-variables)
+    - [Use of var](#use-of-var)
   - [Functions](#functions)
     - [Pure functions](#pure-functions)
   - [Operators](#operators)
@@ -43,6 +45,8 @@ This document outlines the way we write JavaScript. It's a living style guide â€
     - [Components directory](#components-directory)
     - [Vendor directory](#vendor-directory)
     - [Utils directory](#utils-directory)
+  - [Be careful when transpiling](#be-careful-when-transpiling)
+    - [`for...of loops`, a common use case](#forof-loops-a-common-use-case)
 
 ## General principles
 
@@ -142,7 +146,7 @@ Static analysis tools like linters can flag programming errors, bugs and stylist
 
 JavaScript code should be linted with [eslint](https://eslint.org/) using the [Springer Nature `eslint-config`](https://github.com/springernature/eslint-config-springernature). This configuration allows us to maintain consistency between different projects.
 
-You can check the [README](https://github.com/springernature/eslint-config-springernature/blob/master/README.md) for details about installing and configuring the tools.
+You can check the [README](https://github.com/springernature/eslint-config-springernature/blob/main/README.md) for details about installing and configuring the tools.
 
 ### Comments
 
@@ -330,7 +334,7 @@ if (foo) {
 }
 ```
 
-We use automated tools (like Snyk) to monitor the status of dependencies in our package.json files. The majority of these tools expect two spaces for indentation, not tabs. Follow this convention in your package.json files to avoid irritating merges when one of the tools raises an automatic Pull Request. 
+We use automated tools (like Snyk) to monitor the status of dependencies in our package.json files. The majority of these tools expect two spaces for indentation, not tabs. Follow this convention in your package.json files to avoid irritating merges when one of the tools raises an automatic Pull Request.
 
 ### White space
 
@@ -375,8 +379,8 @@ We do this:
 ```js
 let foo = 1;
 
-if (foo) {	
-    foo += 1;	
+if (foo) {
+    foo += 1;
 }
 ```
 
@@ -400,7 +404,7 @@ if (bar) {
 
 #### Use of var
 
-If you have to use `var` instead of `const` and `let` (because your environment doesn't support ES2015 (Node.js 4.x/[Babel](https://babeljs.io/))), you need to understand [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting). 
+If you have to use `var` instead of `const` and `let` (because your environment doesn't support ES2015 (Node.js 4.x/[Babel](https://babeljs.io/))), you need to understand [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting).
 Avoid defining variables inside loops or blocks.
 
 We do this:
@@ -451,7 +455,7 @@ const loadconfig = function(filePaths, callback) {
     // ...
 }
 
-function loadconfig(filePaths, callback) { 
+function loadconfig(filePaths, callback) {
     // ...
 }
 ```
@@ -555,7 +559,7 @@ The JavaScript in your application should consist of one or more entry points an
 - A module which implements sticky header functionality.
 
 Your module should use named exports for all exports.
- 
+
 We do this:
 
 ```js
@@ -876,7 +880,7 @@ An example utility might be a function to make a string title-case.
 
 As enticing as it can be to use modern Javascript syntax, it remains the
 developers responsibility to ensure the developer experience does not negatively
-impact the user experience, e.g. by decreasing performance.  
+impact the user experience, e.g. by decreasing performance.
 Transpiling can easily increase the JavaScript bundle size, by incorporating
 polyfills to for supported browsers.
 
@@ -912,6 +916,6 @@ it transpiles down to 23 lines, whereas the "We do this" snippet
 transpiles down to 5 lines.  If you multiply this by the amount of
 occurences of `for...of` in your code base, this can quickly get out of control.
 
-Further reading: 
+Further reading:
 - [Transpiled for-of Loops are Bad for the Client, by Dave Ruppert](https://daverupert.com/2017/10/for-of-loops-are-bad/).
 - [Avoiding Babelâ€™s Production Bloat](https://webreflection.medium.com/avoiding-babels-production-bloat-d53eea2e1cbf)
