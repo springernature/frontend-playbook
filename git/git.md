@@ -1,10 +1,10 @@
 # Git
 
-* [Repositories](#repositories)
-* [Working with branches](#working-with-branches)
-* [Commit messages](#commit-messages)
-* [Pull requests](#pull-requests)
-* [Versioning](#versioning)
+- [Repositories](#repositories)
+- [Working with branches](#working-with-branches)
+- [Commit messages](#commit-messages)
+- [Pull requests](#pull-requests)
+- [Versioning](#versioning)
 
 ## Repositories
 
@@ -27,7 +27,7 @@ frontend-project-name
 
 ## Working with branches
 
-Create a local branch based off master.
+Create a local branch based off the default branch. For this example, let's assume the default branch is called `main`.
 
 Follow [Continous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html) and [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) principles as much as is reasonable (given the constraints of your team). Branches should be:
 
@@ -37,10 +37,10 @@ Follow [Continous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.ht
   * They should be releasable independently.
 * As limited in scope as possible. Large pull requests are hard to review and can be painful to merge. Also, once merged & a bug is traced back to that commit, they are much harder to debug.
 
-When your work is almost complete, `git rebase master` or merge -- especially if other people are working on the same code. Avoid merge pain by;
+When your work is almost complete, `git rebase main` or merge -- especially if other people are working on the same code. Avoid merge pain by;
 
 * _talking to your team_ to divide work across files sensibly & co-ordinate merges if required.
-* pull origin master & rebase or merge often.
+* `git pull origin main` and rebase or merge often.
 * make sure branches are short-lived! (Did we mention that branches should be short-lived?)
 
 When the unit of work is complete and tests pass, stage your changes and commit them.
@@ -72,10 +72,10 @@ Once your work is committed, submit a [pull request](https://help.github.com/art
 We use pull requests to review code. [GitHub's pull request reviews feature](https://help.github.com/articles/about-pull-request-reviews/) blocks merging of code until it's been reviewed. It may or may not be enabled on a repository, at the discretion of the individual team. You should submit your pull requests for review regardless of whether or not this feature is enabled.
 
 1. Ask for a code review in Slack.
-2. A colleague (or multiple colleagues) other than the author will review the pull request. They will make comments and ask questions directly in the GitHub web interface. See the [Code review guide](../practices/code-review.md) to see what reviewers are looking for. 
+2. A colleague (or multiple colleagues) other than the author will review the pull request. They will make comments and ask questions directly in the GitHub web interface. See the [Code review guide](../practices/code-review.md) to see what reviewers are looking for.
 3. When satisfied, the reviewer(s) will approve the pull request, so that your code can be merged.
 4. Give your code one last visual check in github.
-5. Double-check the commit message -- and any commit message detail -- then **"Squash & Merge" commits via github**. We do not want lots of "work in progress" commits cluttering the commit history on master. _One unit of work, one commit._
+5. Double-check the commit message -- and any commit message detail -- then **"Squash & Merge" commits via github**. We do not want lots of "work in progress" commits cluttering the commit history on the default branch. _One unit of work, one commit._
 
 Your work is now merged, good job! Delete your remote branch, and delete your local branch too, if you want.
 

@@ -1,13 +1,13 @@
 # Code reviews
 
-* [Why](#why)
-* [What to look out for](#what-to-look-out-for)
+- [Why do them?](#why-do-them)
+- [What to look out for](#what-to-look-out-for)
 
 Code Review, or Peer Code Review, is the act of having your code checked by others for mistakes, errors, and omissions (e.g. missing tests). Like pair-programming (which we also support), it accelerates and streamlines software development.
 
 While we can support "traditional" Code Reviews, [we routinely review via **pull requests**](../git/git.md#pull-requests). These are communicated in the `#frontend-pr` Slack channel, and managed via GitHub. Discussion should happen in the GitHub comments, not Slack.
 
-Requesters merge their own changes when they're ready. Keep your fingers off that tempting green merge button. 
+Requesters merge their own changes when they're ready. Keep your fingers off that tempting green merge button.
 
 
 ## Why do them?
@@ -57,4 +57,4 @@ Requesters merge their own changes when they're ready. Keep your fingers off tha
   * Code that introduces potential vulnerabilities. Suggest testing with [Snyk](https://snyk.io) and/or other tools.
 
 * **Syntax**
-  * Syntactic inconsistencies the [linter](https://github.com/springernature/frontend-playbook/blob/master/practices/house-style.md#linting) did not catch.
+  * Syntactic inconsistencies the [linter](https://github.com/springernature/frontend-playbook/blob/main/practices/house-style.md#linting) did not catch.
