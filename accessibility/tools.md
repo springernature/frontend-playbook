@@ -64,7 +64,7 @@ On mobile, VoiceOver is built-in on iOS devices, and TalkBack is usually built-i
 - Squizlabs also have an [HMTML_Codesniffer bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) for quick tests. 
 - The Axe engine comes as a [browser extension](https://www.deque.com/axe/browser-extensions/) for Chrome, Firefox, and Edge, and as an [NPM module](https://github.com/dequelabs/axe-core) that you can integrate with your build, like Pa11y. 
 - WebAim's [WAVE extension](https://wave.webaim.org/extension/) for Chrome and Firefox evaluates accessibility in place on the page. 
-- The [ARC Toolkit](https://www.paciellogroup.com/toolkit/) by TPGi is a useful extension for Chrome that (among other things) can detect semantic/structural issues, and problematic use of ARIA. 
+- The [ARC Toolkit](https://www.tpgi.com/arc-platform/arc-toolkit/) by TPGi is a useful extension for Chrome that (among other things) can detect semantic/structural issues, and problematic use of ARIA. 
 
 ### Tools for manually analysing web pages
 
