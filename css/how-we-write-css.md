@@ -71,9 +71,9 @@ global-popup
      js
          global-popup.js
      scss
-         10 settings
+         10-settings
              global-popup.scss
-         50 components
+         50-components
              global-popup.scss
 ```
 
@@ -85,9 +85,9 @@ global-popup
      js
          popup-expander.js
      scss
-         10 settings
+         10-settings
              popup-settings.scss
-         50 components
+         50-components
              popup.scss (a mandatory file to import)
              popup-expander.scss (a mandatory file to import)
 ```
@@ -100,9 +100,9 @@ global-popup
      js
          popup.js
      scss
-         10 settings
+         10-settings
              popup.scss
-         50 components
+         50-components
              popup.scss
 ```
 
