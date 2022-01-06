@@ -57,6 +57,55 @@ It can be useful to use numbers at the start of your folder names so that the or
 60-utilities
 ``` 
 
+### File naming
+
+Name your files as the component name with the namespace subtracted.
+
+Keep your scss or js in one file if it is all mandatory. This reduces the number of imports consumers will need to make in their applications and prevents any confusion where readers may think something is optional.
+
+We _don't_ do this:
+```
+global-popup
+     __tests__
+         global-popup.spec.js
+     js
+         global-popup.js
+     scss
+         10 settings
+             global-popup.scss
+         50 components
+             global-popup.scss
+```
+
+We _don't_ do this:
+```
+global-popup
+     __tests__
+         popup-expander.spec.js
+     js
+         popup-expander.js
+     scss
+         10 settings
+             popup-settings.scss
+         50 components
+             popup.scss (a mandatory file to import)
+             popup-expander.scss (a mandatory file to import)
+```
+
+We do this:
+```
+global-popup
+     __tests__
+         popup.spec.js
+     js
+         popup.js
+     scss
+         10 settings
+             popup.scss
+         50 components
+             popup.scss
+```
+
 ### Wider architecture
 
 The way that CSS is written, and particularly the use of **levels**, is designed to fit into a wider componentised architecture. We aim to create shared components that can be used across products and across brands. These components can contain one or more of CSS, Javascript, and templates.
