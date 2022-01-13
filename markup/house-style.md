@@ -63,7 +63,7 @@ We *don't* do this:
 
 ### Implicitly close void elements
 
-Explicitly closing void elements (e.g. `<br />`) is not invalid in HTML 5.  However, explicitly closing void elements is an artifact of XML serialization, not HTML 5's "html" serialization, so may introduce cognitive dissonance in authors given that we are authoring HTML not XHMTL or XML.  Additionally, explicitly closing void elements was invalid in older versions of HTML.
+Explicitly closing void elements (e.g. `<br />`) is not invalid in HTML 5.  However, explicitly closing void elements is an artifact of XML serialization, not HTML 5's "html" serialization, so may introduce cognitive dissonance in authors given that we are authoring HTML 5.  Additionally, explicitly closing void elements was invalid in older versions of HTML.
 
 Conversely, it may be the case that their omission impacts authors more used to writing XML, or HTML with an XML serialization. However as far as machines are concerned, they increase page weight with zero benefit.
 
