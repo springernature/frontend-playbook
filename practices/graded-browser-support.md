@@ -13,7 +13,7 @@ This page describes the way that we support different browsers and browser versi
 
 ## Our criteria for browser support
 
-We follow the principles of [Progressive Enhancement](progressive-enhancement.md) and implement it at the broadest level using using a variant of [Yahoo's Graded Browser support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) (a concept originally conceived by [Nate Koechley](https://web.archive.org/web/20060304042737/http://developer.yahoo.net/yui/articles/gbs/gbs.html)).
+We follow the principles of [Progressive Enhancement](progressive-enhancement.md) and implement it at the broadest level, using a variant of [Yahoo's Graded Browser support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) (a concept originally conceived by [Nate Koechley](https://web.archive.org/web/20060304042737/http://developer.yahoo.net/yui/articles/gbs/gbs.html)).
 
 Our approach to browser support works by classifying all versions of all browsers into one of two levels:
 
