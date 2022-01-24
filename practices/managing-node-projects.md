@@ -1,24 +1,24 @@
 # Managing Node.js-based projects and dependencies
 
-- [Installing dependencies](#installing-dependencies)
-  - [`npm install`](#npm-install)
-  - [`npm ci`](#npm-ci)
-  - [How to specify the version of node to use](#how-to-specify-the-version-of-node-to-use)
-    - [`nvm` usage](#nvm-usage)
-    - [Automatically running `nvm use`](#automatically-running-nvm-use)
-  - [Should I check in `package-lock.json` to version control?](#should-i-check-in-package-lockjson-to-version-control)
-  - [Managing changes to the `package-lock.json` file](#managing-changes-to-the-package-lockjson-file)
-- [Specifying versions of dependencies](#specifying-versions-of-dependencies)
-  - [Run-time dependencies](#run-time-dependencies)
-    - [Examples](#examples)
-  - [Development dependencies](#development-dependencies)
-    - [Examples](#examples-1)
-  - [Classifying "built" run-time dependencies](#classifying-built-run-time-dependencies)
-- [Configuration](#configuration)
-- [Publishing projects on NPM](#publishing-projects-on-npm)
-  - [Naming projects](#naming-projects)
-- [Dependency management tools](#dependency-management-tools)
-- [Handling dependencies from third parties](#handling-dependencies-from-third-parties)
+* [Installing dependencies](#installing-dependencies)
+  * [`npm install`](#npm-install)
+  * [`npm ci`](#npm-ci)
+  * [How to specify the version of node to use](#how-to-specify-the-version-of-node-to-use)
+    * [`nvm` usage](#nvm-usage)
+    * [Automatically running `nvm use`](#automatically-running-nvm-use)
+  * [Should I check in `package-lock.json` to version control?](#should-i-check-in-package-lockjson-to-version-control)
+  * [Managing changes to the `package-lock.json` file](#managing-changes-to-the-package-lockjson-file)
+* [Specifying versions of dependencies](#specifying-versions-of-dependencies)
+  * [Run-time dependencies](#run-time-dependencies)
+    * [Examples](#examples)
+  * [Development dependencies](#development-dependencies)
+    * [Examples](#examples-1)
+  * [Classifying "built" run-time dependencies](#classifying-built-run-time-dependencies)
+* [Configuration](#configuration)
+* [Publishing projects on NPM](#publishing-projects-on-npm)
+  * [Naming projects](#naming-projects)
+* [Open source dependencies](#open-source-dependencies)
+* [Handling dependencies from third parties](#handling-dependencies-from-third-parties)
 
 The following guide describes how we use node and manage package dependencies in [Springer Nature Node.js-based projects](https://github.com/springernature?utf8=%E2%9C%93&q=&type=public&language=javascript).
 
@@ -77,7 +77,7 @@ which run `nvm` and switch node versions for you when `cd`-ing into a directory.
 Yes. There are two main reasons:
 
 1. Predictable builds, as discussed above.
-1. Dependency analysis tools (such as `npm audit`, GitHub Security Alerts and `snyk`) can spot insecure dependencies anywhere in the dependency tree by analysing the `package-lock.json` file. These tools can force patch version updates of insecure dependencies in the tree, without waiting for third-party package maintainers to release new packages with updated dependencies. This wouldn't be possible without a `package-lock.json` and is a huge benefit.
+1. Dependency analysis tools (such as `npm audit`, GitHub Security Alerts and `Snyk`) can spot insecure dependencies anywhere in the dependency tree by analysing the `package-lock.json` file. These tools can force patch version updates of insecure dependencies in the tree, without waiting for third-party package maintainers to release new packages with updated dependencies. This wouldn't be possible without a `package-lock.json` and is a huge benefit.
 
 The downside is it requires all developers to use `nvm` and `npm ci` to install dependencies, otherwise there will be constant conflicts in the `package-lock.json` file.
 
@@ -215,16 +215,13 @@ You must use the `springernature` [scope](https://docs.npmjs.com/getting-started
 
 This allows us to choose meaningful names for our projects without risking collisions with other existing open source projects.
 
+## Open source dependencies
 
-## Dependency management tools
+Open source dependencies may contain security vulnerabilities, so every Node.js project must be monitored using one or more tools:
 
-[Snyk](https://snyk.io/) is a tool to find, fix and monitor known vulnerabilities in Node.js applications. It also supports Ruby, Java, and other languages and platforms.
-
-Snyk not only provides alerts when a new vulnerability is detected in one of the dependencies that we use, but also remediation options.
-
-[Using components with known vulnerabilities caused 24% of the top 50 breaches](https://snyk.io/blog/owasp-top-10-breaches/). Keeping dependencies up-to-date is therefore crucial to maintain our standards of security.
-
-Every node.js project must be added to the Springer Nature organisation in Snyk so it can be monitored for security vulnerabilities.
+* [npm audit](https://docs.npmjs.com/cli/v8/commands/npm-audit) checks the current version of the installed packages in your project against known vulnerabilities reported on the public npm registry. If it discovers a security issue, it reports it. It's part of [npm](https://docs.npmjs.com/cli/v8/commands/npm) so it can be used on any Node.js project.
+* [Snyk](https://snyk.io/) is a tool to find, fix and monitor known vulnerabilities in Node.js applications. It also supports Ruby, Java, and other languages and platforms. It's currently free for open source projects.
+* [WhiteSource](https://www.whitesourcesoftware.com/) offers several tools that can be used to scan for known vulnerabilities on both open and closed source repos. You can request access to it from the cybersecurity team.
 
 ## Handling dependencies from third parties
 
