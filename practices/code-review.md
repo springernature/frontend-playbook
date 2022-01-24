@@ -1,7 +1,7 @@
 # Code reviews
 
-- [Why do them?](#why-do-them)
-- [What to look out for](#what-to-look-out-for)
+* [Why do them?](#why-do-them)
+* [What to look out for](#what-to-look-out-for)
 
 Code Review, or Peer Code Review, is the act of having your code checked by others for mistakes, errors, and omissions (e.g. missing tests). Like pair-programming (which we also support), it accelerates and streamlines software development.
 
@@ -54,7 +54,7 @@ Requesters merge their own changes when they're ready. Keep your fingers off tha
 
 * **Security**
 
-  * Code that introduces potential vulnerabilities. Suggest testing with [Snyk](https://snyk.io) and/or other tools.
+  * Code that adds dependencies that contain known vulnerabilities. Suggest testing with tools like [npm audit](https://docs.npmjs.com/cli/v8/commands/npm-audit), [Snyk](https://snyk.io) (for open source repos) and/or [White Source](https://www.whitesourcesoftware.com/) (for private repos).
 
 * **Syntax**
   * Syntactic inconsistencies the [linter](https://github.com/springernature/frontend-playbook/blob/main/practices/house-style.md#linting) did not catch.
