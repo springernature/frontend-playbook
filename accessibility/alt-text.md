@@ -23,7 +23,7 @@
 
 ## What is alt text? 
 
-It's text used to describe the appearance and function of an image on a page, as a textual alternative to non-text content. You don't normally see it when you're browsing page as a sighted web user. 
+It's text used to describe the appearance and function of an image on a page, a textual alternative to non-text content. You don't normally see it when you're browsing a page as a sighted web user. 
 
 ## What's it for? 
 
