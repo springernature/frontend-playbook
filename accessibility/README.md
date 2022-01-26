@@ -9,5 +9,6 @@ Accessibility **must** be a core consideration in all products that we build.
 * [Accessibility in emails](accessibility-in-emails.md)
 * [Effective colour contrast](effective-colour-contrast.md)
 * [Common remediations](common-remediations/README.md)
+* [Alt text](alt-text.md)
 
 [Main table of contents](../README.md#table-of-contents)
