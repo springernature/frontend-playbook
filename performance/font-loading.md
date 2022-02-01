@@ -62,6 +62,6 @@ If you have to load a font the conventional way using a `<link>` then consider u
 
 `<link rel="preload" href="HardingText-Regular-Web.woff2" as="font" type="font/woff2" crossorigin>`
 
-### Self host webfonts if possible
+### Self host webfonts
 
-Some webfonts prevent you from self hosting because of their licensing so check that first. But if you can, consider self hosting a font. This will potentially reduce the possible points of failure or poor page performance, and it will open up more options to you in terms of possible font loading implementations.
+Any webfonts you use must be self-hosted - avoid using a font-hosting service. Relying on external services for fonts adds another possible point of failure, risks poor page performance, and importantly, it risks passing personally identifiable information from your users to those font-hosting services.
