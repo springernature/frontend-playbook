@@ -57,7 +57,7 @@ Always use the maximum compression level (9).
 
 ## Optimisation of images
 
-Images can frequently make up a significant amount of a page's size, so it's important to optimise them before they are delivered to the users in order to ensure that our sites stay performant and we're not preventing users from accessing the site due to the increased page weight. Common optimisations include:
+Images can contribute significantly to a page's size, so it's important to optimise them before they are delivered to the user. This helps ensure that our sites stay performant and we're not preventing anyone from accessing them due to increased page weight. Common optimisations include:
 
 * Making sure that you save images using an [sRGB](https://en.wikipedia.org/wiki/SRGB) ICC profile. Although modern browsers support images with ICCv2 profiles like [Adobe RGB](https://en.wikipedia.org/wiki/Adobe_RGB_color_space) and even [ProPhoto RGB](https://en.wikipedia.org/wiki/ProPhoto_RGB_color_space), colour space issues are extremely difficult to debug. Saving the images as sRGB and removing the colour profile is encouraged.
 * Stripping the metadata from the image. This includes things like EXIF data, Copyright information (unless required), GPS data, colour profiles, thumbnails (in JPEGs), comments, and others.
