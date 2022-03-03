@@ -30,7 +30,7 @@ Most best practices described in this document apply to both categories unless o
 * Use [MP4](https://en.wikipedia.org/wiki/MPEG-4_Part_14) for any kind of animated images.
 * Do not use [GIFs](https://en.wikipedia.org/wiki/GIF). For animated images, the file size of GIF files, usually an order of magnitude bigger than MP4s of similar quality, may be a barrier preventing users from accessing our content, specially in markets where slower connections and low performing devices are more common. For static images with transparency, an 8-bit PNG can be used to deliver an indexed colour image, with binary transparency, [at a smaller size than a GIF](https://helpx.adobe.com/photoshop-elements/using/optimizing-images-gif-or-png.html).
 
-A number of more modern image formats can be also used to deliver images:
+A number of more modern image formats can also be used to deliver images:
 
 * [WEBP](https://en.wikipedia.org/wiki/WebP) is a replacement for JPEG, PNG, and GIFs, but improvements to encoders like mozjpeg means that WEBP file sizes are only marginally smaller than JPEG. It's supported by almost all major browsers ([Safari supports it partially](https://caniuse.com/webp)) and can be used by providing another better supported format as a fallback.
 * [AVIF](https://en.wikipedia.org/wiki/AVIF) is suitable for static and animated images, and supports both lossy and lossless compression with better compression efficiency and better detail preservation than other formats. It's [supported by Chrome and Firefox](https://caniuse.com/avif), and can be used by providing another better supported format as a fallback. Compression (encoding) of images can be significantly slower than with other formats.
