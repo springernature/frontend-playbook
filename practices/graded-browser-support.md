@@ -29,15 +29,16 @@ There are two motivators for approaching browser support like we do:
 
 This is the current list of browser versions and their corresponding support level:
 
-| Browser         | Enhanced           | Core               |
-| --------------- |:------------------:| ------------------:|
-| Chrome          | 76+                | < 76               |
-| Edge            | 79+                | < 79               |
-| Firefox         | 67+                | < 67               |
-| Opera           | 62+                | < 62               |
-| Safari iOS      | 13+                | < 13               |
-| Safari MacOS    | 12.1+              | < 12.1             |
-| Android Webview | 91+                | < 91               |
+| Browser           | Enhanced           | Core               |
+| ---------------   |:------------------:| ------------------:|
+| Chrome            | 76+                | < 76               |
+| Edge              | 79+                | < 79               |
+| Firefox           | 67+                | < 67               |
+| Opera             | 62+                | < 62               |
+| Safari iOS        | 13+                | < 13               |
+| Safari MacOS      | 12.1+              | < 12.1             |
+| Android Webview   | 91+                | < 91               |
+| Internet Explorer | NA                 | all                |
 
 ### Grey area browsers
 
