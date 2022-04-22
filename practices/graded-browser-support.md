@@ -11,7 +11,7 @@ This page describes the way that we support different browsers and browser versi
 
 ## Our criteria for browser support
 
-We follow the principles of [Progressive Enhancement](progressive-enhancement.md) and implement it at the broadest level using using a variant of [Yahoo's Graded Browser support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) (a concept originally conceived by [Nate Koechley](https://web.archive.org/web/20060304042737/http://developer.yahoo.net/yui/articles/gbs/gbs.html).
+We follow the principles of [Progressive Enhancement](progressive-enhancement.md) and implement it at the broadest level, using a variant of [Yahoo's Graded Browser support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) (a concept originally conceived by [Nate Koechley](https://web.archive.org/web/20060304042737/http://developer.yahoo.net/yui/articles/gbs/gbs.html)).
 
 Our approach to browser support works by classifying all versions of all browsers into one of two levels:
 
@@ -51,7 +51,7 @@ We serve these grey area browsers the Enhanced version of a site, so they will r
 
 ## Implementing browser support
 
-Our primary approach to classifying a browser support level is the "[Cutting the Mustard (CTM)](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard)" progressive enhancement technique, based upon the principles developed by the BBC.
+Our primary approach to classifying a browser support level is the "[Cutting the Mustard (CTM)](https://responsivenews.tumblr.com/post/18948466399/cutting-the-mustard)" progressive enhancement technique, based upon the principles developed by the BBC.
 
 This approach works by using feature detection in order to determine which browsers will receive the full Enhanced experience (i.e. they "[cut the mustard](https://en.wiktionary.org/wiki/cut_the_mustard)") and which ones will receive only the Core experience.
 
@@ -91,7 +91,7 @@ As of June 2018, all our sites are served through HTTPS using the [TLS 1.2 crypt
 
 The way that we restrict the connection to our sites when not using TLS 1.2 doesn't impact the way that we design and build our sites and our commitment to an approach based on progressive enhancement techniques.
 
-#### .browerslist
+#### .browserslist
 
 While we do not test [grey-area browsers](#grey-area-browsers), we still work towards the best experience for all our users. CSS for grey-area browsers should therefore be prefixed using [Autoprefixer](https://github.com/postcss/autoprefixer). Automatically adding vendor prefixes allows us to increase support for these browsers with little extra effort.
 
