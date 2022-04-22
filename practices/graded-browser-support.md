@@ -99,6 +99,7 @@ The following `.browserslistrc` file ([a standard way of sharing target browser 
 
 ```nanorc
 defaults
+not ie 11
 ff > 66
 chrome > 75
 safari > 11
