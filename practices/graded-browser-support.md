@@ -7,8 +7,6 @@ This page describes the way that we support different browsers and browser versi
 * [Implementing browser support](#implementing-browser-support)
   * [Implementation details](#implementation-details)
   * [Caveats](#caveats)
-    * [Internet Explorer 10 support](#internet-explorer-10-support)
-    * [Internet Explorer and CSS Grid](#internet-explorer-and-css-grid)
     * [Browsers without TLS 1.2 support](#browsers-without-tls-1.2-support)
 
 ## Our criteria for browser support
@@ -31,16 +29,16 @@ There are two motivators for approaching browser support like we do:
 
 This is the current list of browser versions and their corresponding support level:
 
-| Browser         | Enhanced                        | Core               |
-| --------------- |:-------------------------------:| ------------------:|
-| Chrome          | latest stable, latest stable -1 | < 29               |
-| Edge            | latest stable, latest stable -1 | n/a                |
-| Firefox         | latest stable, latest stable -1 | < 29               |
-| IE              | 11                              | < 11               |
-| Opera           | latest stable                   | < 16               |
-| Safari iOS      | latest stable, latest stable -1 | < 7                |
-| Safari MacOS    | latest stable, latest stable -1 | < 6.1              |
-| Android Webview | latest stable                   | < 30 (Android 4.4) |
+| Browser           | Enhanced           | Core               |
+| ---------------   |:------------------:| ------------------:|
+| Chrome            | 76+                | < 76               |
+| Edge              | 79+                | < 79               |
+| Firefox           | 67+                | < 67               |
+| Opera             | 62+                | < 62               |
+| Safari iOS        | 13+                | < 13               |
+| Safari MacOS      | 12.1+              | < 12.1             |
+| Android Webview   | 91+                | < 91               |
+| Internet Explorer | NA                 | all                |
 
 ### Grey area browsers
 
@@ -66,7 +64,7 @@ We then use CSS media queries to detect capable browsers. Unlike the approach de
 To load the full experience only in Enhanced browsers we implement logic in the media attribute of the `<link>` element that identifies the main stylesheet, loading the stylesheet only in browsers that recognise the properties of that media query:
 
 ```html
-<link rel="stylesheet" href="enhanced.css" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)" id="enhanced-stylesheet">
+<link rel="stylesheet" href="enhanced.css" media="only print, only all and (prefers-color-scheme: no-preference), only all and (prefers-color-scheme: light), only all and (prefers-color-scheme: dark)" id="enhanced-stylesheet">
 ```
 
 This technique is documented in [Cutting the Mustard with Media queries](https://www.sitepoint.com/cutting-the-mustard-with-css-media-queries/). The specific media queries we use are based upon [CSS Only Mustard Cut](https://github.com/Fall-Back/CSS-Mustard-Cut), with a preference towards combining them into one rather than separating them out into multiple `<link>` elements. Note that you **cannot** add line breaks to the media query if they are combined.
@@ -87,20 +85,6 @@ We couple the loading of JavaScript to the loading of the enhanced CSS. We use t
 
 ### Caveats
 
-#### Internet Explorer 10 support
-
-As of January 2017, we consider Internet Explorer 10 a Core browser. This is mainly due to its lack of support for certain modern features plus very low usage numbers. IE10 also stopped receiving security updates in January 2016 from its manufacturer.
-
-Unfortunately, both IE10 and IE11 respond to the same CSS media queries, which means that it is not possible to use a CSS-only method of differentiating between both browsers.
-
-This means that even if we consider IE10 a Core browser, we currently have to serve IE10 users Enhanced code.
-
-#### Internet Explorer and CSS Grid
-
-[CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) has been available in all evergreen browsers [for some time now](https://caniuse.com/#feat=css-grid). It offers a much-simplified way of working with layout and offers new design opportunities.
-
-However, CSS Grid is not available in the full standardised form in Internet Explorer 10 or 11, both of which are currently supported *de facto* as Enhanced browsers (see above). There is an easy to use solution: Autoprefixer. As of version 9.3.1 we are now able to reliably generate vendor prefixes for IE10 and IE11 by enabling Autoprefixer's grid option. There are a few minor caveats such as ensuring you always define `grid-template-columns` with `grid-template-areas` together if you want `grid-column-gap` to be prefixed correctly. These are well documented [on CSS Tricks](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer).
-
 #### Browsers without TLS 1.2 support
 
 As of June 2018, all our sites are served through HTTPS using the [TLS 1.2 cryptographic protocol](https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2) or newer. This means that users of browsers that don't support TLS 1.2 (e.g. Safari on iOS 4) will not be able to access our sites. Browsers that have support for TLS 1.2 not enabled by default (e.g. Internet Explorer on Windows 7) will not be able to access our sites, unless they change their default settings. We consider that this is required in order to keep our users secure.
@@ -115,10 +99,10 @@ The following `.browserslistrc` file ([a standard way of sharing target browser 
 
 ```nanorc
 defaults
-ie 10-11
-ff > 29
-chrome > 29
-safari > 6
-edge > 1
-opera > 15
+not ie 11
+ff > 66
+chrome > 75
+safari > 11
+edge > 78
+opera > 61
 ```
