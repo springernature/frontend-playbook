@@ -1,14 +1,16 @@
 # Markup
 
-This document outlines the way we write markup and why. See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style. 
+This document outlines the way we write markup and why. See our [house style document](../practices/house-style.md) to understand the rationale behind enforcement of style.
 
 - [HTML vs XHTML](#html-vs-xhtml)
-	- [Validation](#validation)
-	- [Do not omit optional end tags](#do-not-omit-optional-end-tags)
-	- [Implicitly close void elements](#implicitly-close-void-elements)
-	- [Form submit controls](#form-submit-controls)
+  - [We author HTML 5](#we-author-html-5)
+  - [Validation](#validation)
+  - [Do not omit optional end tags](#do-not-omit-optional-end-tags)
+  - [Implicitly close void elements](#implicitly-close-void-elements)
+    - [Closing elements in embedded documents](#closing-elements-in-embedded-documents)
+  - [Form submit controls](#form-submit-controls)
 - [Semantics](#semantics)
-	- [Follow the HTML 4 outline model for heading levels](#follow-the-html-4-outline-model-for-heading-levels)
+  - [Follow the HTML 4 outline model for heading levels](#follow-the-html-4-outline-model-for-heading-levels)
 - [Templates](#templates)
 
 ## HTML vs XHTML
@@ -31,11 +33,11 @@ As such it seems beneficial to choose HTML 5 over XHTML.
 
 ### Validation
 
-Do what is reasonable to ensure your documents [validate](https://validator.w3.org/). 
+Do what is reasonable to ensure your documents [validate](https://validator.w3.org/).
 
 Invalid markup results in authors relying on all clients to do what they intended, not what they instructed.  Clients regularly disagree on how to interpret our instructions, yet alone our intentions, so to promote consistency of execution you must do what you can to ensure your HTML is valid.
 
-Additionally, invalid HTML violates WCAG 2.1 Success Criterion [4.1.1 Parsing](https://www.w3.org/TR/WCAG21/#parsing) (Level A), and areas where your product falls short must be noted on your product's VPAT. It's probably easier just to make sure your HTML is valid in the first place. 
+Additionally, invalid HTML violates WCAG 2.1 Success Criterion [4.1.1 Parsing](https://www.w3.org/TR/WCAG21/#parsing) (Level A), and areas where your product falls short must be noted on your product's VPAT, if it has one. It's probably easier just to make sure your HTML is valid in the first place.
 
 ### Do not omit optional end tags
 
@@ -61,7 +63,7 @@ We *don't* do this:
 
 ### Implicitly close void elements
 
-Explicitly closing void elements (e.g. `<br />`) is not invalid per se in HTML 5.  However, explicitly closing void elements is an artifact of XML serialization, not HTML 5's "html" serialization, so may introduce cognitive dissonance in many authors given that we are authoring html.  Additionally, explicitly closing void elements was invalid in older versions of HTML.
+Explicitly closing void elements (e.g. `<br />`) is not invalid in HTML 5.  However, explicitly closing void elements is an artifact of XML serialization, not HTML 5's "html" serialization, so may introduce cognitive dissonance in authors given that we are authoring HTML 5.  Additionally, explicitly closing void elements was invalid in older versions of HTML.
 
 Conversely, it may be the case that their omission impacts authors more used to writing XML, or HTML with an XML serialization. However as far as machines are concerned, they increase page weight with zero benefit.
 
@@ -76,6 +78,35 @@ We *don't* do this:
 ```html
 <meta charset="UTF-8" />
 ```
+
+#### Closing elements in embedded documents
+
+Sometimes we need to embed content from different markup languages in HTML, such as
+[SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) or
+[MathML](https://developer.mozilla.org/en-US/docs/Web/MathML/).
+
+When embedding these markup languages in HTML, there is no need to specify an namespace on the root element as it will be provided by the HTML parser. See also the [SVG specs](https://svgwg.org/svg2-draft/struct.html#Namespace) and [Using MathML](https://developer.mozilla.org/en-US/docs/Web/MathML/Authoring#using_mathml).
+
+Because the namespace is provided by the HTML parser, we still do not need to explicitly close void elements.
+
+We do this:
+
+```html
+<svg viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="50" fill="green">
+</svg>
+```
+
+We *don't* do this:
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect x="10" y="10" width="80" height="80" fill="green" />
+</svg>
+```
+
+Conversely, if you were authoring for an XML document (including XHTML, EPUB) you would include the namespace and would therefore have to explicitly close void elements.
+
 ### Form submit controls
 
 In modern browsers, `button type="submit"` provides a superset of functionality when compared to `input type=submit`.
@@ -121,7 +152,7 @@ We *don't* do this:
 **Caution**: There is a shortcoming for Internet Explorer when using the `button`
 element. Indeed it submits the text within the `button` element as its value in
 the form data rather than the value of its `value` attribute.
-This becomes problematic when using multiple submit buttons in a single form with each a different value and purpose. 
+This becomes problematic when using multiple submit buttons in a single form with each a different value and purpose.
 
 Here are some suggestions to work around these:
 
@@ -147,7 +178,7 @@ When HTML 5 was first announced, it brought with it a plethora of new semantic e
 
 Unfortunately, this new document outline model was never well supported by browsers or assistive technologies. We considered sticking with the HTML 5 document outline model used in conjunction with setting ARIA attributes (`role="heading" aria-level="3"`) but this rather defeated any benefit from using the more localised heading levels, and was also poorly supported in some key assistive technologies.
 
-The HTML 5 document outline algorithm specification has been removed in HTML 5.1. You should continue to use the older HTML 4 style heading levels in conjunction with the new HTML 5 semantic elements. Do not use multiple H1 headings on a single page. 
+The HTML 5 document outline algorithm specification has been removed in HTML 5.1. You should continue to use the older HTML 4 style heading levels in conjunction with the new HTML 5 semantic elements. Do not use multiple H1 headings on a single page.
 
 See the HTML specification for [the current recommendation for use in all HTML 5 documents](https://www.w3.org/TR/html5/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements).
 
