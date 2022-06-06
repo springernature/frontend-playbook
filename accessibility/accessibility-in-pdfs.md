@@ -2,6 +2,7 @@
 
 - [A warning](#a-warning)
 - [Is PDF the right choice?](#is-pdf-the-right-choice)
+  -  [What does the evidence from user experience experts say?](#what-does-the-evidence-from-user-experience-experts-say)
 - [Creating accessible PDF documents](#creating-accessible-pdf-documents)
 - [Creation from a word processor (e.g. Microsoft Word or Google Docs with Grackle)](#creation-from-a-word-processor-eg-microsoft-word-or-google-docs-with-grackle)
   - [Headings](#headings)
@@ -26,7 +27,13 @@ If you’re concerned about the accessibility of your PDF documents, then you sh
 
 PDF is not the best document format for accessibility. It will always contain accessibility issues. PDF is a fixed dimension format intended for printing, and some user accessibility requirements --such as reflow, text resizing or changing text spacing-- are not supported in PDF format.
 
-We recommend that you avoid using PDF if you can, and prioritise accessible alternatives instead, such as HTML or [EPUB](https://www.w3.org/publishing/epub32/). As a reference, please read [why UK Government content should be published in HTML and not PDF](https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/).
+We recommend that you avoid using PDF if you can, and prioritise accessible alternatives instead, such as HTML or [EPUB](https://www.w3.org/publishing/epub32/). 
+
+### What does the evidence from user experience experts say?
+
+The UK government published guidance in 2018 advising government digital service providers that [content should be published in HTML and not PDF](https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/).
+
+Veteran user experience consultancy Nielsen Norman Group has been arguing against publishing content on the web in PDF format since the format's inception. In 2020, they published [a recap on the current state of PDF usability](https://www.nngroup.com/articles/pdf-unfit-for-human-consumption/). 
 
 If you don’t have a choice, then you must purposefully build your PDFs to be accessible - **it doesn’t happen automatically**. 
 
