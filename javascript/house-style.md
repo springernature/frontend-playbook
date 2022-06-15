@@ -696,7 +696,7 @@ export {init};
 
 #### Events for unrelated modules
 
-Use the [`createEvent` module](https://github.com/springernature/frontend-toolkits/tree/master/toolkits/global/packages/global-javascript#createevent) from the Springer Nature Elements toolkit. This module functions as a namespaced wrapper around Javascript `customEvent`.
+Use the [`createEvent` module](https://github.com/springernature/frontend-toolkits/tree/master/context/brand-context/default/js#createevent) from the Springer Nature Elements toolkit. This module functions as a namespaced wrapper around Javascript `customEvent`.
 
 One limitation of using the existing infrastructure that Javascript provides — the ability to create an `Event` and consume using `addEventListener` — instead of a [PubSub](https://addyosmani.com/blog/understanding-the-publishsubscribe-pattern-for-greater-javascript-scalability/) style implementation, is that you have to hang the event handler off a `DOM Element` or the `window`.
 
