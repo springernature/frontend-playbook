@@ -157,6 +157,6 @@ However, you MUST be careful with this - not everyone is comfortable with having
 ##### Further reading on headshot considerations
 
 * [Writing great alt text: Emotion matters](https://jakearchibald.com/2021/great-alt-text/)
-* [Thoughts on skin tone and text descriptions](https://tink.uk/thoughts-on-skin-tone-and-text-descriptions/), by Léonie Watson
+* [Thoughts on skin tone and text descriptions](https://tink.uk/thoughts-on-skin-tone-and-text-descriptions.md-notes-on-synthetic-speech/), by Léonie Watson
 
 
