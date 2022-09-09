@@ -154,7 +154,7 @@ Components can be large or small, and map to particular UI elements. Components 
 
 ## Classes vs Mixins
 
-By requiring that utilities have both a class and an associated `@mixin`, we are allowing simple UI elmements to be constructed by using a traditional OOCSS approach - by combining component and utility classes on html elements - or by using a more componentised approach that focuses on creating UI components that make extensive use of mixins.
+By requiring that utilities have both a class and an associated `@mixin`, we are allowing simple UI elements to be constructed by using a traditional OOCSS approach - by combining component and utility classes on html elements - or by using a more componentised approach that focuses on creating UI components that make extensive use of mixins.
 
 We can think of it like a spectrum with a class based OOCSS/utility approach at one end, and a componentised approach at the other, with all projects sitting somewhere along that spectrum.
 
