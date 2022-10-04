@@ -17,12 +17,14 @@ Examples may include (but are not limited to):
 * Changing the background colour of an input field to red to indicate an error without also providing an error message
 * Changing the colour of an icon or text string to indicate some kind of status
 * Using a graph or a chart where colour is the only way to indicate different aspects of the data
+* Removing underlines from hyperlinks, leaving just colour to differentiate them from surrounding text
 
 #### Who's affected by the problem?
 
 * Screen reader users
 * Users with colour blindness
 * Low-vision users who use high contrast modes
+* Users with monochromatic displays or displays with inaccurate colour reproduction
 * All users if a stylesheet containing colour information fails to load for any reason (network problems, server issues, etc.)
 
 #### Why's it a problem?
