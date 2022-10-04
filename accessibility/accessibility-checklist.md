@@ -167,11 +167,12 @@ Resources:
 
 ### Don't convey information with colour alone
 
-Use text equivalents or semantic emphasis like `<strong>` or `<em>` when conveying important information to users.
+Use text equivalents or semantic emphasis like `<strong>` or `<em>` when conveying important information to users. No hyperlinks may be indicated by text color alone. Except in special cases, such as options in navigation menus, use an underline.
 
 Resources:
 
 * [Article: Don’t use color alone to convey meaning](http://universalusability.com/access_by_design/color/alone.html)
+* [Why you should (almost) always underline your links](https://www.tempertemper.net/blog/why-you-should-almost-always-underline-your-links)
 
 
 ## Interactivity
