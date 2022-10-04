@@ -49,3 +49,8 @@ In charts or graphs:
 * Consider using a monochrome colour palette
 * Use different [relative luminance](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance) for different data points
 * Use different fill patterns in addition to solid colour areas
+
+For links:
+
+* Never indicate a link with `color` alone
+* Use `text-decoration: underline` (automatically applied by user agents) in all but special cases, such as navigation options
