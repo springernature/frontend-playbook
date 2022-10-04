@@ -167,7 +167,7 @@ Resources:
 
 ### Don't convey information with colour alone
 
-Use text equivalents or semantic emphasis like `<strong>` or `<em>` when conveying important information to users. Except in special cases, such as options in navigation menus, do not remove underlines from hyperlinks.
+Use text equivalents or semantic emphasis like `<strong>` or `<em>` when conveying important information to users. No hyperlinks may be indicated by text color alone. Except in special cases, such as options in navigation menus, use an underline.
 
 Resources:
 
