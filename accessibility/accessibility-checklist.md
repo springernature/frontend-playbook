@@ -48,6 +48,10 @@ To help them out you can add a "Skip Navigation" link to the top of each page wh
 
 The Elements Design System includes [https://elements.springernature.com/springernature/components/global-skip-link](a skip link implementation) that you can use in your own project(s). 
 
+Resources:
+
+* [Article: WebAIM's overview of Skip Navigation techniques](https://webaim.org/techniques/skipnav/)
+
 
 ### Declare a language attribute
 
