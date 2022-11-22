@@ -12,7 +12,7 @@ You can get involved in discussions in issues and pull requests. Sometimes we ne
 
 ### Opening and assigning issues
 
-[Our issues list](https://github.com/springernature/frontend/issues) is half to-do list, half discussion. Not every issue will produce a pull request, and some issues may produce multiple pull requests.
+[Our issues list](https://github.com/springernature/frontend-playbook/issues) is half to-do list, half discussion. Not every issue will produce a pull request, and some issues may produce multiple pull requests.
 
 Create an issue if you notice that there's something missing from the Playbook. If you'd like to discuss the issue with others, use a label like "collaboration", "help wanted", or "question". If you intend to open a pull request to resolve the issue you've created, consider assigning the issue to yourself.
 
