@@ -28,7 +28,7 @@ Thus the impact of disability is radically changed on the Web because the Web re
 
 It is essential that the Web be accessible in order to provide equal access and equal opportunity to people with diverse abilities. Indeed, the [UN Convention on the Rights of Persons with Disabilities](https://www.un.org/development/desa/disabilities/) recognises access to information and communications technologies, including the Web, as a basic human right.
 
-Accessibility supports social inclusion for people with disabilities as well as others, such as older people, people in rural areas, and people in developing countries.
+Accessibility supports social inclusion for people with disabilities as well as others, such as older people, people in rural areas, and people in developing economies.
 
 ### Why do we care about accessibility?
 
@@ -91,7 +91,7 @@ You can arrange your own user testing, but it's better to engage a third party l
 
 #### Resources
 
-You can find a [list of accessibility-related resources](../learning/accessibility.md) in the [Learning section of the Playbook](../learning/README.md).
+You can find a [list of accessibility-related resources](../learning/web-accessibility.md) in the [Learning section of the Playbook](../learning/README.md).
 
 #### Tools
 
