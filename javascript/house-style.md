@@ -198,8 +198,8 @@ const uniqueIDs = new Set([1, 2, 1, 2]);
 #### JS Doc
 
 Although your JavaScript code should be self-documenting, we highly recommend
-that you to document your JavasScript application or library using the
-Standardised [JS Doc](https://jsdoc.app/) format.
+that you document your JavaScript application or library using the
+Standardised [JSDoc](https://jsdoc.app/) format.
 
 This format is leveraged by the Language Server Protocol (LSP), which is
 supported in numerous editors and Integrated Development Environments (IDE)
@@ -207,14 +207,14 @@ nowadays.
 Thanks to LSP you get short lines of documentation right from the
 invocation context. This helps you code quickly, while avoiding obvious errors.
 
-For functions for instance, you get:
+For a function, for example, you get:
 - What it is intended to do
 - The type, default value, and description of its parameters
 - Which parameters are optional
 - The function returned value type and description
 
 Bonus: There are tools to generate a documentation website for your application
-or library if it uses JS Doc.
+or library if it uses JSDoc.
 
 A concrete and furnished example:
 
@@ -228,10 +228,10 @@ A concrete and furnished example:
  * @param {string} [filters.subject] - A string to match up the subject of the book.
  * @param {number} [filters.publicationyear] - Year the book was published.
  *
- * @returns {object[]} list of books from that library matching the optionally given filters.
+ * @returns {object[]} List of books from that library matching the optionally given filters.
  */
-function getbooks(library, limit = 10, filters = {}) {
-  // ...
+function getBooks(library, limit = 10, filters = {}) {
+    // ...
 }
 ```
 
