@@ -195,7 +195,7 @@ We don't do this:
 const uniqueIDs = new Set([1, 2, 1, 2]);
 ```
 
-#### JS Doc
+#### JSDoc
 
 Although your JavaScript code should be self-documenting, we highly recommend
 that you document your JavaScript application or library using the
@@ -220,7 +220,7 @@ A concrete and furnished example:
 
 ```js
 /**
- * Get a list of books from a given library.
+ * Get a list of book ids from a given library.
  *
  * @param {number} library - Id of the library.
  * @param {number} [limit=10] - Optional maximum of books expected to be returned, defaults to 10.
@@ -228,9 +228,9 @@ A concrete and furnished example:
  * @param {string} [filters.subject] - A string to match up the subject of the book.
  * @param {number} [filters.publicationyear] - Year the book was published.
  *
- * @returns {object[]} List of books from that library matching the optionally given filters.
+ * @returns {number[]} List of book ids matching the optionally given filters.
  */
-function getBooks(library, limit = 10, filters = {}) {
+function getListOfBookIdsFromLibrary(library, limit = 10, filters = {}) {
     // ...
 }
 ```
