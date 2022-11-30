@@ -34,8 +34,8 @@ A number of more modern image formats can also be used to deliver images:
 
 * [WEBP](https://en.wikipedia.org/wiki/WebP) is a replacement for JPEG, PNG, and GIFs, but improvements to encoders like mozjpeg means that WEBP file sizes are only marginally smaller than JPEG. It's supported by almost all major browsers ([Safari supports it partially](https://caniuse.com/webp)) and can be used only as an enhancement to another better supported format.
 * [AVIF](https://en.wikipedia.org/wiki/AVIF) is suitable for static and animated images, and supports both lossy and lossless compression with better compression efficiency and better detail preservation than other formats. It's [supported by Chrome and Firefox](https://caniuse.com/avif), and can be used only as an enhancement to another better supported format. Compression (encoding) of images can be significantly slower than with other formats.
-* [JPEG-XL](https://en.wikipedia.org/wiki/JPEG_XL) is in the process of becoming a standard and supports both lossy and lossless compression. It's [more efficient than other formats while being usually faster](https://cloudinary.com/blog/how_jpeg_xl_compares_to_other_image_codecs
-) both when compressing and decompressing than JPEG. [No browser officially supports it](https://caniuse.com/jpegxl) at the time of writing.
+* [JPEG-XL](https://en.wikipedia.org/wiki/JPEG_XL) supports both lossy and lossless compression. It's [more efficient than other formats while being usually faster](https://cloudinary.com/blog/how_jpeg_xl_compares_to_other_image_codecs
+) both when compressing and decompressing than JPEG. Unfortunately, as of November 2022 [no browser officially supports it](https://caniuse.com/jpegxl) and [Google has announced that it's removing preliminary support from Chrome](https://www.theregister.com/2022/10/31/jpeg_xl_axed_chrome/), in favour of AVIF.
 
 ## Image formats
 
@@ -86,4 +86,4 @@ Additionally, future improvements to these tools will result in improvements to 
 
 ## Comparing the quality of images
 
-When comparing the output of two different image compression formats, algorithms, or quality settings, [tools that calculate the similarity between images](https://github.com/kornelski/dssim) with algorithms like [SSIM](http://en.wikipedia.org/wiki/Structural_similarity) and DSSIM can be used to get an objective idea of the trade-off between quality and byte size.
+When comparing the output of two different image compression formats, algorithms, or quality settings, [tools that calculate the similarity between images](https://github.com/kornelski/dssim) with algorithms like [SSIM](http://en.wikipedia.org/wiki/Structural_similarity) and [DSSIM](https://github.com/kornelski/dssim) can be used to get an objective idea of the trade-off between quality and byte size.
