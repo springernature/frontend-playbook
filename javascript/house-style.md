@@ -220,7 +220,7 @@ A concrete and furnished example:
 
 ```js
 /**
- * Get a list of books from given a library.
+ * Get a list of books from a given library.
  *
  * @param {number} library - Id of the library.
  * @param {number} [limit=10] - Optional maximum of books expected to be returned, defaults to 10.
