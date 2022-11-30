@@ -86,4 +86,4 @@ Additionally, future improvements to these tools will result in improvements to 
 
 ## Comparing the quality of images
 
-When comparing the output of two different image compression formats, algorithms, or quality settings, [tools](https://github.com/kornelski/dssim) that calculate the similarity between images with algorithms like [SSIM](http://en.wikipedia.org/wiki/Structural_similarity) and DSSIM can be used to get an objective idea of the trade-off between quality and byte size.
+When comparing the output of two different image compression formats, algorithms, or quality settings, [tools that calculate the similarity between images](https://github.com/kornelski/dssim) with algorithms like [SSIM](http://en.wikipedia.org/wiki/Structural_similarity) and DSSIM can be used to get an objective idea of the trade-off between quality and byte size.
