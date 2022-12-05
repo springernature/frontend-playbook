@@ -195,6 +195,46 @@ We don't do this:
 const uniqueIDs = new Set([1, 2, 1, 2]);
 ```
 
+#### JSDoc
+
+Although your JavaScript code should be self-documenting, we highly recommend
+that where necessary, you document your JavaScript application or library using the
+standardised [JSDoc](https://jsdoc.app/) format.
+
+This format is leveraged by the Language Server Protocol (LSP), which is
+supported in numerous editors and Integrated Development Environments (IDE)
+nowadays.  
+Thanks to LSP you get short lines of documentation right from the
+invocation context. This helps you code quickly, while avoiding obvious errors.
+
+For a function, for example, you get:
+- What it is intended to do
+- The type, default value, and description of its parameters
+- Which parameters are optional
+- The function returned value type and description
+
+Bonus: There are tools to generate a documentation website for your application
+or library if it uses JSDoc.
+
+A concrete and furnished example:
+
+```js
+/**
+ * Get a list of book ids from a given library.
+ *
+ * @param {number} library - Id of the library.
+ * @param {number} [limit=10] - Optional maximum of books expected to be returned, defaults to 10.
+ * @param {object} [filters={}] - Optional filters, defaults to no filters.
+ * @param {string} [filters.subject] - A string to match up the subject of the book.
+ * @param {number} [filters.publicationyear] - Year the book was published.
+ *
+ * @returns {number[]} List of book ids matching the optionally given filters.
+ */
+function getListOfBookIdsFromLibrary(library, limit = 10, filters = {}) {
+    // ...
+}
+```
+
 ### Asynchronicity
 
 Many operations in JavaScript (both in the browser and Node.js) are asynchronous. If you need to access the result of an async operation, the API which you are using may offer the result to you through a callback that you provide.
