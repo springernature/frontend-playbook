@@ -198,8 +198,8 @@ const uniqueIDs = new Set([1, 2, 1, 2]);
 #### JSDoc
 
 Although your JavaScript code should be self-documenting, we highly recommend
-that you document your JavaScript application or library using the
-Standardised [JSDoc](https://jsdoc.app/) format.
+that where necessary, you document your JavaScript application or library using the
+standardised [JSDoc](https://jsdoc.app/) format.
 
 This format is leveraged by the Language Server Protocol (LSP), which is
 supported in numerous editors and Integrated Development Environments (IDE)
