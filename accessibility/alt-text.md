@@ -55,7 +55,7 @@ Remember what you're trying to achieve - someone who can't see the image needs t
 
 * Don’t say ‘Image of…’ or ‘Picture of…’ etc.  
 * Don’t need to repeat information already given in the text on the page.  
-* Keep it short – 125 characters or less if possible (some screen-readers cut off alt text after this point).
+* Be as succinct as possible but include details as needed. There is no hard character limit despite some guidance stating otherwise, [a screen reader won't truncate alt text.](https://yatil.net/blog/there-is-no-character-limit-for-alt-text)
 * Copyright info, image source, or other extra information should go in the caption, not the alt text.
 * Context is important e.g. it may be appropriate to note if an image is a photo or an artwork, whether a person is old or young, if the sky is stormy or clear, if that is relevant to the content. 
 * Think about how you would describe the image to a person who can’t see it.
