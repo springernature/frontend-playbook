@@ -171,6 +171,40 @@ table {
 }
 ```
 
+**Media queries**. We nest media queries and position the media queries after the CSS declarations for that block.
+
+We _don't_ do this:
+```scss
+.c-header__journal-title {
+    @include media-query('md') {
+        font-size: 1.25rem;
+    }
+    
+    @include media-query('lg') {
+        font-size: 1.5rem;
+    }
+    
+    font-size: 1rem;
+    color: #000;
+}
+```
+
+We do this:
+```scss
+.c-header__journal-title {
+    font-size: 1rem;
+    color: #000;
+    
+    @include media-query('md') {
+        font-size: 1.25rem;
+    }
+    
+    @include media-query('lg') {
+        font-size: 1.5rem;
+    }
+}
+```
+
 **Breakpoints**
 These should be nested within the relevant parent using `@include`.
 
