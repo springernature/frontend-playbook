@@ -3,22 +3,25 @@
 This page describes the way that we support different browsers and browser versions when building sites at Springer Nature.
 
 * [Our criteria for browser support](#our-criteria-for-browser-support)
+  * [Rationale](#rationale)
 * [Browser support list](#browser-support-list)
+  * [Grey area browsers](#grey-area-browsers)
 * [Implementing browser support](#implementing-browser-support)
   * [Implementation details](#implementation-details)
-  * [Caveats](#caveats)
-    * [Browsers without TLS 1.2 support](#browsers-without-tls-1.2-support)
+  * [.browserslist](#browserslist)
+* [Caveats](#caveats)
+  * [Browsers without TLS 1.2 support](#browsers-without-tls-12-support)
 
 ## Our criteria for browser support
 
-We follow the principles of [Progressive Enhancement](progressive-enhancement.md) and implement it at the broadest level, using a variant of [Yahoo's Graded Browser support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) (a concept originally conceived by [Nate Koechley](https://web.archive.org/web/20060304042737/http://developer.yahoo.net/yui/articles/gbs/gbs.html)).
+We follow the principles of [Progressive Enhancement](progressive-enhancement.md) and implement it using a variant of [Yahoo's Graded Browser support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) (a concept originally conceived by [Nate Koechley](https://web.archive.org/web/20060304042737/http://developer.yahoo.net/yui/articles/gbs/gbs.html)).
 
 Our approach to browser support works by classifying all versions of all browsers into one of two levels:
 
-* **"Core"** is our universal support level. We serve all browsers at this level server-side rendered semantic HTML and minimal CSS. Essential user journey's must be accessible at this level.
-* **"Enhanced"** is our support level for modern and/or [evergreen browsers](https://www.techopedia.com/definition/31094/evergreen-browser). As well as the Core HTML and CSS, we serve these browsers JavaScript and more advanced CSS, giving them a more interactive and visually pleasing product experience. Bugs at this level are addressed with high priority.
+* **"Core"** is our universal support level. We serve all browsers at this level server-side rendered semantic HTML and minimal CSS. Essential user journeys must be accessible at this level.
+* **"Enhanced"** is our support level for modern and/or [evergreen browsers](https://www.techopedia.com/definition/31094/evergreen-browser). As well as the Core HTML and CSS, we serve these browsers JavaScript and more advanced CSS, giving them a more interactive and visually pleasing product experience.
 
-## Rationale
+### Rationale
 
 There are two motivators for approaching browser support like we do:
 
@@ -38,16 +41,11 @@ This is the current list of browser versions and their corresponding support lev
 | Safari iOS        | 13+                | < 13               |
 | Safari MacOS      | 12.1+              | < 12.1             |
 | Android Webview   | 91+                | < 91               |
-| Internet Explorer | NA                 | all                |
+| Internet Explorer | N/A                | all                |
 
 ### Grey area browsers
 
-Some browser versions exist in the grey area outside and/or between Enhanced and Core levels. For example:
-
-* Old versions of an evergreen browser: a user has turned off auto-updates, or their upgrade opportunities are limited by their device or administrator.
-* Nightly or developer versions of evergreen browsers.
-
-We serve these grey area browsers the Enhanced version of a site, so they will receive the full experience. Due to resourcing implications we do not specifically test our products against them - however we do expect them to work (because, for example, [we strive to provide compatible CSS via Autoprefixer](#browserslist)). Over time, analysis of errors and usage patterns may cause some browsers in this grey area to be deliberately changed to either Enhanced or Core, to allow for better support.
+Nightly or developer versions of evergreen browsers exist in the grey area outside Enhanced and Core levels. We serve these grey area browsers the Enhanced version of a site, so they will receive the full experience. Due to resourcing limitations we do not specifically test our products against them - however we do expect them to work (because, for example, [we strive to provide compatible CSS via Autoprefixer](#browserslist)). Over time, analysis of errors and usage patterns may cause some browsers in this grey area to be deliberately changed to either Enhanced or Core, to allow for better support.
 
 ## Implementing browser support
 
@@ -83,15 +81,8 @@ We couple the loading of JavaScript to the loading of the enhanced CSS. We use t
 })();
 ```
 
-### Caveats
 
-#### Browsers without TLS 1.2 support
-
-As of June 2018, all our sites are served through HTTPS using the [TLS 1.2 cryptographic protocol](https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2) or newer. This means that users of browsers that don't support TLS 1.2 (e.g. Safari on iOS 4) will not be able to access our sites. Browsers that have support for TLS 1.2 not enabled by default (e.g. Internet Explorer on Windows 7) will not be able to access our sites, unless they change their default settings. We consider that this is required in order to keep our users secure.
-
-The way that we restrict the connection to our sites when not using TLS 1.2 doesn't impact the way that we design and build our sites and our commitment to an approach based on progressive enhancement techniques.
-
-#### .browserslist
+### .browserslist
 
 While we do not test [grey-area browsers](#grey-area-browsers), we still work towards the best experience for all our users. CSS for grey-area browsers should therefore be prefixed using [Autoprefixer](https://github.com/postcss/autoprefixer). Automatically adding vendor prefixes allows us to increase support for these browsers with little extra effort.
 
@@ -106,3 +97,11 @@ safari > 11
 edge > 78
 opera > 61
 ```
+
+## Caveats
+
+### Browsers without TLS 1.2 support
+
+As of June 2018, all our sites are served through HTTPS using the [TLS 1.2 cryptographic protocol](https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2) or newer. This means that users of browsers that don't support TLS 1.2 (e.g. Safari on iOS 4) will not be able to access our sites. Browsers that have support for TLS 1.2 not enabled by default (e.g. Internet Explorer on Windows 7) will not be able to access our sites, unless they change their default settings. We consider that this is required in order to keep our users secure.
+
+The way that we restrict the connection to our sites when not using TLS 1.2 doesn't impact the way that we design and build our sites and our commitment to an approach based on progressive enhancement techniques.
