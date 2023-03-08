@@ -4,7 +4,8 @@
 * [Why we use it](#why-we-use-it)
 * [Implementation](#implementation)
 * [Common concerns](#common-concerns)
-  * [Why do we care about those crusty old browsers? I'm building a ✨Web App✨, not a web page!](#why-do-we-care-about-those-crusty-old-browsers-im-building-a-✨web-app✨-not-a-web-page)
+  * [How many users turn JavaScript off, anyway?](#how-many-users-turn-javascript-off-anyway)
+  * [OK, so how often does JavaScript fail? How can we test for that?](#ok-so-how-often-does-JavaScript-fail-how-can-we-test-for-that)
   * [So you're saying I can't use JavaScript?](#so-youre-saying-i-cant-use-javascript)
 * [Find out more:](#find-out-more)
 
@@ -42,15 +43,23 @@ With JavaScript we acknowledge that, given our [browser support chart](graded-br
 
 ## Common concerns
 
-### Why do we care about those crusty old browsers? I'm building a ✨Web App✨, not a web page!
+### How many users turn JavaScript off anyway?
 
-First of all; a web app is a web page, put your sparkles away. Secondly, why do you think it's only crusty old browsers who might not be able to render all of your bells and whistles? What about a shiny modern browser that has had its connection terminated before it downloaded your CSS/JS/other when its owners train plunged into a tunnel? Or what happens when one of your third-party advertising/analytics/other scripts causes a JavaScript exception that prevents further execution on the page? Progressive enhancement is not just a solution for clients with poor support for more modern technologies, it's also a failsafe for EVERY client which guarantees your site/application is as useful as it can be to everyone all the time.
+Not very many, but this usually isn't the question you really need to be asking. A more useful, subtly different, question is "how many users don't have JavaScript available?" The reasons for JavaScript delivery failure are varied. In 2015, Stuart Langridge published an ["Everyone has JavaScript, right?" flowchart](https://www.kryogenix.org/code/browser/everyonehasjs.html). The web is a fast-moving environment, but as of writing in 2023, everything on the flowchart is still relevant. All users will have times when JavaScript fails, for all kinds of reasons, and mostly they're not in control of why and when it happens. The active choice to turn JavaScript off (which people still do), is fairly far down the list of reasons for not having working JavaScript.
+
+Progressive enhancement is not just a solution for clients who have deliberately deprived themselves of JavaScript, it's also a failsafe for EVERY client which guarantees your site/application is as useful as it can be to everyone all the time.
+
+### OK, so how often does JavaScript fail? How can we test for that?
+
+Usually this question comes from the Extreme Programming thinking of "[You Ain't Gonna Need It](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)" - the desire to only implement features when they're necessary. However, as the previous section ("How many users turn JavaScript off anyway?") makes clear, JavaScript delivery failure happens to everyone, some of the time. Robustness is a core requirement for our websites and applications, not an optional feature. Stuart Langridge illustrates why you need to think in terms of JavaScript failing for a % of _visits_, not _users_.
+
+At this stage, you may be wondering why I've not answered the question directly. How many, exactly? That's because it's hard to test for - if there's no JavaScript, there's no tracking. For this reason, not very many people have tried it. Those who do include [Yahoo! back in 2010](https://web.archive.org/web/20130622121741/https://developer.yahoo.com/blogs/ydn/many-users-JavaScript-disabled-14121.html), and [the UK Government Digital Service in 2013](https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/). These groups found a failure rate of about 1.1% to 1.3% of requests. Again, this is across all users and devices, of all capacities and capabilities, not just "people who turned JavaScript off", or "people using old browsers".
 
 ### So you're saying I can't use JavaScript?
 
-No, that's a misrepresentation of the purpose of progressive enhancement. There are many situations where you will _need_ to use JavaScript to achieve certain objectives. One example is the use of ARIA - you can't meaningfully use the `aria-expanded` property to indicate that a component progressively discloses information without JavaScript, because you need to be able to update the DOM depending on user activity. 
+No, that's a misrepresentation of the purpose of progressive enhancement. There are many situations where you will _need_ to use JavaScript to achieve certain objectives. One example is the use of ARIA - you can't meaningfully use the `aria-expanded` property to indicate that a component progressively discloses information without JavaScript, because you need to be able to update the DOM depending on user activity.
 
-Use JavaScript defensively, on the assumption that there will frequently be times where it's not available. And since we're on the subject, [ARIA should be a progressive enhancement too](https://developer.paciellogroup.com/blog/2018/06/short-note-on-progressive-aria/). 
+Use JavaScript defensively, on the assumption that there will frequently be times where it's not available. And since we're on the subject, [ARIA should be a progressive enhancement too](https://developer.paciellogroup.com/blog/2018/06/short-note-on-progressive-aria/).
 
 
 ## Find out more
