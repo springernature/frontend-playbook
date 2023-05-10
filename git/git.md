@@ -1,6 +1,6 @@
 # Git
 
-- [Repository names](#repositories)
+- [Repository names](#repository-names)
 - [Working with branches](#working-with-branches)
 - [Commit messages](#commit-messages)
 - [Pull requests](#pull-requests)
