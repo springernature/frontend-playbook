@@ -70,7 +70,7 @@ Our expectation is that Section 508 will be updated to reference WCAG 2.1 in due
 
 You're expected to be aware of the [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG21/) and to adhere to their recommendations. You're also expected to understand the foundational four principles of accessibility (Perceivable, Operable, Understandable, Robust) and to be able to apply them in your work. Be alert to the possibility of regressions that can't be detected by software.
 
-The companion document [Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/) (Editor's Draft) explains what each of the success criterion in WCAG 2.1 actually means. You might also find the [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/) (Editor's Draft) useful when building features. 
+The companion document [Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/) explains what each of the success criterion in WCAG 2.1 actually means. You might also find the [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/) useful when building features. 
 
 W3C WAI have published a [quick reference document for WCAG](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0). It describes the WCAG success criteria and shows techniques and failures for each. We've also created [a simple accessibility checklist](accessibility-checklist.md), to help you become familiar with the guidelines/standards, and to aid you when manually assessing pages.
 
