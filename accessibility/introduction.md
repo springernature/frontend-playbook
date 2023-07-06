@@ -40,6 +40,8 @@ Accessibility supports social inclusion for people with disabilities as well as 
 
 Accessible sites can be used by more people - including people with disabilities, people using mobile devices, older people, people with low literacy, people who are not fluent in the language of the site, people with low bandwidth connections to the Internet, people with older technologies, and new and infrequent web users.
 
+Microsoft’s Persona Spectrum provides examples of permanent, temporary and situational disabilities. It demonstrates how accessible solutions can positively impact a larger number of people. ([Download Microsoft’s Inclusive 101 Guidebook (PDF)](https://inclusive.microsoft.design/tools-and-activities/Inclusive101Guidebook.pdf) for more information on inclusive design.)
+
 ![Microsoft illustration of how designing for permanent disabilities helps many people facing temporary or situational disability](images/microsoft-accessibility.jpg)
 
 (image &copy; Microsoft)
