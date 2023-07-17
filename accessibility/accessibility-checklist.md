@@ -69,7 +69,6 @@ We do this:
 Resources:
 
 * [Article: Using the HTML lang attribute](https://developer.paciellogroup.com/blog/2016/06/using-the-html-lang-attribute/)
-* [Samurai errata GL4: Clarify natural-language usage](http://www.wcagsamurai.org/erratas/errata-listing/#GL4)
 
 
 ### Use a logical source order
