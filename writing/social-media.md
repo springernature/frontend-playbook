@@ -11,8 +11,6 @@ For open-source projects, we aim to keep our projects up to date and fix any vul
 
 [Cruft.io](http://cruft.io) is a blog run by a group of developers, testers, sysadmins, scrum masters and product owners at Springer Nature. Anyone can post there and the instructions can be found in the [project's wiki (internal)](https://github.com/springernature/cruft/).
 
-Cruft has also a [@cruftio Twitter account](https://twitter.com/cruftio) that is used to promote its blog posts. We're also using @cruftio to promote the release of new versions of our open-source projects.
-
 ## Posting publicly
 
 Before publishing anything ensure that:

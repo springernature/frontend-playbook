@@ -28,7 +28,7 @@ Stereotyping means presuming a range of things about people based on their perso
 
 Language matters. It remains a common practice in IT to use terminology like slave/master or blacklist/whitelist that reference slavery or segregation.
 
-There's always a better way to label the relationship between two entities. In the case of databases, choosing more descriptive terms like replica/primary, secondary/primary, follower/leader or standby/active instead of slave/master not only removes the reference to slavery, but also [makes it easier to understand](https://twitter.com/geeksam/status/1038081079641395201) for people not familiar with the terminology.
+There's always a better way to label the relationship between two entities. In the case of databases, choosing more descriptive terms like replica/primary, secondary/primary, follower/leader or standby/active instead of slave/master not only removes the reference to slavery, but also makes it easier to understand for people not familiar with the terminology.
 
 Similarly, in the case of blacklist/whitelist there are alternatives that better show their purpose to people not familiar with the terminology, like denylist/allowlist, blocklist/allowlist or block/permit. Choose a term that is appropriate and descriptive for your particular app or feature.
 

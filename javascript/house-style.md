@@ -269,7 +269,7 @@ ajax('https://example.com').then(response => response.url).then(url => {
 })
 ```
 
-Promises still use callbacks. To write synchronous-style code which performs asynchronous operations, you can use [async/await](https://twitter.com/addyosmani/status/756204943527129090). The above example can be rewritten to use `async/await`.
+Promises still use callbacks. To write synchronous-style code which performs asynchronous operations, you can use [async/await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await). The above example can be rewritten to use `async/await`.
 
 ```js
 const {url} = await ajax('https://example.com');
