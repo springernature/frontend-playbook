@@ -28,7 +28,7 @@ Ideally this should be specified in both the HTTP header and a `meta` element, i
 
 Links leak the context of the opening window to the opened window, via the `window.opener` object. This allows the opened window to alter the opening window via JavaScript, regardless of whether the window is opened via JavaScript or simply a `target="_blank"` attribute. Exploiting this [context leaking is a security problem](https://mathiasbynens.github.io/rel-noopener/).
 
-As of 2023, recent versions of all major browsers treat `target=_blank` links as `noopener` by default. However, we still recommend including this attribute because as an HTML feature it will be served to older browsers, and is cheap to implement.
+As of 2020, recent versions of all major browsers treat `target=_blank` links as `noopener` by default. However, we still recommend including this attribute because as an HTML feature it will be served to older browsers, and is cheap to implement.
 
 ## Use Subresource Integrity
 
