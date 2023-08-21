@@ -37,4 +37,4 @@ Because of this, it is fine (in many cases highly _desired_) to propose somethin
 
 A bot notifies the #frontend Slack room when work is merged, because changes to the playbook are relevant to all Frontend developers at Springer Nature.
 
-We hope the wider development community will be interested in the work we have committed here. We welcome feedback and involvement from all - so feel free to link to your latest contribution on Twitter, or your social media platform of choice.
+We hope the wider development community will be interested in the work we have committed here. We welcome feedback and involvement from all - so feel free to link to your latest contribution on your social media platform of choice.
