@@ -21,6 +21,12 @@ Read this excellent [article by Nicholas C. Zakas](https://www.smashingmagazine.
 
 Read the [markup guide](../markup/house-style.md), the [JavaScript guide](../javascript/house-style.md) and the [CSS guide](../css/house-style.md) to understand our house style in these technologies. You should also familiarise yourself with our [Git](../git/git.md) strategies. The team you're deployed to may also have its own strategies in addition to these.
 
+### Indentation
+
+With regards to accessibility, we favour using `tab`s for indentation, rather than `space`s. Using `tab`s, every person can define their preferred _render width_ as they like. This also means, that we discourage setting any `tab width` settings in any shared configuration file, as that's a display thing, not a code thing.
+Please be aware that visually impaired people might depend on either a large indentation width for being able to easily detect code blocks, or on small indentation because they must use a very large font size. These examples are taken from [a comment on Reddit](https://www.reddit.com/r/javascript/comments/c8drjo/nobody_talks_about_the_real_reason_to_use_tabs/).
+At the same time, we must respect file types that demand the use of spaces for indentation, [for example YAML (`*.yml`) files](https://docs.fileformat.com/programming/yaml/#syntax), or Python with it's built-in linter.
+
 ### Linting
 
 We lint our CSS, JavaScript, and templates written with DustJS. This helps us to keep our different codebases consistent, avoid common logic and implementation errors, and lets us concentrate on solving problems instead of formatting.
