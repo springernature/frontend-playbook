@@ -11,7 +11,7 @@ This document outlines the way we write markup and why. See our [house style doc
   - [Form submit controls](#form-submit-controls)
 - [Semantics](#semantics)
   - [Follow the HTML 4 outline model for heading levels](#follow-the-html-4-outline-model-for-heading-levels)
-- [Templating language](#templates)
+- [Templating language](#templating-language)
 
 ## HTML vs XHTML
 
