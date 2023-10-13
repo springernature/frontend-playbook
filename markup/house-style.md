@@ -11,7 +11,7 @@ This document outlines the way we write markup and why. See our [house style doc
   - [Form submit controls](#form-submit-controls)
 - [Semantics](#semantics)
   - [Follow the HTML 4 outline model for heading levels](#follow-the-html-4-outline-model-for-heading-levels)
-- [Templates](#templates)
+- [Templating language](#templates)
 
 ## HTML vs XHTML
 
@@ -212,6 +212,10 @@ We *don't* do this:
 </footer>
 ```
 
-## Templates
+## Templating language
 
-Templates should, where possible, be written using [DustJS](http://www.dustjs.com/) or [Handlebars](http://handlebarsjs.com/). Use of linting is encouraged to prevent common errors. For projects using DustJS  [Dustmite](https://www.npmjs.com/package/dustmite) should be used. Dustmite will prevent any syntax errors. It also enforces consistent style in your template code and can catch more subtle errors like usage of the potentially unsafe `{@if}` dust helper.
+Templates should be written using [Handlebars](http://handlebarsjs.com/).
+
+Handlebars works in the browser, Node, and has been ported to the JVM-based languages we use server-side.
+
+This enables us to share the same templates across the variety of environments we commonly use. Also Handlebars is a well-documented, stable technology with "good enough" compatibility between implementations (although handlebars helpers are an exception).
