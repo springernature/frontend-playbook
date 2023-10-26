@@ -104,7 +104,7 @@ Note the default sandbox is very strict (e.g. no JavaScript, forms cannot be sub
 Either the [`data`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/data)
  or [`type`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/type)
  attribute for the  [`object` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object)
-  element must be specified. You are encouraged to always ensure `type` is specified.
+  must be specified. You are encouraged to always ensure `type` is specified.
 
 The value should be a valid [MIME type](https://developer.mozilla.org/en-US/docs/Glossary/MIME_type), also know as a "content type".
 
