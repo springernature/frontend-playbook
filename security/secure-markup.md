@@ -4,10 +4,10 @@
   * [Use UTF-8 and specify this in a `meta` tag](#use-utf-8-and-specify-this-in-a-meta-tag)
   * [Add `rel="noopener"` to outbound links in new windows](#add-relnoopener-to-outbound-links-in-new-windows)
   * [Use Subresource Integrity](#use-subresource-integrity)
-  * [Use sane form defaults](#use-sane-form-defaults)
+  * [Use cautious form defaults](#use-cautious-form-defaults)
     + [A note on autofill](#a-note-on-autofill)
   * [Use the `sandbox` attribute for `iframe`s](#use-the-sandbox-attribute-for-iframes)
-  * [Use the `type` & `typemustmatch` attribute for `object`s](#use-the-type--typemustmatch-attribute-for-objects)
+  * [Use the `type` attribute for `object`s](#use-the-type-attribute-for-objects)
 
 ## Scope of this document
 You should be aware of the security implications of your frontend code. This document outlines some steps you can take to reduce the risk of markup exposing us, or our users, to security flaws.
@@ -58,7 +58,7 @@ As Subresource Integrity should be relatively easy to add to a frontend build to
 - [Gentle introduction to Subresource Integrity by keycdn.com](https://www.keycdn.com/support/subresource-integrity/)
 - [MDN article on Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
 
-## Use sane form defaults
+## Use cautious form defaults
 
 We must not write data that comes from the user into the DOM without first [sanitising](https://www.smashingmagazine.com/2011/01/keeping-web-users-safe-by-sanitizing-input-data/) that data. Input includes not only form data, but also things like user agent strings, request headers, URL parameters and cookies.
 
@@ -88,7 +88,7 @@ As such, while you can disable autofill for sensitive fields (see MDN article ab
 Secondly,
 
 > User agents should verify that all fields with the autocomplete attribute are visible within the viewport before automatically entering data.
-> &mdash; <cite>[HTML 5.3 specification](https://www.w3.org/TR/html53/sec-forms.html#sec-autofill)</cite>
+> &mdash; <cite>[HTML 5.3 W3C Working Group Note](https://www.w3.org/TR/2021/NOTE-html53-20210128/sec-forms.html#sec-autofill)</cite>
 
 So to be sure, *avoid enabling autocomplete for elements which may be visually-hidden*.
 
@@ -99,13 +99,15 @@ Even if you control the content of the `iframe`, do use the `sandbox` attribute 
 
 Note the default sandbox is very strict (e.g. no JavaScript, forms cannot be submitted) so tailor the value of the attribute to your use case. Mike West has written [a great article about `iframe sandbox`](https://www.html5rocks.com/en/tutorials/security/sandboxed-iframes/) and MDN has [a lovely reference article on `sandbox`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox).
 
-## Use the `type` & `typemustmatch` attribute for `object`s
+## Use the `type` attribute for `object`s
 
-`typemustmatch` is currently very new, and lacking support in browsers &mdash; but no harm including it if you can.
+Either the [`data`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/data)
+ or [`type`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/type)
+ attribute for the  [`object` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object)
+  element must be specified. You are encouraged to always ensure `type` is specified.
 
-> This Boolean attribute indicates if the type attribute and the actual content type of the resource must match to be used.
-> &mdash; <cite>[MDN - typemustmatch](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object#attr-typemustmatch)</cite>
+The value should be a valid [MIME type](https://developer.mozilla.org/en-US/docs/Glossary/MIME_type), also know as a "content type".
 
-For more information please see the [W3C HTML5.3 specification](https://www.w3.org/TR/html53/semantics-embedded-content.html).
+Embedded objects are generally not to be trusted -- security issues have arisen in the past from browsers being "tricked" into treating content as the wrong type, including [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) violations.
 
-----
+For more information please see the [W3C HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element).
