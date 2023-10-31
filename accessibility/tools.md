@@ -12,11 +12,11 @@
 
 ## Automated testing
 
-Automated accessibility testing can be used to detect the most common accessibility problems. This is only the first step in the process; you MUST NOT rely on automated testing as your sole method of verification! None of these tools on their own will catch every error. Even by combining all of them, it's still possible to produce an inaccessible webpage. 
+Automated accessibility testing can be used to detect the most common accessibility problems. This is only the first step in the process; you MUST NOT rely on automated testing as your sole method of validation! None of these tools on their own will catch every error. Even by combining all of them, it's still possible to produce an inaccessible webpage. 
 
 Terrill Thompson [compared several of the most popular tools](http://terrillthompson.com/blog/730) which should give you some idea of the scale of the problem. The GDS Accessibility team ran an experiment in 2017 to [audit the performance of a large number of available automated accessibility testing tools](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/). They found that the highest number of errors that one tool was able to detect was 40%. The majority of the tools fell into the 20%-30% range. 
 
-You MUST NOT rely on these accessibility tools as your sole safeguard for accessibility testing.
+You MUST NOT rely on automated accessibility testing tools as your sole safeguard for accessibility testing.
 
 
 ### Pa11y and axe
@@ -38,7 +38,7 @@ If you're a VS Code user, you can also install Deque's [axe accessibility linter
 
 Manual accessibility testing fills in the gaps that automated tools miss. 
 
-- Microsoft’s [free Accessibility Insights tool](https://accessibilityinsights.io/) is a browser extension for Chrome that will guide you through the process of assessing a webpage for basic accessibility compliance. 
+- Microsoft’s [free Accessibility Insights tool](https://accessibilityinsights.io/) is a browser extension for Chrome that will guide you through the process of assessing a webpage for basic accessibility conformance. It's not a complete guide to accessibility, but will help you catch things that automated testing can't. 
 
 
 ## Assistive technology
@@ -57,11 +57,13 @@ If you’re a Windows user, NVDA is one of the more popular screen readers among
 
 On mobile, VoiceOver is built-in on iOS devices, and TalkBack is usually built-in on Android devices. 71% of respondents to the [WebAIM Screen Reader User Survey #8](https://webaim.org/projects/screenreadersurvey8/#mobilescreenreaders) use iOS VoiceOver on mobile. 
 
+Many people use multiple screen readers, instead of relying on just one. For this reason (and because our philosophy is that [we must support all users, no matter their device, browser, or network condition](../practices/graded-browser-support.md)), we don't target specific Assistive Technology packages.  
+
 ## Other accessibility tools
 
 ### Automated accessibility testing tools in the browser
 
-- Squizlabs also have an [HMTML_Codesniffer bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) for quick tests. 
+- Squizlabs have an [HMTML_Codesniffer bookmarklet](https://squizlabs.github.io/HTML_CodeSniffer/) for quick tests. 
 - The Axe engine comes as a [browser extension](https://www.deque.com/axe/browser-extensions/) for Chrome, Firefox, and Edge, and as an [NPM module](https://github.com/dequelabs/axe-core) that you can integrate with your build, like Pa11y. 
 - WebAim's [WAVE extension](https://wave.webaim.org/extension/) for Chrome and Firefox evaluates accessibility in place on the page. 
 - The [ARC Toolkit](https://www.tpgi.com/arc-platform/arc-toolkit/) by TPGi is a useful extension for Chrome that (among other things) can detect semantic/structural issues, and problematic use of ARIA. 
@@ -70,7 +72,7 @@ On mobile, VoiceOver is built-in on iOS devices, and TalkBack is usually built-i
 
 In addition to Microsoft's Accessibility Insights tool, here are some other things we like: 
 
-- Check colour contrast compliance with WebAim's [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/) or TPGi's [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) tool (for Mac and Windows).
+- Check colour contrast conformance with WebAim's [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/) or TPGi's [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) tool (for Mac and Windows).
 - The [Landmarks browser extension](http://matatk.agrip.org.uk/landmarks/) (for Firefox, Chrome and Opera) enables navigation of WAI-ARIA landmarks, via the keyboard or a pop-up menu.
 
 
