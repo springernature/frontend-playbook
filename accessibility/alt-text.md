@@ -51,9 +51,17 @@ There isn’t a hard and fast rule. The alt text for a particular image may chan
 
 Remember what you're trying to achieve - someone who can't see the image needs to be able to get the same _information_ from your alt text. 
 
+Sometimes it helps to know the nature of the image in order to understand it. For instance, try the following experiment: 
+
+Stop for a second and imagine "a yellow dog which has a very large head with an overhanging jaw, with large teeth, and a blue nose".
+
+Done?
+
+Now imagine "A cartoon representation of a yellow dog which has a very large head with an overhanging jaw, with large teeth, and a blue nose". … which of your mental images are closer to [the described dog image?](https://thumbs.dreamstime.com/z/toothy-yellow-dog-16423838.jpg)
+
 ### A few guiding principles
 
-* Don’t say ‘Image of…’ or ‘Picture of…’ etc.  
+* Don’t say ‘Image of…’ or ‘Picture of…’ etc. (It's nearly always wrong to say an "Image of", because all images are … images. It's extraneous information that the screenreader announces. However, it can help to know the type of image - i.e. is it a photo, or a screenshot, or a cartoon, depending on the surrounding content and context.)  
 * Don’t need to repeat information already given in the text on the page.  
 * Be as succinct as possible but include details as needed. There is no hard character limit despite some guidance stating otherwise, [a screen reader won't truncate alt text.](https://yatil.net/blog/there-is-no-character-limit-for-alt-text)
 * Copyright info, image source, or other extra information should go in the caption, not the alt text.
