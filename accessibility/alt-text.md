@@ -160,7 +160,7 @@ If your headshots are of people doing interesting or quirky things that are inte
 
 Similarly, if it's important on your page to demonstrate diversity (for example if it's to promote a conference that talks about diversity in your industry), AND if the people whose headshots you're using are comfortable with it, you might include ethnic, race, gender, or disability markers in your alt text, e.g. "Important Person wearing an electric blue hijab", "Name McName wearing a sequinned eyepatch". 
 
-However, you MUST be careful with this - not everyone is comfortable with having their markers described in this way by other people. Google's developer advocate Jake Archibald says, "Generally, we get speakers to write their own bios for conference sites. Since they choose how to be represented in the bio, it seems sensible to ask them to write their avatar alt text too." Consider doing this. 
+However, you MUST be careful with this - not everyone is comfortable with having their markers described in this way by other people. As Jake Archibald (previously Developer Advocate at Google) says: "Generally, we get speakers to write their own bios for conference sites. Since they choose how to be represented in the bio, it seems sensible to ask them to write their avatar alt text too." Consider doing this. 
 
 ##### Further reading on headshot considerations
 
