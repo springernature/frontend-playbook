@@ -46,7 +46,7 @@ Not all users are able to easily navigate by landmarks. Multiple navigation link
 
 To help them out you can add a "Skip Navigation" link to the top of each page which, when activated, will take them to the main section of the page.
 
-The Elements Design System includes [https://elements.springernature.com/springernature/components/global-skip-link](a skip link implementation) that you can use in your own project(s). 
+The Elements Design System includes [a skip link implementation](https://elements.springernature.com/springernature/components/global-skip-link) that you can use in your own project(s). 
 
 Resources:
 
@@ -69,7 +69,6 @@ We do this:
 Resources:
 
 * [Article: Using the HTML lang attribute](https://developer.paciellogroup.com/blog/2016/06/using-the-html-lang-attribute/)
-* [Samurai errata GL4: Clarify natural-language usage](http://www.wcagsamurai.org/erratas/errata-listing/#GL4)
 
 
 ### Use a logical source order

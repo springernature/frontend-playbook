@@ -29,9 +29,8 @@ At the same time, we must respect file types that demand the use of spaces for i
 
 ### Linting
 
-We lint our CSS, JavaScript, and templates written with DustJS. This helps us to keep our different codebases consistent, avoid common logic and implementation errors, and lets us concentrate on solving problems instead of formatting.
+We lint our CSS and JavaScript. This helps us to keep our different codebases consistent, avoid common logic and implementation errors, and lets us concentrate on solving problems instead of formatting.
 
-* For DustJS templates, we use [Dustmite](https://www.npmjs.com/package/dustmite). You can find more details about how we write markup in our [markup guide](../markup/house-style.md).
 * For CSS linting, we use [StyleLint](https://github.com/stylelint/stylelint) and [sass-lint](https://github.com/sasstools/sass-lint). You can find our configuration and examples in our [CSS style guide](../css/house-style.md).
 * For JavaScript linting, we use [eslint](https://eslint.org/) with our own [eslint configuration](https://github.com/springernature/eslint-config-springernature). You can find our principles and best practices in the [JavaScript style guide](../javascript/house-style.md).
 
