@@ -122,6 +122,33 @@ span {
 }
 ```
 
+**Items that semantically MUST sit within other items**. We do this:
+```scss
+ul {
+    > li {
+        display: inline;
+    }
+}
+
+dl {
+    > dt,
+    > dd {
+        display: inline-block;
+    }
+}
+
+table {
+    > tr {
+        > th {
+            background: #ccc;
+        }
+        > td {
+            background: #eee;
+        }
+    }
+}
+```
+
 **Javascript-only style enhancements**. We do this:
 ```scss
 .c-class {
