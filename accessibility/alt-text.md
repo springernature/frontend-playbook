@@ -194,4 +194,4 @@ This alt text does the following things:
 
 1. Incorporates, verbatim, the text to the left of the cover image
 2. Details the title of the book, the name of the book’s author, the publishing house, and the publication series the book belongs to - all visible on the cover image
-3. Describes the cover illustration, which is of a highly-recognisable film character that’s directly relevant to the book’s subject matter, and that the target audience for this book would be expected to be familiar with
+3. Describes the cover illustration; which is of a highly-recognisable film character that’s directly relevant to the book’s subject matter, and that the target audience for this book would be expected to be familiar with
