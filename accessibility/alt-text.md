@@ -171,7 +171,7 @@ However, you MUST be careful with this - not everyone is comfortable with having
 
 ### Images of text 
 
-<img width="625" alt="screenshot of social media post of an image of text" src="https://github.com/springernature/frontend-playbook/assets/69847167/83772c8e-6b61-4f5a-8970-fc91be79f84d">
+![Screenshot of a social media post of an image of text](images/alt-examples/orlok.png)
 
 In a Springer Nature social media post, this image of text and book covers was accompanied with the copy: “Are you a horror enthusiast interested in finding out more about vampires in film? Then this book is a must-read for you! From the first ever filmic female vampire to a Dracula look-alike and cinema’s original vampire, this book discusses them all. https://bit.ly/3SnsTrN” 
 
@@ -184,6 +184,8 @@ This example is a complex graphic with a lot happening in it, and it’s easier 
 * “text and book covers”
 * “Vampires on the silent screen” 
 * “Image of book cover”
+  
+the purpose of the image is to promote the book. None of these descriptions tell the user anything about the book, so there’s no reason why a person who can’t see the image would want to buy it. 
 
 #### Sufficient alt text
 
