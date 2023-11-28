@@ -8,21 +8,20 @@
   - [A few guiding principles](#a-few-guiding-principles)
 - [Examples](#examples)
   - [A photograph of an object](#a-photograph-of-an-object)
-    - [Good alt text](#good-alt-text)
-    - [Bad alt text](#bad-alt-text)
+    - [Sufficient alt text](#sufficient-alt-text)
+    - [Insufficient alt text](#insufficient-alt-text)
   - [An abstract illustration](#an-abstract-illustration)
-    - [Good alt text](#good-alt-text-1)
-    - [Bad alt text](#bad-alt-text-1)
+    - [Sufficient alt text](#sufficient-alt-text-1)
+    - [Insufficient alt text](#insufficient-alt-text-1)
   - [An icon](#an-icon)
-    - [Good alt text](#good-alt-text-2)
-    - [Bad alt text](#bad-alt-text-2)
+    - [Sufficient alt text](#sufficient-alt-text-2)
+    - [Insufficient alt text](#insufficient-alt-text-2)
   - [Headshots](#headshots)
-    - [Bad alt text](#bad-alt-text-3)
-    - [Good alt text](#good-alt-text-3)
+    - [Insufficient alt text](#insufficient-alt-text-3)
+    - [Sufficient alt text](#sufficient-alt-text-3)
   - [Images of text](#images-of-text)
-    - [Bad alt text](#bad-alt-text-4)
-    - [Good alt text](#good-alt-text-4)
-
+    - [Insufficient alt text](#insufficient-alt-text-4)
+    - [Sufficient alt text](#sufficient-alt-text-4)
 
 ## What is alt text? 
 
@@ -79,13 +78,13 @@ Now imagine "A cartoon representation of a yellow dog which has a very large hea
 
 The article [Did a mega drought topple empires 4,200 years ago?](https://www.nature.com/articles/d41586-022-00157-9) leads with a large photograph of an Akkadian bas relief. Below, there's a visible caption that summarises the image context ("Water flows from a vessel held by a god..."), and credits the image source (The Art Archive/Shutterstock). 
 
-#### Good alt text
+#### Sufficient alt text
 
 "Relief created from a cylinder seal from the Akkad dynasty showing water gods and buffalo" 
 
 This is the alt text used in the article. It describes the physical object (the bas relief), the style of the object (Akkadian dynasty) and the scene it depicts (the water gods and buffalo).
 
-#### Bad alt text
+#### Insufficient alt text
 
 Here are some possibilities for alt text that doesn't have enough information to be a sufficient text alternative:
 
@@ -106,13 +105,13 @@ Screen reader users don't need to hear this information twice.
 
 In [The shifting sands of ‘gain-of-function’ research](https://www.nature.com/articles/d41586-021-02903-x), the leader image is a stylised illustration. There's a visible caption that gives the name of the illustrator ("Illustration by Kasia Bojanowska"). 
 
-#### Good alt text
+#### Sufficient alt text
 
 "Conceptual illustration showing a virus being edited."
 
 This is the alt text used in the article. It describes what's happening in the image (a virus being edited), and explains that the image isn't real ("conceptual illustration"). 
 
-#### Bad alt text
+#### Insufficient alt text 
 
 * "Illustration" (or "Illustration by Kasia Bojanowska", already visible in the caption)
 * 
@@ -126,13 +125,13 @@ On Nature.com, we sometimes use icons to support text labels, like this bell ico
 
 ![Screenshot of the alert signup text label and bell icon](images/alt-examples/bell.png)
 
-#### Good alt text
+#### Sufficient alt text
 
 `alt=""`
 
 This is the alt text used in the label. Not a typo! Yes, it's blank. The purpose of the link is already described by the text label, so the icon is redundant. Redundant here doesn't mean unnecessary -- the icon can serve as a speedy shorthand for people who are visually scanning the page -- it only means that the key information has already been provided in text. 
 
-#### Bad alt text
+#### Insufficient alt text
 
 * "icon"
 * "bell"
@@ -148,14 +147,14 @@ The visible text is already visible. You don't need to add it to the alt text to
 
 Headshots are more complex than they appear at first glance, and your decisions will depend on multiple factors. It's probably easiest to start with the bad examples:
 
-#### Bad alt text
+#### Insufficient alt text 
 
 * "headshot"
 * "speaker"
 * "photograph of…"
 * alt text that just repeats the indvidual's name when the individual's name is already available in visible adjacent text
 
-#### Good alt text
+#### Sufficient alt text 
 
 This depends on what you're trying to achieve. If all your headshots are business-friendly photographs of people smiling professionally into the camera AND there's not much to distinguish them from each other (business-friendly photographs are notoriously bland and similar to each other) AND their names are clearly visible in text adjacent on the page, you might want to consider using blank alt text (`alt=""`) for the headshot pictures. 
 
@@ -180,13 +179,13 @@ Images of text are often used on social media and in advertisements for visual a
 
 This example is a complex graphic with a lot happening in it, and it’s easier to start with what you shouldn’t do with an image like this:
 
-#### Bad alt text
+#### Insufficient alt text
 
 * “text and book covers”
 * “Vampires on the silent screen” 
 * “Image of book cover”
 
-#### Good alt text
+#### Sufficient alt text
 
 “Cover image of Vampires on the silent screen: Cinema’s First Age of Vampires 1897-1922, by David Annwn Jones, published by Palgrave Macmillan for Palgrave Gothic. The cover image features a monochrome illustration of Max Schreck as Count Orlok in the 1922 film Nosferatu: A Symphony of Horror. The book provides a unique insight into the iconography of vampires in silent cinema, presenting a detailed academic yet accessible discussion of the films and their sources, and re-configuring the history of horror cinema.”
 
