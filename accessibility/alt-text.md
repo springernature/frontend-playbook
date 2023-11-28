@@ -19,6 +19,9 @@
   - [Headshots](#headshots)
     - [Bad alt text](#bad-alt-text-3)
     - [Good alt text](#good-alt-text-3)
+  - [Images of text](#images-of-text)
+    - [Bad alt text](#bad-alt-text-4)
+    - [Good alt text](#good-alt-text-4)
 
 
 ## What is alt text? 
@@ -167,4 +170,28 @@ However, you MUST be careful with this - not everyone is comfortable with having
 * [Writing great alt text: Emotion matters](https://jakearchibald.com/2021/great-alt-text/)
 * [Thoughts on skin tone and text descriptions](https://tink.uk/thoughts-on-skin-tone-and-text-descriptions.md-notes-on-synthetic-speech/), by Léonie Watson
 
+### Images of text 
 
+<img width="625" alt="screenshot of social media post of an image of text" src="https://github.com/springernature/frontend-playbook/assets/69847167/83772c8e-6b61-4f5a-8970-fc91be79f84d">
+
+In a Springer Nature social media post, this image of text and book covers was accompanied with the copy: “Are you a horror enthusiast interested in finding out more about vampires in film? Then this book is a must-read for you! From the first ever filmic female vampire to a Dracula look-alike and cinema’s original vampire, this book discusses them all. https://bit.ly/3SnsTrN” 
+
+Images of text are often used on social media and in advertisements for visual appeal and to convey information quickly. But images are one of the least accessible ways of presenting text - if a user needs to magnify or zoom their screen, the images can become distorted or pixellated, rendering the text unreadable. If the image is complex, like this one, then it’s much harder to write sufficient alt text for it. You should avoid publishing images of text as much as you can. If it’s unavoidable, use as little text as possible, and don’t make the text in the image your only call to action.
+
+This example is a complex graphic with a lot happening in it, and it’s easier to start with what you shouldn’t do with an image like this:
+
+#### Bad alt text
+
+* “text and book covers”
+* “Vampires on the silent screen” 
+* “Image of book cover”
+
+#### Good alt text
+
+“Cover image of Vampires on the silent screen: Cinema’s First Age of Vampires 1897-1922, by David Annwn Jones, published by Palgrave Macmillan for Palgrave Gothic. The cover image features a monochrome illustration of Max Schreck as Count Orlok in the 1922 film Nosferatu: A Symphony of Horror. The book provides a unique insight into the iconography of vampires in silent cinema, presenting a detailed academic yet accessible discussion of the films and their sources, and re-configuring the history of horror cinema.”
+
+This alt text does the following things:
+
+1. Incorporates, verbatim, the text to the left of the cover image
+2. Details the title of the book, the name of the book’s author, the publishing house, and the publication series the book belongs to - all visible on the cover image
+3. Describes the cover illustration, which is of a highly-recognisable film character that’s directly relevant to the book’s subject matter, and that the target audience for this book would be expected to be familiar with
