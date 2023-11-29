@@ -185,7 +185,7 @@ This example is a complex graphic with a lot happening in it, and it’s easier 
 * “Vampires on the silent screen” 
 * “Image of book cover”
   
-the purpose of the image is to promote the book. None of these descriptions tell the user anything about the book, so there’s no reason why a person who can’t see the image would want to buy it. 
+The purpose of this image is to promote the book. None of these descriptions tell the user anything about the book, so there’s no reason why a person who can’t see the image would want to buy it. 
 
 #### Sufficient alt text
 
