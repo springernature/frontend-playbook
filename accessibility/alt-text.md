@@ -9,17 +9,19 @@
 - [Examples](#examples)
   - [A photograph of an object](#a-photograph-of-an-object)
     - [Sufficient alt text](#sufficient-alt-text)
-    - [Insufficient](#insufficient-alt-text)
+    - [Insufficient alt text](#insufficient-alt-text)
   - [An abstract illustration](#an-abstract-illustration)
     - [Sufficient alt text](#sufficient-alt-text-1)
-    - [Insufficient](#insufficient-alt-text-1)
+    - [Insufficient alt text](#insufficient-alt-text-1)
   - [An icon](#an-icon)
     - [Sufficient alt text](#sufficient-alt-text-2)
-    - [Insufficient](#insufficient-alt-text-2)
+    - [Insufficient alt text](#insufficient-alt-text-2)
   - [Headshots](#headshots)
-    - [Insufficient](#insufficient-alt-text-3)
+    - [Insufficient alt text](#insufficient-alt-text-3)
     - [Sufficient alt text](#sufficient-alt-text-3)
-
+  - [Images of text](#images-of-text)
+    - [Insufficient alt text](#insufficient-alt-text-4)
+    - [Sufficient alt text](#sufficient-alt-text-4)
 
 ## What is alt text? 
 
@@ -76,13 +78,13 @@ Now imagine "A cartoon representation of a yellow dog which has a very large hea
 
 The article [Did a mega drought topple empires 4,200 years ago?](https://www.nature.com/articles/d41586-022-00157-9) leads with a large photograph of an Akkadian bas relief. Below, there's a visible caption that summarises the image context ("Water flows from a vessel held by a god..."), and credits the image source (The Art Archive/Shutterstock). 
 
-#### Sufficient
+#### Sufficient alt text
 
 "Relief created from a cylinder seal from the Akkad dynasty showing water gods and buffalo" 
 
 This is the alt text used in the article. It describes the physical object (the bas relief), the style of the object (Akkadian dynasty) and the scene it depicts (the water gods and buffalo).
 
-#### Insufficient
+#### Insufficient alt text
 
 Here are some possibilities for alt text that doesn't have enough information to be a sufficient text alternative:
 
@@ -103,13 +105,13 @@ Screen reader users don't need to hear this information twice.
 
 In [The shifting sands of ‘gain-of-function’ research](https://www.nature.com/articles/d41586-021-02903-x), the leader image is a stylised illustration. There's a visible caption that gives the name of the illustrator ("Illustration by Kasia Bojanowska"). 
 
-#### Sufficient
+#### Sufficient alt text
 
 "Conceptual illustration showing a virus being edited."
 
 This is the alt text used in the article. It describes what's happening in the image (a virus being edited), and explains that the image isn't real ("conceptual illustration"). 
 
-#### Insufficient
+#### Insufficient alt text 
 
 * "Illustration" (or "Illustration by Kasia Bojanowska", already visible in the caption)
 * 
@@ -123,13 +125,13 @@ On Nature.com, we sometimes use icons to support text labels, like this bell ico
 
 ![Screenshot of the alert signup text label and bell icon](images/alt-examples/bell.png)
 
-#### Sufficient
+#### Sufficient alt text
 
 `alt=""`
 
 This is the alt text used in the label. Not a typo! Yes, it's blank. The purpose of the link is already described by the text label, so the icon is redundant. Redundant here doesn't mean unnecessary -- the icon can serve as a speedy shorthand for people who are visually scanning the page -- it only means that the key information has already been provided in text. 
 
-#### Insufficient
+#### Insufficient alt text
 
 * "icon"
 * "bell"
@@ -145,14 +147,14 @@ The visible text is already visible. You don't need to add it to the alt text to
 
 Headshots are more complex than they appear at first glance, and your decisions will depend on multiple factors. It's probably easiest to start with the bad examples:
 
-#### Insufficient
+#### Insufficient alt text 
 
 * "headshot"
 * "speaker"
 * "photograph of…"
 * alt text that just repeats the indvidual's name when the individual's name is already available in visible adjacent text
 
-#### Sufficient
+#### Sufficient alt text 
 
 This depends on what you're trying to achieve. If all your headshots are business-friendly photographs of people smiling professionally into the camera AND there's not much to distinguish them from each other (business-friendly photographs are notoriously bland and similar to each other) AND their names are clearly visible in text adjacent on the page, you might want to consider using blank alt text (`alt=""`) for the headshot pictures. 
 
@@ -167,4 +169,30 @@ However, you MUST be careful with this - not everyone is comfortable with having
 * [Writing great alt text: Emotion matters](https://jakearchibald.com/2021/great-alt-text/)
 * [Thoughts on skin tone and text descriptions](https://tink.uk/thoughts-on-skin-tone-and-text-descriptions.md-notes-on-synthetic-speech/), by Léonie Watson
 
+### Images of text 
 
+![Screenshot of a social media post of an image of text](images/alt-examples/orlok.png)
+
+In a Springer Nature social media post, this image of text and book covers was accompanied with the copy: “Are you a horror enthusiast interested in finding out more about vampires in film? Then this book is a must-read for you! From the first ever filmic female vampire to a Dracula look-alike and cinema’s original vampire, this book discusses them all. https://bit.ly/3SnsTrN” 
+
+Images of text are often used on social media and in advertisements for visual appeal, brand consistency and to convey information quickly. But images are one of the least accessible ways of presenting text - if a user needs to magnify or zoom their screen, the images can become distorted or pixellated, rendering the text unreadable. If the image is complex, like this one, then it’s much harder to write sufficient alt text for it. You should avoid publishing images of text as much as you can. If it’s unavoidable, use as little text as possible, and don’t make the text in the image your only call to action.
+
+This example is a complex graphic with a lot happening in it, and it’s easier to start with what you shouldn’t do with an image like this:
+
+#### Insufficient alt text
+
+* “text and book covers”
+* “Vampires on the silent screen” 
+* “Image of book cover”
+  
+The purpose of this image is to promote the book. None of these descriptions tell the user anything about the book, so there’s no reason why a person who can’t see the image would want to buy it. 
+
+#### Sufficient alt text
+
+“Cover image of Vampires on the silent screen: Cinema’s First Age of Vampires 1897-1922, by David Annwn Jones, published by Palgrave Macmillan for Palgrave Gothic. The cover image features a monochrome illustration of Max Schreck as Count Orlok in the 1922 film Nosferatu: A Symphony of Horror. The book provides a unique insight into the iconography of vampires in silent cinema, presenting a detailed academic yet accessible discussion of the films and their sources, and re-configuring the history of horror cinema.”
+
+This alt text does the following things:
+
+1. Incorporates, verbatim, the text to the left of the cover image
+2. Details the title of the book, the name of the book’s author, the publishing house, and the publication series the book belongs to - all visible on the cover image
+3. Describes the cover illustration; which is of a highly-recognisable film character that’s directly relevant to the book’s subject matter, and that the target audience for this book would be expected to be familiar with
