@@ -12,7 +12,7 @@ Additionally organisations with ecommerce sites are under increased risk from th
 
 Your site *is* at risk.
 
-Another common misconception that security doesn't matter much for frontend technologies, and that security is a job just for backend developers and network people. **This is not true.**
+Another common misconception is that security doesn't matter much for frontend technologies, and that security is a job just for backend developers and network people. **This is not true.**
 
 Client-side technologies can be misused to:
  - distribute malware.
@@ -25,7 +25,7 @@ Client-side technologies can be misused to:
  - crash users browsers.
  - "and more"
 
-## This is terrible! What can we do?
+### This is terrible! What can we do?
 
 Yes, yes this is terrible. The internet was originally designed to be robust, not secure; but web standards have evolved to meet increasing security threats, and we will look at some of these standards.
 
@@ -33,9 +33,10 @@ The good news is, by following some basic principles and using some standardised
 
 ## Basic principles
 
-### Never trust the browser
+### Never trust the client
 
-People can use scripts as well as browsers to access your site, or use techologies to tamper with requests or the DOM, or perhaps the attack originates from an unsuspecting user infected with malware. In any case, we must **never trust the browser**. Any and all information from the browser can be tampered with, including:
+People can use scripts as well as browsers to access your site, or use techologies to tamper with requests or the DOM, or perhaps the attack originates from an unsuspecting user infected with malware. In any case, we must **never trust the client**. Any and all information from the client can be tampered with, including:
+
   - URL query parameters
   - URL fragment identifiers
   - browser `localStorage` etc.
@@ -52,7 +53,7 @@ A little paranoia can be healthy.
 
 As web developers we have to process information that browsers send us, so what can we do?
 
-The process of "cleaning" incoming data to make sure it's suitable for use in your application is known as "sanitisation".  Obviously this includes things like search terms typed into a text box, but now we have learned to **never trust the browser**, we know we must sanitise *all* data the browser sends us.
+The process of "cleaning" incoming data to make sure it's suitable for use in your application is known as "sanitisation".  Obviously this includes things like search terms typed into a text box, but now we have learned to **never trust the client**, we know we must sanitise *all* data the browser sends us.
 
 How do we do that?
 
@@ -68,7 +69,7 @@ We will talk about some of this software later, but here's some more general pri
  - Never try to write your own authentication/login systems. It's harder than you think, and many open-source offerings are immature and of questionable quality.
  - Avoid reimplementing things already built-in to browsers. The smart thing to do is leverage the security and development expertise of the browser vendors. That includes you, client-side framework developers ;)
 
-### Onion-skin defense
+#### Onion-skin defense
 
 
 ## Useful standardised technologies
