@@ -51,7 +51,7 @@ The same principle applies to web application architectures, and should be consi
 
 We will look at some examples later.
 
-### Don't do it yourself
+## Don't do it yourself
 
 Security is hard. But security is also a problem the industry shares. So the good news is, people much smarter than you or I have already thought about these problems, and written software we can use to do the hard stuff.
 
@@ -61,7 +61,7 @@ We will talk about some of this software later, but here's some more general pri
  - Never try to write your own authentication/login systems. It's harder than you think.
  - Avoid reimplementing browser features. The smart thing to do is leverage the security and development expertise of browser vendors, who have been working on these problems for decades.
 
-### Defense in-depth
+## Defense in-depth
 TBD
 
  - Next: [Frontend security examples](./03-frontend-security-examples.md)
