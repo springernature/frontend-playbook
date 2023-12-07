@@ -7,7 +7,7 @@ It's split into several parts, and designed to be read in order:
  - [Frontend security risk](./01-frontend-security-risk.md) 
  - [Fundamental security principles](./02-fundamental-security-principles.md) 
  - [Frontend security examples](./03-frontend-security-examples.md)
- - [Frontend security technologies](./03-frontend-security-examples.md)
+ - [Frontend security technologies](./04-frontend-security-technologies.md)
 
 Notes:
 
