@@ -12,7 +12,7 @@ Additionally organisations with ecommerce sites are under increased risk from th
 
 Your site *is* at risk.
 
-Another common misconception is that security doesn't matter much for frontend technologies, and that security is a job just for backend developers and network people. **This is not true.**
+Another common misconception is that security doesn't matter much for frontend technologies, and that security is a job just for backend developers and network engineers. **This is not true.**
 
 Client-side technologies can be misused to:
  - distribute malware.
@@ -35,17 +35,19 @@ The good news is, by following some basic principles and using some standardised
 
 ### Never trust the client
 
-People can use scripts as well as browsers to access your site, and use techologies to tamper with requests or the DOM, or perhaps the attack originates from an innocent user infected with malware. In any case, we must **never trust the client**. Any and all information from the client can be tampered with, including:
+People can use scripts as well as browsers to access your site, use techologies to tamper with requests or the DOM, or perhaps the attack originates from an innocent user infected with malware? In any case, we must **never trust the client**. Any and all information from the client can be tampered with, including:
 
-  - URL query parameters
-  - URL fragment identifiers
+  - URL query parameters.
+  - URL fragment identifiers.
   - browser `localStorage` etc.
-  - anything in the DOM
   - any HTTP header, notably:
-    - cookie names
-    - cookie values
-    - `User-Agent` string
-    - `Referer`
+    - cookie names.
+    - cookie values.
+    - `User-Agent` string.
+    - `Referer` field.
+  - anything in the DOM, that might be read by your JavaScript:
+    - form fields, whether `hidden` or `disabled` or not.
+    - `class` & `id` values, other HTML element attributes...
 
 A little paranoia can be healthy.
 
