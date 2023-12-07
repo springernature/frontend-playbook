@@ -1,10 +1,10 @@
 # Security
 
-This document intends to provide frontend developers with a basic primer in security issues; relating both to client-side technologies, and technologies that render and serve client-side code.
+This document intends to provide frontend developers with a basic primer in security issues; relating both to client-side technologies, and technologies serve client-side code.
 
 ## Risk
 
-It is a common misconception that "hackers are not be interested in my product". **This is not true.**  If you have a web server connected to the internet, you have resources someone will want to abuse.
+It is a common misconception that "hackers are not interested in my product". **This is not true.**  If you have a web server connected to the internet, you have resources someone will want to abuse.
 
 All public web applications are under constant automated attack; from those looking to steal server resources to conduct blackhat SEO, mine cryptocurrencies, distribute malware, send spam, etc.
 
@@ -27,21 +27,21 @@ Client-side technologies can be misused to:
 
 ### This is terrible! What can we do?
 
-Yes, yes this is terrible. The internet was originally designed to be robust, not secure; but web standards have evolved to meet increasing security threats, and we will look at some of these standards.
+Yes, yes this *is* terrible. The internet was originally designed to be robust, not secure; but web standards have evolved to meet increasing security threats, and we will look at some of these standards.
 
-The good news is, by following some basic principles and using some standardised technologies we can go a long way towards making our web sites safe for our users and our organisation.
+The good news is, by following some basic principles and using some standardised technologies we can go a long way towards making our web sites safer for our users and our organisation.
 
 ## Basic principles
 
 ### Never trust the client
 
-People can use scripts as well as browsers to access your site, or use techologies to tamper with requests or the DOM, or perhaps the attack originates from an unsuspecting user infected with malware. In any case, we must **never trust the client**. Any and all information from the client can be tampered with, including:
+People can use scripts as well as browsers to access your site, and use techologies to tamper with requests or the DOM, or perhaps the attack originates from an innocent user infected with malware. In any case, we must **never trust the client**. Any and all information from the client can be tampered with, including:
 
   - URL query parameters
   - URL fragment identifiers
   - browser `localStorage` etc.
   - anything in the DOM
-  - any HTTP header, notably
+  - any HTTP header, notably:
     - cookie names
     - cookie values
     - `User-Agent` string
@@ -67,7 +67,7 @@ We will talk about some of this software later, but here's some more general pri
 
  - Never try to write your own crypto. It's harder than you think.
  - Never try to write your own authentication/login systems. It's harder than you think, and many open-source offerings are immature and of questionable quality.
- - Avoid reimplementing things already built-in to browsers. The smart thing to do is leverage the security and development expertise of the browser vendors. That includes you, client-side framework developers ;)
+ - Avoid reimplementing browser features. The smart thing to do is leverage the security and development expertise of browser vendors, who have been working on these problems for decades.
 
 #### Onion-skin defense
 
