@@ -1,6 +1,6 @@
 # Security
 
-This document intends to provide frontend developers with a basic primer in security issues; relating both to client-side technologies, and technologies serve client-side code.
+This document intends to provide frontend developers with a basic primer in security principles and technologies; relating to both pure client-side technologies, and technologies that serve client-side code.
 
 ## Risk
 
