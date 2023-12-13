@@ -4,6 +4,8 @@
 - [What's it for?](#whats-it-for)
 - [What isn't it for?](#what-isnt-it-for)
 - [Is alt text _always_ necessary?](#is-alt-text-always-necessary)
+- [How long should the alt text be?](#how-long-should-the-alt-text-be)
+  - [How do screen readers render alt text?](#how-do-screen-readers-render-alt-text)
 - [How to write alt text](#how-to-write-alt-text)
   - [A few guiding principles](#a-few-guiding-principles)
 - [Examples](#examples)
@@ -47,6 +49,26 @@ No. If an image has no meaning, or if it's providing information that's redundan
 
 An image MUST always have an alt _attribute_, even if its value is blank (`alt=""`). Your HTML isn't valid without one. 
 
+## How long should the alt text be? 
+
+The length any given alt text _should_ be depends on how long the alt text _needs_ to be. 
+
+Despite what you may have read or heard in the past, [there is no hard character limit imposed by browsers or screen readers](https://yatil.net/blog/there-is-no-character-limit-for-alt-text). This doesn't mean you should write a novel every time. A simple logo will need a lot less alt text than a chart or a graph as the logo image itself carries less information. 
+
+You MUST keep alt text in HTML as succinct as you reasonably can while still expressing all the information in the image. To understand why, you need to understand how screen readers parse attributes like `alt`. 
+
+### How do screen readers render alt text? 
+
+Screen readers look at all of the HTML markup on a page, then announce the contents to the user in different ways depending on what kind of element it's describing. For example a link might be announced as something like "Link: my cool website address". A navigation menu might be announced like "Navigation: breadcrumb". These are examples of HTML element nodes. Screen reader users can command their screen reader to move around the page and describe different things at will. They can move forwards or backwards through text, read text at the character level (for example to confirm spelling), and pause and restart later, among other useful operations. 
+
+Many HTML element nodes can contain attributes. A link may use a `title` attribute, like this ([though I do not recommend it](https://github.com/springernature/frontend-playbook/blob/main/accessibility/common-remediations/html-attributes.md)): `<a href="/" title="don't do this">my cool website address</a>`. The alt attribute is also of this type: `<img alt="my cool alt text" src="...">`. Attributes can't be interacted with in the same way as the rest of the page - you can't move forwards or backwards through the text, you can't read the text at the character level, and you can't pause the screen reader and restart later where you left off. 
+
+Imagine you're sitting at a bus stop, and the bus company has added a digital marquee to the shelter to give you important information. You can't control the marquee at all, you can only look at it, passively, on its own schedule. If you're momentarily distracted, causing you to miss the information you needed about your bus, the only thing you can do is wait for it to return to the start and then (eventually) get to the part you were interested in. Tiresome, right? This is similar to the experience of using alt text with a screen reader. Although the screen reader user can go back to start whenever they want, if your alt text is 1000 characters long and the information they need to hear again starts after 850 words, this person is going to be waiting for a very long time. 
+
+If the information is complex (and much of Springer Nature's scientific output is highly complex), the cognitive load on the screen reader user is higher, as they have more information to process and recall. For (many, not all) sighted users, it's a simple task to scan your eyes back and forth to read a complex sentence or sentence fragment again. It's impossible for a blind screen reader to do this with alt attributes, and this is the reason that alt text must be succinct. 
+
+Don't make it so succinct that the information in the image is lost, but do think about the cognitive burden of alt text as a whole, and consider if it's really alt text in the HTML that you need, or if your users would be better served with a full text transcript that they can directly interact with instead. 
+
 ## How to write alt text
 
 There isn’t a hard and fast rule. The alt text for a particular image may change depending on the context, and what kind of content the image is used within.
@@ -65,7 +87,7 @@ Now imagine "A cartoon representation of a yellow dog which has a very large hea
 
 * Don’t say ‘Image of…’ or ‘Picture of…’ etc. (It's nearly always wrong to say an "Image of", because all images are … images. It's extraneous information that the screenreader announces. However, it can help to know the type of image - i.e. is it a photo, or a screenshot, or a cartoon, depending on the surrounding content and context.)  
 * Don’t need to repeat information already given in the text on the page.  
-* Be as succinct as possible but include details as needed. There is no hard character limit despite some guidance stating otherwise, [a screen reader won't truncate alt text.](https://yatil.net/blog/there-is-no-character-limit-for-alt-text)
+* Be as succinct as possible but include details as needed. 
 * Copyright info, image source, or other extra information should go in the caption, not the alt text.
 * Context is important e.g. it may be appropriate to note if an image is a photo or an artwork, whether a person is old or young, if the sky is stormy or clear, if that is relevant to the content. 
 * Think about how you would describe the image to a person who can’t see it.
