@@ -67,7 +67,7 @@ Imagine you're sitting at a bus stop, and the bus company has added a digital ma
 
 If the information is complex (and much of Springer Nature's scientific output is highly complex), the cognitive load on the screen reader user is higher, as they have more information to process and recall. For many (but not all) sighted users, it's a simple task to scan your eyes back and forth to read a complex sentence or sentence fragment again. It's impossible for a blind screen reader to do this with alt attributes, and this is the reason that alt text must be succinct. 
 
-Don't make it so succinct that the information in the image is lost, but do think about the cognitive burden of alt text as a whole, and consider if it's really alt text in the HTML that you need, or if your users would be better served with a full text transcript that they can directly interact with instead. 
+Don't make it _so_ succinct that the information in the image is lost, but _do_ think about the cognitive burden of alt text as a whole; and consider if it's really alt text in the HTML that you need, or if your users would be better served with a full text transcript that they can directly interact with instead. 
 
 ## How to write alt text
 
