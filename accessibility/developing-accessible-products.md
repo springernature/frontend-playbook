@@ -12,7 +12,7 @@ Commercial products are generally covered under civil rights legislation such as
 
 * The [Americans with Disabilities Act](https://www.ada.gov/) in the US.
 * The [Equality Act 2010](https://www.legislation.gov.uk/ukpga/2010/15/contents) in the UK.
-* Regulation instituted in EU member states as a consequence of the [European Accesibility Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L0882). 
+* Regulation instituted in EU member states as a consequence of the [European Accessibility Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L0882). 
 
 If a commercial website is found to be inaccessible, the website owner can be sued for discrimination under various civil rights legislatory mechanisms.
 
