@@ -2,9 +2,19 @@
 
 Businesses with an online presence must ensure they make their offering accessible to disabled users. This is a legal obligation that we are required to meet in multiple countries and jurisdictions. 
 
-Certain organisations such as scientific or educational institutions may be prevented by federal regulations from procuring products and services that do not meet accessibility requirements. 
+Certain organisations such as scientific or educational institutions may be prevented by various regulations from procuring products and services that do not meet accessibility requirements. Such regulations include (but are not limited to): 
 
-Commercial products are generally covered under civil rights legislation such as the Americans with Disabilities Act in the US or the Equality Act in the UK. If a commercial website is found to be inaccessible, the website owner can be sued for discrimination under various civil rights legislatory mechanisms.
+* [Directive (EU) 2016/2102](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016L2102) of the European Parliament.
+* [Section 508](https://www.section508.gov/) in the US.
+* The [Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/contents/made) in the UK.
+
+Commercial products are generally covered under civil rights legislation such as:
+
+* The [Americans with Disabilities Act](https://www.ada.gov/) in the US.
+* The [Equality Act 2010](https://www.legislation.gov.uk/ukpga/2010/15/contents) in the UK.
+* Regulation instituted in EU member states as a consequence of the [European Accesibility Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L0882). 
+
+If a commercial website is found to be inaccessible, the website owner can be sued for discrimination under various civil rights legislatory mechanisms.
 
 
 ## What is WCAG?
