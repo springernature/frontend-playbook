@@ -199,7 +199,7 @@ This alt text does the following things:
 
 ### Mathematical Expressions
 
-![Screenshot of a faction where the numerator is a plus b and the denominator is c](images/alt-examples/maths.png)
+![Fraction where the numerator is a plus b and the denominator is d](images/alt-examples/maths.png)
 
 The preferred method to convey mathematical expressions should be using [MathML](https://www.w3.org/Math/) (a standard markup language for describing mathematical notation) or [MathJax](https://www.mathjax.org/) (a JavaScript display engine for mathematics). However, images of mathematical expressions have been used traditionally as a way to easily implement them. It’s worth sharing some examples of good alt text for those cases.
 
