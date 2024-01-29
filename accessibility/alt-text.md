@@ -196,3 +196,20 @@ This alt text does the following things:
 1. Incorporates, verbatim, the text to the left of the cover image
 2. Details the title of the book, the name of the book’s author, the publishing house, and the publication series the book belongs to - all visible on the cover image
 3. Describes the cover illustration; which is of a highly-recognisable film character that’s directly relevant to the book’s subject matter, and that the target audience for this book would be expected to be familiar with
+
+### Mathematical Expressions
+
+![Fraction where the numerator is a plus b and the denominator is d](images/alt-examples/maths.png)
+
+The preferred method to convey mathematical expressions should be using [MathML](https://www.w3.org/Math/) (a standard markup language for describing mathematical notation) or [MathJax](https://www.mathjax.org/) (a JavaScript display engine for mathematics). However, images of mathematical expressions have been used traditionally as a way to easily implement them. It’s worth sharing some examples of good alt text for those cases.
+
+In the case of images of mathematical expressions, the alt text should describe the expression in spoken mathematics. Avoid using symbols or characters with mathematical usages (such as operators, fractions, units etc) which may not be announced as expected by screen readers.
+
+#### Insufficient alt text
+
+* "(a + b) / d"
+
+#### Sufficient alt text
+
+* "The quantity of a plus b divided by d."
+* "Fraction where the numerator is a plus b and the denominator is d."
