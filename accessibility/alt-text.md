@@ -211,5 +211,5 @@ In the case of images of mathematical expressions, the alt text should describe 
 
 #### Sufficient alt text
 
-* "The quantity of a plus b divided by c."
+* "The quantity of a plus b divided by d."
 * "Fraction where the numerator is a plus b and the denominator is d."
