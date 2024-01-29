@@ -22,7 +22,7 @@
   - [Images of text](#images-of-text)
     - [Insufficient alt text](#insufficient-alt-text-4)
     - [Sufficient alt text](#sufficient-alt-text-4)
-  - [Mathematical Expressions](#mathematical_expressions)
+  - [Mathematical expressions](#mathematical_expressions)
     - [Insufficient alt text](#insufficient-alt-text-5)
     - [Sufficient alt text](#sufficient-alt-text-5)
     
@@ -201,7 +201,7 @@ This alt text does the following things:
 2. Details the title of the book, the name of the book’s author, the publishing house, and the publication series the book belongs to - all visible on the cover image
 3. Describes the cover illustration; which is of a highly-recognisable film character that’s directly relevant to the book’s subject matter, and that the target audience for this book would be expected to be familiar with
 
-### Mathematical Expressions
+### Mathematical expressions
 
 ![Fraction where the numerator is a plus b and the denominator is d](images/alt-examples/maths.png)
 
