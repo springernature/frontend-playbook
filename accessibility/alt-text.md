@@ -207,7 +207,7 @@ In the case of images of mathematical expressions, the alt text should describe 
 
 #### Insufficient alt text
 
-* "(a + b) / c"
+* "(a + b) / d"
 
 #### Sufficient alt text
 
