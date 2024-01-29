@@ -22,7 +22,7 @@
   - [Images of text](#images-of-text)
     - [Insufficient alt text](#insufficient-alt-text-4)
     - [Sufficient alt text](#sufficient-alt-text-4)
-  - [Mathematical expressions](#mathematical_expressions)
+  - [Mathematical expressions](#mathematical-expressions)
     - [Insufficient alt text](#insufficient-alt-text-5)
     - [Sufficient alt text](#sufficient-alt-text-5)
     
