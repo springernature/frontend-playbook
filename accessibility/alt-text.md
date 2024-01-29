@@ -24,6 +24,10 @@
   - [Images of text](#images-of-text)
     - [Insufficient alt text](#insufficient-alt-text-4)
     - [Sufficient alt text](#sufficient-alt-text-4)
+  - [Mathematical Expressions](#mathematical_expressions)
+    - [Insufficient alt text](#insufficient-alt-text-5)
+    - [Sufficient alt text](#sufficient-alt-text-5)
+    
 
 ## What is alt text? 
 
