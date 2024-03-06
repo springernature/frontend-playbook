@@ -2,51 +2,53 @@
 
 This document outlines the way we write JavaScript. It's a living style guide – it will grow as our practices do.
 
-* [General principles](#general-principles)
-  * [Progressively enhance](#progressively-enhance)
-  * [Code for humans](#code-for-humans)
-  * [Modules over monoliths](#modules-over-monoliths)
-  * [Keep it simple](#keep-it-simple)
-  * [Performant code](#performant-code)
-* [Code style](#code-style)
-  * [Linting](#linting)
-  * [Comments](#comments)
-  * [Asynchronicity](#asynchronicity)
-    * [Things to consider](#things-to-consider)
-    * [Tips](#tips)
-      * [Awaiting multiple promises](#awaiting-multiple-promises)
-      * [Multiple awaits in a one-liner](#multiple-awaits-in-a-one-liner)
-      * [Arrow function syntax with await](#arrow-function-syntax-with-await)
-      * [Fallback to promises](#fallback-to-promises)
-    * [Further reading](#further-reading)
-  * [Indentation](#indentation)
-  * [White space](#white-space)
-  * [Variables](#variables)
-    * [Defining variables](#defining-variables)
-    * [Use of var](#use-of-var)
-  * [Functions](#functions)
-    * [Pure functions](#pure-functions)
-  * [Operators](#operators)
-  * [Loops](#loops)
-  * [Strict mode](#strict-mode)
-* [Client-side JavaScript architecture](#client-side-javascript-architecture)
-  * [Module architecture](#module-architecture)
-    * [Configuration](#configuration)
-    * [Imports](#imports)
-  * [Events](#events)
-    * [Events for related modules](#events-for-related-modules)
-    * [Events for unrelated modules](#events-for-unrelated-modules)
-  * [DOM binding](#dom-binding)
-    * [Test hook attributes](#test-hook-attributes)
-    * [Complex 2-way binding](#complex-2-way-binding)
-    * [Client-side templating](#client-side-templating)
-    * [Polyfills](#polyfills)
-  * [Directory structure](#directory-structure)
-    * [Components directory](#components-directory)
-    * [Vendor directory](#vendor-directory)
-    * [Utils directory](#utils-directory)
-  * [Be careful when transpiling](#be-careful-when-transpiling)
-    * [`for...of loops`, a common use case](#forof-loops-a-common-use-case)
+- [General principles](#general-principles)
+  - [Progressively enhance](#progressively-enhance)
+  - [Code for humans](#code-for-humans)
+  - [Modules over monoliths](#modules-over-monoliths)
+  - [Keep it simple](#keep-it-simple)
+  - [Performant code](#performant-code)
+- [Code style](#code-style)
+  - [Linting](#linting)
+  - [Comments](#comments)
+    - [JSDoc](#jsdoc)
+  - [Asynchronicity](#asynchronicity)
+    - [Things to consider](#things-to-consider)
+    - [Tips](#tips)
+      - [Awaiting multiple promises](#awaiting-multiple-promises)
+      - [Multiple awaits in a one-liner](#multiple-awaits-in-a-one-liner)
+      - [Arrow function syntax with await](#arrow-function-syntax-with-await)
+      - [Fallback to promises](#fallback-to-promises)
+    - [Further reading](#further-reading)
+  - [Indentation](#indentation)
+  - [White space](#white-space)
+  - [Variables](#variables)
+    - [Defining variables](#defining-variables)
+    - [Use of var](#use-of-var)
+  - [Functions](#functions)
+    - [Pure functions](#pure-functions)
+  - [Operators](#operators)
+  - [Loops](#loops)
+  - [Strict mode](#strict-mode)
+- [Client-side JavaScript architecture](#client-side-javascript-architecture)
+  - [Module architecture](#module-architecture)
+    - [Configuration](#configuration)
+    - [Imports](#imports)
+  - [Events](#events)
+    - [Events for related modules](#events-for-related-modules)
+    - [Events for unrelated modules](#events-for-unrelated-modules)
+  - [DOM binding](#dom-binding)
+    - [Test hook attributes](#test-hook-attributes)
+    - [Complex 2-way binding](#complex-2-way-binding)
+    - [Client-side templating](#client-side-templating)
+    - [Polyfills](#polyfills)
+  - [Directory structure](#directory-structure)
+    - [Components directory](#components-directory)
+    - [Vendor directory](#vendor-directory)
+    - [Utils directory](#utils-directory)
+  - [Be careful when transpiling](#be-careful-when-transpiling)
+    - [`for...of loops`, a common use case](#forof-loops-a-common-use-case)
+  - [Further reading](#further-reading-1)
 
 ## General principles
 
@@ -132,7 +134,7 @@ bar = tempVar;
 
 ### Performant code
 
-We should always try to write fast code, but not if it makes the code difficult to understand. It's inefficient to optimise in favour of performance unless evidence shows that you really _need_ to do that.
+We should always try to write fast code, but not if it makes the code difficult to understand. It's inefficient to optimise in favour of performance unless evidence resulting from profiling the code shows that you really _need_ to do that.
 
 If you're writing a small library with a single simple purpose, and you really _really_ need to do it, then it makes sense; in a project with more than one contributor, there's frequently more "cost" than "benefit".
 
@@ -197,24 +199,18 @@ const uniqueIDs = new Set([1, 2, 1, 2]);
 
 #### JSDoc
 
-Although your JavaScript code should be self-documenting, we highly recommend
-that where necessary, you document your JavaScript application or library using the
-standardised [JSDoc](https://jsdoc.app/) format.
+Although your JavaScript code should be self-documenting, we highly recommend that where necessary, you document your JavaScript application or library using the standardised [JSDoc](https://jsdoc.app/) format.
 
-This format is leveraged by the Language Server Protocol (LSP), which is
-supported in numerous editors and Integrated Development Environments (IDE)
-nowadays.  
-Thanks to LSP you get short lines of documentation right from the
-invocation context. This helps you code quickly, while avoiding obvious errors.
+This format is leveraged by the Language Server Protocol (LSP), which is supported in numerous editors and Integrated Development Environments (IDE) nowadays. Thanks to LSP you get short lines of documentation right from the invocation context. This helps you code quickly, while avoiding obvious errors.
 
 For a function, for example, you get:
+
 - What it is intended to do
 - The type, default value, and description of its parameters
 - Which parameters are optional
 - The function returned value type and description
 
-Bonus: There are tools to generate a documentation website for your application
-or library if it uses JSDoc.
+Bonus: There are tools to generate a documentation website for your application or library if it uses JSDoc.
 
 A concrete and furnished example:
 
@@ -855,16 +851,14 @@ Client-side templating is typically to be avoided - e.g. in the example of an AJ
 
 #### Polyfills
 
-An example polyfill might add `requestAnimationFrame` for any grade-A browsers which don't support it.
+A [browser polyfill](https://en.wikipedia.org/wiki/Polyfill_(programming)) is code that implements a feature that a browser doesn't support. For example, a polyfill might add `requestAnimationFrame` for any browsers that don't support it.
 
-If you utilise a Polyfill, the JavaScript must meet these conditions:
+If you utilise a polyfill, the JavaScript must meet these conditions:
 
-  - It must _not_ override native browser functionality
-  - It must match native browser functionality exactly (where possible)
-  - It can be either third-party, or written in-house
-  - Must be installed via NPM (or dynamically via [polyfill.io](https://polyfill.io/v2/docs/), at your discretion).
-
-Note that `polyfill.io` adds one additional blocking HTTP request, and if loading asynchronously one must be careful to manage the loading order of scripts.  So please consider the performance impact of using `polyfill.io` versus the maintenance overhead of bundling polyfills with your main application code.
+- It [MUST NOT][rfc-2119] override native browser functionality
+- It [MUST][rfc-2119] match native browser functionality exactly (where possible)
+- It [MUST][rfc-2119] always be served from one of our own domains, never from third party CDNs
+- It can be either third-party, or written in-house
 
 If your project is JS-heavy you may wish to consider adding third-party code like polyfills, to a separate `vendor.js` bundle which is not part of your `main.js` entry point — the reasoning being the `vendor.js` bundle will change less frequently and is more likely to be cached by the client. If your visitors are unlikely to have primed caches, one bundle would probably be the better option.
 
@@ -909,10 +903,10 @@ JavaScript in this directory must meet these conditions:
 
 The `utils` directory is used to house JavaScript written for the project that doesn't fit into the rules for the `components` directory. Utilities still have some conditions of their own:
 
-  - It must _not_ bind to the DOM
-  - It must _not_ add behaviour to and/or manipulate the DOM
-  - It must _not_ be destructive – arguments passed in cannot be modified
-  - It can expose functions and/or prototypal classes
+- It must _not_ bind to the DOM
+- It must _not_ add behaviour to and/or manipulate the DOM
+- It must _not_ be destructive – arguments passed in cannot be modified
+- It can expose functions and/or prototypal classes
 
 An example utility might be a function to make a string title-case.
 
@@ -925,10 +919,8 @@ Transpiling can easily increase the JavaScript bundle size, by incorporating
 polyfills to for supported browsers.
 
 There are two ways of avoiding an increase in bundle size:
-1. Monitoring, with tools like [BabelREPL](https://babeljs.io/repl/), which show
-   the size of your transpiled code.
-2. Using "older" JavaScript syntax to achieve the same effect. An example of
-   this is given below.
+1. Monitoring, with tools like [BabelREPL](https://babeljs.io/repl/), which show the size of your transpiled code.
+2. Using "older" JavaScript syntax to achieve the same effect. An example of this is given below.
 
 #### `for...of loops`, a common use case
 
@@ -950,12 +942,11 @@ Array.prototype.forEach.call(list, function (checkbox) {
 });
 ```
 
-If you would run the above "We don't do this" snippet in [Babel REPL](https://babeljs.io/repl/),
-using our [browserslist](https://github.com/springernature/frontend-playbook/blob/main/practices/graded-browser-support.md#browerslist),
-it transpiles down to 23 lines, whereas the "We do this" snippet
-transpiles down to 5 lines.  If you multiply this by the amount of
-occurences of `for...of` in your code base, this can quickly get out of control.
+If you would run the above "We don't do this" snippet in [Babel REPL](https://babeljs.io/repl/), using our [browserslist](https://github.com/springernature/frontend-playbook/blob/main/practices/graded-browser-support.md#browerslist), it transpiles down to 23 lines, whereas the "We do this" snippet transpiles down to 5 lines. If you multiply this by the amount of occurences of `for...of` in your code base, this can quickly get out of control.
 
-Further reading:
+### Further reading
+
 - [Transpiled for-of Loops are Bad for the Client, by Dave Ruppert](https://daverupert.com/2017/10/for-of-loops-are-bad/).
 - [Avoiding Babel’s Production Bloat](https://webreflection.medium.com/avoiding-babels-production-bloat-d53eea2e1cbf)
+
+[rfc-2119]: https://tools.ietf.org/html/rfc2119
