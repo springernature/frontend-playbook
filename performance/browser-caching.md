@@ -1,4 +1,9 @@
-# Browser Caching
+# Browser caching
+
+- [HTML Markup](#html-markup)
+- [CSS, JS and Images](#css-js-and-images)
+- [General](#general)
+- [Further resources](#further-resources)
 
 ## HTML Markup
 
@@ -13,8 +18,8 @@
 ## General
 
 * If it is under your control, ensure the server provides an Entity Tag (`ETag`) header. The `ETag` header is an additional identifier for a specific version of a resource, typically comprised of the modified time and file size. (On older systems the ETag may also include an inode portion, but this is problematic.) The `Etag` header is especially useful to prevent simultaneous updates overwriting each other. If you use a CDN, it is likely this header will already be provided and properly configured. Learn more:
-    * [MDN ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag)
-    * [Express options for 'ETag' setting](https://expressjs.com/en/api.html#etag.options.table)
+  * [MDN ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag)
+  * [Express options for 'ETag' setting](https://expressjs.com/en/api.html#etag.options.table)
 * You no longer need to use [`Expires` headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires) as it has been superseded by `Cache-Control` header with `max-age`, which is [supported by modern browsers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#Browser_compatibility).
 
 It’s important to note that there isn’t a one-size-fits-all approach to caching, so always decide a caching strategy based on your needs.
