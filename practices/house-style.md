@@ -40,7 +40,7 @@ We care a great deal about accessibility. Our target standards for all of our pr
 
 Civil and federal legislation worldwide is converging on WCAG. Meeting WCAG 2.1 AA will also bring us into alignment with federal regulations like [US Section 508](https://www.section508.gov/) and [UK Accessibility Regulations 2018](https://www.legislation.gov.uk/uksi/2018/952/introduction/made), and with civil rights legislation like the [UK Equality Act 2010](http://www.legislation.gov.uk/ukpga/2010/15/contents) and the [Americans with Disabilities Act](https://www.ada.gov/2010_regs.htm). 
 
-Read our [Accessibility guide](../accessibility/introduction.md) to understand how we meet these aims.
+Read our [Accessibility guide](../accessibility/README.md) to understand how we meet these aims.
 
 ### Progressive enhancement and browser support
 
