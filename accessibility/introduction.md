@@ -75,7 +75,7 @@ You're expected to be aware of the [Web Content Accessibility Guidelines](https:
 
 The companion document [Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/) explains what each of the success criterion in WCAG 2.1 actually means. You might also find the [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/) useful when building features. 
 
-W3C WAI have published a [quick reference document for WCAG](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0). It describes the WCAG success criteria and shows techniques and failures for each. We've also created [a simple accessibility checklist](accessibility-checklist.md), to help you become familiar with the guidelines/standards, and to aid you when manually assessing pages.
+W3C WAI have published a [quick reference document for WCAG](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0). It describes the WCAG success criteria and shows techniques and failures for each. We've also created [a simple accessibility checklist](06-accessibility-checklist.md), to help you become familiar with the guidelines/standards, and to aid you when manually assessing pages.
 
 #### WAI-ARIA Authoring Practices
 
@@ -98,4 +98,4 @@ You can find a [list of accessibility-related resources](../learning/web-accessi
 
 #### Tools
 
-A breakdown of the tools we recommend for testing accessibility, including assistive technology, can be found on the Playbook [Accessibility tools](tools.md) page.
+A breakdown of the tools we recommend for testing accessibility, including assistive technology, can be found on the Playbook's [popular accessibility tools](01-popular-tools.md) page.

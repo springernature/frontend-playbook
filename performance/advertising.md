@@ -25,7 +25,7 @@ These guidelines are based on ethical, [accessibility](../accessibility/introduc
 * The ad content must have clearly defined borders and not be confused with normal page content.
 * Audio or video in ads must be user initiated. A control must be included in order to allow for audio/video initiation and stop.
 
-All advertising must also comply with the rest of our [accessibility guidelines](../accessibility/accessibility-checklist.md).
+All advertising must also comply with the rest of our [accessibility guidelines](../accessibility/06-accessibility-checklist.md).
 
 ## Performance
 
