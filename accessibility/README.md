@@ -10,8 +10,10 @@
     * [Web Content Accessibility Guidelines](#web-content-accessibility-guidelines)
     * [WAI-ARIA Authoring Practices](#wai-aria-authoring-practices)
     * [Testing with real users](#testing-with-real-users)
-    * [Resources](#resources)
-    * [Tools](#tools)
+* [Where do I find out more?](#where-do-i-find-out-more)
+  * [Practical tools](#practical-tools)
+  * [Practical advice](#practical-advice)
+  * [Learning resources](#learning-resources)
 
 ## General principles
 
@@ -92,10 +94,27 @@ The best way to learn if your website works for people with disabilities is to g
 
 You can arrange your own user testing, but it's better to engage a third party like the [Digital Accessibility Centre](http://www.digitalaccessibilitycentre.org/) to do this work for you. As professionals who specialise in accessibility testing and making recommendations, they're better at it than you.
 
-#### Resources
+## Where do I find out more?
+
+### Practical tools
+
+A breakdown of the tools we recommend for testing accessibility, including assistive technology, can be found on the Playbook's [popular accessibility tools](01-popular-tools.md) page.
+  
+### Practical advice
+
+We maintain guides to specific areas of accessibility. You may be interested in:
+
+* [writing better alt text](02-guide-to-alt-text.md)
+* [creating accessible emails](03-accessibility-in-emails.md)
+* [creating accessible PDFs](04-accessibility-in-pdfs.md)
+* [learning about effective colour contrast](05-effective-colour-contrast.md)
+
+If you're curious about the most common accessibility issues we see on websites, we have a set of documents on [common remediations](common-remediations/README.md) for issues that can only be detected with manual testing. 
+
+If you're a third party supplier, or you need to share guidance with one of our third party suppliers, our [Guide for suppliers](07-guide-for-suppliers.md) is a complete document that explains our philosophy and expectations. 
+
+### Learning resources
 
 You can find a [list of accessibility-related resources](../learning/web-accessibility.md) in the [Learning section of the Playbook](../learning/README.md).
 
-#### Tools
 
-A breakdown of the tools we recommend for testing accessibility, including assistive technology, can be found on the Playbook's [popular accessibility tools](01-popular-tools.md) page.
