@@ -33,7 +33,7 @@ Requesters merge their own changes when they're ready. Keep your fingers off tha
 
 * **Accessibility**
 
-  * [Accessibility](../accessibility/accessibility-checklist.md) problems. Suggest testing with [pa11y](https://github.com/pa11y) and/or other tools.
+  * [Accessibility](../accessibility/06-accessibility-checklist.md) problems. Suggest testing with [pa11y](https://github.com/pa11y) and/or other tools.
     * [pa11y dashboard](http://pa11y.springernature.com/) _(link only works if inside the Springer Nature VPN)_
 
 * **Complexity**

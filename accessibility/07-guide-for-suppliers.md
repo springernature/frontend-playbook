@@ -52,7 +52,7 @@ Automated accessibility testing can be used to detect the most common accessibil
 
 At Springer Nature, we use [Pa11y](http://pa11y.org/). It incorporates the [Axe](https://www.deque.com/axe/) and [HTML_CodeSniffer](https://squizlabs.github.io/HTML_CodeSniffer/) automated accessibility testing engines. Pa11y can be installed as part of your Continuous Integration setup if you’re using one, or can otherwise be used on the command line. Axe and HTML_CodeSniffer can also be used in the browser. 
 
-We expect your product to be free of errors when passed through Pa11y. You’re welcome to use [other automated accessibility testing tools](https://github.com/springernature/frontend-playbook/blob/main/accessibility/tools.md#other-accessibility-tools) in addition. 
+We expect your product to be free of errors when passed through Pa11y. You’re welcome to use [other automated accessibility testing tools](https://github.com/springernature/frontend-playbook/blob/main/accessibility/01-popular-tools.md#other-accessibility-tools) in addition. 
 
 You should also check your HTML is valid before handing off your work - you can use a service like the [WC3 validator](https://validator.w3.org/) or a browser extension. As well as reducing cross-browser bugs, this will catch some common accessibility errors.
 
