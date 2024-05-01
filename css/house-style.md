@@ -96,7 +96,7 @@ You can check the [README](https://github.com/springernature/sasslint-config-spr
 
 ## Preprocessors
 
-Our preferred CSS preprocessor is [Sass using the SCSS syntax](how-we-write-css.md).
+Our preferred CSS preprocessor is [Sass](https://sass-lang.com) using the SCSS syntax. Find out about [how we write CSS](how-we-write-css.md).
 
 ### Nesting
 
