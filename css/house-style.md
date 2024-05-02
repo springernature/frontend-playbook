@@ -90,7 +90,7 @@ Static analysis tools like linters can flag programming errors, bugs and stylist
 CSS code (not compiled) should be linted with [styleLint](https://github.com/stylelint/stylelint). You can find _an example_ config file in the [config directory](config).
 
 Sass code should be linted with [Stylelint](https://stylelint.io/) using the [Springer Nature
-`sasslint-config`](https://github.com/springernature/sasslint-config-springernature). This configuration allows us to maintain consistency between different projects.
+`stylelint-config`](https://github.com/springernature/stylelint-config-springernature). This configuration allows us to maintain consistency between different projects.
 
 You can check the [README](https://github.com/springernature/sasslint-config-springernature/blob/main/README.md) for details about installing and configuring the tools.
 
