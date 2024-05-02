@@ -2,15 +2,15 @@
 
 Our approach to writing CSS aims to provide a framework for working that allows individual teams the flexibility to make project appropriate decisions within a company wide structure. By following a consistent approach across teams we aim to make it easier to move developers around and allow for the easy evolution of our approach within a large company.
 
-We advocate a componentised approach that is designed for scale, is based on [SASS](http://sass-lang.com/) (using the [SCSS](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) syntax), follows the [BEM Methodology](bem-css.md), and borrows elements from [OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/), Utility Classes, and [ITCSS](http://itcss.io/).
+We advocate a componentised approach that is designed for scale, is based on [Sass](https://sass-lang.com/) (using the [SCSS](https://sass-lang.com/documentation/syntax/#scss) syntax), follows the [BEM Methodology](bem-css.md), and borrows elements from [OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/), Utility Classes, and [ITCSS](https://itcss.io/).
 
 Any CSS that we write should conform to our [house style](house-style.md).
 
 ## Architecture
 
-The architecture is split into a series of **levels** with each level representing a folder that contains our SASS split out into different files. Where applicable, content can be organised into sub-folders.
+The architecture is split into a series of **levels** with each level representing a folder that contains our Sass split out into different files. Where applicable, content can be organised into sub-folders.
 
-We follow some of the principles of ITCSS - this means that the CSS is organised in specificity order and the SASS files should be included in the order denoted by this structure.
+We follow some of the principles of ITCSS - this means that the CSS is organised in specificity order and the Sass files should be included in the order denoted by this structure.
 
 The lower the level number the more generic the styles, the higher the number the more explicit. As the levels increase, so does the specificity. If a level is not needed, it can be excluded. At a product level we may need to add levels into the stack.
 
@@ -19,13 +19,13 @@ The lower the level number the more generic the styles, the higher the number th
 A summary of the different levels and their purpose:
 
 #### Settings
-Contains all **global** SASS variables ([see Sass naming](https://github.com/springernature/frontend-playbook/blob/main/css/how-we-write-css.md#sass-variable-naming)) for your project e.g. colors, fonts, media queries.
+Contains all **global** Sass variables ([see Sass naming](https://github.com/springernature/frontend-playbook/blob/main/css/how-we-write-css.md#sass-variable-naming)) for your project e.g. colors, fonts, media queries.
 
 #### Functions
-Contains all **global** SASS functions e.g. em calculation, unit stripping.
+Contains all **global** Sass functions e.g. em calculation, unit stripping.
 
 #### Mixins
-Contains all **global** SASS mixins, this includes mixin definitions used in the **component** and **utility** levels.
+Contains all **global** Sass mixins, this includes mixin definitions used in the **component** and **utility** levels.
 
 #### Base
 A Base rule is applied to an element using an element/type selector, a descendant selector, or a child selector, along with any pseudo-classes. Base styles are related to the basic styles of your product, like typography, reset and global elements like links. Use this level to include any (third-party) resets or normalization css.
