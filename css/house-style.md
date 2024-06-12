@@ -89,14 +89,14 @@ Static analysis tools like linters can flag programming errors, bugs and stylist
 
 CSS code (not compiled) should be linted with [styleLint](https://github.com/stylelint/stylelint). You can find _an example_ config file in the [config directory](config).
 
-SASS code should be linted with [sass-lint](https://github.com/sasstools/sass-lint) using the [Springer Nature
-`sasslint-config`](https://github.com/springernature/sasslint-config-springernature). This configuration allows us to maintain consistency between different projects.
+Sass code should be linted with [Stylelint](https://stylelint.io/) using the [Springer Nature
+`stylelint-config`](https://github.com/springernature/stylelint-config-springernature). This configuration allows us to maintain consistency between different projects.
 
 You can check the [README](https://github.com/springernature/sasslint-config-springernature/blob/main/README.md) for details about installing and configuring the tools.
 
 ## Preprocessors
 
-Our preferred CSS preprocessor is [SASS](http://sass-lang.com/) using the [SCSS syntax](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html).
+Our preferred CSS preprocessor is [Sass](https://sass-lang.com) using the SCSS syntax. Find out about [how we write CSS](how-we-write-css.md).
 
 ### Nesting
 
