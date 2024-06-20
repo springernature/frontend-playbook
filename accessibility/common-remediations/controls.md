@@ -60,7 +60,7 @@ Avoid opening links in new tabs or windows wherever possible.
 
 If you really have to do it, warn the user before they click on the link that it'll open in a new window. You can use text like "opens in a new window" or a visual icon. If you choose to use an icon, make sure it's accessible to screen reader users. 
 
-You MUST use `rel="noopener"` on outbound links that open in a new window. See the [secure markup guide](../security/secure-markup.md/#add-relnoopener-to-outbound-links-in-new-windows) for an explanation. 
+You MUST use `rel="noopener"` on outbound links that open in a new window. See the [secure markup guide](https://github.com/springernature/frontend-playbook/blob/main/security/secure-markup.md#add-relnoopener-to-outbound-links-in-new-windows) for an explanation. 
 
 We do this:
 ```html
