@@ -8,6 +8,7 @@
 - [Other accessibility tools](#other-accessibility-tools)
   - [Automated accessibility testing tools in the browser](#automated-accessibility-testing-tools-in-the-browser)
   - [Tools for manually analysing web pages](#tools-for-manually-analysing-web-pages)
+  - [Tools for audio and video media accessibility](#tools-for-audio-and-video-media-accessibility)
 - [Simulators](#simulators)
 
 ## Automated testing
@@ -75,6 +76,11 @@ In addition to Microsoft's Accessibility Insights tool, here are some other thin
 - Check colour contrast conformance with WebAim's [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/) or TPGi's [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) tool (for Mac and Windows).
 - The [Landmarks browser extension](http://matatk.agrip.org.uk/landmarks/) (for Firefox, Chrome and Opera) enables navigation of WAI-ARIA landmarks, via the keyboard or a pop-up menu.
 
+### Tools for audio and video media accessibility
+
+- An extensive guide to [making audio and video media accessible](https://www.w3.org/WAI/media/av/) from the W3C. 
+
+- The Trace Center’s [Photosensitive Epilepsy Analysis Tool (PEAT)](https://trace.umd.edu/peat/) is a downloadable resource that can identify seizure risks in web content and software. PEAT analyses visual media to detect patterns, flashing lights, and rapid color changes.
 
 ## Simulators
 
