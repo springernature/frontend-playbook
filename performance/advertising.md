@@ -1,9 +1,9 @@
 # Advertising
 
-* [Ethical](#ethical)
-* [Accessibility](#accessibility)
-* [Performance](#performance)
-* [References](#references)
+- [Ethical](#ethical)
+- [Accessibility](#accessibility)
+- [Performance](#performance)
+- [References](#references)
 
 These guidelines are based on ethical, [accessibility](../accessibility/README.md) and performance recommendations and best practices.
 
