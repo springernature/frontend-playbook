@@ -118,7 +118,7 @@ Fixing a non-accessible PDF requires using Adobe Acrobat Pro to manually tag the
 
 If you have no choice, follow the guidelines from Adobe on [Creating Accessible PDFs in Adobe Acrobat](https://helpx.adobe.com/acrobat/using/creating-accessible-pdfs.html), and remember that some issues (e.g. low contrast) may not be fixed with this method. 
 
-A full explanation of tagging PDFs is out of scope for this document - if you need training or support to do this kind of remediation work, we recommend [contacting a specialist like AbilityNet](https://www.abilitynet.org.uk/creating-accessible-pdfs) to help you understand what needs to be done and how to do it. 
+A full explanation of tagging PDFs is out of scope for this document - if you need training or support to do this kind of remediation work, we recommend contacting a specialist to help you understand what needs to be done and how to do it. 
 
 ## References
 
