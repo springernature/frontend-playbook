@@ -84,3 +84,38 @@ Your work is now merged, good job! Delete your remote branch, and delete your lo
 Our open source projects are versioned with [SemVer](semver.md). Check our [Open Source support](../practices/open-source-support.md) guide for details on how to version and release an update to an open source project.
 
 Closed source projects may use different versioning practices.
+
+## Sign and Verify Your Commits on GitHub
+
+If you're using GitHub, it's important to sign your commits. Doing so helps us verify that commits are coming from the
+accounts they claim to be from, which reduces the risk of confusion or even attacks on our supply chain. In the future,
+this may become a requirement, so it's a good idea to set it up now.
+
+Still unsure? You can check out [Jörg's lightning talk](https://ca.public.springernature.app/lightning-talks/2024-12-20/) where he demonstrates how even Linus Torvalds signs commits to
+one of our repositories.
+
+The good news is that signing commits has become much easier, especially with SSH key support. If you're already using
+SSH to access GitHub, you can reuse your existing SSH key to sign your commits effortlessly.
+
+Here’s how to set it up:
+
+1. **[Add your SSH key as a signing key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) in [GitHub settings](https://github.com/settings/keys)**: Even if your SSH key is already registered as an
+   authentication key, it needs to be added as a signing key as well.
+
+2. **Configure your local Git client to use the signing key**:
+   If you’re using the command-line client, run the following commands (assuming your SSH key is stored in
+   `~/.ssh/id_ed25519`):
+
+   ```
+   git config --global gpg.format ssh
+   git config --global user.signingkey ~/.ssh/id_ed25519
+   git config --global commit.gpgsign true
+   ```
+
+3. **Optional: [Enable vigilant mode on GitHub](https://docs.github.com/en/authentication/managing-commit-signature-verification/displaying-verification-statuses-for-all-of-your-commits)**: This will flag any unsigned commits as unverified. If you prefer not to
+   flag them, you can leave this option off.
+
+Once set up, any commits made from this configured client will be signed and verified by GitHub.
+
+For 1Password users, [you can store your SSH keys in 1Password](https://developer.1password.com/docs/ssh/) and even use it to automatically configure your Git
+client.
