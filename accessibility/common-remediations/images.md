@@ -197,7 +197,7 @@ Applying `aria-hidden="true"` to an SVG removes it from the accessibility tree. 
 
 #### How do I fix it? 
 
-If you'd like the SVG to be available to assistive technologies (e.g. it has important alt text that the user would need to understand what the control does):
+If you would like the SVG to be available to assistive technologies (e.g. it has important alt text that the user would need in order to understand what the control does):
 
 We do this:
 ```html
