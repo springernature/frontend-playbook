@@ -217,7 +217,6 @@ We do this:
 
 ```
 
-
 We _don't_ do this:
 ```html
 <a href="/">Link text <svg>...</svg></a>
