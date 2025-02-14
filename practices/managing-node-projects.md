@@ -20,78 +20,79 @@
 * [Open source dependencies](#open-source-dependencies)
 * [Handling dependencies from third parties](#handling-dependencies-from-third-parties)
 
-The following guide describes how we use node and manage package dependencies in [Springer Nature Node.js-based projects](https://github.com/springernature?utf8=%E2%9C%93&q=&type=public&language=javascript).
+This guide describes how we use node and manage package dependencies in [Springer Nature Node.js-based projects](https://github.com/springernature?utf8=%E2%9C%93&q=&type=public&language=javascript).
 
 
 ## Installing dependencies
 
-There are two methods for installing node dependencies: `npm install` and `npm ci`.
+There are two methods for installing all dependencies for a node project: `npm install` and `npm ci`.
 
 ### `npm install`
 
-`npm install` is the most common method, but it doesn't guarantee reproducible/consistent builds. npm can install varying versions of dependencies, according to [semantic versioning](https://docs.npmjs.com/files/package.json#dependencies) and the version of node used when installing. `npm install` will create a `package-lock.json` file describing the complete dependency graph and specifying exact versions of all the dependencies installed.
+`npm install` is the most common method; but it doesn't guarantee the project will build consistently. This is because `npm` can install varying versions of dependencies according to [semantic versioning](https://docs.npmjs.com/files/package.json#dependencies), and _possibly_ the version of node used when installing.
 
-Note that if a `package-lock.json` is present **`npm install` will not use it** as the source of authority for what to install.
+If a `package-lock.json` file is not already present, `npm install` will create it. `package-lock.json` describes the complete dependency tree and exact versions of all dependencies required.
 
-This is the method we recommend for installing dependencies when authoring node _libraries_.
+But - **`npm install` does not use `package-lock.json` as the source of authority for what to install.** This is why it results in inconsistent builds.
+
+Another potential problem - when developing an application, it's common to try out various packages until you find one you like, adding them to the `package.json` as you go. But, removing a package from `package.json` does not remove the package from your `node_modules` folder, and neither does a subsequent `npm install`. So it's possible for your code to reference packages still on your machine that are no longer in the `package.json`, and that code will break for anyone doing a fresh install (including CI).
+
+All that said, `npm install` is the method we recommend for installing dependencies when authoring node _libraries_ (for complex reasons we won't discuss here).
 
 ### `npm ci`
 
-`npm ci` installs the complete dependency graph exactly as specified in the `package-lock.json` file, and so guarantees reproducible/consistent builds. This helps reduce "but it works on my machine" issues and is suitable for CI/CD environments (as the name implies).
+`npm ci` is much simpler to understand. It installs the complete dependency graph exactly as specified in the `package-lock.json` file, and so guarantees consistent builds. This helps reduce "but it works on my machine" issues and is suitable for CI/CD environments (as the name implies).
 
 [`npm ci` is also much quicker than `npm install`](https://docs.npmjs.com/cli/ci.html#description) if the `./node_modules` directory is not present (such as in a CI environment).
 
-This is the method we recommend for installing dependencies when authoring node _applications_.
+`npm ci` is the method we recommend for installing dependencies when authoring node _applications_. This is probably what you are doing, and so probably what you should use.
 
 ### How to specify the version of node to use
 
-There are two main ways of doing this, and you're encouraged to do both.
+Specifying the expected node version makes compatibility requirements explicit to developers working on your application, and also deployment environments bulding your project.
+
+There are two main ways of doing this, and it's important to use at least one:
 
 1. The [`engines`](https://docs.npmjs.com/files/package.json#engines) field in `package.json`:
-     * `engines` is important if you're authoring libraries. Let's assume we're using a different version of node to that specified in `engines` field for package `foo`.
+     * `engines` is important if you're authoring _libraries_. Let's assume we're using a different version of node to that specified in `engines` field for package `foo`.
      When you run `npm install` to install `foo`'s dependencies, `npm` will warn about the problem.
      When `npm install`ing a package _which depends on_ `foo`, `npm` will warn.
-     * Some deployment environments also respect it.
-     * It makes compatibility requirements explicit to developers working on your application.
-2. Using an `.nvmrc` file:
-     * An `.nvmrc` file is a configuration file for `nvm` ([Node Version Manager](https://github.com/creationix/nvm)).
-     We strongly encourage you to use `nvm` when you're authoring applications, as it enables you to specify to other developers what versions of node they should be using when running your app.
-     * Your application should include an [`.nvmrc` file](https://github.com/creationix/nvm#nvmrc) in the root directory of the project to specify which version(s) of node are compatible.
-     * It also is required for proper `npm ci` usage, as explained below.
-     * It also makes life much easier when working on multiple node projects locally that require different versions of node.
 
+2. Using an `.nvmrc` file:
+     * An `.nvmrc` file is a configuration file for `nvm` ([Node Version Manager](https://github.com/nvm-sh/nvm)).
+     * Your _application_ should include an [`.nvmrc` file](https://github.com/nvm-sh/nvm?tab=readme-ov-file#nvmrc) in the root directory of the project to specify which version(s) of node are compatible.
+     * It makes life much easier when working on multiple node projects locally that require different versions of node.
+    
 #### `nvm` usage
 
-When you check out a project, you should first run `nvm use` before `npm ci` to ensure you're running on the same version of node the project expects. Additionally [Travis respects `.nvmrc` files](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#specifying-nodejs-versions-using-nvmrc), so using one will simplify your Travis configuration and help other developers avoid mistakes.
+When you first check out a project, you should run `nvm use` before `npm ci` to ensure you're using the version of node the project requires.
 
 #### Automatically running `nvm use`
 
-As mentioned above, it is important to run `nvm use` before `npm ci`. But this is a thing that's easy to forget!
+But it's easy to forget to run `nvm use`!
 
-To avoid forgetting, there are useful shell extensions ([zsh](https://github.com/creationix/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file),
-[bash](https://stackoverflow.com/questions/23556330/run-nvm-use-automatically-every-time-theres-a-nvmrc-file-on-the-directory))
-which run `nvm` and switch node versions for you when `cd`-ing into a directory. Well worth installing.
+To avoid forgetting, there are [shell extensions which run `nvm` automatically](https://github.com/nvm-sh/nvm#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file) when `cd`-ing into a directory with an `.nvmrc` file in its hierarchy. Well worth installing!
 
 ### Should I check in `package-lock.json` to version control?
 
 Yes. There are two main reasons:
 
 1. Predictable builds, as discussed above.
-1. Dependency analysis tools (such as `npm audit`, GitHub Security Alerts and `Snyk`) can spot insecure dependencies anywhere in the dependency tree by analysing the `package-lock.json` file. These tools can force patch version updates of insecure dependencies in the tree, without waiting for third-party package maintainers to release new packages with updated dependencies. This wouldn't be possible without a `package-lock.json` and is a huge benefit.
+1. Dependency analysis tools (such as `npm audit` and Dependabot) can spot insecure dependencies anywhere in the dependency tree by analysing the `package-lock.json` file. These tools can force updates of insecure dependencies in the tree, without waiting for third-party package maintainers to release fixes. This wouldn't be possible without a `package-lock.json` and is a huge benefit.
 
 The downside is it requires all developers to use `nvm` and `npm ci` to install dependencies, otherwise there will be constant conflicts in the `package-lock.json` file.
 
 ### Managing changes to the `package-lock.json` file
 
-Firstly, bear in mind machine-generated files should not be hand-edited, and `package-lock.json` is no exception.
+Firstly, bear in mind machine-generated files should not be hand-edited, including `package-lock.json`.
 
 Secondly, if you're seeing unexpected merge conflicts in `package-lock.json` it can be a symptom of someone using `npm install` instead of `npm ci`. Speak to the developer and see if they are having trouble.
 
-When you update your application, we strongly recommend that you keep `package-lock.json` changes as a result of `npm update` or `npm audit fix` in a separate PR to other changes to the application. This helps by making your PRs easier to review.
+When you update your dependencies and need to commit changes to `package-lock.json`, we strongly recommend commiting the minimal amount of changes to keep the application running - i.e. that you are especially careful to practice "[Atomic Commits](https://codesignal.com/learn/courses/git-basics/lessons/commits-in-detail-making-them-atomic-crafting-messages-and-using-amendments)".
 
 ## Specifying versions of dependencies
 
-As a general rule, we tend to follow a conservative approach when specifying versions for the dependencies of our packages. We only allow PATCH version ranges for [run-time dependencies](#run-time-dependencies) and MINOR + PATCH version ranges for [dev dependencies](#development-dependencies). This helps us ensure consistency between different environments, as we can't know for sure in what environment the app is going to be running, and prevent breakage caused by major or minor updates in dependencies.
+As a general rule, we tend to follow a conservative approach when specifying versions for the dependencies of our packages. We recommend PATCH version ranges for [run-time dependencies](#run-time-dependencies) and MINOR + PATCH version ranges for [dev dependencies](#development-dependencies). This helps us ensure consistency between different environments, (as we can't know for sure in what environment the app is going to be running), and helps prevent breakage caused by major or minor updates in dependencies.
 
 We find that the this approach strikes a good balance between the potential breakage caused by less restrictive versions and the maintenance needed when restricting the dependencies to a specific version through the use of `npm shrinkwrap` or similar tools.
 
@@ -158,7 +159,7 @@ We _don't_ do this:
 
 These are defined in the `devDependencies` section of the `package.json` file and are not used in production environments.
 
-Version numbers for run-time dependencies are defined using a caret `^` plus a full version number in the `MAJOR.MINOR.PATCH` form. For a package version specified as `^2.3.4` this means that all releases from `2.3.4` (inclusive) up to, but not including `3.0.0` are acceptable.
+Version numbers for development dependencies are defined using a caret `^` plus a full version number in the `MAJOR.MINOR.PATCH` form. For a package version specified as `^2.3.4` this means that all releases from `2.3.4` (inclusive) up to, but not including `3.0.0` are acceptable.
 
 #### Examples
 
