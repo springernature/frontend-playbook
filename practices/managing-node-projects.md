@@ -65,7 +65,7 @@ There are two main ways of doing this, and it's important to use at least one:
     
 #### `nvm` usage
 
-When you check out a project, you should first run `nvm use` before `npm ci` to ensure you're using the same version of node the project expects.
+When you first check out a project, you should run `nvm use` before `npm ci` to ensure you're using the version of node the project requires.
 
 #### Automatically running `nvm use`
 
