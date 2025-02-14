@@ -31,7 +31,7 @@ There are two methods for installing all dependencies for a node project: `npm i
 
 `npm install` is the most common method; but it doesn't guarantee the project will build consistently. This is because `npm` can install varying versions of dependencies according to [semantic versioning](https://docs.npmjs.com/files/package.json#dependencies), and _possibly_ the version of node used when installing.
 
-If a `package-lock.json` file it not already present, `npm install` will create it. `package-lock.json` describes the complete dependency tree and exact versions of all dependencies required.
+If a `package-lock.json` file is not already present, `npm install` will create it. `package-lock.json` describes the complete dependency tree and exact versions of all dependencies required.
 
 But - **`npm install` does not use `package-lock.json` as the source of authority for what to install.** This is why it results in inconsistent builds.
 
