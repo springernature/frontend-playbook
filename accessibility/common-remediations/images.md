@@ -11,7 +11,7 @@ See [Understanding Success Criterion 1.1.1 Non-text Content](https://www.w3.org/
    - [Meaningless images with meaningful alt attributes](#meaningless-images-with-meaningful-alt-attributes)
    - [Redundant alt attributes](#redundant-alt-attributes)
    - [Brand logos](#brand-logos)
-   - [Decorative SVG inside a control is focusable](#decorative-svg-inside-a-control-is-focusable)
+   - [SVG inside a control is independently focusable](#svg-inside-a-control-is-independently-focusable)
    - [CSS background images have no accessible name](#css-background-images-have-no-accessible-name)
    - [Icon has no visible label](#icon-has-no-visible-label)
    - [Icon font in or as accessible name](#icon-font-in-or-as-accessible-name)
@@ -176,7 +176,7 @@ We don't do this:
 <img src="bmc-logo.png" alt="BMC">
 ```
 
-### Decorative SVG inside a control is focusable
+### SVG inside a control is independently focusable
 
 #### What's the problem?
 
@@ -197,9 +197,21 @@ Applying `aria-hidden="true"` to an SVG removes it from the accessibility tree. 
 
 #### How do I fix it? 
 
+If you would like the SVG to be available to assistive technologies (e.g. it has important alt text that the user would need in order to understand what the control does):
+
 We do this:
 ```html
 <a href="/">Link text <svg focusable="false">...</svg></a>
+
+<button>Button text <svg focusable="false">...</svg>
+
+```
+
+If you would **not** like the SVG to be available to assistive technologies (if it is purely decorative):
+
+We do this:
+```html
+<a href="/">Link text <svg focusable="false" aria-hidden="true">...</svg></a>
 
 <button>Button text <svg focusable="false" aria-hidden="true">...</svg>
 
