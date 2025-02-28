@@ -9,7 +9,7 @@
   - [font-display CSS](#font-display-css)
   - [Loading fonts with JavaScript](#loading-fonts-with-javascript)
   - [Preloading webfonts](#preloading-webfonts)
-  - [Self host webfonts if possible](#self-host-webfonts-if-possible)
+  - [Self host webfonts](#self-host-webfonts)
 
 ## When to use webfonts
 
