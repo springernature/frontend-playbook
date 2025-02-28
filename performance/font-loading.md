@@ -30,12 +30,12 @@ As a Frontend Developer, it's your role to provide technical guidance and feedba
 
 We do not prescribe a particular implementation. Each team should determine which implementation is best suited for them. However, before selecting an implementation a team should be mindful of our working practices such as:
 
-- [Graded Browser Support](https://github.com/springernature/frontend-playbook/blob/main/practices/graded-browser-support.md)
+- [Graded Browser Support](../practices/graded-browser-support.md)
   - Is the implementation supported by all "enhanced" browsers? If not, is there a good justification for selecting it anyway?
   - Does the implementation work in conjunction with the Cut The Mustard technique?
-- [Progressive Enhancement](https://github.com/springernature/frontend-playbook/blob/main/practices/progressive-enhancement.md)
+- [Progressive Enhancement](../practices/progressive-enhancement.md)
   - This is not meant to force you to choose a non-js implementation, but rather for you to ensure you consider what will happen for users in varying circumstances from the beginning.
-- [Our Performance Goals](https://github.com/springernature/frontend-playbook/blob/main/performance/performance-checklist.md)
+- [Our Performance Goals](../performance/performance-checklist.md)
   - What impact will the implementation have on the page performance of your site?
 
 ## Quick tips
