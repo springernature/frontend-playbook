@@ -37,6 +37,9 @@ We do not prescribe a particular implementation. Each team should determine whic
   - This is not meant to force you to choose a non-js implementation, but rather for you to ensure you consider what will happen for users in varying circumstances from the beginning.
 - [Our Performance Goals](../performance/performance-checklist.md)
   - What impact will the implementation have on the page performance of your site?
+- [Our Data Protection goals](../practices/data-protection-considerations.md)
+  - Is the implementation compliant with our data protection policies?
+  - Does it request user consent accordingly [before downloading the fonts](#self-host-webfonts)?
 
 ## Quick tips
 
