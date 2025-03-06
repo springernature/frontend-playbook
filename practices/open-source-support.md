@@ -25,7 +25,7 @@ To publish a *new* version of one of our open source projects:
   * commit this version bump.
   * create a tag for the current release in your local repository.
 * You can also use the above command to conveniently publish a release candidate, e.g. `npm version 4.0.0-rc1`. Once you are finished with the release candidates and ready for a major release, use `npm version major`.
-* It's possible to do those steps manually - and you will need to do this for a first OSS release - but using the convenience method of `npm` reduces human error and increases consistency.
+* It's possible to do those three steps manually - and you will need to do that for a first OSS release - but using the convenience method of `npm version` reduces human error and increases consistency.
 * Before publishing to NPM for real, run `npm publish --dry-run` ([docs](https://docs.npmjs.com/cli/v9/commands/npm-publish#dry-run)) to see what will happen.
 * Push both the commit and the new tags to origin: `git push && git push --tags`.
 * Depending on how the project is set up, the build system may automatically publish your new version based on the tag. Otherwise you may have to run `npm publish` to publish the package in [npm](https://www.npmjs.com/). If you don't have permission yet, request it from one of the existing collaborators.
