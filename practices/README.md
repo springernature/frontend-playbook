@@ -7,14 +7,14 @@ Development of products at Springer Nature is informed by two primary constraint
   * The infinite variety of the human experience: User context; user disabilities; user time limits; user financial status.
 * We have a number of obligations to ensure our products conform to the WCAG 2.1 guidelines, to the “AA” level of Success Criteria.
 
-* [House style](house-style.md)
 * [Code reviews](code-review.md)
-* [Browser support](graded-browser-support.md)
+* [(Graded) Browser support](graded-browser-support.md)
+* [House style](house-style.md)
+* [Javascript dependent styling](javascript-styling.md)
 * [Managing node projects](managing-node-projects.md)
 * [Managing static assets](managing-static-assets.md)
 * [Open source support](open-source-support.md)
 * [Progressive enhancement](progressive-enhancement.md)
 * [Structured data](structured-data.md)
-* [Javascript dependent styling](javascript-styling.md)
 
 [Main table of contents](../README.md#table-of-contents)
