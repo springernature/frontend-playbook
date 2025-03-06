@@ -76,10 +76,10 @@ If you have to load a font the conventional way using a `<link>` then consider u
 
 ### Self host webfonts
 
-Any webfonts you use must be self-hosted - avoid using a font-hosting service.
+[As any other static asset](../practices/managing-static-assets.md), any webfonts you use [MUST](../README.md#key-words) be self-hosted - avoid using a font-hosting service.
 
-Every major browser now implements HTTP cache partitioning in order to prevent leaking of the users' browser history, and avoid cross-site tracking and cross-site search attacks. This means that there's no performance benefit from using an external service to host our webfonts.
+As major browsers now implement HTTP cache partitioning to prevent leaking of the users' browser history and mitigate cross-site tracking and search attacks, there's no performance benefit from using an external service to host our webfonts.
 
-Using an external font-hosting service can actually worsen performance in important markets like China, as opening a connection to a new host can sometimes be very slow, or even fail completely, due to the filtering done by the Great Firewall.
+Using an external font-hosting service can negatively impact performance in markets like China, as opening a connection to a new host can sometimes be very slow, or even fail completely, due to the data filtering mechanism of the Great Firewall.
 
-But most importantly, using external font-hosting services we risk passing personally identifiable information (PII) from your users to those font-hosting services, increasing the risk of litigation.
+When self hosting the fonts is not possible due to for example licensing issues, you MUST ensure data protection policies are followed and user consent is obtained before connecting to remote origins. This practice prevents unauthorised disclosure of personally identifiable information (PII) to external services, reducing litigation risks.
