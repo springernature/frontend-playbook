@@ -108,6 +108,7 @@ We maintain guides to specific areas of accessibility. You may be interested in:
 * [creating accessible emails](03-accessibility-in-emails.md)
 * [creating accessible PDFs](04-accessibility-in-pdfs.md)
 * [learning about effective colour contrast](05-effective-colour-contrast.md)
+* [make good use of the section element](08-guide-to-the-section-element.md)
 
 If you're curious about the most common accessibility issues we see on websites, we have a set of documents on [common remediations](common-remediations/README.md) for issues that can only be detected with manual testing. 
 
@@ -116,5 +117,3 @@ If you're a third party supplier, or you need to share guidance with one of our 
 ### Learning resources
 
 You can find a [list of accessibility-related resources](../learning/web-accessibility.md) in the [Learning section of the Playbook](../learning/README.md).
-
-
