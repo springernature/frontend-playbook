@@ -54,7 +54,7 @@ Furthermore, a W3C WAI-IG mailing-list thread “Landmarks without labels or no 
 Both explain that landmark “noise” slows them down - they only want a handful that map to genuinely major regions.
 
 While many users of assistive technology use headlines to skim over a page, it may still make sense to use a headline to
-label a section element, namely if it is important enough to be given it's own landmark among the landmarks of the page.
+label a section element, namely if it is important enough to be given its own landmark among the landmarks of the page.
 
 
 ## What are the requirements for making a section element accessible?
