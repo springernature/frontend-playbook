@@ -109,4 +109,5 @@ describe('Your research section', () => {
         expect(sectionElement).not.toBe(null);
         expect(sectionLabelElement).not.toBe(null);
     });
+});
 ```
