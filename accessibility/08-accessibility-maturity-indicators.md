@@ -1,7 +1,7 @@
 # Indicators of Accessibility Maturity Levels for teams and departments
 
 **Version:** 1.0  
-**Date:** July 2025  
+**Date:** 12th August 2025  
 **Authors:** [Accessibility Enablement](https://github.com/springernature/accessibility-enablement?tab=readme-ov-file#who-are-we)
 
 ## Inside this document:
