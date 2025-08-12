@@ -29,33 +29,6 @@ Use this framework to:
 
 This is not a checklist, but a practical tool to help teams embed accessibility more deeply and consistently in their everyday work.
 
-## Benefits of Accessibility Maturity
-A mature approach to accessibility goes beyond technical compliance to deliver inclusive, high-quality user experiences. While meeting the [Web Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG22/) is important, true accessibility maturity embeds accessibility into everyday work, from planning and tools to mindset and collaboration.
-
-Compliance alone doesn’t guarantee usability or user satisfaction, and maturity doesn’t always match compliance levels. Some highly mature teams may still be bringing parts of their service into compliance, while some less mature teams may currently maintain high compliance. 
-
-The key distinction is sustainability: mature teams can achieve and maintain compliance independently, with minimal support, while less mature teams are more likely to regress and require ongoing intervention.
-
-Teams that invest in accessibility maturity are more agile in responding to evolving standards and expectations, proactively meet regulatory requirements, and reduce legal risks. They avoid costly last-minute fixes, strengthen user engagement and loyalty, and deliver better outcomes for all users.
-
-Accessibility maturity also results in more independent customers, better use of team expertise, and stronger digital capabilities for both staff and users. These factors contribute to higher returns on digital investments and more sustainable, inclusive products and services, delivered by default, not by exception.
-
-Organisational benefits grow with maturity and include, but are not limited to: increased user engagement and loyalty, improved user outcomes, greater consumer independence, more effective use of support staff skills, higher ROI, and enhanced digital capability across the organisation.
-
-Table 1 below outlines how these benefits align with the four levels of accessibility maturity developed for teams and departments across [Springer Nature](https://www.springernature.com/gp).
-
-
-**TABLE 1. Benefits of accessibility maturity**
-
-|         Maturity levels:         | **Emerging** | **Developing** | **Established** | **Transformative** |
-|------------------------|:--------------:|:----------------:|:-----------------:|:--------------------:|
-| **Typical Quote**      | _“Please let us know if we need to do any work around accessibility”_ | _“We aim to comply with web standards”_ | _“We aim to maximise user independence and minimise barriers”_ | _“Disability is the first thing we discuss at all points of product development”_ |
-| **Legal Risk**         |High|Medium|Low|Very low|
-| **Benefits for Users** |Very low|Medium|High|Very high|
-| **Benefits to Organisation** |Very low|Medium|High|Very high|
-
-
-
 ## Accessibility Maturity Levels and Indicators
 Each team or department can assess its **accessibility maturity** using four defined **levels**, helping them understand their current position and identify opportunities for growth:
 
@@ -96,6 +69,31 @@ The purpose of this framework is not to label teams as “_good_” or “_bad_,
 A _mixed_ profile is expected. Different aspects of your work may mature at different rates depending on priorities, resources, and structures. This variation can be a strength: it highlights opportunities for cross-team learning, targeted support, or focused investment. It can reveal where a small change could have a big impact, or where strong practices could be shared more widely.
 
 The aim is meaningful reflection and continuous progress, not _perfection_. Over time, your maturity profile can guide strategic decisions, strengthen collaboration, and embed accessibility more deeply into your team’s culture.
+
+## Benefits of Accessibility Maturity
+A mature approach to accessibility goes beyond technical compliance to deliver inclusive, high-quality user experiences. While meeting the [Web Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG22/) is important, true accessibility maturity embeds accessibility into everyday work, from planning and tools to mindset and collaboration.
+
+Compliance alone doesn’t guarantee usability or user satisfaction, and maturity doesn’t always match compliance levels. Some highly mature teams may still be bringing parts of their service into compliance, while some less mature teams may currently maintain high compliance. 
+
+The key distinction is sustainability: mature teams can achieve and maintain compliance independently, with minimal support, while less mature teams are more likely to regress and require ongoing intervention.
+
+Teams that invest in accessibility maturity are more agile in responding to evolving standards and expectations, proactively meet regulatory requirements, and reduce legal risks. They avoid costly last-minute fixes, strengthen user engagement and loyalty, and deliver better outcomes for all users.
+
+Accessibility maturity also results in more independent customers, better use of team expertise, and stronger digital capabilities for both staff and users. These factors contribute to higher returns on digital investments and more sustainable, inclusive products and services, delivered by default, not by exception.
+
+Organisational benefits grow with maturity and include, but are not limited to: increased user engagement and loyalty, improved user outcomes, greater consumer independence, more effective use of support staff skills, higher ROI, and enhanced digital capability across the organisation.
+
+Table 1 below outlines how these benefits align with the four levels of accessibility maturity developed for teams and departments across [Springer Nature](https://www.springernature.com/gp).
+
+
+**TABLE 1. Benefits of accessibility maturity**
+
+|         Maturity levels:         | **Emerging** | **Developing** | **Established** | **Transformative** |
+|------------------------|:--------------:|:----------------:|:-----------------:|:--------------------:|
+| **Typical Quote**      | _“Please let us know if we need to do any work around accessibility”_ | _“We aim to comply with web standards”_ | _“We aim to maximise user independence and minimise barriers”_ | _“Disability is the first thing we discuss at all points of product development”_ |
+| **Legal Risk**         |High|Medium|Low|Very low|
+| **Benefits for Users** |Very low|Medium|High|Very high|
+| **Benefits to Organisation** |Very low|Medium|High|Very high|
 
 
 ## Common Challenges
