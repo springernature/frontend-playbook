@@ -5,12 +5,12 @@
 **Authors:** [Accessibility Enablement](https://github.com/springernature/accessibility-enablement?tab=readme-ov-file#who-are-we)
 
 ## Inside this document:
-[Introduction](#introduction)
-1. [Benefits of Accessibility Maturity](#1-benefits-of-accessibility-maturity)
-2. [Accessibility Maturity Levels and Indicators](#2-accessibility-maturity-levels-and-indicators)
-3. [Creating Your Accessibility Maturity Profile](#3-creating-your-accessibility-maturity-profile)
-4. [Common Challenges](#4-common-challenges)
-5. [We Are Here to Support You](#5-we-are-here-to-support-you)
+* [Introduction](#introduction)
+* [Benefits of Accessibility Maturity](#benefits-of-accessibility-maturity)
+* [Accessibility Maturity Levels and Indicators](#accessibility-maturity-levels-and-indicators)
+* [Creating Your Accessibility Maturity Profile](#creating-your-accessibility-maturity-profile)
+* [Common Challenges](#common-challenges)
+* [We Are Here to Support You](#we-are-here-to-support-you)
 
 ## Introduction
 [Accessibility Enablement](https://github.com/springernature/accessibility-enablement?tab=readme-ov-file#who-are-we) at [Springer Nature](https://www.springernature.com/gp) has developed this framework, designed to support and guide accessibility growth across teams and departments. 
@@ -29,7 +29,7 @@ Use this framework to:
 
 This is not a checklist, but a practical tool to help teams embed accessibility more deeply and consistently in their everyday work.
 
-## 1. Benefits of Accessibility Maturity
+## Benefits of Accessibility Maturity
 A mature approach to accessibility goes beyond technical compliance to deliver inclusive, high-quality user experiences. While meeting the [Web Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG22/) is important, true accessibility maturity embeds accessibility into everyday work, from planning and tools to mindset and collaboration.
 
 Compliance alone doesn’t guarantee usability or user satisfaction, and maturity doesn’t always match compliance levels. Some highly mature teams may still be bringing parts of their service into compliance, while some less mature teams may currently maintain high compliance. 
@@ -56,7 +56,7 @@ Table 1 below outlines how these benefits align with the four levels of accessib
 
 
 
-## 2. Accessibility Maturity Levels and Indicators
+## Accessibility Maturity Levels and Indicators
 Each team or department can assess its **accessibility maturity** using four defined **levels**, helping them understand their current position and identify opportunities for growth:
 
 * **Emerging.** Accessibility is minimal or absent. Awareness is low, and actions are ad hoc or externally driven.
@@ -86,7 +86,7 @@ Table 2 below outlines the nine dimensions of accessibility maturity, highlighti
 | **9.Procurement**         |Accessibility is not considered during procurement. Suppliers are selected without any accessibility requirements or evaluation.|Accessibility requirements may be mentioned, but are not enforced. Supplier claims are taken at face value; little follow-up or validation.|Accessibility is part of procurement checklists. Suppliers are asked for WCAG conformance or VPATs. Some validation takes place, but not always consistently.|Accessibility is a core procurement criterion. Suppliers are assessed on outcomes, not just claims. Contracts include accessibility clauses, with ongoing monitoring.|
 
 
-## 3. Creating Your Accessibility Maturity Profile
+## Creating Your Accessibility Maturity Profile
 The purpose of this framework is not to label teams as “_good_” or “_bad_,” but to help you understand your current position and plan realistic, achievable next steps.
 
 * **Begin with a self-assessment**. Review all nine dimensions and use the indicators for each to assess your team’s current practice. The maturity level you reach shows your current position. Once you’ve assessed every dimension, you’ll have an _accessibility maturity profile_, a clear, practical snapshot of how accessibility is embedded in your team’s work.
@@ -98,7 +98,7 @@ A _mixed_ profile is expected. Different aspects of your work may mature at diff
 The aim is meaningful reflection and continuous progress, not _perfection_. Over time, your maturity profile can guide strategic decisions, strengthen collaboration, and embed accessibility more deeply into your team’s culture.
 
 
-## 4. Common Challenges
+## Common Challenges
 No team starts out perfect, and most encounter similar barriers on the road to accessibility maturity. Recognising these challenges is the first step to overcoming them. Here are some of the most common:
 
 * **Low awareness or confidence:** not knowing where to start
@@ -108,7 +108,7 @@ No team starts out perfect, and most encounter similar barriers on the road to a
 
 The good news? These are all solvable. The indicators help teams uncover which barriers to address first. You’re not expected to solve everything at once. The goal is steady, informed progress, and support is available every step of the way.
 
-## 5. We are Here to Support You
+## We are Here to Support You
 The [Accessibility Enablement](https://github.com/springernature/accessibility-enablement?tab=readme-ov-file#who-are-we) team is here to help you get the most from this framework. 
 We offer:
 * Support with self-assessment
