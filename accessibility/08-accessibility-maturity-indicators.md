@@ -6,9 +6,9 @@
 
 ## Inside this document:
 * [Introduction](#introduction)
-* [Benefits of Accessibility Maturity](#benefits-of-accessibility-maturity)
 * [Accessibility Maturity Levels and Indicators](#accessibility-maturity-levels-and-indicators)
 * [Creating Your Accessibility Maturity Profile](#creating-your-accessibility-maturity-profile)
+* [Benefits of Accessibility Maturity](#benefits-of-accessibility-maturity)
 * [Common Challenges](#common-challenges)
 * [We Are Here to Support You](#we-are-here-to-support-you)
 
