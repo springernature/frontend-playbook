@@ -89,7 +89,7 @@ Table 2 below outlines the nine dimensions of accessibility maturity, highlighti
 ## 4. Creating Your Accessibility Maturity Profile
 The purpose of this framework is not to label teams as “_good_” or “_bad_,” but to help you understand your current position and plan realistic, achievable next steps.
 
-Begin with a **self-assessment**: Review all nine dimensions and use the indicators for each to assess your team’s current practice. The maturity level you reach shows your current position. Once you’ve assessed every dimension, you’ll have an _Accessibility Maturity Profile_, a clear, practical snapshot of how accessibility is embedded in your team’s work.
+Begin with a **self-assessment**: Review all nine dimensions and use the indicators for each to assess your team’s current practice. The maturity level you reach shows your current position. Once you’ve assessed every dimension, you’ll have an _accessibility maturity profile_, a clear, practical snapshot of how accessibility is embedded in your team’s work.
 
 Use your profile to **prioritise efforts**: focus on the dimensions where improvement will have the greatest impact. Then, **track progress** by revisiting your profile regularly to measure growth and celebrate achievements.
 
