@@ -7,7 +7,7 @@
 ## Inside this document:
 1. [Introduction](#1-introduction)
 2. [Benefits of Accessibility Maturity](#2-benefits-of-accessibility-maturity)
-3. [Accessibility Maturity Levels, Dimensions, and Indicators](#3-accessibility-maturity-levels-dimensions-and-indicators)
+3. [Accessibility Maturity Levels and Indicators](#3-accessibility-maturity-levels-and-indicators)
 4. [Creating Your Accessibility Maturity Profile](#4-creating-your-accessibility-maturity-profile)
 5. [Common Challenges](#5-common-challenges)
 6. [We Are Here to Support You](#6-we-are-here-to-support-you)
@@ -23,7 +23,7 @@ This resource is intended for anyone wishing to enhance accessibility within the
 ### How to use it
 Use this framework to:
 
-* Reflect on your team’s current level of accessibility maturity across nine key dimensions, using the [maturity indicators](#3-accessibility-maturity-levels-dimensions-and-indicators) to identify strengths and areas for improvement.
+* Reflect on your team’s current level of accessibility maturity across nine key dimensions, using the [maturity indicators](#3-accessibility-maturity-levels-and-indicators) to identify strengths and areas for improvement.
 * Create an [accessibility maturity profile](#4-creating-your-accessibility-maturity-profile) for your team or department, which can be used to inform strategic decisions and investment in accessibility, and track progress over time.
 * Foster conversations within and across teams to build a more inclusive and sustainable accessibility culture.
 
@@ -45,7 +45,7 @@ Organisational benefits grow with maturity and include, but are not limited to: 
 Table 1 below outlines how these benefits align with the four levels of accessibility maturity developed for teams and departments across [Springer Nature](https://www.springernature.com/gp).
 
 
-**TABLE 1. Benefits aligned with levels of accessibility maturity**
+**TABLE 1. Benefits of accessibility maturity**
 
 |         Maturity levels:         | **Emerging** | **Developing** | **Established** | **Transformative** |
 |------------------------|:--------------:|:----------------:|:-----------------:|:--------------------:|
@@ -56,7 +56,7 @@ Table 1 below outlines how these benefits align with the four levels of accessib
 
 
 
-## 3. Accessibility Maturity Levels, Dimensions, and Indicators
+## 3. Accessibility Maturity Levels and Indicators
 Each team or department can assess its **accessibility maturity** using four defined **levels**, helping them understand their current position and identify opportunities for growth:
 
 * **Emerging.** Accessibility is minimal or absent. Awareness is low, and actions are ad hoc or externally driven.
