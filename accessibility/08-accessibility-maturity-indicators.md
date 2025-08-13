@@ -29,6 +29,8 @@ Use this framework to:
 
 This is not a checklist, but a practical tool to help teams embed accessibility more deeply and consistently in their everyday work.
 
+**Please note:** This resource is a work in progress — we’ll be adding updates and improvements over time.
+
 ## Accessibility Maturity Levels and Indicators
 Each team or department can assess its **accessibility maturity** using four defined **levels**, helping them understand their current position and identify opportunities for growth:
 
