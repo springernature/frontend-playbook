@@ -1,10 +1,8 @@
-# High magnification
+# Success Criterion 1.4.10 Reflow
 
 Users with low vision may magnify the screen to be able to read text. Your web pages need to be responsive so that they allow these users to read text comfortably without horizontal scrolling or being impeded by design elements. 
 
-To comply with WCAG 2.1 AA, you need to allow for up to 400% magnification. See [Understanding Success Criterion 1.4.4: Resize text
-](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html) and [Understanding Success Criterion 1.4.10: Reflow
-](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) for further details. 
+To meet WCAG 2.1 AA, you need to allow for up to 400% magnification. See [Understanding Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html) and [Understanding Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) for further details. 
 
 ## The issues
 
