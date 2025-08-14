@@ -1,6 +1,10 @@
-# Language of page and parts
+# Success Criterion 3.1.1 Language of Page and Success Criterion 3.1.2 Language of Parts
 
 The HTML `lang` attribute is used to give information about the primary and secondary languages of your pages. It must be present and correct. 
+
+See [Understanding Language of Page](https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html) and [Understanding Language of Parts](https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html) for further details. 
+
+The issues and remediations listed in this file are not exhaustive. 
 
 ## The issues
 

@@ -1,14 +1,28 @@
-# Headings  
+# Success Criterion 1.3.1 Info and Relationships
 
-Headings are vital for screen reader users to be able to make sense of your pages. Without a proper heading structure, they can't explore your document easily and can struggle to use your interface. 
+This criterion is probably the most complex of all WCAG's criteria - fundamentally it involves implementing good semantics and information architecture so that Assistive Technology can properly report and interact with components. 
+
+See [Understanding Info and Relationships](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html) for further details. 
+
+The issues and remediations listed in this file are not exhaustive. 
 
 ## The issues
 
-- [Headings used for styling](#headings-used-for-styling)
-- [Implied headings](#implied-headings)
-- [Multiple H1s per page](#multiple-h1s-per-page)
-- [Heading sequence is not logical](#heading-sequence-is-not-logical)
-- [Missing heading](#missing-heading)
+- [Headings](#headings)
+  - [Headings used for styling](#headings-used-for-styling)
+  - [Implied headings](#implied-headings)
+  - [Multiple H1s per page](#multiple-h1s-per-page)
+  - [Heading sequence is not logical](#heading-sequence-is-not-logical)
+  - [Missing heading](#missing-heading)
+- [Page titles](#page-titles)  
+  - [Title doesn’t describe the page](#title-doesnt-describe-the-page)
+  - [Same title used on multiple pages](#same-title-used-on-multiple-pages)
+- [Semantics](#semantics)
+- [No built-in semantics](#no-built-in-semantics) 
+
+## Headings
+
+Headings are vital for screen reader users to be able to make sense of your pages. Without a proper heading structure, they can't explore your document easily and can struggle to use your interface. 
 
 ### Headings used for styling
 
@@ -190,3 +204,118 @@ If a screen reader user is taken to a new context (e.g. a modal dialog) without 
 When you change context or begin a new section, use a heading to announce the content.
 
 It may help to think about the heading structure of a web page as its table of contents. A ToC contains a reference to everything on the page - your heading structure should do the same. 
+
+
+## Page titles
+
+The HTML `<title>` element provides vital information to many users about the purpose and identity of your pages. Page titles must be provided, unique, and useful. 
+
+### Title doesn’t describe the page
+
+#### What's the problem?
+
+The `<title>` element fails to describe the purpose of the page. You may have failed to add a title, used title text that is too generic to be useful, or used an excessively long title that obscures the page purpose. 
+
+#### Who's affected by the problem?
+
+* Everyone
+
+#### Why's it a problem?
+
+When your page titles are inadequate:
+
+* Screen reader users are unable to know what the point of a page is without scanning its entire contents
+* All users are unable to easily find the correct tab if they temporarily change contexts
+* All users who bookmark the page with their browser are given a poor default name for the bookmark
+* Search engines may only display the first 50-60 characters of the title attribute, so information could be lost in [SERPs](https://en.wikipedia.org/wiki/Search_engine_results_page)
+
+#### How do I fix it? 
+
+All page titles must clearly summarise the purpose of the page. Front-load the most important information about the page so that it appears first. 
+
+We do this:
+```html
+<title>Career opportunities | Website.com </title>
+<title>Contact us | Website.com </title>
+```
+ 
+We _don’t_ do this:
+```html
+<title>Website.com</title>
+<title>Website</title>
+<title>Website.com sells vital products in very important markets to our many happy customers | Contact Us</title>
+```
+
+### Same title used on multiple pages
+
+#### What's the problem?
+
+The `<title>` attribute fails to differentiate the purpose of the page. 
+
+#### Who's affected by the problem?
+
+* Everyone
+
+#### Why's it a problem?
+
+When your page titles are the same on every page:
+
+* Screen reader users are unable to know what the point of a page is without scanning its entire contents
+* All users are unable to easily find the correct tab if they temporarily change contexts
+* All users who bookmark the page with their browser are given a poor default name for the bookmark
+
+#### How do I fix it? 
+
+Where pages are unique, their titles must also be unique. The page title should usually match the main heading (h1) of the page.
+
+We do this:
+```html
+<title>Checkout | Billing information | My webpage </title>
+<title>Checkout | Review Cart | My webpage </title>
+```
+
+We _don’t_ do this:
+```html
+<title>Checkout | My webpage</title>
+```
+
+## Semantics
+
+Using the correct semantics in your HTML is vital if your page is going to work with technology that interfaces with it. At the most basic level, this means browsers themselves, but it's also required for assistive technology, search engines, third party content readers, virtual assistants like Siri or Cortana, and any other technical interface that can read and repurpose a webpage. 
+
+### No built-in semantics
+
+#### What's the problem?
+
+HTML elements with no semantics (`<div>`s and `<span>`s) have been used instead of elements with the correct semantics. The elements may be styled with CSS to look like semantic elements, and/or have JavaScript functionality attached that makes them perform in a similar way to a native element, but the correct native element has not been used. 
+
+#### Who's affected by the problem?
+
+* Everyone
+
+#### Why's it a problem?
+
+HTML elements with no semantics are not understood or handled automatically by user agents. Unless you fully understand the entire specification for a native element (such as a `<button>`), and implement it precisely to that specification, your attempts to replicate its functionality robustly for all users will fail. 
+
+Screen reader users, voice input users, keyboard users, switch device users, users of other kinds of Assistive Technologies, search engines, various types of automated testing software, among others, are likely to be unable to use your interface if you use unsemantic elements. 
+
+#### How do I fix it?
+
+* Use native HTML elements unless you have a very good reason not to
+* Make sure you are using the correct native HTML element for the purpose
+ 
+We do this:
+
+```html
+<button>Toggle UI</button>
+<a href=”/”>Visit this location</a>
+<h2>This is a level 2 heading</h2>
+```
+
+We _don’t_ do this:
+
+```html
+<div onclick=”doFunc();”>Toggle UI</div>
+<span>Visit this location</span>
+<span>This is a level 2 heading</span>
+```

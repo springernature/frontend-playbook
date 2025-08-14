@@ -1,12 +1,57 @@
-# Focus management
+# Success Criterion 2.1.1 Keyboard
 
-"Focus management" is the practice of setting the user's current focus programmatically. You might need to do this when you change the user's context in response to an action they triggered, such as changing a page view or interacting with a complex component. 
+All functionality must be available when using a keyboard alone, and all controls must be fully operable, and properly named and identified. 
+
+This allows users to operate the website using their keyboard or an alterate keyboard device or emulator. These may include speech input software, sip-and-puff software, on-screen keyboards, scanning software and a variety of assistive technologies and alternate keyboards. 
+
+Keyboard navigation also benefits:
+
+* People who are blind (who cannot use devices such as mice that require eye-hand coordination)
+* People with low vision (who may have trouble finding or tracking a pointer indicator on screen)
+* Some people with hand tremors or other motor issues who find using a mouse very difficult 
+
+See [Understanding Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) for further details. 
+
+The issues and remediations listed in this file are not exhaustive. 
 
 ## The issues
 
+- [Links with no href](#links-with-no-href)
 - [No focus management](#no-focus-management)
 - [Inappropriate use of `autofocus`](#inappropriate-use-of-autofocus)
 - [Focus fails to return to triggering element](#focus-fails-to-return-to-triggering-element)
+
+### Links with no href
+
+#### What's the problem?
+
+Anchors (`a` elements) without an `href` attribute have been used.
+
+#### Who's affected by the problem?
+
+* Keyboard users
+* Voice input users
+
+#### Why's it a problem?
+
+Anchors (`a` elements) without an `href` attribute are placeholders for links, not true links. All true anchor links require an `href` attribute to be functional.  
+
+Omitting the `href` attribute prevents keyboard users and voice input users from being able to use the link at all. 
+
+#### How do I fix it? 
+
+We do this:
+```html
+<a href=”#location”>Visit this location</a>
+```
+We _don’t_ do this:
+```html
+<a onclick=”myFunc();”>Visit this location</a>
+```
+
+## Focus management
+
+"Focus management" is the practice of setting the user's current focus programmatically. You might need to do this when you change the user's context in response to an action they triggered, such as changing a page view or interacting with a complex component. 
 
 ### No focus management
 
