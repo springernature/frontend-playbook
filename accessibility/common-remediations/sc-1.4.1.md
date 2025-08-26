@@ -1,6 +1,10 @@
-# Colours
+# Success Criterion 1.4.1 Use of Color
 
 Partial sight, aging and congenital color deficits all produce changes in perception that reduce the visual effectiveness of certain color combinations. 
+
+See [Understanding Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) for further details. 
+
+The issues and remediations listed in this file are not exhaustive. 
 
 ## The issues
 
@@ -49,8 +53,9 @@ In charts or graphs:
 * Consider using a monochrome colour palette
 * Use different [relative luminance](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance) for different data points
 * Use different fill patterns in addition to solid colour areas
+* Use unambiguous text labels for lines or bars
 
 For links:
 
 * Never indicate a link with `color` alone
-* Use `text-decoration: underline` (automatically applied by user agents) in all but special cases, such as navigation options
+* Use `text-decoration: underline` (automatically applied by user agents) in all but special cases, such as navigation menus
