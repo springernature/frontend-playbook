@@ -13,7 +13,7 @@ The issues and remediations listed in this file are not exhaustive.
 	- [Images with no alt attribute](#images-with-no-alt-attribute)
 	- [Meaningful images with meaningless alt attributes](#meaningful-images-with-meaningless-alt-attributes)
 	- [Meaningless images with meaningful alt attributes](#meaningless-images-with-meaningful-alt-attributes)
-	- [Redundant alt attributes](#redundant-alt-text)
+	- [Redundant alt text](#redundant-alt-text)
 	- [Brand logos](#brand-logos)
 	- [SVG inside a control is independently focusable](#svg-inside-a-control-is-independently-focusable)   
 	- [CSS background images have no accessible name](#css-background-images-have-no-accessible-name)
