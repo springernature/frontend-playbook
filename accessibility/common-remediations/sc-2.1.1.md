@@ -2,7 +2,7 @@
 
 All functionality must be available when using a keyboard alone, and all controls must be fully operable, and properly named and identified. 
 
-This allows users to operate the website using their keyboard or an alterate keyboard device or emulator. These may include speech input software, sip-and-puff software, on-screen keyboards, scanning software and a variety of assistive technologies and alternate keyboards. 
+This enables users to navigate the website using either their keyboard or an alternative keyboard device or emulator. These may include speech input software, sip-and-puff software, on-screen keyboards, scanning software, and various other assistive technologies and alternative keyboards. 
 
 Keyboard navigation also benefits:
 
