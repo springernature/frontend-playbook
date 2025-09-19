@@ -32,7 +32,7 @@ As a Frontend Developer, it's your role to provide technical guidance and feedba
 [Like all static assets](../practices/managing-static-assets.md),
  **we [MUST][rfc-2119] host webfonts on our own infrastructure and Content Delivery Network (CDN) instead of including them on our pages from a third-party CDN.**
 
-Avoid using a font-hosting service.
+Do not use a font-hosting service.
 
 By using external font-hosting services we risk passing Personally Identifiable Information (PII) from our users to those font-hosting services, exposing SN to legal risk.
 
