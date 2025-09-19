@@ -29,9 +29,12 @@ As a Frontend Developer, it's your role to provide technical guidance and feedba
 
 ## Self host webfonts
 
-Any webfonts you use **must** be self-hosted - like all third-party resources. Avoid using a font-hosting service.
+[Like all static assets](../practices/managing-static-assets.md),
+ **we [MUST][rfc-2119] host webfonts on our own infrastructure and Content Delivery Network (CDN) instead of including them on our pages from a third-party CDN.**
 
-By using external font-hosting services we risk passing personally identifiable information (PII) from our users to those font-hosting services, exposing SN to legal risk.
+Avoid using a font-hosting service.
+
+By using external font-hosting services we risk passing Personally Identifiable Information (PII) from our users to those font-hosting services, exposing SN to legal risk.
 
 From a web performance perspective, every major browser now implements HTTP cache partitioning in order to prevent leaking of the users' browser history, and avoid cross-site tracking and cross-site search attacks. This means that there's no caching benefit to using an external service to host our webfonts.
 
@@ -84,3 +87,5 @@ Consider using [FontFaceObserver](https://github.com/bramstein/fontfaceobserver)
 If you have to load a font the conventional way using a `<link>` then consider using the [preload technique](https://web.dev/preload-critical-assets/) to ensure the font is requested as early on in the page load process as possible.
 
 `<link rel="preload" href="HardingText-Regular-Web.woff2" as="font" type="font/woff2" crossorigin>`
+
+[rfc-2119]: https://tools.ietf.org/html/rfc2119
