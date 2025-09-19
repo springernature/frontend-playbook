@@ -63,4 +63,4 @@ Contact the Frontend Enablement team if you need access to any of these three to
 
 ## Further resources
 
-* [MDN web docs: Web performance](https://developer.mozilla.org/en-US/docs/Learn/Performance)
+* [MDN web docs: Web performance](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance)
