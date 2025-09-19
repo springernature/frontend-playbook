@@ -26,5 +26,5 @@ It’s important to note that there isn’t a one-size-fits-all approach to cach
 
 ## Further resources
 
-* [Web Fundamentals: HTTP Caching](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
+* [Web Fundamentals: HTTP Caching](https://web.dev/articles/http-cache)
 * [HTTP Cache Headers: A Complete Guide](https://www.keycdn.com/blog/http-cache-headers)

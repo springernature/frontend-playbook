@@ -1,6 +1,7 @@
 # Font loading
 
 - [When to use webfonts](#when-to-use-webfonts)
+- [Self host webfonts](#self-host-webfonts)
 - [Implementation](#implementation)
 - [Quick tips](#quick-tips)
   - [Understand the different user experiences in font loading: FOIT, FOUT and FOFT](#understand-the-different-user-experiences-in-font-loading-foit-fout-and-foft)
@@ -9,7 +10,7 @@
   - [font-display CSS](#font-display-css)
   - [Loading fonts with JavaScript](#loading-fonts-with-javascript)
   - [Preloading webfonts](#preloading-webfonts)
-  - [Self host webfonts if possible](#self-host-webfonts-if-possible)
+
 
 ## When to use webfonts
 
@@ -25,6 +26,16 @@ Our recommendation is that you prioritise a [system font](https://css-tricks.com
 If a webfont is needed then close collaboration between user experience, accessibility, and web performance specialists must be sought to ensure the choice is satisfactory from typographic, accessibility, and performance perspectives.
 
 As a Frontend Developer, it's your role to provide technical guidance and feedback, not to choose the font.
+
+## Self host webfonts
+
+Any webfonts you use **must** be self-hosted - like all third-party resources. Avoid using a font-hosting service.
+
+By using external font-hosting services we risk passing personally identifiable information (PII) from our users to those font-hosting services, exposing SN to legal risk.
+
+From a web performance perspective, every major browser now implements HTTP cache partitioning in order to prevent leaking of the users' browser history, and avoid cross-site tracking and cross-site search attacks. This means that there's no caching benefit to using an external service to host our webfonts.
+
+Using an external font-hosting service can actually worsen performance in important markets like China, as opening a connection to a new host can sometimes be very slow, or even fail completely, due to the filtering done by the Great Firewall.
 
 ## Implementation
 
@@ -73,13 +84,3 @@ Consider using [FontFaceObserver](https://github.com/bramstein/fontfaceobserver)
 If you have to load a font the conventional way using a `<link>` then consider using the [preload technique](https://web.dev/preload-critical-assets/) to ensure the font is requested as early on in the page load process as possible.
 
 `<link rel="preload" href="HardingText-Regular-Web.woff2" as="font" type="font/woff2" crossorigin>`
-
-### Self host webfonts
-
-Any webfonts you use must be self-hosted - avoid using a font-hosting service.
-
-Every major browser now implements HTTP cache partitioning in order to prevent leaking of the users' browser history, and avoid cross-site tracking and cross-site search attacks. This means that there's no performance benefit from using an external service to host our webfonts.
-
-Using an external font-hosting service can actually worsen performance in important markets like China, as opening a connection to a new host can sometimes be very slow, or even fail completely, due to the filtering done by the Great Firewall.
-
-But most importantly, using external font-hosting services we risk passing personally identifiable information (PII) from your users to those font-hosting services, increasing the risk of litigation.
