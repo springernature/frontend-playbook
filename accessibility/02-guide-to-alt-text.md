@@ -92,6 +92,7 @@ Now imagine "A cartoon representation of a yellow dog which has a very large hea
 * Don’t say ‘Image of…’ or ‘Picture of…’ etc. (It's nearly always wrong to say an "Image of", because all images are … images. It's extraneous information that the screenreader announces. However, it can help to know the type of image - i.e. is it a photo, or a screenshot, or a cartoon, depending on the surrounding content and context.)  
 * Don’t need to repeat information already given in the text on the page.  
 * Be as succinct as possible but include details as needed. 
+* Using punctuation in the text alternative makes the information easier to understand. Screen readers will pause at commas and periods. Add a full stop at the end.
 * Copyright info, image source, or other extra information should go in the caption, not the alt text.
 * Context is important e.g. it may be appropriate to note if an image is a photo or an artwork, whether a person is old or young, if the sky is stormy or clear, if that is relevant to the content. 
 * Think about how you would describe the image to a person who can’t see it.
