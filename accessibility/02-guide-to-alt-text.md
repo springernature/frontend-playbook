@@ -230,13 +230,13 @@ This alt text does the following things:
 
 The preferred method to convey mathematical expressions should be using [MathML](https://www.w3.org/Math/) (a standard markup language for describing mathematical notation) or [MathJax](https://www.mathjax.org/) (a JavaScript display engine for mathematics). However, images of mathematical expressions have been used traditionally as a way to easily implement them. It’s worth sharing some examples of good alt text for those cases.
 
-In the case of images of mathematical expressions, the alt text should describe the expression in spoken mathematics. Avoid using symbols or characters with mathematical usages (such as operators, fractions, units etc) which may not be announced as expected by screen readers.
+In the case of images of mathematical expressions, the alt text should describe the expression in spoken mathematics. Avoid using symbols or characters with mathematical usages (such as operators, fractions, units etc) which may not be announced as expected by screen readers. Use capital letters for single-letter variables to ensure screen readers announce them as alphabet characters. For example, use "A" instead of "a" to avoid the lowercase being read as the indefinite article.
 
 #### Insufficient alt text
 
-* "(a + b) / d"
+* "(A + B) / D"
 
 #### Sufficient alt text
 
-* "The quantity of a plus b divided by d."
-* "Fraction where the numerator is a plus b and the denominator is d."
+* "The quantity of A plus B divided by D."
+* "Fraction where the numerator is A plus B and the denominator is D."
