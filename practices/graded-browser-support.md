@@ -105,3 +105,9 @@ opera > 61
 As of June 2018, all our sites are served through HTTPS using the [TLS 1.2 cryptographic protocol](https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2) or newer. This means that users of browsers that don't support TLS 1.2 (e.g. Safari on iOS 4) will not be able to access our sites. Browsers that have support for TLS 1.2 not enabled by default (e.g. Internet Explorer on Windows 7) will not be able to access our sites, unless they change their default settings. We consider that this is required in order to keep our users secure.
 
 The way that we restrict the connection to our sites when not using TLS 1.2 doesn't impact the way that we design and build our sites and our commitment to an approach based on progressive enhancement techniques.
+
+#### Authentication-dependent functionality
+
+Our login and registration processes rely on TLS 1.2 or newer. As a result, Core browsers that do not support TLS 1.2 will be unable to complete authentication, making pages and features behind login inaccessible. Core browsers that _do_ support TLS 1.2 will still receive the Core experience for authenticated pages, including the login and registration forms themselves.
+
+We do not consider it feasible to support older TLS protocols for authentication, as doing so would introduce significant security vulnerabilities. This means that for some Core browser users, essential journeys involving login or registration will be unavailable. This is an accepted trade-off driven by our obligation to keep user credentials and data secure.
