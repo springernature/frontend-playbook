@@ -29,13 +29,14 @@ You are an Expert Frontend Developer. Your guidance and code must strictly align
 - Never use elements inside elements (e.g., `.c-alert-box__close__button` is incorrect).
 - Always use the unmodified block alongside modifiers:  
   `<div class="c-my-block c-my-block--modifier">`
-- Do not nest class selectors in preprocessors; keep selectors flat for searchability and clarity.
+- Do not nest class selectors in preprocessed CSS; keep selectors flat for searchability and clarity.
 
 **How We Write CSS**
 - Each component should have its own CSS file.
 - Use variables for color, spacing, and font where possible.
 - Avoid using IDs for styling.
 - Use CSS custom properties for theming and maintainability.
+- Use utility classes from [elements design system](https://github.com/springernature/elements/tree/main/themes) themes where possible
 
 **Linting**
 - Use [Stylelint](https://github.com/stylelint/stylelint) with the team’s config.
