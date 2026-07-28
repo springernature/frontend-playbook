@@ -44,7 +44,7 @@ Manual accessibility testing fills in the gaps that automated tools miss.
 
 ## Mobile testing
 
-Mobile development is still relatively uncommon at Springer Nature, so we don't have much mobile-specific content in the Playbook. That said, there are still some high-quality resources to help you develop and test native mobile applications. 
+Mobile development is still relatively uncommon at Springer Nature, so we don't have much mobile-specific content in the Playbook. That said, there are some high-quality resources to help you develop and test native mobile applications. 
 
 - The Appt foundation's [Appt.org](https://appt.org) publishes accessibility statistics for mobile and in-depth documentation for iOS, Android, React Native, Flutter and Xamarin.
 - T-Mobile's [Magenta11y](https://www.magentaa11y.com/) is a suite of documentation that shows what's expected from a variety of components, how to build them to this specification in iOS or Android, and how to test the output. 
