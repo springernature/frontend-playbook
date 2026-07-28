@@ -3,6 +3,7 @@
 - [Automated testing](#automated-testing)
   - [Pa11y and axe](#pa11y-and-axe)
 - [Manual testing](#manual-testing)
+- [Mobile testing](#mobile-testing)
 - [Assistive technology](#assistive-technology)
   - [Screen readers](#screen-readers)
 - [Other accessibility tools](#other-accessibility-tools)
@@ -41,6 +42,12 @@ Manual accessibility testing fills in the gaps that automated tools miss.
 
 - Microsoft’s [free Accessibility Insights tool](https://accessibilityinsights.io/) is a browser extension for Chrome that will guide you through the process of assessing a webpage for basic accessibility conformance. It's not a complete guide to accessibility, but will help you catch things that automated testing can't. 
 
+## Mobile testing
+
+Mobile development is still relatively uncommon at Springer Nature, so we don't have much mobile-specific content in the Playbook. That said, there are still some high-quality resources to help you develop and test native mobile applications. 
+
+- The Appt foundation's [Appt.org](https://appt.org) publishes accessibility statistics for mobile and in-depth documentation for iOS, Android, React Native, Flutter and Xamarin.
+- T-Mobile's [Magenta11y](https://www.magentaa11y.com/) is a suite of documentation that shows what's expected from a variety of components, how to build them to this specification in iOS or Android, and how to test the output. 
 
 ## Assistive technology
 
