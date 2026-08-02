@@ -18,6 +18,7 @@ There's no particular order to which you should read the playbook, but the [Prac
 
 * [Accessibility](accessibility/README.md)
 * [CSS](css/README.md)
+* [Copilot](copilot/README.md)
 * [Git](git/README.md)
 * [JavaScript](javascript/README.md)
 * [Markup](markup/README.md)
