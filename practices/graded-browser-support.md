@@ -34,13 +34,14 @@ This is the current list of browser versions and their corresponding support lev
 
 | Browser           | Enhanced           | Core               |
 | ---------------   |:------------------:| ------------------:|
-| Chrome            | 76+                | < 76               |
-| Edge              | 79+                | < 79               |
-| Firefox           | 67+                | < 67               |
-| Opera             | 62+                | < 62               |
-| Safari iOS        | 13+                | < 13               |
-| Safari MacOS      | 12.1+              | < 12.1             |
-| Android Webview   | 91+                | < 91               |
+| Chrome            | 114+               | < 114              |
+| Edge              | 114+               | < 114              |
+| Firefox           | 115+               | < 115              |
+| Opera             | 95+                | < 95               |
+| Safari iOS        | 16+                | < 16               |
+| Safari MacOS      | 16+                | < 16               |
+| Android Webview   | 114+               | < 114              |
+| Samsung Internet  | 19+                | < 19               |
 | Internet Explorer | N/A                | all                |
 
 ### Grey area browsers
@@ -62,7 +63,7 @@ We then use CSS media queries to detect capable browsers. Unlike the approach de
 To load the full experience only in Enhanced browsers we implement logic in the media attribute of the `<link>` element that identifies the main stylesheet, loading the stylesheet only in browsers that recognise the properties of that media query:
 
 ```html
-<link rel="stylesheet" href="enhanced.css" media="only print, only all and (prefers-color-scheme: no-preference), only all and (prefers-color-scheme: light), only all and (prefers-color-scheme: dark)" id="enhanced-stylesheet">
+<link rel="stylesheet" href="enhanced.css" media="only screen and (min-resolution: 0.001dpcm)" id="enhanced-stylesheet">
 ```
 
 This technique is documented in [Cutting the Mustard with Media queries](https://www.sitepoint.com/cutting-the-mustard-with-css-media-queries/). The specific media queries we use are based upon [CSS Only Mustard Cut](https://github.com/Fall-Back/CSS-Mustard-Cut), with a preference towards combining them into one rather than separating them out into multiple `<link>` elements. Note that you **cannot** add line breaks to the media query if they are combined.
@@ -88,14 +89,25 @@ While we do not test [grey-area browsers](#grey-area-browsers), we still work to
 
 The following `.browserslistrc` file ([a standard way of sharing target browser data](https://github.com/browserslist/browserslist)) should cover all browsers that receive Enhanced CSS according to our [Browser Support list](#browser-support-list).
 
-```nanorc
-defaults
+```
+chrome >= 114
+edge >= 114
+firefox >= 115
+opera >= 95
+
+safari >= 16
+ios_saf >= 16
+
+chromeandroid >= 114
+android >= 114
+samsung >= 19
+
+last 2 Chrome versions
+last 2 Edge versions
+last 2 Firefox versions
+
 not ie 11
-ff > 66
-chrome > 75
-safari > 11
-edge > 78
-opera > 61
+not Edge < 79
 ```
 
 ## Caveats
