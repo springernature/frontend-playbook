@@ -92,6 +92,8 @@ Now imagine "A cartoon representation of a yellow dog which has a very large hea
 * Don’t say ‘Image of…’ or ‘Picture of…’ etc. (It's nearly always wrong to say an "Image of", because all images are … images. It's extraneous information that the screenreader announces. However, it can help to know the type of image - i.e. is it a photo, or a screenshot, or a cartoon, depending on the surrounding content and context.)  
 * Don’t need to repeat information already given in the text on the page.  
 * Be as succinct as possible but include details as needed. 
+* Using commas and periods in the text alternative makes the information easier to understand because screen readers will pause at them. Add a full stop at the end.
+* Note that a lot of punctuation is silent with default screen reader settings, and different screen readers may handle it in different ways. For more information, see this article on [how screen readers read special characters](https://elevenways.be/en/articles/screenreaders-special-characters).
 * Copyright info, image source, or other extra information should go in the caption, not the alt text.
 * Context is important e.g. it may be appropriate to note if an image is a photo or an artwork, whether a person is old or young, if the sky is stormy or clear, if that is relevant to the content. 
 * Think about how you would describe the image to a person who can’t see it.
@@ -229,13 +231,13 @@ This alt text does the following things:
 
 The preferred method to convey mathematical expressions should be using [MathML](https://www.w3.org/Math/) (a standard markup language for describing mathematical notation) or [MathJax](https://www.mathjax.org/) (a JavaScript display engine for mathematics). However, images of mathematical expressions have been used traditionally as a way to easily implement them. It’s worth sharing some examples of good alt text for those cases.
 
-In the case of images of mathematical expressions, the alt text should describe the expression in spoken mathematics. Avoid using symbols or characters with mathematical usages (such as operators, fractions, units etc) which may not be announced as expected by screen readers.
+In the case of images of mathematical expressions, the alt text should describe the expression in spoken mathematics. Avoid using symbols or characters with mathematical usages (such as operators, fractions, units etc) which may not be announced as expected by screen readers. Use capital letters for single-letter variables to ensure screen readers announce them as alphabet characters. For example, use "A" instead of "a" to avoid the lowercase being read as the indefinite article.
 
 #### Insufficient alt text
 
-* "(a + b) / d"
+* "(A + B) / D"
 
 #### Sufficient alt text
 
-* "The quantity of a plus b divided by d."
-* "Fraction where the numerator is a plus b and the denominator is d."
+* "The quantity of A plus B divided by D."
+* "Fraction where the numerator is A plus B and the denominator is D."
